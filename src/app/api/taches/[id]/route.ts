@@ -1,13 +1,20 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 
-// GET /api/taches/[id] — détail d'une tâche : ses 2 exercices, avec pour
-// chacun les 3 prompts (chatgpt / claude / gemini).
+// GET /api/taches/[id]?metier=<slug> — détail d'une tâche : ses 2 exercices,
+// avec pour chacun les 3 prompts (chatgpt / claude / gemini).
+//
+// Le paramètre "metier" (slug) est nécessaire car une tâche peut appartenir
+// à plusieurs métiers : il indique de quel métier on vient, pour savoir
+// quel "chemin choisi" (ia_par_defaut) appliquer sur cette page.
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
+  const { searchParams } = new URL(request.url);
+  const metierSlug = searchParams.get("metier");
+
   const supabase = await createClient();
 
   const {
@@ -19,9 +26,7 @@ export async function GET(
 
   const { data: tache, error: erreurTache } = await supabase
     .from("taches")
-    .select(
-      "id, code, titre, limite_connue, ia_alternative_conseillee, metier_id"
-    )
+    .select("id, code, titre, limite_connue, ia_alternative_conseillee")
     .eq("id", id)
     .single();
 
@@ -29,12 +34,24 @@ export async function GET(
     return NextResponse.json({ error: "Tâche introuvable" }, { status: 404 });
   }
 
-  const { data: chemin } = await supabase
-    .from("utilisateurs_chemins")
-    .select("chemin")
-    .eq("metier_id", tache.metier_id)
-    .eq("user_id", user.id)
-    .maybeSingle();
+  let cheminChoisi: string | null = null;
+  if (metierSlug) {
+    const { data: metier } = await supabase
+      .from("metiers")
+      .select("id")
+      .eq("slug", metierSlug)
+      .maybeSingle();
+
+    if (metier) {
+      const { data: chemin } = await supabase
+        .from("utilisateurs_chemins")
+        .select("chemin")
+        .eq("metier_id", metier.id)
+        .eq("user_id", user.id)
+        .maybeSingle();
+      cheminChoisi = chemin?.chemin ?? null;
+    }
+  }
 
   const { data: exercices, error: erreurExercices } = await supabase
     .from("exercices")
@@ -79,7 +96,7 @@ export async function GET(
       limite_connue: tache.limite_connue,
       ia_alternative_conseillee: tache.ia_alternative_conseillee,
     },
-    ia_par_defaut: chemin?.chemin ?? null,
+    ia_par_defaut: cheminChoisi,
     exercices: exercicesAvecPrompts,
   });
 }

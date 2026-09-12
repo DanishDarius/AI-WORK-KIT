@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 
-// GET /api/metiers/[slug] — détail d'un métier + ses tâches + le chemin choisi
-// par l'utilisateur connecté (ia_par_defaut sur chaque tâche = le chemin choisi,
-// tant que la tâche ne signale pas une limite connue — voir mécanique d'exception
-// gérée côté frontend, l'API renvoie ici les données brutes).
+// GET /api/metiers/[slug] — détail d'un métier + ses tâches (via la table de
+// liaison metiers_taches, une tâche pouvant appartenir à plusieurs métiers)
+// + le chemin choisi par l'utilisateur connecté pour CE métier.
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ slug: string }> }
@@ -36,9 +35,11 @@ export async function GET(
     .eq("user_id", user.id)
     .maybeSingle();
 
-  const { data: taches, error: erreurTaches } = await supabase
-    .from("taches")
-    .select("id, code, titre, ordre, limite_connue, ia_alternative_conseillee")
+  const { data: liaisons, error: erreurTaches } = await supabase
+    .from("metiers_taches")
+    .select(
+      "ordre, taches(id, code, titre, limite_connue, ia_alternative_conseillee)"
+    )
     .eq("metier_id", metier.id)
     .order("ordre", { ascending: true });
 
@@ -48,16 +49,24 @@ export async function GET(
 
   const cheminChoisi = chemin?.chemin ?? null;
 
+  const taches = (liaisons ?? [])
+    .map((l) => {
+      const t = Array.isArray(l.taches) ? l.taches[0] : l.taches;
+      if (!t) return null;
+      return {
+        id: t.id,
+        code: t.code,
+        titre: t.titre,
+        ia_par_defaut: cheminChoisi,
+        limite_connue: t.limite_connue,
+        ia_alternative_conseillee: t.ia_alternative_conseillee,
+      };
+    })
+    .filter(Boolean);
+
   return NextResponse.json({
     metier,
     chemin_choisi: cheminChoisi,
-    taches: (taches ?? []).map((t) => ({
-      id: t.id,
-      code: t.code,
-      titre: t.titre,
-      ia_par_defaut: cheminChoisi,
-      limite_connue: t.limite_connue,
-      ia_alternative_conseillee: t.ia_alternative_conseillee,
-    })),
+    taches,
   });
 }
