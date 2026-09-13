@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Shell } from "@/components/kit-ui";
+import { SessionFromHash } from "@/components/session-from-hash";
 
 // Police système par défaut ici — le choix typographique final relève de
 // l'interface visuelle, prise en charge côté ChatGPT.
@@ -11,7 +13,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SessionFromHash />
+        <Shell>{children}</Shell>
+      </body>
     </html>
   );
 }
