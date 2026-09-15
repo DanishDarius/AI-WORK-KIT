@@ -35,19 +35,26 @@ export async function GET(
     .eq("user_id", user.id)
     .maybeSingle();
 
-  const { data: liaisons, error: erreurTaches } = await supabase
-    .from("metiers_taches")
-    .select(
-      "ordre, taches(id, code, titre, limite_connue, ia_alternative_conseillee)"
-    )
-    .eq("metier_id", metier.id)
-    .order("ordre", { ascending: true });
+  const [{ data: liaisons, error: erreurTaches }, { data: favoris }, { data: faites }] =
+    await Promise.all([
+      supabase
+        .from("metiers_taches")
+        .select(
+          "ordre, taches(id, code, titre, limite_connue, ia_alternative_conseillee)"
+        )
+        .eq("metier_id", metier.id)
+        .order("ordre", { ascending: true }),
+      supabase.from("favoris").select("tache_id").eq("user_id", user.id),
+      supabase.from("taches_faites").select("tache_id").eq("user_id", user.id),
+    ]);
 
   if (erreurTaches) {
     return NextResponse.json({ error: erreurTaches.message }, { status: 500 });
   }
 
   const cheminChoisi = chemin?.chemin ?? null;
+  const idsFavoris = new Set((favoris ?? []).map((f) => f.tache_id));
+  const idsFaites = new Set((faites ?? []).map((f) => f.tache_id));
 
   const taches = (liaisons ?? [])
     .map((l) => {
@@ -60,13 +67,20 @@ export async function GET(
         ia_par_defaut: cheminChoisi,
         limite_connue: t.limite_connue,
         ia_alternative_conseillee: t.ia_alternative_conseillee,
+        fait: idsFaites.has(t.id),
+        favori: idsFavoris.has(t.id),
       };
     })
     .filter(Boolean);
 
+  const tachesFaites = taches.filter(
+    (t) => (t as { fait: boolean } | null)?.fait
+  ).length;
+
   return NextResponse.json({
     metier,
     chemin_choisi: cheminChoisi,
+    taches_faites: tachesFaites,
     taches,
   });
 }

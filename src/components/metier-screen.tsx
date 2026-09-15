@@ -9,31 +9,7 @@ import {
   MetierDetail,
   useResource,
 } from "@/lib/kit-api";
-import { Back, Badge, Intro, ResourceState } from "./kit-ui";
-function Glossaire() {
-  const { data, error, retry } =
-    useResource<{ terme: string; definition: string }[]>("/api/glossaire");
-  return (
-    <section className="panel mt-8">
-      <p className="eyebrow">Les mots utiles</p>
-      <h2 className="mb-4">Le glossaire IA</h2>
-      {!data ? (
-        <ResourceState error={error} retry={retry} />
-      ) : data.length ? (
-        data.map((item, i) => (
-          <details className="glossary-item" key={`${item.terme}-${i}`}>
-            <summary>{item.terme}</summary>
-            <p className="whitespace-pre-wrap pb-5 text-sm leading-7 text-[var(--muted)]">
-              {item.definition}
-            </p>
-          </details>
-        ))
-      ) : (
-        <p>Le glossaire n’est pas encore disponible.</p>
-      )}
-    </section>
-  );
-}
+import { Back, Badge, GlossaireList, Intro, ResourceState } from "./kit-ui";
 export function MetierScreen({ slug }: { slug: string }) {
   const endpoint = `/api/metiers/${encodeURIComponent(slug)}`;
   const { data, error, retry, setData } = useResource<MetierDetail>(endpoint);
@@ -148,7 +124,7 @@ export function MetierScreen({ slug }: { slug: string }) {
           <p className="panel">Aucune tâche disponible pour ce métier.</p>
         )}
       </section>
-      <Glossaire />
+      <GlossaireList />
     </>
   );
 }

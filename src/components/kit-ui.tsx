@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IA, iaLabels } from "@/lib/kit-api";
+import { IA, iaLabels, useResource } from "@/lib/kit-api";
 export function Shell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   return (
@@ -24,6 +24,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
               aria-current={path === "/" ? "page" : undefined}
             >
               Mes métiers
+            </Link>
+            <Link
+              href="/comprendre-les-ia"
+              className="nav-link"
+              aria-current={path === "/comprendre-les-ia" ? "page" : undefined}
+            >
+              Comprendre les IA
             </Link>
             <Link
               href="/mon-compte"
@@ -107,5 +114,37 @@ export function Back({
     <Link href={href} className="back-link">
       ← {children}
     </Link>
+  );
+}
+// Liste du glossaire IA (table `glossaire`, identique pour tous les métiers).
+// Utilisée à la fois sur une fiche métier et sur la page "Comprendre les IA".
+export function GlossaireList({
+  title = "Le glossaire IA",
+  eyebrow = "Les mots utiles",
+}: {
+  title?: string;
+  eyebrow?: string;
+}) {
+  const { data, error, retry } =
+    useResource<{ terme: string; definition: string }[]>("/api/glossaire");
+  return (
+    <section className="panel mt-8">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2 className="mb-4">{title}</h2>
+      {!data ? (
+        <ResourceState error={error} retry={retry} />
+      ) : data.length ? (
+        data.map((item, i) => (
+          <details className="glossary-item" key={`${item.terme}-${i}`}>
+            <summary>{item.terme}</summary>
+            <p className="whitespace-pre-wrap pb-5 text-sm leading-7 text-[var(--muted)]">
+              {item.definition}
+            </p>
+          </details>
+        ))
+      ) : (
+        <p>Le glossaire n’est pas encore disponible.</p>
+      )}
+    </section>
   );
 }
