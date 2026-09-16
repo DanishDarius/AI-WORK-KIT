@@ -1,0 +1,1668 @@
+/* Styles de la version 1 retenue, portés depuis awk-prototype/prototype.html. */
+
+#awk-studio {
+  color: var(--aw-ink);
+  background: var(--aw-bg);
+  font:
+    400 14px/1.6 Roboto,
+    sans-serif;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+#awk-studio * {
+  box-sizing: border-box;
+}
+#awk-studio button,
+#awk-studio input,
+#awk-studio select {
+  font: inherit;
+}
+#awk-studio button,
+#awk-studio a {
+  touch-action: manipulation;
+}
+#awk-studio button {
+  cursor: pointer;
+  color: inherit;
+}
+#awk-studio button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+#awk-studio h1,
+#awk-studio h2,
+#awk-studio h3,
+#awk-studio p {
+  margin: 0;
+}
+#awk-studio h1,
+#awk-studio h2,
+#awk-studio h3 {
+  font-family: Inter, sans-serif;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+#awk-studio h1 {
+  font-size: 39px;
+  font-weight: 750;
+}
+#awk-studio h2 {
+  font-size: 23px;
+  font-weight: 750;
+}
+#awk-studio h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+#awk-studio a {
+  color: inherit;
+  text-decoration: none;
+}
+#awk-studio button {
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    transform 0.15s;
+}
+#awk-studio button:hover:not(:disabled) {
+  border-color: var(--aw-accent);
+}
+#awk-studio [hidden] {
+  display: none !important;
+}
+#awk-studio svg {
+  flex-shrink: 0;
+}
+#awk-studio .aw-top {
+  padding: 20px 34px;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  background: var(--aw-paper);
+  border-bottom: 1px solid var(--aw-line);
+}
+#awk-studio .aw-brand {
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+#awk-studio .aw-logo {
+  background: var(--aw-night);
+  color: var(--aw-lime);
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  letter-spacing: -1.5px;
+}
+#awk-studio .aw-brand em {
+  font-style: normal;
+  font-weight: 450;
+}
+#awk-studio .aw-nav {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+#awk-studio .aw-nav :is(a, button) {
+  padding: 8px 13px;
+  border: 1px solid transparent;
+  background: none;
+  border-radius: 8px;
+  font-weight: 550;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-nav :is(a, button)[aria-current="page"] {
+  background: var(--aw-soft);
+  color: var(--aw-accent);
+}
+#awk-studio .aw-help {
+  border: 1px solid var(--aw-line);
+  background: var(--aw-paper);
+  border-radius: 50%;
+  padding: 8px;
+  display: grid;
+  place-items: center;
+}
+#awk-studio .aw-proto {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--aw-accent);
+}
+#awk-studio .aw-main {
+  padding: 34px;
+  min-height: 650px;
+}
+#awk-studio .aw-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 650;
+  color: var(--aw-accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+#awk-studio .aw-muted {
+  color: var(--aw-muted);
+}
+#awk-studio .aw-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+  margin: 10px 0 30px;
+}
+#awk-studio .aw-hero h1 {
+  font-size: clamp(32px, 4.2vw, 46px);
+  max-width: 580px;
+  line-height: 1.14;
+}
+#awk-studio .aw-hero h1 span {
+  color: var(--aw-accent);
+}
+#awk-studio .aw-hero p {
+  margin-top: 16px;
+  max-width: 475px;
+  color: var(--aw-muted);
+  font-size: 15px;
+}
+#awk-studio .aw-art {
+  position: relative;
+  background: var(--aw-night);
+  color: #edf5f9;
+  border-radius: var(--aw-radius);
+  padding: 24px;
+  overflow: hidden;
+}
+#awk-studio .aw-art:before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #49616c;
+  border-radius: 50%;
+  right: -100px;
+  top: -105px;
+  box-shadow:
+    0 0 0 24px #1a3443,
+    0 0 0 25px #385361,
+    0 0 0 50px #17303f;
+  pointer-events: none;
+}
+#awk-studio .aw-art .aw-eyebrow {
+  color: var(--aw-lime);
+  position: relative;
+  font-size: 10px;
+  margin-bottom: 19px;
+}
+#awk-studio .aw-artline {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 12px 0;
+  font-size: 13px;
+  position: relative;
+}
+#awk-studio .aw-artline b {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #48616c;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 500;
+  color: #c5d3dc;
+}
+#awk-studio .aw-artline:last-child b {
+  background: var(--aw-lime);
+  border-color: var(--aw-lime);
+  color: var(--aw-night);
+}
+#awk-studio .aw-artfoot {
+  display: flex;
+  gap: 6px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #39515f;
+  color: #cad7df;
+  font-size: 11px;
+}
+#awk-studio .aw-artfoot span + span:before {
+  content: "·";
+  margin-right: 6px;
+}
+#awk-studio .aw-paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+#awk-studio .aw-path {
+  display: grid;
+  grid-template-columns: 42px 1fr 24px;
+  gap: 14px;
+  align-items: start;
+  text-align: left;
+  border: 1px solid var(--aw-line);
+  border-radius: var(--aw-radius);
+  background: var(--aw-paper);
+  padding: 22px;
+  position: relative;
+}
+#awk-studio .aw-path[aria-pressed="true"] {
+  border-color: var(--aw-accent);
+  box-shadow: inset 0 0 0 1px var(--aw-accent);
+}
+#awk-studio .aw-path .aw-count {
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 550;
+  color: var(--aw-muted);
+  margin-left: 8px;
+  letter-spacing: 0;
+}
+#awk-studio .aw-path strong {
+  font:
+    750 20px/1.2 Inter,
+    sans-serif;
+  letter-spacing: -0.5px;
+}
+#awk-studio .aw-path p {
+  font-size: 12px;
+  color: var(--aw-muted);
+  margin: 8px 0 12px;
+}
+#awk-studio .aw-path small {
+  color: var(--aw-accent);
+  font-weight: 650;
+  font-size: 12px;
+}
+#awk-studio .aw-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--aw-soft);
+  color: var(--aw-accent);
+}
+#awk-studio .aw-icon.aw-blue {
+  background: light-dark(#eef0ff, #2c3150);
+  color: light-dark(#515d9f, #bdc8ff);
+}
+#awk-studio .aw-sectionhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  margin: 26px 0 18px;
+}
+#awk-studio .aw-sectionhead p {
+  font-size: 12px;
+  color: var(--aw-muted);
+  margin-top: 6px;
+}
+#awk-studio .aw-search {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  border: 1px solid var(--aw-line);
+  border-radius: 10px;
+  padding: 0 12px;
+  background: var(--aw-paper);
+  color: var(--aw-muted);
+  width: 280px;
+  max-width: 100%;
+}
+#awk-studio .aw-search input {
+  border: 0;
+  background: none;
+  padding: 11px 0;
+  color: var(--aw-ink);
+  width: 100%;
+  min-width: 0;
+  outline-offset: 4px;
+  font-size: 13px;
+}
+#awk-studio .aw-filters {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin: 0 0 20px;
+}
+#awk-studio .aw-filters button {
+  border: 1px solid var(--aw-line);
+  border-radius: 7px;
+  padding: 6px 11px;
+  background: transparent;
+  color: var(--aw-muted);
+  font-size: 12px;
+}
+#awk-studio .aw-filters button[aria-pressed="true"] {
+  background: var(--aw-ink);
+  color: var(--aw-paper);
+  border-color: var(--aw-ink);
+}
+#awk-studio .aw-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+#awk-studio .aw-tile {
+  border: 1px solid var(--aw-line);
+  border-radius: var(--aw-radius);
+  background: var(--aw-paper);
+  text-align: left;
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  min-height: 183px;
+  gap: 16px;
+}
+#awk-studio .aw-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px light-dark(#16233308, #00000020);
+}
+#awk-studio .aw-tiletop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-tiletop .aw-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+#awk-studio .aw-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-tile h3 {
+  font-size: 15px;
+  line-height: 1.45;
+  letter-spacing: -0.35px;
+}
+#awk-studio .aw-tilefooter {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--aw-line);
+  font-size: 11px;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-tilefooter svg {
+  color: var(--aw-accent);
+}
+#awk-studio .aw-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-btn {
+  border: 1px solid var(--aw-line);
+  background: var(--aw-paper);
+  padding: 10px 14px;
+  border-radius: 9px;
+  font-size: 12px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-decoration: none;
+}
+#awk-studio .aw-btn.aw-primary {
+  background: var(--aw-accent);
+  border-color: var(--aw-accent);
+  color: light-dark(#fff, #112c25);
+}
+#awk-studio .aw-btn.aw-primary:hover {
+  filter: brightness(1.08);
+}
+#awk-studio .aw-btn.aw-ghost {
+  border-color: transparent;
+  background: transparent;
+  padding: 4px 0;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-bread {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--aw-muted);
+  margin-bottom: 26px;
+}
+#awk-studio .aw-bread :is(a, button) {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-bread span:last-child {
+  color: var(--aw-ink);
+}
+#awk-studio .aw-jobhero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 26px;
+  margin-bottom: 26px;
+  align-items: center;
+}
+#awk-studio .aw-jobhero .aw-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+#awk-studio .aw-jobhero h1 {
+  font-size: 34px;
+}
+#awk-studio .aw-jobhero p {
+  font-size: 14px;
+  color: var(--aw-muted);
+  margin-top: 13px;
+}
+#awk-studio .aw-panel {
+  background: var(--aw-paper);
+  border: 1px solid var(--aw-line);
+  border-radius: var(--aw-radius);
+  padding: 23px;
+}
+#awk-studio .aw-panel h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+#awk-studio .aw-ai {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+  background: var(--aw-bg);
+  border: 1px solid var(--aw-line);
+  border-radius: 10px;
+  margin: 15px 0 12px;
+}
+#awk-studio .aw-ai button {
+  flex: 1;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: none;
+  padding: 8px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-ai button[aria-pressed="true"] {
+  background: var(--aw-paper);
+  border-color: var(--aw-line);
+  color: var(--aw-ink);
+  box-shadow: 0 2px 4px #00000005;
+}
+#awk-studio .aw-ai-dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: var(--aw-accent);
+}
+#awk-studio .aw-row {
+  display: grid;
+  grid-template-columns: 37px 1fr 22px;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 0;
+  border-bottom: 1px solid var(--aw-line);
+  background: var(--aw-paper);
+  text-align: left;
+  width: 100%;
+  align-items: center;
+}
+#awk-studio .aw-row:last-child {
+  border-bottom: 0;
+}
+#awk-studio .aw-row:hover {
+  background: var(--aw-soft);
+}
+#awk-studio .aw-row strong {
+  font-size: 14px;
+  font-weight: 550;
+  display: block;
+}
+#awk-studio .aw-row small {
+  color: var(--aw-muted);
+  font-size: 11px;
+}
+#awk-studio .aw-row .aw-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+}
+#awk-studio .aw-list {
+  border: 1px solid var(--aw-line);
+  border-radius: var(--aw-radius);
+  overflow: hidden;
+}
+#awk-studio .aw-taskhead {
+  max-width: 810px;
+  margin-bottom: 25px;
+}
+#awk-studio .aw-taskhead h1 {
+  font-size: 34px;
+  margin-bottom: 13px;
+}
+#awk-studio .aw-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#awk-studio .aw-cases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 23px 0;
+}
+#awk-studio .aw-case {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: var(--aw-paper);
+  border: 1px solid var(--aw-line);
+  border-radius: 11px;
+  text-align: left;
+  padding: 14px;
+  font-size: 12px;
+}
+#awk-studio .aw-case[aria-pressed="true"] {
+  border-color: var(--aw-accent);
+  background: var(--aw-soft);
+}
+#awk-studio .aw-case b {
+  font:
+    650 16px Inter,
+    sans-serif;
+  color: var(--aw-accent);
+}
+#awk-studio .aw-case small {
+  display: block;
+  color: var(--aw-muted);
+  font-size: 10px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+#awk-studio .aw-workspace {
+  display: grid;
+  grid-template-columns: 1fr 1.06fr;
+  gap: 20px;
+  align-items: start;
+}
+#awk-studio .aw-workspace .aw-panel {
+  padding: 22px;
+}
+#awk-studio .aw-workspace h2 {
+  font-size: 18px;
+  margin-bottom: 13px;
+  letter-spacing: -0.6px;
+}
+#awk-studio .aw-number {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--aw-line);
+  border-radius: 7px;
+  font:
+    500 11px "Roboto",
+    sans-serif;
+  letter-spacing: 0;
+  margin-right: 7px;
+  vertical-align: middle;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-bodytext {
+  font-size: 13px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+#awk-studio .aw-workblock {
+  margin-top: 21px;
+  padding-top: 20px;
+  border-top: 1px solid var(--aw-line);
+}
+#awk-studio .aw-taskwork {
+  border-left: 3px solid var(--aw-accent);
+  background: var(--aw-soft);
+  padding: 15px;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  margin-top: 13px;
+}
+#awk-studio details {
+  border: 1px solid var(--aw-line);
+  border-radius: 10px;
+  margin-top: 17px;
+  background: var(--aw-bg);
+}
+#awk-studio summary {
+  cursor: pointer;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+#awk-studio details pre {
+  font:
+    400 12px/1.7 "Roboto",
+    sans-serif;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 0 13px 15px;
+  overflow-wrap: anywhere;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-prompt {
+  background: var(--aw-bg);
+  border: 1px solid var(--aw-line);
+  border-radius: 10px;
+  padding: 17px;
+  margin: 16px 0;
+}
+#awk-studio .aw-promptlabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-prompt pre {
+  font:
+    400 12px/1.8 "Roboto",
+    sans-serif;
+  white-space: pre-wrap;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+#awk-studio .aw-expand {
+  background: none;
+  border: 0;
+  color: var(--aw-accent);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 12px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+#awk-studio .aw-copy {
+  width: 100%;
+  padding: 12px;
+}
+#awk-studio .aw-caption {
+  font-size: 11px;
+  color: var(--aw-muted);
+  margin-top: 9px;
+  text-align: center;
+}
+#awk-studio .aw-next {
+  border-top: 1px solid var(--aw-line);
+  margin-top: 19px;
+  padding-top: 16px;
+}
+#awk-studio .aw-next strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+#awk-studio .aw-next p {
+  font-size: 12px;
+  color: var(--aw-muted);
+  margin: 5px 0 12px;
+}
+#awk-studio .aw-backrow {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+#awk-studio .aw-empty {
+  padding: 35px;
+  text-align: center;
+  grid-column: 1/-1;
+  color: var(--aw-muted);
+  border: 1px dashed var(--aw-line);
+  border-radius: var(--aw-radius);
+}
+#awk-studio .aw-status {
+  background: var(--aw-soft);
+  color: var(--aw-accent);
+  font-size: 12px;
+  border-radius: 9px;
+  padding: 10px 14px;
+  margin: 16px 34px 0;
+  display: none;
+}
+#awk-studio .aw-status:not(:empty) {
+  display: block;
+}
+#awk-studio .aw-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 19px 34px;
+  color: var(--aw-muted);
+  font-size: 11px;
+  border-top: 1px solid var(--aw-line);
+  background: var(--aw-paper);
+}
+#awk-studio .aw-bottom :is(a, button) {
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+}
+#awk-studio .aw-glossary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 26px;
+}
+#awk-studio .aw-glossary p {
+  font-size: 13px;
+  color: var(--aw-muted);
+  margin-top: 9px;
+}
+#awk-studio .aw-helptext {
+  padding: 18px 34px;
+  background: var(--aw-soft);
+  font-size: 13px;
+  border-bottom: 1px solid var(--aw-line);
+}
+#awk-studio .aw-helptext button {
+  float: right;
+  background: none;
+  border: 0;
+}
+@container aw-layout (max-width:780px) {
+  #awk-studio .aw-main {
+    padding: 24px;
+  }
+  #awk-studio .aw-top {
+    padding: 17px 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  #awk-studio .aw-proto {
+    display: none;
+  }
+  #awk-studio .aw-hero {
+    grid-template-columns: 1.25fr 0.9fr;
+    gap: 18px;
+  }
+  #awk-studio .aw-art {
+    padding: 18px;
+  }
+  #awk-studio .aw-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #awk-studio .aw-path {
+    padding: 17px;
+    grid-template-columns: 33px 1fr;
+    gap: 10px;
+  }
+  #awk-studio .aw-path > .aw-arrow {
+    display: none;
+  }
+  #awk-studio .aw-path .aw-icon {
+    width: 33px;
+    height: 33px;
+  }
+  #awk-studio .aw-path strong {
+    font-size: 18px;
+  }
+  #awk-studio .aw-path .aw-count {
+    display: block;
+    margin: 7px 0 0;
+  }
+  #awk-studio .aw-jobhero {
+    grid-template-columns: 1fr;
+  }
+  #awk-studio .aw-workspace {
+    grid-template-columns: 1fr;
+  }
+  #awk-studio .aw-sectionhead {
+    align-items: start;
+    flex-wrap: wrap;
+  }
+  #awk-studio .aw-sectionhead .aw-search {
+    width: 100%;
+  }
+}
+@container aw-layout (max-width:520px) {
+  #awk-studio .aw-main {
+    padding: 20px 16px;
+  }
+  #awk-studio .aw-top {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  #awk-studio .aw-brand {
+    flex: 1;
+  }
+  #awk-studio .aw-nav {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+  #awk-studio .aw-nav :is(a, button) {
+    flex: 1;
+  }
+  #awk-studio .aw-help {
+    width: 34px;
+    height: 34px;
+  }
+  #awk-studio .aw-hero {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+  #awk-studio .aw-hero h1 {
+    font-size: 35px;
+  }
+  #awk-studio .aw-art {
+    display: none;
+  }
+  #awk-studio .aw-paths {
+    gap: 9px;
+    margin-bottom: 23px;
+  }
+  #awk-studio .aw-path {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+  }
+  #awk-studio .aw-path strong {
+    font-size: 19px;
+  }
+  #awk-studio .aw-path p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  #awk-studio .aw-grid {
+    grid-template-columns: 1fr;
+  }
+  #awk-studio .aw-tile {
+    min-height: 155px;
+  }
+  #awk-studio .aw-cases {
+    grid-template-columns: 1fr;
+  }
+  #awk-studio .aw-taskhead h1,
+  #awk-studio .aw-jobhero h1 {
+    font-size: 28px;
+  }
+  #awk-studio .aw-bottom {
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+  #awk-studio .aw-glossary {
+    grid-template-columns: 1fr;
+  }
+  #awk-studio .aw-backrow {
+    align-items: start;
+    flex-direction: column;
+  }
+  #awk-studio .aw-status {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  #awk-studio .aw-workspace .aw-panel {
+    padding: 17px;
+  }
+}
+#awk-studio .aw-brand,
+#awk-studio .aw-nav :is(a, button),
+#awk-studio .aw-btn,
+#awk-studio .aw-ai button {
+  font-family: Inter, sans-serif;
+}
+#awk-studio .aw-icon.aw-blue {
+  background: var(--aw-secondary-soft);
+  color: var(--aw-secondary);
+}
+#awk-studio .aw-btn.aw-primary {
+  background: var(--aw-primary);
+  border-color: var(--aw-primary);
+  color: var(--aw-on-primary);
+}
+#awk-studio .aw-art {
+  color: var(--aw-on-night);
+}
+#awk-studio .aw-art:before {
+  border-color: var(--aw-art-line);
+  box-shadow:
+    0 0 0 24px var(--aw-art-layer),
+    0 0 0 25px var(--aw-art-line),
+    0 0 0 50px var(--aw-night);
+}
+#awk-studio .aw-artline b {
+  border-color: var(--aw-art-line);
+  color: var(--aw-on-night-muted);
+}
+#awk-studio .aw-artline:nth-child(4) b {
+  background: var(--aw-lime);
+  border-color: var(--aw-lime);
+  color: var(--aw-night);
+}
+#awk-studio .aw-artfoot {
+  border-color: var(--aw-art-line);
+  color: var(--aw-on-night-muted);
+}
+#awk-studio .aw-top {
+  gap: 18px;
+  flex-wrap: wrap;
+}
+#awk-studio .aw-theme {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--aw-line);
+  border-radius: 10px;
+  background: var(--aw-bg);
+  flex-shrink: 0;
+}
+#awk-studio .aw-theme button {
+  font:
+    500 11px/1.4 Inter,
+    sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--aw-muted);
+  padding: 8px 9px;
+  min-height: 34px;
+}
+#awk-studio .aw-theme button[aria-pressed="true"] {
+  background: var(--aw-primary);
+  color: var(--aw-on-primary);
+  border-color: var(--aw-primary);
+}
+@container aw-layout (max-width:600px) {
+  #awk-studio .aw-top {
+    gap: 12px;
+  }
+  #awk-studio .aw-nav {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+  #awk-studio .aw-nav :is(a, button) {
+    flex: 1;
+  }
+  #awk-studio .aw-help {
+    display: none;
+  }
+  #awk-studio .aw-brand {
+    flex: 1;
+  }
+}
+@container aw-layout (max-width:360px) {
+  #awk-studio .aw-theme button {
+    padding: 7px;
+    font-size: 11px;
+  }
+  #awk-studio .aw-theme svg {
+    display: none;
+  }
+  #awk-studio .aw-brand {
+    font-size: 13px;
+    gap: 7px;
+  }
+}
+@media (pointer: coarse) {
+  #awk-studio .aw-theme button {
+    min-height: 44px;
+  }
+}
+#awk-studio {
+  container: aw-layout / inline-size;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+#awk-studio button,
+#awk-studio a.aw-btn,
+#awk-studio summary,
+#awk-studio select {
+  min-width: 44px;
+  min-height: 44px;
+}
+#awk-studio button,
+#awk-studio a.aw-btn {
+  white-space: normal;
+}
+#awk-studio input {
+  min-height: 44px;
+  font-size: 16px !important;
+}
+#awk-studio .aw-help {
+  width: 44px;
+  height: 44px;
+}
+#awk-studio .aw-bread {
+  gap: 8px;
+}
+#awk-studio .aw-bread :is(a, button),
+#awk-studio .aw-btn.aw-ghost,
+#awk-studio .aw-bottom :is(a, button) {
+  padding: 8px;
+}
+#awk-studio .aw-row {
+  padding: 18px 22px;
+}
+#awk-studio .aw-list:focus-within {
+  overflow: visible;
+}
+#awk-studio .aw-main {
+  min-height: 0;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 34px max(34px, env(safe-area-inset-right, 0px)) 34px
+    max(34px, env(safe-area-inset-left, 0px));
+}
+#awk-studio .aw-top {
+  padding: max(16px, env(safe-area-inset-top, 0px))
+    max(24px, env(safe-area-inset-right, 0px)) 16px
+    max(24px, env(safe-area-inset-left, 0px));
+}
+#awk-studio .aw-bottom {
+  padding-bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+#awk-studio .aw-bodytext,
+#awk-studio .aw-prompt pre,
+#awk-studio details pre {
+  max-width: 72ch;
+}
+#awk-studio .aw-hero h1 {
+  font-size: clamp(32px, 4.4cqi, 48px);
+}
+#awk-studio :is(button, a, input, select, summary):focus-visible {
+  outline: 3px solid var(--aw-accent);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--aw-bg);
+}
+#awk-studio .aw-theme {
+  flex-wrap: wrap;
+}
+#awk-studio .aw-theme button {
+  min-height: 44px;
+}
+#awk-studio .aw-display {
+  margin: 0;
+  border: 0;
+  background: none;
+  flex-shrink: 0;
+}
+#awk-studio .aw-display summary {
+  border: 1px solid var(--aw-line);
+  border-radius: 9px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  list-style: none;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-display summary::-webkit-details-marker {
+  display: none;
+}
+#awk-studio .aw-display[open] {
+  flex-basis: 100%;
+  background: var(--aw-bg);
+  padding: 12px;
+  border: 1px solid var(--aw-line);
+  border-radius: 12px;
+}
+#awk-studio .aw-display label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 12px;
+  font-size: 13px;
+}
+#awk-studio .aw-display select {
+  font: inherit;
+  border: 1px solid var(--aw-line);
+  border-radius: 8px;
+  background: var(--aw-paper);
+  color: var(--aw-ink);
+  padding: 8px 12px;
+  max-width: 100%;
+}
+#awk-studio .aw-tv-hint {
+  display: none;
+}
+#awk-studio[data-input="tv"] .aw-tv-hint {
+  display: block;
+  padding: 15px 34px;
+  font-size: 20px;
+  border-bottom: 1px solid var(--aw-line);
+  color: var(--aw-muted);
+}
+#awk-studio[data-input="tv"] :is(button, a, input, select, summary):focus {
+  outline: 4px solid var(--aw-accent);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 8px var(--aw-bg);
+}
+#awk-studio[data-input="tv"] button,
+#awk-studio[data-input="tv"] a.aw-btn,
+#awk-studio[data-input="tv"] summary,
+#awk-studio[data-input="tv"] input,
+#awk-studio[data-input="tv"] select {
+  min-width: 64px;
+  min-height: 64px;
+  font-size: 22px !important;
+}
+#awk-studio[data-input="tv"] h1 {
+  font-size: 48px;
+}
+#awk-studio[data-input="tv"] h2 {
+  font-size: 32px;
+}
+#awk-studio[data-input="tv"] h3,
+#awk-studio[data-input="tv"] .aw-tile h3 {
+  font-size: 26px;
+}
+#awk-studio[data-input="tv"]
+  :is(
+    p,
+    small,
+    pre,
+    .aw-label,
+    .aw-tilefooter,
+    .aw-meta,
+    .aw-eyebrow,
+    .aw-more,
+    .aw-artline,
+    .aw-artfoot,
+    .aw-bottom,
+    .aw-caption
+  ) {
+  font-size: 22px !important;
+  line-height: 1.6;
+}
+#awk-studio[data-input="tv"] .aw-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+#awk-studio[data-input="tv"] .aw-workspace,
+#awk-studio[data-input="tv"] .aw-hero,
+#awk-studio[data-input="tv"] .aw-jobhero {
+  grid-template-columns: 1fr;
+}
+#awk-studio[data-input="tv"] .aw-workspace {
+  gap: 26px;
+}
+#awk-studio[data-input="tv"] .aw-art {
+  display: none;
+}
+#awk-studio[data-input="tv"] .aw-top,
+#awk-studio[data-input="tv"] .aw-main {
+  padding: 40px max(40px, env(safe-area-inset-right, 0px)) 40px
+    max(40px, env(safe-area-inset-left, 0px));
+}
+#awk-studio[data-input="tv"] .aw-nav {
+  flex: 1;
+  order: 0;
+}
+#awk-studio[data-input="tv"] .aw-search {
+  width: 400px;
+}
+#awk-studio[data-input="tv"] .aw-case b,
+#awk-studio[data-input="tv"] .aw-path strong {
+  font-size: 28px;
+}
+#awk-studio[data-input="tv"] .aw-theme button {
+  padding-inline: 20px;
+}
+#awk-studio .aw-watch {
+  display: none;
+}
+#awk-studio[data-micro="true"] > .aw-top,
+#awk-studio[data-micro="true"] > .aw-main,
+#awk-studio[data-micro="true"] > .aw-bottom,
+#awk-studio[data-micro="true"] > .aw-status,
+#awk-studio[data-micro="true"] > .aw-tv-hint {
+  display: none;
+}
+#awk-studio[data-micro="true"] .aw-watch {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px 20px;
+  min-height: 260px;
+  align-items: stretch;
+  text-align: center;
+}
+#awk-studio .aw-watch .aw-logo {
+  margin-inline: auto;
+}
+#awk-studio .aw-watch h2 {
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+}
+#awk-studio .aw-watch p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-watch small {
+  font-size: 11px;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-watchnav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+#awk-studio .aw-watch button {
+  font:
+    500 13px Inter,
+    sans-serif;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid var(--aw-line);
+  border-radius: 10px;
+  background: var(--aw-paper);
+  color: var(--aw-ink);
+}
+#awk-studio .aw-watch .aw-watchprimary {
+  background: var(--aw-primary);
+  color: var(--aw-on-primary);
+}
+@container aw-layout (min-width:900px) {
+  #awk-studio .aw-workspace {
+    grid-template-columns: 1fr 1.06fr;
+  }
+  #awk-studio .aw-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@container aw-layout (max-width:899px) {
+  #awk-studio .aw-workspace,
+  #awk-studio .aw-jobhero {
+    grid-template-columns: 1fr;
+  }
+}
+@container aw-layout (min-width:1200px) {
+  #awk-studio .aw-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  #awk-studio .aw-tile {
+    min-height: 210px;
+  }
+}
+@container aw-layout (max-width:780px) {
+  #awk-studio .aw-main {
+    padding: 24px max(24px, env(safe-area-inset-right, 0px)) 24px
+      max(24px, env(safe-area-inset-left, 0px));
+  }
+  #awk-studio .aw-top {
+    gap: 10px;
+  }
+  #awk-studio .aw-nav {
+    flex-basis: 100%;
+    order: 3;
+  }
+  #awk-studio .aw-theme {
+    margin-left: auto;
+  }
+  #awk-studio .aw-display {
+    order: 4;
+  }
+  #awk-studio .aw-display[open] {
+    flex-basis: 100%;
+  }
+  #awk-studio .aw-sectionhead {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #awk-studio .aw-search {
+    width: 100%;
+  }
+}
+@container aw-layout (max-width:520px) {
+  #awk-studio .aw-main {
+    padding: 20px max(16px, env(safe-area-inset-right, 0px)) 20px
+      max(16px, env(safe-area-inset-left, 0px));
+  }
+  #awk-studio .aw-top {
+    padding-inline: max(16px, env(safe-area-inset-left, 0px));
+    gap: 10px;
+  }
+  #awk-studio .aw-brand {
+    flex-basis: 100%;
+  }
+  #awk-studio .aw-theme {
+    margin-left: 0;
+  }
+  #awk-studio .aw-help {
+    display: none;
+  }
+  #awk-studio .aw-display {
+    order: 2;
+    margin-left: auto;
+  }
+  #awk-studio .aw-display[open] {
+    order: 4;
+  }
+  #awk-studio .aw-display summary {
+    font-size: 12px;
+    padding: 10px;
+  }
+  #awk-studio .aw-paths {
+    grid-template-columns: 1fr 1fr;
+  }
+  #awk-studio .aw-path strong {
+    font-size: 18px;
+  }
+  #awk-studio .aw-ai {
+    flex-wrap: wrap;
+  }
+  #awk-studio .aw-bottom {
+    padding-inline: 16px;
+  }
+}
+@media (horizontal-viewport-segments: 2) {
+  #awk-studio {
+    max-width: min(1440px, env(viewport-segment-width 0 0, 100%)) !important;
+    margin-inline: 0;
+  }
+}
+@container aw-layout (min-width:521px) and (max-width:780px) {
+  #awk-studio .aw-display {
+    order: 0;
+  }
+  #awk-studio .aw-display[open] {
+    order: 4;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #awk-studio button {
+    transition: none;
+  }
+}
+#awk-studio .aw-video-section {
+  margin: 32px 0 40px;
+}
+#awk-studio .aw-video-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+#awk-studio .aw-video-heading p {
+  color: var(--aw-muted);
+  font-size: 14px;
+  margin-top: 8px;
+  max-width: 65ch;
+}
+#awk-studio .aw-video-frame {
+  padding: clamp(10px, 2.5cqi, 32px);
+  background: var(--aw-paper);
+  border: 1px solid var(--aw-line);
+  border-radius: calc(var(--aw-radius) + 8px);
+}
+#awk-studio .aw-video-screen {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: var(--aw-radius);
+  background: var(--aw-bg);
+  border: 1px solid var(--aw-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4cqi, 48px);
+  text-align: center;
+}
+#awk-studio .aw-video-screen:before,
+#awk-studio .aw-video-screen:after {
+  content: "";
+  position: absolute;
+  width: 46%;
+  aspect-ratio: 1;
+  transform: rotate(-22deg);
+  border: 1px solid var(--aw-line);
+  border-radius: 24px;
+  pointer-events: none;
+}
+#awk-studio .aw-video-screen:before {
+  left: -24%;
+  top: -25%;
+  box-shadow: 0 0 0 28px var(--aw-paper);
+}
+#awk-studio .aw-video-screen:after {
+  right: -24%;
+  bottom: -25%;
+  box-shadow: 0 0 0 28px var(--aw-paper);
+}
+#awk-studio .aw-video-poster {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 680px;
+}
+#awk-studio .aw-video-kicker {
+  font:
+    500 11px Inter,
+    sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-video-play {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  color: var(--aw-on-primary);
+  background: var(--aw-primary);
+  box-shadow: 0 0 0 10px var(--aw-soft);
+}
+#awk-studio .aw-video-play svg {
+  width: 26px;
+  height: 26px;
+}
+#awk-studio .aw-video-poster strong {
+  font:
+    650 clamp(19px, 2.6cqi, 34px)/1.22 Inter,
+    sans-serif;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+#awk-studio .aw-video-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  color: var(--aw-muted);
+  font-size: 12px;
+}
+#awk-studio .aw-video-tags span {
+  border: 1px solid var(--aw-line);
+  border-radius: 24px;
+  padding: 5px 12px;
+  background: var(--aw-paper);
+}
+#awk-studio .aw-video-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  font-size: 12px;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-video-note strong {
+  font-weight: 500;
+  color: var(--aw-accent);
+}
+#awk-studio .aw-video-media {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  border-radius: var(--aw-radius);
+  background: #000;
+  object-fit: contain;
+}
+@container aw-layout (max-width:520px) {
+  #awk-studio .aw-video-section {
+    margin: 26px 0 32px;
+  }
+  #awk-studio .aw-video-heading h2 {
+    font-size: 21px;
+  }
+  #awk-studio .aw-video-poster {
+    gap: 11px;
+  }
+  #awk-studio .aw-video-play {
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 5px var(--aw-soft);
+  }
+  #awk-studio .aw-video-play svg {
+    width: 20px;
+    height: 20px;
+  }
+  #awk-studio .aw-video-kicker {
+    font-size: 10px;
+  }
+  #awk-studio .aw-video-tags {
+    display: none;
+  }
+  #awk-studio .aw-video-note {
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+#awk-studio[data-input="tv"] .aw-video-poster strong {
+  font-size: 40px;
+}
+#awk-studio[data-input="tv"] .aw-video-note,
+#awk-studio[data-input="tv"] .aw-video-kicker,
+#awk-studio[data-input="tv"] .aw-video-tags {
+  font-size: 22px;
+}
+@container aw-layout (max-width:520px) {
+  #awk-studio .aw-video-poster strong {
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+#awk-studio .aw-main > .aw-video-section:first-child {
+  margin-top: 0;
+}
+#awk-studio .aw-crosspath {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--aw-line);
+}
+#awk-studio .aw-crosspath .aw-path {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 24px;
+  align-items: center;
+}
+#awk-studio .aw-crosspath .aw-path > span {
+  min-width: 0;
+}
+#awk-studio .aw-crosspath .aw-path strong {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+@container aw-layout (max-width:520px) {
+  #awk-studio .aw-crosspath {
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+  #awk-studio .aw-crosspath .aw-path {
+    grid-template-columns: 1fr 24px;
+    gap: 12px;
+    padding: 20px;
+  }
+  #awk-studio .aw-crosspath .aw-path > .aw-icon {
+    grid-column: 1;
+  }
+  #awk-studio .aw-crosspath .aw-path > span:nth-child(2) {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+  #awk-studio .aw-crosspath .aw-arrow {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}

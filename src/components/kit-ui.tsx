@@ -1,60 +1,7 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { IA, iaLabels, useResource } from "@/lib/kit-api";
-export function Shell({ children }: { children: React.ReactNode }) {
-  const path = usePathname();
-  return (
-    <>
-      <a className="skip-link" href="#contenu">
-        Aller au contenu
-      </a>
-      <header className="site-header">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-5 sm:px-8">
-          <Link href="/" className="brand" aria-label="AI WORK KIT — accueil">
-            <span className="brand-mark" aria-hidden="true">
-              AI
-            </span>{" "}
-            WORK KIT
-          </Link>
-          <nav aria-label="Navigation principale" className="flex gap-2">
-            <Link
-              href="/"
-              className="nav-link"
-              aria-current={path === "/" ? "page" : undefined}
-            >
-              Mes métiers
-            </Link>
-            <Link
-              href="/comprendre-les-ia"
-              className="nav-link"
-              aria-current={path === "/comprendre-les-ia" ? "page" : undefined}
-            >
-              Comprendre les IA
-            </Link>
-            <Link
-              href="/mon-compte"
-              className="nav-link"
-              aria-current={path === "/mon-compte" ? "page" : undefined}
-            >
-              Mon compte
-            </Link>
-          </nav>
-        </div>
-      </header>
-      <main
-        id="contenu"
-        className="mx-auto w-full max-w-6xl flex-1 px-5 py-9 sm:px-8 sm:py-12"
-      >
-        {children}
-      </main>
-      <footer className="mx-auto flex w-full max-w-6xl flex-wrap justify-between gap-2 px-5 py-8 text-sm text-slate-500 sm:px-8">
-        <span>AI WORK KIT</span>
-        <span>Vos outils. Vos tâches. Votre pratique.</span>
-      </footer>
-    </>
-  );
-}
+export { Shell } from "./kit-shell";
 export function Badge({ ia }: { ia: IA | null }) {
   return (
     <span className={`badge ${ia ? `badge-${ia}` : "badge-neutral"}`}>
@@ -104,7 +51,7 @@ export function ResourceState({
   );
 }
 export function Back({
-  href = "/",
+  href = "/metiers",
   children = "Tous les métiers",
 }: {
   href?: string;

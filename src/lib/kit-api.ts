@@ -14,6 +14,7 @@ export type Metier = {
   nom: string;
   description: string | null;
   nb_taches: number;
+  taches_faites: number;
 };
 export type Tache = {
   id: string;
@@ -22,9 +23,12 @@ export type Tache = {
   ia_par_defaut: IA | null;
   limite_connue: boolean;
   ia_alternative_conseillee: IA | null;
+  fait: boolean;
+  favori: boolean;
 };
 export type MetierDetail = {
-  metier: Omit<Metier, "nb_taches">;
+  metier: Omit<Metier, "nb_taches" | "taches_faites">;
+  taches_faites: number;
   chemin_choisi: IA | null;
   taches: Tache[];
 };
@@ -36,10 +40,41 @@ export type Exercice = {
   prompts: Record<IA, string | null>;
 };
 export type TacheDetail = {
-  tache: Omit<Tache, "id" | "ia_par_defaut">;
+  tache: Omit<Tache, "id" | "ia_par_defaut" | "fait" | "favori">;
+  fait: boolean;
+  favori: boolean;
   ia_par_defaut: IA | null;
   exercices: Exercice[];
 };
+export type Favori = {
+  tache_id: string;
+  tache_code: string;
+  tache_titre: string;
+  metier_slug: string;
+  metier_nom: string;
+};
+export type Progression = {
+  taches_faites_total: number;
+  taches_total: number;
+  metiers_termines: number;
+  metiers_total: number;
+  reprise: Favori | null;
+  serie_jours: number;
+  jours_actifs_semaine: boolean[];
+};
+export type Recherche = {
+  taches: {
+    id: string;
+    code: string;
+    titre: string;
+    metier_slug: string;
+    metier_nom: string;
+  }[];
+  glossaire: { terme: string; definition: string }[];
+};
+export function tacheHref(id: string, metier: string) {
+  return `/taches/${encodeURIComponent(id)}?metier=${encodeURIComponent(metier)}`;
+}
 export async function api<T>(
   url: string,
   options: RequestInit = {},
@@ -99,6 +134,14 @@ export function useResource<T>(url: string) {
       setState({ url });
       setAttempt((n) => n + 1);
     },
-    setData: (data: T) => setState({ url, data }),
+    setData: (update: T | ((previous: T) => T)) =>
+      setState((previous) => {
+        if (typeof update === "function") {
+          if (previous.url !== url || previous.data === undefined)
+            return previous;
+          return { url, data: (update as (previous: T) => T)(previous.data) };
+        }
+        return { url, data: update };
+      }),
   };
 }

@@ -1,5 +1,6 @@
 "use client";
-import { useId, useState } from "react";
+import Link from "next/link";
+import { useId, useRef, useState } from "react";
 import {
   chemins,
   Exercice,
@@ -8,67 +9,96 @@ import {
   TacheDetail,
   useResource,
 } from "@/lib/kit-api";
-import { Back, Badge, Intro, ResourceState } from "./kit-ui";
-function Cas({
+import { category, categoryIcon } from "@/lib/catalogue";
+import { Back, Intro, ResourceState } from "./kit-ui";
+import { Icon } from "./kit-icons";
+import { VideoGuide } from "./video-guide";
+import { FaitCheckbox, FavoriButton, useTacheActions } from "./tache-actions";
+
+const aiLinks = {
+  chatgpt: "https://chatgpt.com/",
+  claude: "https://claude.ai/",
+  gemini: "https://gemini.google.com/",
+};
+const strip = (s: string | null) =>
+  (s || "").replace(/^(Contexte|Travail à faire)\s*:\s*/, "");
+const caseTitle = (s: string) => s.replace(/^Cas fictif \d+\s*[—–-]\s*/, "");
+
+function CaseWorkspace({
   exercice,
-  index,
-  initial,
+  active,
+  onIAChange,
 }: {
   exercice: Exercice;
-  index: number;
-  initial: IA | null;
+  active: IA;
+  onIAChange: (ia: IA) => void;
 }) {
   const uid = useId();
-  const [active, setActive] = useState<IA>(initial || "chatgpt");
+  const promptRef = useRef<HTMLPreElement>(null);
+  const [expanded, setExpanded] = useState(false);
   const [copied, setCopied] = useState("");
+  const [manualCopy, setManualCopy] = useState(false);
   const prompt = exercice.prompts[active];
+  const content = `${prompt || ""}${exercice.donnees ? `\n\n---\nDonnées du cas pratique\n\n${exercice.donnees}` : ""}`;
   async function copy() {
     if (!prompt) return;
     try {
-      await navigator.clipboard.writeText(prompt);
-      setCopied("Prompt copié.");
-    } catch {
+      await navigator.clipboard.writeText(content);
       setCopied(
-        "Copie impossible. Sélectionnez le texte du prompt pour le copier manuellement.",
+        `Le prompt et les données sont copiés. Collez-les dans ${iaLabels[active]}.`,
+      );
+    } catch {
+      setManualCopy(true);
+      setExpanded(true);
+      setCopied(
+        "La copie automatique n’est pas disponible. Sélectionnez le contenu complet ci-dessous pour le copier.",
       );
     }
   }
+  const selectAll = () => {
+    const node = promptRef.current;
+    if (!node) return;
+    const range = document.createRange();
+    range.selectNodeContents(node);
+    const selection = window.getSelection();
+    selection?.removeAllRanges();
+    selection?.addRange(range);
+  };
+  function changeIA(ia: IA) {
+    onIAChange(ia);
+    setCopied("");
+    setManualCopy(false);
+  }
   return (
-    <article className="panel mb-6">
-      <p className="eyebrow">Cas fictif {index + 1}</p>
-      <h2>{exercice.titre}</h2>
-      <div className="my-6 grid gap-5 lg:grid-cols-2">
-        {(
-          [
-            ["Contexte", exercice.contexte],
-            ["Données", exercice.donnees],
-            ["Travail à faire", exercice.travail_a_faire],
-          ] as const
-        ).map(
-          ([title, text]) =>
-            text && (
-              <section
-                key={title}
-                className={
-                  title === "Travail à faire"
-                    ? "practice-block lg:col-span-2"
-                    : ""
-                }
-              >
-                <h3 className="mb-2 text-sm">{title}</h3>
-                <p className="whitespace-pre-wrap break-words text-sm leading-7 text-[var(--muted)]">
-                  {text}
-                </p>
-              </section>
-            ),
+    <div className="aw-workspace">
+      <section className="aw-panel">
+        <h2>
+          <span className="aw-number">01</span> Prenez connaissance du cas
+        </h2>
+        <p className="aw-bodytext">{strip(exercice.contexte)}</p>
+        {exercice.donnees && (
+          <details>
+            <summary>Voir les données du cas</summary>
+            <pre>{exercice.donnees}</pre>
+          </details>
         )}
-      </div>
-      <div className="prompt-box">
-        <div
-          role="tablist"
-          aria-label={`Prompts du cas ${index + 1}`}
-          className="flex flex-wrap gap-1 border-b border-[var(--border)] p-2"
-        >
+        <div className="aw-workblock">
+          <h2>
+            <span className="aw-number">02</span> Votre mission
+          </h2>
+          <div className="aw-taskwork aw-bodytext">
+            {strip(exercice.travail_a_faire)}
+          </div>
+        </div>
+      </section>
+      <section className="aw-panel">
+        <h2>
+          <span className="aw-number">03</span> Passez à la pratique
+        </h2>
+        <p className="aw-muted text-xs">
+          Votre prompt, préparé pour l’IA de votre choix.
+        </p>
+        <div className="aw-ai" role="tablist" aria-label="Choisir votre IA">
           {chemins.map((ia, i) => (
             <button
               key={ia}
@@ -77,31 +107,26 @@ function Cas({
               aria-selected={active === ia}
               aria-controls={`${uid}-panel`}
               tabIndex={active === ia ? 0 : -1}
-              className="prompt-tab"
-              onClick={() => {
-                setActive(ia);
-                setCopied("");
-              }}
-              onKeyDown={(event) => {
+              onClick={() => changeIA(ia)}
+              onKeyDown={(e) => {
                 const next =
-                  event.key === "ArrowRight"
+                  e.key === "ArrowRight"
                     ? (i + 1) % 3
-                    : event.key === "ArrowLeft"
+                    : e.key === "ArrowLeft"
                       ? (i + 2) % 3
-                      : event.key === "Home"
+                      : e.key === "Home"
                         ? 0
-                        : event.key === "End"
+                        : e.key === "End"
                           ? 2
                           : -1;
                 if (next >= 0) {
-                  event.preventDefault();
-                  setActive(chemins[next]);
-                  setCopied("");
+                  e.preventDefault();
+                  changeIA(chemins[next]);
                   document.getElementById(`${uid}-${chemins[next]}`)?.focus();
                 }
               }}
             >
-              <span className={`ia-dot dot-${ia}`} />
+              {active === ia && <span className={`ia-dot dot-${ia}`} />}
               {iaLabels[ia]}
             </button>
           ))}
@@ -111,73 +136,232 @@ function Cas({
           id={`${uid}-panel`}
           aria-labelledby={`${uid}-${active}`}
           tabIndex={0}
-          className="p-4 sm:p-5"
         >
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm font-semibold">
-              Votre prompt pour {iaLabels[active]}
-            </p>
-            <button className="button" disabled={!prompt} onClick={copy}>
-              Copier le prompt
-            </button>
+          <div className="aw-prompt">
+            <div className="aw-promptlabel">
+              <span>Prompt {iaLabels[active]}</span>
+              <Icon name="writing" />
+            </div>
+            <pre ref={promptRef}>
+              {manualCopy
+                ? content
+                : prompt
+                  ? expanded || prompt.length <= 570
+                    ? prompt
+                    : `${prompt.slice(0, 570)}…`
+                  : "Ce prompt n’est pas disponible pour cette IA."}
+            </pre>
+            {prompt && prompt.length > 570 && !manualCopy && (
+              <button
+                className="aw-expand"
+                onClick={() => setExpanded((v) => !v)}
+                aria-expanded={expanded}
+              >
+                {expanded ? "Réduire le prompt" : "Lire le prompt complet"}
+                <Icon name="down" />
+              </button>
+            )}
           </div>
-          <pre className="max-h-[32rem] overflow-auto whitespace-pre-wrap break-words font-mono text-sm leading-7">
-            {prompt || "Ce prompt n’est pas disponible pour cette IA."}
-          </pre>
-          <p className="mt-3 text-sm text-[var(--muted)]" role="status">
+          <button
+            className="aw-btn aw-primary aw-copy"
+            disabled={!prompt}
+            onClick={copy}
+          >
+            <Icon name="copy" />
+            Copier le prompt + les données
+          </button>
+          <p className="aw-caption">
+            Le contenu complet est copié, même si l’aperçu est réduit.
+          </p>
+          {manualCopy && (
+            <button className="aw-btn mt-3" onClick={selectAll}>
+              Sélectionner le contenu complet
+            </button>
+          )}
+          <p role="status" className="aw-muted text-xs mt-3">
             {copied}
           </p>
+          <div className="aw-next">
+            <strong>Et maintenant ?</strong>
+            <p>
+              Ouvrez {iaLabels[active]}, collez le contenu dans une nouvelle
+              conversation et comparez la réponse à votre mission.
+            </p>
+            <a
+              className="aw-btn"
+              href={aiLinks[active]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ouvrir {iaLabels[active]}
+              <Icon name="arrow" />
+            </a>
+          </div>
         </div>
+      </section>
+    </div>
+  );
+}
+
+function LoadedTask({
+  id,
+  metier,
+  initial,
+}: {
+  id: string;
+  metier: string;
+  initial: TacheDetail;
+}) {
+  const [data, setData] = useState(initial);
+  const [exercise, setExercise] = useState(0);
+  const [ia, setIA] = useState<IA>(initial.ia_par_defaut || "chatgpt");
+  const actions = useTacheActions({
+    id,
+    metier,
+    value: data,
+    onChange: (patch) => setData((previous) => ({ ...previous, ...patch })),
+  });
+  return (
+    <>
+      <nav className="aw-bread" aria-label="Fil d’Ariane">
+        <Link href="/">Accueil</Link>
+        <Icon name="chevron" />
+        <Link href="/metiers">Métiers</Link>
+        <Icon name="chevron" />
+        <Link href={`/metiers/${encodeURIComponent(metier)}`}>
+          Mon espace métier
+        </Link>
+        <Icon name="chevron" />
+        <span>Cas pratique</span>
+      </nav>
+      <div className="aw-task-title-row">
+        <section className="aw-taskhead">
+          <div className="aw-eyebrow">
+            <Icon name={categoryIcon(data.tache.code)} />
+            {category(data.tache.code)} · {data.tache.code}
+          </div>
+          <h1>{data.tache.titre}</h1>
+          <div className="aw-meta">
+            <span>
+              <Icon name="layers" />
+              {data.exercices.length} cas pratiques
+            </span>
+            <span>
+              <Icon name="sparkles" />3 versions de prompt
+            </span>
+            <span>Données fictives du kit</span>
+          </div>
+        </section>
+        <FavoriButton
+          favori={data.favori}
+          titre={data.tache.titre}
+          pending={actions.pending.favori}
+          onClick={() => actions.toggle("favori")}
+        />
       </div>
-    </article>
+      {actions.messages.favori && (
+        <p className="action-error mb-4" role="alert">
+          {actions.messages.favori}
+        </p>
+      )}
+      {data.tache.limite_connue && (
+        <aside className="exception mb-6">
+          <h2>Point de vigilance : limite connue</h2>
+          <p>
+            Cette tâche comporte une limite connue.{" "}
+            {data.tache.ia_alternative_conseillee
+              ? `L’IA alternative conseillée est ${iaLabels[data.tache.ia_alternative_conseillee]}. Son prompt est disponible dans les onglets ci-dessous.`
+              : "Vérifiez attentivement le résultat obtenu."}
+          </p>
+        </aside>
+      )}
+      <VideoGuide kind="task" title={data.tache.titre} code={data.tache.code} />
+      {data.exercices.length ? (
+        <>
+          <div
+            className="aw-cases"
+            role="group"
+            aria-label="Choisir un cas pratique"
+          >
+            {data.exercices.map((ex, i) => (
+              <button
+                className="aw-case"
+                key={i}
+                aria-pressed={exercise === i}
+                onClick={() => setExercise(i)}
+              >
+                <b>{String(i + 1).padStart(2, "0")}</b>
+                <span>
+                  <small>Cas pratique {i + 1}</small>
+                  {caseTitle(ex.titre)}
+                </span>
+              </button>
+            ))}
+          </div>
+          <CaseWorkspace
+            key={exercise}
+            exercice={data.exercices[exercise]}
+            active={ia}
+            onIAChange={setIA}
+          />
+        </>
+      ) : (
+        <p className="aw-empty">
+          Aucun cas pratique disponible pour cette tâche.
+        </p>
+      )}
+      <section className="panel aw-completion" aria-label="Votre avancement">
+        <FaitCheckbox
+          fait={data.fait}
+          pending={actions.pending.fait}
+          titre={data.tache.titre}
+          fullLabel
+          onChange={() => actions.toggle("fait")}
+        />
+        <p className="aw-muted text-xs mt-2">
+          Vous pouvez revenir sur cette tâche à tout moment.
+        </p>
+        {actions.messages.fait && (
+          <p className="action-error" role="alert">
+            {actions.messages.fait}
+          </p>
+        )}
+      </section>
+      <div className="aw-backrow">
+        <Link
+          className="aw-btn aw-ghost"
+          href={`/metiers/${encodeURIComponent(metier)}`}
+        >
+          <Icon name="left" />
+          Retour au métier
+        </Link>
+        {data.exercices.length > 1 && (
+          <button
+            className="aw-btn"
+            onClick={() => setExercise((i) => (i + 1) % data.exercices.length)}
+          >
+            {exercise < data.exercices.length - 1
+              ? "Passer au cas suivant"
+              : "Revoir le premier cas"}
+            <Icon name="right" />
+          </button>
+        )}
+      </div>
+    </>
   );
 }
 function TacheContent({ id, metier }: { id: string; metier: string }) {
   const { data, error, retry } = useResource<TacheDetail>(
     `/api/taches/${encodeURIComponent(id)}?metier=${encodeURIComponent(metier)}`,
   );
-  return (
+  return data ? (
+    <LoadedTask id={id} metier={metier} initial={data} />
+  ) : (
     <>
       <Back href={`/metiers/${encodeURIComponent(metier)}`}>
         Retour au métier
       </Back>
-      {!data ? (
-        <ResourceState error={error} retry={retry} />
-      ) : (
-        <>
-          <Intro eyebrow={`Tâche ${data.tache.code}`} title={data.tache.titre}>
-            Explorez les cas fictifs et copiez le prompt dans votre IA.
-          </Intro>
-          <div className="mb-6 flex items-center gap-3 text-sm">
-            <span>Votre chemin</span>
-            <Badge ia={data.ia_par_defaut} />
-          </div>
-          {data.tache.limite_connue && (
-            <aside className="exception mb-6">
-              <h2 className="text-base">Point de vigilance : limite connue</h2>
-              <p className="mt-2 text-sm leading-6">
-                Cette tâche comporte une limite connue.
-                {data.tache.ia_alternative_conseillee
-                  ? ` L’IA alternative conseillée est ${iaLabels[data.tache.ia_alternative_conseillee]}. Vous pouvez consulter son prompt dans les onglets ci-dessous.`
-                  : "Aucune IA alternative n’est indiquée pour cette tâche."}
-              </p>
-            </aside>
-          )}
-          {data.exercices.map((exercice, index) => (
-            <Cas
-              key={`${index}-${data.ia_par_defaut}`}
-              exercice={exercice}
-              index={index}
-              initial={data.ia_par_defaut}
-            />
-          ))}
-          {!data.exercices.length && (
-            <p className="panel">
-              Aucun cas pratique disponible pour cette tâche.
-            </p>
-          )}
-        </>
-      )}
+      <ResourceState error={error} retry={retry} />
     </>
   );
 }
@@ -194,5 +378,5 @@ export function TacheScreen({ id, metier }: { id: string; metier: string }) {
         </Intro>
       </>
     );
-  return <TacheContent id={id} metier={metier} />;
+  return <TacheContent key={`${id}-${metier}`} id={id} metier={metier} />;
 }

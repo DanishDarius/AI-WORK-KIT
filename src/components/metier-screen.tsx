@@ -7,14 +7,24 @@ import {
   IA,
   iaLabels,
   MetierDetail,
+  tacheHref,
   useResource,
 } from "@/lib/kit-api";
-import { Back, Badge, GlossaireList, Intro, ResourceState } from "./kit-ui";
+import { category, categoryIcon, normalize } from "@/lib/catalogue";
+import { ResourceState, Back } from "./kit-ui";
+import { Icon } from "./kit-icons";
+import { UsageFilters } from "./catalogue-screen";
+import { ProgressBar } from "./progression-ui";
+import { TacheActions } from "./tache-actions";
+
 export function MetierScreen({ slug }: { slug: string }) {
   const endpoint = `/api/metiers/${encodeURIComponent(slug)}`;
   const { data, error, retry, setData } = useResource<MetierDetail>(endpoint);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
+  const [query, setQuery] = useState("");
+  const [usage, setUsage] = useState("Tout");
+  const [limit, setLimit] = useState(6);
   async function choose(chemin: IA) {
     if (!data || saving || data.chemin_choisi === chemin) return;
     setSaving(true);
@@ -24,14 +34,14 @@ export function MetierScreen({ slug }: { slug: string }) {
         `${endpoint}/chemin`,
         { method: "POST", body: JSON.stringify({ chemin }) },
       );
-      setData({
-        ...data,
+      setData((previous) => ({
+        ...previous,
         chemin_choisi: result.chemin_choisi,
-        taches: data.taches.map((t) => ({
+        taches: previous.taches.map((t) => ({
           ...t,
           ia_par_defaut: result.chemin_choisi,
         })),
-      });
+      }));
       setMessage(
         `Votre chemin ${iaLabels[result.chemin_choisi]} est enregistré.`,
       );
@@ -50,81 +60,173 @@ export function MetierScreen({ slug }: { slug: string }) {
         <ResourceState error={error} retry={retry} />
       </>
     );
+  const taches = data.taches.filter(
+    (t) =>
+      (usage === "Tout" || category(t.code) === usage) &&
+      normalize(`${t.titre} ${category(t.code)}`).includes(normalize(query)),
+  );
   return (
     <>
-      <Back />
-      <Intro eyebrow="Fiche métier" title={data.metier.nom}>
-        {data.metier.description}
-      </Intro>
-      <section className="panel mb-9 border-l-4 border-l-[var(--navy)]">
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div>
-            <p className="eyebrow">Votre chemin IA</p>
-            <h2>Avec quelle IA voulez-vous travailler ?</h2>
-            <p className="mt-2 text-sm text-[var(--muted)]">
-              Ce choix ouvre vos prompts sur cette IA. Vous pouvez le changer à
-              tout moment.
-            </p>
+      <nav className="aw-bread" aria-label="Fil d’Ariane">
+        <Link href="/">Accueil</Link>
+        <Icon name="chevron" />
+        <Link href="/metiers">Métiers</Link>
+        <Icon name="chevron" />
+        <span>{data.metier.nom}</span>
+      </nav>
+      <section className="aw-jobhero">
+        <div>
+          <div className="aw-icon aw-blue">
+            <Icon name="jobs" size={22} />
           </div>
-          <Badge ia={data.chemin_choisi} />
+          <div className="aw-eyebrow">Votre métier, en pratique</div>
+          <h1>{data.metier.nom}</h1>
+          <p>
+            {data.taches.length} tâches de votre quotidien, avec des cas
+            concrets et des prompts prêts à utiliser.
+          </p>
         </div>
-        <fieldset disabled={saving} className="mt-5 flex flex-wrap gap-3">
-          <legend className="sr-only">Choisir votre chemin IA</legend>
-          {chemins.map((ia) => (
-            <button
-              key={ia}
-              className="choice-button"
-              aria-pressed={data.chemin_choisi === ia}
-              onClick={() => choose(ia)}
-            >
-              <span className={`ia-dot dot-${ia}`} />
-              {iaLabels[ia]}
-              {data.chemin_choisi === ia && <span aria-hidden="true">✓</span>}
-            </button>
-          ))}
-        </fieldset>
-        <p className="mt-3 min-h-5 text-sm text-[var(--muted)]" role="status">
-          {saving ? "Enregistrement…" : message}
+        <aside className="aw-panel">
+          <h3>Votre chemin IA</h3>
+          <p className="aw-muted text-xs">
+            Choisissez l’outil avec lequel vous souhaitez pratiquer.
+          </p>
+          <fieldset className="aw-ai" disabled={saving}>
+            <legend className="sr-only">Choisir votre chemin IA</legend>
+            {chemins.map((ia) => (
+              <button
+                key={ia}
+                className="choice-button"
+                aria-pressed={data.chemin_choisi === ia}
+                onClick={() => choose(ia)}
+              >
+                {data.chemin_choisi === ia && (
+                  <span className={`ia-dot dot-${ia}`} />
+                )}
+                {iaLabels[ia]}
+              </button>
+            ))}
+          </fieldset>
+          <p className="aw-muted text-xs">
+            Les prompts s’adaptent à votre choix. Vous pouvez changer d’IA à
+            tout moment.
+          </p>
+          <p role="status" className="aw-muted text-xs mt-3">
+            {saving ? "Enregistrement…" : message}
+          </p>
+        </aside>
+      </section>
+      <section
+        className="aw-metier-progress mb-7"
+        aria-label="Progression de ce métier"
+      >
+        <p className="mb-3 text-sm font-semibold">
+          {data.taches_faites}/{data.taches.length} tâches faites
         </p>
+        <ProgressBar done={data.taches_faites} total={data.taches.length} />
       </section>
-      <section>
-        <div className="mb-5 flex items-end justify-between gap-4">
-          <div>
-            <p className="eyebrow">Passer à la pratique</p>
-            <h2>Les tâches de ce métier</h2>
+      <div className="aw-sectionhead">
+        <div>
+          <h2>Vos tâches professionnelles</h2>
+          <p>Commencez par celle qui vous sera utile aujourd’hui.</p>
+        </div>
+        <label className="aw-search">
+          <Icon name="search" />
+          <input
+            type="search"
+            aria-label="Rechercher dans ce métier"
+            placeholder="E-mail, rapport, présentation…"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setLimit(6);
+            }}
+          />
+        </label>
+      </div>
+      <UsageFilters
+        value={usage}
+        onChange={(value) => {
+          setUsage(value);
+          setLimit(6);
+        }}
+      />
+      {taches.length ? (
+        <>
+          <div className="aw-list">
+            {taches.slice(0, limit).map((t) => (
+              <article
+                key={t.id}
+                className={`aw-taskrow ${t.fait ? "task-done" : ""}`}
+              >
+                <Link className="aw-row" href={tacheHref(t.id, slug)}>
+                  <span className="aw-icon">
+                    <Icon name={categoryIcon(t.code)} />
+                  </span>
+                  <span>
+                    <strong>{t.titre}</strong>
+                    <small>
+                      {category(t.code)}
+                      {t.limite_connue
+                        ? " · Point de vigilance à consulter"
+                        : " · Cas pratiques"}
+                    </small>
+                  </span>
+                  <Icon name="arrow" />
+                </Link>
+                <TacheActions
+                  id={t.id}
+                  metier={slug}
+                  titre={t.titre}
+                  value={t}
+                  onChange={(patch) =>
+                    setData((previous) => {
+                      const taches = previous.taches.map((item) =>
+                        item.id === t.id ? { ...item, ...patch } : item,
+                      );
+                      return {
+                        ...previous,
+                        taches,
+                        taches_faites: taches.filter((item) => item.fait)
+                          .length,
+                      };
+                    })
+                  }
+                />
+              </article>
+            ))}
           </div>
-          <span className="text-sm text-[var(--muted)]">
-            {data.taches.length} tâche{data.taches.length > 1 ? "s" : ""}
-          </span>
-        </div>
-        <div className="grid gap-4 md:grid-cols-2">
-          {data.taches.map((t) => (
-            <Link
-              className="panel card-link"
-              key={t.id}
-              href={`/taches/${encodeURIComponent(t.id)}?metier=${encodeURIComponent(slug)}`}
+          <div className="aw-more">
+            <span role="status">
+              {Math.min(limit, taches.length)} sur {taches.length} tâches
+            </span>
+            {taches.length > limit && (
+              <button className="aw-btn" onClick={() => setLimit((n) => n + 6)}>
+                Voir la suite <Icon name="down" />
+              </button>
+            )}
+          </div>
+        </>
+      ) : (
+        <div className="aw-empty">
+          <p>
+            {data.taches.length
+              ? "Aucun résultat pour cette recherche."
+              : "Aucune tâche disponible pour ce métier."}
+          </p>
+          {data.taches.length > 0 && (
+            <button
+              className="aw-btn"
+              onClick={() => {
+                setQuery("");
+                setUsage("Tout");
+              }}
             >
-              <div className="mb-4 flex items-center justify-between gap-2">
-                <span className="eyebrow !mb-0">{t.code}</span>
-                <Badge ia={t.ia_par_defaut} />
-              </div>
-              <h3>{t.titre}</h3>
-              {t.limite_connue && (
-                <p className="mt-3 text-sm text-amber-800">
-                  Limite connue · un point de vigilance à consulter
-                </p>
-              )}
-              <p className="mt-5 text-sm font-semibold text-[var(--navy)]">
-                Ouvrir les cas pratiques <span aria-hidden="true">→</span>
-              </p>
-            </Link>
-          ))}
+              Effacer les filtres
+            </button>
+          )}
         </div>
-        {!data.taches.length && (
-          <p className="panel">Aucune tâche disponible pour ce métier.</p>
-        )}
-      </section>
-      <GlossaireList />
+      )}
     </>
   );
 }
