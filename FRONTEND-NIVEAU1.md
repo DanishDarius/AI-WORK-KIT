@@ -32,7 +32,11 @@ accessibles depuis Favoris et Progression dans la navigation.
 - Écriture optimiste avec réponse retardée et retour arrière après échec simulé ;
   progression métier recalculée immédiatement, ajout/retrait de favoris vérifiés.
 - Reprise absente sur profil vierge, recherche à un caractère sans requête,
-  résultats à deux caractères ou plus avec contexte métier, navigation par flèches.
+  résultats à deux caractères ou plus avec contexte métier.
+- Header compact vérifié : navigation directe sur ordinateur et menu repliable à
+  deux traits sur tablette/mobile, avec fermeture au changement de page ou via Échap.
+- Reconnexion sans mot de passe disponible sur `/connexion` pour les comptes déjà
+  créés ; les erreurs de session proposent désormais une action de connexion.
 
 Les vérifications interactives utilisent un compte fictif et un proxy local de
 fixtures reprenant le contenu de la V1. Elles ne constituent pas une validation

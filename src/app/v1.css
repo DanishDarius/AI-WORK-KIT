@@ -1147,143 +1147,13 @@
 #awk-studio .aw-theme button {
   min-height: 44px;
 }
-#awk-studio .aw-display {
-  margin: 0;
-  border: 0;
-  background: none;
-  flex-shrink: 0;
-}
-#awk-studio .aw-display summary {
-  border: 1px solid var(--aw-line);
-  border-radius: 9px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  padding: 10px 12px;
-  list-style: none;
-  color: var(--aw-muted);
-}
-#awk-studio .aw-display summary::-webkit-details-marker {
-  display: none;
-}
-#awk-studio .aw-display[open] {
-  flex-basis: 100%;
-  background: var(--aw-bg);
-  padding: 12px;
-  border: 1px solid var(--aw-line);
-  border-radius: 12px;
-}
-#awk-studio .aw-display label {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding-top: 12px;
-  font-size: 13px;
-}
-#awk-studio .aw-display select {
-  font: inherit;
-  border: 1px solid var(--aw-line);
-  border-radius: 8px;
-  background: var(--aw-paper);
-  color: var(--aw-ink);
-  padding: 8px 12px;
-  max-width: 100%;
-}
-#awk-studio .aw-tv-hint {
-  display: none;
-}
-#awk-studio[data-input="tv"] .aw-tv-hint {
-  display: block;
-  padding: 15px 34px;
-  font-size: 20px;
-  border-bottom: 1px solid var(--aw-line);
-  color: var(--aw-muted);
-}
-#awk-studio[data-input="tv"] :is(button, a, input, select, summary):focus {
-  outline: 4px solid var(--aw-accent);
-  outline-offset: 4px;
-  box-shadow: 0 0 0 8px var(--aw-bg);
-}
-#awk-studio[data-input="tv"] button,
-#awk-studio[data-input="tv"] a.aw-btn,
-#awk-studio[data-input="tv"] summary,
-#awk-studio[data-input="tv"] input,
-#awk-studio[data-input="tv"] select {
-  min-width: 64px;
-  min-height: 64px;
-  font-size: 22px !important;
-}
-#awk-studio[data-input="tv"] h1 {
-  font-size: 48px;
-}
-#awk-studio[data-input="tv"] h2 {
-  font-size: 32px;
-}
-#awk-studio[data-input="tv"] h3,
-#awk-studio[data-input="tv"] .aw-tile h3 {
-  font-size: 26px;
-}
-#awk-studio[data-input="tv"]
-  :is(
-    p,
-    small,
-    pre,
-    .aw-label,
-    .aw-tilefooter,
-    .aw-meta,
-    .aw-eyebrow,
-    .aw-more,
-    .aw-artline,
-    .aw-artfoot,
-    .aw-bottom,
-    .aw-caption
-  ) {
-  font-size: 22px !important;
-  line-height: 1.6;
-}
-#awk-studio[data-input="tv"] .aw-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-#awk-studio[data-input="tv"] .aw-workspace,
-#awk-studio[data-input="tv"] .aw-hero,
-#awk-studio[data-input="tv"] .aw-jobhero {
-  grid-template-columns: 1fr;
-}
-#awk-studio[data-input="tv"] .aw-workspace {
-  gap: 26px;
-}
-#awk-studio[data-input="tv"] .aw-art {
-  display: none;
-}
-#awk-studio[data-input="tv"] .aw-top,
-#awk-studio[data-input="tv"] .aw-main {
-  padding: 40px max(40px, env(safe-area-inset-right, 0px)) 40px
-    max(40px, env(safe-area-inset-left, 0px));
-}
-#awk-studio[data-input="tv"] .aw-nav {
-  flex: 1;
-  order: 0;
-}
-#awk-studio[data-input="tv"] .aw-search {
-  width: 400px;
-}
-#awk-studio[data-input="tv"] .aw-case b,
-#awk-studio[data-input="tv"] .aw-path strong {
-  font-size: 28px;
-}
-#awk-studio[data-input="tv"] .aw-theme button {
-  padding-inline: 20px;
-}
 #awk-studio .aw-watch {
   display: none;
 }
 #awk-studio[data-micro="true"] > .aw-top,
 #awk-studio[data-micro="true"] > .aw-main,
 #awk-studio[data-micro="true"] > .aw-bottom,
-#awk-studio[data-micro="true"] > .aw-status,
-#awk-studio[data-micro="true"] > .aw-tv-hint {
+#awk-studio[data-micro="true"] > .aw-status {
   display: none;
 }
 #awk-studio[data-micro="true"] .aw-watch {
@@ -1369,12 +1239,6 @@
   #awk-studio .aw-theme {
     margin-left: auto;
   }
-  #awk-studio .aw-display {
-    order: 4;
-  }
-  #awk-studio .aw-display[open] {
-    flex-basis: 100%;
-  }
   #awk-studio .aw-sectionhead {
     flex-direction: column;
     align-items: stretch;
@@ -1401,17 +1265,6 @@
   #awk-studio .aw-help {
     display: none;
   }
-  #awk-studio .aw-display {
-    order: 2;
-    margin-left: auto;
-  }
-  #awk-studio .aw-display[open] {
-    order: 4;
-  }
-  #awk-studio .aw-display summary {
-    font-size: 12px;
-    padding: 10px;
-  }
   #awk-studio .aw-paths {
     grid-template-columns: 1fr 1fr;
   }
@@ -1429,14 +1282,6 @@
   #awk-studio {
     max-width: min(1440px, env(viewport-segment-width 0 0, 100%)) !important;
     margin-inline: 0;
-  }
-}
-@container aw-layout (min-width:521px) and (max-width:780px) {
-  #awk-studio .aw-display {
-    order: 0;
-  }
-  #awk-studio .aw-display[open] {
-    order: 4;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1603,14 +1448,6 @@
     flex-direction: column;
     gap: 4px;
   }
-}
-#awk-studio[data-input="tv"] .aw-video-poster strong {
-  font-size: 40px;
-}
-#awk-studio[data-input="tv"] .aw-video-note,
-#awk-studio[data-input="tv"] .aw-video-kicker,
-#awk-studio[data-input="tv"] .aw-video-tags {
-  font-size: 22px;
 }
 @container aw-layout (max-width:520px) {
   #awk-studio .aw-video-poster strong {

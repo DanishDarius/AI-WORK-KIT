@@ -26,16 +26,14 @@ export function SessionFromHash() {
     const refresh_token = params.get("refresh_token");
     if (!access_token || !refresh_token) return;
 
+    const cleanUrl = window.location.pathname + window.location.search;
     createClient()
       .auth.setSession({ access_token, refresh_token })
-      .finally(() => {
-        // Nettoie l'URL pour ne pas laisser les jetons visibles ou
-        // réutilisés (historique, partage accidentel du lien, etc.).
-        window.history.replaceState(
-          null,
-          "",
-          window.location.pathname + window.location.search
-        );
+      .then(({ error }) => {
+        // Recharge la page sans les jetons une fois la session écrite. Sans ce
+        // rechargement, les appels API peuvent partir avant la fin de setSession
+        // et afficher à tort « session expirée » après un lien valide.
+        window.location.replace(error ? "/connexion?lien=invalide" : cleanUrl);
       });
   }, []);
 

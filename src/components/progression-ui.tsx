@@ -78,9 +78,15 @@ export function HomeProgression() {
     return error ? (
       <div className="mb-7 text-sm text-[var(--muted)]" role="status">
         <p>Votre reprise et votre régularité ne sont pas disponibles.</p>
-        <button className="text-link mt-2" onClick={retry}>
-          Réessayer
-        </button>
+        {error.includes("session") || error.includes("connecté") ? (
+          <Link className="text-link mt-2 inline-block" href="/connexion">
+            Se connecter
+          </Link>
+        ) : (
+          <button className="text-link mt-2" onClick={retry}>
+            Réessayer
+          </button>
+        )}
       </div>
     ) : null;
   return (

@@ -37,13 +37,20 @@ export function ResourceState({
   error?: string;
   retry: () => void;
 }) {
+  const needsLogin = error?.includes("session") || error?.includes("connecté");
   return (
     <div className="panel py-12" role={error ? "alert" : "status"}>
       <p>{error || "Chargement de votre espace…"}</p>
       {error ? (
-        <button className="button mt-5" onClick={retry}>
-          Réessayer
-        </button>
+        needsLogin ? (
+          <Link className="button mt-5" href="/connexion">
+            Se connecter
+          </Link>
+        ) : (
+          <button className="button mt-5" onClick={retry}>
+            Réessayer
+          </button>
+        )
       ) : (
         <div className="mt-5 h-2 w-32 animate-pulse rounded bg-slate-200" />
       )}
