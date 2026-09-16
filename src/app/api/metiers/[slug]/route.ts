@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
 // GET /api/metiers/[slug] — détail d'un métier + ses tâches (via la table de
 // liaison metiers_taches, une tâche pouvant appartenir à plusieurs métiers)
@@ -9,14 +9,9 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params;
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Non connecté" }, { status: 401 });
-  }
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { supabase, user } = access;
 
   const { data: metier, error: erreurMetier } = await supabase
     .from("metiers")

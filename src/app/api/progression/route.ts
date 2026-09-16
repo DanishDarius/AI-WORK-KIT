@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
 type TacheEmbed = { code: string; titre: string } | { code: string; titre: string }[] | null;
 type MetierEmbed = { slug: string; nom: string } | { slug: string; nom: string }[] | null;
@@ -17,14 +17,9 @@ function jourISO(date: Date): string {
 // avancement global, métiers terminés, dernière tâche consultée ("reprise")
 // et série de régularité (jours consécutifs avec au moins une tâche consultée).
 export async function GET() {
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Non connecté" }, { status: 401 });
-  }
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { supabase, user } = access;
 
   const [
     { count: tachesTotal },

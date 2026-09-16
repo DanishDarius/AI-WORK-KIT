@@ -2,6 +2,18 @@ import { NextResponse } from "next/server";
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { createAdminClient } from "@/lib/supabase/admin";
 
+type ChariowPayload = {
+  customer?: { email?: string };
+  client?: { email?: string };
+  email?: string;
+  sale?: { id?: string; status?: string };
+  id?: string;
+  sale_id?: string;
+  product?: { id?: string };
+  product_id?: string;
+  status?: string;
+};
+
 // POST /api/webhooks/chariow — reçoit le Pulse "successful.sale" de Chariow.
 //
 // À configurer côté Chariow (Automatisation → Pulses → Ajouter un Pulse) :
@@ -44,9 +56,9 @@ export async function POST(request: Request) {
     }
   }
 
-  let payload: any = null;
+  let payload: ChariowPayload | null = null;
   try {
-    payload = corpsBrut ? JSON.parse(corpsBrut) : null;
+    payload = corpsBrut ? (JSON.parse(corpsBrut) as ChariowPayload) : null;
   } catch {
     payload = null;
   }
@@ -69,6 +81,7 @@ export async function POST(request: Request) {
       { status: 400 }
     );
   }
+  const normalizedEmail = email.trim().toLowerCase();
 
   const produitAttendu = process.env.CHARIOW_PRODUIT_ID_AI_WORK_KIT;
   if (produitAttendu && productId && productId !== produitAttendu) {
@@ -95,18 +108,35 @@ export async function POST(request: Request) {
 
   const { error: erreurInsertion } = await supabaseAdmin
     .from("acces_clients")
-    .insert({ email, chariow_sale_id: saleId, statut: "actif" });
+    .insert({
+      email: normalizedEmail,
+      chariow_sale_id: saleId,
+      statut: "actif",
+    });
 
   if (erreurInsertion) {
     return NextResponse.json({ error: erreurInsertion.message }, { status: 500 });
   }
 
-  // Crée le compte (ou récupère le compte existant) et envoie le lien magique
-  // de connexion à l'acheteur.
+  // Pour un premier achat, l'invitation confirme l'email puis conduit à la
+  // création du mot de passe. Un client déjà inscrit conserve son mot de passe.
+  const activationUrl = `${new URL(request.url).origin}/activation`;
   const { error: erreurInvitation } =
-    await supabaseAdmin.auth.admin.inviteUserByEmail(email);
+    await supabaseAdmin.auth.admin.inviteUserByEmail(normalizedEmail, {
+      redirectTo: activationUrl,
+    });
 
-  if (erreurInvitation && !erreurInvitation.message?.includes("already been registered")) {
+  const compteExistant =
+    erreurInvitation &&
+    /already (been )?registered|already exists/i.test(erreurInvitation.message);
+
+  if (erreurInvitation && !compteExistant) {
+    // L'accès et l'invitation forment une seule opération logique. En cas
+    // d'échec d'envoi, on retire la ligne afin que Chariow puisse retenter.
+    await supabaseAdmin
+      .from("acces_clients")
+      .delete()
+      .eq("chariow_sale_id", saleId);
     return NextResponse.json({ error: erreurInvitation.message }, { status: 500 });
   }
 

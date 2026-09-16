@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
 const CHEMINS_VALIDES = ["chatgpt", "claude", "gemini"];
 
@@ -10,14 +10,9 @@ export async function POST(
   { params }: { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params;
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Non connecté" }, { status: 401 });
-  }
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { supabase, user } = access;
 
   const body = await request.json().catch(() => null);
   const chemin = body?.chemin;

@@ -1,12 +1,15 @@
 "use client";
 
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
 export function ConnexionForm() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
   const [error, setError] = useState<string>();
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -15,47 +18,21 @@ export function ConnexionForm() {
 
     setSending(true);
     setError(undefined);
-    const { error: authError } = await createClient().auth.signInWithOtp({
+    const { error: authError } = await createClient().auth.signInWithPassword({
       email: email.trim(),
-      options: {
-        shouldCreateUser: false,
-        emailRedirectTo: `${window.location.origin}/`,
-      },
+      password,
     });
     setSending(false);
 
     if (authError) {
       setError(
-        "Impossible d’envoyer le lien. Vérifiez que cette adresse correspond à votre achat, puis réessayez.",
+        "Email ou mot de passe incorrect. Vérifiez vos informations, puis réessayez.",
       );
       return;
     }
 
-    setSent(true);
-  }
-
-  if (sent) {
-    return (
-      <div className="aw-login-confirmation" role="status">
-        <span className="aw-login-check" aria-hidden="true">
-          ✓
-        </span>
-        <div>
-          <h2>Consultez votre boîte mail</h2>
-          <p>
-            Un lien de connexion vient d’être envoyé à <strong>{email}</strong>.
-            Il vous suffit de l’ouvrir sur cet appareil.
-          </p>
-          <button
-            className="text-link mt-4"
-            type="button"
-            onClick={() => setSent(false)}
-          >
-            Utiliser une autre adresse
-          </button>
-        </div>
-      </div>
-    );
+    router.replace("/");
+    router.refresh();
   }
 
   return (
@@ -72,17 +49,30 @@ export function ConnexionForm() {
         onChange={(event) => setEmail(event.target.value)}
         required
       />
+      <div className="aw-password-heading">
+        <label htmlFor="mot-de-passe-connexion">Mot de passe</label>
+        <Link href="/mot-de-passe-oublie">Mot de passe oublié ?</Link>
+      </div>
+      <input
+        id="mot-de-passe-connexion"
+        name="password"
+        type="password"
+        autoComplete="current-password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+        required
+      />
       {error && (
         <p className="action-error" role="alert">
           {error}
         </p>
       )}
       <button className="button" type="submit" disabled={sending}>
-        {sending ? "Envoi en cours…" : "Recevoir mon lien de connexion"}
+        {sending ? "Connexion…" : "Se connecter"}
       </button>
       <p className="aw-login-help">
-        Aucun mot de passe n’est nécessaire. Pour protéger le contenu, seuls les
-        comptes associés à un achat peuvent recevoir un lien.
+        Votre compte est créé après la validation de votre achat. Il n’est pas
+        possible de s’inscrire directement depuis cette page.
       </p>
     </form>
   );

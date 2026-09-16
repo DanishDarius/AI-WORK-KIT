@@ -35,8 +35,8 @@ accessibles depuis Favoris et Progression dans la navigation.
   résultats à deux caractères ou plus avec contexte métier.
 - Header compact vérifié : navigation directe sur ordinateur et menu repliable à
   deux traits sur tablette/mobile, avec fermeture au changement de page ou via Échap.
-- Reconnexion sans mot de passe disponible sur `/connexion` pour les comptes déjà
-  créés ; les erreurs de session proposent désormais une action de connexion.
+- Connexion email/mot de passe sur `/connexion`, activation initiale après achat,
+  récupération du mot de passe et déconnexion depuis la page Progression.
 
 Les vérifications interactives utilisent un compte fictif et un proxy local de
 fixtures reprenant le contenu de la V1. Elles ne constituent pas une validation

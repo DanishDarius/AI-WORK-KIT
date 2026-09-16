@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
 type TacheEmbed = { code: string; titre: string } | { code: string; titre: string }[] | null;
 type MetierEmbed = { slug: string; nom: string } | { slug: string; nom: string }[] | null;
@@ -13,14 +13,9 @@ function un<T>(valeur: T | T[] | null): T | null {
 // connecté, avec le contexte métier permettant de reconstruire le lien
 // /taches/[id]?metier=<slug>. Triées de la plus récente à la plus ancienne.
 export async function GET() {
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Non connecté" }, { status: 401 });
-  }
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { supabase, user } = access;
 
   const { data, error } = await supabase
     .from("favoris")

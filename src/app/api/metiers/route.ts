@@ -1,18 +1,13 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
 // GET /api/metiers — liste des 12 métiers avec le nombre de tâches de chacun
 // (une tâche pouvant appartenir à plusieurs métiers — relation many-to-many
 // via la table metiers_taches).
 export async function GET() {
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Non connecté" }, { status: 401 });
-  }
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { supabase, user } = access;
 
   const [{ data: metiers, error }, { data: liaisons }, { data: faites }] = await Promise.all([
     supabase

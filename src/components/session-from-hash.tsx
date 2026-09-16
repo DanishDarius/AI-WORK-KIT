@@ -2,39 +2,38 @@
 import { useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
 
-// Filet de sécurité pour la connexion par lien magique / invitation.
-//
-// Tant que le SMTP personnalisé n'est pas configuré dans Supabase (voir
-// Authentication → Emails → un bandeau "Set up custom SMTP to edit
-// templates" bloque l'édition), le modèle d'email par défaut renvoie le
-// client vers le site avec la session dans le FRAGMENT d'URL
-// (#access_token=...&refresh_token=...&type=invite), pas vers une route
-// serveur — voir la doc Supabase "Redirecting the user to a server-side
-// endpoint". Un fragment n'est jamais envoyé au serveur : seul le
-// navigateur peut le lire, d'où ce composant client.
-//
-// Dès que le SMTP personnalisé sera en place, le modèle "Invite user"
-// pourra être changé pour pointer vers /auth/confirm (déjà prêt côté
-// serveur) — plus propre et fonctionne aussi avec les clients mail qui
-// pré-chargent les liens (Outlook Safe Links, etc.). Ce composant restera
-// alors un filet de sécurité inoffensif pour d'anciens liens déjà envoyés.
+// Termine les redirections d'activation et de récupération Supabase lorsque
+// la session arrive côté navigateur, sous forme de code PKCE ou de fragment.
+// La route serveur /auth/confirm couvre en parallèle les modèles utilisant un
+// token_hash. Les trois formats sont acceptés pour ne pas casser d'anciens liens.
 export function SessionFromHash() {
   useEffect(() => {
-    if (!window.location.hash.includes("access_token")) return;
-    const params = new URLSearchParams(window.location.hash.slice(1));
-    const access_token = params.get("access_token");
-    const refresh_token = params.get("refresh_token");
-    if (!access_token || !refresh_token) return;
+    const hashParams = new URLSearchParams(window.location.hash.slice(1));
+    const queryParams = new URLSearchParams(window.location.search);
+    const accessToken = hashParams.get("access_token");
+    const refreshToken = hashParams.get("refresh_token");
+    const code = queryParams.get("code");
+    if ((!accessToken || !refreshToken) && !code) return;
 
-    const cleanUrl = window.location.pathname + window.location.search;
-    createClient()
-      .auth.setSession({ access_token, refresh_token })
-      .then(({ error }) => {
-        // Recharge la page sans les jetons une fois la session écrite. Sans ce
-        // rechargement, les appels API peuvent partir avant la fin de setSession
-        // et afficher à tort « session expirée » après un lien valide.
-        window.location.replace(error ? "/connexion?lien=invalide" : cleanUrl);
-      });
+    queryParams.delete("code");
+    queryParams.delete("error");
+    queryParams.delete("error_code");
+    queryParams.delete("error_description");
+    const query = queryParams.toString();
+    const cleanUrl = `${window.location.pathname}${query ? `?${query}` : ""}`;
+    const supabase = createClient();
+    const exchange = code
+      ? supabase.auth.exchangeCodeForSession(code)
+      : supabase.auth.setSession({
+          access_token: accessToken!,
+          refresh_token: refreshToken!,
+        });
+
+    exchange.then(({ error }) => {
+      // Recharge la page sans les jetons une fois la session écrite. Sans ce
+      // rechargement, les appels API peuvent partir avant la fin de l'échange.
+      window.location.replace(error ? "/connexion?lien=invalide" : cleanUrl);
+    });
   }, []);
 
   return null;

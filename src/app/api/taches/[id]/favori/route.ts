@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
 // POST /api/taches/[id]/favori?metier=<slug> — ajoute ou retire une tâche
 // des favoris de l'utilisateur connecté. Body attendu : { "favori": true|false }.
@@ -15,14 +15,9 @@ export async function POST(
   const { id } = await params;
   const { searchParams } = new URL(request.url);
   const metierSlug = searchParams.get("metier");
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Non connecté" }, { status: 401 });
-  }
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { supabase, user } = access;
 
   const body = await request.json().catch(() => null);
   const favori = body?.favori;

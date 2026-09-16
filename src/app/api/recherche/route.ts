@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
 type TacheEmbed = { id: string; code: string; titre: string } | { id: string; code: string; titre: string }[] | null;
 type MetierEmbed = { slug: string; nom: string } | { slug: string; nom: string }[] | null;
@@ -17,13 +17,9 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const q = (searchParams.get("q") ?? "").trim();
 
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Non connecté" }, { status: 401 });
-  }
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { supabase } = access;
 
   if (q.length < 2) {
     return NextResponse.json({ taches: [], glossaire: [] });

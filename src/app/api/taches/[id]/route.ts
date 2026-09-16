@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
 // GET /api/taches/[id]?metier=<slug> — détail d'une tâche : ses 2 exercices,
 // avec pour chacun les 3 prompts (chatgpt / claude / gemini).
@@ -15,14 +15,9 @@ export async function GET(
   const { searchParams } = new URL(request.url);
   const metierSlug = searchParams.get("metier");
 
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) {
-    return NextResponse.json({ error: "Non connecté" }, { status: 401 });
-  }
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { supabase, user } = access;
 
   const { data: tache, error: erreurTache } = await supabase
     .from("taches")

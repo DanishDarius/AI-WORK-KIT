@@ -3,6 +3,7 @@ import { Progression, useResource } from "@/lib/kit-api";
 import { Back, Intro, ResourceState } from "@/components/kit-ui";
 import { ProgressBar, Regularite } from "@/components/progression-ui";
 import { FavorisList } from "@/components/favoris-list";
+import { SignOutButton } from "@/components/account-actions";
 export default function Compte() {
   const progression = useResource<Progression>("/api/progression");
   const { data, error, retry } = useResource<{
@@ -72,6 +73,7 @@ export default function Compte() {
                 </dd>
               </div>
             </dl>
+            <SignOutButton />
           </section>
         )}
       </div>
