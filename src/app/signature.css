@@ -59,13 +59,13 @@ body {
   backdrop-filter: blur(18px);
 }
 #awk-studio .aw-header-inner {
-  width: min(1220px, calc(100% - 40px));
+  width: min(1500px, calc(100% - 32px));
   min-height: 72px;
   margin-inline: auto;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 32px;
+  gap: clamp(16px, 1.8vw, 28px);
 }
 #awk-studio .aw-brand {
   display: flex;
@@ -82,54 +82,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 2.2vw, 34px);
+  gap: clamp(10px, 1.15vw, 22px);
 }
 #awk-studio .aw-desktop-nav > a,
-#awk-studio .aw-desktop-nav > .aw-explore-menu > button,
 #awk-studio .aw-login-link {
   padding: 10px 0;
   border: 0;
   background: none;
   color: #a9b6bc;
-  font: 500 15px/1.5 var(--font-plus-jakarta), system-ui, sans-serif;
+  font: 500 clamp(12px, 0.95vw, 14px)/1.5 var(--font-plus-jakarta), system-ui, sans-serif;
   text-decoration: none;
   white-space: nowrap;
   transition: color 160ms ease;
 }
 #awk-studio .aw-desktop-nav > a:hover,
 #awk-studio .aw-desktop-nav > a[aria-current="page"],
-#awk-studio .aw-desktop-nav > .aw-explore-menu > button:hover,
 #awk-studio .aw-login-link:hover { color: #fff; }
-#awk-studio .aw-explore-menu { position: relative; }
-#awk-studio .aw-explore-menu > button {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 7px;
-  cursor: pointer;
-}
-#awk-studio .aw-explore-menu > button span { color: #7f9299; font-size: 17px; }
-#awk-studio .aw-explore-dropdown {
-  position: absolute;
-  top: calc(100% + 18px);
-  left: 50%;
-  width: 330px;
-  padding: 10px;
-  border: 1px solid #263941;
-  border-radius: 16px;
-  background: #0a141a;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, -8px);
-  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
-}
-#awk-studio .aw-explore-dropdown[data-open="true"] {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, 0);
-}
-#awk-studio .aw-explore-dropdown a,
 #awk-studio .aw-mobile-panel nav a {
   display: grid;
   grid-template-columns: 28px 1fr;
@@ -140,14 +108,10 @@ body {
   color: #dce7ea;
   text-decoration: none;
 }
-#awk-studio .aw-explore-dropdown a:hover,
 #awk-studio .aw-mobile-panel nav a:hover,
 #awk-studio .aw-mobile-panel nav a[aria-current="page"] { background: #10242b; }
-#awk-studio .aw-explore-dropdown svg,
 #awk-studio .aw-mobile-panel nav svg { margin-top: 2px; color: #33ffff; }
-#awk-studio .aw-explore-dropdown strong,
 #awk-studio .aw-mobile-panel nav strong { display: block; font-size: 14px; }
-#awk-studio .aw-explore-dropdown small,
 #awk-studio .aw-mobile-panel nav small {
   display: block;
   margin-top: 3px;
@@ -707,7 +671,7 @@ body {
 }
 #awk-studio .aw-bottom a { text-decoration: none; }
 
-@media (max-width: 1280px) {
+@media (max-width: 1180px) {
   #awk-studio .aw-desktop-nav,
   #awk-studio .aw-login-link { display: none; }
   #awk-studio .aw-header-inner { grid-template-columns: 1fr auto; }

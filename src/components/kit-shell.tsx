@@ -13,6 +13,7 @@ const exploreLinks = [
   { href: "/comprendre-les-ia", label: "Comprendre les IA", description: "Choisissez le bon outil pour votre travail", icon: "sparkles" },
   { href: "/bibliotheque", label: "Bibliothèque", description: "Consultez tous les guides pratiques", icon: "writing" },
   { href: "/systemes-ia", label: "Systèmes IA", description: "Demandez un parcours adapté à votre travail", icon: "layers" },
+  { href: "/transformation-ia", label: "Transformation IA", description: "Définissez votre stratégie d’intégration", icon: "analysis" },
   { href: "/mises-a-jour-ia", label: "Mises à jour IA", description: "Suivez les nouveautés qui comptent", icon: "analysis" },
 ];
 
@@ -23,22 +24,20 @@ const hasSupabaseConfig = Boolean(
 export function Shell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [exploreOpen, setExploreOpen] = useState(false);
   const [authenticated, setAuthenticated] = useState<boolean | null>(hasSupabaseConfig ? null : false);
   const menuButton = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (!menuOpen && !exploreOpen) return;
+    if (!menuOpen) return;
     function closeOnEscape(event: KeyboardEvent) {
       if (event.key === "Escape") {
         setMenuOpen(false);
-        setExploreOpen(false);
         menuButton.current?.focus();
       }
     }
     window.addEventListener("keydown", closeOnEscape);
     return () => window.removeEventListener("keydown", closeOnEscape);
-  }, [menuOpen, exploreOpen]);
+  }, [menuOpen]);
 
   useEffect(() => {
     if (!hasSupabaseConfig) return;
@@ -55,7 +54,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const accountLabel = "Ma progression";
   const closeMenus = () => {
     setMenuOpen(false);
-    setExploreOpen(false);
   };
   const isCurrent = (href: string) => href === "/" ? path === href : path.startsWith(href);
 
@@ -71,27 +69,12 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
           <nav className="aw-desktop-nav" aria-label="Navigation principale">
             <Link href="/" aria-current={path === "/" ? "page" : undefined}>Accueil</Link>
-            <div className="aw-explore-menu">
-              <button
-                type="button"
-                aria-expanded={exploreOpen}
-                aria-controls="menu-explorer"
-                onClick={() => setExploreOpen((open) => !open)}
-              >
-                Explorer <span aria-hidden="true">⌄</span>
-              </button>
-              <div id="menu-explorer" className="aw-explore-dropdown" data-open={exploreOpen ? "true" : "false"}>
-                {exploreLinks.slice(0, 2).map((item) => (
-                  <Link key={item.href} href={item.href} onClick={closeMenus}>
-                    <Icon name={item.icon} />
-                    <span><strong>{item.label}</strong><small>{item.description}</small></span>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link href="/taches" aria-current={isCurrent("/taches") ? "page" : undefined}>Tâches</Link>
+            <Link href="/metiers" aria-current={isCurrent("/metiers") ? "page" : undefined}>Métiers</Link>
             <Link href="/comprendre-les-ia" aria-current={isCurrent("/comprendre-les-ia") ? "page" : undefined}>Comprendre les IA</Link>
             <Link href="/bibliotheque" aria-current={isCurrent("/bibliotheque") || isCurrent("/guides") ? "page" : undefined}>Guides</Link>
             <Link href="/systemes-ia" aria-current={isCurrent("/systemes-ia") ? "page" : undefined}>Systèmes IA</Link>
+            <Link href="/transformation-ia" aria-current={isCurrent("/transformation-ia") ? "page" : undefined}>Transformation IA</Link>
             <Link href="/mises-a-jour-ia" aria-current={isCurrent("/mises-a-jour-ia") ? "page" : undefined}>Mises à jour IA</Link>
           </nav>
 
