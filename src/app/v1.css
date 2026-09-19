@@ -4,7 +4,8 @@
   color: var(--aw-ink);
   background: var(--aw-bg);
   font:
-    400 14px/1.6 Roboto,
+    400 14px/1.6 var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   width: 100%;
   overflow-wrap: anywhere;
@@ -38,7 +39,7 @@
 #awk-studio h1,
 #awk-studio h2,
 #awk-studio h3 {
-  font-family: Inter, sans-serif;
+  font-family: var(--font-bricolage), var(--font-plus-jakarta), system-ui, sans-serif;
   line-height: 1.2;
   letter-spacing: -0.045em;
 }
@@ -101,7 +102,7 @@
   width: 35px;
   height: 35px;
   border-radius: 10px;
-  font-family: Inter, sans-serif;
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
   font-size: 16px;
   letter-spacing: -1.5px;
 }
@@ -286,7 +287,9 @@
 }
 #awk-studio .aw-path strong {
   font:
-    750 20px/1.2 Inter,
+    750 20px/1.2 var(--font-bricolage),
+    var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   letter-spacing: -0.5px;
 }
@@ -621,7 +624,8 @@
 }
 #awk-studio .aw-case b {
   font:
-    650 16px Inter,
+    650 16px var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   color: var(--aw-accent);
 }
@@ -655,7 +659,8 @@
   border: 1px solid var(--aw-line);
   border-radius: 7px;
   font:
-    500 11px "Roboto",
+    500 11px var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   letter-spacing: 0;
   margin-right: 7px;
@@ -695,7 +700,8 @@
 }
 #awk-studio details pre {
   font:
-    400 12px/1.7 "Roboto",
+    400 12px/1.7 var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   white-space: pre-wrap;
   margin: 0;
@@ -722,7 +728,8 @@
 }
 #awk-studio .aw-prompt pre {
   font:
-    400 12px/1.8 "Roboto",
+    400 12px/1.8 var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   white-space: pre-wrap;
   margin: 0;
@@ -969,7 +976,7 @@
 #awk-studio .aw-nav :is(a, button),
 #awk-studio .aw-btn,
 #awk-studio .aw-ai button {
-  font-family: Inter, sans-serif;
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
 }
 #awk-studio .aw-icon.aw-blue {
   background: var(--aw-secondary-soft);
@@ -1019,7 +1026,8 @@
 }
 #awk-studio .aw-theme button {
   font:
-    500 11px/1.4 Inter,
+    500 11px/1.4 var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   display: flex;
   align-items: center;
@@ -1189,7 +1197,8 @@
 }
 #awk-studio .aw-watch button {
   font:
-    500 13px Inter,
+    500 13px var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   min-height: 44px;
   padding: 10px;
@@ -1356,7 +1365,8 @@
 }
 #awk-studio .aw-video-kicker {
   font:
-    500 11px Inter,
+    500 11px var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1378,7 +1388,9 @@
 }
 #awk-studio .aw-video-poster strong {
   font:
-    650 clamp(19px, 2.6cqi, 34px)/1.22 Inter,
+    650 clamp(19px, 2.6cqi, 34px)/1.22 var(--font-bricolage),
+    var(--font-plus-jakarta),
+    system-ui,
     sans-serif;
   letter-spacing: -0.035em;
   overflow-wrap: anywhere;

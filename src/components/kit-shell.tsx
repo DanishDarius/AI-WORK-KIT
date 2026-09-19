@@ -11,14 +11,20 @@ const exploreLinks = [
   { href: "/taches", label: "Tâches", description: "Partez d’un besoin concret", icon: "tasks" },
   { href: "/metiers", label: "Métiers", description: "Explorez votre quotidien professionnel", icon: "jobs" },
   { href: "/comprendre-les-ia", label: "Comprendre les IA", description: "Choisissez le bon outil pour votre travail", icon: "sparkles" },
+  { href: "/bibliotheque", label: "Bibliothèque", description: "Consultez tous les guides pratiques", icon: "writing" },
+  { href: "/systemes-ia", label: "Systèmes IA", description: "Demandez un parcours adapté à votre travail", icon: "layers" },
   { href: "/mises-a-jour-ia", label: "Mises à jour IA", description: "Suivez les nouveautés qui comptent", icon: "analysis" },
 ];
+
+const hasSupabaseConfig = Boolean(
+  process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [exploreOpen, setExploreOpen] = useState(false);
-  const [authenticated, setAuthenticated] = useState<boolean | null>(null);
+  const [authenticated, setAuthenticated] = useState<boolean | null>(hasSupabaseConfig ? null : false);
   const menuButton = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -35,6 +41,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
   }, [menuOpen, exploreOpen]);
 
   useEffect(() => {
+    if (!hasSupabaseConfig) return;
+
     const supabase = createClient();
     supabase.auth.getSession().then(({ data }) => setAuthenticated(Boolean(data.session)));
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -82,6 +90,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             <Link href="/comprendre-les-ia" aria-current={isCurrent("/comprendre-les-ia") ? "page" : undefined}>Comprendre les IA</Link>
+            <Link href="/bibliotheque" aria-current={isCurrent("/bibliotheque") || isCurrent("/guides") ? "page" : undefined}>Guides</Link>
+            <Link href="/systemes-ia" aria-current={isCurrent("/systemes-ia") ? "page" : undefined}>Systèmes IA</Link>
             <Link href="/mises-a-jour-ia" aria-current={isCurrent("/mises-a-jour-ia") ? "page" : undefined}>Mises à jour IA</Link>
           </nav>
 
@@ -131,21 +141,26 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <p>L’intelligence artificielle appliquée à votre travail, concrètement.</p>
           </div>
 
-          <nav className="aw-footer-column" aria-label="Menu du pied de page">
-            <h2>Menu</h2>
-            <Link href="/">Accueil</Link>
-            <Link href="/taches">Tâches</Link>
-            <Link href="/metiers">Métiers</Link>
-            <Link href="/mises-a-jour-ia">Mises à jour IA</Link>
-            <Link href="/mon-compte">Ma progression</Link>
-          </nav>
+          <div className="aw-footer-links">
+            <nav className="aw-footer-column" aria-label="Menu du pied de page">
+              <h2>Menu</h2>
+              <Link href="/">Accueil</Link>
+              <Link href="/taches">Tâches</Link>
+              <Link href="/metiers">Métiers</Link>
+              <Link href="/bibliotheque">Bibliothèque</Link>
+              <Link href="/transformation-ia">Transformation IA</Link>
+              <Link href="/systemes-ia">Systèmes IA</Link>
+              <Link href="/mises-a-jour-ia">Mises à jour IA</Link>
+              <Link href="/mon-compte">Ma progression</Link>
+            </nav>
 
-          <nav className="aw-footer-column" aria-label="Pages légales">
-            <h2>Pages légales</h2>
-            <a href="https://boutique.parlonsads.com/mentions-legales">Mentions légales</a>
-            <a href="https://boutique.parlonsads.com/confidentialite">Politique de confidentialité</a>
-            <a href="https://boutique.parlonsads.com/conditions-de-vente">Conditions de vente</a>
-          </nav>
+            <nav className="aw-footer-column" aria-label="Pages légales">
+              <h2>Pages légales</h2>
+              <a href="https://boutique.parlonsads.com/mentions-legales">Mentions légales</a>
+              <a href="https://boutique.parlonsads.com/confidentialite">Politique de confidentialité</a>
+              <a href="https://boutique.parlonsads.com/conditions-de-vente">Conditions de vente</a>
+            </nav>
+          </div>
         </div>
 
         <div className="aw-bottom">
