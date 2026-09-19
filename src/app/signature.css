@@ -1,0 +1,543 @@
+/* Direction Signature, inspirée de l’architecture Créabase et adaptée à AIW. */
+:root,
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --aw-bg: #070d12;
+  --aw-paper: #0c171d;
+  --aw-ink: #f5fbfc;
+  --aw-muted: #9fb1b8;
+  --aw-line: #21343c;
+  --aw-accent: #33ffff;
+  --aw-soft: #10272e;
+  --aw-primary: #33ffff;
+  --aw-on-primary: #03171b;
+  --aw-secondary: #8fe4e8;
+  --aw-secondary-soft: #10272e;
+  --aw-night: #050b0f;
+  --aw-lime: #33ffff;
+  --aw-on-night: #f5fbfc;
+  --aw-on-night-muted: #a9bdc5;
+  --aw-art-line: #21454e;
+  --aw-art-layer: #102f39;
+  --navy: var(--aw-accent);
+  --background: var(--aw-bg);
+  --border: var(--aw-line);
+  --muted: var(--aw-muted);
+}
+
+html { background: #070d12; }
+body {
+  background:
+    radial-gradient(circle at 50% -10%, rgba(11, 116, 126, 0.2), transparent 34rem),
+    #070d12;
+}
+#awk-studio {
+  max-width: none;
+  background:
+    linear-gradient(rgba(51, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(51, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* Header */
+#awk-studio .aw-top {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: block;
+  padding: 0;
+  background: rgba(6, 12, 17, 0.96);
+  border-bottom: 1px solid #1d2a31;
+  backdrop-filter: blur(18px);
+}
+#awk-studio .aw-header-inner {
+  width: min(1220px, calc(100% - 40px));
+  min-height: 72px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+#awk-studio .aw-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f7fbfc;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#awk-studio .aw-brand-symbol { width: 36px; height: 36px; flex: 0 0 auto; }
+#awk-studio .aw-brand span { font-size: 17px; letter-spacing: -0.045em; }
+#awk-studio .aw-brand em { color: #b9c8cd; }
+#awk-studio .aw-desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 2.2vw, 34px);
+}
+#awk-studio .aw-desktop-nav > a,
+#awk-studio .aw-desktop-nav > .aw-explore-menu > button,
+#awk-studio .aw-login-link {
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  color: #a9b6bc;
+  font: 500 14px/1.2 Inter, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 160ms ease;
+}
+#awk-studio .aw-desktop-nav > a:hover,
+#awk-studio .aw-desktop-nav > a[aria-current="page"],
+#awk-studio .aw-desktop-nav > .aw-explore-menu > button:hover,
+#awk-studio .aw-login-link:hover { color: #fff; }
+#awk-studio .aw-explore-menu { position: relative; }
+#awk-studio .aw-explore-menu > button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+#awk-studio .aw-explore-menu > button span { color: #7f9299; font-size: 17px; }
+#awk-studio .aw-explore-dropdown {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  width: 330px;
+  padding: 10px;
+  border: 1px solid #263941;
+  border-radius: 16px;
+  background: #0a141a;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -8px);
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+#awk-studio .aw-explore-dropdown[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+#awk-studio .aw-explore-dropdown a,
+#awk-studio .aw-mobile-panel nav a {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  color: #dce7ea;
+  text-decoration: none;
+}
+#awk-studio .aw-explore-dropdown a:hover,
+#awk-studio .aw-mobile-panel nav a:hover,
+#awk-studio .aw-mobile-panel nav a[aria-current="page"] { background: #10242b; }
+#awk-studio .aw-explore-dropdown svg,
+#awk-studio .aw-mobile-panel nav svg { margin-top: 2px; color: #33ffff; }
+#awk-studio .aw-explore-dropdown strong,
+#awk-studio .aw-mobile-panel nav strong { display: block; font-size: 14px; }
+#awk-studio .aw-explore-dropdown small,
+#awk-studio .aw-mobile-panel nav small {
+  display: block;
+  margin-top: 3px;
+  color: #82969d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+#awk-studio .aw-header-actions { display: flex; align-items: center; gap: 18px; }
+#awk-studio .aw-header-cta {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 9px;
+  background: #f5f8f9;
+  color: #091319;
+  font: 650 14px Inter, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#awk-studio .aw-menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid #23343c;
+  border-radius: 9px;
+  background: #0a141a;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}
+#awk-studio .aw-menu-toggle span {
+  width: 17px;
+  height: 1.5px;
+  border-radius: 999px;
+  background: #dbe6e9;
+  transition: transform 160ms ease;
+}
+#awk-studio .aw-menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.75px) rotate(45deg); }
+#awk-studio .aw-menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+#awk-studio .aw-mobile-panel { display: none; }
+
+/* Hero */
+#awk-studio .aw-main {
+  width: min(1280px, 100%);
+  padding-top: 0;
+}
+#awk-studio .aw-signature-hero {
+  min-height: 500px;
+  margin: 0;
+  padding: clamp(72px, 9vw, 122px) 24px 68px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 5%, rgba(14, 117, 128, 0.18), transparent 32rem),
+    transparent;
+  border: 0;
+  border-radius: 0;
+}
+#awk-studio .aw-hero-copy { width: min(900px, 100%); }
+#awk-studio .aw-signature-hero .aw-eyebrow {
+  justify-content: center;
+  color: #70f5f5;
+  letter-spacing: 0.16em;
+}
+#awk-studio .aw-signature-hero h1 {
+  max-width: none;
+  margin-top: 22px;
+  color: #f7fbfc;
+  font-size: clamp(42px, 6.2vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+#awk-studio .aw-signature-hero h1 span { color: #33ffff; }
+#awk-studio .aw-signature-hero p {
+  max-width: 700px;
+  margin: 28px auto 0;
+  color: #aab9bf;
+  font-size: clamp(16px, 1.7vw, 20px);
+  line-height: 1.65;
+}
+#awk-studio .aw-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 36px;
+}
+#awk-studio .aw-hero-actions a {
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 28px;
+  border-radius: 10px;
+  font: 650 15px Inter, sans-serif;
+  text-decoration: none;
+}
+#awk-studio .aw-hero-primary {
+  background: #33ffff;
+  color: #03171b;
+  box-shadow: 0 12px 36px rgba(51, 255, 255, 0.18);
+}
+#awk-studio .aw-hero-primary:hover { background: #8affff; }
+#awk-studio .aw-hero-secondary { color: #d4e0e4; }
+#awk-studio .aw-hero-secondary:hover { color: #fff; }
+#awk-studio .aw-hero-note {
+  display: block;
+  margin-top: 24px;
+  color: #63777f;
+  font-size: 12px;
+}
+
+/* Bloc de démarrage au-dessus de la vidéo */
+#awk-studio .aw-start-showcase {
+  width: min(1120px, 100%);
+  margin: 0 auto 44px;
+  position: relative;
+}
+#awk-studio .aw-start-pill {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  min-height: 62px;
+  margin: 0 auto -24px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid #29424b;
+  border-radius: 999px;
+  background: #0a141a;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  color: #e9f3f5;
+}
+#awk-studio .aw-start-pill svg { color: #33ffff; }
+#awk-studio .aw-start-pill strong { font-size: 14px; }
+#awk-studio .aw-start-pill span { color: #82969d; font-size: 12px; }
+#awk-studio .aw-start-window {
+  overflow: hidden;
+  border: 1px solid #29404a;
+  border-radius: 18px;
+  background: #091319;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+#awk-studio .aw-window-bar {
+  min-height: 48px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #20343c;
+  background: #0d1920;
+}
+#awk-studio .aw-window-bar > span { width: 8px; height: 8px; border-radius: 50%; background: #52666e; }
+#awk-studio .aw-window-bar small { margin-left: 10px; color: #71868e; font-size: 10px; }
+#awk-studio .aw-ai-video {
+  position: relative;
+  min-height: clamp(420px, 48vw, 620px);
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  background-image:
+    linear-gradient(180deg, rgba(3, 12, 16, 0.15), rgba(3, 12, 16, 0.68)),
+    url("/brand/ia-au-travail.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#awk-studio .aw-ai-video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at center, transparent 0 24%, rgba(2, 11, 15, 0.36) 72%);
+}
+#awk-studio .aw-ai-video-overlay {
+  width: min(620px, calc(100% - 40px));
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #f5fbfc;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.62);
+}
+#awk-studio .aw-ai-video-overlay .aw-video-kicker {
+  color: #b7f8f8;
+  font: 600 11px Inter, sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+#awk-studio .aw-ai-video-overlay .aw-video-play {
+  width: 82px;
+  height: 82px;
+  margin: 22px 0;
+  display: grid;
+  place-items: center;
+  border: 10px solid rgba(51, 255, 255, 0.18);
+  border-radius: 50%;
+  background: #33ffff;
+  color: #03171b;
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.36);
+}
+#awk-studio .aw-ai-video-overlay h2 {
+  max-width: 560px;
+  color: #fff;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+#awk-studio .aw-ai-video-overlay p {
+  margin-top: 18px;
+  color: #c8dadd;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+/* Harmonisation des composants existants sur le fond sombre */
+#awk-studio :is(.panel, .aw-path, .aw-tile, .aw-ai, .aw-list, .aw-sectionhead, .aw-video-section) {
+  background-color: rgba(12, 23, 29, 0.94);
+}
+#awk-studio .aw-site-footer {
+  margin-top: clamp(72px, 9vw, 132px);
+  color: #dce7ea;
+  border-top: 1px solid #1f3139;
+  background: #080f15;
+}
+#awk-studio .aw-footer-main {
+  width: min(100% - 64px, 1180px);
+  margin: 0 auto;
+  padding: clamp(64px, 8vw, 104px) 0 clamp(58px, 7vw, 92px);
+  display: grid;
+  grid-template-columns: minmax(280px, 1.7fr) minmax(150px, 0.65fr) minmax(220px, 0.85fr);
+  gap: clamp(48px, 7vw, 108px);
+}
+#awk-studio .aw-footer-brand { max-width: 470px; }
+#awk-studio .aw-footer-logo {
+  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: #f7fbfc;
+  text-decoration: none;
+}
+#awk-studio .aw-footer-logo img { width: 46px; height: 46px; }
+#awk-studio .aw-footer-logo span {
+  font: 700 clamp(21px, 2vw, 28px)/1 Inter, sans-serif;
+  letter-spacing: -0.045em;
+}
+#awk-studio .aw-footer-logo em { color: #a9bbc1; font-style: normal; font-weight: 450; }
+#awk-studio .aw-footer-brand p {
+  max-width: 430px;
+  margin: 28px 0 0;
+  color: #91a2a9;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.65;
+}
+#awk-studio .aw-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 17px;
+}
+#awk-studio .aw-footer-column h2 {
+  margin: 2px 0 10px;
+  color: #7f929a;
+  font: 650 11px/1.2 Inter, sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+#awk-studio .aw-footer-column a {
+  color: #c8d4d8;
+  font-size: 14px;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: color 160ms ease, transform 160ms ease;
+}
+#awk-studio .aw-footer-column a:hover,
+#awk-studio .aw-footer-column a:focus-visible {
+  color: #33ffff;
+  transform: translateX(2px);
+}
+#awk-studio .aw-bottom {
+  width: min(100% - 64px, 1180px);
+  margin: 0 auto;
+  padding: 27px 0 30px;
+  background: transparent;
+  border-color: #1f3139;
+}
+#awk-studio .aw-bottom a { text-decoration: none; }
+
+@media (max-width: 1050px) {
+  #awk-studio .aw-desktop-nav,
+  #awk-studio .aw-login-link { display: none; }
+  #awk-studio .aw-header-inner { grid-template-columns: 1fr auto; }
+  #awk-studio .aw-menu-toggle { display: inline-flex; }
+  #awk-studio .aw-mobile-panel {
+    width: min(100%, 720px);
+    max-height: calc(100dvh - 72px);
+    margin-left: auto;
+    padding: 24px max(24px, calc((100vw - 720px) / 2 + 24px)) 30px;
+    overflow-y: auto;
+    border-top: 1px solid #1d2a31;
+    background: #071017;
+  }
+  #awk-studio .aw-mobile-panel[data-open="true"] { display: block; }
+  #awk-studio .aw-menu-heading {
+    margin: 0 0 12px;
+    color: #788c94;
+    font: 600 11px Inter, sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  #awk-studio .aw-mobile-panel nav { display: grid; gap: 2px; }
+  #awk-studio .aw-mobile-panel nav a { padding: 11px 8px; }
+  #awk-studio .aw-mobile-secondary {
+    display: grid;
+    gap: 2px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #20323a;
+  }
+  #awk-studio .aw-mobile-secondary a {
+    padding: 12px 8px;
+    color: #dce7ea;
+    font: 600 14px Inter, sans-serif;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 780px) {
+  #awk-studio .aw-header-inner { width: min(100% - 28px, 720px); min-height: 70px; gap: 12px; }
+  #awk-studio .aw-header-actions { gap: 8px; }
+  #awk-studio .aw-header-cta { min-height: 40px; padding: 0 15px; font-size: 12px; }
+  #awk-studio .aw-signature-hero { min-height: auto; padding: 66px 8px 56px; }
+  #awk-studio .aw-signature-hero h1 { font-size: clamp(38px, 10vw, 58px); }
+  #awk-studio .aw-signature-hero p { font-size: 16px; }
+  #awk-studio .aw-ai-video { min-height: 480px; background-size: cover; }
+  #awk-studio .aw-start-pill span { display: none; }
+  #awk-studio .aw-footer-main {
+    width: min(100% - 40px, 720px);
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 32px;
+    padding: 58px 0 52px;
+  }
+  #awk-studio .aw-footer-brand { grid-column: 1 / -1; }
+  #awk-studio .aw-bottom { width: min(100% - 40px, 720px); }
+}
+
+@media (max-width: 520px) {
+  #awk-studio .aw-brand span { font-size: 14px; }
+  #awk-studio .aw-brand-symbol { width: 34px; height: 34px; }
+  #awk-studio .aw-header-cta { max-width: 112px; overflow: hidden; text-overflow: ellipsis; }
+  #awk-studio .aw-mobile-panel { width: 100%; padding: 24px 18px 28px; }
+  #awk-studio .aw-signature-hero { padding: 58px 0 46px; }
+  #awk-studio .aw-signature-hero .aw-eyebrow { font-size: 9px; }
+  #awk-studio .aw-signature-hero h1 { margin-top: 18px; font-size: 40px; }
+  #awk-studio .aw-signature-hero p { margin-top: 22px; font-size: 15px; line-height: 1.6; }
+  #awk-studio .aw-hero-actions { flex-direction: column; gap: 8px; margin-top: 30px; }
+  #awk-studio .aw-hero-actions a { width: 100%; min-height: 54px; }
+  #awk-studio .aw-hero-secondary { border: 1px solid #233740; }
+  #awk-studio .aw-hero-note { line-height: 1.6; }
+  #awk-studio .aw-start-showcase { margin-top: 12px; }
+  #awk-studio .aw-start-pill { min-height: 54px; margin-bottom: -18px; padding: 8px 15px; }
+  #awk-studio .aw-start-pill strong { font-size: 12px; }
+  #awk-studio .aw-window-bar small { max-width: 190px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #awk-studio .aw-ai-video { min-height: 420px; background-position: center; }
+  #awk-studio .aw-ai-video-overlay { width: calc(100% - 24px); padding: 20px 8px; }
+  #awk-studio .aw-ai-video-overlay .aw-video-play { width: 70px; height: 70px; margin: 18px 0; border-width: 8px; }
+  #awk-studio .aw-ai-video-overlay h2 { font-size: 29px; }
+  #awk-studio .aw-site-footer { margin-top: 64px; }
+  #awk-studio .aw-footer-main {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 52px 0 46px;
+  }
+  #awk-studio .aw-footer-brand { grid-column: auto; }
+  #awk-studio .aw-footer-brand p { margin-top: 22px; font-size: 15px; }
+  #awk-studio .aw-footer-column { gap: 15px; }
+  #awk-studio .aw-bottom {
+    width: calc(100% - 36px);
+    padding: 24px 0 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+    font-size: 10px;
+  }
+}

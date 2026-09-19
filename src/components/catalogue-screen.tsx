@@ -12,9 +12,8 @@ import {
 import { tacheHref } from "@/lib/kit-api";
 import { Badge, ResourceState } from "./kit-ui";
 import { Icon } from "./kit-icons";
-import { ProgressBar, HomeProgression } from "./progression-ui";
+import { ProgressBar } from "./progression-ui";
 import { Recherche } from "./recherche";
-import { VideoGuide } from "./video-guide";
 
 export function PathCard({
   mode,
@@ -262,49 +261,66 @@ export function CatalogueScreen({
           <span>{mode === "taches" ? "Tâches" : "Métiers"}</span>
         </nav>
       )}
-      <VideoGuide kind={home ? "choose" : "intro"} />
       {home && (
         <>
-          <HomeProgression />
-          <section className="aw-hero">
-            <div>
+          <section className="aw-hero aw-signature-hero">
+            <div className="aw-hero-copy">
               <div className="aw-eyebrow">
                 <Icon name="sparkles" />
-                Votre espace de pratique
+                L’IA appliquée à votre métier
               </div>
               <h1>
-                Votre travail.
-                <br />
-                Un nouveau <span>possible.</span>
+                Moins de temps à chercher.<br />
+                <span>Plus d’impact avec l’IA.</span>
               </h1>
               <p>
-                Des tâches concrètes, des cas pour s’entraîner et les bons
-                prompts pour passer à l’action avec l’IA.
+                Un seul espace pour passer de votre tâche au bon outil,
+                comprendre la méthode et utiliser un prompt prêt à l’emploi.
               </p>
+              <div className="aw-hero-actions">
+                <Link className="aw-hero-primary" href="/taches">
+                  Explorer les tâches <Icon name="right" />
+                </Link>
+                <Link className="aw-hero-secondary" href="/metiers">
+                  Explorer les métiers <Icon name="right" />
+                </Link>
+              </div>
+              <small className="aw-hero-note">
+                Des cas pratiques · Des prompts concrets · À votre rythme
+              </small>
             </div>
-            <div className="aw-art" aria-label="Un parcours en trois étapes">
-              <div className="aw-eyebrow">De l’intention à l’action</div>
-              {[
-                "Choisissez une tâche",
-                "Explorez un cas pratique",
-                "Emportez votre prompt",
-              ].map((s, i) => (
-                <div className="aw-artline" key={s}>
-                  <b>0{i + 1}</b>
-                  <span>{s}</span>
+          </section>
+
+          <section className="aw-start-showcase" aria-labelledby="point-depart">
+            <div className="aw-start-pill" id="point-depart">
+              <Icon name="sparkles" />
+              <strong>Trouvez votre point de départ</strong>
+              <span>Une tâche · Un cas pratique · Votre prompt</span>
+            </div>
+            <div className="aw-start-window">
+              <div className="aw-window-bar">
+                <span /><span /><span />
+                <small>AI WORK KIT · guide de démarrage</small>
+              </div>
+              <div
+                className="aw-ai-video"
+                role="img"
+                aria-label="Aperçu du guide vidéo sur le choix de l’intelligence artificielle, avec un ordinateur connecté à des outils de travail."
+              >
+                <div className="aw-ai-video-overlay">
+                  <span className="aw-video-kicker">
+                    AI WORK KIT · Pour bien commencer
+                  </span>
+                  <span className="aw-video-play" aria-hidden="true">
+                    <Icon name="play" size={28} />
+                  </span>
+                  <h2>Quelle IA choisir pour votre travail&nbsp;?</h2>
+                  <p>ChatGPT · Claude · Gemini</p>
                 </div>
-              ))}
-              <div className="aw-artfoot">
-                <span>ChatGPT</span>
-                <span>Claude</span>
-                <span>Gemini</span>
               </div>
             </div>
           </section>
-          <div className="aw-paths">
-            <PathCard mode="taches" count={data?.taches.length} />
-            <PathCard mode="metiers" count={data?.metiers.length} />
-          </div>
+
         </>
       )}
       {data ? (

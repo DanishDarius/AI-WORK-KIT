@@ -12,7 +12,6 @@ import {
 import { category, categoryIcon } from "@/lib/catalogue";
 import { Back, Intro, ResourceState } from "./kit-ui";
 import { Icon } from "./kit-icons";
-import { VideoGuide } from "./video-guide";
 import { FaitCheckbox, FavoriButton, useTacheActions } from "./tache-actions";
 
 const aiLinks = {
@@ -275,7 +274,6 @@ function LoadedTask({
           </p>
         </aside>
       )}
-      <VideoGuide kind="task" title={data.tache.titre} code={data.tache.code} />
       {data.exercices.length ? (
         <>
           <div
