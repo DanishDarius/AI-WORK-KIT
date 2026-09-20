@@ -1132,7 +1132,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #31505b transparent;
 }
-#awk-studio .aw-guide-shelf > a {
+#awk-studio .aw-guide-shelf { cursor: grab; } #awk-studio .aw-guide-shelf.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; } #awk-studio .aw-guide-shelf > a {
   flex: 0 0 clamp(180px, 19vw, 236px);
   scroll-snap-align: start;
   color: inherit;
