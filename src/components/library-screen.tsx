@@ -13,7 +13,7 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
   const [category, setCategory] = useState("Tous les sujets");
   const [sort, setSort] = useState<SortMode>("recent");
   const [visibleCount, setVisibleCount] = useState(24);
-  const shelf = useRef<HTMLDivElement>(null);
+  const shelf = useRef<HTMLDivElement>(null); const dragState = useRef({ startX: 0, startScroll: 0, moved: false }); const [isDragging, setIsDragging] = useState(false); function handleShelfPointerDown(event: React.PointerEvent<HTMLDivElement>) { const shelfEl = shelf.current; if (!shelfEl) return; dragState.current = { startX: event.clientX, startScroll: shelfEl.scrollLeft, moved: false }; setIsDragging(true); shelfEl.setPointerCapture(event.pointerId); } function handleShelfPointerMove(event: React.PointerEvent<HTMLDivElement>) { const shelfEl = shelf.current; if (!shelfEl || !isDragging) return; const delta = event.clientX - dragState.current.startX; if (Math.abs(delta) > 4) dragState.current.moved = true; shelfEl.scrollLeft = dragState.current.startScroll - delta; } function handleShelfPointerUp(event: React.PointerEvent<HTMLDivElement>) { shelf.current?.releasePointerCapture(event.pointerId); setIsDragging(false); } function handleShelfLinkClick(event: React.MouseEvent) { if (dragState.current.moved) { event.preventDefault(); } }
 
   const tools = useMemo(
     () => Array.from(new Set(guides.map((guide) => guide.tool))).sort((a, b) => a.localeCompare(b, "fr")),
@@ -66,9 +66,9 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
             <button type="button" onClick={() => scrollShelf(1)} aria-label="Guides suivants">→</button>
           </div>
         </div>
-        <div className="aw-guide-shelf" ref={shelf}>
+        <div className={`aw-guide-shelf${isDragging ? " is-dragging" : ""}`} ref={shelf} onPointerDown={handleShelfPointerDown} onPointerMove={handleShelfPointerMove} onPointerUp={handleShelfPointerUp} onPointerLeave={handleShelfPointerUp}>
           {shelfGuides.map((guide) => (
-            <Link key={guide.slug} href={`/guides/${guide.slug}`} aria-label={`Lire le guide : ${guide.title}`}>
+            <Link key={guide.slug} href={`/guides/${guide.slug}`} aria-label={`Lire le guide : ${guide.title}`} onClick={handleShelfLinkClick}>
               <GuideCover number={guide.number} title={guide.title} tool={guide.tool} variant={guide.coverVariant} />
             </Link>
           ))}
