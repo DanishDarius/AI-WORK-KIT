@@ -14,6 +14,8 @@ import { Badge, ResourceState } from "./kit-ui";
 import { Icon } from "./kit-icons";
 import { ProgressBar } from "./progression-ui";
 import { Recherche } from "./recherche";
+import type { GuideSummary } from "@/lib/guides";
+import { GuideShelf } from "./guide-shelf";
 
 export function PathCard({
   mode,
@@ -245,10 +247,12 @@ function CatalogResults({
   );
 }
 export function CatalogueScreen({
+  guides = [],
   home = false,
   mode = "taches",
 }: {
   home?: boolean;
+  guides?: GuideSummary[];
   mode?: "taches" | "metiers";
 }) {
   const { data, error, retry } = useCatalogue();
@@ -341,6 +345,7 @@ export function CatalogueScreen({
           />
         </section>
       )}
+      {home && <GuideShelf guides={guides} />}
     </>
   );
 }
