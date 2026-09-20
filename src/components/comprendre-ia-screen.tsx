@@ -2,6 +2,8 @@
 import { useId, useState } from "react";
 import { chemins, IA, iaLabels } from "@/lib/kit-api";
 import { Back, GlossaireList, Intro } from "./kit-ui";
+import type { GuideSummary } from "@/lib/guides";
+import { GuideShelf } from "./guide-shelf";
 
 // Les 3 "cas" du guide pas-à-pas, avec les étapes propres à chaque IA — à
 // parité stricte entre ChatGPT, Claude et Gemini (même nombre de cas, même
@@ -151,7 +153,7 @@ function CasGuide({ cas }: { cas: (typeof CAS)[number] }) {
   );
 }
 
-export function ComprendreIaScreen() {
+export function ComprendreIaScreen({ guides = [] }: { guides?: GuideSummary[] }) {
   return (
     <>
       <Back />
@@ -310,6 +312,7 @@ export function ComprendreIaScreen() {
         title="Glossaire complet"
         eyebrow="Pour aller vite chercher un terme"
       />
+      <GuideShelf guides={guides} />
     </>
   );
 }
