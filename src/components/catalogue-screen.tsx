@@ -88,7 +88,7 @@ function CatalogResults({
 }) {
   const [query, setQuery] = useState("");
   const [usage, setUsage] = useState("Tout");
-  const [limit, setLimit] = useState(6);
+  const [limit, setLimit] = useState(8);
   const jobs = mode === "metiers";
   const metiers = data.metiers.filter((m) =>
     normalize(m.nom).includes(normalize(query)),
@@ -139,7 +139,7 @@ function CatalogResults({
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
-                setLimit(6);
+                setLimit(8);
               }}
             />
           </label>
@@ -151,7 +151,7 @@ function CatalogResults({
             value={usage}
             onChange={(value) => {
               setUsage(value);
-              setLimit(6);
+              setLimit(8);
             }}
           />
         )}
@@ -219,7 +219,7 @@ function CatalogResults({
               {count > limit && (
                 <button
                   className="aw-btn"
-                  onClick={() => setLimit((n) => n + 6)}
+                  onClick={() => setLimit((n) => n + 8)}
                 >
                   Voir la suite <Icon name="down" />
                 </button>
