@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import type { GuideSummary } from "@/lib/guides";
 import { GuideCover } from "./guide-cover";
 
@@ -13,7 +13,7 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
   const [category, setCategory] = useState("Tous les sujets");
   const [sort, setSort] = useState<SortMode>("recent");
   const [visibleCount, setVisibleCount] = useState(24);
-  const shelf = useRef<HTMLDivElement>(null); const dragState = useRef({ startX: 0, startScroll: 0, moved: false }); const [isDragging, setIsDragging] = useState(false); function handleShelfPointerDown(event: React.PointerEvent<HTMLDivElement>) { const shelfEl = shelf.current; if (!shelfEl) return; dragState.current = { startX: event.clientX, startScroll: shelfEl.scrollLeft, moved: false }; setIsDragging(true); shelfEl.setPointerCapture(event.pointerId); } function handleShelfPointerMove(event: React.PointerEvent<HTMLDivElement>) { const shelfEl = shelf.current; if (!shelfEl || !isDragging) return; const delta = event.clientX - dragState.current.startX; if (Math.abs(delta) > 4) dragState.current.moved = true; shelfEl.scrollLeft = dragState.current.startScroll - delta; } function handleShelfPointerUp(event: React.PointerEvent<HTMLDivElement>) { shelf.current?.releasePointerCapture(event.pointerId); setIsDragging(false); } function handleShelfLinkClick(event: React.MouseEvent) { if (dragState.current.moved) { event.preventDefault(); } }
+
 
   const tools = useMemo(
     () => Array.from(new Set(guides.map((guide) => guide.tool))).sort((a, b) => a.localeCompare(b, "fr")),
@@ -37,12 +37,6 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
   }, [category, guides, query, sort, tool]);
 
   const featured = guides[0];
-  const shelfGuides = guides.slice(0, 12);
-
-  function scrollShelf(direction: -1 | 1) {
-    shelf.current?.scrollBy({ left: direction * Math.min(620, window.innerWidth * 0.72), behavior: "smooth" });
-  }
-
   function resetVisible() {
     setVisibleCount(24);
   }
@@ -55,28 +49,7 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
         <p>Un sujet concret par guide, à comprendre aujourd’hui et à appliquer dès demain.</p>
       </section>
 
-      <section className="aw-guide-shelf-section" aria-labelledby="shelf-title">
-        <div className="aw-library-section-head">
-          <div>
-            <p className="aw-library-kicker">Sélection AI WORK KIT</p>
-            <h2 id="shelf-title">Parcourez l’étagère.</h2>
-          </div>
-          <div className="aw-shelf-controls" aria-label="Navigation de l’étagère">
-            <button type="button" onClick={() => scrollShelf(-1)} aria-label="Guides précédents">←</button>
-            <button type="button" onClick={() => scrollShelf(1)} aria-label="Guides suivants">→</button>
-          </div>
-        </div>
-        <div className={`aw-guide-shelf${isDragging ? " is-dragging" : ""}`} ref={shelf} onPointerDown={handleShelfPointerDown} onPointerMove={handleShelfPointerMove} onPointerUp={handleShelfPointerUp} onPointerLeave={handleShelfPointerUp}>
-          {shelfGuides.map((guide) => (
-            <Link key={guide.slug} href={`/guides/${guide.slug}`} aria-label={`Lire le guide : ${guide.title}`} onClick={handleShelfLinkClick}>
-              <GuideCover number={guide.number} title={guide.title} tool={guide.tool} variant={guide.coverVariant} />
-            </Link>
-          ))}
-        </div>
-        <p className="aw-shelf-note">Faites glisser pour explorer. Sélectionnez un livre pour commencer.</p>
-      </section>
-
-      <section className="aw-library-tools" aria-label="Rechercher et filtrer les guides">
+<section className="aw-library-tools" aria-label="Rechercher et filtrer les guides">
         <label className="aw-library-search">
           <span>Rechercher un guide</span>
           <span className="aw-library-search-field">
