@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { chemins, iaLabels } from "@/lib/kit-api";
 import { IaUpdate, newestFirst } from "@/lib/ia-updates";
 import { Icon } from "./kit-icons";
+import type { GuideSummary } from "@/lib/guides";
+import { GuideShelf } from "./guide-shelf";
 
 function Media({ item }: { item: IaUpdate }) {
   if (!item.media) return null;
@@ -181,16 +183,17 @@ function UpdatesCarousel({ items }: { items: IaUpdate[] }) {
   );
 }
 
-export function IaUpdatesScreen({ items }: { items: IaUpdate[] }) {
+export function IaUpdatesScreen({ items, guides = [] }: { items: IaUpdate[]; guides?: GuideSummary[] }) {
   const sorted = newestFirst(items);
   return (
     <div className="aw-updates-page">
+      <GuideShelf guides={guides} />
       <section className="panel aw-updates-intro">
         <h1>Mises à jour IA</h1>
         <p>
           Vous trouverez ici les dernières mises à jour sur les différents
           modèles d’IA.
-        </p>
+          </p>
       </section>
       <UpdatesCarousel items={sorted.filter((item) => item.featured)} />
       <section
