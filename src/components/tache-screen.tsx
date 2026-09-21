@@ -353,7 +353,7 @@ function LoadedTask({
         aria-labelledby="tab-mep"
         hidden={tab !== "mep"}
       >
-        <MiseEnPlacePanel code={data.tache.code} />
+        <MiseEnPlacePanel code={data.tache.code} ia={ia} onIAChange={setIA} />
       </div>
       <section className="panel aw-completion" aria-label="Votre avancement">
         <FaitCheckbox
