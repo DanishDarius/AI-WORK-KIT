@@ -54,6 +54,137 @@ export const categoryIcon = (code: string) =>
     Création: "creative",
     "Relation client": "messages",
   })[category(code)] || "tasks";
+
+// Classification (Générative / Agent) et nature (rythme d'exécution) de chaque
+// tâche, issues du recensement des 42 tâches. Deuxième axe de tri, indépendant
+// des catégories ci-dessus : voir la proposition de refonte du chemin Tâches.
+export type Classification = "Generatif" | "Agent";
+const classifications: Record<string, Classification> = {
+  F01: "Agent",
+  F02: "Agent",
+  F03: "Generatif",
+  F04: "Generatif",
+  F05: "Agent",
+  F06: "Agent",
+  F07: "Agent",
+  F08: "Generatif",
+  F09: "Generatif",
+  F10: "Agent",
+  F11: "Generatif",
+  F12: "Agent",
+  F13: "Generatif",
+  F14: "Generatif",
+  F15: "Generatif",
+  F16: "Agent",
+  F17: "Agent",
+  F18: "Generatif",
+  F19: "Agent",
+  F20: "Agent",
+  F21: "Agent",
+  F22: "Agent",
+  F23: "Agent",
+  F24: "Agent",
+  F25: "Agent",
+  F26: "Generatif",
+  F27: "Generatif",
+  F28: "Agent",
+  F29: "Generatif",
+  F30: "Generatif",
+  F31: "Generatif",
+  F32: "Agent",
+  F33: "Generatif",
+  F34: "Generatif",
+  F35: "Generatif",
+  F36: "Agent",
+  F37: "Agent",
+  F38: "Generatif",
+  F39: "Generatif",
+  F40: "Agent",
+  F41: "Generatif",
+  F42: "Generatif",
+};
+export const classification = (code: string): Classification =>
+  classifications[code] || "Generatif";
+export const classificationLabel: Record<Classification, string> = {
+  Generatif: "Génératif",
+  Agent: "Agent",
+};
+
+export type Nature = "Ponctuelle" | "Periodique" | "Projet";
+const naturesByCode: Record<string, Nature> = {
+  F01: "Periodique",
+  F02: "Periodique",
+  F03: "Ponctuelle",
+  F04: "Ponctuelle",
+  F05: "Periodique",
+  F06: "Periodique",
+  F07: "Periodique",
+  F08: "Ponctuelle",
+  F09: "Ponctuelle",
+  F10: "Periodique",
+  F11: "Ponctuelle",
+  F12: "Periodique",
+  F13: "Ponctuelle",
+  F14: "Ponctuelle",
+  F15: "Ponctuelle",
+  F16: "Projet",
+  F17: "Periodique",
+  F18: "Ponctuelle",
+  F19: "Periodique",
+  F20: "Periodique",
+  F21: "Periodique",
+  F22: "Periodique",
+  F23: "Periodique",
+  F24: "Ponctuelle",
+  F25: "Periodique",
+  F26: "Periodique",
+  F27: "Periodique",
+  F28: "Periodique",
+  F29: "Projet",
+  F30: "Ponctuelle",
+  F31: "Ponctuelle",
+  F32: "Projet",
+  F33: "Projet",
+  F34: "Ponctuelle",
+  F35: "Ponctuelle",
+  F36: "Projet",
+  F37: "Projet",
+  F38: "Ponctuelle",
+  F39: "Ponctuelle",
+  F40: "Projet",
+  F41: "Ponctuelle",
+  F42: "Ponctuelle",
+};
+// Tâches Génératif ponctuelles qui peuvent aussi être programmées, selon
+// l'usage (compte-rendu hebdomadaire, sous-titrage à chaque épisode, etc.).
+const optionPeriodiqueCodes = new Set([
+  "F03",
+  "F04",
+  "F09",
+  "F14",
+  "F15",
+  "F18",
+  "F30",
+]);
+export const nature = (code: string): Nature => naturesByCode[code] || "Ponctuelle";
+export const hasOptionPeriodique = (code: string) => optionPeriodiqueCodes.has(code);
+export const natures: Nature[] = ["Ponctuelle", "Periodique", "Projet"];
+export const natureLabels: Record<Nature, string> = {
+  Ponctuelle: "Ponctuelle",
+  Periodique: "Périodique / récurrente",
+  Projet: "Projet",
+};
+export const natureIcon: Record<Nature, string> = {
+  Ponctuelle: "clock",
+  Periodique: "cycle",
+  Projet: "flag",
+};
+// Une tâche "Ponctuelle (+ option périodique)" reste filtrable sous Ponctuelle
+// (son usage par défaut) et apparaît aussi sous Périodique / récurrente.
+export const matchesNature = (code: string, filter: Nature | "Toutes") =>
+  filter === "Toutes" ||
+  nature(code) === filter ||
+  (filter === "Periodique" && hasOptionPeriodique(code));
 export const normalize = (s: string) =>
   s
     .normalize("NFD")
