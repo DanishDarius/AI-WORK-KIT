@@ -1515,3 +1515,230 @@
     grid-row: 1;
   }
 }
+
+/* --- Refonte chemin Taches : classification, nature, mise en place --- */
+#awk-studio {
+  --aw-mode-auto: light-dark(#1f7a4d, #7be3ab);
+  --aw-mode-auto-soft: light-dark(#e5f5ec, #163d2c);
+  --aw-mode-manuelle: light-dark(#9a5b12, #f0b869);
+  --aw-mode-manuelle-soft: light-dark(#faeed9, #3d2f14);
+}
+#awk-studio .aw-filters-nature button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+#awk-studio .aw-classif {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 8px 3px 6px;
+  border-radius: 20px;
+  border: 1px solid var(--aw-line);
+  color: var(--aw-muted);
+}
+#awk-studio .aw-classif i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+#awk-studio .aw-classif-agent {
+  color: var(--aw-accent);
+  border-color: color-mix(in srgb, var(--aw-accent) 45%, transparent);
+}
+#awk-studio .aw-classif-generatif {
+  color: var(--aw-secondary, var(--aw-muted));
+  border-color: var(--aw-line);
+}
+#awk-studio .aw-nature {
+  display: inline-flex;
+  align-items: center;
+  color: var(--aw-muted);
+  position: relative;
+}
+#awk-studio .aw-nature-option {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--aw-accent);
+  border: 1px solid var(--aw-paper);
+}
+#awk-studio .aw-tools-ready {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 650;
+  color: var(--aw-accent);
+}
+#awk-studio .aw-task-title-row .aw-eyebrow .aw-classif {
+  margin-left: 4px;
+}
+#awk-studio .aw-tache-tabs {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+  background: var(--aw-bg);
+  border: 1px solid var(--aw-line);
+  border-radius: 11px;
+  margin: 20px 0;
+  max-width: 420px;
+}
+#awk-studio .aw-tache-tabs button {
+  flex: 1;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: none;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--aw-muted);
+}
+#awk-studio .aw-tache-tabs button[aria-selected="true"] {
+  background: var(--aw-paper);
+  border-color: var(--aw-line);
+  color: var(--aw-ink);
+  box-shadow: 0 2px 4px #00000005;
+}
+#awk-studio .aw-mep {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+}
+#awk-studio .aw-mep-soon {
+  color: var(--aw-muted);
+}
+#awk-studio .aw-mep-soon h2 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: var(--aw-ink);
+}
+#awk-studio .aw-outils {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+#awk-studio .aw-outils li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--aw-line);
+  border-radius: 10px;
+  padding: 11px 13px;
+  background: var(--aw-bg);
+}
+#awk-studio .aw-outils a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--aw-accent);
+}
+#awk-studio .aw-outil-type {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--aw-muted);
+  flex: none;
+}
+#awk-studio .aw-outil-officiel {
+  color: var(--aw-mode-auto);
+}
+#awk-studio .aw-tag-optionnel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 650;
+  color: var(--aw-muted);
+  border: 1px solid var(--aw-line);
+  border-radius: 20px;
+  padding: 2px 8px;
+  margin-left: 9px;
+  vertical-align: middle;
+}
+#awk-studio .aw-automation {
+  border: 1px solid var(--aw-line);
+  border-radius: 10px;
+  background: var(--aw-bg);
+  padding: 15px;
+  margin: 13px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#awk-studio .aw-automation-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+}
+#awk-studio .aw-automation-label {
+  color: var(--aw-muted);
+}
+#awk-studio .aw-automation-raison {
+  font-size: 11px;
+  color: var(--aw-muted);
+  border-top: 1px solid var(--aw-line);
+  padding-top: 10px;
+  margin: 0;
+}
+#awk-studio .aw-approbation {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+#awk-studio .aw-approbation-auto {
+  color: var(--aw-mode-auto);
+  background: var(--aw-mode-auto-soft);
+}
+#awk-studio .aw-approbation-manuelle {
+  color: var(--aw-mode-manuelle);
+  background: var(--aw-mode-manuelle-soft);
+}
+#awk-studio .aw-mep-once {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--aw-muted);
+  border-top: 1px solid var(--aw-line);
+  padding-top: 13px;
+}
+@container aw-layout (max-width:780px) {
+  #awk-studio .aw-tache-tabs {
+    max-width: none;
+  }
+  #awk-studio .aw-outils li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  #awk-studio .aw-automation-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
