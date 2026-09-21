@@ -82,6 +82,32 @@ const paths: Record<string, ReactNode> = {
       <path d="M8 17v2a2 2 0 0 0 2 2h8l4 2v-7" />
     </>
   ),
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.5 2" />
+    </>
+  ),
+  cycle: (
+    <>
+      <path d="M17 1l4 4-4 4" />
+      <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+      <path d="M7 23l-4-4 4-4" />
+      <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+    </>
+  ),
+  flag: (
+    <>
+      <line x1="4" y1="22" x2="4" y2="2" />
+      <path d="M4 4h13l-2.5 4.5L17 13H4" />
+    </>
+  ),
+  link: (
+    <>
+      <path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5" />
+      <path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5" />
+    </>
+  ),
 };
 export function Icon({ name, size = 17 }: { name: string; size?: number }) {
   return (
