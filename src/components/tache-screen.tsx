@@ -9,10 +9,11 @@ import {
   TacheDetail,
   useResource,
 } from "@/lib/kit-api";
-import { category, categoryIcon } from "@/lib/catalogue";
+import { category, categoryIcon, classification, classificationLabel } from "@/lib/catalogue";
 import { Back, Intro, ResourceState } from "./kit-ui";
 import { Icon } from "./kit-icons";
 import { FaitCheckbox, FavoriButton, useTacheActions } from "./tache-actions";
+import { MiseEnPlacePanel } from "./mise-en-place-panel";
 
 const aiLinks = {
   chatgpt: "https://chatgpt.com/",
@@ -214,6 +215,7 @@ function LoadedTask({
   const [data, setData] = useState(initial);
   const [exercise, setExercise] = useState(0);
   const [ia, setIA] = useState<IA>(initial.ia_par_defaut || "chatgpt");
+  const [tab, setTab] = useState<"entrainer" | "mep">("entrainer");
   const actions = useTacheActions({
     id,
     metier,
@@ -238,6 +240,12 @@ function LoadedTask({
           <div className="aw-eyebrow">
             <Icon name={categoryIcon(data.tache.code)} />
             {category(data.tache.code)} · {data.tache.code}
+            <span
+              className={`aw-classif aw-classif-${classification(data.tache.code).toLowerCase()}`}
+            >
+              <i />
+              {classificationLabel[classification(data.tache.code)]}
+            </span>
           </div>
           <h1>{data.tache.titre}</h1>
           <div className="aw-meta">
@@ -274,40 +282,79 @@ function LoadedTask({
           </p>
         </aside>
       )}
-      {data.exercices.length ? (
-        <>
-          <div
-            className="aw-cases"
-            role="group"
-            aria-label="Choisir un cas pratique"
-          >
-            {data.exercices.map((ex, i) => (
-              <button
-                className="aw-case"
-                key={i}
-                aria-pressed={exercise === i}
-                onClick={() => setExercise(i)}
-              >
-                <b>{String(i + 1).padStart(2, "0")}</b>
-                <span>
-                  <small>Cas pratique {i + 1}</small>
-                  {caseTitle(ex.titre)}
-                </span>
-              </button>
-            ))}
-          </div>
-          <CaseWorkspace
-            key={exercise}
-            exercice={data.exercices[exercise]}
-            active={ia}
-            onIAChange={setIA}
-          />
-        </>
-      ) : (
-        <p className="aw-empty">
-          Aucun cas pratique disponible pour cette tâche.
-        </p>
-      )}
+      <div className="aw-tache-tabs" role="tablist" aria-label="Section de la tâche">
+        <button
+          role="tab"
+          id="tab-entrainer"
+          aria-selected={tab === "entrainer"}
+          aria-controls="panel-entrainer"
+          tabIndex={tab === "entrainer" ? 0 : -1}
+          onClick={() => setTab("entrainer")}
+        >
+          <Icon name="creative" size={15} />
+          S&apos;entraîner
+        </button>
+        <button
+          role="tab"
+          id="tab-mep"
+          aria-selected={tab === "mep"}
+          aria-controls="panel-mep"
+          tabIndex={tab === "mep" ? 0 : -1}
+          onClick={() => setTab("mep")}
+        >
+          <Icon name="link" size={15} />
+          Mettre en place
+        </button>
+      </div>
+      <div
+        role="tabpanel"
+        id="panel-entrainer"
+        aria-labelledby="tab-entrainer"
+        hidden={tab !== "entrainer"}
+      >
+        {data.exercices.length ? (
+          <>
+            <div
+              className="aw-cases"
+              role="group"
+              aria-label="Choisir un cas pratique"
+            >
+              {data.exercices.map((ex, i) => (
+                <button
+                  className="aw-case"
+                  key={i}
+                  aria-pressed={exercise === i}
+                  onClick={() => setExercise(i)}
+                >
+                  <b>{String(i + 1).padStart(2, "0")}</b>
+                  <span>
+                    <small>Cas pratique {i + 1}</small>
+                    {caseTitle(ex.titre)}
+                  </span>
+                </button>
+              ))}
+            </div>
+            <CaseWorkspace
+              key={exercise}
+              exercice={data.exercices[exercise]}
+              active={ia}
+              onIAChange={setIA}
+            />
+          </>
+        ) : (
+          <p className="aw-empty">
+            Aucun cas pratique disponible pour cette tâche.
+          </p>
+        )}
+      </div>
+      <div
+        role="tabpanel"
+        id="panel-mep"
+        aria-labelledby="tab-mep"
+        hidden={tab !== "mep"}
+      >
+        <MiseEnPlacePanel code={data.tache.code} />
+      </div>
       <section className="panel aw-completion" aria-label="Votre avancement">
         <FaitCheckbox
           fait={data.fait}
