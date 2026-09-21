@@ -4,11 +4,20 @@ import { useState } from "react";
 import {
   Catalogue,
   category,
-  categoryIcon,
+  classification,
+  classificationLabel,
+  hasOptionPeriodique,
+  matchesNature,
+  nature,
+  Nature,
+  natureIcon,
+  natureLabels,
   normalize,
+  natures,
   usages,
   useCatalogue,
 } from "@/lib/catalogue";
+import { outilsCount } from "@/lib/mise-en-place";
 import { tacheHref } from "@/lib/kit-api";
 import { Badge, ResourceState } from "./kit-ui";
 import { Icon } from "./kit-icons";
@@ -79,6 +88,31 @@ export function UsageFilters({
     </div>
   );
 }
+export function NatureFilters({
+  value,
+  onChange,
+}: {
+  value: Nature | "Toutes";
+  onChange: (s: Nature | "Toutes") => void;
+}) {
+  return (
+    <div
+      className="aw-filters aw-filters-nature"
+      role="group"
+      aria-label="Filtrer par nature"
+    >
+      <button onClick={() => onChange("Toutes")} aria-pressed={value === "Toutes"}>
+        Toutes
+      </button>
+      {natures.map((n) => (
+        <button key={n} onClick={() => onChange(n)} aria-pressed={value === n}>
+          <Icon name={natureIcon[n]} size={13} />
+          {natureLabels[n]}
+        </button>
+      ))}
+    </div>
+  );
+}
 function CatalogResults({
   data,
   mode,
@@ -90,6 +124,7 @@ function CatalogResults({
 }) {
   const [query, setQuery] = useState("");
   const [usage, setUsage] = useState("Tout");
+  const [natureFilter, setNatureFilter] = useState<Nature | "Toutes">("Toutes");
   const [limit, setLimit] = useState(8);
   const jobs = mode === "metiers";
   const metiers = data.metiers.filter((m) =>
@@ -98,6 +133,7 @@ function CatalogResults({
   const taches = data.taches.filter(
     (t) =>
       (usage === "Tout" || category(t.code) === usage) &&
+      matchesNature(t.code, natureFilter) &&
       (home ||
         normalize(`${t.titre} ${category(t.code)}`).includes(normalize(query))),
   );
@@ -149,13 +185,22 @@ function CatalogResults({
       )}
       <div hidden={home && query.length >= 2}>
         {!jobs && (
-          <UsageFilters
-            value={usage}
-            onChange={(value) => {
-              setUsage(value);
-              setLimit(8);
-            }}
-          />
+          <>
+            <UsageFilters
+              value={usage}
+              onChange={(value) => {
+                setUsage(value);
+                setLimit(8);
+              }}
+            />
+            <NatureFilters
+              value={natureFilter}
+              onChange={(value) => {
+                setNatureFilter(value);
+                setLimit(8);
+              }}
+            />
+          </>
         )}
         {count ? (
           <>
@@ -190,28 +235,53 @@ function CatalogResults({
                       </div>
                     </Link>
                   ))
-                : taches.slice(0, limit).map((t) => (
-                    <Link
-                      key={t.id}
-                      className="aw-tile"
-                      href={tacheHref(t.id, t.metiers[0].slug)}
-                    >
-                      <div className="aw-tiletop">
-                        <span className="aw-icon">
-                          <Icon name={categoryIcon(t.code)} />
-                        </span>
-                        <span className="aw-label">{category(t.code)}</span>
-                      </div>
-                      <h3>{t.titre}</h3>
-                      <div className="aw-tilefooter">
-                        <span>
-                          {t.fait ? "Faite · " : ""}
-                          {t.metiers[0].nom}
-                        </span>
-                        <Icon name="arrow" />
-                      </div>
-                    </Link>
-                  ))}
+                : taches.slice(0, limit).map((t) => {
+                    const tools = outilsCount(t.code);
+                    return (
+                      <Link
+                        key={t.id}
+                        className="aw-tile"
+                        href={tacheHref(t.id, t.metiers[0].slug)}
+                      >
+                        <div className="aw-tiletop">
+                          <span
+                            className={`aw-classif aw-classif-${classification(t.code).toLowerCase()}`}
+                          >
+                            <i />
+                            {classificationLabel[classification(t.code)]}
+                          </span>
+                          <span
+                            className="aw-nature"
+                            title={
+                              natureLabels[nature(t.code)] +
+                              (hasOptionPeriodique(t.code)
+                                ? " (option periodique possible)"
+                                : "")
+                            }
+                          >
+                            <Icon name={natureIcon[nature(t.code)]} size={13} />
+                            {hasOptionPeriodique(t.code) && (
+                              <i className="aw-nature-option" aria-hidden="true" />
+                            )}
+                          </span>
+                        </div>
+                        <h3>{t.titre}</h3>
+                        <div className="aw-tilefooter">
+                          <span>
+                            {t.fait ? "Faite · " : ""}
+                            {t.metiers[0].nom}
+                          </span>
+                          {tools > 0 ? (
+                            <span className="aw-tools-ready">
+                              {tools} outil{tools > 1 ? "s" : ""} pret{tools > 1 ? "s" : ""}
+                            </span>
+                          ) : (
+                            <Icon name="arrow" />
+                          )}
+                        </div>
+                      </Link>
+                    );
+                  })}
             </div>
             <div className="aw-more">
               <span role="status">
