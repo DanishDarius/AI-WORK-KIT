@@ -1,18 +1,19 @@
 // Point d'entree du guide "Mettre en place", tous IA confondues. Le contenu reel
-// est reparti par IA dans mise-en-place-claude.ts, mise-en-place-gemini.ts (et,
-// plus tard, mise-en-place-chatgpt.ts) : chaque fichier vient d'un guide complet
-// des 42 taches base sur les sources officielles de l'IA concernee.
+// est reparti par IA dans mise-en-place-claude.ts, mise-en-place-gemini.ts et
+// mise-en-place-chatgpt.ts : chaque fichier vient d'un guide complet des 42 taches
+// base sur les sources officielles de l'IA concernee.
 import { IA } from "./kit-api";
 import { MiseEnPlace } from "./mise-en-place-types";
 import { miseEnPlaceClaude } from "./mise-en-place-claude";
 import { miseEnPlaceGemini } from "./mise-en-place-gemini";
+import { miseEnPlaceChatgpt } from "./mise-en-place-chatgpt";
 
 export type { Outil, ModeApprobation, TachePlanifiee, MiseEnPlace } from "./mise-en-place-types";
 
 export const miseEnPlace: Record<IA, Partial<Record<string, MiseEnPlace>>> = {
   claude: miseEnPlaceClaude,
   gemini: miseEnPlaceGemini,
-  chatgpt: {},
+  chatgpt: miseEnPlaceChatgpt,
 };
 
 // Libelle du fournisseur officiel affiche a cote des outils "officiel", par IA.
