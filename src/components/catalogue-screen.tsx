@@ -236,7 +236,7 @@ function CatalogResults({
                     </Link>
                   ))
                 : taches.slice(0, limit).map((t) => {
-                    const tools = outilsCount(t.code);
+                    const tools = outilsCount("claude", t.code);
                     return (
                       <Link
                         key={t.id}
