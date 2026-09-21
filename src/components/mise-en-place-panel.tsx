@@ -1,7 +1,13 @@
 "use client";
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { Icon } from "./kit-icons";
-import { miseEnPlace, ModeApprobation } from "@/lib/mise-en-place";
+import {
+  automatisationLabel,
+  miseEnPlace,
+  officielLabel,
+  ModeApprobation,
+} from "@/lib/mise-en-place";
+import { chemins, IA, iaLabels } from "@/lib/kit-api";
 
 function ApprobationBadge({ mode }: { mode: ModeApprobation }) {
   return (
@@ -13,6 +19,32 @@ function ApprobationBadge({ mode }: { mode: ModeApprobation }) {
       <Icon name={mode === "Automatique" ? "sparkles" : "layers"} size={13} />
       {mode}
     </span>
+  );
+}
+
+function MepAISelector({
+  active,
+  onChange,
+}: {
+  active: IA;
+  onChange: (ia: IA) => void;
+}) {
+  const uid = useId();
+  return (
+    <div className="aw-ai" role="tablist" aria-label="Choisir votre IA">
+      {chemins.map((ia) => (
+        <button
+          key={ia}
+          id={`${uid}-${ia}`}
+          role="tab"
+          aria-selected={active === ia}
+          onClick={() => onChange(ia)}
+        >
+          {active === ia && <span className="aw-ai-dot" />}
+          {iaLabels[ia]}
+        </button>
+      ))}
+    </div>
   );
 }
 
@@ -49,17 +81,29 @@ function CopyPrompt({ prompt, label }: { prompt: string; label: string }) {
   );
 }
 
-export function MiseEnPlacePanel({ code }: { code: string }) {
-  const content = miseEnPlace[code];
+export function MiseEnPlacePanel({
+  code,
+  ia,
+  onIAChange,
+}: {
+  code: string;
+  ia: IA;
+  onIAChange: (ia: IA) => void;
+}) {
+  const content = miseEnPlace[ia]?.[code];
   if (!content) {
     return (
-      <div className="aw-panel aw-mep-soon">
-        <h2>Contenu bientôt disponible</h2>
-        <p className="aw-bodytext">
-          Le guide de mise en place (outils, prompt prêt à copier,
-          automatisation) pour cette tâche arrive prochainement. En
-          attendant, entraînez-vous dans l&apos;onglet &laquo; S&apos;entraîner &raquo;.
-        </p>
+      <div className="aw-mep">
+        <MepAISelector active={ia} onChange={onIAChange} />
+        <div className="aw-panel aw-mep-soon">
+          <h2>Contenu bientôt disponible</h2>
+          <p className="aw-bodytext">
+            Le guide de mise en place (outils, prompt prêt à copier,
+            automatisation) pour {iaLabels[ia]} et cette tâche arrive
+            prochainement. En attendant, essayez une autre IA ci-dessus ou
+            entraînez-vous dans l&apos;onglet &laquo; S&apos;entraîner &raquo;.
+          </p>
+        </div>
       </div>
     );
   }
@@ -67,6 +111,7 @@ export function MiseEnPlacePanel({ code }: { code: string }) {
   let step = 0;
   return (
     <div className="aw-mep">
+      <MepAISelector active={ia} onChange={onIAChange} />
       <section className="aw-panel">
         <h2>
           <span className="aw-number">{String(++step).padStart(2, "0")}</span>{" "}
@@ -80,7 +125,7 @@ export function MiseEnPlacePanel({ code }: { code: string }) {
                 {o.nom}
               </a>
               <span className={`aw-outil-type aw-outil-${o.type}`}>
-                {o.type === "officiel" ? "Officiel Claude" : "Tiers"}
+                {o.type === "officiel" ? officielLabel[ia] : "Tiers"}
               </span>
             </li>
           ))}
@@ -99,7 +144,7 @@ export function MiseEnPlacePanel({ code }: { code: string }) {
         <section className="aw-panel">
           <h2>
             <span className="aw-number">{String(++step).padStart(2, "0")}</span>{" "}
-            Automatiser avec Cowork
+            Automatiser avec {automatisationLabel[ia]}
             {tachePlanifiee.optionnelle && (
               <span className="aw-tag-optionnel">Optionnel</span>
             )}
@@ -115,15 +160,25 @@ export function MiseEnPlacePanel({ code }: { code: string }) {
               <span className="aw-automation-label">Fréquence</span>
               <strong>{tachePlanifiee.frequence}</strong>
             </div>
-            <div className="aw-automation-row">
-              <span className="aw-automation-label">
-                Mode d&apos;approbation recommandé
-              </span>
-              <ApprobationBadge mode={tachePlanifiee.modeApprobation} />
-            </div>
-            <p className="aw-automation-raison">
-              {tachePlanifiee.raisonApprobation}
-            </p>
+            {tachePlanifiee.modeApprobation ? (
+              <>
+                <div className="aw-automation-row">
+                  <span className="aw-automation-label">
+                    Mode d&apos;approbation recommandé
+                  </span>
+                  <ApprobationBadge mode={tachePlanifiee.modeApprobation} />
+                </div>
+                <p className="aw-automation-raison">
+                  {tachePlanifiee.raisonApprobation}
+                </p>
+              </>
+            ) : (
+              <p className="aw-automation-raison">
+                {iaLabels[ia]} n&apos;a pas de réglage d&apos;approbation
+                automatique/manuelle pour ce type de tâche : le prompt
+                ci-dessous interdit explicitement les actions irréversibles.
+              </p>
+            )}
           </div>
           <CopyPrompt
             prompt={tachePlanifiee.prompt}
