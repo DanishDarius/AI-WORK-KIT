@@ -9,7 +9,7 @@ import {
   TacheDetail,
   useResource,
 } from "@/lib/kit-api";
-import { category, categoryIcon, classification, classificationLabel } from "@/lib/catalogue";
+import { category, categoryIcon, classification, classificationLabel, metierLabel } from "@/lib/catalogue";
 import { Back, Intro, ResourceState } from "./kit-ui";
 import { Icon } from "./kit-icons";
 import { FaitCheckbox, FavoriButton, useTacheActions } from "./tache-actions";
@@ -230,7 +230,7 @@ function LoadedTask({
         <Link href="/metiers">Métiers</Link>
         <Icon name="chevron" />
         <Link href={`/metiers/${encodeURIComponent(metier)}`}>
-          Mon espace métier
+          {metierLabel(metier)}
         </Link>
         <Icon name="chevron" />
         <span>Cas pratique</span>
