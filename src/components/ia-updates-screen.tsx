@@ -187,7 +187,6 @@ export function IaUpdatesScreen({ items, guides = [] }: { items: IaUpdate[]; gui
   const sorted = newestFirst(items);
   return (
     <div className="aw-updates-page">
-      <GuideShelf guides={guides} />
       <section className="panel aw-updates-intro">
         <h1>Mises à jour IA</h1>
         <p>
@@ -223,6 +222,7 @@ export function IaUpdatesScreen({ items, guides = [] }: { items: IaUpdate[]; gui
           );
         })}
       </section>
+      <GuideShelf guides={guides} />
     </div>
   );
 }
