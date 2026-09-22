@@ -45,6 +45,23 @@ export const usages = [
   "Création",
   "Relation client",
 ];
+// Libellés des 12 métiers, pour l'affichage (ex. fil d'Ariane) quand seul le
+// slug est disponible côté client, sans requête supplémentaire à l'API.
+export const metierLabels: Record<string, string> = {
+  "vente-commercial": "Vente / Commercial",
+  "btp-gestion-de-chantier": "BTP / Gestion de chantier",
+  comptabilite: "Comptabilité",
+  "secretariat-administration": "Secrétariat / Administration",
+  "logistique-supply-chain": "Logistique / Supply Chain",
+  "service-clientele": "Service clientèle",
+  marketing: "Marketing",
+  communication: "Communication",
+  "ressources-humaines": "Ressources humaines",
+  journalisme: "Journalisme",
+  graphisme: "Graphisme",
+  "montage-video": "Montage vidéo",
+};
+export const metierLabel = (slug: string) => metierLabels[slug] || "Mon espace métier";
 export const category = (code: string) => categories[code] || "Création";
 export const categoryIcon = (code: string) =>
   ({
