@@ -40,10 +40,10 @@ export function ResourceState({
   const needsLogin = error?.includes("session") || error?.includes("connecté");
   return (
     <div className="panel py-12" role={error ? "alert" : "status"}>
-      <p>{error || "Chargement de votre espace…"}</p>
+      <p>{error || "Chargement de votre espace… Cela peut prendre quelques secondes."}</p>
       {error ? (
-        needsLogin ? (
-          <Link className="button mt-5" href="/connexion">
+              needsLogin ? (
+                  <Link className="button mt-5" href="/connexion">
             Se connecter
           </Link>
         ) : (
