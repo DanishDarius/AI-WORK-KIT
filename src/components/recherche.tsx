@@ -84,7 +84,7 @@ export function Recherche({
             id={id}
             type="search"
             value={query}
-            placeholder="Rechercher une tâche, un terme du glossaire…"
+            placeholder="Une tâche, un terme du glossaire…"
             aria-describedby={`${id}-hint`}
             aria-controls={`${id}-results`}
             onChange={(event) => {
