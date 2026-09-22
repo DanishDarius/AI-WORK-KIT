@@ -273,7 +273,7 @@ function CatalogResults({
                           </span>
                           {tools > 0 ? (
                             <span className="aw-tools-ready">
-                              {tools} outil{tools > 1 ? "s" : ""} pret{tools > 1 ? "s" : ""}
+                              {tools} outil{tools > 1 ? "s" : ""} prêt{tools > 1 ? "s" : ""}
                             </span>
                           ) : (
                             <Icon name="arrow" />
