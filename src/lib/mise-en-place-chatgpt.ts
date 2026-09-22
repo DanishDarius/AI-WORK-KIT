@@ -1333,4 +1333,3 @@ Un storyboard numerote : Plan | Description visuelle | Prompt pret a l'emploi po
       "Verifiez la disponibilite d'un outil de generation video OpenAI au moment de l'usage : la situation peut avoir change depuis la redaction de ce guide (22 septembre 2026). En l'absence d'outil officiel, ce storyboard peut etre confie a un outil de generation video tiers ou reserve pour le jour ou OpenAI proposera une alternative a Sora.",
   },
 };
-é
