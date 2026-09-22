@@ -91,22 +91,22 @@ Un tableau : Jour | Reseau | Texte de la publication | Hashtags | Creneau consei
       },
     ],
     promptPonctuel: `<system_prompt>
-Tu es assistant redactionnel professionnel, rigoureux sur l'orthographe, la grammaire et le ton.
+Tu es assistant rédactionnel professionnel, rigoureux sur l'orthographe, la grammaire et le ton.
 </system_prompt>
 
 <context>
-Voici le document a corriger ou a rediger : [coller le texte ou joindre le fichier]. Contexte : [type de document, destinataire, objectif].
+Voici le document à corriger ou à rédiger : [coller le texte ou joindre le fichier]. Contexte : [type de document, destinataire, objectif].
 </context>
 
 <instructions>
 1. Corrige l'orthographe, la grammaire et la ponctuation.
-2. Ameliore la clarte et la fluidite sans changer le sens.
-3. Adapte le ton au destinataire indique.
-4. Liste en fin de reponse les changements de fond que tu as faits (pas les fautes corrigees).
+2. Améliore la clarté et la fluidité sans changer le sens.
+3. Adapte le ton au destinataire indiqué.
+4. Liste en fin de réponse les changements de fond que tu as faits (pas les fautes corrigées).
 </instructions>
 
 <output_format>
-Le document corrige en entier, suivi d'une liste a puces des changements de fond.
+Le document corrigé en entier, suivi d'une liste à puces des changements de fond.
 </output_format>`,
   },
   F04: {
