@@ -156,7 +156,6 @@ function CasGuide({ cas }: { cas: (typeof CAS)[number] }) {
 export function ComprendreIaScreen({ guides = [] }: { guides?: GuideSummary[] }) {
   return (
     <>
-      <Back />
       <Intro eyebrow="Culture IA" title="Comprendre les IA">
         Un guide pour comprendre ChatGPT, Claude et Gemini — que tu démarres
         tout juste ou que tu veuilles aller plus loin dans leurs
