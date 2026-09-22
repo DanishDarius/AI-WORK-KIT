@@ -13,7 +13,6 @@ export default function Compte() {
   const date = data ? new Date(data.membre_depuis) : null;
   return (
     <>
-      <Back />
       <Intro eyebrow="Votre espace personnel" title="Ma progression">
         Retrouvez votre avancement et poursuivez votre pratique à votre rythme.
       </Intro>
