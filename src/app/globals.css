@@ -41,7 +41,7 @@ body {
 #awk-studio {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  min-height: min(100dvh, 1200px);
 }
 #awk-studio .aw-main {
   flex: 1;
