@@ -72,7 +72,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <Link href="/taches" aria-current={isCurrent("/taches") ? "page" : undefined}>Tâches</Link>
             <Link href="/metiers" aria-current={isCurrent("/metiers") ? "page" : undefined}>Métiers</Link>
             <Link href="/comprendre-les-ia" aria-current={isCurrent("/comprendre-les-ia") ? "page" : undefined}>Comprendre les IA</Link>
-            <Link href="/bibliotheque" aria-current={isCurrent("/bibliotheque") || isCurrent("/guides") ? "page" : undefined}>Guides</Link>
+            <Link href="/bibliotheque" aria-current={isCurrent("/bibliotheque") || isCurrent("/guides") ? "page" : undefined}>Bibliothèque</Link>
             <Link href="/systemes-ia" aria-current={isCurrent("/systemes-ia") ? "page" : undefined}>Systèmes IA</Link>
             <Link href="/transformation-ia" aria-current={isCurrent("/transformation-ia") ? "page" : undefined}>Transformation IA</Link>
             <Link href="/mises-a-jour-ia" aria-current={isCurrent("/mises-a-jour-ia") ? "page" : undefined}>Mises à jour IA</Link>
