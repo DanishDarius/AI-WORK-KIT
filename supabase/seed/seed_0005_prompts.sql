@@ -8,7 +8,7 @@ Ton objectif est de trier une boîte de réception en retard et de rédiger la r
 
 # Contexte
 Tu es assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Tu reviens de deux jours de congé et trouves 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
-Colle ici les données du Cas fictif 1 de la tâche F01, disponibles dans exercices-42-taches.md (la liste des 11 emails).
+Colle ici les données du cas pratique ci-dessus (la liste des 11 emails).
 
 # Instructions
 1. Trie les 11 emails en 4 catégories : urgent à traiter aujourd'hui / à répondre cette semaine / à déléguer (précise à qui) / à archiver ou supprimer.
@@ -32,7 +32,7 @@ Tâche : Trie une boîte de réception de 11 emails en 4 catégories d'action et
 Contexte :
 """
 Tu es assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Tu reviens de deux jours de congé et trouves 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
-Colle ici les données du Cas fictif 1 de la tâche F01, disponibles dans exercices-42-taches.md (la liste des 11 emails).
+Colle ici les données du cas pratique ci-dessus (la liste des 11 emails).
 """
 
 Format de sortie attendu :
@@ -54,7 +54,7 @@ Tu es un assistant administratif spécialisé dans la gestion de boîtes mail pr
 
 <context>
 Tu es assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Tu reviens de deux jours de congé et trouves 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
-Colle ici les données du Cas fictif 1 de la tâche F01, disponibles dans exercices-42-taches.md (la liste des 11 emails).
+Colle ici les données du cas pratique ci-dessus (la liste des 11 emails).
 </context>
 
 <instructions>
@@ -84,7 +84,7 @@ Ton objectif est d'identifier les emails prioritaires du jour et de rédiger la 
 
 # Contexte
 Tu gères seul(e) "Studio K", un salon de coiffure à Lille. Tu consultes ta boîte mail le lundi matin après un week-end sans connexion.
-Colle ici les données du Cas fictif 2 de la tâche F01, disponibles dans exercices-42-taches.md (la liste des 8 emails).
+Colle ici les données du cas pratique ci-dessus (la liste des 8 emails).
 
 # Instructions
 1. Identifie les emails qui nécessitent une réponse aujourd'hui et ceux qui peuvent attendre.
@@ -108,7 +108,7 @@ Tâche : Identifie les emails prioritaires du jour parmi 8 messages et rédige l
 Contexte :
 """
 Tu gères seul(e) "Studio K", un salon de coiffure à Lille. Tu consultes ta boîte mail le lundi matin après un week-end sans connexion.
-Colle ici les données du Cas fictif 2 de la tâche F01, disponibles dans exercices-42-taches.md (la liste des 8 emails).
+Colle ici les données du cas pratique ci-dessus (la liste des 8 emails).
 """
 
 Format de sortie attendu :
@@ -130,7 +130,7 @@ Tu es un assistant administratif spécialisé dans la gestion de boîtes mail po
 
 <context>
 Tu gères seul(e) "Studio K", un salon de coiffure à Lille. Tu consultes ta boîte mail le lundi matin après un week-end sans connexion.
-Colle ici les données du Cas fictif 2 de la tâche F01, disponibles dans exercices-42-taches.md (la liste des 8 emails).
+Colle ici les données du cas pratique ci-dessus (la liste des 8 emails).
 </context>
 
 <instructions>
@@ -160,7 +160,7 @@ Ton objectif est de construire un calendrier de publication Instagram sur 14 jou
 
 # Contexte
 Tu es gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier ton contenu Instagram pour les 2 prochaines semaines. Tu as listé en vrac ce que tu veux communiquer.
-Colle ici les données du Cas fictif 1 de la tâche F02, disponibles dans exercices-42-taches.md (les notes en vrac de Léna).
+Colle ici les données du cas pratique ci-dessus (les notes en vrac de Léna).
 
 # Instructions
 1. Construis un calendrier de publication sur 14 jours (jour, format — post/story/reel, thème, accroche courte).
@@ -184,7 +184,7 @@ Tâche : Construis un calendrier de publication Instagram sur 14 jours à partir
 Contexte :
 """
 Tu es gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier ton contenu Instagram pour les 2 prochaines semaines. Tu as listé en vrac ce que tu veux communiquer.
-Colle ici les données du Cas fictif 1 de la tâche F02, disponibles dans exercices-42-taches.md (les notes en vrac de Léna).
+Colle ici les données du cas pratique ci-dessus (les notes en vrac de Léna).
 """
 
 Format de sortie attendu :
@@ -206,7 +206,7 @@ Tu es un community manager spécialisé dans les petits commerces et instituts d
 
 <context>
 Tu es gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier ton contenu Instagram pour les 2 prochaines semaines. Tu as listé en vrac ce que tu veux communiquer.
-Colle ici les données du Cas fictif 1 de la tâche F02, disponibles dans exercices-42-taches.md (les notes en vrac de Léna).
+Colle ici les données du cas pratique ci-dessus (les notes en vrac de Léna).
 </context>
 
 <instructions>
@@ -236,7 +236,7 @@ Ton objectif est de construire un calendrier de 6 publications LinkedIn sur le m
 
 # Contexte
 Tu es responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
-Colle ici les données du Cas fictif 2 de la tâche F02, disponibles dans exercices-42-taches.md (les éléments disponibles).
+Colle ici les données du cas pratique ci-dessus (les éléments disponibles).
 
 # Instructions
 1. Propose un calendrier de 6 publications LinkedIn sur le mois.
@@ -260,7 +260,7 @@ Tâche : Construis un calendrier de 6 publications LinkedIn sur le mois, avec un
 Contexte :
 """
 Tu es responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
-Colle ici les données du Cas fictif 2 de la tâche F02, disponibles dans exercices-42-taches.md (les éléments disponibles).
+Colle ici les données du cas pratique ci-dessus (les éléments disponibles).
 """
 
 Format de sortie attendu :
@@ -282,7 +282,7 @@ Tu es un community manager spécialisé dans la communication LinkedIn pour des 
 
 <context>
 Tu es responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
-Colle ici les données du Cas fictif 2 de la tâche F02, disponibles dans exercices-42-taches.md (les éléments disponibles).
+Colle ici les données du cas pratique ci-dessus (les éléments disponibles).
 </context>
 
 <instructions>
@@ -312,7 +312,7 @@ Ton objectif est de corriger intégralement une lettre de mission comptable avan
 
 # Contexte
 Tu travailles au cabinet et dois envoyer une lettre de mission à un nouveau client. Tu as rédigé, en tant que collaborateur (collaboratrice) junior, un premier jet rapide, à corriger avant envoi.
-Colle ici les données du Cas fictif 1 de la tâche F03, disponibles dans exercices-42-taches.md (le texte de la lettre de mission).
+Colle ici les données du cas pratique ci-dessus (le texte de la lettre de mission).
 
 # Instructions
 1. Corrige toutes les fautes d'orthographe, de grammaire et de ponctuation.
@@ -336,7 +336,7 @@ Tâche : Corrige intégralement une lettre de mission comptable et signale les i
 Contexte :
 """
 Tu travailles au cabinet et dois envoyer une lettre de mission à un nouveau client. Tu as rédigé, en tant que collaborateur (collaboratrice) junior, un premier jet rapide, à corriger avant envoi.
-Colle ici les données du Cas fictif 1 de la tâche F03, disponibles dans exercices-42-taches.md (le texte de la lettre de mission).
+Colle ici les données du cas pratique ci-dessus (le texte de la lettre de mission).
 """
 
 Format de sortie attendu :
@@ -358,7 +358,7 @@ Tu es un relecteur professionnel spécialisé dans les documents administratifs 
 
 <context>
 Tu travailles au cabinet et dois envoyer une lettre de mission à un nouveau client. Tu as rédigé, en tant que collaborateur (collaboratrice) junior, un premier jet rapide, à corriger avant envoi.
-Colle ici les données du Cas fictif 1 de la tâche F03, disponibles dans exercices-42-taches.md (le texte de la lettre de mission).
+Colle ici les données du cas pratique ci-dessus (le texte de la lettre de mission).
 </context>
 
 <instructions>
@@ -388,7 +388,7 @@ Ton objectif est de corriger un compte-rendu d'assemblée générale avant son e
 
 # Contexte
 Tu es président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à tes 60 adhérents. Le secrétaire a rédigé un brouillon que tu dois corriger.
-Colle ici les données du Cas fictif 2 de la tâche F03, disponibles dans exercices-42-taches.md (le texte du compte-rendu).
+Colle ici les données du cas pratique ci-dessus (le texte du compte-rendu).
 
 # Instructions
 1. Corrige les fautes d'accord (participes passés, pluriels) et d'orthographe.
@@ -412,7 +412,7 @@ Tâche : Corrige un compte-rendu d'assemblée générale (fautes d'accord, ortho
 Contexte :
 """
 Tu es président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à tes 60 adhérents. Le secrétaire a rédigé un brouillon que tu dois corriger.
-Colle ici les données du Cas fictif 2 de la tâche F03, disponibles dans exercices-42-taches.md (le texte du compte-rendu).
+Colle ici les données du cas pratique ci-dessus (le texte du compte-rendu).
 """
 
 Format de sortie attendu :
@@ -434,7 +434,7 @@ Tu es un relecteur professionnel spécialisé dans les comptes-rendus associatif
 
 <context>
 Tu es président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à tes 60 adhérents. Le secrétaire a rédigé un brouillon que tu dois corriger.
-Colle ici les données du Cas fictif 2 de la tâche F03, disponibles dans exercices-42-taches.md (le texte du compte-rendu).
+Colle ici les données du cas pratique ci-dessus (le texte du compte-rendu).
 </context>
 
 <instructions>
@@ -464,7 +464,7 @@ Ton objectif est de produire un compte-rendu structuré et exploitable de la ré
 
 # Contexte
 Tu travailles à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. Voici un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
-Colle ici les données du Cas fictif 1 de la tâche F04, disponibles dans exercices-42-taches.md (la transcription brute).
+Colle ici les données du cas pratique ci-dessus (la transcription brute).
 
 # Instructions
 1. Nettoie le langage oral et corrige les incohérences mineures de la transcription.
@@ -488,7 +488,7 @@ Tâche : Rédige un compte-rendu structuré en trois blocs (points abordés, dé
 Contexte :
 """
 Tu travailles à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. Voici un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
-Colle ici les données du Cas fictif 1 de la tâche F04, disponibles dans exercices-42-taches.md (la transcription brute).
+Colle ici les données du cas pratique ci-dessus (la transcription brute).
 """
 
 Format de sortie attendu :
@@ -510,7 +510,7 @@ Tu es un assistant spécialisé dans la rédaction de comptes-rendus de réunion
 
 <context>
 Tu travailles à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. Voici un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
-Colle ici les données du Cas fictif 1 de la tâche F04, disponibles dans exercices-42-taches.md (la transcription brute).
+Colle ici les données du cas pratique ci-dessus (la transcription brute).
 </context>
 
 <instructions>
@@ -540,7 +540,7 @@ Ton objectif est de produire un résumé structuré et fidèle utilisable pour u
 
 # Contexte
 Tu es chargé(e) de communication et tu interviewes un boulanger pour un article "portrait" destiné au site web de la ville. Transcription brute de l'enregistrement :
-Colle ici les données du Cas fictif 2 de la tâche F04, disponibles dans exercices-42-taches.md (la transcription brute).
+Colle ici les données du cas pratique ci-dessus (la transcription brute).
 
 # Instructions
 1. Rédige un résumé structuré en 4 à 6 phrases utilisables telles quelles pour un article web.
@@ -564,7 +564,7 @@ Tâche : Résume une interview retranscrite en 4 à 6 phrases fidèles, utilisab
 Contexte :
 """
 Tu es chargé(e) de communication et tu interviewes un boulanger pour un article "portrait" destiné au site web de la ville. Transcription brute de l'enregistrement :
-Colle ici les données du Cas fictif 2 de la tâche F04, disponibles dans exercices-42-taches.md (la transcription brute).
+Colle ici les données du cas pratique ci-dessus (la transcription brute).
 """
 
 Format de sortie attendu :
@@ -586,7 +586,7 @@ Tu es un rédacteur web spécialisé dans les articles "portrait" à partir d'in
 
 <context>
 Tu es chargé(e) de communication et tu interviewes un boulanger pour un article "portrait" destiné au site web de la ville. Transcription brute de l'enregistrement :
-Colle ici les données du Cas fictif 2 de la tâche F04, disponibles dans exercices-42-taches.md (la transcription brute).
+Colle ici les données du cas pratique ci-dessus (la transcription brute).
 </context>
 
 <instructions>
@@ -616,7 +616,7 @@ Ton objectif est de construire un planning hebdomadaire révisé intégrant 4 no
 
 # Contexte
 Tu es secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
-Colle ici les données du Cas fictif 1 de la tâche F05, disponibles dans exercices-42-taches.md (l'agenda actuel et les 4 demandes reçues).
+Colle ici les données du cas pratique ci-dessus (l'agenda actuel et les 4 demandes reçues).
 
 # Instructions
 1. Propose un planning révisé de la semaine intégrant les 4 demandes reçues, en respectant les contraintes déjà fixées dans l'agenda.
@@ -640,7 +640,7 @@ Tâche : Construis un planning hebdomadaire révisé intégrant 4 nouvelles dema
 Contexte :
 """
 Tu es secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
-Colle ici les données du Cas fictif 1 de la tâche F05, disponibles dans exercices-42-taches.md (l'agenda actuel et les 4 demandes reçues).
+Colle ici les données du cas pratique ci-dessus (l'agenda actuel et les 4 demandes reçues).
 """
 
 Format de sortie attendu :
@@ -662,7 +662,7 @@ Tu es un assistant spécialisé dans la gestion d'agendas de cabinets médicaux.
 
 <context>
 Tu es secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
-Colle ici les données du Cas fictif 1 de la tâche F05, disponibles dans exercices-42-taches.md (l'agenda actuel et les 4 demandes reçues).
+Colle ici les données du cas pratique ci-dessus (l'agenda actuel et les 4 demandes reçues).
 </context>
 
 <instructions>
@@ -692,7 +692,7 @@ Ton objectif est de construire un planning hebdomadaire respectant les contraint
 
 # Contexte
 Tu es consultant IT indépendant. Tu dois organiser tes rendez-vous clients de la semaine tout en gardant du temps pour tes missions en cours.
-Colle ici les données du Cas fictif 2 de la tâche F05, disponibles dans exercices-42-taches.md (les contraintes connues et les 3 demandes reçues).
+Colle ici les données du cas pratique ci-dessus (les contraintes connues et les 3 demandes reçues).
 
 # Instructions
 1. Construis un planning de la semaine (lundi à vendredi) qui respecte les contraintes de la mission en cours et le vendredi après-midi bloqué.
@@ -716,7 +716,7 @@ Tâche : Construis un planning hebdomadaire respectant les contraintes de missio
 Contexte :
 """
 Tu es consultant IT indépendant. Tu dois organiser tes rendez-vous clients de la semaine tout en gardant du temps pour tes missions en cours.
-Colle ici les données du Cas fictif 2 de la tâche F05, disponibles dans exercices-42-taches.md (les contraintes connues et les 3 demandes reçues).
+Colle ici les données du cas pratique ci-dessus (les contraintes connues et les 3 demandes reçues).
 """
 
 Format de sortie attendu :
@@ -738,7 +738,7 @@ Tu es un assistant spécialisé dans la gestion d'agenda de consultants indépen
 
 <context>
 Tu es consultant IT indépendant. Tu dois organiser tes rendez-vous clients de la semaine tout en gardant du temps pour tes missions en cours.
-Colle ici les données du Cas fictif 2 de la tâche F05, disponibles dans exercices-42-taches.md (les contraintes connues et les 3 demandes reçues).
+Colle ici les données du cas pratique ci-dessus (les contraintes connues et les 3 demandes reçues).
 </context>
 
 <instructions>
@@ -768,7 +768,7 @@ Ton objectif est de trier des questions clients et de rédiger les réponses FAQ
 
 # Contexte
 Tu gères "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Tu souhaites créer une FAQ pour désengorger le support.
-Colle ici les données du Cas fictif 1 de la tâche F06, disponibles dans exercices-42-taches.md (les 10 questions reçues et les informations connues de l'entreprise).
+Colle ici les données du cas pratique ci-dessus (les 10 questions reçues et les informations connues de l'entreprise).
 
 # Instructions
 1. Classe les 10 questions en "peut être répondu par une FAQ automatique" vs "nécessite une intervention humaine au cas par cas".
@@ -792,7 +792,7 @@ Tâche : Trie 10 questions clients en "automatisables" ou "à escalader", et ré
 Contexte :
 """
 Tu gères "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Tu souhaites créer une FAQ pour désengorger le support.
-Colle ici les données du Cas fictif 1 de la tâche F06, disponibles dans exercices-42-taches.md (les 10 questions reçues et les informations connues de l'entreprise).
+Colle ici les données du cas pratique ci-dessus (les 10 questions reçues et les informations connues de l'entreprise).
 """
 
 Format de sortie attendu :
@@ -814,7 +814,7 @@ Tu es un spécialiste du support client, chargé de construire des bases de conn
 
 <context>
 Tu gères "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Tu souhaites créer une FAQ pour désengorger le support.
-Colle ici les données du Cas fictif 1 de la tâche F06, disponibles dans exercices-42-taches.md (les 10 questions reçues et les informations connues de l'entreprise).
+Colle ici les données du cas pratique ci-dessus (les 10 questions reçues et les informations connues de l'entreprise).
 </context>
 
 <instructions>
@@ -844,7 +844,7 @@ Ton objectif est de rédiger une FAQ complète pour le site web d'une salle de s
 
 # Contexte
 Tu gères "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
-Colle ici les données du Cas fictif 2 de la tâche F06, disponibles dans exercices-42-taches.md (les 10 questions et les informations connues de la salle).
+Colle ici les données du cas pratique ci-dessus (les 10 questions et les informations connues de la salle).
 
 # Instructions
 1. Rédige la FAQ complète (question reformulée si besoin + réponse) pour ce qui peut être répondu avec les informations disponibles.
@@ -868,7 +868,7 @@ Tâche : Rédige une FAQ complète pour le site web d'une salle de sport à part
 Contexte :
 """
 Tu gères "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
-Colle ici les données du Cas fictif 2 de la tâche F06, disponibles dans exercices-42-taches.md (les 10 questions et les informations connues de la salle).
+Colle ici les données du cas pratique ci-dessus (les 10 questions et les informations connues de la salle).
 """
 
 Format de sortie attendu :
@@ -890,7 +890,7 @@ Tu es un spécialiste du support client, chargé de construire des FAQ pour des 
 
 <context>
 Tu gères "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
-Colle ici les données du Cas fictif 2 de la tâche F06, disponibles dans exercices-42-taches.md (les 10 questions et les informations connues de la salle).
+Colle ici les données du cas pratique ci-dessus (les 10 questions et les informations connues de la salle).
 </context>
 
 <instructions>
@@ -920,7 +920,7 @@ Ton objectif est de rédiger une note de veille mensuelle synthétique sur 3 con
 
 # Contexte
 Tu es responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ta direction te demande une note de veille mensuelle sur 3 concurrents directs.
-Colle ici les données du Cas fictif 1 de la tâche F07, disponibles dans exercices-42-taches.md (les notes brutes collectées).
+Colle ici les données du cas pratique ci-dessus (les notes brutes collectées).
 
 # Instructions
 1. Organise la note par concurrent (A, B, C), en synthétisant les faits marquants de chacun.
@@ -944,7 +944,7 @@ Tâche : Rédige une note de veille mensuelle synthétique organisée par concur
 Contexte :
 """
 Tu es responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ta direction te demande une note de veille mensuelle sur 3 concurrents directs.
-Colle ici les données du Cas fictif 1 de la tâche F07, disponibles dans exercices-42-taches.md (les notes brutes collectées).
+Colle ici les données du cas pratique ci-dessus (les notes brutes collectées).
 """
 
 Format de sortie attendu :
@@ -966,7 +966,7 @@ Tu es un analyste marketing spécialisé dans la veille concurrentielle.
 
 <context>
 Tu es responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ta direction te demande une note de veille mensuelle sur 3 concurrents directs.
-Colle ici les données du Cas fictif 1 de la tâche F07, disponibles dans exercices-42-taches.md (les notes brutes collectées).
+Colle ici les données du cas pratique ci-dessus (les notes brutes collectées).
 </context>
 
 <instructions>
@@ -996,7 +996,7 @@ Ton objectif est de produire une synthèse claire distinguant faits vérifiés e
 
 # Contexte
 Tu es menuisier ébéniste indépendant (Nantes) et envisages de te lancer dans l'agencement de cuisines sur-mesure en complément de ton activité meubles. Tu as demandé à ton neveu, étudiant en marketing, de rassembler des informations avant de te décider.
-Colle ici les données du Cas fictif 2 de la tâche F07, disponibles dans exercices-42-taches.md (les informations collectées par le neveu).
+Colle ici les données du cas pratique ci-dessus (les informations collectées par le neveu).
 
 # Instructions
 1. Rédige une synthèse pour Thomas à partir des informations collectées.
@@ -1020,7 +1020,7 @@ Tâche : Produis une synthèse distinguant faits vérifiés et hypothèses, et p
 Contexte :
 """
 Tu es menuisier ébéniste indépendant (Nantes) et envisages de te lancer dans l'agencement de cuisines sur-mesure en complément de ton activité meubles. Tu as demandé à ton neveu, étudiant en marketing, de rassembler des informations avant de te décider.
-Colle ici les données du Cas fictif 2 de la tâche F07, disponibles dans exercices-42-taches.md (les informations collectées par le neveu).
+Colle ici les données du cas pratique ci-dessus (les informations collectées par le neveu).
 """
 
 Format de sortie attendu :
@@ -1042,7 +1042,7 @@ Tu es un analyste spécialisé dans la synthèse d'informations de marché pour 
 
 <context>
 Tu es menuisier ébéniste indépendant (Nantes) et envisages de te lancer dans l'agencement de cuisines sur-mesure en complément de ton activité meubles. Tu as demandé à ton neveu, étudiant en marketing, de rassembler des informations avant de te décider.
-Colle ici les données du Cas fictif 2 de la tâche F07, disponibles dans exercices-42-taches.md (les informations collectées par le neveu).
+Colle ici les données du cas pratique ci-dessus (les informations collectées par le neveu).
 </context>
 
 <instructions>
@@ -1072,7 +1072,7 @@ Ton objectif est d'analyser une baisse de chiffre d'affaires et de produire un m
 
 # Contexte
 Tu gères une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Tu veux comprendre pourquoi ton chiffre d'affaires a baissé au 2e trimestre.
-Colle ici les données du Cas fictif 1 de la tâche F08, disponibles dans exercices-42-taches.md (l'export caisse mensuel et les notes de Nadia).
+Colle ici les données du cas pratique ci-dessus (l'export caisse mensuel et les notes de Nadia).
 
 # Instructions
 1. Analyse les données pour identifier la tendance du trimestre avril-juin comparée au trimestre janvier-mars.
@@ -1096,7 +1096,7 @@ Tâche : Analyse une baisse de chiffre d'affaires trimestrielle et rédige un mi
 Contexte :
 """
 Tu gères une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Tu veux comprendre pourquoi ton chiffre d'affaires a baissé au 2e trimestre.
-Colle ici les données du Cas fictif 1 de la tâche F08, disponibles dans exercices-42-taches.md (l'export caisse mensuel et les notes de Nadia).
+Colle ici les données du cas pratique ci-dessus (l'export caisse mensuel et les notes de Nadia).
 """
 
 Format de sortie attendu :
@@ -1118,7 +1118,7 @@ Tu es un analyste de données spécialisé dans le commerce de détail.
 
 <context>
 Tu gères une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Tu veux comprendre pourquoi ton chiffre d'affaires a baissé au 2e trimestre.
-Colle ici les données du Cas fictif 1 de la tâche F08, disponibles dans exercices-42-taches.md (l'export caisse mensuel et les notes de Nadia).
+Colle ici les données du cas pratique ci-dessus (l'export caisse mensuel et les notes de Nadia).
 </context>
 
 <instructions>
@@ -1148,7 +1148,7 @@ Ton objectif est de calculer les taux d'absentéisme par service et de rédiger 
 
 # Contexte
 Tu travailles au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
-Colle ici les données du Cas fictif 2 de la tâche F08, disponibles dans exercices-42-taches.md (les données d'absentéisme par service, T1 et T2 2026).
+Colle ici les données du cas pratique ci-dessus (les données d'absentéisme par service, T1 et T2 2026).
 
 # Instructions
 1. Calcule le taux d'absentéisme par service (jours d'absence / (nb salariés × 63 jours ouvrés au T2), exprimé en %).
@@ -1172,7 +1172,7 @@ Tâche : Calcule les taux d'absentéisme par service et rédige une synthèse d'
 Contexte :
 """
 Tu travailles au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
-Colle ici les données du Cas fictif 2 de la tâche F08, disponibles dans exercices-42-taches.md (les données d'absentéisme par service, T1 et T2 2026).
+Colle ici les données du cas pratique ci-dessus (les données d'absentéisme par service, T1 et T2 2026).
 """
 
 Format de sortie attendu :
@@ -1194,7 +1194,7 @@ Tu es un analyste RH spécialisé dans le suivi de l'absentéisme en entreprise.
 
 <context>
 Tu travailles au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
-Colle ici les données du Cas fictif 2 de la tâche F08, disponibles dans exercices-42-taches.md (les données d'absentéisme par service, T1 et T2 2026).
+Colle ici les données du cas pratique ci-dessus (les données d'absentéisme par service, T1 et T2 2026).
 </context>
 
 <instructions>
@@ -1224,7 +1224,7 @@ Ton objectif est de traduire un brief flou en un prompt détaillé et exploitabl
 
 # Contexte
 Tu es le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Tu lances une nouvelle gamme "Infusions d'Automne" et as besoin de visuels pour tes réseaux sociaux, sans budget photographe.
-Colle ici les données du Cas fictif 1 de la tâche F09, disponibles dans exercices-42-taches.md (le brief du fondateur).
+Colle ici les données du cas pratique ci-dessus (le brief du fondateur).
 
 # Instructions
 1. Rédige un prompt détaillé et structuré pour un générateur d'images IA à partir de ce brief (sujet précis, style, ambiance/éclairage, palette de couleurs, cadrage, format).
@@ -1247,7 +1247,7 @@ Tâche : Traduis un brief marketing en langage flou en un prompt de génération
 Contexte :
 """
 Tu es le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Tu lances une nouvelle gamme "Infusions d'Automne" et as besoin de visuels pour tes réseaux sociaux, sans budget photographe.
-Colle ici les données du Cas fictif 1 de la tâche F09, disponibles dans exercices-42-taches.md (le brief du fondateur).
+Colle ici les données du cas pratique ci-dessus (le brief du fondateur).
 """
 
 Format de sortie attendu :
@@ -1269,7 +1269,7 @@ Tu es un spécialiste du prompt engineering pour la génération d'images IA à 
 
 <context>
 Tu es le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Tu lances une nouvelle gamme "Infusions d'Automne" et as besoin de visuels pour tes réseaux sociaux, sans budget photographe.
-Colle ici les données du Cas fictif 1 de la tâche F09, disponibles dans exercices-42-taches.md (le brief du fondateur).
+Colle ici les données du cas pratique ci-dessus (le brief du fondateur).
 </context>
 
 <instructions>
@@ -1298,7 +1298,7 @@ Ton objectif est de traduire un contre-exemple donné par le client en direction
 
 # Contexte
 Tu es responsable marketing de la jeune pousse "Calmly" et as besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
-Colle ici les données du Cas fictif 2 de la tâche F09, disponibles dans exercices-42-taches.md (le brief du responsable marketing).
+Colle ici les données du cas pratique ci-dessus (le brief du responsable marketing).
 
 # Instructions
 1. Rédige le prompt détaillé pour l'IA en traduisant le contre-exemple donné ("pas de personne en tailleur sur un rocher") en direction positive précise.
@@ -1322,7 +1322,7 @@ Tâche : Traduis un contre-exemple donné par le client en direction positive pr
 Contexte :
 """
 Tu es responsable marketing de la jeune pousse "Calmly" et as besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
-Colle ici les données du Cas fictif 2 de la tâche F09, disponibles dans exercices-42-taches.md (le brief du responsable marketing).
+Colle ici les données du cas pratique ci-dessus (le brief du responsable marketing).
 """
 
 Format de sortie attendu :
@@ -1344,7 +1344,7 @@ Tu es un spécialiste du prompt engineering pour la génération d'images IA à 
 
 <context>
 Tu es responsable marketing de la jeune pousse "Calmly" et as besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
-Colle ici les données du Cas fictif 2 de la tâche F09, disponibles dans exercices-42-taches.md (le brief du responsable marketing).
+Colle ici les données du cas pratique ci-dessus (le brief du responsable marketing).
 </context>
 
 <instructions>
@@ -1374,7 +1374,7 @@ Ton objectif est d'identifier les doublons d'une base fusionnée et de proposer 
 
 # Contexte
 Tu travailles au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Tu dois nettoyer la base avant import dans le CRM.
-Colle ici les données du Cas fictif 1 de la tâche F10, disponibles dans exercices-42-taches.md (l'extrait de la base fusionnée, 8 lignes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de la base fusionnée, 8 lignes).
 
 # Instructions
 1. Identifie les doublons probables, en justifiant ton raisonnement pour chaque cas ambigu (notamment les lignes qui pourraient représenter la même personne avec des coordonnées différentes).
@@ -1398,7 +1398,7 @@ Tâche : Identifie les doublons d'une base client fusionnée, propose les fiches
 Contexte :
 """
 Tu travailles au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Tu dois nettoyer la base avant import dans le CRM.
-Colle ici les données du Cas fictif 1 de la tâche F10, disponibles dans exercices-42-taches.md (l'extrait de la base fusionnée, 8 lignes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de la base fusionnée, 8 lignes).
 """
 
 Format de sortie attendu :
@@ -1420,7 +1420,7 @@ Tu es un spécialiste de la qualité des données CRM, spécialisé dans la déd
 
 <context>
 Tu travailles au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Tu dois nettoyer la base avant import dans le CRM.
-Colle ici les données du Cas fictif 1 de la tâche F10, disponibles dans exercices-42-taches.md (l'extrait de la base fusionnée, 8 lignes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de la base fusionnée, 8 lignes).
 </context>
 
 <instructions>
@@ -1450,7 +1450,7 @@ Ton objectif est de classer 6 contacts selon leur niveau d'engagement avant une 
 
 # Contexte
 Tu travailles chez "FormaPlus" et veux qualifier ta base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
-Colle ici les données du Cas fictif 2 de la tâche F10, disponibles dans exercices-42-taches.md (l'extrait de la base à qualifier, 6 contacts).
+Colle ici les données du cas pratique ci-dessus (l'extrait de la base à qualifier, 6 contacts).
 
 # Instructions
 1. Classe ces 6 contacts en 3 catégories : prospect chaud à contacter en priorité / à nourrir avec du contenu avant contact commercial / à retirer ou vérifier avant toute campagne.
@@ -1473,7 +1473,7 @@ Tâche : Classe 6 contacts en 3 catégories d'engagement (prospect chaud / à no
 Contexte :
 """
 Tu travailles chez "FormaPlus" et veux qualifier ta base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
-Colle ici les données du Cas fictif 2 de la tâche F10, disponibles dans exercices-42-taches.md (l'extrait de la base à qualifier, 6 contacts).
+Colle ici les données du cas pratique ci-dessus (l'extrait de la base à qualifier, 6 contacts).
 """
 
 Format de sortie attendu :
@@ -1495,7 +1495,7 @@ Tu es un spécialiste de la qualification de bases de contacts commerciaux.
 
 <context>
 Tu travailles chez "FormaPlus" et veux qualifier ta base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
-Colle ici les données du Cas fictif 2 de la tâche F10, disponibles dans exercices-42-taches.md (l'extrait de la base à qualifier, 6 contacts).
+Colle ici les données du cas pratique ci-dessus (l'extrait de la base à qualifier, 6 contacts).
 </context>
 
 <instructions>
@@ -1524,7 +1524,7 @@ Ton objectif est de préparer un tableau de saisie comptable à partir d'une fac
 
 # Contexte
 Tu gères le garage "Auto Services Moreau". Tu reçois tes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans ton logiciel de comptabilité.
-Colle ici les données du Cas fictif 1 de la tâche F11, disponibles dans exercices-42-taches.md (le contenu retranscrit de la facture).
+Colle ici les données du cas pratique ci-dessus (le contenu retranscrit de la facture).
 
 # Instructions
 1. Prépare un tableau de saisie comptable avec les champs : fournisseur, n° facture, date, montant HT, TVA, montant TTC, échéance de paiement.
@@ -1547,7 +1547,7 @@ Tâche : Prépare un tableau de saisie comptable à partir d'une facture partiel
 Contexte :
 """
 Tu gères le garage "Auto Services Moreau". Tu reçois tes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans ton logiciel de comptabilité.
-Colle ici les données du Cas fictif 1 de la tâche F11, disponibles dans exercices-42-taches.md (le contenu retranscrit de la facture).
+Colle ici les données du cas pratique ci-dessus (le contenu retranscrit de la facture).
 """
 
 Format de sortie attendu :
@@ -1569,7 +1569,7 @@ Tu es un assistant comptable spécialisé dans la préparation de saisies à par
 
 <context>
 Tu gères le garage "Auto Services Moreau". Tu reçois tes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans ton logiciel de comptabilité.
-Colle ici les données du Cas fictif 1 de la tâche F11, disponibles dans exercices-42-taches.md (le contenu retranscrit de la facture).
+Colle ici les données du cas pratique ci-dessus (le contenu retranscrit de la facture).
 </context>
 
 <instructions>
@@ -1598,7 +1598,7 @@ Ton objectif est de préparer le tableau de saisie de 3 adhésions et de lister 
 
 # Contexte
 Tu es trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
-Colle ici les données du Cas fictif 2 de la tâche F11, disponibles dans exercices-42-taches.md (le contenu des 3 bulletins).
+Colle ici les données du cas pratique ci-dessus (le contenu des 3 bulletins).
 
 # Instructions
 1. Prépare le tableau de saisie des 3 adhésions avec toutes les colonnes utiles (nom, coordonnées, type d'adhésion, moyen de paiement, etc.).
@@ -1622,7 +1622,7 @@ Tâche : Prépare le tableau de saisie de 3 adhésions et liste les points à cl
 Contexte :
 """
 Tu es trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
-Colle ici les données du Cas fictif 2 de la tâche F11, disponibles dans exercices-42-taches.md (le contenu des 3 bulletins).
+Colle ici les données du cas pratique ci-dessus (le contenu des 3 bulletins).
 """
 
 Format de sortie attendu :
@@ -1644,7 +1644,7 @@ Tu es un assistant administratif spécialisé dans la saisie de bulletins d'adh�
 
 <context>
 Tu es trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
-Colle ici les données du Cas fictif 2 de la tâche F11, disponibles dans exercices-42-taches.md (le contenu des 3 bulletins).
+Colle ici les données du cas pratique ci-dessus (le contenu des 3 bulletins).
 </context>
 
 <instructions>
@@ -1674,7 +1674,7 @@ Ton objectif est de proposer une convention de nommage et de renommer les fichie
 
 # Contexte
 Tu es assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
-Colle ici les données du Cas fictif 1 de la tâche F12, disponibles dans exercices-42-taches.md (la liste des fichiers actuels et les éléments de contexte connus sur eux).
+Colle ici les données du cas pratique ci-dessus (la liste des fichiers actuels et les éléments de contexte connus sur eux).
 
 # Instructions
 1. Propose une convention de nommage cohérente pour ce dossier, avec un exemple de format type.
@@ -1698,7 +1698,7 @@ Tâche : Propose une convention de nommage, renomme les fichiers identifiables d
 Contexte :
 """
 Tu es assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
-Colle ici les données du Cas fictif 1 de la tâche F12, disponibles dans exercices-42-taches.md (la liste des fichiers actuels et les éléments de contexte connus sur eux).
+Colle ici les données du cas pratique ci-dessus (la liste des fichiers actuels et les éléments de contexte connus sur eux).
 """
 
 Format de sortie attendu :
@@ -1720,7 +1720,7 @@ Tu es un assistant juridique spécialisé dans l'organisation de dossiers numér
 
 <context>
 Tu es assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
-Colle ici les données du Cas fictif 1 de la tâche F12, disponibles dans exercices-42-taches.md (la liste des fichiers actuels et les éléments de contexte connus sur eux).
+Colle ici les données du cas pratique ci-dessus (la liste des fichiers actuels et les éléments de contexte connus sur eux).
 </context>
 
 <instructions>
@@ -1750,7 +1750,7 @@ Ton objectif est de proposer une arborescence de classement par catégorie de d�
 
 # Contexte
 Tu es graphiste indépendante et dois classer tes justificatifs de dépenses professionnelles de l'année pour ta déclaration fiscale annuelle. Tes fichiers sont actuellement dans un seul dossier "Factures divers".
-Colle ici les données du Cas fictif 2 de la tâche F12, disponibles dans exercices-42-taches.md (la liste des 12 fichiers présents).
+Colle ici les données du cas pratique ci-dessus (la liste des 12 fichiers présents).
 
 # Instructions
 1. Propose une arborescence de classement par catégorie de dépense (abonnements logiciels, matériel, formation, frais de déplacement/repas, assurances).
@@ -1774,7 +1774,7 @@ Tâche : Propose une arborescence de classement par catégorie de dépense et ra
 Contexte :
 """
 Tu es graphiste indépendante et dois classer tes justificatifs de dépenses professionnelles de l'année pour ta déclaration fiscale annuelle. Tes fichiers sont actuellement dans un seul dossier "Factures divers".
-Colle ici les données du Cas fictif 2 de la tâche F12, disponibles dans exercices-42-taches.md (la liste des 12 fichiers présents).
+Colle ici les données du cas pratique ci-dessus (la liste des 12 fichiers présents).
 """
 
 Format de sortie attendu :
@@ -1796,7 +1796,7 @@ Tu es un assistant administratif spécialisé dans le classement de justificatif
 
 <context>
 Tu es graphiste indépendante et dois classer tes justificatifs de dépenses professionnelles de l'année pour ta déclaration fiscale annuelle. Tes fichiers sont actuellement dans un seul dossier "Factures divers".
-Colle ici les données du Cas fictif 2 de la tâche F12, disponibles dans exercices-42-taches.md (la liste des 12 fichiers présents).
+Colle ici les données du cas pratique ci-dessus (la liste des 12 fichiers présents).
 </context>
 
 <instructions>
@@ -1826,7 +1826,7 @@ Ton objectif est de comparer deux devis clause par clause et de formuler une rec
 
 # Contexte
 Tu gères le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de ton fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
-Colle ici les données du Cas fictif 1 de la tâche F13, disponibles dans exercices-42-taches.md (les devis A et B).
+Colle ici les données du cas pratique ci-dessus (les devis A et B).
 
 # Instructions
 1. Construis un tableau comparatif clause par clause des deux devis.
@@ -1850,7 +1850,7 @@ Tâche : Compare deux devis clause par clause et formule une recommandation argu
 Contexte :
 """
 Tu gères le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de ton fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
-Colle ici les données du Cas fictif 1 de la tâche F13, disponibles dans exercices-42-taches.md (les devis A et B).
+Colle ici les données du cas pratique ci-dessus (les devis A et B).
 """
 
 Format de sortie attendu :
@@ -1872,7 +1872,7 @@ Tu es un assistant spécialisé dans l'analyse comparative de devis fournisseurs
 
 <context>
 Tu gères le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de ton fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
-Colle ici les données du Cas fictif 1 de la tâche F13, disponibles dans exercices-42-taches.md (les devis A et B).
+Colle ici les données du cas pratique ci-dessus (les devis A et B).
 </context>
 
 <instructions>
@@ -1902,7 +1902,7 @@ Ton objectif est de comparer deux versions d'un article de règlement intérieur
 
 # Contexte
 Tu travailles au service RH de "Mécatech Industries" et as reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
-Colle ici les données du Cas fictif 2 de la tâche F13, disponibles dans exercices-42-taches.md (les deux versions de l'article 8).
+Colle ici les données du cas pratique ci-dessus (les deux versions de l'article 8).
 
 # Instructions
 1. Liste précisément chaque changement entre les deux versions (ajout, suppression, modification).
@@ -1926,7 +1926,7 @@ Tâche : Compare deux versions d'un article de règlement intérieur, classe cha
 Contexte :
 """
 Tu travailles au service RH de "Mécatech Industries" et as reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
-Colle ici les données du Cas fictif 2 de la tâche F13, disponibles dans exercices-42-taches.md (les deux versions de l'article 8).
+Colle ici les données du cas pratique ci-dessus (les deux versions de l'article 8).
 """
 
 Format de sortie attendu :
@@ -1948,7 +1948,7 @@ Tu es un assistant RH spécialisé dans l'analyse comparative de textes régleme
 
 <context>
 Tu travailles au service RH de "Mécatech Industries" et as reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
-Colle ici les données du Cas fictif 2 de la tâche F13, disponibles dans exercices-42-taches.md (les deux versions de l'article 8).
+Colle ici les données du cas pratique ci-dessus (les deux versions de l'article 8).
 </context>
 
 <instructions>
@@ -1978,7 +1978,7 @@ Ton objectif est de traduire une fiche produit en anglais britannique profession
 
 # Contexte
 Tu travailles chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Tu dois traduire la fiche produit en anglais pour votre distributeur britannique.
-Colle ici les données du Cas fictif 1 de la tâche F14, disponibles dans exercices-42-taches.md (le texte source en français).
+Colle ici les données du cas pratique ci-dessus (le texte source en français).
 
 # Instructions
 1. Traduis cette fiche produit en anglais britannique professionnel adapté à un usage commercial.
@@ -2002,7 +2002,7 @@ Tâche : Traduis une fiche produit en anglais britannique professionnel, en adap
 Contexte :
 """
 Tu travailles chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Tu dois traduire la fiche produit en anglais pour votre distributeur britannique.
-Colle ici les données du Cas fictif 1 de la tâche F14, disponibles dans exercices-42-taches.md (le texte source en français).
+Colle ici les données du cas pratique ci-dessus (le texte source en français).
 """
 
 Format de sortie attendu :
@@ -2024,7 +2024,7 @@ Tu es un traducteur professionnel spécialisé dans les fiches produits agroalim
 
 <context>
 Tu travailles chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Tu dois traduire la fiche produit en anglais pour votre distributeur britannique.
-Colle ici les données du Cas fictif 1 de la tâche F14, disponibles dans exercices-42-taches.md (le texte source en français).
+Colle ici les données du cas pratique ci-dessus (le texte source en français).
 </context>
 
 <instructions>
@@ -2054,7 +2054,7 @@ Ton objectif est d'adapter un email professionnel en allemand, en respectant les
 
 # Contexte
 Tu es consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
-Colle ici les données du Cas fictif 2 de la tâche F14, disponibles dans exercices-42-taches.md (l'email original en français).
+Colle ici les données du cas pratique ci-dessus (l'email original en français).
 
 # Instructions
 1. Adapte cet email en allemand professionnel, avec un registre plus formel et une structure plus directe que l'original français.
@@ -2078,7 +2078,7 @@ Tâche : Adapte un email professionnel en allemand en respectant un registre plu
 Contexte :
 """
 Tu es consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
-Colle ici les données du Cas fictif 2 de la tâche F14, disponibles dans exercices-42-taches.md (l'email original en français).
+Colle ici les données du cas pratique ci-dessus (l'email original en français).
 """
 
 Format de sortie attendu :
@@ -2100,7 +2100,7 @@ Tu es un traducteur-adaptateur professionnel spécialisé dans la communication 
 
 <context>
 Tu es consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
-Colle ici les données du Cas fictif 2 de la tâche F14, disponibles dans exercices-42-taches.md (l'email original en français).
+Colle ici les données du cas pratique ci-dessus (l'email original en français).
 </context>
 
 <instructions>
@@ -2130,7 +2130,7 @@ Ton objectif est de construire le plan détaillé d'une présentation de 6 slide
 
 # Contexte
 Tu es directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
-Colle ici les données du Cas fictif 1 de la tâche F15, disponibles dans exercices-42-taches.md (le brief et les données T2 2026).
+Colle ici les données du cas pratique ci-dessus (le brief et les données T2 2026).
 
 # Instructions
 1. Construis le plan détaillé des 6 slides (titre de chaque slide + contenu clé), sans mise en forme graphique.
@@ -2154,7 +2154,7 @@ Tâche : Construis le plan détaillé d'une présentation de 6 slides visant à 
 Contexte :
 """
 Tu es directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
-Colle ici les données du Cas fictif 1 de la tâche F15, disponibles dans exercices-42-taches.md (le brief et les données T2 2026).
+Colle ici les données du cas pratique ci-dessus (le brief et les données T2 2026).
 """
 
 Format de sortie attendu :
@@ -2176,7 +2176,7 @@ Tu es un consultant spécialisé dans la construction de présentations commerci
 
 <context>
 Tu es directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
-Colle ici les données du Cas fictif 1 de la tâche F15, disponibles dans exercices-42-taches.md (le brief et les données T2 2026).
+Colle ici les données du cas pratique ci-dessus (le brief et les données T2 2026).
 </context>
 
 <instructions>
@@ -2206,7 +2206,7 @@ Ton objectif est de construire le plan détaillé d'une présentation de 5 slide
 
 # Contexte
 Tu es responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
-Colle ici les données du Cas fictif 2 de la tâche F15, disponibles dans exercices-42-taches.md (le brief et le contenu du nouveau parcours).
+Colle ici les données du cas pratique ci-dessus (le brief et le contenu du nouveau parcours).
 
 # Instructions
 1. Construis le plan détaillé des 5 slides (titre de chaque slide + contenu de chacune).
@@ -2230,7 +2230,7 @@ Tâche : Construis le plan détaillé d'une présentation de 5 slides sur un nou
 Contexte :
 """
 Tu es responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
-Colle ici les données du Cas fictif 2 de la tâche F15, disponibles dans exercices-42-taches.md (le brief et le contenu du nouveau parcours).
+Colle ici les données du cas pratique ci-dessus (le brief et le contenu du nouveau parcours).
 """
 
 Format de sortie attendu :
@@ -2252,7 +2252,7 @@ Tu es un consultant spécialisé dans la construction de présentations RH pour 
 
 <context>
 Tu es responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
-Colle ici les données du Cas fictif 2 de la tâche F15, disponibles dans exercices-42-taches.md (le brief et le contenu du nouveau parcours).
+Colle ici les données du cas pratique ci-dessus (le brief et le contenu du nouveau parcours).
 </context>
 
 <instructions>
@@ -2282,7 +2282,7 @@ Ton objectif est de structurer des notes brutes en tableau de suivi et d'identif
 
 # Contexte
 Tu es chef de projet à l'agence "Événements Réunis" et organises un salon professionnel pour un client dans 6 semaines. Voici les notes de suivi prises en réunion de lancement.
-Colle ici les données du Cas fictif 1 de la tâche F16, disponibles dans exercices-42-taches.md (les notes brutes de réunion).
+Colle ici les données du cas pratique ci-dessus (les notes brutes de réunion).
 
 # Instructions
 1. Structure ces notes en un tableau de suivi d'actions avec les colonnes : action, responsable, échéance, statut, ce qui bloque éventuellement l'action.
@@ -2306,7 +2306,7 @@ Tâche : Structure des notes de réunion en tableau de suivi d'actions, identifi
 Contexte :
 """
 Tu es chef de projet à l'agence "Événements Réunis" et organises un salon professionnel pour un client dans 6 semaines. Voici les notes de suivi prises en réunion de lancement.
-Colle ici les données du Cas fictif 1 de la tâche F16, disponibles dans exercices-42-taches.md (les notes brutes de réunion).
+Colle ici les données du cas pratique ci-dessus (les notes brutes de réunion).
 """
 
 Format de sortie attendu :
@@ -2328,7 +2328,7 @@ Tu es un assistant chef de projet spécialisé dans la structuration de suivis d
 
 <context>
 Tu es chef de projet à l'agence "Événements Réunis" et organises un salon professionnel pour un client dans 6 semaines. Voici les notes de suivi prises en réunion de lancement.
-Colle ici les données du Cas fictif 1 de la tâche F16, disponibles dans exercices-42-taches.md (les notes brutes de réunion).
+Colle ici les données du cas pratique ci-dessus (les notes brutes de réunion).
 </context>
 
 <instructions>
@@ -2358,7 +2358,7 @@ Ton objectif est de construire un tableau de suivi avec chemin critique et d'év
 
 # Contexte
 Tu es gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de ton local avant ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
-Colle ici les données du Cas fictif 2 de la tâche F16, disponibles dans exercices-42-taches.md (les informations éparses collectées).
+Colle ici les données du cas pratique ci-dessus (les informations éparses collectées).
 
 # Instructions
 1. Construis un tableau de suivi avec les dépendances entre les différentes tâches (qui doit être fini avant que l'autre commence).
@@ -2382,7 +2382,7 @@ Tâche : Construis un tableau de suivi avec chemin critique et évalue si l'ouve
 Contexte :
 """
 Tu es gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de ton local avant ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
-Colle ici les données du Cas fictif 2 de la tâche F16, disponibles dans exercices-42-taches.md (les informations éparses collectées).
+Colle ici les données du cas pratique ci-dessus (les informations éparses collectées).
 """
 
 Format de sortie attendu :
@@ -2404,7 +2404,7 @@ Tu es un assistant en gestion de projet spécialisé dans le suivi de chantiers 
 
 <context>
 Tu es gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de ton local avant ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
-Colle ici les données du Cas fictif 2 de la tâche F16, disponibles dans exercices-42-taches.md (les informations éparses collectées).
+Colle ici les données du cas pratique ci-dessus (les informations éparses collectées).
 </context>
 
 <instructions>
@@ -2434,7 +2434,7 @@ Ton objectif est de rédiger 3 messages de prospection courts, chacun personnali
 
 # Contexte
 Tu es commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
-Colle ici les données du Cas fictif 1 de la tâche F17, disponibles dans exercices-42-taches.md (les informations sur les 3 prospects).
+Colle ici les données du cas pratique ci-dessus (les informations sur les 3 prospects).
 
 # Instructions
 1. Rédige 3 messages de prospection courts (email ou LinkedIn, à préciser pour chacun), un par prospect.
@@ -2458,7 +2458,7 @@ Tâche : Rédige 3 messages de prospection courts, chacun personnalisé à parti
 Contexte :
 """
 Tu es commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
-Colle ici les données du Cas fictif 1 de la tâche F17, disponibles dans exercices-42-taches.md (les informations sur les 3 prospects).
+Colle ici les données du cas pratique ci-dessus (les informations sur les 3 prospects).
 """
 
 Format de sortie attendu :
@@ -2480,7 +2480,7 @@ Tu es un commercial spécialisé dans la prospection B2B personnalisée pour un 
 
 <context>
 Tu es commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
-Colle ici les données du Cas fictif 1 de la tâche F17, disponibles dans exercices-42-taches.md (les informations sur les 3 prospects).
+Colle ici les données du cas pratique ci-dessus (les informations sur les 3 prospects).
 </context>
 
 <instructions>
@@ -2510,7 +2510,7 @@ Ton objectif est de rédiger 2 messages de relance adaptés à deux situations d
 
 # Contexte
 Tu es consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
-Colle ici les données du Cas fictif 2 de la tâche F17, disponibles dans exercices-42-taches.md (l'historique disponible sur les 2 prospects).
+Colle ici les données du cas pratique ci-dessus (l'historique disponible sur les 2 prospects).
 
 # Instructions
 1. Rédige les 2 messages de relance, chacun adapté à la situation du prospect concerné.
@@ -2534,7 +2534,7 @@ Tâche : Rédige 2 messages de relance adaptés chacun à une situation de conta
 Contexte :
 """
 Tu es consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
-Colle ici les données du Cas fictif 2 de la tâche F17, disponibles dans exercices-42-taches.md (l'historique disponible sur les 2 prospects).
+Colle ici les données du cas pratique ci-dessus (l'historique disponible sur les 2 prospects).
 """
 
 Format de sortie attendu :
@@ -2556,7 +2556,7 @@ Tu es un consultant en développement commercial spécialisé dans les relances 
 
 <context>
 Tu es consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
-Colle ici les données du Cas fictif 2 de la tâche F17, disponibles dans exercices-42-taches.md (l'historique disponible sur les 2 prospects).
+Colle ici les données du cas pratique ci-dessus (l'historique disponible sur les 2 prospects).
 </context>
 
 <instructions>
@@ -2586,7 +2586,7 @@ Ton objectif est de calculer et présenter un devis structuré pour un contrat d
 
 # Contexte
 Tu travailles chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
-Colle ici les données du Cas fictif 1 de la tâche F18, disponibles dans exercices-42-taches.md (les notes de la visite technique et les tarifs de l'entreprise).
+Colle ici les données du cas pratique ci-dessus (les notes de la visite technique et les tarifs de l'entreprise).
 
 # Instructions
 1. Calcule le montant mensuel du devis à partir des tarifs et de la fréquence indiqués (bureaux, sanitaires/cuisine, vitres, surcoût produits écologiques).
@@ -2610,7 +2610,7 @@ Tâche : Calcule et présente un devis structuré pour un contrat de nettoyage d
 Contexte :
 """
 Tu travailles chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
-Colle ici les données du Cas fictif 1 de la tâche F18, disponibles dans exercices-42-taches.md (les notes de la visite technique et les tarifs de l'entreprise).
+Colle ici les données du cas pratique ci-dessus (les notes de la visite technique et les tarifs de l'entreprise).
 """
 
 Format de sortie attendu :
@@ -2632,7 +2632,7 @@ Tu es un assistant commercial spécialisé dans la préparation de devis pour de
 
 <context>
 Tu travailles chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
-Colle ici les données du Cas fictif 1 de la tâche F18, disponibles dans exercices-42-taches.md (les notes de la visite technique et les tarifs de l'entreprise).
+Colle ici les données du cas pratique ci-dessus (les notes de la visite technique et les tarifs de l'entreprise).
 </context>
 
 <instructions>
@@ -2662,7 +2662,7 @@ Ton objectif est de calculer et présenter un devis détaillé pour une identit�
 
 # Contexte
 Tu es graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
-Colle ici les données du Cas fictif 2 de la tâche F18, disponibles dans exercices-42-taches.md (le brief du client et les tarifs habituels de la graphiste).
+Colle ici les données du cas pratique ci-dessus (le brief du client et les tarifs habituels de la graphiste).
 
 # Instructions
 1. Calcule le montant total du devis à partir des tarifs fournis et du brief (logo, charte, packaging par format, templates par visuel, majoration délai serré).
@@ -2686,7 +2686,7 @@ Tâche : Calcule et présente un devis détaillé poste par poste pour une ident
 Contexte :
 """
 Tu es graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
-Colle ici les données du Cas fictif 2 de la tâche F18, disponibles dans exercices-42-taches.md (le brief du client et les tarifs habituels de la graphiste).
+Colle ici les données du cas pratique ci-dessus (le brief du client et les tarifs habituels de la graphiste).
 """
 
 Format de sortie attendu :
@@ -2708,7 +2708,7 @@ Tu es un assistant commercial spécialisé dans la préparation de devis pour de
 
 <context>
 Tu es graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
-Colle ici les données du Cas fictif 2 de la tâche F18, disponibles dans exercices-42-taches.md (le brief du client et les tarifs habituels de la graphiste).
+Colle ici les données du cas pratique ci-dessus (le brief du client et les tarifs habituels de la graphiste).
 </context>
 
 <instructions>
@@ -2738,7 +2738,7 @@ Ton objectif est de catégoriser chaque ligne d'un relevé bancaire selon sa nat
 
 # Contexte
 Tu es coach sportif indépendant et dois catégoriser tes relevés bancaires du mois pour ta comptabilité.
-Colle ici les données du Cas fictif 1 de la tâche F19, disponibles dans exercices-42-taches.md (le relevé bancaire du mois, 10 lignes).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
 
 # Instructions
 1. Catégorise chaque ligne dans l'une des catégories suivantes : Recette prestation, Achat de petit matériel, Charge d'immobilisation (si le montant unitaire dépasse 500€ pièce), Charge d'assurance, Frais de déplacement, Abonnement/logiciel, Charge sociale, Frais de représentation/repas professionnel, Location.
@@ -2761,7 +2761,7 @@ Tâche : Catégorise chaque ligne d'un relevé bancaire de 10 lignes selon sa na
 Contexte :
 """
 Tu es coach sportif indépendant et dois catégoriser tes relevés bancaires du mois pour ta comptabilité.
-Colle ici les données du Cas fictif 1 de la tâche F19, disponibles dans exercices-42-taches.md (le relevé bancaire du mois, 10 lignes).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
 """
 
 Format de sortie attendu :
@@ -2783,7 +2783,7 @@ Tu es un assistant comptable spécialisé dans la catégorisation de relevés ba
 
 <context>
 Tu es coach sportif indépendant et dois catégoriser tes relevés bancaires du mois pour ta comptabilité.
-Colle ici les données du Cas fictif 1 de la tâche F19, disponibles dans exercices-42-taches.md (le relevé bancaire du mois, 10 lignes).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
 </context>
 
 <instructions>
@@ -2812,7 +2812,7 @@ Ton objectif est de catégoriser un relevé bancaire selon un plan comptable ada
 
 # Contexte
 Tu gères "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à ton comptable.
-Colle ici les données du Cas fictif 2 de la tâche F19, disponibles dans exercices-42-taches.md (le relevé bancaire du mois, 10 lignes).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
 
 # Instructions
 1. Catégorise chaque ligne dans un plan comptable adapté à cette activité (Recette chantier, Recette contrat récurrent, Achat matières/fournitures, Achat matériel/immobilisation, Charge de personnel, Charge sociale, Entretien/réparation matériel, Assurance, Équipement de sécurité).
@@ -2835,7 +2835,7 @@ Tâche : Catégorise un relevé bancaire de 10 lignes selon un plan comptable ad
 Contexte :
 """
 Tu gères "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à ton comptable.
-Colle ici les données du Cas fictif 2 de la tâche F19, disponibles dans exercices-42-taches.md (le relevé bancaire du mois, 10 lignes).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
 """
 
 Format de sortie attendu :
@@ -2857,7 +2857,7 @@ Tu es un assistant comptable spécialisé dans la catégorisation de relevés ba
 
 <context>
 Tu gères "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à ton comptable.
-Colle ici les données du Cas fictif 2 de la tâche F19, disponibles dans exercices-42-taches.md (le relevé bancaire du mois, 10 lignes).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
 </context>
 
 <instructions>
@@ -2886,7 +2886,7 @@ Ton objectif est d'identifier les écarts entre relevé bancaire et livre de com
 
 # Contexte
 Tu es trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
-Colle ici les données du Cas fictif 1 de la tâche F20, disponibles dans exercices-42-taches.md (le relevé bancaire et le livre de comptes du mois).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
 
 # Instructions
 1. Identifie précisément les écarts entre le relevé bancaire et le livre de comptes (élément présent d'un côté mais pas de l'autre).
@@ -2910,7 +2910,7 @@ Tâche : Identifie les écarts entre un relevé bancaire et un livre de comptes,
 Contexte :
 """
 Tu es trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
-Colle ici les données du Cas fictif 1 de la tâche F20, disponibles dans exercices-42-taches.md (le relevé bancaire et le livre de comptes du mois).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
 """
 
 Format de sortie attendu :
@@ -2932,7 +2932,7 @@ Tu es un assistant comptable spécialisé dans le rapprochement bancaire pour de
 
 <context>
 Tu es trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
-Colle ici les données du Cas fictif 1 de la tâche F20, disponibles dans exercices-42-taches.md (le relevé bancaire et le livre de comptes du mois).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
 </context>
 
 <instructions>
@@ -2962,7 +2962,7 @@ Ton objectif est d'identifier les écarts entre relevé bancaire et livre de com
 
 # Contexte
 Tu es secrétaire du cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
-Colle ici les données du Cas fictif 2 de la tâche F20, disponibles dans exercices-42-taches.md (le relevé bancaire et le livre de comptes du mois).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
 
 # Instructions
 1. Identifie les 2 écarts entre les deux documents.
@@ -2986,7 +2986,7 @@ Tâche : Identifie les 2 écarts entre un relevé bancaire et un livre de compte
 Contexte :
 """
 Tu es secrétaire du cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
-Colle ici les données du Cas fictif 2 de la tâche F20, disponibles dans exercices-42-taches.md (le relevé bancaire et le livre de comptes du mois).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
 """
 
 Format de sortie attendu :
@@ -3008,7 +3008,7 @@ Tu es un assistant comptable spécialisé dans le rapprochement bancaire pour de
 
 <context>
 Tu es secrétaire du cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
-Colle ici les données du Cas fictif 2 de la tâche F20, disponibles dans exercices-42-taches.md (le relevé bancaire et le livre de comptes du mois).
+Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
 </context>
 
 <instructions>
@@ -3038,7 +3038,7 @@ Ton objectif est de déterminer le niveau de relance approprié pour 4 factures 
 
 # Contexte
 Tu travailles à l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1) et dois relancer plusieurs clients pour des factures impayées.
-Colle ici les données du Cas fictif 1 de la tâche F21, disponibles dans exercices-42-taches.md (la liste des 4 factures en retard).
+Colle ici les données du cas pratique ci-dessus (la liste des 4 factures en retard).
 
 # Instructions
 1. Détermine le niveau de relance approprié pour chacun des 4 clients (rappel amical / relance ferme / mise en demeure / autre action à envisager).
@@ -3061,7 +3061,7 @@ Tâche : Détermine le niveau de relance approprié pour 4 factures en retard et
 Contexte :
 """
 Tu travailles à l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1) et dois relancer plusieurs clients pour des factures impayées.
-Colle ici les données du Cas fictif 1 de la tâche F21, disponibles dans exercices-42-taches.md (la liste des 4 factures en retard).
+Colle ici les données du cas pratique ci-dessus (la liste des 4 factures en retard).
 """
 
 Format de sortie attendu :
@@ -3083,7 +3083,7 @@ Tu es un assistant comptable spécialisé dans les processus de relance de paiem
 
 <context>
 Tu travailles à l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1) et dois relancer plusieurs clients pour des factures impayées.
-Colle ici les données du Cas fictif 1 de la tâche F21, disponibles dans exercices-42-taches.md (la liste des 4 factures en retard).
+Colle ici les données du cas pratique ci-dessus (la liste des 4 factures en retard).
 </context>
 
 <instructions>
@@ -3112,7 +3112,7 @@ Ton objectif est de prioriser 4 situations d'impayés par niveau de risque réel
 
 # Contexte
 Tu travailles chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Tu gères un volume important de factures à surveiller.
-Colle ici les données du Cas fictif 2 de la tâche F21, disponibles dans exercices-42-taches.md (l'extrait du tableau de suivi des impayés).
+Colle ici les données du cas pratique ci-dessus (l'extrait du tableau de suivi des impayés).
 
 # Instructions
 1. Priorise ces 4 situations par niveau de risque réel, pas seulement par ancienneté du retard.
@@ -3136,7 +3136,7 @@ Tâche : Priorise 4 situations d'impayés par niveau de risque réel (pas seulem
 Contexte :
 """
 Tu travailles chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Tu gères un volume important de factures à surveiller.
-Colle ici les données du Cas fictif 2 de la tâche F21, disponibles dans exercices-42-taches.md (l'extrait du tableau de suivi des impayés).
+Colle ici les données du cas pratique ci-dessus (l'extrait du tableau de suivi des impayés).
 """
 
 Format de sortie attendu :
@@ -3158,7 +3158,7 @@ Tu es un assistant comptable spécialisé dans la priorisation des risques d'imp
 
 <context>
 Tu travailles chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Tu gères un volume important de factures à surveiller.
-Colle ici les données du Cas fictif 2 de la tâche F21, disponibles dans exercices-42-taches.md (l'extrait du tableau de suivi des impayés).
+Colle ici les données du cas pratique ci-dessus (l'extrait du tableau de suivi des impayés).
 </context>
 
 <instructions>
@@ -3188,7 +3188,7 @@ Ton objectif est de statuer sur 4 commandes en cours et de rédiger les messages
 
 # Contexte
 Tu gères l'atelier "Bois & Matières" et dois faire le point sur tes commandes fournisseurs en cours avant de lancer la production de la semaine.
-Colle ici les données du Cas fictif 1 de la tâche F22, disponibles dans exercices-42-taches.md (le tableau de suivi des 4 commandes).
+Colle ici les données du cas pratique ci-dessus (le tableau de suivi des 4 commandes).
 
 # Instructions
 1. Identifie pour chaque commande le statut réel (conforme / en attente / à relancer / anomalie à résoudre).
@@ -3212,7 +3212,7 @@ Tâche : Détermine le statut réel de 4 commandes fournisseurs, rédige les rel
 Contexte :
 """
 Tu gères l'atelier "Bois & Matières" et dois faire le point sur tes commandes fournisseurs en cours avant de lancer la production de la semaine.
-Colle ici les données du Cas fictif 1 de la tâche F22, disponibles dans exercices-42-taches.md (le tableau de suivi des 4 commandes).
+Colle ici les données du cas pratique ci-dessus (le tableau de suivi des 4 commandes).
 """
 
 Format de sortie attendu :
@@ -3234,7 +3234,7 @@ Tu es un assistant achats spécialisé dans le suivi de commandes fournisseurs p
 
 <context>
 Tu gères l'atelier "Bois & Matières" et dois faire le point sur tes commandes fournisseurs en cours avant de lancer la production de la semaine.
-Colle ici les données du Cas fictif 1 de la tâche F22, disponibles dans exercices-42-taches.md (le tableau de suivi des 4 commandes).
+Colle ici les données du cas pratique ci-dessus (le tableau de suivi des 4 commandes).
 </context>
 
 <instructions>
@@ -3264,7 +3264,7 @@ Ton objectif est d'identifier la commande la plus à risque avant un service de 
 
 # Contexte
 Tu es chef du restaurant "La Table Verte" et dois vérifier tes commandes de la semaine avant le service du week-end, moment de forte affluence.
-Colle ici les données du Cas fictif 2 de la tâche F22, disponibles dans exercices-42-taches.md (le suivi des 4 commandes).
+Colle ici les données du cas pratique ci-dessus (le suivi des 4 commandes).
 
 # Instructions
 1. Détermine quelle commande représente le risque le plus urgent pour le service du week-end, en justifiant ton choix.
@@ -3288,7 +3288,7 @@ Tâche : Identifie la commande la plus à risque avant un service de forte afflu
 Contexte :
 """
 Tu es chef du restaurant "La Table Verte" et dois vérifier tes commandes de la semaine avant le service du week-end, moment de forte affluence.
-Colle ici les données du Cas fictif 2 de la tâche F22, disponibles dans exercices-42-taches.md (le suivi des 4 commandes).
+Colle ici les données du cas pratique ci-dessus (le suivi des 4 commandes).
 """
 
 Format de sortie attendu :
@@ -3310,7 +3310,7 @@ Tu es un assistant achats spécialisé dans le suivi de commandes fournisseurs p
 
 <context>
 Tu es chef du restaurant "La Table Verte" et dois vérifier tes commandes de la semaine avant le service du week-end, moment de forte affluence.
-Colle ici les données du Cas fictif 2 de la tâche F22, disponibles dans exercices-42-taches.md (le suivi des 4 commandes).
+Colle ici les données du cas pratique ci-dessus (le suivi des 4 commandes).
 </context>
 
 <instructions>
@@ -3340,7 +3340,7 @@ Ton objectif est d'estimer une quantité de matière première à commander en d
 
 # Contexte
 Tu gères "Glace & Gourmandise" et dois préparer tes commandes de matières premières pour le mois de juillet à venir.
-Colle ici les données du Cas fictif 1 de la tâche F23, disponibles dans exercices-42-taches.md (l'historique de ventes et les éléments de contexte).
+Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
 
 # Instructions
 1. Propose une estimation de la quantité de mélange à glace à commander pour juillet à partir de ces données.
@@ -3364,7 +3364,7 @@ Tâche : Estime une quantité de matière première à commander pour le mois à
 Contexte :
 """
 Tu gères "Glace & Gourmandise" et dois préparer tes commandes de matières premières pour le mois de juillet à venir.
-Colle ici les données du Cas fictif 1 de la tâche F23, disponibles dans exercices-42-taches.md (l'historique de ventes et les éléments de contexte).
+Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
 """
 
 Format de sortie attendu :
@@ -3386,7 +3386,7 @@ Tu es un analyste spécialisé dans la prévision de la demande pour de petites 
 
 <context>
 Tu gères "Glace & Gourmandise" et dois préparer tes commandes de matières premières pour le mois de juillet à venir.
-Colle ici les données du Cas fictif 1 de la tâche F23, disponibles dans exercices-42-taches.md (l'historique de ventes et les éléments de contexte).
+Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
 </context>
 
 <instructions>
@@ -3416,7 +3416,7 @@ Ton objectif est de calculer une estimation de commande de rentrée scolaire en 
 
 # Contexte
 Tu gères la librairie-papeterie "Le Cartable" et dois préparer ta commande pour la rentrée scolaire de septembre.
-Colle ici les données du Cas fictif 2 de la tâche F23, disponibles dans exercices-42-taches.md (l'historique de ventes et les éléments de contexte).
+Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
 
 # Instructions
 1. Calcule une estimation du nombre de cartables à commander pour la rentrée à venir.
@@ -3440,7 +3440,7 @@ Tâche : Calcule une estimation de commande de rentrée scolaire en tenant compt
 Contexte :
 """
 Tu gères la librairie-papeterie "Le Cartable" et dois préparer ta commande pour la rentrée scolaire de septembre.
-Colle ici les données du Cas fictif 2 de la tâche F23, disponibles dans exercices-42-taches.md (l'historique de ventes et les éléments de contexte).
+Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
 """
 
 Format de sortie attendu :
@@ -3462,7 +3462,7 @@ Tu es un analyste spécialisé dans la prévision de la demande pour le commerce
 
 <context>
 Tu gères la librairie-papeterie "Le Cartable" et dois préparer ta commande pour la rentrée scolaire de septembre.
-Colle ici les données du Cas fictif 2 de la tâche F23, disponibles dans exercices-42-taches.md (l'historique de ventes et les éléments de contexte).
+Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
 </context>
 
 <instructions>
@@ -3492,7 +3492,7 @@ Ton objectif est de construire l'ordre de tournée optimal pour 4 livraisons dan
 
 # Contexte
 Tu es traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ta tournée.
-Colle ici les données du Cas fictif 1 de la tâche F24, disponibles dans exercices-42-taches.md (les informations sur les 4 livraisons).
+Colle ici les données du cas pratique ci-dessus (les informations sur les 4 livraisons).
 
 # Instructions
 1. Construis l'ordre de tournée optimal pour la journée en tenant compte des contraintes horaires fixes, du temps de trajet et du temps de mise en place nécessaire pour chaque livraison.
@@ -3516,7 +3516,7 @@ Tâche : Construis l'ordre de tournée optimal pour 4 livraisons dans la journé
 Contexte :
 """
 Tu es traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ta tournée.
-Colle ici les données du Cas fictif 1 de la tâche F24, disponibles dans exercices-42-taches.md (les informations sur les 4 livraisons).
+Colle ici les données du cas pratique ci-dessus (les informations sur les 4 livraisons).
 """
 
 Format de sortie attendu :
@@ -3538,7 +3538,7 @@ Tu es un assistant logistique spécialisé dans la planification de tournées de
 
 <context>
 Tu es traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ta tournée.
-Colle ici les données du Cas fictif 1 de la tâche F24, disponibles dans exercices-42-taches.md (les informations sur les 4 livraisons).
+Colle ici les données du cas pratique ci-dessus (les informations sur les 4 livraisons).
 </context>
 
 <instructions>
@@ -3568,7 +3568,7 @@ Ton objectif est de construire un planning journalier optimisé et de vérifier 
 
 # Contexte
 Tu es technicien indépendant en maintenance de chaudières et dois planifier tes interventions de la journée chez 5 clients.
-Colle ici les données du Cas fictif 2 de la tâche F24, disponibles dans exercices-42-taches.md (les rendez-vous à planifier et les temps de trajet estimés).
+Colle ici les données du cas pratique ci-dessus (les rendez-vous à planifier et les temps de trajet estimés).
 
 # Instructions
 1. Construis le planning de la journée en respectant la contrainte horaire fixe du client B (8h-9h30).
@@ -3592,7 +3592,7 @@ Tâche : Construis un planning journalier optimisé pour 5 interventions techniq
 Contexte :
 """
 Tu es technicien indépendant en maintenance de chaudières et dois planifier tes interventions de la journée chez 5 clients.
-Colle ici les données du Cas fictif 2 de la tâche F24, disponibles dans exercices-42-taches.md (les rendez-vous à planifier et les temps de trajet estimés).
+Colle ici les données du cas pratique ci-dessus (les rendez-vous à planifier et les temps de trajet estimés).
 """
 
 Format de sortie attendu :
@@ -3614,7 +3614,7 @@ Tu es un assistant logistique spécialisé dans la planification de tournées d'
 
 <context>
 Tu es technicien indépendant en maintenance de chaudières et dois planifier tes interventions de la journée chez 5 clients.
-Colle ici les données du Cas fictif 2 de la tâche F24, disponibles dans exercices-42-taches.md (les rendez-vous à planifier et les temps de trajet estimés).
+Colle ici les données du cas pratique ci-dessus (les rendez-vous à planifier et les temps de trajet estimés).
 </context>
 
 <instructions>
@@ -3644,7 +3644,7 @@ Ton objectif est de prioriser 6 demandes reçues et de les assigner à l'agent c
 
 # Contexte
 Tu es assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Tu dois les répartir chaque matin entre les 3 agents.
-Colle ici les données du Cas fictif 1 de la tâche F25, disponibles dans exercices-42-taches.md (les 6 demandes reçues et les informations sur les agents).
+Colle ici les données du cas pratique ci-dessus (les 6 demandes reçues et les informations sur les agents).
 
 # Instructions
 1. Classe chacune des 6 demandes par ordre de priorité de traitement, avec une justification courte.
@@ -3668,7 +3668,7 @@ Tâche : Priorise 6 demandes clients et assigne chacune à l'agent compétent se
 Contexte :
 """
 Tu es assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Tu dois les répartir chaque matin entre les 3 agents.
-Colle ici les données du Cas fictif 1 de la tâche F25, disponibles dans exercices-42-taches.md (les 6 demandes reçues et les informations sur les agents).
+Colle ici les données du cas pratique ci-dessus (les 6 demandes reçues et les informations sur les agents).
 """
 
 Format de sortie attendu :
@@ -3690,7 +3690,7 @@ Tu es un assistant spécialisé dans le triage et la répartition de demandes cl
 
 <context>
 Tu es assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Tu dois les répartir chaque matin entre les 3 agents.
-Colle ici les données du Cas fictif 1 de la tâche F25, disponibles dans exercices-42-taches.md (les 6 demandes reçues et les informations sur les agents).
+Colle ici les données du cas pratique ci-dessus (les 6 demandes reçues et les informations sur les agents).
 </context>
 
 <instructions>
@@ -3720,7 +3720,7 @@ Ton objectif est de classer 6 tickets par urgence et type, de les assigner à la
 
 # Contexte
 Tu es responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Tu dois répartir les tickets du matin entre ton équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
-Colle ici les données du Cas fictif 2 de la tâche F25, disponibles dans exercices-42-taches.md (les 6 tickets reçus).
+Colle ici les données du cas pratique ci-dessus (les 6 tickets reçus).
 
 # Instructions
 1. Classe les 6 tickets par urgence et par type (bug bloquant / question de facturation / question fonctionnelle / suggestion produit).
@@ -3744,7 +3744,7 @@ Tâche : Classe 6 tickets par urgence et type, assigne-les à la bonne personne 
 Contexte :
 """
 Tu es responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Tu dois répartir les tickets du matin entre ton équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
-Colle ici les données du Cas fictif 2 de la tâche F25, disponibles dans exercices-42-taches.md (les 6 tickets reçus).
+Colle ici les données du cas pratique ci-dessus (les 6 tickets reçus).
 """
 
 Format de sortie attendu :
@@ -3766,7 +3766,7 @@ Tu es un responsable support spécialisé dans le triage de tickets pour un édi
 
 <context>
 Tu es responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Tu dois répartir les tickets du matin entre ton équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
-Colle ici les données du Cas fictif 2 de la tâche F25, disponibles dans exercices-42-taches.md (les 6 tickets reçus).
+Colle ici les données du cas pratique ci-dessus (les 6 tickets reçus).
 </context>
 
 <instructions>
@@ -3796,7 +3796,7 @@ Ton objectif est de calculer une note moyenne, d'identifier le thème négatif r
 
 # Contexte
 Tu gères le restaurant "L'Écrin". Tu as reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour ton équipe.
-Colle ici les données du Cas fictif 1 de la tâche F26, disponibles dans exercices-42-taches.md (les 8 avis reçus).
+Colle ici les données du cas pratique ci-dessus (les 8 avis reçus).
 
 # Instructions
 1. Calcule la note moyenne des 8 avis.
@@ -3820,7 +3820,7 @@ Tâche : Calcule la note moyenne de 8 avis, identifie le thème négatif dominan
 Contexte :
 """
 Tu gères le restaurant "L'Écrin". Tu as reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour ton équipe.
-Colle ici les données du Cas fictif 1 de la tâche F26, disponibles dans exercices-42-taches.md (les 8 avis reçus).
+Colle ici les données du cas pratique ci-dessus (les 8 avis reçus).
 """
 
 Format de sortie attendu :
@@ -3842,7 +3842,7 @@ Tu es un analyste spécialisé dans l'exploitation d'avis clients pour la restau
 
 <context>
 Tu gères le restaurant "L'Écrin". Tu as reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour ton équipe.
-Colle ici les données du Cas fictif 1 de la tâche F26, disponibles dans exercices-42-taches.md (les 8 avis reçus).
+Colle ici les données du cas pratique ci-dessus (les 8 avis reçus).
 </context>
 
 <instructions>
@@ -3872,7 +3872,7 @@ Ton objectif est de calculer le NPS d'une entreprise de déménagement et de pro
 
 # Contexte
 Tu travailles chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. Voici les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
-Colle ici les données du Cas fictif 2 de la tâche F26, disponibles dans exercices-42-taches.md (les 10 réponses reçues).
+Colle ici les données du cas pratique ci-dessus (les 10 réponses reçues).
 
 # Instructions
 1. Calcule le score NPS (% promoteurs notes 9-10 moins % détracteurs notes 0-6, les notes 7-8 étant neutres).
@@ -3896,7 +3896,7 @@ Tâche : Calcule le score NPS à partir de 10 réponses clients, identifie les 2
 Contexte :
 """
 Tu travailles chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. Voici les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
-Colle ici les données du Cas fictif 2 de la tâche F26, disponibles dans exercices-42-taches.md (les 10 réponses reçues).
+Colle ici les données du cas pratique ci-dessus (les 10 réponses reçues).
 """
 
 Format de sortie attendu :
@@ -3918,7 +3918,7 @@ Tu es un analyste spécialisé dans le calcul et l'interprétation de scores NPS
 
 <context>
 Tu travailles chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. Voici les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
-Colle ici les données du Cas fictif 2 de la tâche F26, disponibles dans exercices-42-taches.md (les 10 réponses reçues).
+Colle ici les données du cas pratique ci-dessus (les 10 réponses reçues).
 </context>
 
 <instructions>
@@ -3948,7 +3948,7 @@ Ton objectif est de segmenter une base de 12 clients et de proposer un message a
 
 # Contexte
 Tu gères "Cave Numérique" et veux segmenter ta base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
-Colle ici les données du Cas fictif 1 de la tâche F27, disponibles dans exercices-42-taches.md (les données des 12 clients).
+Colle ici les données du cas pratique ci-dessus (les données des 12 clients).
 
 # Instructions
 1. Classe les 12 clients en au moins 4 segments cohérents (par exemple clients fidèles à forte valeur, clients à réactiver, gros acheteurs occasionnels, petits clients inactifs).
@@ -3972,7 +3972,7 @@ Tâche : Segmente une base de 12 clients en au moins 4 groupes cohérents et pro
 Contexte :
 """
 Tu gères "Cave Numérique" et veux segmenter ta base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
-Colle ici les données du Cas fictif 1 de la tâche F27, disponibles dans exercices-42-taches.md (les données des 12 clients).
+Colle ici les données du cas pratique ci-dessus (les données des 12 clients).
 """
 
 Format de sortie attendu :
@@ -3994,7 +3994,7 @@ Tu es un analyste CRM spécialisé dans la segmentation client par méthode RFM 
 
 <context>
 Tu gères "Cave Numérique" et veux segmenter ta base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
-Colle ici les données du Cas fictif 1 de la tâche F27, disponibles dans exercices-42-taches.md (les données des 12 clients).
+Colle ici les données du cas pratique ci-dessus (les données des 12 clients).
 </context>
 
 <instructions>
@@ -4024,7 +4024,7 @@ Ton objectif est d'identifier les profils à risque de désabonnement et les amb
 
 # Contexte
 Tu gères "Vertical Club" et veux identifier les profils d'adhérents pour adapter ta communication avant le renouvellement des abonnements annuels.
-Colle ici les données du Cas fictif 2 de la tâche F27, disponibles dans exercices-42-taches.md (les données des 6 adhérents).
+Colle ici les données du cas pratique ci-dessus (les données des 6 adhérents).
 
 # Instructions
 1. Identifie parmi les 6 profils celui qui présente le plus grand risque de ne pas renouveler son abonnement, en expliquant pourquoi.
@@ -4048,7 +4048,7 @@ Tâche : Identifie le profil le plus à risque de désabonnement, le profil amba
 Contexte :
 """
 Tu gères "Vertical Club" et veux identifier les profils d'adhérents pour adapter ta communication avant le renouvellement des abonnements annuels.
-Colle ici les données du Cas fictif 2 de la tâche F27, disponibles dans exercices-42-taches.md (les données des 6 adhérents).
+Colle ici les données du cas pratique ci-dessus (les données des 6 adhérents).
 """
 
 Format de sortie attendu :
@@ -4070,7 +4070,7 @@ Tu es un analyste CRM spécialisé dans la fidélisation d'adhérents pour des c
 
 <context>
 Tu gères "Vertical Club" et veux identifier les profils d'adhérents pour adapter ta communication avant le renouvellement des abonnements annuels.
-Colle ici les données du Cas fictif 2 de la tâche F27, disponibles dans exercices-42-taches.md (les données des 6 adhérents).
+Colle ici les données du cas pratique ci-dessus (les données des 6 adhérents).
 </context>
 
 <instructions>
@@ -4100,7 +4100,7 @@ Ton objectif est de diagnostiquer le problème structurel d'une campagne publici
 
 # Contexte
 Tu es Léna ("Belle Écorce") et as lancé ta première campagne publicitaire Meta il y a 2 semaines pour promouvoir ton nouveau soin visage. Tu constates des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
-Colle ici les données du Cas fictif 1 de la tâche F28, disponibles dans exercices-42-taches.md (les données de la campagne actuelle).
+Colle ici les données du cas pratique ci-dessus (les données de la campagne actuelle).
 
 # Instructions
 1. Identifie le problème structurel principal de cette campagne à partir des données fournies (nombre d'ensembles de publicités vs budget disponible).
@@ -4124,7 +4124,7 @@ Tâche : Diagnostique le problème structurel d'une campagne publicitaire Meta, 
 Contexte :
 """
 Tu es Léna ("Belle Écorce") et as lancé ta première campagne publicitaire Meta il y a 2 semaines pour promouvoir ton nouveau soin visage. Tu constates des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
-Colle ici les données du Cas fictif 1 de la tâche F28, disponibles dans exercices-42-taches.md (les données de la campagne actuelle).
+Colle ici les données du cas pratique ci-dessus (les données de la campagne actuelle).
 """
 
 Format de sortie attendu :
@@ -4146,7 +4146,7 @@ Tu es un spécialiste en publicité digitale (Meta Ads) spécialisé dans les pe
 
 <context>
 Tu es Léna ("Belle Écorce") et as lancé ta première campagne publicitaire Meta il y a 2 semaines pour promouvoir ton nouveau soin visage. Tu constates des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
-Colle ici les données du Cas fictif 1 de la tâche F28, disponibles dans exercices-42-taches.md (les données de la campagne actuelle).
+Colle ici les données du cas pratique ci-dessus (les données de la campagne actuelle).
 </context>
 
 <instructions>
@@ -4176,7 +4176,7 @@ Ton objectif est de comparer le ROAS de deux campagnes et de proposer une nouvel
 
 # Contexte
 Tu es le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Tu veux savoir laquelle continuer à financer.
-Colle ici les données du Cas fictif 2 de la tâche F28, disponibles dans exercices-42-taches.md (les données des 2 campagnes sur 30 jours).
+Colle ici les données du cas pratique ci-dessus (les données des 2 campagnes sur 30 jours).
 
 # Instructions
 1. Calcule le retour sur investissement publicitaire (ROAS = CA généré / budget dépensé) de chaque campagne.
@@ -4200,7 +4200,7 @@ Tâche : Calcule le ROAS de deux campagnes publicitaires, détermine la plus per
 Contexte :
 """
 Tu es le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Tu veux savoir laquelle continuer à financer.
-Colle ici les données du Cas fictif 2 de la tâche F28, disponibles dans exercices-42-taches.md (les données des 2 campagnes sur 30 jours).
+Colle ici les données du cas pratique ci-dessus (les données des 2 campagnes sur 30 jours).
 """
 
 Format de sortie attendu :
@@ -4222,7 +4222,7 @@ Tu es un spécialiste en publicité digitale spécialisé dans l'analyse de perf
 
 <context>
 Tu es le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Tu veux savoir laquelle continuer à financer.
-Colle ici les données du Cas fictif 2 de la tâche F28, disponibles dans exercices-42-taches.md (les données des 2 campagnes sur 30 jours).
+Colle ici les données du cas pratique ci-dessus (les données des 2 campagnes sur 30 jours).
 </context>
 
 <instructions>
@@ -4252,7 +4252,7 @@ Ton objectif est d'appliquer une grille de critères à 5 candidatures et de ré
 
 # Contexte
 Tu travailles au cabinet comptable (déjà rencontré en catégorie 1), qui recrute un(e) assistant(e) comptable. Tu as reçu 5 candidatures à présélectionner.
-Colle ici les données du Cas fictif 1 de la tâche F29, disponibles dans exercices-42-taches.md (les critères du poste et le résumé des 5 candidatures).
+Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 5 candidatures).
 
 # Instructions
 1. Applique la grille de critères du poste à chacun des 5 candidats.
@@ -4276,7 +4276,7 @@ Tâche : Applique une grille de critères à 5 candidatures, élimine celles qui
 Contexte :
 """
 Tu travailles au cabinet comptable (déjà rencontré en catégorie 1), qui recrute un(e) assistant(e) comptable. Tu as reçu 5 candidatures à présélectionner.
-Colle ici les données du Cas fictif 1 de la tâche F29, disponibles dans exercices-42-taches.md (les critères du poste et le résumé des 5 candidatures).
+Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 5 candidatures).
 """
 
 Format de sortie attendu :
@@ -4298,7 +4298,7 @@ Tu es un chargé de recrutement spécialisé dans la présélection de candidatu
 
 <context>
 Tu travailles au cabinet comptable (déjà rencontré en catégorie 1), qui recrute un(e) assistant(e) comptable. Tu as reçu 5 candidatures à présélectionner.
-Colle ici les données du Cas fictif 1 de la tâche F29, disponibles dans exercices-42-taches.md (les critères du poste et le résumé des 5 candidatures).
+Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 5 candidatures).
 </context>
 
 <instructions>
@@ -4328,7 +4328,7 @@ Ton objectif est d'éliminer les candidats ne remplissant pas les critères obli
 
 # Contexte
 Tu travailles chez le traiteur "Saveurs & Événements" (déjà rencontré en catégorie 4), qui recrute un chauffeur-livreur en CDI. Tu as reçu 4 candidatures.
-Colle ici les données du Cas fictif 2 de la tâche F29, disponibles dans exercices-42-taches.md (les critères du poste et le résumé des 4 candidatures).
+Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 4 candidatures).
 
 # Instructions
 1. Élimine les candidats qui ne remplissent pas les critères obligatoires du poste, en justifiant chaque élimination.
@@ -4352,7 +4352,7 @@ Tâche : Élimine les candidats ne remplissant pas les critères obligatoires d'
 Contexte :
 """
 Tu travailles chez le traiteur "Saveurs & Événements" (déjà rencontré en catégorie 4), qui recrute un chauffeur-livreur en CDI. Tu as reçu 4 candidatures.
-Colle ici les données du Cas fictif 2 de la tâche F29, disponibles dans exercices-42-taches.md (les critères du poste et le résumé des 4 candidatures).
+Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 4 candidatures).
 """
 
 Format de sortie attendu :
@@ -4374,7 +4374,7 @@ Tu es un chargé de recrutement spécialisé dans la présélection de candidatu
 
 <context>
 Tu travailles chez le traiteur "Saveurs & Événements" (déjà rencontré en catégorie 4), qui recrute un chauffeur-livreur en CDI. Tu as reçu 4 candidatures.
-Colle ici les données du Cas fictif 2 de la tâche F29, disponibles dans exercices-42-taches.md (les critères du poste et le résumé des 4 candidatures).
+Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 4 candidatures).
 </context>
 
 <instructions>
@@ -4404,7 +4404,7 @@ Ton objectif est de construire un parcours de formation sur 12 mois répondant �
 
 # Contexte
 Tu travailles au service RH de "Mécatech Industries" (déjà rencontrée en catégorie 1) et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
-Colle ici les données du Cas fictif 1 de la tâche F30, disponibles dans exercices-42-taches.md (le diagnostic complet et les contraintes).
+Colle ici les données du cas pratique ci-dessus (le diagnostic complet et les contraintes).
 
 # Instructions
 1. Construis un parcours de formation sur 12 mois qui répond aux axes de progression identifiés (management, prise de parole, Excel).
@@ -4428,7 +4428,7 @@ Tâche : Construis un parcours de formation sur 12 mois répondant à des axes d
 Contexte :
 """
 Tu travailles au service RH de "Mécatech Industries" (déjà rencontrée en catégorie 1) et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
-Colle ici les données du Cas fictif 1 de la tâche F30, disponibles dans exercices-42-taches.md (le diagnostic complet et les contraintes).
+Colle ici les données du cas pratique ci-dessus (le diagnostic complet et les contraintes).
 """
 
 Format de sortie attendu :
@@ -4450,7 +4450,7 @@ Tu es un consultant RH spécialisé dans la construction de parcours de formatio
 
 <context>
 Tu travailles au service RH de "Mécatech Industries" (déjà rencontrée en catégorie 1) et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
-Colle ici les données du Cas fictif 1 de la tâche F30, disponibles dans exercices-42-taches.md (le diagnostic complet et les contraintes).
+Colle ici les données du cas pratique ci-dessus (le diagnostic complet et les contraintes).
 </context>
 
 <instructions>
@@ -4480,7 +4480,7 @@ Ton objectif est de structurer un diagnostic informel en axes de progression cla
 
 # Contexte
 Tu es responsable de l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1 et 2) et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
-Colle ici les données du Cas fictif 2 de la tâche F30, disponibles dans exercices-42-taches.md (le diagnostic informel de Léa).
+Colle ici les données du cas pratique ci-dessus (le diagnostic informel de Léa).
 
 # Instructions
 1. Structure ce diagnostic informel en axes de progression clairs.
@@ -4504,7 +4504,7 @@ Tâche : Structure un diagnostic informel en axes de progression clairs et propo
 Contexte :
 """
 Tu es responsable de l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1 et 2) et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
-Colle ici les données du Cas fictif 2 de la tâche F30, disponibles dans exercices-42-taches.md (le diagnostic informel de Léa).
+Colle ici les données du cas pratique ci-dessus (le diagnostic informel de Léa).
 """
 
 Format de sortie attendu :
@@ -4526,7 +4526,7 @@ Tu es un consultant RH spécialisé dans la structuration de parcours de montée
 
 <context>
 Tu es responsable de l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1 et 2) et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
-Colle ici les données du Cas fictif 2 de la tâche F30, disponibles dans exercices-42-taches.md (le diagnostic informel de Léa).
+Colle ici les données du cas pratique ci-dessus (le diagnostic informel de Léa).
 </context>
 
 <instructions>
@@ -4556,7 +4556,7 @@ Ton objectif est d'établir le décompte total des points lumineux et prises à 
 
 # Contexte
 Tu es électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
-Colle ici les données du Cas fictif 1 de la tâche F31, disponibles dans exercices-42-taches.md (la description du logement pièce par pièce).
+Colle ici les données du cas pratique ci-dessus (la description du logement pièce par pièce).
 
 # Instructions
 1. Établis le décompte par catégorie (nombre total de points lumineux, nombre total de prises standard, nombre de prises spécifiques/spécialisées) pièce par pièce.
@@ -4580,7 +4580,7 @@ Tâche : Établis le décompte des points lumineux, prises standard et prises sp
 Contexte :
 """
 Tu es électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
-Colle ici les données du Cas fictif 1 de la tâche F31, disponibles dans exercices-42-taches.md (la description du logement pièce par pièce).
+Colle ici les données du cas pratique ci-dessus (la description du logement pièce par pièce).
 """
 
 Format de sortie attendu :
@@ -4602,7 +4602,7 @@ Tu es un assistant spécialisé dans le métré (quantity takeoff) pour des trav
 
 <context>
 Tu es électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
-Colle ici les données du Cas fictif 1 de la tâche F31, disponibles dans exercices-42-taches.md (la description du logement pièce par pièce).
+Colle ici les données du cas pratique ci-dessus (la description du logement pièce par pièce).
 </context>
 
 <instructions>
@@ -4632,7 +4632,7 @@ Ton objectif est de calculer les surfaces à peindre et la quantité de peinture
 
 # Contexte
 Tu es peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
-Colle ici les données du Cas fictif 2 de la tâche F31, disponibles dans exercices-42-taches.md (les mesures prises sur site et les rendements de peinture).
+Colle ici les données du cas pratique ci-dessus (les mesures prises sur site et les rendements de peinture).
 
 # Instructions
 1. Calcule le périmètre du local, la surface murale totale, la surface des ouvertures à déduire, et la surface nette à peindre (murs, avec les 2 couches comptées séparément) ainsi que la surface de plafond.
@@ -4655,7 +4655,7 @@ Tâche : Calcule les surfaces nettes à peindre (murs et plafond) et la quantit�
 Contexte :
 """
 Tu es peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
-Colle ici les données du Cas fictif 2 de la tâche F31, disponibles dans exercices-42-taches.md (les mesures prises sur site et les rendements de peinture).
+Colle ici les données du cas pratique ci-dessus (les mesures prises sur site et les rendements de peinture).
 """
 
 Format de sortie attendu :
@@ -4677,7 +4677,7 @@ Tu es un assistant spécialisé dans le métré de surfaces pour des travaux de 
 
 <context>
 Tu es peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
-Colle ici les données du Cas fictif 2 de la tâche F31, disponibles dans exercices-42-taches.md (les mesures prises sur site et les rendements de peinture).
+Colle ici les données du cas pratique ci-dessus (les mesures prises sur site et les rendements de peinture).
 </context>
 
 <instructions>
@@ -4706,7 +4706,7 @@ Ton objectif est de rédiger le compte-rendu hebdomadaire d'avancement avec comp
 
 # Contexte
 Tu es maître d'œuvre et tu suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
-Colle ici les données du Cas fictif 1 de la tâche F32, disponibles dans exercices-42-taches.md (les notes de visite des semaines 1 et 2).
+Colle ici les données du cas pratique ci-dessus (les notes de visite des semaines 1 et 2).
 
 # Instructions
 1. Rédige le compte-rendu hebdomadaire à envoyer au client pour la semaine 2.
@@ -4730,7 +4730,7 @@ Tâche : Rédige un compte-rendu hebdomadaire avec un tableau prévu/réalisé p
 Contexte :
 """
 Tu es maître d'œuvre et tu suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
-Colle ici les données du Cas fictif 1 de la tâche F32, disponibles dans exercices-42-taches.md (les notes de visite des semaines 1 et 2).
+Colle ici les données du cas pratique ci-dessus (les notes de visite des semaines 1 et 2).
 """
 
 Format de sortie attendu :
@@ -4752,7 +4752,7 @@ Tu es un assistant de suivi de chantier spécialisé dans la rédaction de compt
 
 <context>
 Tu es maître d'œuvre et tu suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
-Colle ici les données du Cas fictif 1 de la tâche F32, disponibles dans exercices-42-taches.md (les notes de visite des semaines 1 et 2).
+Colle ici les données du cas pratique ci-dessus (les notes de visite des semaines 1 et 2).
 </context>
 
 <instructions>
@@ -4782,7 +4782,7 @@ Ton objectif est de construire un tableau de suivi sur 3 semaines et de prépare
 
 # Contexte
 Tu es le client (la cliente) et tu suis toi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
-Colle ici les données du Cas fictif 2 de la tâche F32, disponibles dans exercices-42-taches.md (les notes du chef de chantier sur 3 semaines).
+Colle ici les données du cas pratique ci-dessus (les notes du chef de chantier sur 3 semaines).
 
 # Instructions
 1. Construis un tableau de suivi synthétique sur les 3 semaines (lot de travaux, statut, écart par rapport au planning initial).
@@ -4806,7 +4806,7 @@ Tâche : Construis un tableau de suivi sur 3 semaines, identifie le point de blo
 Contexte :
 """
 Tu es le client (la cliente) et tu suis toi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
-Colle ici les données du Cas fictif 2 de la tâche F32, disponibles dans exercices-42-taches.md (les notes du chef de chantier sur 3 semaines).
+Colle ici les données du cas pratique ci-dessus (les notes du chef de chantier sur 3 semaines).
 """
 
 Format de sortie attendu :
@@ -4828,7 +4828,7 @@ Tu es un assistant de suivi de chantier spécialisé dans l'aide aux particulier
 
 <context>
 Tu es le client (la cliente) et tu suis toi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
-Colle ici les données du Cas fictif 2 de la tâche F32, disponibles dans exercices-42-taches.md (les notes du chef de chantier sur 3 semaines).
+Colle ici les données du cas pratique ci-dessus (les notes du chef de chantier sur 3 semaines).
 </context>
 
 <instructions>
@@ -4858,7 +4858,7 @@ Ton objectif est d'évaluer et hiérarchiser 6 points de risque d'un chantier de
 
 # Contexte
 Tu es chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
-Colle ici les données du Cas fictif 1 de la tâche F33, disponibles dans exercices-42-taches.md (les 6 points de risque identifiés).
+Colle ici les données du cas pratique ci-dessus (les 6 points de risque identifiés).
 
 # Instructions
 1. Évalue chacun des 6 points sur une échelle de probabilité (1 à 5) et de gravité (1 à 5), en justifiant brièvement chaque score.
@@ -4882,7 +4882,7 @@ Tâche : Évalue et hiérarchise 6 points de risque d'un chantier de toiture sel
 Contexte :
 """
 Tu es chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
-Colle ici les données du Cas fictif 1 de la tâche F33, disponibles dans exercices-42-taches.md (les 6 points de risque identifiés).
+Colle ici les données du cas pratique ci-dessus (les 6 points de risque identifiés).
 """
 
 Format de sortie attendu :
@@ -4904,7 +4904,7 @@ Tu es un assistant HSE (hygiène-sécurité-environnement) spécialisé dans l'�
 
 <context>
 Tu es chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
-Colle ici les données du Cas fictif 1 de la tâche F33, disponibles dans exercices-42-taches.md (les 6 points de risque identifiés).
+Colle ici les données du cas pratique ci-dessus (les 6 points de risque identifiés).
 </context>
 
 <instructions>
@@ -4934,7 +4934,7 @@ Ton objectif est d'évaluer 6 points de risque et de préparer les vérification
 
 # Contexte
 Tu es conducteur (conductrice) de travaux d'une entreprise de terrassement et prépares la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
-Colle ici les données du Cas fictif 2 de la tâche F33, disponibles dans exercices-42-taches.md (les 6 points identifiés).
+Colle ici les données du cas pratique ci-dessus (les 6 points identifiés).
 
 # Instructions
 1. Évalue chacun des 6 points sur une échelle de probabilité et de gravité, en justifiant brièvement chaque score.
@@ -4958,7 +4958,7 @@ Tâche : Évalue 6 points de risque d'un chantier de terrassement, identifie cel
 Contexte :
 """
 Tu es conducteur (conductrice) de travaux d'une entreprise de terrassement et prépares la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
-Colle ici les données du Cas fictif 2 de la tâche F33, disponibles dans exercices-42-taches.md (les 6 points identifiés).
+Colle ici les données du cas pratique ci-dessus (les 6 points identifiés).
 """
 
 Format de sortie attendu :
@@ -4980,7 +4980,7 @@ Tu es un assistant HSE spécialisé dans l'évaluation des risques de chantier d
 
 <context>
 Tu es conducteur (conductrice) de travaux d'une entreprise de terrassement et prépares la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
-Colle ici les données du Cas fictif 2 de la tâche F33, disponibles dans exercices-42-taches.md (les 6 points identifiés).
+Colle ici les données du cas pratique ci-dessus (les 6 points identifiés).
 </context>
 
 <instructions>
@@ -5010,7 +5010,7 @@ Ton objectif est de lister les retouches nécessaires sur 3 photos produit et de
 
 # Contexte
 Tu gères "Alto Mode" (déjà rencontrée en catégorie 1) et as pris des photos de ta nouvelle collection avec ton téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
-Colle ici les données du Cas fictif 1 de la tâche F34, disponibles dans exercices-42-taches.md (la description des défauts des 3 photos).
+Colle ici les données du cas pratique ci-dessus (la description des défauts des 3 photos).
 
 # Instructions
 1. Pour chacune des 3 photos, liste précisément les retouches nécessaires et leur ordre de priorité.
@@ -5034,7 +5034,7 @@ Tâche : Liste les retouches nécessaires sur 3 photos produit, en distinguant l
 Contexte :
 """
 Tu gères "Alto Mode" (déjà rencontrée en catégorie 1) et as pris des photos de ta nouvelle collection avec ton téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
-Colle ici les données du Cas fictif 1 de la tâche F34, disponibles dans exercices-42-taches.md (la description des défauts des 3 photos).
+Colle ici les données du cas pratique ci-dessus (la description des défauts des 3 photos).
 """
 
 Format de sortie attendu :
@@ -5056,7 +5056,7 @@ Tu es un spécialiste de la retouche photo produit pour le e-commerce.
 
 <context>
 Tu gères "Alto Mode" (déjà rencontrée en catégorie 1) et as pris des photos de ta nouvelle collection avec ton téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
-Colle ici les données du Cas fictif 1 de la tâche F34, disponibles dans exercices-42-taches.md (la description des défauts des 3 photos).
+Colle ici les données du cas pratique ci-dessus (la description des défauts des 3 photos).
 </context>
 
 <instructions>
@@ -5086,7 +5086,7 @@ Ton objectif est d'identifier les retouches nécessaires sur 3 photos et de qual
 
 # Contexte
 Tu travailles à l'agence "Clé en Main Immobilier" (déjà rencontrée en catégorie 2) et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
-Colle ici les données du Cas fictif 2 de la tâche F34, disponibles dans exercices-42-taches.md (la description des 3 photos).
+Colle ici les données du cas pratique ci-dessus (la description des 3 photos).
 
 # Instructions
 1. Pour chacune des 3 photos, identifie la retouche nécessaire.
@@ -5110,7 +5110,7 @@ Tâche : Identifie les retouches nécessaires sur 3 photos d'un appartement, en 
 Contexte :
 """
 Tu travailles à l'agence "Clé en Main Immobilier" (déjà rencontrée en catégorie 2) et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
-Colle ici les données du Cas fictif 2 de la tâche F34, disponibles dans exercices-42-taches.md (la description des 3 photos).
+Colle ici les données du cas pratique ci-dessus (la description des 3 photos).
 """
 
 Format de sortie attendu :
@@ -5132,7 +5132,7 @@ Tu es un spécialiste de la retouche photo immobilière, attentif aux limites d'
 
 <context>
 Tu travailles à l'agence "Clé en Main Immobilier" (déjà rencontrée en catégorie 2) et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
-Colle ici les données du Cas fictif 2 de la tâche F34, disponibles dans exercices-42-taches.md (la description des 3 photos).
+Colle ici les données du cas pratique ci-dessus (la description des 3 photos).
 </context>
 
 <instructions>
@@ -5162,7 +5162,7 @@ Ton objectif est de décrire comment décliner un visuel produit en 3 nouvelles 
 
 # Contexte
 Tu travailles chez "Botanika" (déjà rencontrée en catégorie 1). Tu as validé un visuel produit pour la crème visage et souhaites le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
-Colle ici les données du Cas fictif 1 de la tâche F35, disponibles dans exercices-42-taches.md (la charte couleur complète et la description du visuel original).
+Colle ici les données du cas pratique ci-dessus (la charte couleur complète et la description du visuel original).
 
 # Instructions
 1. Décris précisément, pour chacun des 3 autres produits, comment adapter le visuel original (quelle couleur remplace quelle couleur, en respectant les codes exacts fournis).
@@ -5185,7 +5185,7 @@ Tâche : Décris comment décliner un visuel produit en 3 nouvelles couleurs de 
 Contexte :
 """
 Tu travailles chez "Botanika" (déjà rencontrée en catégorie 1). Tu as validé un visuel produit pour la crème visage et souhaites le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
-Colle ici les données du Cas fictif 1 de la tâche F35, disponibles dans exercices-42-taches.md (la charte couleur complète et la description du visuel original).
+Colle ici les données du cas pratique ci-dessus (la charte couleur complète et la description du visuel original).
 """
 
 Format de sortie attendu :
@@ -5207,7 +5207,7 @@ Tu es un directeur artistique spécialisé dans la cohérence des chartes graphi
 
 <context>
 Tu travailles chez "Botanika" (déjà rencontrée en catégorie 1). Tu as validé un visuel produit pour la crème visage et souhaites le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
-Colle ici les données du Cas fictif 1 de la tâche F35, disponibles dans exercices-42-taches.md (la charte couleur complète et la description du visuel original).
+Colle ici les données du cas pratique ci-dessus (la charte couleur complète et la description du visuel original).
 </context>
 
 <instructions>
@@ -5236,7 +5236,7 @@ Ton objectif est de proposer les couleurs de 2 visuels de menu manquants, cohér
 
 # Contexte
 Tu gères "Le Comptoir Basque" (déjà rencontré en catégorie 1) et veux décliner ton visuel de menu du jour en 3 versions correspondant à tes 3 formules, pour un affichage différencié en vitrine.
-Colle ici les données du Cas fictif 2 de la tâche F35, disponibles dans exercices-42-taches.md (le contexte des 3 formules et la charte).
+Colle ici les données du cas pratique ci-dessus (le contexte des 3 formules et la charte).
 
 # Instructions
 1. Propose les couleurs à utiliser pour les 2 formules manquantes, en justifiant le choix par rapport à la charte des 3 couleurs basques disponibles et à la hiérarchie voulue (la formule complète doit se distinguer comme "supérieure").
@@ -5259,7 +5259,7 @@ Tâche : Propose les couleurs de 2 visuels de menu manquants, cohérentes avec u
 Contexte :
 """
 Tu gères "Le Comptoir Basque" (déjà rencontré en catégorie 1) et veux décliner ton visuel de menu du jour en 3 versions correspondant à tes 3 formules, pour un affichage différencié en vitrine.
-Colle ici les données du Cas fictif 2 de la tâche F35, disponibles dans exercices-42-taches.md (le contexte des 3 formules et la charte).
+Colle ici les données du cas pratique ci-dessus (le contexte des 3 formules et la charte).
 """
 
 Format de sortie attendu :
@@ -5281,7 +5281,7 @@ Tu es un directeur artistique spécialisé dans la cohérence des chartes graphi
 
 <context>
 Tu gères "Le Comptoir Basque" (déjà rencontré en catégorie 1) et veux décliner ton visuel de menu du jour en 3 versions correspondant à tes 3 formules, pour un affichage différencié en vitrine.
-Colle ici les données du Cas fictif 2 de la tâche F35, disponibles dans exercices-42-taches.md (le contexte des 3 formules et la charte).
+Colle ici les données du cas pratique ci-dessus (le contexte des 3 formules et la charte).
 </context>
 
 <instructions>
@@ -5310,7 +5310,7 @@ Ton objectif est de sélectionner les 4 meilleurs extraits d'une interview pour 
 
 # Contexte
 Tu es monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
-Colle ici les données du Cas fictif 1 de la tâche F36, disponibles dans exercices-42-taches.md (les notes de dérushage avec timecodes).
+Colle ici les données du cas pratique ci-dessus (les notes de dérushage avec timecodes).
 
 # Instructions
 1. Sélectionne les 4 extraits les plus forts pour construire une vidéo de 90 secondes maximum, en indiquant les timecodes précis retenus.
@@ -5334,7 +5334,7 @@ Tâche : Sélectionne les 4 meilleurs extraits d'une interview pour une vidéo d
 Contexte :
 """
 Tu es monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
-Colle ici les données du Cas fictif 1 de la tâche F36, disponibles dans exercices-42-taches.md (les notes de dérushage avec timecodes).
+Colle ici les données du cas pratique ci-dessus (les notes de dérushage avec timecodes).
 """
 
 Format de sortie attendu :
@@ -5356,7 +5356,7 @@ Tu es un monteur vidéo spécialisé dans le dérushage de témoignages clients.
 
 <context>
 Tu es monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
-Colle ici les données du Cas fictif 1 de la tâche F36, disponibles dans exercices-42-taches.md (les notes de dérushage avec timecodes).
+Colle ici les données du cas pratique ci-dessus (les notes de dérushage avec timecodes).
 </context>
 
 <instructions>
@@ -5386,7 +5386,7 @@ Ton objectif est de sélectionner les plans à retenir pour un teaser de 45 seco
 
 # Contexte
 Tu es vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
-Colle ici les données du Cas fictif 2 de la tâche F36, disponibles dans exercices-42-taches.md (le journal de dérushage simplifié).
+Colle ici les données du cas pratique ci-dessus (le journal de dérushage simplifié).
 
 # Instructions
 1. Sélectionne les plans à retenir pour un teaser de 45 secondes maximum en indiquant la durée exacte de chaque plan retenu (le total ne doit pas dépasser 45 secondes).
@@ -5410,7 +5410,7 @@ Tâche : Sélectionne les plans à retenir pour un teaser de 45 secondes maximum
 Contexte :
 """
 Tu es vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
-Colle ici les données du Cas fictif 2 de la tâche F36, disponibles dans exercices-42-taches.md (le journal de dérushage simplifié).
+Colle ici les données du cas pratique ci-dessus (le journal de dérushage simplifié).
 """
 
 Format de sortie attendu :
@@ -5432,7 +5432,7 @@ Tu es un monteur vidéo spécialisé dans le dérushage de contenus événementi
 
 <context>
 Tu es vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
-Colle ici les données du Cas fictif 2 de la tâche F36, disponibles dans exercices-42-taches.md (le journal de dérushage simplifié).
+Colle ici les données du cas pratique ci-dessus (le journal de dérushage simplifié).
 </context>
 
 <instructions>
@@ -5462,7 +5462,7 @@ Ton objectif est d'éditer un passage de transcription brute pour ne garder que 
 
 # Contexte
 Une entreprise de conseil enregistre un podcast vidéo mensuel. Tu es le monteur (la monteuse) : tu reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
-Colle ici les données du Cas fictif 1 de la tâche F37, disponibles dans exercices-42-taches.md (l'extrait de transcription brute avec timecodes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
 
 # Instructions
 1. Édite ce passage en supprimant les hésitations, répétitions et éléments non pertinents (comme le fait d'annoncer le sujet).
@@ -5486,7 +5486,7 @@ Tâche : Édite un passage de transcription brute en ne gardant que le contenu �
 Contexte :
 """
 Une entreprise de conseil enregistre un podcast vidéo mensuel. Tu es le monteur (la monteuse) : tu reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
-Colle ici les données du Cas fictif 1 de la tâche F37, disponibles dans exercices-42-taches.md (l'extrait de transcription brute avec timecodes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
 """
 
 Format de sortie attendu :
@@ -5508,7 +5508,7 @@ Tu es un monteur vidéo spécialisé dans le montage à partir de transcriptions
 
 <context>
 Une entreprise de conseil enregistre un podcast vidéo mensuel. Tu es le monteur (la monteuse) : tu reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
-Colle ici les données du Cas fictif 1 de la tâche F37, disponibles dans exercices-42-taches.md (l'extrait de transcription brute avec timecodes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
 </context>
 
 <instructions>
@@ -5538,7 +5538,7 @@ Ton objectif est d'éditer une transcription pour ne garder que l'essentiel expl
 
 # Contexte
 Tu travailles au service formation de "Mécatech Industries" (déjà rencontrée plusieurs fois). Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et tu dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
-Colle ici les données du Cas fictif 2 de la tâche F37, disponibles dans exercices-42-taches.md (l'extrait de transcription brute avec timecodes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
 
 # Instructions
 1. Édite cette transcription pour ne garder que l'essentiel exploitable dans une vidéo de formation courte (le changement, sa justification chiffrée, les 2 actions concrètes attendues des opérateurs).
@@ -5562,7 +5562,7 @@ Tâche : Édite une transcription pour ne garder que l'essentiel exploitable dan
 Contexte :
 """
 Tu travailles au service formation de "Mécatech Industries" (déjà rencontrée plusieurs fois). Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et tu dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
-Colle ici les données du Cas fictif 2 de la tâche F37, disponibles dans exercices-42-taches.md (l'extrait de transcription brute avec timecodes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
 """
 
 Format de sortie attendu :
@@ -5584,7 +5584,7 @@ Tu es un monteur vidéo spécialisé dans le montage de contenus de formation in
 
 <context>
 Tu travailles au service formation de "Mécatech Industries" (déjà rencontrée plusieurs fois). Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et tu dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
-Colle ici les données du Cas fictif 2 de la tâche F37, disponibles dans exercices-42-taches.md (l'extrait de transcription brute avec timecodes).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
 </context>
 
 <instructions>
@@ -5614,7 +5614,7 @@ Ton objectif est de découper une phrase de transcription en sous-titres respect
 
 # Contexte
 Tu travailles chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Tu dois créer les sous-titres en français à partir de la transcription de la voix off.
-Colle ici les données du Cas fictif 1 de la tâche F38, disponibles dans exercices-42-taches.md (l'extrait de transcription brute à sous-titrer).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute à sous-titrer).
 
 # Instructions
 1. Découpe cette phrase en sous-titres respectant la limite de 42 caractères par ligne et maximum 2 lignes par sous-titre.
@@ -5638,7 +5638,7 @@ Tâche : Découpe une phrase de transcription en sous-titres respectant la limit
 Contexte :
 """
 Tu travailles chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Tu dois créer les sous-titres en français à partir de la transcription de la voix off.
-Colle ici les données du Cas fictif 1 de la tâche F38, disponibles dans exercices-42-taches.md (l'extrait de transcription brute à sous-titrer).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute à sous-titrer).
 """
 
 Format de sortie attendu :
@@ -5660,7 +5660,7 @@ Tu es un sous-titreur professionnel spécialisé dans les normes de longueur et 
 
 <context>
 Tu travailles chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Tu dois créer les sous-titres en français à partir de la transcription de la voix off.
-Colle ici les données du Cas fictif 1 de la tâche F38, disponibles dans exercices-42-taches.md (l'extrait de transcription brute à sous-titrer).
+Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute à sous-titrer).
 </context>
 
 <instructions>
@@ -5690,7 +5690,7 @@ Ton objectif est de traduire 3 sous-titres en anglais en respectant les contrain
 
 # Contexte
 Tu travailles chez "Fromagerie des Alpages" (déjà rencontrée en catégorie 1). Vous avez réalisé une vidéo de présentation de votre savoir-faire à destination de votre distributeur britannique, à sous-titrer en anglais.
-Colle ici les données du Cas fictif 2 de la tâche F38, disponibles dans exercices-42-taches.md (les 3 sous-titres originaux en français avec leur durée).
+Colle ici les données du cas pratique ci-dessus (les 3 sous-titres originaux en français avec leur durée).
 
 # Instructions
 1. Traduis ces 3 sous-titres en anglais en respectant la limite de 42 caractères par ligne, en adaptant la formulation si la traduction littérale dépasse la limite.
@@ -5713,7 +5713,7 @@ Tâche : Traduis 3 sous-titres en anglais en respectant la limite de caractères
 Contexte :
 """
 Tu travailles chez "Fromagerie des Alpages" (déjà rencontrée en catégorie 1). Vous avez réalisé une vidéo de présentation de votre savoir-faire à destination de votre distributeur britannique, à sous-titrer en anglais.
-Colle ici les données du Cas fictif 2 de la tâche F38, disponibles dans exercices-42-taches.md (les 3 sous-titres originaux en français avec leur durée).
+Colle ici les données du cas pratique ci-dessus (les 3 sous-titres originaux en français avec leur durée).
 """
 
 Format de sortie attendu :
@@ -5735,7 +5735,7 @@ Tu es un sous-titreur professionnel spécialisé dans la traduction de sous-titr
 
 <context>
 Tu travailles chez "Fromagerie des Alpages" (déjà rencontrée en catégorie 1). Vous avez réalisé une vidéo de présentation de votre savoir-faire à destination de votre distributeur britannique, à sous-titrer en anglais.
-Colle ici les données du Cas fictif 2 de la tâche F38, disponibles dans exercices-42-taches.md (les 3 sous-titres originaux en français avec leur durée).
+Colle ici les données du cas pratique ci-dessus (les 3 sous-titres originaux en français avec leur durée).
 </context>
 
 <instructions>
@@ -5764,7 +5764,7 @@ Ton objectif est d'établir l'ordre correct des étapes de traitement pour corri
 
 # Contexte
 Tu es podcasteur indépendant et as enregistré un épisode dans ton salon, sans studio. Tu dois préparer le fichier avant publication.
-Colle ici les données du Cas fictif 1 de la tâche F39, disponibles dans exercices-42-taches.md (le diagnostic des 4 défauts).
+Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 défauts).
 
 # Instructions
 1. Établis l'ordre des étapes de traitement à appliquer à cet enregistrement pour corriger ces 4 défauts.
@@ -5788,7 +5788,7 @@ Tâche : Établis l'ordre correct des étapes de traitement pour corriger 4 déf
 Contexte :
 """
 Tu es podcasteur indépendant et as enregistré un épisode dans ton salon, sans studio. Tu dois préparer le fichier avant publication.
-Colle ici les données du Cas fictif 1 de la tâche F39, disponibles dans exercices-42-taches.md (le diagnostic des 4 défauts).
+Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 défauts).
 """
 
 Format de sortie attendu :
@@ -5810,7 +5810,7 @@ Tu es un ingénieur du son spécialisé dans le nettoyage audio de podcasts amat
 
 <context>
 Tu es podcasteur indépendant et as enregistré un épisode dans ton salon, sans studio. Tu dois préparer le fichier avant publication.
-Colle ici les données du Cas fictif 1 de la tâche F39, disponibles dans exercices-42-taches.md (le diagnostic des 4 défauts).
+Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 défauts).
 </context>
 
 <instructions>
@@ -5840,7 +5840,7 @@ Ton objectif est de déterminer si chaque défaut d'un message vocal est corrigi
 
 # Contexte
 Tu travailles dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Tu souhaites l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
-Colle ici les données du Cas fictif 2 de la tâche F39, disponibles dans exercices-42-taches.md (le diagnostic des 4 points).
+Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 points).
 
 # Instructions
 1. Détermine si les défauts listés sont tous corrigibles par un nettoyage audio classique ou si l'un d'entre eux nécessite une solution différente.
@@ -5864,7 +5864,7 @@ Tâche : Détermine si chaque défaut d'un message vocal est corrigible par un n
 Contexte :
 """
 Tu travailles dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Tu souhaites l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
-Colle ici les données du Cas fictif 2 de la tâche F39, disponibles dans exercices-42-taches.md (le diagnostic des 4 points).
+Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 points).
 """
 
 Format de sortie attendu :
@@ -5886,7 +5886,7 @@ Tu es un ingénieur du son spécialisé dans le nettoyage audio de messages voca
 
 <context>
 Tu travailles dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Tu souhaites l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
-Colle ici les données du Cas fictif 2 de la tâche F39, disponibles dans exercices-42-taches.md (le diagnostic des 4 points).
+Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 points).
 </context>
 
 <instructions>
@@ -5916,7 +5916,7 @@ Ton objectif est de déterminer la meilleure zone de recadrage vertical d'un pla
 
 # Contexte
 Tu dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
-Colle ici les données du Cas fictif 1 de la tâche F40, disponibles dans exercices-42-taches.md (la description du plan original).
+Colle ici les données du cas pratique ci-dessus (la description du plan original).
 
 # Instructions
 1. Détermine quelle portion du cadre horizontal doit être conservée dans le recadrage vertical pour ne pas perdre l'élément essentiel (le visage de l'interviewé qui parle).
@@ -5940,7 +5940,7 @@ Tâche : Détermine la meilleure zone de recadrage vertical d'un plan horizontal
 Contexte :
 """
 Tu dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
-Colle ici les données du Cas fictif 1 de la tâche F40, disponibles dans exercices-42-taches.md (la description du plan original).
+Colle ici les données du cas pratique ci-dessus (la description du plan original).
 """
 
 Format de sortie attendu :
@@ -5962,7 +5962,7 @@ Tu es un monteur vidéo spécialisé dans le recadrage multi-formats pour les r�
 
 <context>
 Tu dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
-Colle ici les données du Cas fictif 1 de la tâche F40, disponibles dans exercices-42-taches.md (la description du plan original).
+Colle ici les données du cas pratique ci-dessus (la description du plan original).
 </context>
 
 <instructions>
@@ -5992,7 +5992,7 @@ Ton objectif est d'identifier le risque du recadrage carré pour un texte incrus
 
 # Contexte
 Tu dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
-Colle ici les données du Cas fictif 2 de la tâche F40, disponibles dans exercices-42-taches.md (la description du plan original).
+Colle ici les données du cas pratique ci-dessus (la description du plan original).
 
 # Instructions
 1. Identifie le risque principal que pose ce recadrage pour le texte incrusté en bas de l'image (largeur du texte par rapport à la nouvelle largeur du cadre carré).
@@ -6015,7 +6015,7 @@ Tâche : Identifie le risque du recadrage carré pour un texte incrusté en bas 
 Contexte :
 """
 Tu dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
-Colle ici les données du Cas fictif 2 de la tâche F40, disponibles dans exercices-42-taches.md (la description du plan original).
+Colle ici les données du cas pratique ci-dessus (la description du plan original).
 """
 
 Format de sortie attendu :
@@ -6037,7 +6037,7 @@ Tu es un monteur vidéo spécialisé dans le recadrage multi-formats et la gesti
 
 <context>
 Tu dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
-Colle ici les données du Cas fictif 2 de la tâche F40, disponibles dans exercices-42-taches.md (la description du plan original).
+Colle ici les données du cas pratique ci-dessus (la description du plan original).
 </context>
 
 <instructions>
@@ -6066,7 +6066,7 @@ Ton objectif est de reformuler une traduction anglaise trop longue pour qu'elle 
 
 # Contexte
 Tu travailles chez "Structa Bois" (déjà rencontrée en catégorie 2) et as fait doubler votre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
-Colle ici les données du Cas fictif 1 de la tâche F41, disponibles dans exercices-42-taches.md (le texte français original, la première traduction anglaise, et leurs durées).
+Colle ici les données du cas pratique ci-dessus (le texte français original, la première traduction anglaise, et leurs durées).
 
 # Instructions
 1. Reformule la traduction anglaise pour qu'elle tienne dans une durée de lecture d'environ 4 secondes, le même timing que l'original.
@@ -6090,7 +6090,7 @@ Tâche : Reformule une traduction anglaise trop longue pour qu'elle tienne dans 
 Contexte :
 """
 Tu travailles chez "Structa Bois" (déjà rencontrée en catégorie 2) et as fait doubler votre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
-Colle ici les données du Cas fictif 1 de la tâche F41, disponibles dans exercices-42-taches.md (le texte français original, la première traduction anglaise, et leurs durées).
+Colle ici les données du cas pratique ci-dessus (le texte français original, la première traduction anglaise, et leurs durées).
 """
 
 Format de sortie attendu :
@@ -6112,7 +6112,7 @@ Tu es un traducteur-adaptateur spécialisé dans la voix off et le respect de l'
 
 <context>
 Tu travailles chez "Structa Bois" (déjà rencontrée en catégorie 2) et as fait doubler votre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
-Colle ici les données du Cas fictif 1 de la tâche F41, disponibles dans exercices-42-taches.md (le texte français original, la première traduction anglaise, et leurs durées).
+Colle ici les données du cas pratique ci-dessus (le texte français original, la première traduction anglaise, et leurs durées).
 </context>
 
 <instructions>
@@ -6142,7 +6142,7 @@ Ton objectif est de proposer une traduction espagnole concise tenant dans un tim
 
 # Contexte
 Tu travailles chez "OutilPro" (déjà rencontrée en tâche F38) et veux adapter en espagnol la voix off de votre tutoriel "comment poser une étagère murale" pour le marché espagnol.
-Colle ici les données du Cas fictif 2 de la tâche F41, disponibles dans exercices-42-taches.md (le texte français original et sa durée).
+Colle ici les données du cas pratique ci-dessus (le texte français original et sa durée).
 
 # Instructions
 1. Propose une traduction en espagnol qui tienne dans un timing équivalent (environ 5 secondes de lecture).
@@ -6166,7 +6166,7 @@ Tâche : Propose une traduction espagnole concise tenant dans un timing équival
 Contexte :
 """
 Tu travailles chez "OutilPro" (déjà rencontrée en tâche F38) et veux adapter en espagnol la voix off de votre tutoriel "comment poser une étagère murale" pour le marché espagnol.
-Colle ici les données du Cas fictif 2 de la tâche F41, disponibles dans exercices-42-taches.md (le texte français original et sa durée).
+Colle ici les données du cas pratique ci-dessus (le texte français original et sa durée).
 """
 
 Format de sortie attendu :
@@ -6188,7 +6188,7 @@ Tu es un traducteur-adaptateur spécialisé dans la voix off et le respect de l'
 
 <context>
 Tu travailles chez "OutilPro" (déjà rencontrée en tâche F38) et veux adapter en espagnol la voix off de votre tutoriel "comment poser une étagère murale" pour le marché espagnol.
-Colle ici les données du Cas fictif 2 de la tâche F41, disponibles dans exercices-42-taches.md (le texte français original et sa durée).
+Colle ici les données du cas pratique ci-dessus (le texte français original et sa durée).
 </context>
 
 <instructions>
@@ -6218,7 +6218,7 @@ Ton objectif est de rédiger 3 prompts de génération vidéo courts et simples 
 
 # Contexte
 Tu travailles chez "Calmly" (déjà rencontrée en tâche F09) et prépares une vidéo explicative. Tu as besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
-Colle ici les données du Cas fictif 1 de la tâche F42, disponibles dans exercices-42-taches.md (les 3 passages de voix off à illustrer).
+Colle ici les données du cas pratique ci-dessus (les 3 passages de voix off à illustrer).
 
 # Instructions
 1. Rédige un prompt de génération vidéo pour chacun des 3 passages, en respectant la bonne pratique d'une action simple et brève par séquence.
@@ -6242,7 +6242,7 @@ Tâche : Rédige 3 prompts de génération vidéo courts et simples pour illustr
 Contexte :
 """
 Tu travailles chez "Calmly" (déjà rencontrée en tâche F09) et prépares une vidéo explicative. Tu as besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
-Colle ici les données du Cas fictif 1 de la tâche F42, disponibles dans exercices-42-taches.md (les 3 passages de voix off à illustrer).
+Colle ici les données du cas pratique ci-dessus (les 3 passages de voix off à illustrer).
 """
 
 Format de sortie attendu :
@@ -6264,7 +6264,7 @@ Tu es un spécialiste du prompt engineering pour la génération de séquences v
 
 <context>
 Tu travailles chez "Calmly" (déjà rencontrée en tâche F09) et prépares une vidéo explicative. Tu as besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
-Colle ici les données du Cas fictif 1 de la tâche F42, disponibles dans exercices-42-taches.md (les 3 passages de voix off à illustrer).
+Colle ici les données du cas pratique ci-dessus (les 3 passages de voix off à illustrer).
 </context>
 
 <instructions>
@@ -6294,7 +6294,7 @@ Ton objectif est de rédiger les prompts de génération vidéo pour les 5 séqu
 
 # Contexte
 Tu travailles pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
-Colle ici les données du Cas fictif 2 de la tâche F42, disponibles dans exercices-42-taches.md (le script des 5 séquences).
+Colle ici les données du cas pratique ci-dessus (le script des 5 séquences).
 
 # Instructions
 1. Rédige les prompts de génération vidéo pour chacune des 5 séquences.
@@ -6318,7 +6318,7 @@ Tâche : Rédige les prompts de génération vidéo pour 5 séquences d'une publ
 Contexte :
 """
 Tu travailles pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
-Colle ici les données du Cas fictif 2 de la tâche F42, disponibles dans exercices-42-taches.md (le script des 5 séquences).
+Colle ici les données du cas pratique ci-dessus (le script des 5 séquences).
 """
 
 Format de sortie attendu :
@@ -6340,7 +6340,7 @@ Tu es un spécialiste du prompt engineering pour la génération de séquences v
 
 <context>
 Tu travailles pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
-Colle ici les données du Cas fictif 2 de la tâche F42, disponibles dans exercices-42-taches.md (le script des 5 séquences).
+Colle ici les données du cas pratique ci-dessus (le script des 5 séquences).
 </context>
 
 <instructions>
