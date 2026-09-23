@@ -17,6 +17,16 @@ const exploreLinks = [
   { href: "/mises-a-jour-ia", label: "Mises à jour IA", description: "Suivez les nouveautés qui comptent", icon: "analysis" },
 ];
 
+// Pages publiques d'authentification : tant que la personne n'est pas
+// connectée, seule une coquille minimale (logo, sans navigation ni pied de
+// page vers le reste de l'app) doit s'afficher autour du formulaire.
+const authPages = [
+  "/connexion",
+  "/mot-de-passe-oublie",
+  "/nouveau-mot-de-passe",
+  "/activation",
+];
+
 const hasSupabaseConfig = Boolean(
   process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
@@ -26,6 +36,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [authenticated, setAuthenticated] = useState<boolean | null>(hasSupabaseConfig ? null : false);
   const menuButton = useRef<HTMLButtonElement>(null);
+  const isAuthPage = authPages.some((page) => path === page || path.startsWith(`${page}/`));
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -56,6 +67,26 @@ export function Shell({ children }: { children: React.ReactNode }) {
     setMenuOpen(false);
   };
   const isCurrent = (href: string) => href === "/" ? path === href : path.startsWith(href);
+
+  // Coquille minimale pour les pages de connexion / activation / mot de
+  // passe : pas de navigation ni de pied de page vers le reste de
+  // l'application, uniquement le repère de marque et le formulaire.
+  if (isAuthPage) {
+    return (
+      <div id="awk-studio" className="awk-studio-auth">
+        <a className="skip-link" href="#contenu">Aller au contenu</a>
+        <header className="aw-top aw-top-auth">
+          <div className="aw-header-inner">
+            <Link href="/" className="aw-brand" aria-label="AI WORK KIT — Accueil">
+              <Image className="aw-brand-symbol" src="/icon.svg" width={38} height={38} alt="" priority />
+              <span>AI WORK <em>KIT</em></span>
+            </Link>
+          </div>
+        </header>
+        <main id="contenu" className="aw-main">{children}</main>
+      </div>
+    );
+  }
 
   return (
     <div id="awk-studio">

@@ -764,6 +764,40 @@ body {
 #awk-studio .aw-password-heading a:hover {
   color: var(--navy);
 }
+#awk-studio .aw-password-field {
+  position: relative;
+}
+#awk-studio .aw-password-field input {
+  padding-right: 46px;
+}
+#awk-studio .aw-password-toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+}
+#awk-studio .aw-password-toggle:hover {
+  color: var(--navy);
+  background: var(--aw-soft);
+}
+#awk-studio .aw-password-toggle:focus-visible {
+  outline: 3px solid var(--aw-blue);
+  outline-offset: 2px;
+}
+#awk-studio .aw-login-error {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: light-dark(#d92d20, #ff6b6b);
+}
 #awk-studio .aw-login-form input {
   width: 100%;
   min-height: 52px;
