@@ -13,7 +13,7 @@ function jourISO(date: Date): string {
   return date.toISOString().slice(0, 10); // YYYY-MM-DD en UTC
 }
 
-// GET /api/progression - tableau de bord personnel de l'utilisateur connecté :
+// GET /api/progression : tableau de bord personnel de l'utilisateur connecté :
 // avancement global, métiers terminés, dernière tâche consultée ("reprise")
 // et série de régularité (jours consécutifs avec au moins une tâche consultée).
 export async function GET() {
@@ -77,7 +77,7 @@ export async function GET() {
   let serieJours = 0;
   const curseur = new Date(aujourdHui);
   // Si rien n'a encore été fait aujourd'hui, on compte la série à partir
-  // d'hier - la série ne casse pas tant que la journée en cours n'est pas
+  // d'hier : la série ne casse pas tant que la journée en cours n'est pas
   // terminée.
   if (!joursActivite.has(jourISO(curseur))) {
     curseur.setUTCDate(curseur.getUTCDate() - 1);

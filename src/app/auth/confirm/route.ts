@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
 
-// GET /auth/confirm - point d'arrivée du lien magique (invitation d'achat ou
+// GET /auth/confirm : point d'arrivée du lien magique (invitation d'achat ou
 // reconnexion) envoyé par Supabase Auth.
 //
 // Ce lien ne fonctionne PAS tout seul : il faut que le modèle d'email "Invite

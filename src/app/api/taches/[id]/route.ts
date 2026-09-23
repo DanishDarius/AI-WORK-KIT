@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
-// GET /api/taches/[id]?metier=<slug> - détail d'une tâche : ses 2 exercices,
+// GET /api/taches/[id]?metier=<slug> : détail d'une tâche : ses 2 exercices,
 // avec pour chacun les 3 prompts (chatgpt / claude / gemini).
 //
 // Le paramètre "metier" (slug) est nécessaire car une tâche peut appartenir
@@ -50,7 +50,7 @@ export async function GET(
       // vous en étiez" (une seule ligne, écrasée à chaque fois) et pour la
       // série de régularité (un journal des jours où au moins une tâche a
       // été consultée). On ne bloque pas la réponse sur une éventuelle
-      // erreur ici - ce n'est pas critique pour afficher la tâche.
+      // erreur ici, ce n'est pas critique pour afficher la tâche.
       const aujourdHui = new Date().toISOString().slice(0, 10);
       await Promise.all([
         supabase.from("derniere_activite").upsert(

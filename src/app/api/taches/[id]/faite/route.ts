@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
-// POST /api/taches/[id]/faite - marque ou démarque une tâche comme faite
+// POST /api/taches/[id]/faite : marque ou démarque une tâche comme faite
 // pour l'utilisateur connecté. Body attendu : { "fait": true } ou { "fait": false }.
 export async function POST(
   request: Request,

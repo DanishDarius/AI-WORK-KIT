@@ -22,7 +22,7 @@ const aiLinks = {
 };
 const strip = (s: string | null) =>
   (s || "").replace(/^(Contexte|Travail à faire)\s*:\s*/, "");
-const caseTitle = (s: string) => s.replace(/^Cas fictif \d+\s*[---]\s*/, "");
+const caseTitle = (s: string) => s.replace(/^Cas fictif \d+\s*(?:\u2014|\u2013|-|:)\s*/, "");
 
 function CaseWorkspace({
   exercice,

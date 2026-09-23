@@ -77,7 +77,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <a className="skip-link" href="#contenu">Aller au contenu</a>
         <header className="aw-top aw-top-auth">
           <div className="aw-header-inner">
-            <Link href="/" className="aw-brand" aria-label="AI WORK KIT - Accueil">
+            <Link href="/" className="aw-brand" aria-label="Accueil AI WORK KIT">
               <Image className="aw-brand-symbol" src="/icon.svg" width={38} height={38} alt="" priority />
               <span>AI WORK <em>KIT</em></span>
             </Link>
@@ -93,7 +93,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <a className="skip-link" href="#contenu">Aller au contenu</a>
       <header className="aw-top">
         <div className="aw-header-inner">
-          <Link href="/" className="aw-brand" aria-label="AI WORK KIT - Accueil" onClick={closeMenus}>
+          <Link href="/" className="aw-brand" aria-label="Accueil AI WORK KIT" onClick={closeMenus}>
             <Image className="aw-brand-symbol" src="/icon.svg" width={38} height={38} alt="" priority />
             <span>AI WORK <em>KIT</em></span>
           </Link>
@@ -148,7 +148,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <footer className="aw-site-footer">
         <div className="aw-footer-main">
           <div className="aw-footer-brand">
-            <Link href="/" className="aw-footer-logo" aria-label="AI WORK KIT - Accueil">
+            <Link href="/" className="aw-footer-logo" aria-label="Accueil AI WORK KIT">
               <Image src="/icon.svg" width={48} height={48} alt="" />
               <span>AI WORK <em>KIT</em></span>
             </Link>

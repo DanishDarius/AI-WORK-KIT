@@ -14,7 +14,7 @@ type ChariowPayload = {
   status?: string;
 };
 
-// POST /api/webhooks/chariow - reçoit le Pulse "successful.sale" de Chariow.
+// POST /api/webhooks/chariow : reçoit le Pulse "successful.sale" de Chariow.
 //
 // À configurer côté Chariow (Automatisation → Pulses → Ajouter un Pulse) :
 // - Événement : Vente réussie (successful.sale)
@@ -66,7 +66,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Payload invalide" }, { status: 400 });
   }
 
-  // Extraction tolérante - à préciser dès qu'on a un exemple réel de payload.
+  // Extraction tolérante, à préciser dès qu'on a un exemple réel de payload.
   const email: string | undefined =
     payload.customer?.email ?? payload.client?.email ?? payload.email;
   const saleId: string | undefined =

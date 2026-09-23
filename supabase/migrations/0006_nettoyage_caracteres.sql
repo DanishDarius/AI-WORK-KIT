@@ -3,26 +3,19 @@
 --   * suppression des caractères invisibles (espaces de largeur nulle, BOM,
 --     tiret conditionnel, marques de direction) et des caractères de contrôle
 --     (sauf tabulation et retours à la ligne) ;
---   * espaces insécables et espaces fines remplacés par une espace normale ;
---   * tirets longs, demi-cadratins et signes moins typographiques remplacés
---     par le tiret du clavier "-".
+--   * espaces insécables et espaces fines remplacés par une espace normale.
+-- Les tirets longs ne sont PAS traités ici : ils sont remplacés phrase par
+-- phrase, selon le sens (deux-points, virgule, point...), dans une migration
+-- dédiée.
 -- Sans effet sur un texte déjà propre : peut être exécuté plusieurs fois.
 
 create or replace function pg_temp.nettoyer(t text) returns text
 language sql immutable as $$
   select regexp_replace(
     regexp_replace(
-      regexp_replace(
-        regexp_replace(
-          t,
-          '[​‌‍⁠﻿­‎‏‪-‮⁦-⁩᠎]',
-          '', 'g'),
-        '[\u0001-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]',
-        '', 'g'),
-      '[   -  　]',
-      ' ', 'g'),
-    '[‐-―−﹘﹣－]',
-    '-', 'g')
+      regexp_replace(t, '[\u200B\u200C\u200D\u2060\uFEFF\u00AD\u200E\u200F\u202A-\u202E\u2066-\u2069\u180E]', '', 'g'),
+      '[\u0001-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]', '', 'g'),
+    '[\u00A0\u202F\u2000-\u200A\u205F\u3000]', ' ', 'g')
 $$;
 
 update metiers set

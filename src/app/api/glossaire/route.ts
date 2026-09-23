@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
-// GET /api/glossaire - les termes du glossaire, identiques pour tous les métiers.
+// GET /api/glossaire : les termes du glossaire, identiques pour tous les métiers.
 export async function GET() {
   const access = await requireActiveUser();
   if ("response" in access) return access.response;

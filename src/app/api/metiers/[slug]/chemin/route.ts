@@ -3,7 +3,7 @@ import { requireActiveUser } from "@/lib/supabase/active-access";
 
 const CHEMINS_VALIDES = ["chatgpt", "claude", "gemini"];
 
-// POST /api/metiers/[slug]/chemin - définir ou changer le chemin IA choisi
+// POST /api/metiers/[slug]/chemin : définir ou changer le chemin IA choisi
 // par l'utilisateur connecté pour ce métier. Body attendu : { "chemin": "gemini" }
 export async function POST(
   request: Request,
