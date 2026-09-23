@@ -17,7 +17,7 @@ Ces règles se collent une seule fois dans les instructions globales. En deux mi
 
 ## Les quinze règles à copier
 
-> **Prompt — instructions globales**
+> **Prompt : instructions globales**
 >
 > 1. Tutoie-moi. Ton direct, jamais corporate.
 > 2. Pas d'introduction, pas de « voici », pas de « j'espère que ça t'aide ». Va au résultat.
@@ -37,7 +37,7 @@ Ces règles se collent une seule fois dans les instructions globales. En deux mi
 
 ## Le test du premier jour
 
-Lancer trois conversations sur des sujets différents. Si l'assistant commence encore par « voici » ou « j'espère », l'instruction n'est pas activée — il faut alors revérifier les réglages.
+Lancer trois conversations sur des sujets différents. Si l'assistant commence encore par « voici » ou « j'espère », l'instruction n'est pas activée ; il faut alors revérifier les réglages.
 
 ## À retenir
 

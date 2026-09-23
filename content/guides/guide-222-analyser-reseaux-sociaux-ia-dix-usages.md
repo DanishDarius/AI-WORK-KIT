@@ -17,11 +17,11 @@ Une IA peut désormais aller chercher les publications publiques d'un compte Ins
 
 ## Les dix cas d'usage qui valent le temps investi
 
-Audit de concurrent — formats, fréquence, accroches utilisées. Détection de tendance — repérer les sujets qui montent sur trente jours. Analyse d'accroches — les vingt premiers mots des publications les plus vues. Cartographie de niche — les dix comptes réellement suivis par une audience cible. Remix de contenu — reprendre un post viral et l'adapter à sa propre marque. Brief créatif — fournir à un designer un moodboard textuel précis. Détection d'avis — faire ressortir les commentaires positifs et négatifs récurrents. Benchmark de lancement — ce qu'un concurrent a publié au moment de son propre lancement. Calendrier éditorial — construire trente jours de contenu à partir d'un thème. Réponses aux objections — repérer ce que les prospects demandent en commentaires.
+Audit de concurrent : formats, fréquence, accroches utilisées. Détection de tendance : repérer les sujets qui montent sur trente jours. Analyse d'accroches : les vingt premiers mots des publications les plus vues. Cartographie de niche : les dix comptes réellement suivis par une audience cible. Remix de contenu : reprendre un post viral et l'adapter à sa propre marque. Brief créatif : fournir à un designer un moodboard textuel précis. Détection d'avis : faire ressortir les commentaires positifs et négatifs récurrents. Benchmark de lancement : ce qu'un concurrent a publié au moment de son propre lancement. Calendrier éditorial : construire trente jours de contenu à partir d'un thème. Réponses aux objections : repérer ce que les prospects demandent en commentaires.
 
 ## Le prompt d'audit concurrent
 
-> **Prompt — audit concurrent**
+> **Prompt : audit concurrent**
 >
 > Analyse les 30 dernières publications publiques du compte Instagram @[nom_du_compte].
 >

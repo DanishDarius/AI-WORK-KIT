@@ -13,11 +13,11 @@ Des affirmations comme « l'IA consomme autant qu'un pays » ou « une requête 
 
 ## Ce que rapportent les études sérieuses
 
-Une requête adressée à un grand modèle (catégorie GPT-4) consommerait en moyenne 3 Wh — l'équivalent de quelques secondes d'utilisation d'un sèche-cheveux, selon la source. La comparaison avec « une bouteille d'eau » proviendrait d'une étude agrégeant l'eau totale utilisée par l'infrastructure, et non l'eau consommée par une seule requête.
+Une requête adressée à un grand modèle (catégorie GPT-4) consommerait en moyenne 3 Wh, l'équivalent de quelques secondes d'utilisation d'un sèche-cheveux, selon la source. La comparaison avec « une bouteille d'eau » proviendrait d'une étude agrégeant l'eau totale utilisée par l'infrastructure, et non l'eau consommée par une seule requête.
 
-L'inférence — c'est-à-dire l'utilisation courante de l'IA par les utilisateurs — représenterait une part minoritaire de la consommation totale. L'essentiel proviendrait de l'entraînement des modèles, réalisé une fois puis amorti sur des milliards de requêtes ultérieures.
+L'inférence (c'est-à-dire l'utilisation courante de l'IA par les utilisateurs) représenterait une part minoritaire de la consommation totale. L'essentiel proviendrait de l'entraînement des modèles, réalisé une fois puis amorti sur des milliards de requêtes ultérieures.
 
-Le véritable enjeu, selon la source, ne serait pas tant « l'IA pollue » que la croissance rapide des centres de données, qui fait grimper la demande électrique — une demande à laquelle de nouvelles centrales, pas toujours bas-carbone, viennent répondre.
+Le véritable enjeu, selon la source, ne serait pas tant « l'IA pollue » que la croissance rapide des centres de données, qui fait grimper la demande électrique, une demande à laquelle de nouvelles centrales, pas toujours bas-carbone, viennent répondre.
 
 ### Le bon réflexe avant de partager un chiffre
 
@@ -25,11 +25,11 @@ Avant de relayer une statistique sur l'IA et l'écologie, il est utile de vérif
 
 ## Ce qui reste du ressort de chacun
 
-Choisir Sonnet plutôt qu'Opus lorsque Sonnet suffit, éviter les relances répétées pour reformuler une même réponse, utiliser Haiku pour les tâches légères — ce sont les seuls leviers qui dépendent directement de l'utilisateur.
+Choisir Sonnet plutôt qu'Opus lorsque Sonnet suffit, éviter les relances répétées pour reformuler une même réponse, utiliser Haiku pour les tâches légères : ce sont les seuls leviers qui dépendent directement de l'utilisateur.
 
 ## Le prompt d'audit de source
 
-> **Prompt — auditer tes sources**
+> **Prompt : auditer tes sources**
 >
 > Voici une affirmation circulant sur l'IA et l'énergie :
 > "[colle la phrase]"

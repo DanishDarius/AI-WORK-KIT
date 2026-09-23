@@ -26,7 +26,7 @@ En prenant deux à trois clients sur cette offre, il devient possible de dégage
 
 ## Le message d'approche qui convertit
 
-> **Prompt — DM créateur**
+> **Prompt : DM créateur**
 >
 > Adapte ce DM à mon style et au créateur visé.
 >

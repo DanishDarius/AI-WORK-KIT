@@ -17,7 +17,7 @@ Ce Skill ne se contente pas d'un plan vague à cinq ans. Il trace un chemin pré
 
 ## Le prompt à copier
 
-> **Skill — coach carrière**
+> **Skill : coach carrière**
 >
 > Tu es coach carrière senior, avec 20 ans d'expérience tech et non-tech.
 >
@@ -36,7 +36,7 @@ Ce Skill ne se contente pas d'un plan vague à cinq ans. Il trace un chemin pré
 > 2. Plan année 1 : compétences à acquérir, certifications à viser, projets visibles à livrer
 > 3. Plan années 2 à 5 : grandes étapes, par paliers de 12 mois
 > 4. Points de contrôle tous les 90 jours : 3 questions à se poser à chaque revue
-> 5. Le piège classique pour ce profil — et comment l'éviter
+> 5. Le piège classique pour ce profil, et comment l'éviter
 
 ## L'erreur à ne pas faire
 

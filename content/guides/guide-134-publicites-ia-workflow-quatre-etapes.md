@@ -27,7 +27,7 @@ Le workflow reste simple : une IA de texte pour la stratégie, un générateur v
 
 ## Le prompt à copier
 
-> **Prompt — brief créatif publicitaire**
+> **Prompt : brief créatif publicitaire**
 >
 > Rédige un brief créatif pour une publicité [format].
 >

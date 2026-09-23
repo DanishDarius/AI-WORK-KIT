@@ -2,7 +2,7 @@
 Guide original : Remplace un designer à 5 000 € avec l'IA
 Source : https://www.saadiakaram.ai/guides/ai-brand-refresh
 Position réelle dans la bibliothèque au moment du traitement : 174/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre reformulé sans le montant « 5 000 € » (chiffre de comparaison invérifiable, non étayé dans le corps du guide) — conformément à l'approche appliquée aux titres contenant des statistiques personnelles non vérifiables dans les guides précédents. Nom réel conservé (Claude).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre reformulé sans le montant « 5 000 € » (chiffre de comparaison invérifiable, non étayé dans le corps du guide), conformément à l'approche appliquée aux titres contenant des statistiques personnelles non vérifiables dans les guides précédents. Nom réel conservé (Claude).
 ---
 
 # Rafraîchir son identité de marque avec l'IA, en quatre livrables
@@ -20,17 +20,17 @@ Refaire son identité de marque de zéro n'est pas toujours nécessaire. Une bon
 
 ## Le processus en quatre livrables
 
-1. Audit — l'assistant liste ce qui date, ce qui fonctionne encore, ce qui entre en contradiction.
+1. Audit : l'assistant liste ce qui date, ce qui fonctionne encore, ce qui entre en contradiction.
 
-2. Direction — trois pistes créatives distinctes, jamais une seule.
+2. Direction : trois pistes créatives distinctes, jamais une seule.
 
-3. Système — palette, typographie, principes visuels, ce qu'il faut faire et éviter.
+3. Système : palette, typographie, principes visuels, ce qu'il faut faire et éviter.
 
-4. Application — cinq visuels maquettés (publication, diapositive, en-tête, carte de visite, signature e-mail).
+4. Application : cinq visuels maquettés (publication, diapositive, en-tête, carte de visite, signature e-mail).
 
 ## Le prompt d'audit de marque
 
-> **Prompt — audit de marque**
+> **Prompt : audit de marque**
 >
 > Tu es directeur artistique senior. Voici mon brand : [inputs].
 > Audit en 3 sections :

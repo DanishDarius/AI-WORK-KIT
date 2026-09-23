@@ -13,24 +13,24 @@ Les Skills de Claude restent sous-utilisées alors qu'elles peuvent réellement 
 
 ## Pourquoi cela favorise la visibilité professionnelle
 
-Une Skill est une mini-procédure que Claude exécute toujours de la même façon. Une expertise personnelle se factorise ainsi une seule fois, puis chaque collègue demandant un livrable standard en reçoit une version soignée en quelques secondes — une visibilité accrue sans surcharge de travail supplémentaire.
+Une Skill est une mini-procédure que Claude exécute toujours de la même façon. Une expertise personnelle se factorise ainsi une seule fois, puis chaque collègue demandant un livrable standard en reçoit une version soignée en quelques secondes : une visibilité accrue sans surcharge de travail supplémentaire.
 
 ## Les dix Skills à mettre en place
 
-1. Compte-rendu de réunion — structure imposée avec actions claires.
-2. Brief projet — objectif, indicateurs clés, échéance, risques.
-3. Relecture senior — questionne le fond, pas l'orthographe.
-4. Email difficile — une version directe, une version diplomate.
-5. Note synthétique d'une page — destinée à un responsable hiérarchique, format imposé.
-6. Analyse de deal — destinée aux équipes commerciales.
-7. Rétrospective de projet — à garder / à abandonner / à tester.
-8. Plan de formation — objectifs, exercices, évaluations.
-9. Pitch interne — un problème, une solution, une demande.
-10. Grille d'évaluation de recrutement — critères précis et notation.
+1. Compte-rendu de réunion : structure imposée avec actions claires.
+2. Brief projet : objectif, indicateurs clés, échéance, risques.
+3. Relecture senior : questionne le fond, pas l'orthographe.
+4. Email difficile : une version directe, une version diplomate.
+5. Note synthétique d'une page : destinée à un responsable hiérarchique, format imposé.
+6. Analyse de deal : destinée aux équipes commerciales.
+7. Rétrospective de projet : à garder / à abandonner / à tester.
+8. Plan de formation : objectifs, exercices, évaluations.
+9. Pitch interne : un problème, une solution, une demande.
+10. Grille d'évaluation de recrutement : critères précis et notation.
 
 ## Un exemple complet : la Skill de compte-rendu de réunion
 
-> **Prompt — Skill compte-rendu de réunion**
+> **Prompt : Skill compte-rendu de réunion**
 >
 > \# Skill: Compte-rendu réunion
 >

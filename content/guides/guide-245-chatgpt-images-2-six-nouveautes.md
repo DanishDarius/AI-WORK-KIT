@@ -22,7 +22,7 @@ La nouvelle version de la génération d'images de ChatGPT apporte des améliora
 
 ## Le prompt de maquette produit
 
-> **Prompt — mockup produit**
+> **Prompt : mockup produit**
 >
 > Génère un mockup photo-réaliste.
 >

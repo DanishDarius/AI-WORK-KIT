@@ -82,7 +82,7 @@ export async function api<T>(
   const { data, error } = await createClient().auth.getSession();
   if (error || !data.session)
     throw new Error(
-      "Votre session a expiré ou vous n’êtes pas connecté. Utilisez votre lien de connexion reçu par email, puis réessayez.",
+      "Vous n’êtes pas connecté. Connectez-vous pour continuer.",
     );
   const response = await fetch(url, {
     ...options,
@@ -92,14 +92,14 @@ export async function api<T>(
   });
   if (response.status === 401)
     throw new Error(
-      "Votre session a expiré. Utilisez votre lien de connexion reçu par email.",
+      "Votre session a expiré. Reconnectez-vous pour continuer.",
     );
   if (response.status === 403)
-    throw new Error("Votre compte n’a pas accès à ce contenu.");
-  if (response.status === 404) throw new Error("Ce contenu est introuvable.");
+    throw new Error("Votre abonnement ne donne pas accès à ce contenu.");
+  if (response.status === 404) throw new Error("Ce contenu n’existe plus ou a été déplacé.");
   if (!response.ok)
     throw new Error(
-      "Impossible de charger ou d’enregistrer les données. Veuillez réessayer.",
+      "Échec du chargement ou de l’enregistrement. Réessayez dans un instant.",
     );
   return response.json() as Promise<T>;
 }

@@ -13,23 +13,23 @@ Des centaines de connecteurs existent, mais la plupart des utilisateurs n'en act
 
 ## Les cinq à activer en priorité
 
-1. **Gmail** — tri, brouillons, relances. À lui seul, ce connecteur peut justifier l'ensemble de l'abonnement.
-2. **Google Calendar** — Claude lit la semaine, prépare les réunions, protège les plages de concentration.
-3. **Google Drive** — Claude va chercher l'information dans les documents existants, sans qu'il faille coller une dizaine de fichiers à chaque échange.
-4. **Notion** — une base de connaissances vivante : Claude y écrit, la met à jour, y retrouve l'information.
-5. **Slack** — résumé des canaux, tri de ce qui mérite vraiment une réponse.
+1. **Gmail** : tri, brouillons, relances. À lui seul, ce connecteur peut justifier l'ensemble de l'abonnement.
+2. **Google Calendar** : Claude lit la semaine, prépare les réunions, protège les plages de concentration.
+3. **Google Drive** : Claude va chercher l'information dans les documents existants, sans qu'il faille coller une dizaine de fichiers à chaque échange.
+4. **Notion**, une base de connaissances vivante : Claude y écrit, la met à jour, y retrouve l'information.
+5. **Slack** : résumé des canaux, tri de ce qui mérite vraiment une réponse.
 
 ## Les cinq suivants, selon le métier
 
-6. **GitHub** — pour les développeurs : revues, pull requests, issues triées.
-7. **Linear / Asana** — pour la gestion de projet : tickets résumés et priorisés.
-8. **HubSpot / Salesforce** — pour les équipes commerciales : comptes-rendus et relances.
-9. **Stripe** — pour les indépendants : suivi du revenu hebdomadaire et alertes de désabonnement.
-10. **Zapier MCP** — la passerelle vers plusieurs milliers d'applications supplémentaires.
+6. **GitHub** (pour les développeurs) : revues, pull requests, issues triées.
+7. **Linear / Asana** (pour la gestion de projet) : tickets résumés et priorisés.
+8. **HubSpot / Salesforce** (pour les équipes commerciales) : comptes-rendus et relances.
+9. **Stripe** (pour les indépendants) : suivi du revenu hebdomadaire et alertes de désabonnement.
+10. **Zapier MCP** : la passerelle vers plusieurs milliers d'applications supplémentaires.
 
 ## Le prompt d'audit des connecteurs actifs
 
-> **Prompt — audit connecteurs**
+> **Prompt : audit connecteurs**
 >
 > Liste mes connectors actifs. Pour chacun, donne :
 > 1. Une chose que je peux te demander dès maintenant

@@ -17,7 +17,7 @@ Les modèles sont entraînés pour plaire, pas nécessairement pour avoir raison
 
 ## Le prompt
 
-> **Prompt — IA honnête**
+> **Prompt : IA honnête**
 >
 > Tu n'es pas mon ami. Tu es mon conseiller le plus exigeant. À partir de maintenant :
 >
@@ -31,13 +31,13 @@ Les modèles sont entraînés pour plaire, pas nécessairement pour avoir raison
 
 ## Quand ne pas l'utiliser
 
-Lors d'une phase de brainstorming, la friction imposée par ce cadre nuit à la créativité exploratoire. De même lors d'un premier jet, ou quand l'objectif est de multiplier les angles plutôt que d'obtenir un verdict tranché — ou simplement quand il s'agit avant tout de faire avancer un travail en cours de fatigue.
+Lors d'une phase de brainstorming, la friction imposée par ce cadre nuit à la créativité exploratoire. De même lors d'un premier jet, ou quand l'objectif est de multiplier les angles plutôt que d'obtenir un verdict tranché, ou simplement quand il s'agit avant tout de faire avancer un travail en cours de fatigue.
 
 Ce prompt se réserve idéalement aux décisions à fort enjeu : embauche, lancement, négociation, repositionnement, choix stratégique.
 
 ## Le garde-fou
 
-Ce prompt rend les réponses plus tranchantes, pas nécessairement plus justes. La friction n'équivaut pas à la vérité — le jugement personnel reste indispensable.
+Ce prompt rend les réponses plus tranchantes, pas nécessairement plus justes. La friction n'équivaut pas à la vérité ; le jugement personnel reste indispensable.
 
 ## Questions fréquentes
 
@@ -51,6 +51,6 @@ Mieux vaut l'intégrer aux instructions globales, puis l'activer ponctuellement 
 
 ## À retenir
 
-**Une IA plus honnête peut être fatigante — c'est justement le signe que ça fonctionne.**
+**Une IA plus honnête peut être fatigante ; c'est justement le signe que ça fonctionne.**
 
 Des réponses perçues comme désagréables signalent souvent qu'une vraie décision est en train de se prendre. Il est conseillé de garder ce prompt actif le temps nécessaire, puis de le désactiver une fois la décision prise.

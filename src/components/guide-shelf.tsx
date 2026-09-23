@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import type { GuideSummary } from "@/lib/guides";
 import { GuideCover } from "./guide-cover";
 
-export function GuideShelf({ guides, kicker = "Sélection AI WORK KIT", title = "Parcourez l’étagère." }: { guides: GuideSummary[]; kicker?: string; title?: string }) {
+export function GuideShelf({ guides, kicker = "Sélection AI WORK KIT", title = "12 guides pour aller plus loin." }: { guides: GuideSummary[]; kicker?: string; title?: string }) {
   const shelf = useRef<HTMLDivElement>(null);
   const dragState = useRef({ startX: 0, startScroll: 0, moved: false });
   const [isDragging, setIsDragging] = useState(false);
@@ -60,7 +60,7 @@ return (
     </Link>
     ))}
   </div>
-  <p className="aw-shelf-note">Faites glisser pour explorer. Sélectionnez un livre pour commencer.</p>
+  <p className="aw-shelf-note">Glissez pour parcourir. Cliquez sur un guide pour le lire.</p>
   </section>
   );
 }

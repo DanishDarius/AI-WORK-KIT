@@ -1,7 +1,7 @@
 -- Correction de schéma : un métier a plusieurs tâches, ET une tâche est
 -- partagée par plusieurs métiers (ex. F01 "Gestion des e-mails" apparaît
 -- dans presque tous les métiers). La relation directe taches.metier_id
--- posée dans 0001 était donc incorrecte — on la remplace par une table
+-- posée dans 0001 était donc incorrecte : on la remplace par une table
 -- de liaison.
 
 -- 1. Table de liaison métiers <-> tâches

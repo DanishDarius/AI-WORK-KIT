@@ -46,7 +46,7 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
     setSaving(false);
 
     if (updateError) {
-      setError("Le mot de passe n’a pas pu être enregistré. Demandez un nouveau lien.");
+      setError("L’enregistrement a échoué. Demandez un nouveau lien.");
       return;
     }
 
@@ -68,7 +68,7 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
       <div className="aw-login-confirmation" role="alert">
         <div>
           <h2>Lien invalide ou expiré</h2>
-          <p>Demandez un nouveau lien pour sécuriser l’accès à votre compte.</p>
+          <p>Ce lien ne fonctionne plus. Demandez-en un nouveau, il arrive en quelques secondes.</p>
           <Link className="button mt-5" href="/mot-de-passe-oublie">
             Demander un nouveau lien
           </Link>
@@ -85,7 +85,7 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
         </span>
         <div>
           <h2>Mot de passe enregistré</h2>
-          <p>Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.</p>
+          <p>C’est fait. Connectez-vous avec votre nouveau mot de passe.</p>
           <Link className="button mt-5" href="/connexion">
             Se connecter
           </Link>

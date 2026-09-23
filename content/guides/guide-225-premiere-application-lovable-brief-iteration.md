@@ -15,7 +15,7 @@ Lovable permet de générer une vraie application sans écrire une seule ligne d
 
 Mieux vaut éviter de commencer par « fais-moi une app de recettes ». Une meilleure approche : décrire ce qu'un utilisateur fait dans les trente premières secondes, quel problème cela résout, et pourquoi il reviendrait le lendemain. Lovable comprend mieux les actions concrètes que les concepts abstraits.
 
-> **Prompt — brief Lovable**
+> **Prompt : brief Lovable**
 >
 > Je veux construire une app qui : [résout ce problème précis pour ce public précis].
 >
@@ -30,10 +30,10 @@ Mieux vaut éviter de commencer par « fais-moi une app de recettes ». Une meil
 
 ## La boucle itérative
 
-Générer un premier écran, le tester, puis demander le suivant. Générer l'application entière d'un seul coup fonctionne rarement bien — Lovable donne de meilleurs résultats par petites étapes successives.
+Générer un premier écran, le tester, puis demander le suivant. Générer l'application entière d'un seul coup fonctionne rarement bien : Lovable donne de meilleurs résultats par petites étapes successives.
 
 ## À retenir
 
 **L'absence de code ne dispense pas de réfléchir.**
 
-Lovable supprime la barrière technique du code, pas celle du brief. Le rôle central reste de savoir ce que l'application fait, pour qui, et pourquoi — le code, lui, se génère ensuite.
+Lovable supprime la barrière technique du code, pas celle du brief. Le rôle central reste de savoir ce que l'application fait, pour qui, et pourquoi ; le code, lui, se génère ensuite.

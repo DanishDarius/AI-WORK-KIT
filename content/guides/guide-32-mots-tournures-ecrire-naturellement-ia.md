@@ -1,7 +1,7 @@
 ---
 Guide original : "HUMAIN : 32 mots et tournures à remplacer pour écrire naturellement avec l'IA"
 Source : saadiakaram.ai/guides/humain-mots-tournures-a-eviter-ia
-Statut : reformulé (texte) — aucune image ni tableau HTML détecté sur cette page
+Statut : reformulé (texte) ; aucune image ni tableau HTML détecté sur cette page
 ---
 
 # 32 mots et tournures à repérer pour retrouver une écriture naturelle avec l'IA
@@ -29,35 +29,35 @@ La règle de départ, en une phrase : un mot précis vaut mieux qu'une formule q
 
 ---
 
-## 01 — Règle le ton, une fois pour commencer
+## 01. Règle le ton, une fois pour commencer
 
-Dans ChatGPT comme dans Claude, il est possible d'enregistrer une préférence de rédaction durable. Le chemin diffère selon l'application : dans ChatGPT, il se trouve sous Paramètres → Personnalisation → Instructions personnalisées (activer la personnalisation si nécessaire, puis coller la consigne dans le champ prévu — sur mobile, l'entrée peut s'appeler « Personnaliser ChatGPT »).
+Dans ChatGPT comme dans Claude, il est possible d'enregistrer une préférence de rédaction durable. Le chemin diffère selon l'application : dans ChatGPT, il se trouve sous Paramètres → Personnalisation → Instructions personnalisées (activer la personnalisation si nécessaire, puis coller la consigne dans le champ prévu ; sur mobile, l'entrée peut s'appeler « Personnaliser ChatGPT »).
 
-**Prompt à copier — La consigne de base :**
+**Prompt à copier (La consigne de base) :**
 > Écris comme un vrai humain. Sois pro mais naturel, comme si tu expliquais un sujet à un ami intelligent autour d'un café. Évite les buzzwords, le jargon corporate et les tirets cadratins (em dashes). Ne sonne jamais comme un communiqué de presse. Sois clair, direct, conversationnel et vrai.
 
 Cette consigne donne une direction générale ; les règles détaillées plus bas la rendent plus concrète. Après l'avoir enregistrée, ouvrir une nouvelle conversation et l'essayer sur un petit texte dont on connaît déjà bien les faits.
 
-Il vaut mieux garder une règle courte et cohérente. Si des instructions existent déjà, conserver celles qui servent réellement et retirer les contradictions. Pour une demande particulière, préciser le destinataire et le ton directement dans la conversation — une formulation naturelle peut être chaleureuse, sobre ou formelle selon la situation, pas toujours familière.
+Il vaut mieux garder une règle courte et cohérente. Si des instructions existent déjà, conserver celles qui servent réellement et retirer les contradictions. Pour une demande particulière, préciser le destinataire et le ton directement dans la conversation ; une formulation naturelle peut être chaleureuse, sobre ou formelle selon la situation, pas toujours familière.
 
 ---
 
-## 02 — Ajoute ce qui compte : le fond doit rester juste
+## 02. Ajoute ce qui compte : le fond doit rester juste
 
 Cette version plus complète ajoute une règle essentielle : la réécriture doit conserver tous les faits et n'inventer aucune expérience personnelle. À choisir à la place de la version courte si elle correspond mieux à l'usage prévu.
 
-**Prompt à copier — La préférence de rédaction complète :**
+**Prompt à copier (La préférence de rédaction complète) :**
 > Écris en français, avec un ton professionnel, naturel et direct, comme lorsque j'explique un sujet à une personne intelligente. Adapte le tutoiement ou le vouvoiement au destinataire.
 > Utilise des mots courants et des verbes précis. Évite les buzzwords, le jargon corporate inutile, les promesses exagérées et les introductions passe-partout. Remplace « levier », « propulser » ou « révolutionnaire » par l'action ou le changement réel, sauf si le terme a un sens précis indispensable dans ce contexte.
 > Pas de tirets cadratins. Utilise un point, une virgule ou des parenthèses selon le sens. Varie naturellement la longueur des phrases. Garde les termes techniques nécessaires et explique-les au besoin.
 > Préserve les faits, chiffres, réserves, dates et engagements. N'invente aucune anecdote, émotion, citation ou expérience personnelle pour rendre le texte plus vivant. Si un détail manque, demande-le ou signale-le.
 > Relis le texte pour retirer le remplissage. Le résultat doit rester professionnel, compréhensible et fidèle au fond.
 
-Cette consigne tient sous 1500 caractères — il faut vérifier l'espace restant si d'autres instructions occupent déjà le même champ. Pour une marque ou un client qui demande une voix particulière, mieux vaut utiliser des instructions propres à ce projet précis plutôt que de modifier son style général à chaque dossier. Dans tous les cas, il reste indispensable de relire la sortie produite : enregistrer une préférence ne garantit jamais qu'elle sera suivie à la lettre, phrase après phrase.
+Cette consigne tient sous 1500 caractères ; il faut vérifier l'espace restant si d'autres instructions occupent déjà le même champ. Pour une marque ou un client qui demande une voix particulière, mieux vaut utiliser des instructions propres à ce projet précis plutôt que de modifier son style général à chaque dossier. Dans tous les cas, il reste indispensable de relire la sortie produite : enregistrer une préférence ne garantit jamais qu'elle sera suivie à la lettre, phrase après phrase.
 
 ---
 
-## 03 — Le répertoire des 32 repères de relecture
+## 03. Le répertoire des 32 repères de relecture
 
 Cette liste développe les quatre exemples de départ (« levier », « propulser », « révolutionnaire », les tirets cadratins) en une grille éditoriale complète. Un mot peut rester juste dans un contexte précis : un levier mécanique, un écosystème en biologie, ou une optimisation réellement mesurée ont toute leur place. Les propositions ci-dessous restent pédagogiques, à adapter au cas par cas.
 
@@ -81,7 +81,7 @@ Cette liste développe les quatre exemples de départ (« levier », « propulse
 
 ### Famille « Jargon »
 
-**9. Levier.** Employé au sens vague, il cache le moyen d'action réel. À la place : précise ce que tu vas faire — garde le terme s'il est employé au sens mécanique juste. À revoir : « La relance des personnes qui ont demandé un devis est un levier de conversion. » Proposition : « Relance les personnes qui ont demandé un devis. »
+**9. Levier.** Employé au sens vague, il cache le moyen d'action réel. À la place : précise ce que tu vas faire ; garde le terme s'il est employé au sens mécanique juste. À revoir : « La relance des personnes qui ont demandé un devis est un levier de conversion. » Proposition : « Relance les personnes qui ont demandé un devis. »
 
 **10. Synergie.** On ne sait pas qui travaille avec qui, ni sur quoi précisément. À la place : nomme la collaboration réelle. À revoir : « Créons une synergie entre la vente et le support. » Proposition : « Demandons à la vente et au support de partager les retours clients. »
 
@@ -119,7 +119,7 @@ Cette liste développe les quatre exemples de départ (« levier », « propulse
 
 **25. Ce n'est pas X, c'est Y.** Le contraste automatique peut caricaturer le sujet réel. À la place : dis directement ce que tu proposes. À revoir : « Ce n'est pas un cours, c'est une expérience. » Proposition : « Un cours pour [résultat réellement enseigné]. »
 
-**26. Les tirets cadratins.** Leur répétition alourdit le rythme de lecture ; ici, le choix est de les retirer systématiquement. À la place : un point, une virgule ou des parenthèses, selon le lien logique entre les idées. À revoir : « Le guide est prêt — tu peux le lire. » Proposition : « Le guide est prêt. Tu peux le lire. »
+**26. Les tirets cadratins.** Leur répétition alourdit le rythme de lecture ; ici, le choix est de les retirer systématiquement. À la place : un point, une virgule ou des parenthèses, selon le lien logique entre les idées. À revoir : « Le guide est prêt - tu peux le lire. » Proposition : « Le guide est prêt. Tu peux le lire. »
 
 **27. Les points de suspension répétés.** Le suspense à l'écrit peut vite devenir un tic d'écriture. À la place : termine la phrase quand l'idée est complète. À revoir : « Tu ouvres le fichier… tu lis… tu corriges… » Proposition : « Ouvre le fichier, lis-le puis corrige les passages utiles. »
 
@@ -135,35 +135,35 @@ Cette liste développe les quatre exemples de départ (« levier », « propulse
 
 ---
 
-## 04 — Lis les deux versions, vérifie ce qui a changé
+## 04. Lis les deux versions, vérifie ce qui a changé
 
 Une bonne révision peut être plus courte sans devenir familière pour autant. Dans l'exemple fictif suivant, il faut surtout observer ce qui reste intact : le sujet, les dates, la demande et les réserves formulées.
 
 **Les faits à garder :** livraison prévue mardi ; validation demandée avant vendredi ; aucun engagement de délai garanti.
 
-**Le brouillon :** « Bonjour, nous sommes ravis de vous présenter une avancée incontournable. La livraison est prévue mardi — et votre validation avant vendredi sera un levier essentiel pour avancer. Merci pour cette belle synergie. »
+**Le brouillon :** « Bonjour, nous sommes ravis de vous présenter une avancée incontournable. La livraison est prévue mardi, et votre validation avant vendredi sera un levier essentiel pour avancer. Merci pour cette belle synergie. »
 
 **La version revue :** « Bonjour, la livraison est prévue mardi. Pouvez-vous nous envoyer votre validation avant vendredi ? Merci. »
 
-Ce qui a été vérifié : la demande et les deux échéances restent parfaitement visibles. « Prévue » est conservé tel quel — le délai n'est surtout pas transformé en garantie ferme.
+Ce qui a été vérifié : la demande et les deux échéances restent parfaitement visibles. « Prévue » est conservé tel quel : le délai n'est surtout pas transformé en garantie ferme.
 
 Le détail vivant doit toujours venir de la personne elle-même. Un lieu, une observation, ou une phrase réellement entendue peuvent donner du relief à un texte, à condition d'être authentiques et utiles. Il vaut mieux demander à l'IA de poser une question si ce détail manque, plutôt que de la laisser inventer « hier, une cliente m'a dit… » pour rendre artificiellement un paragraphe plus crédible.
 
 ---
 
-## 05 — Passe ton texte à la loupe, puis décide quoi garder
+## 05. Passe ton texte à la loupe, puis décide quoi garder
 
-Un bon réflexe consiste à comparer son propre brouillon aux expressions du répertoire ci-dessus, en cherchant aussi quelques variantes proches. Ce repérage local (dans un éditeur de texte, ou simplement à l'œil) ne remplace rien : c'est toujours à l'auteur de juger si l'emploi d'un mot reste utile dans son contexte précis — un passage cité peut par exemple contenir volontairement un mot à conserver tel quel.
+Un bon réflexe consiste à comparer son propre brouillon aux expressions du répertoire ci-dessus, en cherchant aussi quelques variantes proches. Ce repérage local (dans un éditeur de texte, ou simplement à l'œil) ne remplace rien : c'est toujours à l'auteur de juger si l'emploi d'un mot reste utile dans son contexte précis. Un passage cité peut par exemple contenir volontairement un mot à conserver tel quel.
 
 Retirer les mots repérés ne suffit d'ailleurs pas à lui seul. Un texte peut n'en contenir aucun et rester malgré tout tout à fait vague. Il faut aussi se demander : le lecteur comprend-il vraiment ce qui se passe, ce qu'il doit faire, et sur quels faits précis le texte s'appuie ?
 
 ---
 
-## 06 — Réécris sans broder, garde les faits à portée
+## 06. Réécris sans broder, garde les faits à portée
 
 Il faut toujours copier sa version d'origine avant de demander une réécriture à l'IA. Indiquer le destinataire, le format, et l'objectif précis. Cela permet ensuite de comparer réellement les deux textes, plutôt que de juger seulement si la nouvelle version « sonne mieux » à l'oreille.
 
-**Prompt à copier — Réviser un brouillon sans changer le fond :**
+**Prompt à copier (Réviser un brouillon sans changer le fond) :**
 > Révise ce texte pour [destinataire], au format [e-mail / publication / page web]. Objectif : [ce que le lecteur doit comprendre ou faire]. Ton souhaité : professionnel et naturel. Tutoiement ou vouvoiement : [choix].
 >
 > TEXTE À RÉVISER
@@ -175,20 +175,20 @@ Il faut toujours copier sa version d'origine avant de demander une réécriture 
 > Livre : 1) le texte révisé prêt à relire ; 2) un tableau de trois changements utiles au maximum, avec leur raison ; 3) les informations manquantes. Si le texte est déjà clair, ne force pas de changements. Aucun envoi ni publication.
 
 **Quatre points à relire avant d'utiliser la version revue :**
-- Les faits — noms, chiffres, dates et liens sont-ils bien conservés ? « Prévu mardi » doit rester une prévision, jamais devenir une garantie.
-- La voix — le tutoiement, le vocabulaire et le degré de familiarité correspondent-ils vraiment au destinataire ? Naturel ne veut pas dire décontracté partout.
-- Les ajouts — une anecdote, une émotion ou une promesse est-elle apparue sans source réelle ? Il faut la retirer ou apporter le vrai détail correspondant.
-- La lecture — lire le texte à voix haute. En cas d'accroc, simplifier le passage sans supprimer un terme métier réellement nécessaire.
+- Les faits : noms, chiffres, dates et liens sont-ils bien conservés ? « Prévu mardi » doit rester une prévision, jamais devenir une garantie.
+- La voix : le tutoiement, le vocabulaire et le degré de familiarité correspondent-ils vraiment au destinataire ? Naturel ne veut pas dire décontracté partout.
+- Les ajouts : une anecdote, une émotion ou une promesse est-elle apparue sans source réelle ? Il faut la retirer ou apporter le vrai détail correspondant.
+- La lecture : lire le texte à voix haute. En cas d'accroc, simplifier le passage sans supprimer un terme métier réellement nécessaire.
 
 Si la révision rate un point précis, il vaut mieux nommer l'écart exactement : « Tu as changé une prévision en engagement. Rétablis "prévue mardi" et vérifie les autres réserves. » Il n'est pas nécessaire de redemander une version entière si une correction précise suffit largement.
 
 ---
 
-## 07 — Fais reconnaître ta voix, avec tes vrais exemples
+## 07. Fais reconnaître ta voix, avec tes vrais exemples
 
 Les mots à couper donnent un bon point de départ. Mais ses propres textes montrent aussi, en creux, ce que l'on veut vraiment garder. Il suffit de choisir deux extraits que l'on a soi-même écrits, de retirer les informations privées inutiles, et de demander une description de leur style avant de l'appliquer à un nouveau brouillon.
 
-**Prompt à copier — Décrire ma voix à partir de mes textes :**
+**Prompt à copier (Décrire ma voix à partir de mes textes) :**
 > Je te donne deux courts textes que j'ai écrits et dont j'aime le ton. Utilise-les comme références de style, pas comme sources de faits pour d'autres sujets.
 > EXEMPLE 1 : [texte]
 > EXEMPLE 2 : [texte]
@@ -204,6 +204,6 @@ Pour un premier essai concret, prendre un e-mail de 100 à 150 mots. Repérer de
 
 **La phrase doit toujours t'appartenir.**
 
-Tu choisis ce que tu veux dire, tu fournis les détails réels, et tu relis toujours la version finale — le réglage de style aide seulement ton assistant à mieux te suivre, il ne remplace jamais ce contrôle final.
+Tu choisis ce que tu veux dire, tu fournis les détails réels, et tu relis toujours la version finale. Le réglage de style aide seulement ton assistant à mieux te suivre, il ne remplace jamais ce contrôle final.
 
 **Sur la portée de ce guide :** le répertoire et les réécritures proposées ici sont des propositions éditoriales, pas une méthode de détection d'IA. Un tiret ou un mot isolé ne permet en aucun cas d'attribuer un texte à son auteur réel.

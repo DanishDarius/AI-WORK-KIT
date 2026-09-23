@@ -29,7 +29,7 @@ Toujours démarrer avec Sonnet. Ne passer à Opus que si la réponse manque de p
 
 Pour les boucles automatisées (n8n, Make), utiliser Haiku par défaut.
 
-Découper les documents longs avant de les soumettre — la facturation se fait au token, pas à la page.
+Découper les documents longs avant de les soumettre : la facturation se fait au token, pas à la page.
 
 Réutiliser les espaces de travail (Projects) : un contexte chargé une seule fois n'est facturé qu'une seule fois.
 

@@ -14,9 +14,9 @@ Une certification qui colle à ton métier (coûts et gratuités vérifiés), un
 ## Sommaire
 
 - Introduction
-- Étape 1 — la certification qui colle à ton métier
-- Étape 2 — l'agent IA que tu construis en un week-end
-- Étape 3 — le script « comment je suis les outils IA »
+- Étape 1 : la certification qui colle à ton métier
+- Étape 2 : l'agent IA que tu construis en un week-end
+- Étape 3 : le script « comment je suis les outils IA »
 - Ta checklist week-end
 - Les garde-fous, en une ligne chacun
 
@@ -30,7 +30,7 @@ Ce guide propose l'inverse : trois preuves concrètes à poser sur la table. Pas
 
 Ce qui fait la différence à l'embauche : les personnes recrutées ne sont pas celles qui connaissent le plus grand nombre d'outils, ce sont celles qui peuvent montrer ce qu'elles ont concrètement construit avec.
 
-## Étape 1 — la certification qui colle à ton métier
+## Étape 1 : la certification qui colle à ton métier
 
 Une certification n'est pas un diplôme magique. C'est un signal : la preuve que tu as mis les heures nécessaires, et celui ou celle qui recrute le voit immédiatement. Le garde-fou honnête à garder en tête : c'est un supplément, jamais un substitut à l'expérience réelle. Le rapport PwC 2026 (plus d'un milliard d'offres analysées, 27 pays) est clair sur ce point : la prime salariale moyenne pour une compétence IA atteint 62 %, et les postes qui exigent une vraie compétence IA croissent presque huit fois plus vite que le reste du marché. La certification ouvre la porte ; l'étape 2 de ce guide est ce qui te fait vraiment entrer.
 
@@ -38,11 +38,11 @@ Une certification n'est pas un diplôme magique. C'est un signal : la preuve que
 
 - **Profil non technique** (marketing, RH, opérations, gestion, entrepreneuriat individuel) → une certification généraliste type Google AI Essentials sur Coursera. Coût : environ 49 $ par mois, souvent bouclé en un seul cycle car le contenu tient en moins de 12 h. Gratuit en mode audit (tu suis les leçons sans obtenir le certificat final) et gratuit avec l'aide financière Coursera si tu y es éligible. Ce que cela prouve : savoir prompter, évaluer une sortie IA, repérer un biais, intégrer l'IA à son flux de travail quotidien.
 - **Profil semi-technique ou technique débutant** → une certification type AWS Certified AI Practitioner (référence AIF-C01). Coût de l'examen : environ 100 $ (parfois 50 $ avec un bon de réduction Skill Builder). La formation elle-même est gratuite sur la plateforme AWS Skill Builder (plus de 600 cours). Temps à prévoir : examen de 90 minutes, 2 à 3 semaines de préparation. Ce que cela prouve : compréhension de l'IA générative, des modèles de fondation, de l'IA responsable, et un socle cloud crédible aux yeux d'un recruteur technique.
-- **Profil développeur ou « builder »** → une certification Claude proposée par Anthropic via Pearson VUE. Coûts par examen : niveau Associate environ 99 $, Developer environ 125 $, Architect Foundations environ 125 $, Architect Professional environ 175 $. Examen de 120 minutes. Ce que cela prouve : conception d'agents et d'applications sur Claude. À savoir : ces certifications ne sont pas ouvertes au grand public — l'inscription exige un e-mail professionnel rattaché à une organisation membre du Claude Partner Network. Si ce n'est pas ton cas, une certification Google ou AWS reste tout aussi lisible côté recruteur.
+- **Profil développeur ou « builder »** → une certification Claude proposée par Anthropic via Pearson VUE. Coûts par examen : niveau Associate environ 99 $, Developer environ 125 $, Architect Foundations environ 125 $, Architect Professional environ 175 $. Examen de 120 minutes. Ce que cela prouve : conception d'agents et d'applications sur Claude. À savoir : ces certifications ne sont pas ouvertes au grand public : l'inscription exige un e-mail professionnel rattaché à une organisation membre du Claude Partner Network. Si ce n'est pas ton cas, une certification Google ou AWS reste tout aussi lisible côté recruteur.
 
 **Les chemins réellement gratuits :** le mode audit d'une certification généraliste type Google AI Essentials (tu apprends gratuitement, seul le certificat final est payant, et l'aide financière Coursera peut même le rendre entièrement gratuit), et l'intégralité de la formation AWS Skill Builder (gratuite ; seul l'examen final à environ 100 $ reste payant). Le savoir lui-même est gratuit ; c'est le papier officiel qui se paie.
 
-> **Prompt — quelle certification pour moi ?**
+> **Prompt : quelle certification pour moi ?**
 >
 > Tu es un recruteur tech senior. Voici mon métier : [décris ton poste actuel et le poste que tu vises en 2 phrases]. Mon niveau technique va de 0 à 10 : [note]. Mon budget certif : [montant]. Mon temps dispo : [heures].
 >
@@ -50,7 +50,7 @@ Une certification n'est pas un diplôme magique. C'est un signal : la preuve que
 
 **Livrable de l'étape 1 :** une ligne sur ton CV et ton profil professionnel en ligne (« [Nom de la certification], 2026 ») accompagnée du badge partagé sur ton profil.
 
-## Étape 2 — l'agent IA que tu construis en un week-end (avec un chiffre à annoncer)
+## Étape 2 : l'agent IA que tu construis en un week-end (avec un chiffre à annoncer)
 
 C'est le point qui fait vraiment la différence. En entretien, « je maîtrise l'IA » ne vaut rien de concret. « J'ai automatisé ce rapport ; ça prenait deux heures, maintenant douze minutes » vaut tout. C'est concret, ça s'ouvre, ça se montre à l'écran, et personne ne peut te le contester.
 
@@ -62,7 +62,7 @@ Bonne nouvelle : tu n'as pas besoin de savoir coder pour cela. Un agent, c'est s
 4. **Teste sur un cas réel**, et corrige les instructions jusqu'à ce que la sortie soit utilisable telle quelle, sans retouche.
 5. **Chronomètre la version avec l'agent, après.** Voilà ton chiffre final (« 12 min », par exemple). Fais une capture d'écran ou une courte vidéo : c'est ta pièce à conviction pour l'entretien à venir.
 
-> **Prompt — les instructions de ton agent**
+> **Prompt : les instructions de ton agent**
 >
 > RÔLE : Tu es mon assistant dédié à [la tâche, ex : produire mon rapport d'activité hebdomadaire].
 >
@@ -77,7 +77,7 @@ Bonne nouvelle : tu n'as pas besoin de savoir coder pour cela. Un agent, c'est s
 >
 > FORMAT DE SORTIE : [colle un ancien livrable réussi comme gabarit].
 
-> **Prompt — transformer le résultat en phrase d'entretien**
+> **Prompt : transformer le résultat en phrase d'entretien**
 >
 > Voici la tâche que j'ai automatisée avec un agent IA : [décris]. Temps AVANT : [X]. Temps APRÈS : [Y]. Erreurs évitées / qualité gagnée : [précise].
 >
@@ -87,7 +87,7 @@ Bonne nouvelle : tu n'as pas besoin de savoir coder pour cela. Un agent, c'est s
 
 **Livrable de l'étape 2 :** un mini-portfolio d'une seule page (document ou diapositive) : le problème rencontré, ta solution (l'agent construit), le chiffre avant/après, et une capture d'écran. Un portfolio avec un résultat documenté bat toujours un CV rempli de mots-clés génériques.
 
-## Étape 3 — le script « comment je suis les outils IA »
+## Étape 3 : le script « comment je suis les outils IA »
 
 Le rapport PwC 2026 décrit un marché à deux voies. Les rôles qui montent le plus vite ne sont pas ceux qui délèguent tout à la machine, mais ceux qui combinent jugement humain et IA : quelqu'un qui guide, corrige, vérifie l'IA, et sait quels outils sortent cette semaine. En entretien, une question revient presque toujours : « Comment vous tenez-vous à jour ? » La plupart des réponses restent vagues (« je lis des trucs »). Toi, tu peux répondre avec une vraie méthode.
 
@@ -95,7 +95,7 @@ Le rapport PwC 2026 décrit un marché à deux voies. Les rôles qui montent le 
 - **Comment tu tries.** Tu ne cours pas après chaque nouveauté ; tu testes ce qui touche vraiment ton métier, et tu gardes ton propre jugement aux commandes.
 - **Une preuve récente.** Un outil que tu as adopté ou au contraire écarté ce mois-ci, et la raison précise de ce choix.
 
-> **Prompt — le script (adapte les crochets à ta vraie vie)**
+> **Prompt : le script (adapte les crochets à ta vraie vie)**
 >
 > « Je suis les outils IA sur trois canaux, chaque semaine. [Ex : la newsletter X pour les sorties de modèles, tel créateur pour les cas d'usage concrets, et je teste moi-même dans un espace bac à sable.]
 >
@@ -103,7 +103,7 @@ Le rapport PwC 2026 décrit un marché à deux voies. Les rôles qui montent le 
 >
 > Exemple récent : [tel outil / telle fonctionnalité]. Je l'ai [adopté parce que… / écarté parce que ça n'apportait rien de plus que ce que j'avais]. Ce qui compte pour moi, c'est de garder le jugement : l'IA propose, je décide, je vérifie. »
 
-> **Prompt — personnaliser ton script**
+> **Prompt : personnaliser ton script**
 >
 > Aide-moi à remplir ce script d'entretien avec MA réalité. Mon secteur : [X]. Les outils IA que j'utilise vraiment : [liste]. Une chose que j'ai testée et gardée récemment : [X]. Une chose que j'ai testée et abandonnée : [X]. Pourquoi.
 >
@@ -111,11 +111,11 @@ Le rapport PwC 2026 décrit un marché à deux voies. Les rôles qui montent le 
 
 ## Ta checklist week-end
 
-- **Samedi matin** — Étape 1 : choisir une seule certification (prompt fourni ci-dessus), s'inscrire ou planifier l'examen.
-- **Samedi après-midi** — Étape 2 : construire l'agent, chronométrer avant/après, capturer le résultat.
-- **Dimanche matin** — Monter le mini-portfolio d'une page (problème → agent → chiffre → capture).
-- **Dimanche après-midi** — Étape 3 : remplir et répéter le script à voix haute, trois fois de suite.
-- **Lundi** — Mettre la certification et le projet sur le CV et le profil professionnel en ligne. Les trois preuves sont prêtes.
+- **Samedi matin** (Étape 1) : choisir une seule certification (prompt fourni ci-dessus), s'inscrire ou planifier l'examen.
+- **Samedi après-midi** (Étape 2) : construire l'agent, chronométrer avant/après, capturer le résultat.
+- **Dimanche matin** : Monter le mini-portfolio d'une page (problème → agent → chiffre → capture).
+- **Dimanche après-midi** (Étape 3) : remplir et répéter le script à voix haute, trois fois de suite.
+- **Lundi** : Mettre la certification et le projet sur le CV et le profil professionnel en ligne. Les trois preuves sont prêtes.
 
 ## Les garde-fous, en une ligne chacun
 

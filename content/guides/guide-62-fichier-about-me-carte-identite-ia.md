@@ -25,7 +25,7 @@ Qui je suis (nom, rôle, ville, langues). Ce que je fais cette année (trois pri
 
 Rien à écrire : il suffit de parler, l'IA transcrit et structure.
 
-> **Prompt — génération vocale**
+> **Prompt : génération vocale**
 >
 > Je vais te parler de moi pendant 15 minutes. Ton job : transformer mes réponses en un fichier about-me.md propre, avec les 8 sections suivantes :
 >

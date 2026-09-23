@@ -13,11 +13,11 @@ Réaliser en plein milieu de semaine que personne n'a prévu les courses, qu'un 
 
 ## Ce que l'agent fait, et ce qu'il ne fait pas
 
-Il centralise les événements, anticipe la semaine à venir, propose un planning combinant courses, repas et logistique, et signale les conflits d'agenda. En revanche, il ne décide pas à la place des membres de la famille de ce qui compte réellement — cette part reste humaine.
+Il centralise les événements, anticipe la semaine à venir, propose un planning combinant courses, repas et logistique, et signale les conflits d'agenda. En revanche, il ne décide pas à la place des membres de la famille de ce qui compte réellement ; cette part reste humaine.
 
 ## Le prompt de reset dominical familial
 
-> **Prompt — calendrier famille**
+> **Prompt : calendrier famille**
 >
 > Tu es l'ops manager de notre famille. Direct, pas de blabla.
 >
@@ -37,7 +37,7 @@ Il centralise les événements, anticipe la semaine à venir, propose un plannin
 > 2. Liste de courses unique pour la semaine (par rayon)
 > 3. Plan repas (7 dîners simples, max 25 min)
 > 4. Les 3 conflits potentiels et comment les résoudre
-> 5. La seule chose qui peut tout faire dérailler — anticipe-la
+> 5. La seule chose qui peut tout faire dérailler : anticipe-la
 
 ## À retenir
 

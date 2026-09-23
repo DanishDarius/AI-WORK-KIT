@@ -9,7 +9,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Un métier peu connu en dehors de la Silicon Valley gagne rapidement en visibilité : Forward Deployed Engineer (FDE). Des rémunérations comprises entre 180 000 et 350 000 dollars, une demande en forte croissance, et un accès possible sans doctorat — l'essentiel consiste à savoir dialoguer avec un client tout en produisant du code fonctionnel autour de l'IA.
+Un métier peu connu en dehors de la Silicon Valley gagne rapidement en visibilité : Forward Deployed Engineer (FDE). Des rémunérations comprises entre 180 000 et 350 000 dollars, une demande en forte croissance, et un accès possible sans doctorat ; l'essentiel consiste à savoir dialoguer avec un client tout en produisant du code fonctionnel autour de l'IA.
 
 ## Ce que fait un FDE
 
@@ -25,11 +25,11 @@ Les entreprises qui vendent des produits IA à de grands comptes se heurtent sou
 2. La capacité à lire et discuter une architecture de données d'entreprise.
 3. La capacité à tenir une réunion avec des dirigeants sans se laisser déstabiliser.
 4. La capacité à rédiger un retour produit pris au sérieux par les équipes d'ingénierie internes.
-5. Savoir dire non à un client — sur-promettre reste le principal risque de ce métier.
+5. Savoir dire non à un client : sur-promettre reste le principal risque de ce métier.
 
 ## Le prompt d'auto-évaluation
 
-> **Prompt — FDE fit check**
+> **Prompt : FDE fit check**
 >
 > Tu es head of FDE dans une scale-up IA. Évalue ma candidature.
 >
@@ -51,4 +51,4 @@ Les entreprises qui vendent des produits IA à de grands comptes se heurtent sou
 
 **Le bon moment pour se positionner, c'est maintenant.**
 
-D'ici un an et demi, ce marché risque d'être saturé. Les entreprises qui recrutent actuellement acceptent des profils presque prêts et les forment sur le terrain — une fenêtre qui se refermera avec l'arrivée de formations spécialisées dédiées.
+D'ici un an et demi, ce marché risque d'être saturé. Les entreprises qui recrutent actuellement acceptent des profils presque prêts et les forment sur le terrain, une fenêtre qui se refermera avec l'arrivée de formations spécialisées dédiées.

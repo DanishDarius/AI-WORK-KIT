@@ -6,22 +6,22 @@ const accompagnement = [
   {
     number: "01",
     title: "Diagnostic",
-    text: "Nous chiffrons les tâches qui pèsent, puis nous choisissons le premier système à construire.",
+    text: "On mesure le temps perdu sur chaque tâche, puis on choisit le premier système à construire.",
   },
   {
     number: "02",
     title: "Construction",
-    text: "Nous configurons un système connecté à vos données et aux outils que votre équipe utilise déjà.",
+    text: "On le branche sur vos données et sur les outils que votre équipe utilise déjà.",
   },
   {
     number: "03",
     title: "Adoption",
-    text: "Votre équipe le teste sur ses cas réels. Les usages et les résultats sont suivis.",
+    text: "Votre équipe le teste sur ses vrais dossiers. On suit le temps gagné.",
   },
   {
     number: "04",
     title: "Transmission",
-    text: "La documentation, les accès et les règles de validation restent dans votre entreprise.",
+    text: "Documentation, accès, règles de validation : tout reste chez vous.",
   },
 ];
 
@@ -30,18 +30,18 @@ export function SystemesIaScreen() {
     <div className="aw-systems-page">
       <section className="aw-systems-hero" aria-labelledby="systems-title">
         <div className="aw-systems-hero-copy">
-          <p className="aw-systems-kicker">Systèmes IA intégrés</p>
+          <p className="aw-systems-kicker">Systèmes IA sur mesure</p>
           <h1 id="systems-title">
-            Votre système IA.<br />
-            <span>Intégré de bout en bout.</span>
+            Vos tâches répétitives.<br />
+            <span>Faites sans vous.</span>
           </h1>
           <p className="aw-systems-lead">
-            Des agents, des automatisations et des workflows IA configurés
-            pour votre entreprise, directement dans les outils que votre équipe
-            utilise déjà.
+            Nous construisons des agents et des automatisations IA dans les
+            outils que votre équipe utilise déjà. Le système exécute, vous
+            validez.
           </p>
           <p className="aw-systems-context">
-            <Link href="/transformation-ia">Définir votre stratégie de transformation IA&nbsp;→</Link>
+            <Link href="/transformation-ia">Besoin d’un plan pour toute l’entreprise ? Voir la Transformation IA →</Link>
           </p>
           <div className="aw-systems-actions">
             <a className="aw-systems-primary" href="#form">
@@ -67,8 +67,8 @@ export function SystemesIaScreen() {
       <section className="aw-systems-example" id="exemple-systeme" aria-labelledby="example-title">
         <div className="aw-systems-example-head">
           <h2 id="example-title">
-            Une tâche vous ralentit.<br />
-            <span>Le système poursuit le travail.</span>
+            Un client écrit.<br />
+            <span>La réponse est déjà prête.</span>
           </h2>
           <div>
             <p className="aw-systems-kicker">Exemple · Suivi commercial</p>
@@ -90,8 +90,8 @@ export function SystemesIaScreen() {
         </div>
 
         <ol className="aw-systems-example-captions">
-          <li><strong>Une demande client.</strong><span>Le message arrive avec son contexte et ses données utiles.</span></li>
-          <li><strong>Une réponse préparée.</strong><span>L’IA s’appuie sur les informations fiables de l’entreprise.</span></li>
+          <li><strong>Une demande client.</strong><span>Le message arrive avec l’historique du client.</span></li>
+          <li><strong>Une réponse préparée.</strong><span>L’IA rédige à partir de vos informations, pas d’Internet.</span></li>
           <li><strong>Vous gardez la main.</strong><span>Un membre de l’équipe vérifie avant l’envoi.</span></li>
         </ol>
       </section>
@@ -103,8 +103,8 @@ export function SystemesIaScreen() {
             <span>Prêt pour votre équipe.</span>
           </h2>
           <p>
-            Le système, les accès et toute la documentation restent sous le
-            contrôle de votre entreprise.
+            À la fin, tout vous appartient : le système, les accès et la
+            documentation.
           </p>
           <div className="aw-systems-method-visual">
             <Image
@@ -137,10 +137,9 @@ export function SystemesIaScreen() {
             <span>par votre quotidien.</span>
           </h2>
           <p>
-            Dites-nous quelle tâche ou quel processus prend trop de temps dans
-            votre entreprise.
+            Dites-nous quelle tâche vous fait perdre le plus de temps.
           </p>
-          <small>Nous étudierons le contexte, les outils concernés et le résultat attendu.</small>
+          <small>Nous étudions votre contexte, vos outils et le résultat attendu avant de vous répondre.</small>
         </div>
 
         <form className="aw-systems-form" aria-label="Demande d’accompagnement personnalisé">

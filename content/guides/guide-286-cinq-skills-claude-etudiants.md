@@ -13,15 +13,15 @@ Le bon usage de Claude dans un contexte d'études ne consiste pas à faire réal
 
 ## Les cinq Skills
 
-1. **Plan de révision personnalisé** — construit à partir du planning d'examens et des points faibles identifiés.
-2. **Nettoyage de notes de cours** — un brouillon de notes transformé en fiche claire et structurée.
-3. **Explication d'un concept à trois niveaux** — vulgarisé, intermédiaire, technique.
-4. **Email à un enseignant** — ton respectueux, demande claire, formulation adaptée.
-5. **Préparation d'un examen oral** — dix questions probables accompagnées d'une critique des réponses proposées.
+1. **Plan de révision personnalisé** : construit à partir du planning d'examens et des points faibles identifiés.
+2. **Nettoyage de notes de cours** : un brouillon de notes transformé en fiche claire et structurée.
+3. **Explication d'un concept à trois niveaux** : vulgarisé, intermédiaire, technique.
+4. **Email à un enseignant** : ton respectueux, demande claire, formulation adaptée.
+5. **Préparation d'un examen oral** : dix questions probables accompagnées d'une critique des réponses proposées.
 
 ## Le prompt de plan de révision
 
-> **Prompt — Skill plan de révision**
+> **Prompt : Skill plan de révision**
 >
 > Tu es mon tuteur. Voici :
 >
@@ -39,7 +39,7 @@ Le bon usage de Claude dans un contexte d'études ne consiste pas à faire réal
 
 ## Le prompt d'explication à trois niveaux
 
-> **Prompt — Skill explication 3 niveaux**
+> **Prompt : Skill explication 3 niveaux**
 >
 > Explique-moi [concept] à 3 niveaux :
 >
@@ -67,4 +67,4 @@ Pour ces cinq Skills, la version gratuite suffit largement.
 
 **Les meilleurs résultats ne viennent pas forcément du talent, mais de l'organisation.**
 
-Mettre en place le Skill de plan de révision dès cette semaine révèle souvent qu'il y avait en réalité largement le temps nécessaire — c'est la pression ressentie qui donnait l'impression contraire.
+Mettre en place le Skill de plan de révision dès cette semaine révèle souvent qu'il y avait en réalité largement le temps nécessaire ; c'est la pression ressentie qui donnait l'impression contraire.

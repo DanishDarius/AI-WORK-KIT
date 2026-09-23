@@ -13,13 +13,13 @@ Un comparatif honnête des outils de présentation IA qui méritent vraiment le 
 
 ## Le vrai enjeu
 
-L'intégration directe de l'IA conversationnelle dans PowerPoint a rendu le deck généré par IA enfin utilisable dans un format largement accepté en entreprise. Mais la vraie question n'est pas « quel outil a le bouton magique » — c'est « quel outil convient à quel type de deck ». Se tromper sur ce point fait perdre du temps même avec l'IA.
+L'intégration directe de l'IA conversationnelle dans PowerPoint a rendu le deck généré par IA enfin utilisable dans un format largement accepté en entreprise. Mais la vraie question n'est pas « quel outil a le bouton magique », c'est « quel outil convient à quel type de deck ». Se tromper sur ce point fait perdre du temps même avec l'IA.
 
 ## Le brief avant l'outil
 
 Un deck générique ne vient jamais de l'outil : il vient d'un brief mou. Tout commence toujours par là.
 
-> **Prompt — brief de présentation**
+> **Prompt : brief de présentation**
 >
 > Tu es mon stratège de deck. Je vais utiliser un outil IA (ChatGPT, Gamma, Microsoft Copilot, Claude, ou Canva) pour construire une présentation. Avant de prompter l'outil, j'ai besoin que tu m'écrives un brief créatif précis que je pourrai coller dedans.
 >
@@ -57,7 +57,7 @@ Un deck générique ne vient jamais de l'outil : il vient d'un brief mou. Tout c
 
 **Microsoft Copilot :** utile surtout quand l'entreprise est déjà profondément intégrée à Microsoft 365 et SharePoint. Plus connecté aux outils internes, souvent moins séduisant visuellement.
 
-**Claude :** le plus solide pour la construction intellectuelle du deck — structure, narration, headlines, logique slide par slide. À utiliser pour écrire le fond, puis exporter l'idée ailleurs.
+**Claude :** le plus solide pour la construction intellectuelle du deck (structure, narration, headlines, logique slide par slide). À utiliser pour écrire le fond, puis exporter l'idée ailleurs.
 
 **Canva :** très bon pour un deck fortement visuel, plus marketing, plus adapté aux réseaux sociaux, moins corporate.
 

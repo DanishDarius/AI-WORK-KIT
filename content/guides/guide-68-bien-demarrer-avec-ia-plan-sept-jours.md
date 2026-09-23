@@ -17,13 +17,13 @@ Une première expérience décevante avec l'IA vient presque toujours du même s
 
 ## Les quatre outils qui suffisent pour démarrer
 
-Claude (claude.ai) — pour réfléchir, écrire, structurer. ChatGPT — pour la voix, les images rapides, le web. Perplexity — pour chercher avec sources. NotebookLM — pour interroger ses propres documents.
+Claude (claude.ai) : pour réfléchir, écrire, structurer. ChatGPT : pour la voix, les images rapides, le web. Perplexity : pour chercher avec sources. NotebookLM : pour interroger ses propres documents.
 
 ## Les sept règles non négociables
 
 Toujours donner le contexte avant la question. Toujours dire à quoi ressemble une bonne réponse. Toujours faire critiquer la première sortie obtenue. Ne jamais accepter une généralité comme conseil. Recadrer dans la même conversation plutôt que d'en ouvrir une nouvelle. Garder les bons prompts dans un fichier. Faire des répétitions tous les jours pendant trente jours.
 
-> **Prompt — premier vrai test**
+> **Prompt : premier vrai test**
 >
 > Je débute avec l'IA. Voici une vraie tâche de mon quotidien :
 > [décris la tâche en 3 lignes : input, output attendu, contrainte de temps]
@@ -43,4 +43,4 @@ Jours 1-2 : appliquer le prompt ci-dessus à deux tâches professionnelles. Jour
 
 ## À retenir
 
-L'IA n'impressionnera pas — elle fera gagner du temps. Le bon indicateur de progression n'est pas le nombre de prompts connus, mais le nombre d'heures récupérées chaque semaine.
+L'IA n'impressionnera pas : elle fera gagner du temps. Le bon indicateur de progression n'est pas le nombre de prompts connus, mais le nombre d'heures récupérées chaque semaine.

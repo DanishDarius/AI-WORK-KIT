@@ -1,4 +1,4 @@
-// Client Supabase "admin" — utilise la clé service_role, qui contourne les
+// Client Supabase "admin" : utilise la clé service_role, qui contourne les
 // règles RLS. À N'UTILISER QUE dans du code strictement serveur (routes API),
 // jamais importé depuis un composant client, jamais exposé au navigateur.
 // La clé vient de la variable d'environnement SUPABASE_SERVICE_ROLE_KEY,

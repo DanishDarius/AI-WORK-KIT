@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
-// POST /api/taches/[id]/favori?metier=<slug> — ajoute ou retire une tâche
+// POST /api/taches/[id]/favori?metier=<slug> : ajoute ou retire une tâche
 // des favoris de l'utilisateur connecté. Body attendu : { "favori": true|false }.
 //
 // Le paramètre "metier" (slug) est requis pour AJOUTER un favori : il permet

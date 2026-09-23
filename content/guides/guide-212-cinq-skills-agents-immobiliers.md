@@ -13,19 +13,19 @@ Les agents immobiliers qui utilisent l'IA à bon escient ne remplacent pas leur 
 
 ## Les cinq skills immobiliers
 
-1. Le descripteur de biens — les caractéristiques brutes sont collées, une description qui vend sans exagérer en ressort.
+1. Le descripteur de biens : les caractéristiques brutes sont collées, une description qui vend sans exagérer en ressort.
 
-2. Les relances clients — des séquences personnalisées selon le statut du dossier (visite réalisée, offre en cours, refroidissement).
+2. Les relances clients : des séquences personnalisées selon le statut du dossier (visite réalisée, offre en cours, refroidissement).
 
-3. L'analyse de contrats — un résumé des clauses à surveiller, en cinq points clairs.
+3. L'analyse de contrats : un résumé des clauses à surveiller, en cinq points clairs.
 
-4. La recherche de quartier — un compte rendu de marché, prix au mètre carré et dynamique locale, en trois minutes.
+4. La recherche de quartier : un compte rendu de marché, prix au mètre carré et dynamique locale, en trois minutes.
 
-5. Le suivi post-visite — un e-mail de retour automatique, avec un classement des objections rencontrées.
+5. Le suivi post-visite : un e-mail de retour automatique, avec un classement des objections rencontrées.
 
 ## Le prompt du descripteur de biens
 
-> **Prompt — descripteur de biens**
+> **Prompt : descripteur de biens**
 >
 > Tu es rédacteur immobilier senior. Rédige une description de bien à partir des données suivantes :
 >
@@ -42,4 +42,4 @@ Les agents immobiliers qui utilisent l'IA à bon escient ne remplacent pas leur 
 
 **L'IA rédige, l'humain vend.**
 
-Claude ne remplace pas une visite. Il libère du temps pour en réaliser davantage chaque semaine — c'est précisément là que se joue la différence de résultat.
+Claude ne remplace pas une visite. Il libère du temps pour en réaliser davantage chaque semaine ; c'est précisément là que se joue la différence de résultat.

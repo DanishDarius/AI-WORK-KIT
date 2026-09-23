@@ -23,4 +23,4 @@ Pour les réponses courtes, il rédige dans le style habituel à partir d'une di
 
 ## La règle de sécurité à imposer
 
-Une règle stricte doit toujours s'appliquer : tout message mentionnant de l'argent, des termes juridiques, ou une personne inconnue, part automatiquement dans la pile « nécessite une attention personnelle » — aussi simple que paraisse cette règle, elle reste la garde-fou le plus important du système.
+Une règle stricte doit toujours s'appliquer : tout message mentionnant de l'argent, des termes juridiques, ou une personne inconnue, part automatiquement dans la pile « nécessite une attention personnelle ». Aussi simple que paraisse cette règle, elle reste la garde-fou le plus important du système.

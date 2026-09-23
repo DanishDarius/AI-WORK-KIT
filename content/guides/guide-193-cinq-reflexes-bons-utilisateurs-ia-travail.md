@@ -13,7 +13,7 @@ Les meilleurs utilisateurs d'IA au travail ne sont pas ceux qui formulent le mie
 
 ## Les cinq réflexes qui font la différence
 
-1. Conserver ses prompts. Peu importe l'outil (Notion, Apple Notes ou autre) — les meilleurs ne les retapent jamais de zéro.
+1. Conserver ses prompts. Peu importe l'outil (Notion, Apple Notes ou autre) : les meilleurs ne les retapent jamais de zéro.
 
 2. Dater leurs productions générées par IA. « Brief généré le 12/03/26 avec Claude Sonnet. » Ce détail protège en cas d'audit ou de relecture ultérieure.
 
@@ -21,7 +21,7 @@ Les meilleurs utilisateurs d'IA au travail ne sont pas ceux qui formulent le mie
 
 4. Ne jamais partager une production IA brute. Toujours retouchée, toujours assumée. Sinon, c'est la crédibilité personnelle qui en pâtit.
 
-5. Garder une tâche par semaine réalisée sans IA. Pour ne pas perdre la compétence — souvent, l'écriture des contenus les plus importants.
+5. Garder une tâche par semaine réalisée sans IA. Pour ne pas perdre la compétence. Souvent, l'écriture des contenus les plus importants.
 
 ### Le signe qui trahit un débutant
 
@@ -31,7 +31,7 @@ Coller une réponse générée telle quelle dans un e-mail professionnel, avec s
 
 Demander systématiquement à l'assistant, avant de partager un contenu : « Est-ce que cette sortie a l'air générée par IA ? Si oui, dis-moi quels marqueurs trahissent, et propose une version qui les retire. »
 
-> **Prompt — retirer les marqueurs IA d'un texte**
+> **Prompt : retirer les marqueurs IA d'un texte**
 >
 > Voici un texte généré par IA :
 > [colle le texte]

@@ -1,7 +1,7 @@
 ---
 Guide original : "Le décodeur de signaux IA : lire ce que le marché va payer, avant tout le monde"
 Source : saadiakaram.ai/guides/decodeur-de-signaux-ia
-Statut : reformulé (texte) — aucun visuel/tableau HTML détecté sur cette page
+Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
 ---
 
 # Décoder les signaux du marché IA : anticiper ce qui va se monétiser avant les autres
@@ -12,11 +12,11 @@ Statut : reformulé (texte) — aucun visuel/tableau HTML détecté sur cette pa
 
 - Introduction
 - Pourquoi maintenant : le cas qui sert de point de départ
-- Section 1 — La règle des 5 signaux (le cadre de lecture)
-- Section 2 — La grille de lecture en 5 questions (le cœur du guide)
-- Section 3 — Les prompts prêts à copier
-- Section 4 — Les outils à utiliser dès aujourd'hui
-- Section 5 — La fenêtre d'opportunité (pourquoi agir vite, sans survendre)
+- Section 1 : La règle des 5 signaux (le cadre de lecture)
+- Section 2 : La grille de lecture en 5 questions (le cœur du guide)
+- Section 3 : Les prompts prêts à copier
+- Section 4 : Les outils à utiliser dès aujourd'hui
+- Section 5 : La fenêtre d'opportunité (pourquoi agir vite, sans survendre)
 - Le fichier complet
 - Pour aller plus loin
 
@@ -30,17 +30,17 @@ En 20 minutes, tu sauras lire n'importe quelle annonce d'un géant de l'IA (cert
 
 ---
 
-## 01 — Comprendre : pourquoi maintenant, le cas qui sert de point de départ
+## 01. Comprendre : pourquoi maintenant, le cas qui sert de point de départ
 
-Anthropic a lancé la certification Claude Certified Architect – Foundations le 12 mars 2026 : la première accréditation professionnelle destinée aux architectes qui construisent des applications de production avec Claude. Elle s'adosse au « Claude Partner Network » et à un engagement initial de 100 millions de dollars pour la formation et l'activation. Dès juin 2026, plus de 10 000 consultants avaient déjà obtenu une certification Claude.
+Anthropic a lancé la certification Claude Certified Architect (Foundations) le 12 mars 2026 : la première accréditation professionnelle destinée aux architectes qui construisent des applications de production avec Claude. Elle s'adosse au « Claude Partner Network » et à un engagement initial de 100 millions de dollars pour la formation et l'activation. Dès juin 2026, plus de 10 000 consultants avaient déjà obtenu une certification Claude.
 
 **Le signal derrière le signal :** quand une plateforme certifie un métier, elle indique clairement lequel elle a l'intention de recruter. Anthropic a ouvert des postes de Solutions Architect, Applied AI, dans une fourchette d'environ 170 000 à 270 000 $, allant jusqu'à 280 000-300 000 $ côté partenaires (chiffres issus d'offres publiées et de Levels.fyi, à revérifier au moment de ta lecture).
 
-*Garde-fou honnête : une certification n'est pas un chèque en blanc, et un papier ne remplace jamais une véritable compétence. Ce que ces chiffres démontrent, c'est ce que le marché est prêt à payer — pas ce que toi, précisément, tu gagneras.*
+*Garde-fou honnête : une certification n'est pas un chèque en blanc, et un papier ne remplace jamais une véritable compétence. Ce que ces chiffres démontrent, c'est ce que le marché est prêt à payer, pas ce que toi, précisément, tu gagneras.*
 
 ---
 
-## 02 — Section 1 : la règle des 5 signaux (le cadre de lecture)
+## 02. Section 1 : la règle des 5 signaux (le cadre de lecture)
 
 Avant même de rédiger un prompt, apprends à repérer les 5 mouvements qui comptent vraiment. Un géant de l'IA t'envoie un signal fort dès qu'il agit sur l'un de ces leviers :
 
@@ -54,7 +54,7 @@ Avant même de rédiger un prompt, apprends à repérer les 5 mouvements qui com
 
 ---
 
-## 03 — Section 2 : la grille de lecture en 5 questions (le cœur du guide)
+## 03. Section 2 : la grille de lecture en 5 questions (le cœur du guide)
 
 Applique ces 5 questions à n'importe quelle annonce liée à l'IA. Réponds en une ligne à chacune :
 
@@ -68,11 +68,11 @@ Applique ces 5 questions à n'importe quelle annonce liée à l'IA. Réponds en 
 
 ---
 
-## 04 — Section 3 : les prompts prêts à copier
+## 04. Section 3 : les prompts prêts à copier
 
 Colle ces prompts dans Claude (claude.ai), ChatGPT ou Gemini. Remplace le contenu entre crochets.
 
-**Prompt 1 — décoder n'importe quelle annonce IA :**
+**Prompt 1 (décoder n'importe quelle annonce IA) :**
 > Tu es analyste de signaux de marché. Voici une annonce d'un acteur majeur de l'IA : [colle l'annonce, le lien ou le titre].
 > Analyse-la avec cette grille en 5 points :
 > 1) Quel métier ou compétence est mis en avant ?
@@ -82,22 +82,22 @@ Colle ces prompts dans Claude (claude.ai), ChatGPT ou Gemini. Remplace le conten
 > 5) Quelle est la seule action à 90 jours que je devrais prendre ?
 > Réponds en tableau, une ligne par point, sans remplissage.
 
-**Prompt 2 — vérifier le salaire réel (anti-invention) :**
+**Prompt 2 (vérifier le salaire réel, anti-invention) :**
 > Aide-moi à estimer la valeur marché du rôle [nom du rôle] chez [entreprise]. Ne devine pas. Liste uniquement les sources que je peux vérifier (offres d'emploi officielles, Levels.fyi, Glassdoor) et indique la fourchette avec le lien. Si tu n'as pas de source fiable, dis-le clairement.
 
-**Prompt 3 — transformer un signal en plan de compétence sur 90 jours :**
+**Prompt 3 (transformer un signal en plan de compétence sur 90 jours) :**
 > À partir de ce signal de marché : [résume-le en 1 phrase], construis-moi un plan de montée en compétence sur 90 jours :
 > - Semaine 1 à 2 : preuve rapide à produire
 > - Semaine 3 à 8 : compétence cœur à acquérir
 > - Semaine 9 à 12 : livrable visible qui prouve la compétence
 > Pour chaque étape : 1 ressource gratuite nommée + 1 livrable concret.
 
-**Prompt 4 — écrire ton post « lecture de signal » :**
+**Prompt 4 (écrire ton post « lecture de signal ») :**
 > Tu es rédacteur de contenu court. À partir de ce signal : [résume-le], écris un hook de 2 lignes qui ouvre une boucle, puis 5 lignes de décodage : ce que ce signal dit vraiment du marché. Ton : sobre, expert, aucune promesse de revenu. Pas de tirets cadratins.
 
 ---
 
-## 05 — Section 4 : les outils à utiliser dès aujourd'hui
+## 05. Section 4 : les outils à utiliser dès aujourd'hui
 
 - **Vérifier un salaire :** Levels.fyi, Glassdoor, et les fiches de poste officielles publiées par l'entreprise concernée. Recherche la fourchette réelle plutôt qu'une simple estimation.
 - **Se former sur Claude (le cas étudié dans ce guide) :** la préparation passe par Anthropic Academy (plateforme Skilljar), avec le cours « Building with the Claude API ». Ressource gratuite complémentaire : un cours de préparation publié sur YouTube par freeCodeCamp.
@@ -106,17 +106,17 @@ Colle ces prompts dans Claude (claude.ai), ChatGPT ou Gemini. Remplace le conten
 
 ---
 
-## 06 — Section 5 : la fenêtre d'opportunité (pourquoi agir vite, sans survendre)
+## 06. Section 5 : la fenêtre d'opportunité (pourquoi agir vite, sans survendre)
 
 La valeur réelle d'un signal ne réside pas dans le diplôme obtenu, mais dans le fait d'arriver tôt. Les crédentiels acquis précocement dans un écosystème en forte croissance ont tendance à être disproportionnellement récompensés, et la fenêtre pour figurer parmi les premiers certifiés se referme progressivement à mesure que les grands cabinets s'alignent.
 
-*Rappel important : la rareté est bien réelle, mais elle ne joue en ta faveur que si la compétence sous-jacente l'est également. Le papier t'ouvre la porte — c'est la compétence qui te permet d'y rester.*
+*Rappel important : la rareté est bien réelle, mais elle ne joue en ta faveur que si la compétence sous-jacente l'est également. Le papier t'ouvre la porte ; c'est la compétence qui te permet d'y rester.*
 
 ---
 
 ## Le fichier complet
 
-*[Emplacement réservé à ton propre mécanisme d'accès à la grille complète — lead magnet, formulaire, ou lien selon ta plateforme.]*
+*[Emplacement réservé à ton propre mécanisme d'accès à la grille complète : lead magnet, formulaire, ou lien selon ta plateforme.]*
 
 ---
 
@@ -130,8 +130,8 @@ Pour explorer concrètement les compétences que ces signaux mettent en lumière
 
 **Quand une plateforme certifie un métier, elle révèle lequel elle a l'intention de recruter.**
 
-Cinq signaux, cinq questions, une action à 90 jours. Ne cours pas après le diplôme en lui-même — apprends à lire le mouvement : qui est nommé, combien c'est rémunéré, qui bouge déjà, quelle est la fenêtre, quelle est ta prochaine preuve concrète. Applique cette grille à UNE annonce dès cette semaine. Le papier ouvre la porte, la compétence te garde dans la pièce.
+Cinq signaux, cinq questions, une action à 90 jours. Ne cours pas après le diplôme en lui-même. Apprends à lire le mouvement : qui est nommé, combien c'est rémunéré, qui bouge déjà, quelle est la fenêtre, quelle est ta prochaine preuve concrète. Applique cette grille à UNE annonce dès cette semaine. Le papier ouvre la porte, la compétence te garde dans la pièce.
 
 ---
 
-*Sources vérifiées : le programme de certification Claude (les 4 examens 2026) · Levels.fyi — rémunérations Anthropic. Chiffres cités tels que publiés au moment de la rédaction, à revérifier au moment de ta lecture.*
+*Sources vérifiées : le programme de certification Claude (les 4 examens 2026) · Levels.fyi (rémunérations Anthropic). Chiffres cités tels que publiés au moment de la rédaction, à revérifier au moment de ta lecture.*

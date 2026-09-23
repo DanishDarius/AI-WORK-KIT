@@ -15,7 +15,7 @@ Un réglage quasi inconnu transforme Claude en tuteur socratique : il interroge,
 
 Claude possède un mode qu'aucune documentation ne met vraiment en avant. Activé en deux clics, l'assistant se comporte comme un vrai professeur : il pose des questions, refuse de donner la réponse directement, et ajuste le rythme au niveau de la personne. Le ton plat du « voilà tout ce que tu dois savoir » disparaît.
 
-Le comportement par défaut de Claude, c'est de répondre proprement : un concept est demandé, il est servi en bloc — et il n'en reste souvent que 10 % en mémoire. En mode tuteur, l'assistant pose des questions, corrige, fait reformuler. La rétention devient réelle.
+Le comportement par défaut de Claude, c'est de répondre proprement : un concept est demandé, il est servi en bloc, et il n'en reste souvent que 10 % en mémoire. En mode tuteur, l'assistant pose des questions, corrige, fait reformuler. La rétention devient réelle.
 
 ## Activer le mode
 
@@ -25,7 +25,7 @@ Dans Claude, ouvrir Préférences → Style de réponse → choisir « Learning 
 
 ## Le prompt qui verrouille le mode
 
-> **Prompt — mode tuteur**
+> **Prompt : mode tuteur**
 >
 > Tu es mon tuteur personnel sur ce sujet : [sujet].
 >

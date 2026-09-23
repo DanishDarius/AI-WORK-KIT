@@ -2,7 +2,7 @@
 Guide original : Skills vs Plugins
 Source : https://www.saadiakaram.ai/guides/skills-vs-plugins
 Position réelle dans la bibliothèque au moment du traitement : 287/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Guide distinct des autres guides Skills déjà traités (234, 240, 280, 285) : angle conceptuel (différence Skill/Plugin et ordre d'adoption), pas une liste de Skills concrets — vérifié et confirmé distinct. Nom réel conservé (Claude, Notion, Stripe, GitHub).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Guide distinct des autres guides Skills déjà traités (234, 240, 280, 285) : angle conceptuel (différence Skill/Plugin et ordre d'adoption), pas une liste de Skills concrets. Vérifié et confirmé distinct. Nom réel conservé (Claude, Notion, Stripe, GitHub).
 ---
 
 # Skills et Plugins : la différence qui compte, et par lequel commencer
@@ -13,7 +13,7 @@ Skills, plugins, GPTs, agents : les termes se mélangent facilement. Voici la di
 
 ## La différence en deux phrases
 
-Un Skill fonctionne comme une recette : un prompt élaboré, conservé et réutilisé (« mon Skill d'audit produit »). Un Plugin, lui, est une extension qui donne à l'IA une capacité nouvelle — lire un fichier, appeler une API, dialoguer avec un CRM.
+Un Skill fonctionne comme une recette : un prompt élaboré, conservé et réutilisé (« mon Skill d'audit produit »). Un Plugin, lui, est une extension qui donne à l'IA une capacité nouvelle : lire un fichier, appeler une API, dialoguer avec un CRM.
 
 ## Quand adopter un Skill
 
@@ -21,7 +21,7 @@ Dès qu'une même tâche revient plus de trois fois par semaine. Un bon prompt s
 
 ## Quand adopter un Plugin
 
-Lorsque l'IA doit interagir avec un système extérieur : Notion, Stripe, un calendrier, GitHub. Sans plugin, elle reste aveugle à ces systèmes. Avec un plugin, elle peut agir directement — à condition de cadrer soigneusement les permissions, ce qui demande quelques minutes de configuration.
+Lorsque l'IA doit interagir avec un système extérieur : Notion, Stripe, un calendrier, GitHub. Sans plugin, elle reste aveugle à ces systèmes. Avec un plugin, elle peut agir directement, à condition de cadrer soigneusement les permissions, ce qui demande quelques minutes de configuration.
 
 ## Par lequel commencer ?
 
@@ -29,7 +29,7 @@ Toujours par les Skills. Cette étape permet de découvrir une dizaine de cas d'
 
 ## Le prompt pour détecter son premier Skill
 
-> **Prompt — détecter ton premier Skill**
+> **Prompt : détecter ton premier Skill**
 >
 > Je fais ces 10 tâches dans ma semaine :
 >

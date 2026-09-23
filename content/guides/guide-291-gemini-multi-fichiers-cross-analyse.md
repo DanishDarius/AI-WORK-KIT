@@ -21,7 +21,7 @@ La due diligence, d'abord : charger l'ensemble des documents d'un dossier et dem
 
 ## Le prompt d'analyse croisée entre fichiers
 
-> **Prompt — multi-fichiers Gemini**
+> **Prompt : multi-fichiers Gemini**
 >
 > J'ai chargé [N] fichiers (types : [PDF / audio / code]). Ne les résume pas.
 >

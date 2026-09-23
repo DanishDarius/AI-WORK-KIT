@@ -2,14 +2,14 @@
 Guide original : L'assistant hormones
 Source : https://www.saadiakaram.ai/guides/hormone-helper-skill
 Position réelle dans la bibliothèque au moment du traitement : 195/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Contenu de santé (cycle, sommeil, analyses sanguines) — traité strictement comme un outil organisationnel de préparation de rendez-vous médicaux, jamais comme un substitut de diagnostic. La limite explicite de l'original (ce skill n'est pas un médecin, toute hypothèse doit être validée en consultation) est conservée intégralement et mise en avant. La note sur la confidentialité des données provient telle quelle de la source d'origine, reformulée sans en changer le sens. Noms réels conservés (Claude, Flo, Oura, Apple Health, Google Fit).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Contenu de santé (cycle, sommeil, analyses sanguines), traité strictement comme un outil organisationnel de préparation de rendez-vous médicaux, jamais comme un substitut de diagnostic. La limite explicite de l'original (ce skill n'est pas un médecin, toute hypothèse doit être validée en consultation) est conservée intégralement et mise en avant. La note sur la confidentialité des données provient telle quelle de la source d'origine, reformulée sans en changer le sens. Noms réels conservés (Claude, Flo, Oura, Apple Health, Google Fit).
 ---
 
 # Un assistant pour croiser ses données hormonales et mieux préparer ses rendez-vous médicaux
 
 *Multi-outils · 5 min de lecture*
 
-Le cycle menstruel dans une application, le sommeil dans une autre, la variabilité de la fréquence cardiaque sur une montre connectée, les analyses sanguines dans un PDF de laboratoire, la peau observée à l'œil nu. Aucune de ces sources n'a accès aux autres — le lien entre elles échappe donc à tout le monde, y compris souvent au médecin traitant. Un outil bien construit peut, lui, faire apparaître ce lien.
+Le cycle menstruel dans une application, le sommeil dans une autre, la variabilité de la fréquence cardiaque sur une montre connectée, les analyses sanguines dans un PDF de laboratoire, la peau observée à l'œil nu. Aucune de ces sources n'a accès aux autres ; le lien entre elles échappe donc à tout le monde, y compris souvent au médecin traitant. Un outil bien construit peut, lui, faire apparaître ce lien.
 
 ## Pourquoi ces données ne communiquent pas entre elles
 
@@ -17,7 +17,7 @@ Chaque application de santé optimise son propre silo : l'une suit le cycle, l'a
 
 ## Le prompt d'assistant hormonal
 
-> **Prompt — assistant hormonal**
+> **Prompt : assistant hormonal**
 >
 > Tu es mon assistant santé hormonale. Mon rôle : croiser mes données pour faire ressortir des patterns que je ne vois pas seule.
 >
@@ -44,7 +44,7 @@ Cet outil ne remplace en rien un médecin. Il sert uniquement à préparer des r
 
 **Quelles applications exporter ?**
 
-Apple Health ou Google Fit en CSV, Oura via export PDF, le laboratoire via son compte patient. Il reste possible de tout saisir manuellement au départ — c'est étonnamment rapide.
+Apple Health ou Google Fit en CSV, Oura via export PDF, le laboratoire via son compte patient. Il reste possible de tout saisir manuellement au départ ; c'est étonnamment rapide.
 
 **Est-ce confidentiel ?**
 

@@ -96,12 +96,11 @@ export function MiseEnPlacePanel({
       <div className="aw-mep">
         <MepAISelector active={ia} onChange={onIAChange} />
         <div className="aw-panel aw-mep-soon">
-          <h2>Contenu bientôt disponible</h2>
+          <h2>Bientôt disponible pour {iaLabels[ia]}</h2>
           <p className="aw-bodytext">
-            Le guide de mise en place (outils, prompt prêt à copier,
-            automatisation) pour {iaLabels[ia]} et cette tâche arrive
-            prochainement. En attendant, essayez une autre IA ci-dessus ou
-            entraînez-vous dans l&apos;onglet &laquo; S&apos;entraîner &raquo;.
+            Outils, prompt et automatisation pour cette tâche arrivent bientôt.
+            En attendant, choisissez une autre IA ci-dessus ou entraînez-vous
+            dans l&apos;onglet « S&apos;entraîner ».
           </p>
         </div>
       </div>
@@ -115,7 +114,7 @@ export function MiseEnPlacePanel({
       <section className="aw-panel">
         <h2>
           <span className="aw-number">{String(++step).padStart(2, "0")}</span>{" "}
-          Outils à activer
+          Les outils à brancher
         </h2>
         <ul className="aw-outils">
           {outils.map((o) => (

@@ -21,9 +21,9 @@ Titre (en une ligne, action claire). Quand l'utiliser (déclencheur précis). In
 
 ## Le gabarit à copier
 
-> **Prompt — Skill, template universel**
+> **Prompt : Skill, template universel**
 >
-> # [Nom du Skill — verbe + objet]
+> # [Nom du Skill : verbe + objet]
 >
 > ## Quand l'utiliser
 > Tu utilises ce skill quand : [déclencheur en une phrase].
@@ -44,7 +44,7 @@ Titre (en une ligne, action claire). Quand l'utiliser (déclencheur précis). In
 > - [check 3]
 >
 > ## Format de sortie
-> [markdown / tableau / liste / JSON — préciser la structure exacte]
+> [markdown / tableau / liste / JSON : préciser la structure exacte]
 
 **Erreur de débutant à éviter :** empiler quinze étapes. Un Skill qui fonctionne tient en cinq à sept étapes. Au-delà, il vaut mieux le découper en deux skills distincts.
 

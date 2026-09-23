@@ -29,11 +29,11 @@ Personne ne promeut quelqu'un pour un master. On promeut quelqu'un qui sait rés
 
 ## Le diplôme prouve un passé, la compétence prouve un présent
 
-Les recruteurs les plus familiers de l'IA demandent de moins en moins de diplômes. Ils demandent des démonstrations concrètes — plus exigeant, mais plus rapide à acquérir.
+Les recruteurs les plus familiers de l'IA demandent de moins en moins de diplômes. Ils demandent des démonstrations concrètes, plus exigeant, mais plus rapide à acquérir.
 
 ## Le prompt à copier
 
-> **Prompt — auto-évaluation honnête**
+> **Prompt : auto-évaluation honnête**
 >
 > Évalue-moi sur ces 5 compétences IA :
 > 1. Cadrer un prompt
@@ -53,4 +53,4 @@ Les recruteurs les plus familiers de l'IA demandent de moins en moins de diplôm
 
 **Travailler sa compétence la plus faible, pas sa plus forte.**
 
-Un profil professionnel progresse quand la compétence la plus faible remonte — pas quand la plus forte se peaufine encore.
+Un profil professionnel progresse quand la compétence la plus faible remonte, pas quand la plus forte se peaufine encore.

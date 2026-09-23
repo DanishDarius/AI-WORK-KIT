@@ -9,7 +9,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Un fichier CSV client, mais aucun temps pour ouvrir un tableur. Codex, le mode code d'OpenAI, permet de générer un tableau de bord interactif en moins de trois minutes — pas une simple capture d'écran, un vrai livrable cliquable à envoyer directement au client.
+Un fichier CSV client, mais aucun temps pour ouvrir un tableur. Codex, le mode code d'OpenAI, permet de générer un tableau de bord interactif en moins de trois minutes, pas une simple capture d'écran, un vrai livrable cliquable à envoyer directement au client.
 
 ## Le déroulé en trois étapes
 
@@ -17,7 +17,7 @@ D'abord, déposer le fichier CSV. Ensuite, préciser ce que le client souhaite v
 
 ## Le prompt qui fonctionne à tous les coups
 
-> **Prompt — dashboard depuis CSV**
+> **Prompt : dashboard depuis CSV**
 >
 > Voici un fichier [nom.csv]. Construis un dashboard HTML autonome (un seul fichier, aucune dépendance externe sauf Chart.js via CDN).
 >

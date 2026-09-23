@@ -13,7 +13,7 @@ Le problème n'est pas l'outil, c'est le prompt. Un framework pour obtenir des v
 
 ## Pourquoi ça sent l'IA
 
-Des visuels générés par IA ne sont pas ratés parce que l'outil est mauvais : ils sont ratés parce que le prompt demande quelque chose de générique. Le modèle renvoie la médiane de ses données d'entraînement. Écrire « une pub moderne » produit un collage de dix mille pubs modernes — techniquement propre, mais créativement mort.
+Des visuels générés par IA ne sont pas ratés parce que l'outil est mauvais : ils sont ratés parce que le prompt demande quelque chose de générique. Le modèle renvoie la médiane de ses données d'entraînement. Écrire « une pub moderne » produit un collage de dix mille pubs modernes : techniquement propre, mais créativement mort.
 
 Le test est simple : si un prompt pourrait décrire dix mille images différentes, l'image obtenue ressemblera à dix mille images écrasées ensemble.
 
@@ -23,7 +23,7 @@ Les bons designers ne demandent jamais « un beau logo ». Ils demandent un obje
 
 Passer d'abord par un assistant conversationnel pour en tirer un vrai brief, avant d'envoyer quoi que ce soit vers un générateur d'images.
 
-> **Prompt — brief visuel anti-médiane**
+> **Prompt : brief visuel anti-médiane**
 >
 > Tu es mon rédacteur de brief design IA. Je vais utiliser un outil d'image IA pour créer un visuel. La plupart du temps, le résultat a l'air générique. Ton travail est de corriger ça en m'écrivant un brief assez précis pour échapper à la médiane IA.
 >
@@ -31,9 +31,9 @@ Passer d'abord par un assistant conversationnel pour en tirer un vrai brief, ava
 >
 > 1. Qu'est-ce que je crée ? (une ligne. Logo, post social, pub, mockup produit, illustration, packaging, etc.)
 >
-> 2. C'est pour QUOI ? (l'usage précis — carrousel Instagram, pub payante, pitch deck, carte de visite)
+> 2. C'est pour QUOI ? (l'usage précis : carrousel Instagram, pub payante, pitch deck, carte de visite)
 >
-> 3. Quelles 3 émotions ça doit provoquer quand quelqu'un le regarde ? (de vraies émotions — « premium avec une légère intimidation », pas « professionnel »)
+> 3. Quelles 3 émotions ça doit provoquer quand quelqu'un le regarde ? (de vraies émotions : « premium avec une légère intimidation », pas « professionnel »)
 >
 > 4. Deux références réelles et précises. Deux marques, photographes, designers, films ou albums dont je veux ressentir la proximité visuelle. Sois tranché.
 >
@@ -71,4 +71,4 @@ Sauvegarder le prompt exact à chaque fois qu'un visuel fonctionne vraiment. Le 
 
 ## À retenir
 
-Le ton générique trahit instantanément. Si un prompt manque de références, de contraintes et d'intention émotionnelle, l'image bascule aussitôt dans la zone « IA visible ». Astuce opérationnelle : toujours écrire une anti-référence — c'est souvent ce qui nettoie le plus le résultat.
+Le ton générique trahit instantanément. Si un prompt manque de références, de contraintes et d'intention émotionnelle, l'image bascule aussitôt dans la zone « IA visible ». Astuce opérationnelle : toujours écrire une anti-référence ; c'est souvent ce qui nettoie le plus le résultat.

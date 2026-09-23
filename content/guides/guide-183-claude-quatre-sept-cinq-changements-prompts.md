@@ -25,7 +25,7 @@ Si les réponses semblent différentes depuis la dernière mise à jour, ce n'es
 
 ## Le modèle de prompt à jour
 
-> **Prompt — template Claude 4.7**
+> **Prompt : template Claude 4.7**
 >
 > Contexte
 > [Qui tu es, ce que tu fais, l'objectif réel]

@@ -1,7 +1,7 @@
 ---
 Guide original : TWIN · Créer ton jumeau IA, des photos à la vidéo
 Source : https://www.saadiakaram.ai/guides/twin-creer-son-jumeau-ia
-Position réelle dans la bibliothèque au moment du traitement : 293/293 — dernier guide de la bibliothèque, confirmé via vérification fraîche de la stabilité de l'ordre des rayons (293 liens uniques au total, position 0-indexée 292).
+Position réelle dans la bibliothèque au moment du traitement : 293/293, dernier guide de la bibliothèque, confirmé via vérification fraîche de la stabilité de l'ordre des rayons (293 liens uniques au total, position 0-indexée 292).
 Statut : 1 image réelle détectée dans le DOM (character-sheet.png, alt : « Exemple de planche photographique générée : Saadia vue de face, de profil et de dos, avec une tenue noire cohérente »), référencée en ressources-visuelles.md sous réf. #1 et marquée à sa place dans le texte ci-dessous. 0 tableau trouvé dans le DOM. 4 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Guide long (20 min) et technique : les six prompts complets (cinq en français, un en anglais pour Custom Motion) ont été conservés intégralement avec leurs placeholders, ainsi que la checklist de contrôle avant partage et les encadrés de dépannage ; seule la prose environnante a été reformulée. Garde-fous de consentement et de vérification d'identité de la source intégralement préservés (autorisation de la personne représentée, vidéo de consentement HeyGen, contrôle à 100 % par comparaison avec les photos réelles, avertissement contre la présentation d'un contenu généré comme une prise réelle). Noms réels conservés (ChatGPT, OpenAI, Fish Audio, ElevenLabs, HeyGen).
 ---
 
@@ -13,9 +13,9 @@ Il s'agit ici de construire une vidéo dans laquelle un avatar personnel parle a
 
 ## Le premier essai en trois volets
 
-L'image d'abord : des photos réelles transformées en planche de référence vérifiée, puis en look — via ChatGPT. La voix ensuite : une prise propre transformée en clone, puis en audio approuvé — via Fish Audio ou ElevenLabs. La présence enfin : une vidéo de référence transformée en avatar, puis en scènes — via HeyGen.
+L'image d'abord : des photos réelles transformées en planche de référence vérifiée, puis en look, via ChatGPT. La voix ensuite : une prise propre transformée en clone, puis en audio approuvé, via Fish Audio ou ElevenLabs. La présence enfin : une vidéo de référence transformée en avatar, puis en scènes, via HeyGen.
 
-La préparation nécessite des photos réelles, un enregistrement vocal, et une vidéo où l'on parle face caméra. L'accès à la génération d'images dans ChatGPT, à un outil de clonage vocal et à HeyGen est requis — fonctions, crédits et limites dépendant du compte utilisé ; l'offre affichée gagne à être vérifiée avant toute génération payante.
+La préparation nécessite des photos réelles, un enregistrement vocal, et une vidéo où l'on parle face caméra. L'accès à la génération d'images dans ChatGPT, à un outil de clonage vocal et à HeyGen est requis (fonctions, crédits et limites dépendant du compte utilisé) ; l'offre affichée gagne à être vérifiée avant toute génération payante.
 
 La méthode se résume en moins d'une minute, mais produire un jumeau convaincant demande préparation et essais successifs. La ressemblance et le naturel du résultat ne sont jamais garantis par un simple prompt.
 
@@ -23,11 +23,11 @@ La méthode se résume en moins d'une minute, mais produire un jumeau convaincan
 
 Un dossier dédié à ce premier essai permet de séparer les références réelles, les images générées et les exports approuvés, pour retrouver facilement ce qui a été réellement validé.
 
-**Photos** — face, profil, dos, sous une lumière douce, avec une image nette et une expression habituelle. Garder la même coiffure et la même tenue ; pour le profil, montrer la silhouette du nez et du menton sans tourner les yeux vers l'objectif.
+**Photos** : face, profil, dos, sous une lumière douce, avec une image nette et une expression habituelle. Garder la même coiffure et la même tenue ; pour le profil, montrer la silhouette du nez et du menton sans tourner les yeux vers l'objectif.
 
-**Audio** — une voix isolée, une seule personne, sans musique ni écho gênant. En partant de vidéos existantes, extraire une portion où l'on parle seul, sans son ajouté, et écouter le fichier entier avant de l'envoyer.
+**Audio** : une voix isolée, une seule personne, sans musique ni écho gênant. En partant de vidéos existantes, extraire une portion où l'on parle seul, sans son ajouté, et écouter le fichier entier avant de l'envoyer.
 
-**Vidéo** — une prise continue, face caméra, avec sa vraie voix, illustrant sa façon de bouger. Une base de deux minutes en 1080p suit les conseils de tournage de HeyGen ; les exigences précises du parcours affiché dans le compte utilisé doivent ensuite être suivies.
+**Vidéo** : une prise continue, face caméra, avec sa vraie voix, illustrant sa façon de bouger. Une base de deux minutes en 1080p suit les conseils de tournage de HeyGen ; les exigences précises du parcours affiché dans le compte utilisé doivent ensuite être suivies.
 
 Pour un projet réalisé au nom d'un client, l'usage prévu de son visage et de sa voix doit être validé par cette personne avant l'import de ses fichiers ; elle devra elle-même réaliser les vérifications exigées par les outils. Les références sont à conserver dans un espace à accès limité, avec un accord explicite sur les usages et la durée de conservation.
 
@@ -35,11 +35,11 @@ Pour un projet réalisé au nom d'un client, l'usage prévu de son visage et de 
 
 Le character sheet est une planche de référence rassemblant plusieurs angles pour comparer visage, coiffure et tenue. Il permet de garder une cohérence visuelle sur les prochaines images générées, mais ne remplace pas la vidéo nécessaire au Digital Twin de HeyGen.
 
-La démarche : ouvrir un nouveau chat dans ChatGPT, joindre les photos réelles via le bouton d'ajout et attendre l'apparition de leurs vignettes, coller le prompt ci-dessous en remplaçant les champs entre crochets, puis comparer le résultat aux originaux à taille égale (forme du visage, lunettes, expression, coiffure) — en ne conservant qu'une planche réellement reconnaissable.
+La démarche : ouvrir un nouveau chat dans ChatGPT, joindre les photos réelles via le bouton d'ajout et attendre l'apparition de leurs vignettes, coller le prompt ci-dessous en remplaçant les champs entre crochets, puis comparer le résultat aux originaux à taille égale (forme du visage, lunettes, expression, coiffure), en ne conservant qu'une planche réellement reconnaissable.
 
-[IMAGE — réf. #1 — description : voir ressources-visuelles.md]
+[IMAGE, réf. #1, description : voir ressources-visuelles.md]
 
-> **Prompt — ChatGPT, la planche de référence**
+> **Prompt : ChatGPT, la planche de référence**
 >
 > Je veux préparer une planche de référence photographique de moi pour mes vidéos IA.
 >
@@ -58,9 +58,9 @@ Avec seulement des photos de face et de profil, l'outil peut imaginer une vue de
 
 ## Changer le décor sans changer le visage
 
-Un seul décor est recommandé pour ce premier essai — par exemple un bureau avec une lumière de jour. La photo réelle et la planche vérifiée sont à joindre de nouveau : demander simultanément plusieurs tenues, poses et environnements rend les défauts plus difficiles à repérer.
+Un seul décor est recommandé pour ce premier essai : par exemple un bureau avec une lumière de jour. La photo réelle et la planche vérifiée sont à joindre de nouveau : demander simultanément plusieurs tenues, poses et environnements rend les défauts plus difficiles à repérer.
 
-> **Prompt — ChatGPT, un look cohérent**
+> **Prompt : ChatGPT, un look cohérent**
 >
 > Crée une nouvelle photo de la personne montrée dans les pièces jointes.
 >
@@ -74,11 +74,11 @@ Un seul décor est recommandé pour ce premier essai — par exemple un bureau a
 >
 > Si une information manque et change fortement le résultat, pose une question avant la génération. Produis une seule proposition. Je contrôlerai sa ressemblance avec l'original avant de l'utiliser comme look.
 
-**Le contrôle à 100 %** consiste à placer l'original et la génération côte à côte, en vérifiant d'abord le visage, puis la coiffure et les accessoires — un visage plus lisse ou plus souriant pouvant être agréable à regarder tout en ressemblant moins à la personne réelle.
+**Le contrôle à 100 %** consiste à placer l'original et la génération côte à côte, en vérifiant d'abord le visage, puis la coiffure et les accessoires : un visage plus lisse ou plus souriant pouvant être agréable à regarder tout en ressemblant moins à la personne réelle.
 
 Si un détail dérive, l'original et la génération sont à joindre ensemble avec la description précise du défaut observé ; après correction, une comparaison complète doit être refaite, une retouche locale pouvant modifier d'autres parties de l'image.
 
-> **Prompt — ChatGPT, corriger une dérive d'identité**
+> **Prompt : ChatGPT, corriger une dérive d'identité**
 >
 > Je joins deux images : A est ma photo réelle de référence ; B est la génération à corriger.
 >
@@ -91,19 +91,19 @@ Si un détail dérive, l'original et la génération sont à joindre ensemble av
 
 ## Retrouver sa voix, écouter avant d'exporter
 
-Deux parcours permettent de produire un fichier audio disant le texte choisi avec la voix retenue, destiné à être ensuite importé dans une scène HeyGen — il est aussi possible de partir directement d'une voix enregistrée ou de celle déjà disponible dans l'avatar HeyGen.
+Deux parcours permettent de produire un fichier audio disant le texte choisi avec la voix retenue, destiné à être ensuite importé dans une scène HeyGen. Il est aussi possible de partir directement d'une voix enregistrée ou de celle déjà disponible dans l'avatar HeyGen.
 
 **Fish Audio**, pour tester une voix à partir d'extraits courts et propres (dix secondes minimum annoncées dans sa documentation) : ouvrir Create Voice puis Instant Voice Clone si ce choix est proposé, ajouter les fichiers audio ou enregistrer une prise, nommer clairement la voix et vérifier sa visibilité avant enregistrement, tester la prononciation via la génération de parole, puis générer et télécharger le texte final une fois validé. Fish Audio conseille plusieurs extraits courts formant un paragraphe cohérent ; en cas de résultat mécanique, une prise naturelle de trente à soixante secondes peut mieux fonctionner.
 
-Réserver une heure pour préparer les enregistrements — installer le micro, faire plusieurs prises, écouter — reste conseillé, sans que cette durée corresponde au minimum exigé par le clonage instantané, qui dépend du mode choisi. Parler de façon vivante tout en gardant un ton et un niveau sonore cohérents est recommandé ; pour un premier clone, mieux vaut éviter de mélanger chuchotements, cris et prises enregistrées avec des micros différents. Pour le Professional Voice Cloning d'ElevenLabs, un parcours distinct s'applique : il exige davantage d'audio, et le propriétaire de la voix doit créer et vérifier lui-même sa voix, y compris pour un projet réalisé pour un client.
+Réserver une heure pour préparer les enregistrements (installer le micro, faire plusieurs prises, écouter) reste conseillé, sans que cette durée corresponde au minimum exigé par le clonage instantané, qui dépend du mode choisi. Parler de façon vivante tout en gardant un ton et un niveau sonore cohérents est recommandé ; pour un premier clone, mieux vaut éviter de mélanger chuchotements, cris et prises enregistrées avec des micros différents. Pour le Professional Voice Cloning d'ElevenLabs, un parcours distinct s'applique : il exige davantage d'audio, et le propriétaire de la voix doit créer et vérifier lui-même sa voix, y compris pour un projet réalisé pour un client.
 
-**Texte d'écoute proposé (15–20 secondes)** : « Bonjour, je prépare ma première vidéo avec mon jumeau IA. Je commence par un exemple simple, puis je vérifie la voix et les mouvements. Mon objectif est de transmettre une idée clairement, avec une façon de parler qui me ressemble. » Ajouter son prénom et deux mots propres à son activité, puis comparer l'essai à sa voix réelle avec le même casque et à un volume proche.
+**Texte d'écoute proposé (15 à 20 secondes)** : « Bonjour, je prépare ma première vidéo avec mon jumeau IA. Je commence par un exemple simple, puis je vérifie la voix et les mouvements. Mon objectif est de transmettre une idée clairement, avec une façon de parler qui me ressemble. » Ajouter son prénom et deux mots propres à son activité, puis comparer l'essai à sa voix réelle avec le même casque et à un volume proche.
 
 ## Donner un texte, puis une présence
 
 Le texte se rédige d'abord, se lit à voix haute, puis se raccourcit si nécessaire ; les mots difficiles à prononcer sont à remplacer avant la génération vidéo. Le prompt prépare une proposition, la validation finale du message restant entièrement à la charge de l'utilisateur.
 
-> **Prompt — ChatGPT, un script qui se dit à voix haute**
+> **Prompt : ChatGPT, un script qui se dit à voix haute**
 >
 > Aide-moi à écrire un court script pour une vidéo avec mon jumeau IA.
 >
@@ -120,23 +120,23 @@ Le texte se rédige d'abord, se lit à voix haute, puis se raccourcit si nécess
 >
 > Retourne : 1) le texte parlé seul, sans indications scéniques ; 2) une proposition de découpage en trois scènes ; 3) les mots dont je dois vérifier la prononciation. Estime la durée, puis indique que je dois la mesurer en lisant le texte. Ne promets pas une durée exacte.
 
-Dans HeyGen, la démarche consiste à ouvrir Avatars → New Avatar → Clone a real person (ou le parcours Digital Twin affiché), ajouter la vidéo réelle préparée en amont en conservant son audio pour aider à l'apprentissage de l'articulation, puis réaliser la vidéo de consentement demandée par HeyGen — la personne représentée devant elle-même suivre cette vérification. Une fois l'avatar prêt, un projet se crée dans AI Studio en choisissant l'avatar et un look vérifié ; une image générée doit passer par le parcours de look ou de Photo Avatar approprié, une simple image posée sur le canevas ne devenant pas un avatar animé. Pour chaque scène, le texte s'associe à une voix disponible ou à l'audio approuvé importé via Upload Audio (jamais déposé comme musique de fond), puis une scène d'essai s'écoute, ses pauses s'ajustent, et se génère — le mouvement complet se jugeant sur le rendu généré, non sur l'image fixe de l'éditeur.
+Dans HeyGen, la démarche consiste à ouvrir Avatars → New Avatar → Clone a real person (ou le parcours Digital Twin affiché), ajouter la vidéo réelle préparée en amont en conservant son audio pour aider à l'apprentissage de l'articulation, puis réaliser la vidéo de consentement demandée par HeyGen, la personne représentée devant elle-même suivre cette vérification. Une fois l'avatar prêt, un projet se crée dans AI Studio en choisissant l'avatar et un look vérifié ; une image générée doit passer par le parcours de look ou de Photo Avatar approprié, une simple image posée sur le canevas ne devenant pas un avatar animé. Pour chaque scène, le texte s'associe à une voix disponible ou à l'audio approuvé importé via Upload Audio (jamais déposé comme musique de fond), puis une scène d'essai s'écoute, ses pauses s'ajustent, et se génère, le mouvement complet se jugeant sur le rendu généré, non sur l'image fixe de l'éditeur.
 
 ## Diriger chaque scène avec des gestes mesurés
 
-Dans une scène compatible, Customize Motion → Custom Motion permet de décrire l'attitude et un geste utile — les libellés pouvant varier selon le moteur sélectionné. Un même avatar peut porter une intention différente par scène : expliquer, nuancer, inviter. Un point utile à retenir : commencer par une seule scène, puis l'écouter jusqu'au bout.
+Dans une scène compatible, Customize Motion → Custom Motion permet de décrire l'attitude et un geste utile, les libellés pouvant varier selon le moteur sélectionné. Un même avatar peut porter une intention différente par scène : expliquer, nuancer, inviter. Un point utile à retenir : commencer par une seule scène, puis l'écouter jusqu'au bout.
 
 Le prompt suivant est rédigé en anglais afin de pouvoir être collé tel quel dans ce champ de l'interface ; il s'agit d'une direction proposée, non d'un contrôle exact des gestes ou de leur timing.
 
-> **Prompt — HeyGen, Custom Motion, une scène à la fois**
+> **Prompt : HeyGen, Custom Motion, une scène à la fois**
 >
 > The speaker addresses the camera in a calm, conversational way. Keep the gaze near the lens, with subtle natural blinking and relaxed shoulders. Add one small open-hand gesture when emphasizing the main point: [the idea being emphasized]. Return to a resting position afterward. Keep facial expression close to the reference, with a slight change in expression only on [the relevant phrase]. Keep the camera static. Avoid repeated nodding, large arm movements, exaggerated smiling and abrupt pose changes.
 
 Si le résultat bouge trop, retirer le geste, raccourcir la scène et comparer un nouvel essai : un plan stable avec une bonne voix peut se révéler plus convaincant qu'une longue liste de mouvements demandés.
 
-**Variante — préparer la vidéo avec Video Agent.** Sur l'accueil de HeyGen, Video Agent permet de choisir l'avatar et la voix, d'ajouter ses références, de régler l'orientation sur portrait, et d'utiliser le mode de préparation (Chat Mode) pour revoir le plan avant production ; le mode Autopilot peut lancer la production plus directement.
+**Variante : préparer la vidéo avec Video Agent.** Sur l'accueil de HeyGen, Video Agent permet de choisir l'avatar et la voix, d'ajouter ses références, de régler l'orientation sur portrait, et d'utiliser le mode de préparation (Chat Mode) pour revoir le plan avant production ; le mode Autopilot peut lancer la production plus directement.
 
-> **Prompt — HeyGen Video Agent, préparer le montage**
+> **Prompt : HeyGen Video Agent, préparer le montage**
 >
 > Prépare une vidéo pédagogique en français, au format portrait 9:16, pour [public]. Durée visée : [durée].
 >
@@ -152,7 +152,7 @@ Si le résultat bouge trop, retirer le geste, raccourcir la scène et comparer u
 >
 > Je vérifierai le plan et l'estimation de crédits affichée dans l'application avant de lancer la génération. Ne présente pas ce message comme un blocage technique de génération : j'utiliserai le mode de préparation disponible dans l'interface.
 
-Après génération, l'intégralité de la vidéo est à revoir, avec correction des scènes concernées dans les options d'édition disponibles — l'agent pouvant organiser le montage, la validation finale restant toujours du ressort de l'utilisateur.
+Après génération, l'intégralité de la vidéo est à revoir, avec correction des scènes concernées dans les options d'édition disponibles, l'agent pouvant organiser le montage, la validation finale restant toujours du ressort de l'utilisateur.
 
 ## Regarder le rendu et corriger à la source
 

@@ -17,7 +17,7 @@ Les applications de langues font souvent tourner en rond au niveau intermédiair
 
 ## Le prompt à copier
 
-> **Prompt — projet tuteur de langue**
+> **Prompt : projet tuteur de langue**
 >
 > Tu es mon tuteur de [langue].
 >

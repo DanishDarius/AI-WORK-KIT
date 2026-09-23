@@ -49,14 +49,14 @@ export default async function GuidePage({ params }: GuidePageProps) {
         <aside className="aw-guide-reading-note">
           <span>Dans ce guide</span>
           <strong>{guide.duration}</strong>
-          <p>Lisez à votre rythme, puis copiez les prompts pour passer directement à la pratique.</p>
+          <p>Lisez, copiez les prompts, testez-les tout de suite sur votre travail.</p>
         </aside>
         <article><GuideMarkdown markdown={guide.markdown} guideNumber={guide.number} /></article>
       </div>
 
       <section className="aw-guide-next" aria-labelledby="next-guides-title">
         <p className="aw-library-kicker">À lire ensuite</p>
-        <h2 id="next-guides-title">Continuez à votre rythme.</h2>
+        <h2 id="next-guides-title">Le guide suivant, dans la foulée.</h2>
         <div>
           {nextGuides.map((next) => (
             <Link key={next.slug} href={`/guides/${next.slug}`}>

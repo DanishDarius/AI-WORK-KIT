@@ -2,7 +2,7 @@
 Guide original : Semaine IA finance : ce qui vient de tomber
 Source : https://www.saadiakaram.ai/guides/finance-ai-week
 Position réelle dans la bibliothèque au moment du traitement : 159/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (guide long, 4 prompts complets). Noms de produits et partenaires de données réels conservés comme faits (Claude for Financial Services, Anthropic, Perplexity Finance, Databricks, Snowflake, LSEG, Moody's, MT Newswires, Excel, PowerPoint, Word, Microsoft 365, Claude Opus 4, SEC/EDGAR, FactSet, S&P Global, Morningstar, Quartr). Contenu financier — tous les avertissements de la source (« pas un conseil en investissement », nécessité de vérifier les chiffres et de consulter un conseiller qualifié) ont été intégralement conservés. Le titre original, ancré dans l'actualité d'une semaine précise, a été généralisé pour rester utilisable dans la durée.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (guide long, 4 prompts complets). Noms de produits et partenaires de données réels conservés comme faits (Claude for Financial Services, Anthropic, Perplexity Finance, Databricks, Snowflake, LSEG, Moody's, MT Newswires, Excel, PowerPoint, Word, Microsoft 365, Claude Opus 4, SEC/EDGAR, FactSet, S&P Global, Morningstar, Quartr). Contenu financier : tous les avertissements de la source (« pas un conseil en investissement », nécessité de vérifier les chiffres et de consulter un conseiller qualifié) ont été intégralement conservés. Le titre original, ancré dans l'actualité d'une semaine précise, a été généralisé pour rester utilisable dans la durée.
 ---
 
 # Deux outils IA pour la finance, quatre prompts sourcés à copier
@@ -13,7 +13,7 @@ Des offres IA spécialisées finance, les faits sourcés, la part honnête entre
 
 ## Le problème que personne ne mentionne assez
 
-La finance est le secteur où une IA qui se trompe avec assurance coûte le plus cher. Un modèle qui invente un chiffre, une source ou une tendance, et une décision se prend sur du vent. C'est précisément pour cette raison que les outils IA dédiés à la finance tournent tous autour du même principe : la traçabilité. Pas seulement « l'IA donne la réponse », mais « l'IA donne la réponse ET la source, cellule par cellule, dépôt par dépôt ». Sans cela, aucun professionnel ne s'engage — et personne d'autre ne devrait le faire non plus.
+La finance est le secteur où une IA qui se trompe avec assurance coûte le plus cher. Un modèle qui invente un chiffre, une source ou une tendance, et une décision se prend sur du vent. C'est précisément pour cette raison que les outils IA dédiés à la finance tournent tous autour du même principe : la traçabilité. Pas seulement « l'IA donne la réponse », mais « l'IA donne la réponse ET la source, cellule par cellule, dépôt par dépôt ». Sans cela, aucun professionnel ne s'engage, et personne d'autre ne devrait le faire non plus.
 
 Une règle à retenir avant tout prompt : ne jamais faire confiance à un chiffre que l'IA ne rattache pas à une source vérifiable. Les outils présentés ci-dessous sont construits autour de ce principe, et les prompts qui suivent forcent la citation systématique. C'est ce qui distingue s'informer de se raconter une histoire.
 
@@ -21,7 +21,7 @@ Une règle à retenir avant tout prompt : ne jamais faire confiance à un chiffr
 
 **Claude for Financial Services (Anthropic).** Une offre pensée pour les institutions : des modèles d'agents prêts à l'emploi pour les tâches les plus lourdes (construire un pitchbook, filtrer des dossiers de conformité, clôturer les comptes en fin de mois, réaliser une revue de valorisation). Chaque agent combine des compétences, des connecteurs de données gouvernés (Databricks, Snowflake, LSEG, Moody's, MT Newswires) et des sous-agents. Point clé : chaque chiffre produit est attribué à sa source, pour qu'un analyste puisse remonter à la donnée avant d'agir. Claude s'intègre aussi dans Excel, PowerPoint et Word via les modules complémentaires Microsoft 365 : dans Excel, il lit, analyse et modifie le tableur en direct, débogue les formules et renvoie aux cellules concernées. Repère de crédibilité : Claude Opus 4 a réussi cinq des sept niveaux d'une compétition de modélisation financière et obtenu un score de 83 % sur des tâches Excel complexes.
 
-Honnêteté : cette offre est conçue pour les banques et les fonds, pas pour un usage individuel. Mais le cœur du système — une IA qui lit et analyse des fichiers en citant chaque chiffre — reste accessible aujourd'hui à tout un chacun, en déposant son propre tableur ou son export bancaire. C'est exactement ce qu'exploite le prompt 4 ci-dessous.
+Honnêteté : cette offre est conçue pour les banques et les fonds, pas pour un usage individuel. Mais le cœur du système (une IA qui lit et analyse des fichiers en citant chaque chiffre) reste accessible aujourd'hui à tout un chacun, en déposant son propre tableur ou son export bancaire. C'est exactement ce qu'exploite le prompt 4 ci-dessous.
 
 **Perplexity Finance.** Un espace gratuit qui réunit en une seule interface : prix en temps réel, graphiques, historique de résultats, notes d'analystes, une cartographie sectorielle, un outil de filtrage en langage naturel, et un accès direct aux dépôts réglementaires officiels (rapports annuels, trimestriels, événements significatifs, introductions en bourse). Son centre de résultats agrège le calendrier des publications et synthétise un call en direct : transcription, résumé, extraction du chiffre d'affaires et du bénéfice par action en temps réel. Partenaires de données : sources réglementaires officielles, FactSet, S&P Global, Morningstar, LSEG, Quartr, entre autres.
 
@@ -31,7 +31,7 @@ Le duo qui fonctionne : Perplexity Finance pour la donnée fraîche et sourcée,
 
 ## Les quatre prompts à copier
 
-> **Prompt 1 — le filtre en langage naturel (Perplexity Finance)**
+> **Prompt 1 : le filtre en langage naturel (Perplexity Finance)**
 >
 > Sur les marchés actions, trouve-moi les sociétés qui cochent TOUTES ces conditions,
 > avec la donnée la plus récente et la source pour chaque critère :
@@ -45,7 +45,7 @@ Le duo qui fonctionne : Perplexity Finance pour la donnée fraîche et sourcée,
 > et une phrase sur ce que fait la société. Cite la source et la date de chaque chiffre.
 > Si un critère n'est pas vérifiable, dis-le au lieu de deviner.
 
-> **Prompt 2 — la thèse optimiste et pessimiste d'une action (Claude, données Perplexity)**
+> **Prompt 2 : la thèse optimiste et pessimiste d'une action (Claude, données Perplexity)**
 >
 > Voici des données récentes et sourcées sur l'action [TICKER / nom] :
 > [Colle ici : prix, résultats récents, extraits du dernier dépôt réglementaire, notes d'analystes.]
@@ -62,7 +62,7 @@ Le duo qui fonctionne : Perplexity Finance pour la donnée fraîche et sourcée,
 > Règle absolue : n'utilise QUE les données fournies. Si une information
 > manque, écris « non disponible dans les données fournies ». N'invente aucun chiffre.
 
-> **Prompt 3 — décrypter des résultats trimestriels en deux minutes (Claude)**
+> **Prompt 3 : décrypter des résultats trimestriels en deux minutes (Claude)**
 >
 > Voici le compte rendu des résultats trimestriels de [société] :
 > [Colle le résumé ou la transcription du centre de résultats.]
@@ -77,7 +77,7 @@ Le duo qui fonctionne : Perplexity Finance pour la donnée fraîche et sourcée,
 >
 > Si une donnée n'est pas dans le texte, dis « non précisé ». Zéro invention.
 
-> **Prompt 4 — l'audit de son budget personnel (Claude et son propre fichier)**
+> **Prompt 4 : l'audit de son budget personnel (Claude et son propre fichier)**
 >
 > Je te donne l'export de mes dépenses (fichier joint).
 >

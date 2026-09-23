@@ -27,7 +27,7 @@ En retirant l'idée de « code » du nom : l'utilisateur décrit, l'outil constr
 
 ## Le prompt à copier
 
-> **Prompt — audit de dossier**
+> **Prompt : audit de dossier**
 >
 > Tu as accès à ce dossier : [chemin]
 >
@@ -46,4 +46,4 @@ Toujours travailler sur une copie du dossier, jamais sur l'original.
 
 **L'outil intimide, pas le résultat.**
 
-Une journée d'apprentissage permet d'éviter des semaines de travail manuel — un investissement qui se rentabilise vite.
+Une journée d'apprentissage permet d'éviter des semaines de travail manuel, un investissement qui se rentabilise vite.

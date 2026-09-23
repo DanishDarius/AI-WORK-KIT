@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 };
 export const metadata: Metadata = {
   title: "AI WORK KIT",
-  description: "Des tâches concrètes et des prompts pour utiliser l’IA dans votre travail.",
+  description: "Choisissez une tâche, copiez le prompt, gagnez du temps. L’IA appliquée à votre métier.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

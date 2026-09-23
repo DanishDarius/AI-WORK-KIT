@@ -13,7 +13,7 @@ Portails clients, tableaux de bord, applications : il suffit de décrire ce que 
 
 ## Le principe
 
-Claude Code permet de construire de vrais outils — portails, tableaux de bord, micro-applications — sans compétence en programmation. L'utilisateur décrit ce qu'il veut, l'IA écrit le code, déploie, puis itère.
+Claude Code permet de construire de vrais outils (portails, tableaux de bord, micro-applications) sans compétence en programmation. L'utilisateur décrit ce qu'il veut, l'IA écrit le code, déploie, puis itère.
 
 ## Les trois premiers projets à lancer
 
@@ -25,7 +25,7 @@ Claude Code permet de construire de vrais outils — portails, tableaux de bord,
 
 ## Le prompt à copier
 
-> **Prompt — premier outil avec l'IA**
+> **Prompt : premier outil avec l'IA**
 >
 > Construis-moi un outil web simple.
 >
@@ -34,10 +34,10 @@ Claude Code permet de construire de vrais outils — portails, tableaux de bord,
 > Données à stocker : [liste]
 > Pas besoin de gérer : [ex. paiement, comptes utilisateurs si pas nécessaire]
 >
-> Étape 1 — Pose-moi 5 questions pour cadrer le projet
-> Étape 2 — Propose-moi le plus petit produit minimum viable qui résout le problème
-> Étape 3 — Construis-le étape par étape, en m'expliquant chaque écran AVANT de coder
-> Étape 4 — Donne-moi le lien de prévisualisation à la fin
+> Étape 1 : Pose-moi 5 questions pour cadrer le projet
+> Étape 2 : Propose-moi le plus petit produit minimum viable qui résout le problème
+> Étape 3 : Construis-le étape par étape, en m'expliquant chaque écran AVANT de coder
+> Étape 4 : Donne-moi le lien de prévisualisation à la fin
 
 ## L'erreur classique
 

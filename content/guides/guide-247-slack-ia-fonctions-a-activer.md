@@ -24,7 +24,7 @@ Les « huddles intelligents » qui transcrivent et résument les appels restent 
 
 ## Le réflexe à installer dès cette semaine
 
-> **Prompt — résumé matin**
+> **Prompt : résumé matin**
 >
 > Dans Slack, ouvre l'IA et tape :
 >
@@ -39,7 +39,7 @@ Les « huddles intelligents » qui transcrivent et résument les appels restent 
 
 ## Le garde-fou
 
-N'activer que les fonctions réellement testées dans la semaine. Tout activer d'un coup produit du bruit — et le bruit mène généralement à tout désactiver au bout de trois jours.
+N'activer que les fonctions réellement testées dans la semaine. Tout activer d'un coup produit du bruit, et le bruit mène généralement à tout désactiver au bout de trois jours.
 
 ## Questions fréquentes
 

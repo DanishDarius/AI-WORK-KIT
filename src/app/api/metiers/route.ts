@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
-// GET /api/metiers — liste des 12 métiers avec le nombre de tâches de chacun
-// (une tâche pouvant appartenir à plusieurs métiers — relation many-to-many
+// GET /api/metiers : liste des 12 métiers avec le nombre de tâches de chacun
+// (une tâche pouvant appartenir à plusieurs métiers, relation many-to-many
 // via la table metiers_taches).
 export async function GET() {
   const access = await requireActiveUser();

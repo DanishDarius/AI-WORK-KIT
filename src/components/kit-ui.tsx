@@ -5,7 +5,7 @@ export { Shell } from "./kit-shell";
 export function Badge({ ia }: { ia: IA | null }) {
   return (
     <span className={`badge ${ia ? `badge-${ia}` : "badge-neutral"}`}>
-      {ia ? iaLabels[ia] : "Chemin à choisir"}
+      {ia ? iaLabels[ia] : "IA à choisir"}
     </span>
   );
 }
@@ -40,7 +40,16 @@ export function ResourceState({
   const needsLogin = error?.includes("session") || error?.includes("connecté");
   return (
     <div className="panel py-12" role={error ? "alert" : "status"}>
-      <p>{error || "Chargement de votre espace… Cela peut prendre quelques secondes."}</p>
+      {error ? (
+        <p>{error}</p>
+      ) : (
+        <div className="aw-skeleton" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+      )}
+      {!error && <span className="sr-only">Chargement en cours</span>}
       {error ? (
               needsLogin ? (
                   <Link className="button mt-5" href="/connexion">
@@ -51,9 +60,7 @@ export function ResourceState({
             Réessayer
           </button>
         )
-      ) : (
-        <div className="mt-5 h-2 w-32 animate-pulse rounded bg-slate-200" />
-      )}
+      ) : null}
     </div>
   );
 }
@@ -73,8 +80,8 @@ export function Back({
 // Liste du glossaire IA (table `glossaire`, identique pour tous les métiers).
 // Utilisée à la fois sur une fiche métier et sur la page "Comprendre les IA".
 export function GlossaireList({
-  title = "Le glossaire IA",
-  eyebrow = "Les mots utiles",
+  title = "Les mots de l’IA, expliqués simplement",
+  eyebrow = "Glossaire",
 }: {
   title?: string;
   eyebrow?: string;
@@ -97,7 +104,7 @@ export function GlossaireList({
           </details>
         ))
       ) : (
-        <p>Le glossaire n’est pas encore disponible.</p>
+        <p>Le glossaire arrive bientôt.</p>
       )}
     </section>
   );

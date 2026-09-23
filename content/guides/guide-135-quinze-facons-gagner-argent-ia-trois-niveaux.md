@@ -15,41 +15,41 @@ De vrais services, de vraies fourchettes tarifaires, de vrais exemples. Du side-
 
 Quinze pistes pour générer des revenus grâce à l'IA, classées par barrière à l'entrée et niveau de revenu réaliste. Pas des promesses, des repères de progression.
 
-## Niveau 1 — Prestations freelance (jusqu'à quelques milliers par mois)
+## Niveau 1 : Prestations freelance (jusqu'à quelques milliers par mois)
 
-**Rédaction assistée par IA** — textes publicitaires, posts, newsletters.
+**Rédaction assistée par IA** : textes publicitaires, posts, newsletters.
 
-**Traduction et adaptation** — plus rapide et moins coûteuse que les agences traditionnelles.
+**Traduction et adaptation** : plus rapide et moins coûteuse que les agences traditionnelles.
 
-**Assistance virtuelle appuyée par IA** — tri de courriers, agenda, comptes rendus.
+**Assistance virtuelle appuyée par IA** : tri de courriers, agenda, comptes rendus.
 
-**Création de visuels** — outils de design associés à l'IA pour les petites structures.
+**Création de visuels** : outils de design associés à l'IA pour les petites structures.
 
-**Résumés et synthèses** — pour les cadres qui manquent de temps pour lire.
+**Résumés et synthèses** : pour les cadres qui manquent de temps pour lire.
 
-## Niveau 2 — Services structurés (palier intermédiaire)
+## Niveau 2 : Services structurés (palier intermédiaire)
 
-**Configuration d'assistant IA pour PME** — le guide pratique complet, facturé en prestation ponctuelle.
+**Configuration d'assistant IA pour PME** : le guide pratique complet, facturé en prestation ponctuelle.
 
-**Agent marketing** — emailing, relances, contenu social en automatisation.
+**Agent marketing** : emailing, relances, contenu social en automatisation.
 
-**Automatisation de workflows** — outils d'automatisation combinés à l'IA sur mesure.
+**Automatisation de workflows** : outils d'automatisation combinés à l'IA sur mesure.
 
-**Création de Skills sur mesure** — la vente d'un fichier de compétence prêt à l'emploi.
+**Création de Skills sur mesure** : la vente d'un fichier de compétence prêt à l'emploi.
 
-**Coaching IA individuel** — apprendre à des cadres à piloter l'IA au quotidien.
+**Coaching IA individuel** : apprendre à des cadres à piloter l'IA au quotidien.
 
-## Niveau 3 — Produits et mise à l'échelle (palier avancé)
+## Niveau 3 : Produits et mise à l'échelle (palier avancé)
 
-**Micro-logiciel IA** — un outil qui résout un problème précis.
+**Micro-logiciel IA** : un outil qui résout un problème précis.
 
-**Marketplace de prompts ou de Skills** — vendre ce que l'on a soi-même construit.
+**Marketplace de prompts ou de Skills** : vendre ce que l'on a soi-même construit.
 
-**Écosystème de contenu** — chaîne vidéo, newsletter, formation.
+**Écosystème de contenu** : chaîne vidéo, newsletter, formation.
 
-**Agence IA spécialisée** — un secteur, un workflow, une équipe dédiée.
+**Agence IA spécialisée** : un secteur, un workflow, une équipe dédiée.
 
-**Produit d'information et communauté** — bootcamp, abonnement, groupe d'accompagnement.
+**Produit d'information et communauté** : bootcamp, abonnement, groupe d'accompagnement.
 
 ## À retenir
 

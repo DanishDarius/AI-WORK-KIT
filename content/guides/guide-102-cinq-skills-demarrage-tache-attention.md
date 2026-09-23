@@ -17,7 +17,7 @@ Ces cinq Skills ne demandent pas de changer de fonctionnement : ils s'adaptent �
 
 ## 1. Démarreur de tâche
 
-> **Prompt — démarreur**
+> **Prompt : démarreur**
 >
 > Je n'arrive pas à commencer cette tâche : [tâche].
 >
@@ -30,7 +30,7 @@ Ces cinq Skills ne demandent pas de changer de fonctionnement : ils s'adaptent �
 
 ## 2. Frein au changement de focus
 
-> **Prompt — anti-switch**
+> **Prompt : anti-switch**
 >
 > Je suis en train de [tâche A]. Je sens monter l'envie de switcher vers [tâche B].
 >
@@ -46,7 +46,7 @@ Dicter une note désordonnée à l'oral : l'IA la restructure pour que la versio
 
 ## 4. Recadrage d'une situation émotionnellement difficile
 
-> **Prompt — recadrage**
+> **Prompt : recadrage**
 >
 > Voilà la situation qui m'a touché : [contexte].
 > Voilà ce que j'ai interprété : [interprétation émotionnelle].

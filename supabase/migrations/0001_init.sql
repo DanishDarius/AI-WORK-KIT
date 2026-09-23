@@ -1,4 +1,4 @@
--- AI WORK KIT — schéma initial
+-- AI WORK KIT : schéma initial
 -- Extensions nécessaires
 create extension if not exists "pgcrypto";
 

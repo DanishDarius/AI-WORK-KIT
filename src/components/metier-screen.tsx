@@ -43,11 +43,11 @@ export function MetierScreen({ slug }: { slug: string }) {
         })),
       }));
       setMessage(
-        `Votre chemin ${iaLabels[result.chemin_choisi]} est enregistré.`,
+        `C’est noté : vos prompts sont adaptés à ${iaLabels[result.chemin_choisi]}.`,
       );
     } catch (error) {
       setMessage(
-        error instanceof Error ? error.message : "Enregistrement impossible.",
+        error instanceof Error ? error.message : "L’enregistrement a échoué. Réessayez.",
       );
     } finally {
       setSaving(false);
@@ -82,14 +82,14 @@ export function MetierScreen({ slug }: { slug: string }) {
           <div className="aw-eyebrow">Votre métier, en pratique</div>
           <h1>{data.metier.nom}</h1>
           <p>
-            {data.taches.length} tâches de votre quotidien, avec des cas
-            concrets et des prompts prêts à utiliser.
+            {data.taches.length} tâches de votre quotidien. Pour chacune : un
+            cas concret et un prompt prêt à copier.
           </p>
         </div>
         <aside className="aw-panel">
-          <h3>Votre chemin IA</h3>
+          <h3>Avec quelle IA travaillez-vous ?</h3>
           <p className="aw-muted text-xs">
-            Choisissez l’outil avec lequel vous souhaitez pratiquer.
+            Les prompts s’adaptent à l’outil choisi.
           </p>
           <fieldset className="aw-ai" disabled={saving}>
             <legend className="sr-only">Choisir votre chemin IA</legend>
@@ -108,8 +108,7 @@ export function MetierScreen({ slug }: { slug: string }) {
             ))}
           </fieldset>
           <p className="aw-muted text-xs">
-            Les prompts s’adaptent à votre choix. Vous pouvez changer d’IA à
-            tout moment.
+            Vous pouvez en changer à tout moment.
           </p>
           <p role="status" className="aw-muted text-xs mt-3">
             {saving ? "Enregistrement…" : message}
@@ -125,17 +124,40 @@ export function MetierScreen({ slug }: { slug: string }) {
         </p>
         <ProgressBar done={data.taches_faites} total={data.taches.length} />
       </section>
+      {data.taches.length > 0 && data.taches_faites >= data.taches.length && (
+        <section className="panel aw-next-step" aria-labelledby="next-step">
+          <div>
+            <p className="eyebrow">Métier terminé · Prochaine étape</p>
+            <h2 id="next-step">
+              {data.taches.length} tâches sur {data.taches.length}. Et si elles
+              se faisaient sans vous ?
+            </h2>
+            <p>
+              Vous avez les prompts. Un système IA les exécute tout seul, dans
+              vos outils, et vous validez avant chaque envoi.
+            </p>
+          </div>
+          <div className="aw-next-step-actions">
+            <Link href="/systemes-ia">
+              Automatiser mes tâches <span aria-hidden="true">→</span>
+            </Link>
+            <Link href="/transformation-ia">
+              Former toute mon équipe <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </section>
+      )}
       <div className="aw-sectionhead">
         <div>
-          <h2>Vos tâches professionnelles</h2>
-          <p>Commencez par celle qui vous sera utile aujourd’hui.</p>
+          <h2>Vos tâches, prêtes à confier à l’IA</h2>
+          <p>Commencez par celle qui vous prend le plus de temps.</p>
         </div>
         <label className="aw-search">
           <Icon name="search" />
           <input
             type="search"
             aria-label="Rechercher dans ce métier"
-            placeholder="E-mail, rapport, présentation…"
+            placeholder="E-mail, rapport, présentation..."
             value={query}
             onChange={(e) => {
               setQuery(e.target.value);
@@ -168,7 +190,7 @@ export function MetierScreen({ slug }: { slug: string }) {
                     <small>
                       {category(t.code)}
                       {t.limite_connue
-                        ? " · Point de vigilance à consulter"
+                        ? " · À vérifier avant usage"
                         : " · Cas pratiques"}
                     </small>
                   </span>
@@ -202,7 +224,7 @@ export function MetierScreen({ slug }: { slug: string }) {
             </span>
             {taches.length > limit && (
               <button className="aw-btn" onClick={() => setLimit((n) => n + 6)}>
-                Voir la suite <Icon name="down" />
+                Afficher plus <Icon name="down" />
               </button>
             )}
           </div>
@@ -211,8 +233,8 @@ export function MetierScreen({ slug }: { slug: string }) {
         <div className="aw-empty">
           <p>
             {data.taches.length
-              ? "Aucun résultat pour cette recherche."
-              : "Aucune tâche disponible pour ce métier."}
+              ? "Aucune tâche ne correspond. Essayez un autre mot ou retirez un filtre."
+              : "Les tâches de ce métier arrivent bientôt."}
           </p>
           {data.taches.length > 0 && (
             <button

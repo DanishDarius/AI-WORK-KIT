@@ -11,23 +11,23 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 La plupart des gens ne connaissent qu'un seul outil IA et s'y limitent. Pourtant, une poignée d'outils gratuits, correctement combinés, peut remplacer le travail d'une petite équipe. Voici cinq outils utiles, et surtout la manière de les enchaîner. Les offres gratuites évoluant régulièrement, il convient de vérifier les conditions à jour avant de s'engager.
 
-## 1. NotebookLM (Google) — gratuit
+## 1. NotebookLM (Google) : gratuit
 
 Fournir des documents (cours, rapports, PDF) : l'outil les résume, répond en citant ses sources, et génère même un podcast audio où deux voix discutent du document. Un usage sous-exploité : transformer cinquante pages en dix minutes d'audio à écouter en marchant.
 
-## 2. Le Chat — Mistral — offre gratuite
+## 2. Le Chat (Mistral) : offre gratuite
 
 L'assistant IA français. Rapide, performant, une véritable alternative locale aux outils étrangers. À privilégier si la souveraineté des données ou l'origine française comptent particulièrement.
 
-## 3. Claude — offre gratuite
+## 3. Claude : offre gratuite
 
 Un outil de référence pour l'écriture, la nuance et le raisonnement. Particulièrement adapté pour travailler avec sa propre voix et analyser de longs documents. Un choix solide si un seul outil doit être conservé pour la production de contenu.
 
-## 4. ChatGPT — offre gratuite
+## 4. ChatGPT : offre gratuite
 
 Un outil polyvalent : brainstorming, premiers jets, analyse d'images et de captures d'écran. Idéal pour démarrer rapidement une idée.
 
-## 5. Canva (avec IA) — offre gratuite
+## 5. Canva (avec IA) : offre gratuite
 
 Visuels, carrousels, présentations et redimensionnements en quelques clics, avec génération assistée intégrée.
 

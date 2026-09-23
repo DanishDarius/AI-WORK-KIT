@@ -30,7 +30,7 @@ Les décisions, les relations et le jugement humain restent irremplaçables. Auc
 
 ## Le prompt de stratégie personnelle à 2028
 
-> **Prompt — ta stratégie 2028**
+> **Prompt : ta stratégie 2028**
 >
 > Mon métier actuel : [intitulé + secteur]
 > Mes compétences IA actuelles : [liste honnête]

@@ -17,7 +17,7 @@ Poser des questions à une IA sans jamais lui donner de contexte personnel. Ouvr
 
 ## Le rattrapage en cinq Skills gratuits
 
-Un Skill « lecteur de mails » — tri et résumé quotidien. Un Skill « préparateur de réunion » — agenda, notes et brief réunis. Un Skill « rédacteur d'e-mail » — brouillons dans le ton habituel. Un Skill « audit hebdomadaire » — bilan de la semaine en une page. Un Skill « filtre de veille » — résumé des actualités d'un secteur donné.
+Un Skill « lecteur de mails » : tri et résumé quotidien. Un Skill « préparateur de réunion » : agenda, notes et brief réunis. Un Skill « rédacteur d'e-mail » : brouillons dans le ton habituel. Un Skill « audit hebdomadaire » : bilan de la semaine en une page. Un Skill « filtre de veille » : résumé des actualités d'un secteur donné.
 
 ## À retenir
 

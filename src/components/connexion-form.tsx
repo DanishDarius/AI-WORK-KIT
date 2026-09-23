@@ -84,8 +84,8 @@ export function ConnexionForm() {
         {sending ? "Connexion…" : "Se connecter"}
       </button>
       <p className="aw-login-help">
-        Votre compte est créé après la validation de votre achat. Il n’est pas
-        possible de s’inscrire directement depuis cette page.
+        Pas encore de compte ? Il se crée automatiquement après votre achat.
+        L’inscription ne se fait pas depuis cette page.
       </p>
     </form>
   );

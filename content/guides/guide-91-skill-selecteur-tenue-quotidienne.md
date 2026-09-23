@@ -21,7 +21,7 @@ Photographier chaque catégorie : hauts, bas, robes, chaussures, vestes. Uploade
 
 ## Le skill à copier
 
-> **Skill — sélecteur de tenue**
+> **Skill : sélecteur de tenue**
 >
 > # Sélecteur de tenue
 >

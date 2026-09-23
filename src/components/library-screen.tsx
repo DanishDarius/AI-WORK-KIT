@@ -46,7 +46,7 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
       <section className="aw-library-hero" aria-labelledby="library-title">
         <p className="aw-library-kicker">La bibliothèque</p>
         <h1 id="library-title">Les guides IA.<br /><span>À votre rythme.</span></h1>
-        <p>Un sujet concret par guide, à comprendre aujourd’hui et à appliquer dès demain.</p>
+        <p>Un sujet par guide. Lu en quelques minutes, appliqué le jour même.</p>
       </section>
 
 <section className="aw-library-tools" aria-label="Rechercher et filtrer les guides">
@@ -58,7 +58,7 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
               type="search"
               value={query}
               onChange={(event) => { setQuery(event.target.value); resetVisible(); }}
-              placeholder="Un sujet, un outil, une compétence…"
+              placeholder="Prompt, agent, Claude, LinkedIn..."
             />
           </span>
         </label>
@@ -77,7 +77,7 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
             <p className="aw-library-kicker">Commencer ici · {featured.tool} · {featured.duration}</p>
             <h2 id="featured-title">{featured.title}</h2>
             <p>{featured.excerpt}</p>
-            <Link href={`/guides/${featured.slug}`}>Découvrir le guide <span aria-hidden="true">→</span></Link>
+            <Link href={`/guides/${featured.slug}`}>Lire ce guide <span aria-hidden="true">→</span></Link>
           </div>
         </section>
       )}
@@ -86,12 +86,12 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
         <div className="aw-library-section-head aw-library-explore-head">
           <div>
             <p className="aw-library-kicker">Tous les guides</p>
-            <h2 id="explore-guides-title">Explorez la bibliothèque.</h2>
+            <h2 id="explore-guides-title">Trouvez le guide qu’il vous faut.</h2>
           </div>
           <p><strong>{filteredGuides.length}</strong> guide{filteredGuides.length > 1 ? "s" : ""}</p>
         </div>
         <div className="aw-library-sort" aria-label="Trier les guides">
-          {([['recent', 'Ordre de la bibliothèque'], ['az', 'A → Z'], ['short', 'Lecture courte']] as Array<[SortMode, string]>).map(([value, label]) => (
+          {([['recent', 'Ordre conseillé'], ['az', 'A → Z'], ['short', 'Les plus courts']] as Array<[SortMode, string]>).map(([value, label]) => (
             <button key={value} type="button" aria-pressed={sort === value} onClick={() => setSort(value)}>{label}</button>
           ))}
         </div>
@@ -119,15 +119,15 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
             )}
           </>
         ) : (
-          <div className="aw-library-empty"><strong>Aucun guide trouvé.</strong><p>Modifiez la recherche ou les filtres pour élargir les résultats.</p></div>
+          <div className="aw-library-empty"><strong>Aucun guide ne correspond.</strong><p>Essayez un mot plus simple ou remettez les filtres sur « Tous ».</p></div>
         )}
       </section>
 
       <section className="aw-library-closing">
-        <p className="aw-library-kicker">Votre bibliothèque</p>
-        <h2>Vos prochains déclics.<br /><span>Au même endroit.</span></h2>
-        <p>Enregistrez les guides utiles et construisez progressivement votre propre parcours avec l’IA.</p>
-        <Link href="/connexion">Accéder à mon espace <span aria-hidden="true">→</span></Link>
+        <p className="aw-library-kicker">Passez à l’action</p>
+        <h2>Un guide lu, une tâche faite.<br /><span>C’est comme ça qu’on progresse.</span></h2>
+        <p>Appliquez ce que vous venez de lire sur une vraie tâche de votre métier, avec un prompt prêt.</p>
+        <Link href="/taches">Choisir une tâche <span aria-hidden="true">→</span></Link>
       </section>
     </div>
   );

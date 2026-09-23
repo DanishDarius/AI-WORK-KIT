@@ -17,7 +17,7 @@ Un comparateur de vols renvoie des centaines de résultats bruts. L'objectif, lu
 
 ## Le prompt de voyage clé en main
 
-> **Prompt — voyage clé en main**
+> **Prompt : voyage clé en main**
 >
 > Tu es mon agent de voyage perso.
 >

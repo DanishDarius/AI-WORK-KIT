@@ -1,7 +1,7 @@
 ---
 Guide original : "Le défilé qui tient dans un fichier"
 Source : saadiakaram.ai/guides/fashion-runway-website
-Statut : reformulé (texte) — aucune image détectée, mais un fichier .md téléchargeable (le brief technique complet de 263 lignes) est lié en externe et n'a pas été récupéré ; voir ressources-visuelles.md
+Statut : reformulé (texte) ; aucune image détectée, mais un fichier .md téléchargeable (le brief technique complet de 263 lignes) est lié en externe et n'a pas été récupéré ; voir ressources-visuelles.md
 ---
 
 # Un défilé de mode qui tient dans un seul fichier
@@ -13,11 +13,11 @@ Statut : reformulé (texte) — aucune image détectée, mais un fichier .md té
 - Introduction
 - La feuille de route en 5 étapes
 - Pourquoi ce projet et pas un autre
-- Étape 1 — Générer les mannequins avec un modèle d'image IA
-- Étape 2 — Animer, puis alléger
-- Étape 3 — Briefer
-- Étape 4 — Recetter
-- Étape 5 — Publier et décliner
+- Étape 1 : Générer les mannequins avec un modèle d'image IA
+- Étape 2 : Animer, puis alléger
+- Étape 3 : Briefer
+- Étape 4 : Recetter
+- Étape 5 : Publier et décliner
 - Le test qui valide
 - Questions fréquentes
 
@@ -29,11 +29,11 @@ Un défilé qui tourne en boucle directement dans le navigateur. Les mannequins 
 
 Ce projet se construit en deux heures avec Claude ou n'importe quel agent de code. Pas parce que l'IA serait particulièrement douée en soi, mais parce que le brief est rédigé correctement dès le départ. Voici la méthode complète.
 
-*Note sur les ressources : le guide original propose un fichier .md téléchargeable de 263 lignes contenant les maths de la perspective, les keyframes exactes, le SVG du logo, les données produit et la checklist de recette. Ce fichier n'a pas été récupéré ici (voir `ressources-visuelles.md`) — c'est un document technique à part entière que tu devras reconstruire toi-même ou adapter, pas juste un visuel à remplacer.*
+*Note sur les ressources : le guide original propose un fichier .md téléchargeable de 263 lignes contenant les maths de la perspective, les keyframes exactes, le SVG du logo, les données produit et la checklist de recette. Ce fichier n'a pas été récupéré ici (voir `ressources-visuelles.md`). C'est un document technique à part entière que tu devras reconstruire toi-même ou adapter, pas juste un visuel à remplacer.*
 
 ---
 
-## 01 — La feuille de route en 5 étapes
+## 01. La feuille de route en 5 étapes
 
 *Deux heures de travail réel. L'ordre compte : chaque étape produit la matière de la suivante.*
 
@@ -47,23 +47,23 @@ Ce projet se construit en deux heures avec Claude ou n'importe quel agent de cod
 
 ---
 
-## 02 — Comprendre : pourquoi ce projet et pas un autre
+## 02. Comprendre : pourquoi ce projet et pas un autre
 
 La plupart des démonstrations IA que l'on croise sont des dashboards. Personne ne les regarde vraiment. Un défilé, si. C'est visuel, ça se comprend en dix secondes, et surtout ça démontre trois choses à la fois : tu sais diriger une IA sur un rendu exigeant, tu sais respecter une contrainte technique difficile, et tu sais livrer un résultat concret.
 
-La contrainte technique difficile ici, c'est la perspective. Faire marcher un personnage vers la caméra n'est pas une simple translation — c'est une courbe : la taille, la position horizontale et la ligne de sol évoluent ensemble, de façon non linéaire. Une IA laissée totalement libre produira un carrousel plat et sans profondeur. Avec des points de contrôle précis dans le brief, elle produit un véritable couloir de perspective.
+La contrainte technique difficile ici, c'est la perspective. Faire marcher un personnage vers la caméra n'est pas une simple translation ; c'est une courbe : la taille, la position horizontale et la ligne de sol évoluent ensemble, de façon non linéaire. Une IA laissée totalement libre produira un carrousel plat et sans profondeur. Avec des points de contrôle précis dans le brief, elle produit un véritable couloir de perspective.
 
 ---
 
-## 03 — Étape 1 : générer les mannequins avec un modèle d'image IA
+## 03. Étape 1 : générer les mannequins avec un modèle d'image IA
 
 **Durée :** 30 min
 **Tu produis :** 5 à 8 images verticales, plein pied, fond blanc pur
-**Le piège à éviter :** un fond gris, une ombre portée ou un sol visible — le cadre de l'image devient perceptible et l'illusion s'effondre.
+**Le piège à éviter :** un fond gris, une ombre portée ou un sol visible ; le cadre de l'image devient perceptible et l'illusion s'effondre.
 
 Aucune caméra, aucun casting, aucun studio nécessaire. Tu génères tes silhouettes avec un modèle d'image IA performant (comme le modèle image de Gemini). La seule chose qui compte réellement : la cohérence entre les différents visuels. Même cadrage, même lumière, même distance, même hauteur de sol. Sinon, le couloir de perspective laisse voir la supercherie.
 
-**Prompt à copier — génération d'image :**
+**Prompt à copier (génération d'image) :**
 > Photo de mode pleine longueur, format vertical 2:5, fond blanc pur #FBF8F2 sans ombre au sol et sans décor.
 >
 > Sujet : un mannequin debout, de face, en pleine marche, bras naturels le long du corps.
@@ -83,7 +83,7 @@ Aucune caméra, aucun casting, aucun studio nécessaire. Tu génères tes silhou
 
 ---
 
-## 04 — Étape 2 : animer, puis alléger
+## 04. Étape 2 : animer, puis alléger
 
 **Durée :** 25 min
 **Tu produis :** des .mp4 H.264, yuv420p, faststart, sans piste audio
@@ -91,7 +91,7 @@ Aucune caméra, aucun casting, aucun studio nécessaire. Tu génères tes silhou
 
 Passe chaque image dans un modèle image vers vidéo (Veo, Kling, Runway, au choix) avec une consigne minimale : le mannequin marche vers la caméra, celle-ci ne bouge pas, le fond reste blanc, cinq secondes, boucle propre. Rien de plus. Plus tu demandes d'effets supplémentaires, plus le fond dérive et plus le cadrage devient visible.
 
-**Prompt à copier — image vers vidéo :**
+**Prompt à copier (image vers vidéo) :**
 > Anime cette image : le mannequin marche lentement vers la caméra, démarche naturelle, tissu qui suit le mouvement.
 >
 > Caméra totalement fixe, aucun zoom, aucun travelling, aucun changement de cadrage.
@@ -105,7 +105,7 @@ ffmpeg -i clip.mp4 -c:v libx264 -pix_fmt yuv420p -movflags +faststart -an -vf "s
 
 ---
 
-## 05 — Étape 3 : briefer
+## 05. Étape 3 : briefer
 
 **Durée :** 5 min
 **Tu produis :** le fichier .md collé, plus une consigne de cadrage
@@ -113,7 +113,7 @@ ffmpeg -i clip.mp4 -c:v libx264 -pix_fmt yuv420p -movflags +faststart -an -vf "s
 
 C'est le vrai cœur de ce guide. Un brief efficace ne décrit pas une ambiance vague, il décrit des chiffres précis et des règles de fermeture claires. Le fichier technique donne les coordonnées exactes du chemin, la formule d'échelle, la durée d'un pas, le comportement au survol, la manière de fermer la fiche produit. Il ne reste presque rien à deviner, donc presque rien à rater.
 
-**Prompt à copier — message de lancement :**
+**Prompt à copier (message de lancement) :**
 > Tu es développeur front. Construis exactement ce qui est décrit dans le fichier joint, sans rien ajouter et sans rien retirer.
 >
 > Contraintes non négociables :
@@ -128,7 +128,7 @@ C'est le vrai cœur de ce guide. Un brief efficace ne décrit pas une ambiance v
 
 ---
 
-## 06 — Étape 4 : recetter
+## 06. Étape 4 : recetter
 
 **Durée :** 30 min
 **Tu produis :** une page qui passe la checklist du brief
@@ -136,9 +136,9 @@ C'est le vrai cœur de ce guide. Un brief efficace ne décrit pas une ambiance v
 
 Ouvre la page et vérifie quatre points, dans cet ordre : la boucle se referme-t-elle sans saut visible, la page remplit-elle bien la fenêtre sans bande blanche lors du redimensionnement, le survol fige-t-il correctement tout le couloir, et le retour navigateur ferme-t-il bien la fiche produit. Ce sont les quatre endroits où ça casse le plus souvent.
 
-Et quand ça casse, ne réécris pas tout — isole le problème :
+Et quand ça casse, ne réécris pas tout. Isole le problème :
 
-**Prompt à copier — correction ciblée :**
+**Prompt à copier (correction ciblée) :**
 > Un seul problème à corriger, ne touche à rien d'autre :
 >
 > [décris ce que tu vois, puis ce que tu devrais voir]
@@ -149,7 +149,7 @@ Et quand ça casse, ne réécris pas tout — isole le problème :
 
 ---
 
-## 07 — Étape 5 : publier et décliner
+## 07. Étape 5 : publier et décliner
 
 **Durée :** 15 min
 **Tu produis :** une URL, et une deuxième version à ton propre nom
@@ -157,7 +157,7 @@ Et quand ça casse, ne réécris pas tout — isole le problème :
 
 Un fichier unique se met en ligne partout en trente secondes. Passe ensuite à la vraie version : le même couloir, mais avec tes propres clips. Cinq extraits de conférence, cinq formats de contenu, cinq offres commerciales. Le clic n'ouvre plus une simple fiche produit, mais une véritable page de vente. Tu viens de te fabriquer un portfolio que personne d'autre ne possède.
 
-**Prompt à copier — déclinaison :**
+**Prompt à copier (déclinaison) :**
 > Reprends exactement le même moteur (chemin, échelles, survol, fiche centrée, fermeture au retour navigateur) et remplace uniquement la couche contenu :
 >
 > - domaine : [ton métier]

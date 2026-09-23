@@ -21,7 +21,7 @@ Le contexte évident pour soi-même manque presque toujours à l'autre personne.
 
 ## Le prompt de brief
 
-> **Prompt — délégation**
+> **Prompt : délégation**
 >
 > Tu es mon assistant de délégation.
 >
@@ -45,10 +45,10 @@ Le contexte évident pour soi-même manque presque toujours à l'autre personne.
 
 ## Le test du brief
 
-Si la personne revient avec plus de deux questions, le brief était incomplet — il suffit de reprendre le prompt et de compléter le contexte.
+Si la personne revient avec plus de deux questions, le brief était incomplet ; il suffit de reprendre le prompt et de compléter le contexte.
 
 ## À retenir
 
 **Déléguer mieux, c'est souvent écrire moins soi-même.**
 
-Un brief produit par l'assistant s'avère souvent plus complet qu'un brief rédigé à la hâte — une réalité qu'il vaut mieux accepter.
+Un brief produit par l'assistant s'avère souvent plus complet qu'un brief rédigé à la hâte, une réalité qu'il vaut mieux accepter.

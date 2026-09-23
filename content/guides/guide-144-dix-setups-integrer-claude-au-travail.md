@@ -13,29 +13,29 @@ Dix mises en place utilisables immédiatement pour intégrer l'assistant dans so
 
 ## Les dix configurations
 
-**Résumé de réunion** — la transcription collée renvoie décisions et actions à mener.
+**Résumé de réunion** : la transcription collée renvoie décisions et actions à mener.
 
-**Compte rendu d'e-mail** — trois lignes qui disent ce qui compte vraiment.
+**Compte rendu d'e-mail** : trois lignes qui disent ce qui compte vraiment.
 
-**Brouillon de rapport** — les données fournies, l'IA structure le document.
+**Brouillon de rapport** : les données fournies, l'IA structure le document.
 
-**Analyse de données** — un fichier collé, trois enseignements clés en retour.
+**Analyse de données** : un fichier collé, trois enseignements clés en retour.
 
-**Préparation d'entretien** — fiche de poste et CV combinés produisent questions et réponses.
+**Préparation d'entretien** : fiche de poste et CV combinés produisent questions et réponses.
 
-**Rédaction de procédure** — une description orale devient une procédure formalisée.
+**Rédaction de procédure** : une description orale devient une procédure formalisée.
 
-**Traduction adaptée** — pas mot à mot, mais adaptée au contexte métier.
+**Traduction adaptée** : pas mot à mot, mais adaptée au contexte métier.
 
-**Vérification de contrat** — un premier filtre pour repérer les clauses à surveiller.
+**Vérification de contrat** : un premier filtre pour repérer les clauses à surveiller.
 
-**Plan de projet** — objectif, échéance et ressources produisent un plan détaillé.
+**Plan de projet** : objectif, échéance et ressources produisent un plan détaillé.
 
-**Feedback structuré** — une situation décrite se transforme en feedback formulé.
+**Feedback structuré** : une situation décrite se transforme en feedback formulé.
 
 ## Le prompt à copier
 
-> **Prompt — configuration rapide**
+> **Prompt : configuration rapide**
 >
 > Je veux utiliser l'assistant pour [tâche du travail].
 >

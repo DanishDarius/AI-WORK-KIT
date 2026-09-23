@@ -17,7 +17,7 @@ Un connecteur MCP transforme un simple assistant conversationnel en assistant ca
 
 ## Les cinq catégories à brancher
 
-Drive, Notion ou Dropbox — pour que l'IA lise les documents sans copier-coller. Gmail ou Outlook — pour rédiger et trier sans changer d'onglet. Agenda — pour planifier, déplacer un rendez-vous, préparer un brief avant chaque réunion. Base de données (Airtable, base Notion, Postgres) — pour interroger directement les données de l'activité. Outil métier clé (Stripe, HubSpot, Shopify, selon le secteur d'activité).
+Drive, Notion ou Dropbox : pour que l'IA lise les documents sans copier-coller. Gmail ou Outlook : pour rédiger et trier sans changer d'onglet. Agenda : pour planifier, déplacer un rendez-vous, préparer un brief avant chaque réunion. Base de données (Airtable, base Notion, Postgres) : pour interroger directement les données de l'activité. Outil métier clé (Stripe, HubSpot, Shopify, selon le secteur d'activité).
 
 ## Avant de brancher quoi que ce soit
 
@@ -25,7 +25,7 @@ Le contrôle de sécurité décrit dans le guide dédié aux connecteurs IA doit
 
 ## Le prompt à copier
 
-> **Prompt — premier vrai usage MCP**
+> **Prompt : premier vrai usage MCP**
 >
 > Tu as accès à [outils MCP connectés].
 >

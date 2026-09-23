@@ -17,7 +17,7 @@ Cinq Skills à construire une seule fois, chacun prenant en charge un pan de la 
 
 ## 1. Suivi personnel hebdomadaire
 
-> **Prompt — Skill suivi**
+> **Prompt : Skill suivi**
 >
 > Tu es mon coach de suivi personnel. Chaque dimanche, je te colle :
 > - mes heures de sommeil
@@ -29,7 +29,7 @@ Cinq Skills à construire une seule fois, chacun prenant en charge un pan de la 
 
 ## 2. Carnet voiture
 
-> **Prompt — Skill voiture**
+> **Prompt : Skill voiture**
 >
 > Tu es mon mémo véhicule. Je te file modèle, année, kilométrage, dernière révision.
 > Tu sors : prochaine échéance (vidange, pneus, contrôle technique), avec date estimée et budget moyen.
@@ -41,7 +41,7 @@ Uploader une fois ses documents administratifs importants (passeport, carte gris
 
 ## 4. Point hebdomadaire
 
-> **Prompt — Skill point hebdomadaire**
+> **Prompt : Skill point hebdomadaire**
 >
 > Toutes les semaines, pose-moi 4 questions :
 > 1. Qu'est-ce qui m'a pris trop d'énergie ?
@@ -57,4 +57,4 @@ Coller ses signets, sa liste de films à voir, ses podcasts en attente. Le Skill
 
 ## À retenir
 
-Cinquante Skills ne sont pas nécessaires — cinq qui tournent vraiment suffisent. Les installer un week-end permet de les rentabiliser dès la semaine suivante.
+Cinquante Skills ne sont pas nécessaires ; cinq qui tournent vraiment suffisent. Les installer un week-end permet de les rentabiliser dès la semaine suivante.

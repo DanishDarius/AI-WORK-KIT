@@ -21,7 +21,7 @@ import { outilsCount } from "@/lib/mise-en-place";
 import { tacheHref } from "@/lib/kit-api";
 import { Badge, ResourceState } from "./kit-ui";
 import { Icon } from "./kit-icons";
-import { ProgressBar } from "./progression-ui";
+import { ProgressBar, ProgressDock } from "./progression-ui";
 import { Recherche } from "./recherche";
 import type { GuideSummary } from "@/lib/guides";
 import { GuideShelf } from "./guide-shelf";
@@ -44,26 +44,26 @@ export function PathCard({
           {jobs ? "Métiers" : "Tâches"}
           {count !== undefined && (
             <span className="aw-count">
-              {count} {jobs ? "univers" : "à explorer"}
+              {count} {jobs ? "métiers" : "tâches"}
             </span>
           )}
         </strong>
         <p>
           {jobs ? (
             <>
-              Je pars de mon quotidien.
+              Partez de votre métier.
               <br />
-              Je découvre mes possibilités.
+              Voyez tout ce que l’IA peut faire pour vous.
             </>
           ) : (
             <>
-              Je sais ce que je veux faire.
+              Vous savez déjà quoi faire ?
               <br />
-              Je trouve le bon prompt.
+              Trouvez le prompt prêt à l’emploi.
             </>
           )}
         </p>
-        <small>Explorer les {jobs ? "métiers" : "tâches"}</small>
+        <small>Voir les {jobs ? "métiers" : "tâches"}</small>
       </span>
       <span className="aw-arrow">
         <Icon name="arrow" />
@@ -144,8 +144,8 @@ function CatalogResults({
     >
       {home ? (
         <Recherche
-          heading="Qu’allez-vous accomplir ?"
-          description="Choisissez une tâche. Les cas et les prompts sont prêts."
+          heading="Que voulez-vous faire aujourd’hui ?"
+          description="Choisissez une tâche : le cas pratique et le prompt sont prêts."
           onQueryChange={setQuery}
         />
       ) : (
@@ -153,15 +153,13 @@ function CatalogResults({
           <div>
             <h2>
               {jobs
-                ? "L’IA dans votre quotidien."
-                : home
-                  ? "Qu’allez-vous accomplir ?"
-                  : "Toutes vos tâches, au même endroit."}
+                ? "Choisissez votre métier."
+                : "Toutes les tâches. Un prompt prêt pour chacune."}
             </h2>
             <p>
               {jobs
-                ? "Explorez les tâches associées à votre métier."
-                : "Choisissez une tâche. Les cas et les prompts sont prêts."}
+                ? "Chaque métier regroupe ses tâches courantes, avec cas pratiques et prompts prêts."
+                : "Filtrez par usage ou par rythme, puis ouvrez la tâche qui vous prend le plus de temps."}
             </p>
           </div>
           <label className="aw-search">
@@ -172,7 +170,7 @@ function CatalogResults({
                 jobs ? "Rechercher un métier" : "Rechercher une tâche"
               }
               placeholder={
-                jobs ? "Chercher mon métier…" : "E-mail, rapport, présentation…"
+                jobs ? "Comptabilité, marketing, RH..." : "E-mail, rapport, présentation..."
               }
               value={query}
               onChange={(e) => {
@@ -255,7 +253,7 @@ function CatalogResults({
                             title={
                               natureLabels[nature(t.code)] +
                               (hasOptionPeriodique(t.code)
-                                ? " (option periodique possible)"
+                                ? " (peut aussi devenir récurrente)"
                                 : "")
                             }
                           >
@@ -293,14 +291,14 @@ function CatalogResults({
                   className="aw-btn"
                   onClick={() => setLimit((n) => n + 8)}
                 >
-                  Voir la suite <Icon name="down" />
+                  Afficher plus <Icon name="down" />
                 </button>
               )}
             </div>
           </>
         ) : (
           <div className="aw-empty">
-            <p>Aucun résultat pour cette recherche.</p>
+            <p>Aucune tâche ne correspond. Essayez un autre mot ou retirez un filtre.</p>
             <button
               className="aw-btn"
               onClick={() => {
@@ -348,8 +346,8 @@ export function CatalogueScreen({
                 <span>Plus d’impact avec l’IA.</span>
               </h1>
               <p>
-                Un seul espace pour passer de votre tâche au bon outil,
-                comprendre la méthode et utiliser un prompt prêt à l’emploi.
+                Choisissez une tâche de votre quotidien. On vous donne le bon
+                outil, la méthode et un prompt prêt à copier.
               </p>
               <div className="aw-hero-actions">
                 <Link className="aw-hero-primary" href="/taches">
@@ -360,7 +358,7 @@ export function CatalogueScreen({
                 </Link>
               </div>
               <small className="aw-hero-note">
-                Des cas pratiques · Des prompts concrets · À votre rythme
+                Cas pratiques · Prompts prêts · À votre rythme
               </small>
             </div>
           </section>
@@ -368,8 +366,8 @@ export function CatalogueScreen({
           <section className="aw-start-showcase" aria-labelledby="point-depart">
             <div className="aw-start-pill" id="point-depart">
               <Icon name="sparkles" />
-              <strong>Trouvez votre point de départ</strong>
-              <span>Une tâche · Un cas pratique · Votre prompt</span>
+              <strong>Par où commencer ?</strong>
+              <span>ChatGPT, Claude ou Gemini : le bon choix en 3 minutes</span>
             </div>
             <div className="aw-start-window">
               <div className="aw-window-bar">
@@ -388,13 +386,13 @@ export function CatalogueScreen({
                   <span className="aw-video-play" aria-hidden="true">
                     <Icon name="play" size={28} />
                   </span>
-                  <h2>Quelle IA choisir pour votre travail&nbsp;?</h2>
+                  <h2>Quelle IA choisir pour votre travail ?</h2>
                   <p>ChatGPT · Claude · Gemini</p>
                 </div>
               </div>
             </div>
           </section>
-
+          <ProgressDock metiers={data?.metiers} />
         </>
       )}
       {data ? (

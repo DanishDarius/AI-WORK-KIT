@@ -9,19 +9,19 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Canva · 5 min de lecture*
 
-Canva AI 2.0 vient de sortir — le saut le plus important depuis Magic Studio. Voici ce que cette mise à jour contient, et ce qui change concrètement dès cette semaine.
+Canva AI 2.0 vient de sortir : le saut le plus important depuis Magic Studio. Voici ce que cette mise à jour contient, et ce qui change concrètement dès cette semaine.
 
 ## Les nouveautés qui comptent
 
-1. Magic Design 2 — décrire un projet donne accès à cinq directions créatives complètes, pas de simples modèles remaniés.
+1. Magic Design 2 : décrire un projet donne accès à cinq directions créatives complètes, pas de simples modèles remaniés.
 
-2. Une mémoire de marque intégrée — charte graphique, ton et ressources visuelles chargés une fois, respectés par chaque génération suivante.
+2. Une mémoire de marque intégrée : charte graphique, ton et ressources visuelles chargés une fois, respectés par chaque génération suivante.
 
-3. Un studio vidéo IA — génération de B-roll, voix off et sous-titres en une seule passe.
+3. Un studio vidéo IA : génération de B-roll, voix off et sous-titres en une seule passe.
 
-4. La création en masse assistée par IA — une variation par persona en quelques minutes.
+4. La création en masse assistée par IA : une variation par persona en quelques minutes.
 
-5. Une édition magique plus précise — sélectionner un élément, formuler une demande, obtenir le changement, sans la courbe d'apprentissage d'un logiciel de retouche classique.
+5. Une édition magique plus précise : sélectionner un élément, formuler une demande, obtenir le changement, sans la courbe d'apprentissage d'un logiciel de retouche classique.
 
 ## Le workflow le plus efficace
 
@@ -29,7 +29,7 @@ Un brief rédigé avec Claude, transformé en directions créatives via Canva AI
 
 ## Le prompt de brief Canva
 
-> **Prompt — brief Canva**
+> **Prompt : brief Canva**
 >
 > Tu es directeur artistique.
 >

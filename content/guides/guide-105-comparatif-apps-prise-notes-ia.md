@@ -2,7 +2,7 @@
 Guide original : Le meilleur preneur de notes IA en 2026
 Source : https://www.saadiakaram.ai/guides/ai-note-taker
 Position réelle dans la bibliothèque au moment du traitement : 103/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : les 3 noms de produits cités (Granola, Fireflies, NotebookLM) sont des faits (noms de logiciels réels) — reformulation appliquée aux descriptions et au texte d'accompagnement uniquement.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : les 3 noms de produits cités (Granola, Fireflies, NotebookLM) sont des faits (noms de logiciels réels) ; reformulation appliquée aux descriptions et au texte d'accompagnement uniquement.
 ---
 
 # Comparatif des applications de prise de notes IA qui méritent le détour
@@ -17,11 +17,11 @@ Sur une vingtaine d'applications de prise de notes IA testées, seules trois mé
 
 ## Le podium
 
-**Granola** — la meilleure option pour les réunions en visioconférence. Transcription locale, résumé structuré, modèles personnalisables.
+**Granola** : la meilleure option pour les réunions en visioconférence. Transcription locale, résumé structuré, modèles personnalisables.
 
-**Fireflies** — l'option pensée pour le travail en équipe : intégration CRM, partage, recherche sur un an d'historique.
+**Fireflies**, l'option pensée pour le travail en équipe : intégration CRM, partage, recherche sur un an d'historique.
 
-**NotebookLM** — pas un simple preneur de notes, plutôt un cerveau de notes. On y déverse des dizaines de réunions, et il répond avec citations à l'appui.
+**NotebookLM** : pas un simple preneur de notes, plutôt un cerveau de notes. On y déverse des dizaines de réunions, et il répond avec citations à l'appui.
 
 ## La configuration recommandée
 
@@ -29,13 +29,13 @@ Granola pendant la réunion, puis export du résumé vers NotebookLM en fin de s
 
 ## Le prompt à copier
 
-> **Prompt — compte-rendu depuis une transcription**
+> **Prompt : compte-rendu depuis une transcription**
 >
 > Voici la transcription brute d'une réunion : [colle].
 >
 > Sortie :
 > 1. Décisions prises (bullet points)
-> 2. Actions à faire — qui, quoi, pour quand
+> 2. Actions à faire : qui, quoi, pour quand
 > 3. Sujets ouverts à reprendre
 > 4. Une phrase-résumé à envoyer aux absents
 >

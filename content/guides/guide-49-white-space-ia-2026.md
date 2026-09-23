@@ -26,7 +26,7 @@ Le basculement chiffré (fondateurs solo, une revente marquante à 80 M$), la ca
 
 « Millionaire grâce à l'IA », c'est un titre accrocheur, pas une stratégie. La vérité est plus sobre et bien plus utile. Deux choses sont vraies en même temps, et il faut tenir les deux ensemble.
 
-**Un : le basculement est réel.** Le Founder Ownership Report 2026 de Carta montre qu'environ 36 % des startups fondées sur sa plateforme en 2025 étaient portées par un fondateur solo, contre 31 % en 2024 — et cette proportion a doublé en dix ans. Un exemple concret cité dans la presse : Base44, construit par une seule personne (Maor Shlomo) sur un modèle Claude, atteint 250 000 utilisateurs et la rentabilité, puis se vend à Wix pour 80 millions de dollars, six mois après son lancement, sans un centime levé en financement. Ce qui demandait auparavant une équipe entière se fait désormais depuis un simple ordinateur portable.
+**Un : le basculement est réel.** Le Founder Ownership Report 2026 de Carta montre qu'environ 36 % des startups fondées sur sa plateforme en 2025 étaient portées par un fondateur solo, contre 31 % en 2024, et cette proportion a doublé en dix ans. Un exemple concret cité dans la presse : Base44, construit par une seule personne (Maor Shlomo) sur un modèle Claude, atteint 250 000 utilisateurs et la rentabilité, puis se vend à Wix pour 80 millions de dollars, six mois après son lancement, sans un centime levé en financement. Ce qui demandait auparavant une équipe entière se fait désormais depuis un simple ordinateur portable.
 
 **Deux : cela ne veut pas dire que n'importe qui devient riche pour autant.** L'Anthropic Economic Index (juin 2026) montre que l'usage réel de l'IA reste concentré sur les tâches techniques, et que l'IA assiste plus qu'elle ne remplace (52 % contre 45 %). Elle exécute des tâches, elle accélère le travail, mais elle ne remplace pas le jugement d'un spécialiste du métier. Le fondateur de Base44 lui-même a démarré seul, prouvé son concept, PUIS ajouté une équipe une fois la traction réellement acquise.
 
@@ -62,7 +62,7 @@ L'avantage du premier arrivé ne dure jamais indéfiniment. À mesure que davant
 
 Colle ce prompt dans ton assistant IA préféré, remplis les crochets, et laisse-le croiser ta carte personnelle avec les zones encore vides du marché.
 
-> **Prompt — trouve ton white space IA 2026**
+> **Prompt : trouve ton white space IA 2026**
 >
 > Tu es un stratège en intelligence concurrentielle, sobre et lucide, entraîné à repérer le « white space » : les marchés où la demande existe mais où l'offre est absente, anglophone, réservée aux grandes entreprises, ou générique.
 >

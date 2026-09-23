@@ -9,7 +9,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Claude · 5 min de lecture*
 
-Un assistant IA garde en mémoire ce qu'on lui a dit au fil du temps — et une bonne partie de ces informations devient périmée, floue, voire carrément fausse. Une mémoire mal entretenue n'est pas anodine : elle déforme chaque réponse future. Voici comment la nettoyer en dix minutes.
+Un assistant IA garde en mémoire ce qu'on lui a dit au fil du temps, et une bonne partie de ces informations devient périmée, floue, voire carrément fausse. Une mémoire mal entretenue n'est pas anodine : elle déforme chaque réponse future. Voici comment la nettoyer en dix minutes.
 
 ## Pourquoi cette mémoire se dégrade
 
@@ -17,15 +17,15 @@ Une affirmation faite il y a six mois (« je travaille dans le marketing ») peu
 
 ## L'audit en trois étapes
 
-> **Prompt — étape 1 : lister**
+> **Prompt (étape 1) : lister**
 >
 > Tu as une mémoire sur moi. Fais la liste exhaustive de tout ce que tu penses savoir sur moi : mon métier, mes outils, mes préférences, mes objectifs, mes contraintes. Sors-la en bullet points, un par ligne.
 
-> **Prompt — étape 2 : corriger**
+> **Prompt (étape 2) : corriger**
 >
 > Voici ma correction ligne par ligne. Marque ✅ pour juste, ❌ pour faux ou périmé, et 🔄 pour incomplet. Ne modifie rien sans mon feu vert.
 
-> **Prompt — étape 3 : réécrire**
+> **Prompt (étape 3) : réécrire**
 >
 > Réécris ma mémoire à jour en 10 règles courtes. Chaque règle doit être exploitable : pas « elle aime écrire », mais « son ton est direct, sans adverbes, elle relit les accroches à voix haute ». Valide chaque règle avec moi avant de la garder.
 

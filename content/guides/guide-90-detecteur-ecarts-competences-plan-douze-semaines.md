@@ -21,7 +21,7 @@ Fournir : poste cible, fourchette de salaire, zone géographique. L'IA récupèr
 
 ## Le prompt à copier
 
-> **Prompt — détecteur d'écarts**
+> **Prompt : détecteur d'écarts**
 >
 > Tu es mon analyste carrière.
 >
@@ -44,4 +44,4 @@ Une compétence « vue en formation » ne compte pas vraiment. Une compétence �
 
 ## À retenir
 
-Un bon plan d'apprentissage produit des preuves, pas des certificats. Douze semaines avec un livrable par semaine, ce sont douze preuves concrètes — largement de quoi faire la différence en entretien.
+Un bon plan d'apprentissage produit des preuves, pas des certificats. Douze semaines avec un livrable par semaine, ce sont douze preuves concrètes, largement de quoi faire la différence en entretien.

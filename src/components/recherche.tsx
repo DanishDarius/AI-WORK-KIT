@@ -38,7 +38,7 @@ export function Recherche({
               error:
                 error instanceof Error
                   ? error.message
-                  : "Recherche indisponible.",
+                  : "La recherche ne répond pas. Réessayez.",
             });
         },
       );
@@ -84,7 +84,7 @@ export function Recherche({
             id={id}
             type="search"
             value={query}
-            placeholder="Une tâche, un terme du glossaire…"
+            placeholder="Relance client, compte rendu, prompt..."
             aria-describedby={`${id}-hint`}
             aria-controls={`${id}-results`}
             onChange={(event) => {
@@ -96,7 +96,7 @@ export function Recherche({
         </div>
       </div>
       <p id={`${id}-hint`} className="mt-2 text-xs text-[var(--muted)]">
-        Dans tous les métiers et le glossaire · 2 caractères minimum
+        Cherche dans toutes les tâches et le glossaire. 2 lettres minimum.
       </p>
       <div id={`${id}-results`}>
         {q.length >= 2 && (
@@ -106,7 +106,7 @@ export function Recherche({
                 role={result?.error ? "alert" : "status"}
                 className="text-sm text-[var(--muted)]"
               >
-                {result?.error || "Recherche en cours…"}
+                {result?.error || "Recherche..."}
                 {result?.error && (
                   <button
                     className="text-link mt-3 block"
@@ -124,7 +124,7 @@ export function Recherche({
                 <p className="mb-5 text-sm text-[var(--muted)]" role="status">
                   {result.data.taches.length + result.data.glossaire.length ===
                   0
-                    ? `Aucun résultat pour « ${q} ». Essayez un autre mot.`
+                    ? `Rien pour « ${q} ». Essayez un mot plus simple, comme « e-mail » ou « rapport ».`
                     : `${result.data.taches.length + result.data.glossaire.length} résultat(s) pour « ${q} »`}
                 </p>
                 <div className="grid gap-7 md:grid-cols-2">

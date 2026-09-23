@@ -1,4 +1,4 @@
--- AI WORK KIT — Niveau 1 : reprise, progression, favoris, recherche
+-- AI WORK KIT, Niveau 1 : reprise, progression, favoris, recherche
 --
 -- Quatre tables, toutes strictement personnelles (un utilisateur ne voit et
 -- ne modifie que ses propres lignes) :
@@ -6,10 +6,10 @@
 --   - favoris               : idem pour les favoris (avec le métier d'origine,
 --                             pour reconstruire le bon lien /taches/[id]?metier=...).
 --   - derniere_activite     : une seule ligne par utilisateur, écrasée à chaque
---                             consultation d'une tâche — alimente "Reprendre où
+--                             consultation d'une tâche, alimente "Reprendre où
 --                             vous en étiez".
 --   - activite_journaliere  : un journal (une ligne par jour où l'utilisateur a
---                             consulté au moins une tâche) — alimente la série
+--                             consulté au moins une tâche), alimente la série
 --                             de régularité et les points de la semaine.
 
 create table if not exists taches_faites (

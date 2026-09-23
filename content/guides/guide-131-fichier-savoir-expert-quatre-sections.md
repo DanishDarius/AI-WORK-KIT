@@ -17,17 +17,17 @@ Un document privé chargé dans un espace de travail. Il contient les méthodes,
 
 ## Les quatre sections qui comptent
 
-**Contexte métier** — le marché, le positionnement, l'audience.
+**Contexte métier** : le marché, le positionnement, l'audience.
 
-**Méthodologie** — la façon de procéder, étape par étape.
+**Méthodologie** : la façon de procéder, étape par étape.
 
-**Données et preuves** — chiffres, études, résultats obtenus avec des clients.
+**Données et preuves** : chiffres, études, résultats obtenus avec des clients.
 
-**Style et ton** — la manière de s'exprimer, ce qui est à proscrire.
+**Style et ton** : la manière de s'exprimer, ce qui est à proscrire.
 
 ## Le prompt à copier
 
-> **Prompt — génération du fichier**
+> **Prompt : génération du fichier**
 >
 > Je vais te dicter ma méthode de travail et mes données clés.
 >
@@ -46,4 +46,4 @@ Ce fichier vieillit vite. Programmer une révision tous les 90 jours, ou dès qu
 
 **Un fichier savoir vaut mieux que cent prompts.**
 
-Cent prompts dispersés créent du chaos. Un fichier de deux pages bien structuré fonctionne comme une mémoire consultable à chaque réponse — c'est là que se joue la qualité du résultat.
+Cent prompts dispersés créent du chaos. Un fichier de deux pages bien structuré fonctionne comme une mémoire consultable à chaque réponse : c'est là que se joue la qualité du résultat.

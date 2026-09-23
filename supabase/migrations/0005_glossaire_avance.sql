@@ -1,10 +1,10 @@
 -- Termes avancés pour la page "Comprendre les IA" (Partie 2 : générer,
 -- automatiser, agents, connecteurs, MCP). Le glossaire est déjà commun à
--- tous les métiers (table `glossaire`, route /api/glossaire) — on y ajoute
+-- tous les métiers (table `glossaire`, route /api/glossaire) : on y ajoute
 -- ces termes plutôt que de créer une table séparée.
 --
 -- Insertions protégées (par terme) pour rester rejouable sans dupliquer un
--- terme déjà présent en base — il n'existe pas de contrainte unique sur
+-- terme déjà présent en base : il n'existe pas de contrainte unique sur
 -- `terme` aujourd'hui, donc on vérifie explicitement avant chaque insertion.
 insert into glossaire (terme, definition, ordre)
 select 'Prompt',

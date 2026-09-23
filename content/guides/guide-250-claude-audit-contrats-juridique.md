@@ -2,14 +2,14 @@
 Guide original : Claude vient de lâcher un juriste IA gratuit
 Source : https://www.saadiakaram.ai/guides/claude-legal-ai
 Position réelle dans la bibliothèque au moment du traitement : 249/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Accroche annonçant trois usages (revue de contrat, mise en demeure, lettre pour facture impayée), seule la revue de contrat est développée dans le corps capturé (incohérence source, non reprise dans le titre). Contenu traité comme aide à la relecture de documents, jamais comme conseil juridique personnalisé — le disclaimer de la source (recours à un humain au-delà d'un certain montant) a été conservé et mis en avant. Nom réel conservé (Claude).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Accroche annonçant trois usages (revue de contrat, mise en demeure, lettre pour facture impayée), seule la revue de contrat est développée dans le corps capturé (incohérence source, non reprise dans le titre). Contenu traité comme aide à la relecture de documents, jamais comme conseil juridique personnalisé. Le disclaimer de la source (recours à un humain au-delà d'un certain montant) a été conservé et mis en avant. Nom réel conservé (Claude).
 ---
 
 # Faire relire un contrat par Claude avant signature
 
 *Claude · 5 min de lecture*
 
-Claude permet désormais de faire relire des documents juridiques courants — conditions générales de vente, accords de confidentialité, contrats freelance — avant signature. Voici comment l'utiliser sans en attendre plus que ce qu'il peut réellement apporter.
+Claude permet désormais de faire relire des documents juridiques courants (conditions générales de vente, accords de confidentialité, contrats freelance) avant signature. Voici comment l'utiliser sans en attendre plus que ce qu'il peut réellement apporter.
 
 ## Ce que l'outil fait bien
 
@@ -21,7 +21,7 @@ Conseiller sur un point de droit local très spécifique. Sur le fiscal, le soci
 
 ## Le prompt d'audit de contrat
 
-> **Prompt — audit contrat**
+> **Prompt : audit contrat**
 >
 > Tu es juriste sénior en droit des contrats (droit français).
 >
@@ -44,4 +44,4 @@ Au-delà de 10 000 euros d'engagement, une double vérification par un professio
 
 **Un audit IA de cinq minutes vaut toujours mieux qu'aucune relecture.**
 
-La majorité des indépendants signent leurs contrats sans les lire en détail. Ce prompt représente un minimum de vigilance accessible à tous — sans se substituer à un conseil juridique professionnel pour les enjeux importants.
+La majorité des indépendants signent leurs contrats sans les lire en détail. Ce prompt représente un minimum de vigilance accessible à tous, sans se substituer à un conseil juridique professionnel pour les enjeux importants.

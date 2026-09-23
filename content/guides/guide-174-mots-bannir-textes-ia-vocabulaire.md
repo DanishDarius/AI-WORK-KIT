@@ -9,7 +9,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Un e-mail envoyé comme « rédigé soi-même » peut faire lever un sourcil à un collègue. Pas parce qu'il a deviné, mais parce qu'il a repéré certains mots. L'IA a un vocabulaire caractéristique — le retirer change tout.
+Un e-mail envoyé comme « rédigé soi-même » peut faire lever un sourcil à un collègue. Pas parce qu'il a deviné, mais parce qu'il a repéré certains mots. L'IA a un vocabulaire caractéristique ; le retirer change tout.
 
 ## La liste à bannir
 
@@ -25,7 +25,7 @@ Lire la première phrase à voix haute. Si elle ne serait jamais prononcée tell
 
 ## Le prompt pour désIAiser un texte
 
-> **Prompt — dé-IA**
+> **Prompt : dé-IA**
 >
 > Réécris ce texte comme si je le disais à voix haute à un collègue.
 >

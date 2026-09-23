@@ -13,13 +13,13 @@ Ce guide détaille comment préparer un fichier llms.txt fidèle au contenu rée
 
 ## La limite à retenir : un fichier utile, pas une garantie
 
-OpenAI ne documente pas le fichier llms.txt comme un facteur de sélection dans ChatGPT Search. Google indique de son côté, dans son guide officiel sur les fonctionnalités d'IA, qu'il n'utilise pas ce fichier pour sa visibilité ou ses classements. Il s'agit d'une convention ouverte permettant de présenter informations et liens dans un format facile à parcourir — un complément possible, mais les pages du site et leur accessibilité technique restent l'essentiel.
+OpenAI ne documente pas le fichier llms.txt comme un facteur de sélection dans ChatGPT Search. Google indique de son côté, dans son guide officiel sur les fonctionnalités d'IA, qu'il n'utilise pas ce fichier pour sa visibilité ou ses classements. Il s'agit d'une convention ouverte permettant de présenter informations et liens dans un format facile à parcourir : un complément possible, mais les pages du site et leur accessibilité technique restent l'essentiel.
 
 Si une IA finit par recommander un site, plusieurs mécanismes peuvent y avoir contribué : la présence du fichier ne permet pas d'établir un lien de cause à effet. Mieux vaut simplement noter qu'il était présent, vérifier son contenu, et observer dans la durée sans lui attribuer seul un résultat.
 
 ## Trois couches, trois contrôles distincts
 
-Les pages publiques du site constituent la source de vérité : offres, expertise, preuves, conditions et contact. Le fichier llms.txt n'en est qu'un résumé concis, orientant vers ces pages sans ajouter de promesse nouvelle. L'accès technique — robots.txt, pare-feu, hébergeur — détermine enfin si un robot peut réellement les atteindre.
+Les pages publiques du site constituent la source de vérité : offres, expertise, preuves, conditions et contact. Le fichier llms.txt n'en est qu'un résumé concis, orientant vers ces pages sans ajouter de promesse nouvelle. L'accès technique (robots.txt, pare-feu, hébergeur) détermine enfin si un robot peut réellement les atteindre.
 
 Le fichier llms.txt résume, robots.txt exprime des règles d'exploration, et les pages du site apportent les détails et les preuves. Une couche ne remplace jamais les deux autres : un résumé parfait renvoyant vers une offre absente ou inaccessible reste impossible à vérifier.
 
@@ -27,11 +27,11 @@ Le fichier llms.txt résume, robots.txt exprime des règles d'exploration, et le
 
 Il s'agit de partir uniquement du contenu réellement publié, sans transformer une intention, un brouillon ou une offre en préparation en fait établi. Chaque affirmation doit rester reliée à une URL permettant de la contrôler :
 
-- **Identité** — quel nom public, quel métier, quel territoire les pages du site prouvent-elles réellement ? (page À propos ou page d'accueil à jour)
-- **Offres** — quelles prestations sont aujourd'hui réellement ouvertes et décrites ? (une URL publique par offre, avec périmètre et prochaine action)
-- **Expertise** — quelles compétences peuvent être reliées à un travail, un parcours ou une source vérifiable ? (biographie, méthode, portfolio, dossier public)
-- **Preuves** — quels résultats, clients ou interventions peuvent être cités avec autorisation ? (page publique portant déjà l'affirmation et son contexte)
-- **Limites** — qu'est-ce qui reste privé, ancien, fermé, ou encore à confirmer ? (liste d'exclusion remise à la personne qui prépare le fichier)
+- **Identité** : quel nom public, quel métier, quel territoire les pages du site prouvent-elles réellement ? (page À propos ou page d'accueil à jour)
+- **Offres** : quelles prestations sont aujourd'hui réellement ouvertes et décrites ? (une URL publique par offre, avec périmètre et prochaine action)
+- **Expertise** : quelles compétences peuvent être reliées à un travail, un parcours ou une source vérifiable ? (biographie, méthode, portfolio, dossier public)
+- **Preuves** : quels résultats, clients ou interventions peuvent être cités avec autorisation ? (page publique portant déjà l'affirmation et son contexte)
+- **Limites** : qu'est-ce qui reste privé, ancien, fermé, ou encore à confirmer ? (liste d'exclusion remise à la personne qui prépare le fichier)
 
 Le texte des pages peut être fourni à une IA, à condition de retirer d'abord toute donnée privée et de bien distinguer les pages actuelles des anciennes. Une page transmise comme simple contexte ne doit pas être traitée comme publique si elle ne l'est pas.
 
@@ -39,7 +39,7 @@ Le texte des pages peut être fourni à une IA, à condition de retirer d'abord 
 
 Le prompt ci-dessous demande à l'IA de n'utiliser que les informations fournies, de signaler ce qui manque, et de produire un fichier fidèle aux pages sources. Une consigne ne vérifie cependant pas les faits à la place de l'utilisateur : chaque ligne doit être relue avant transmission au webmaster.
 
-> **Prompt — créer le fichier depuis tes pages**
+> **Prompt : créer le fichier depuis tes pages**
 >
 > Crée un fichier llms.txt qui présente mon activité et renvoie vers mes offres. Utilise seulement les informations que je te fournis.
 >
@@ -78,7 +78,7 @@ Le prompt ci-dessous demande à l'IA de n'utiliser que les informations fournies
 
 ## Un résumé court, des liens vérifiables
 
-La proposition llms.txt s'appuie sur du Markdown : un titre, un court résumé, puis des sections et des liens décrits. Le fichier doit rester concis — le détail reste sur les pages publiques, sans être dupliqué dans un second site miniature difficile à maintenir.
+La proposition llms.txt s'appuie sur du Markdown : un titre, un court résumé, puis des sections et des liens décrits. Le fichier doit rester concis : le détail reste sur les pages publiques, sans être dupliqué dans un second site miniature difficile à maintenir.
 
 **Gabarit de structure, à remplir avec les faits propres à chaque site :**
 
@@ -132,13 +132,13 @@ Atelier Horizon aide les équipes à clarifier leur ligne éditoriale et à orga
 - [Prendre contact](https://example.com/contact) : formulaire public pour présenter un besoin.
 ```
 
-Trois règles à respecter : utiliser des URL absolues (adresse complète en HTTPS pour que le lien reste exploitable hors contexte), décrire précisément la destination de chaque lien sans ajouter de promesse absente de la page réelle, et conserver une seule source de vérité — mettre à jour la page concernée avant d'aligner le fichier, jamais l'inverse.
+Trois règles à respecter : utiliser des URL absolues (adresse complète en HTTPS pour que le lien reste exploitable hors contexte), décrire précisément la destination de chaque lien sans ajouter de promesse absente de la page réelle, et conserver une seule source de vérité (mettre à jour la page concernée avant d'aligner le fichier, jamais l'inverse).
 
 ## Publier à la racine et tester la vraie URL
 
 La publication doit se faire à l'adresse https://ton-domaine.com/llms.txt : le fichier doit être public, servi comme texte lisible en UTF-8, et répondre directement. La convention porte sur le chemin exact et le format ; la méthode d'installation dépend du CMS, de l'hébergeur ou de l'application utilisés.
 
-Pour un exemple observable du résultat attendu, le fichier public de l'auteure du guide original est accessible à saadiakaram.ai/llms.txt — à lire comme un exemple, non comme la preuve qu'il aurait provoqué une recommandation.
+Pour un exemple observable du résultat attendu, le fichier public de l'auteure du guide original est accessible à saadiakaram.ai/llms.txt, à lire comme un exemple, non comme la preuve qu'il aurait provoqué une recommandation.
 
 **Brief technique à transmettre, sans accès ni secret :**
 publier le fichier validé à la racine (/llms.txt), réponse HTTP 200 attendue, contenu texte lisible en UTF-8, à vérifier : URL publique, contenu exact, liens HTTPS et cache après mise à jour ; à préserver : espaces privés, authentification, règles robots existantes et protections réseau ; après publication : ouvrir l'URL dans une session déconnectée et conserver la date du contrôle.
@@ -161,26 +161,26 @@ Disallow: /chemin-prive/
 
 En l'absence d'un groupe nommé spécifiquement OAI-SearchBot, le groupe générique (`*`) s'applique aussi à lui : la partie publique reste ouverte, les exclusions privées restent exclues. Il est déconseillé de créer un groupe OAI-SearchBot avec `Allow: /` sans relire l'ensemble du fichier, car un groupe spécifique peut modifier les règles qui lui sont appliquées et faire perdre les exclusions du groupe générique.
 
-Sur le site source du guide original, à la date du 17 septembre 2026, aucun groupe nommé OAI-SearchBot n'existe : le groupe générique autorise les pages publiques et conserve les exclusions privées. Il s'agit d'un exemple de configuration déjà correcte, pas d'un modèle universel à copier tel quel — remplacer l'intégralité d'un fichier robots.txt par un simple extrait reste déconseillé. Le protocole s'applique aux groupes et aux chemins correspondants ; une lecture de l'ensemble du fichier est recommandée, en préservant les chemins privés. robots.txt ne constitue pas un contrôle d'accès : une information réellement secrète doit être protégée par une authentification véritable.
+Sur le site source du guide original, à la date du 17 septembre 2026, aucun groupe nommé OAI-SearchBot n'existe : le groupe générique autorise les pages publiques et conserve les exclusions privées. Il s'agit d'un exemple de configuration déjà correcte, pas d'un modèle universel à copier tel quel ; remplacer l'intégralité d'un fichier robots.txt par un simple extrait reste déconseillé. Le protocole s'applique aux groupes et aux chemins correspondants ; une lecture de l'ensemble du fichier est recommandée, en préservant les chemins privés. robots.txt ne constitue pas un contrôle d'accès : une information réellement secrète doit être protégée par une authentification véritable.
 
 ## Contrôle ligne par ligne, en huit points
 
-- Le fichier répond à l'adresse attendue — l'URL exacte /llms.txt répond publiquement avec un statut 200.
-- Le contenu est du texte lisible — le serveur annonce un contenu texte et les accents s'affichent correctement.
-- Chaque affirmation vient d'une page publique — aucun service, résultat, client ou territoire n'existe seulement dans le fichier.
-- Tous les liens sont absolus et fonctionnent — chaque URL HTTPS ouvre la bonne page sans connexion.
-- Aucune information privée n'a été exposée — pas de brouillon, tarif privé, e-mail interne, clé, espace client ou document confidentiel.
-- robots.txt ne bloque pas OAI-SearchBot — la règle exacte applicable au robot a été relue avec les autres groupes du fichier.
-- Le pare-feu et l'hébergeur laissent passer le robot — la personne technique a vérifié les protections et les plages IP publiées par OpenAI.
-- Une date de prochaine revue est fixée — le fichier sera relu après tout changement d'offre, de preuve ou d'URL.
+- Le fichier répond à l'adresse attendue : l'URL exacte /llms.txt répond publiquement avec un statut 200.
+- Le contenu est du texte lisible : le serveur annonce un contenu texte et les accents s'affichent correctement.
+- Chaque affirmation vient d'une page publique : aucun service, résultat, client ou territoire n'existe seulement dans le fichier.
+- Tous les liens sont absolus et fonctionnent : chaque URL HTTPS ouvre la bonne page sans connexion.
+- Aucune information privée n'a été exposée : pas de brouillon, tarif privé, e-mail interne, clé, espace client ou document confidentiel.
+- robots.txt ne bloque pas OAI-SearchBot : la règle exacte applicable au robot a été relue avec les autres groupes du fichier.
+- Le pare-feu et l'hébergeur laissent passer le robot : la personne technique a vérifié les protections et les plages IP publiées par OpenAI.
+- Une date de prochaine revue est fixée : le fichier sera relu après tout changement d'offre, de preuve ou d'URL.
 
-Après une modification de robots.txt, OpenAI indique qu'un ajustement de ses systèmes de recherche peut prendre environ vingt-quatre heures (affirmation de la source, non vérifiée indépendamment) — ce délai ne garantit ni une nouvelle exploration, ni une citation ; il invite simplement à ne pas conclure trop vite à partir d'un test immédiat.
+Après une modification de robots.txt, OpenAI indique qu'un ajustement de ses systèmes de recherche peut prendre environ vingt-quatre heures (affirmation de la source, non vérifiée indépendamment). Ce délai ne garantit ni une nouvelle exploration, ni une citation ; il invite simplement à ne pas conclure trop vite à partir d'un test immédiat.
 
 ## Comparer le résumé aux vraies pages
 
 Il s'agit de relire le fichier comme le ferait un vérificateur externe : pour chaque ligne, ouvrir le lien et chercher la phrase, la preuve ou la condition correspondante. Si l'information n'est pas visible sur la page, elle doit être retirée du fichier, ou la page elle-même corrigée au préalable avec la personne responsable.
 
-> **Prompt — auditer le fichier contre les pages sources**
+> **Prompt : auditer le fichier contre les pages sources**
 >
 > Vérifie ce brouillon llms.txt en le comparant uniquement aux contenus publics fournis ci-dessous. Ne complète pas les lacunes avec tes connaissances générales.
 >
@@ -201,7 +201,7 @@ Il s'agit de relire le fichier comme le ferait un vérificateur externe : pour c
 
 Cinq vérifications complémentaires restent utiles : tester l'URL du fichier dans une fenêtre déconnectée, ouvrir tous les liens et relever erreurs, redirections ou accès privés, comparer cinq affirmations importantes avec leur page source, demander à une autre personne de repérer ce qui paraît ambigu ou trop affirmatif, et dater le contrôle en fixant la prochaine revue.
 
-Il reste ensuite possible d'observer périodiquement ce que répond ChatGPT avec sa fonction de recherche, en conservant la question exacte, la date, la langue, le pays et les sources affichées — une variation de réponse ne démontrant pas à elle seule que le fichier en est la cause.
+Il reste ensuite possible d'observer périodiquement ce que répond ChatGPT avec sa fonction de recherche, en conservant la question exacte, la date, la langue, le pays et les sources affichées, une variation de réponse ne démontrant pas à elle seule que le fichier en est la cause.
 
 **Protocole d'observation à J0 et J+30 :** à J0, noter la question exacte, la date, la langue, le pays ou la ville, et confirmer que la fonction de recherche est activée ; conserver la réponse complète et les sources affichées, en notant séparément si le domaine est cité, absent, ou mentionné sans lien. À J+30, reposer la même question avec la recherche activée, dans un contexte aussi identique que possible, puis relever les mêmes éléments. La comparaison porte sur des observations, pas sur une preuve de cause : une apparition, une disparition ou un changement de rang peut provenir de plusieurs facteurs, et ce relevé n'isole pas l'effet propre du fichier llms.txt.
 
@@ -209,7 +209,7 @@ Il reste ensuite possible d'observer périodiquement ce que répond ChatGPT avec
 
 Sources consultées le 17 septembre 2026 par l'auteure du guide original : la documentation d'OpenAI sur les robots utilisés par ChatGPT, le guide officiel de Google sur l'optimisation pour les fonctionnalités d'IA générative, le protocole d'exclusion des robots de l'IETF (RFC 9309), et la proposition de format llms.txt elle-même. Ces éléments peuvent évoluer ; toute modification technique gagne à être précédée d'une vérification des liens.
 
-La proposition llms.txt n'est pas un protocole standardisé au même titre que robots.txt. Google indique ignorer llms.txt pour sa visibilité et ses classements. OpenAI documente OAI-SearchBot pour ChatGPT Search, mais sa documentation sur les robots ne présente pas llms.txt comme une condition de sélection — ces distinctions structurent l'ensemble du guide.
+La proposition llms.txt n'est pas un protocole standardisé au même titre que robots.txt. Google indique ignorer llms.txt pour sa visibilité et ses classements. OpenAI documente OAI-SearchBot pour ChatGPT Search, mais sa documentation sur les robots ne présente pas llms.txt comme une condition de sélection. Ces distinctions structurent l'ensemble du guide.
 
 ## À retenir
 

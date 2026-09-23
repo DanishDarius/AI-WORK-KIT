@@ -2,7 +2,7 @@
 Guide original : Le job qui explose en 2026
 Source : https://www.saadiakaram.ai/guides/ai-agent-manager
 Position réelle dans la bibliothèque au moment du traitement : 229/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche/le titre source orientaient vers une analyse de marché de l'emploi, mais le corps porte entièrement sur la structure fonctionnelle d'un « agent-manager » pour coordonner plusieurs agents IA — titre reformulé pour refléter le contenu réel. Distinct du guide 224 (Forward Deployed Engineer, analyse de marché de l'emploi) : celui-ci décrit un rôle/pattern opérationnel, non un métier émergent, vérifié et confirmé distinct.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche/le titre source orientaient vers une analyse de marché de l'emploi, mais le corps porte entièrement sur la structure fonctionnelle d'un « agent-manager » pour coordonner plusieurs agents IA ; titre reformulé pour refléter le contenu réel. Distinct du guide 224 (Forward Deployed Engineer, analyse de marché de l'emploi) : celui-ci décrit un rôle/pattern opérationnel, non un métier émergent, vérifié et confirmé distinct.
 ---
 
 # Structurer un agent-manager pour coordonner plusieurs agents IA
@@ -13,17 +13,17 @@ Dès que trois agents IA ou plus tournent simultanément, il devient impossible 
 
 ## Le rôle du manager
 
-Il n'exécute rien lui-même. Il distribue les tâches, vérifie les résultats, escalade ce qui doit l'être — l'équivalent d'un chef de projet IA.
+Il n'exécute rien lui-même. Il distribue les tâches, vérifie les résultats, escalade ce qui doit l'être : l'équivalent d'un chef de projet IA.
 
 ## Les trois fonctions clés en pratique
 
-1. **Routage** — selon la nature de la demande, il détermine quel agent doit la traiter (un email va vers l'agent dédié aux mails, un lead vers l'agent CRM, etc.).
-2. **Contrôle qualité** — il relit la sortie produite par l'agent et indique si elle est prête à être envoyée ou si elle doit repartir en révision.
-3. **Reporting** — chaque semaine, il produit un rapport : nombre de tâches traitées, répartition par agent, taux d'erreur, points de friction rencontrés.
+1. **Routage** : selon la nature de la demande, il détermine quel agent doit la traiter (un email va vers l'agent dédié aux mails, un lead vers l'agent CRM, etc.).
+2. **Contrôle qualité** : il relit la sortie produite par l'agent et indique si elle est prête à être envoyée ou si elle doit repartir en révision.
+3. **Reporting**. Chaque semaine, il produit un rapport : nombre de tâches traitées, répartition par agent, taux d'erreur, points de friction rencontrés.
 
 ## Le prompt de mise en place
 
-> **Prompt — agent-manager**
+> **Prompt : agent-manager**
 >
 > Tu es mon agent-manager. Tu coordonnes 4 agents : [liste + rôles].
 >

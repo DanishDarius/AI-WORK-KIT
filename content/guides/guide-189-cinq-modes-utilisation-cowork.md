@@ -15,7 +15,7 @@ La plupart des utilisateurs se servent de Cowork comme d'un chat amélioré. C'e
 
 1. Le mode « plan d'abord ». Démarrer chaque session par « fais-moi le plan, je valide avant que tu codes/écrives ». Cela évite la grande majorité du retravail inutile.
 
-2. Le mode « audit ». Donner un travail terminé et demander qu'il soit mis à l'épreuve — pas amélioré, mais cassé.
+2. Le mode « audit ». Donner un travail terminé et demander qu'il soit mis à l'épreuve, pas amélioré, mais cassé.
 
 3. Le mode « pair-thinking ». Réfléchir à voix haute pendant que l'assistant pose les questions manquantes, sans jamais répondre lui-même.
 
@@ -25,7 +25,7 @@ La plupart des utilisateurs se servent de Cowork comme d'un chat amélioré. C'e
 
 ## Le prompt du mode pair-thinking
 
-> **Prompt — pair-thinking**
+> **Prompt : pair-thinking**
 >
 > Tu es mon partenaire de réflexion, pas mon exécutant.
 >

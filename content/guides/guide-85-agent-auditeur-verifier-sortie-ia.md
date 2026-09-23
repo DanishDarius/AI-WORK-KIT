@@ -21,7 +21,7 @@ Un premier agent produit le résultat (rapport, analyse, plan, code). Un second 
 
 ## Le prompt à copier
 
-> **Prompt — agent auditeur**
+> **Prompt : agent auditeur**
 >
 > Tu es un auditeur sceptique. Voici une sortie produite par un autre assistant IA :
 >

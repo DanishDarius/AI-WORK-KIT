@@ -17,29 +17,29 @@ La plupart des « mots magiques » qui circulent en ligne relèvent surtout du b
 
 ## Les dix formulations à connaître par cœur
 
-« Sois spécifique » — coupe l'abstraction.
+« Sois spécifique » : coupe l'abstraction.
 
-« Montre ton raisonnement » — force la chaîne logique à apparaître.
+« Montre ton raisonnement » : force la chaîne logique à apparaître.
 
-« Qu'est-ce que je rate ? » — révèle les angles morts.
+« Qu'est-ce que je rate ? » : révèle les angles morts.
 
-« Défends vraiment l'avis contraire » — oblige à argumenter honnêtement l'autre camp.
+« Défends vraiment l'avis contraire » : oblige à argumenter honnêtement l'autre camp.
 
-« Évite le remplissage » — supprime les transitions inutiles.
+« Évite le remplissage » : supprime les transitions inutiles.
 
-« Cite la source » — aucun chiffre sans source.
+« Cite la source » : aucun chiffre sans source.
 
-« Contredis-moi si j'ai tort » — désactive le mode complaisant.
+« Contredis-moi si j'ai tort » : désactive le mode complaisant.
 
-« En langage clair » — coupe le jargon.
+« En langage clair » : coupe le jargon.
 
-« Que me demanderais-tu en premier ? » — fait poser les bonnes questions avant de répondre.
+« Que me demanderais-tu en premier ? » : fait poser les bonnes questions avant de répondre.
 
-« Note ta propre réponse sur 10 et améliore-la jusqu'à 10 » — auto-critique intégrée.
+« Note ta propre réponse sur 10 et améliore-la jusqu'à 10 » : auto-critique intégrée.
 
 ## Le prompt combo
 
-> **Prompt — combo gagnant**
+> **Prompt : combo gagnant**
 >
 > Tâche : [décris en 2 lignes]
 >

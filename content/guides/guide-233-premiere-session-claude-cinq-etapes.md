@@ -13,11 +13,11 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 ## 1. Poser une vraie question, pas un test
 
-Éviter d'écrire « salut, comment ça va ». Mieux vaut poser un problème réel, du moment présent, avec son propre vocabulaire — l'effet se ressent immédiatement.
+Éviter d'écrire « salut, comment ça va ». Mieux vaut poser un problème réel, du moment présent, avec son propre vocabulaire. L'effet se ressent immédiatement.
 
 ## 2. Régénérer deux fois
 
-Demander la même chose deux fois de suite et comparer les réponses. Cela révèle que Claude propose des réponses différentes selon le contexte donné — la qualité du prompt compte davantage que le hasard.
+Demander la même chose deux fois de suite et comparer les réponses. Cela révèle que Claude propose des réponses différentes selon le contexte donné : la qualité du prompt compte davantage que le hasard.
 
 ## 3. Préciser ce qui ne convient pas
 
@@ -25,7 +25,7 @@ Réponse trop longue ? Le dire. Trop académique ? Le dire. Manque d'exemples ? 
 
 ## 4. Activer une seule fonction à la fois
 
-Un Project, un Connector, ou les instructions globales — une seule fonction pour commencer. Observer la différence avant d'en empiler plusieurs.
+Un Project, un Connector, ou les instructions globales : une seule fonction pour commencer. Observer la différence avant d'en empiler plusieurs.
 
 ## 5. Revenir dès le lendemain
 
@@ -33,7 +33,7 @@ Pas dans trois semaines : dès le lendemain. L'aisance avec l'outil vient de la 
 
 ## Le prompt de première session
 
-> **Prompt — première vraie session**
+> **Prompt : première vraie session**
 >
 > Je découvre Claude. Pose-moi 3 questions sur :
 > 1. Mon métier
