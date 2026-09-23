@@ -2,7 +2,7 @@
 Guide original : Le brouillard IA, c'est le nouveau burnout
 Source : https://www.saadiakaram.ai/guides/ai-fog-career-uncertainty
 Position réelle dans la bibliothèque au moment du traitement : 160/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu de bien-être professionnel général (gestion de l'incertitude liée à l'évolution technologique du métier) - reformulé comme stratégies pratiques d'organisation et de recul, sans reformulation en diagnostic de santé mentale.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu de bien-être professionnel général (gestion de l'incertitude liée à l'évolution technologique du métier), reformulé comme stratégies pratiques d'organisation et de recul, sans reformulation en diagnostic de santé mentale.
 ---
 
 # L'incertitude liée à l'IA et les compétences pour y faire face
@@ -21,7 +21,7 @@ L'épuisement professionnel classique vient d'une surcharge de travail. Cette se
 
 **2. Choisir une compétence par trimestre.** Pas dix en parallèle. Trois mois, un seul sujet, approfondi.
 
-**3. Mesurer ses résultats, pas son retard.** Lister chaque dimanche ce qui a été livré dans la semaine grâce à l'IA - la preuve d'une vraie progression apparaît vite.
+**3. Mesurer ses résultats, pas son retard.** Lister chaque dimanche ce qui a été livré dans la semaine grâce à l'IA : la preuve d'une vraie progression apparaît vite.
 
 **4. Garder une pratique entièrement humaine.** Cuisine, sport, écriture à la main : un espace où l'IA n'entre jamais.
 
@@ -31,7 +31,7 @@ Croire que se calmer revient à « se reposer sur ses lauriers ». C'est exactem
 
 ## Le prompt à copier
 
-> **Prompt - sortir du brouillard**
+> **Prompt : sortir du brouillard**
 >
 > Tu es un coach exigeant et bienveillant.
 >

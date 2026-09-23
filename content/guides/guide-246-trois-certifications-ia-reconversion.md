@@ -13,9 +13,9 @@ Une certification en intelligence artificielle ne pèse pas lourd sur un CV si e
 
 ## Les trois certifications qui comptent réellement
 
-1. **Google - Generative AI for Everyone (Coursera).** Courte, accessible gratuitement en mode audit, elle pose le vocabulaire de base. Personne ne recrute sur cette seule certification, mais son absence peut disqualifier en entretien.
-2. **Anthropic - Prompting Course.** Gratuite, elle constitue une référence technique sur le prompt. Savoir en restituer la structure (rôle, contexte, exemples, contraintes) marque des points en entretien.
-3. **AWS ou Azure - AI Practitioner.** Autour de 100 euros, elle prouve une capacité à parler d'infrastructure IA à des interlocuteurs qui financent ce type de projet. Pour une reconversion vers un poste en entreprise, elle fait souvent la différence.
+1. **Google : Generative AI for Everyone (Coursera).** Courte, accessible gratuitement en mode audit, elle pose le vocabulaire de base. Personne ne recrute sur cette seule certification, mais son absence peut disqualifier en entretien.
+2. **Anthropic : Prompting Course.** Gratuite, elle constitue une référence technique sur le prompt. Savoir en restituer la structure (rôle, contexte, exemples, contraintes) marque des points en entretien.
+3. **AWS ou Azure : AI Practitioner.** Autour de 100 euros, elle prouve une capacité à parler d'infrastructure IA à des interlocuteurs qui financent ce type de projet. Pour une reconversion vers un poste en entreprise, elle fait souvent la différence.
 
 ### Ce qui ne sert à rien
 
@@ -23,11 +23,11 @@ Les certifications « Certified Prompt Engineer » vendues quelques dollars sur 
 
 ## Comment les valoriser
 
-Les inscrire sur LinkedIn dans la section Certifications, avec une ligne dans le résumé de profil. Les mentionner en entretien seulement si la question est posée directement - le projet de portfolio pèse bien davantage dans la décision finale.
+Les inscrire sur LinkedIn dans la section Certifications, avec une ligne dans le résumé de profil. Les mentionner en entretien seulement si la question est posée directement : le projet de portfolio pèse bien davantage dans la décision finale.
 
 ## Le prompt de feuille de route sur 60 jours
 
-> **Prompt - roadmap certifs en 60 jours**
+> **Prompt : roadmap certifs en 60 jours**
 >
 > Tu es un coach carrière IA.
 >

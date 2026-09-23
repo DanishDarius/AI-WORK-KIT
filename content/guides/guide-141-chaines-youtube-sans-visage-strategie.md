@@ -35,7 +35,7 @@ Le format court apporte de la visibilité, le format long apporte la monétisati
 
 ## Le prompt à copier
 
-> **Prompt - script vidéo sans visage**
+> **Prompt : script vidéo sans visage**
 >
 > Rédige un script de 8 minutes pour une vidéo YouTube sans visage.
 >
@@ -56,4 +56,4 @@ Le format court apporte de la visibilité, le format long apporte la monétisati
 
 **Le visage n'est pas le problème, la valeur l'est.**
 
-Le public regarde des chaînes sans visage qui apportent une vraie valeur, et délaisse celles qui recyclent du contenu générique. L'outil ne crée pas la valeur - la niche et l'angle, eux, la créent.
+Le public regarde des chaînes sans visage qui apportent une vraie valeur, et délaisse celles qui recyclent du contenu générique. L'outil ne crée pas la valeur ; la niche et l'angle, eux, la créent.

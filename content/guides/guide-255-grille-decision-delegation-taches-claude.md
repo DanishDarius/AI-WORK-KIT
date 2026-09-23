@@ -15,13 +15,13 @@ Le conseil « automatise tout avec l'IA » circule largement, mais rarement acco
 
 Pour chaque tâche, noter de 1 à 5 sur trois critères : réversibilité, visibilité de l'erreur, coût d'une mauvaise sortie.
 
-- **Réversibilité** - est-il possible d'annuler l'action ? Un email déjà envoyé : 1 (irréversible). Un simple brouillon : 5 (totalement réversible).
-- **Visibilité de l'erreur** - le problème se voit-il immédiatement ? Une faute de frappe : 5. Un chiffre erroné dans un tableau de données : 1.
-- **Coût d'une mauvaise sortie** - quel est l'impact d'une erreur ? Une note interne : 5. Un contrat client : 1.
+- **Réversibilité** : est-il possible d'annuler l'action ? Un email déjà envoyé : 1 (irréversible). Un simple brouillon : 5 (totalement réversible).
+- **Visibilité de l'erreur** : le problème se voit-il immédiatement ? Une faute de frappe : 5. Un chiffre erroné dans un tableau de données : 1.
+- **Coût d'une mauvaise sortie** : quel est l'impact d'une erreur ? Une note interne : 5. Un contrat client : 1.
 
 ## La règle de lecture du score
 
-Un total supérieur à 12 permet de déléguer à Claude sans supervision lourde. Entre 8 et 12, Claude propose et la validation reste humaine. En dessous de 8, la rédaction reste humaine et Claude n'intervient qu'en relecture - jamais l'inverse.
+Un total supérieur à 12 permet de déléguer à Claude sans supervision lourde. Entre 8 et 12, Claude propose et la validation reste humaine. En dessous de 8, la rédaction reste humaine et Claude n'intervient qu'en relecture, jamais l'inverse.
 
 ### Le cas piège
 
@@ -29,7 +29,7 @@ Une réponse à un client dans une situation sensible : réversibilité 1, visib
 
 ## Le prompt d'audit de délégation
 
-> **Prompt - audit délégation**
+> **Prompt : audit délégation**
 >
 > Voici 10 tâches que je fais cette semaine :
 > [liste]

@@ -21,7 +21,7 @@ Une vidéo YouTube marquante finit souvent par être oubliée faute de reprise a
 
 ## Le prompt vidéo vers tuteur
 
-> **Prompt - vidéo → tuteur**
+> **Prompt : vidéo → tuteur**
 >
 > Voici la transcription d'une vidéo sur [sujet] :
 >

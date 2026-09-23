@@ -17,13 +17,13 @@ Les critères à respecter : la tâche revient au moins trois fois par semaine, 
 
 ## L'anatomie d'un agent en trois couches
 
-- **Mémoire** - le contexte qui ne change pas (la voix, l'offre, les types de clients habituels), sous forme d'un fichier texte.
-- **Instructions** - le rôle, les étapes à suivre, les contraintes, formulés comme un prompt système.
-- **Exemples** - trois cas avant/après. C'est cet élément qui rend l'agent réellement performant, davantage que le prompt lui-même.
+- **Mémoire** : le contexte qui ne change pas (la voix, l'offre, les types de clients habituels), sous forme d'un fichier texte.
+- **Instructions** : le rôle, les étapes à suivre, les contraintes, formulés comme un prompt système.
+- **Exemples** : trois cas avant/après. C'est cet élément qui rend l'agent réellement performant, davantage que le prompt lui-même.
 
 ## Le prompt système à adapter
 
-> **Prompt - premier agent**
+> **Prompt : premier agent**
 >
 > Tu es [rôle précis], spécialisé dans [tâche unique].
 >

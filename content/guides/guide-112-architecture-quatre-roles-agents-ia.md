@@ -23,7 +23,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 ## Le prompt à copier
 
-> **Prompt - fiche d'un agent Spécialiste**
+> **Prompt : fiche d'un agent Spécialiste**
 >
 > Tu es l'agent [NOM].
 > Périmètre strict : [1 phrase].

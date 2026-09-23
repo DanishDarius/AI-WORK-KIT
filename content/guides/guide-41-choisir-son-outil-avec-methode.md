@@ -7,7 +7,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 # Choisir son outil IA avec une méthode, pas au hasard
 
-*Multi-outils · 8 min de lecture - Fondations, livre 2 sur 5*
+*Multi-outils · 8 min de lecture (Fondations, livre 2 sur 5)*
 
 Justifier un outil à partir du résultat attendu, des sources disponibles et du risque encouru. Un guide pour débutant, avec démonstration, exercice et corrigé.
 
@@ -29,26 +29,26 @@ Aucun prérequis technique n'est nécessaire. Les exemples et les corrigés fonc
 
 ## Avant les outils : partir du résultat
 
-Écris une phrase simple : « À partir de [mes informations], je veux obtenir [un résultat], que je vérifierai avec [un critère]. » Si tu ne peux pas préciser le résultat attendu, commence par clarifier ton besoin - installer plusieurs applications ne le rendra jamais plus précis à ta place.
+Écris une phrase simple : « À partir de [mes informations], je veux obtenir [un résultat], que je vérifierai avec [un critère]. » Si tu ne peux pas préciser le résultat attendu, commence par clarifier ton besoin : installer plusieurs applications ne le rendra jamais plus précis à ta place.
 
-*(Dossier fictif, fil rouge de ce guide : l'atelier de réparation. Quand : samedi 14 novembre 2026, 10 h-12 h. Où : Maison des voisins. Places : 12 personnes, accès gratuit. Inscription : avant le 10 novembre. Aucun lien d'inscription ni adresse de rue n'a été fourni dans ce dossier fictif.)*
+*(Dossier fictif, fil rouge de ce guide : l'atelier de réparation. Quand : samedi 14 novembre 2026, de 10 h à 12 h. Où : Maison des voisins. Places : 12 personnes, accès gratuit. Inscription : avant le 10 novembre. Aucun lien d'inscription ni adresse de rue n'a été fourni dans ce dossier fictif.)*
 
 Avec ce dossier, tu peux rédiger une invitation, inventer une illustration, ou préparer une liste de matériel. Tu ne peux en revanche pas confirmer l'adresse exacte, ni annoncer que toutes les réparations seront possibles ce jour-là : ces informations manquent tout simplement du dossier de départ.
 
-**Le bon point de départ : choisis ta tâche.** Cinq grandes familles à distinguer : écrire, lire un dossier, chercher un fait, créer un visuel, calculer. Pour un assistant généraliste (les grands chatbots grand public), tu fournis les faits et le ton souhaité ; à toi de contrôler ensuite les noms, dates, promesses et informations ajoutées par l'IA. Ceci est une orientation pédagogique générale, pas un classement de marques - fonctionnalités, comptes et quotas sont à vérifier directement sur le site officiel de chaque outil.
+**Le bon point de départ : choisis ta tâche.** Cinq grandes familles à distinguer : écrire, lire un dossier, chercher un fait, créer un visuel, calculer. Pour un assistant généraliste (les grands chatbots grand public), tu fournis les faits et le ton souhaité ; à toi de contrôler ensuite les noms, dates, promesses et informations ajoutées par l'IA. Ceci est une orientation pédagogique générale, pas un classement de marques ; fonctionnalités, comptes et quotas sont à vérifier directement sur le site officiel de chaque outil.
 
-Le choix le plus simple est souvent suffisant. Pour notre invitation fictive, un assistant de texte classique et les faits listés ci-dessus conviennent parfaitement. Pour envoyer réellement l'invitation, tu gardes ta messagerie et ta validation habituelles - générer un brouillon et l'envoyer sont deux actions bien distinctes, et l'IA ne doit s'occuper que de la première.
+Le choix le plus simple est souvent suffisant. Pour notre invitation fictive, un assistant de texte classique et les faits listés ci-dessus conviennent parfaitement. Pour envoyer réellement l'invitation, tu gardes ta messagerie et ta validation habituelles : générer un brouillon et l'envoyer sont deux actions bien distinctes, et l'IA ne doit s'occuper que de la première.
 
 ## Sous l'interface : chaque couche a un rôle
 
 - **Le modèle.** Il traite une entrée et produit une sortie. Plusieurs versions d'un même modèle peuvent privilégier la rapidité, certaines tâches spécifiques, ou différents formats de sortie.
 - **L'application.** Elle te donne une interface, un historique, des fichiers, et éventuellement plusieurs modèles au choix. Le nom de l'application ne décrit pas forcément toutes les fonctions réellement activées dans ta conversation précise.
-- **L'outil connecté.** Recherche web, calcul, ou accès à un document : il apporte une capacité supplémentaire au modèle de base. Le modèle ne consulte jamais automatiquement ton ordinateur, tes messages personnels, ni l'ensemble d'Internet - seulement ce qui lui est explicitement connecté.
+- **L'outil connecté.** Recherche web, calcul, ou accès à un document : il apporte une capacité supplémentaire au modèle de base. Le modèle ne consulte jamais automatiquement ton ordinateur, tes messages personnels, ni l'ensemble d'Internet, seulement ce qui lui est explicitement connecté.
 - **L'agent.** Un système peut choisir lui-même des étapes et utiliser des outils pour poursuivre un objectif donné. Plus il peut agir de façon autonome, plus il faut limiter ses droits, prévoir les erreurs possibles, et décider à l'avance ce qu'un humain doit valider avant exécution.
 
-Une automatisation suit un enchaînement prévu à l'avance : formulaire reçu → brouillon créé → validation humaine. Elle peut très bien contenir une étape IA sans devenir pour autant un agent autonome au sens plein. Pour débuter, un échange ponctuel suffit largement - tu n'as besoin ni de connecter ta boîte mail, ni de construire un agent complexe dès le départ.
+Une automatisation suit un enchaînement prévu à l'avance : formulaire reçu → brouillon créé → validation humaine. Elle peut très bien contenir une étape IA sans devenir pour autant un agent autonome au sens plein. Pour débuter, un échange ponctuel suffit largement : tu n'as besoin ni de connecter ta boîte mail, ni de construire un agent complexe dès le départ.
 
-*(Petit exercice de réflexion : pour connaître le tarif actuel d'un service public, quel parcours est le plus solide ? Trois réponses possibles : demander un prix au modèle et garder sa première réponse ; chercher la page officielle, lire sa date et ses conditions, puis vérifier le montant ; faire voter trois assistants sur le prix. La bonne réponse est la deuxième - un modèle de langage peut très bien citer un tarif ancien ou inventé avec la même assurance qu'un tarif exact, et faire « voter » plusieurs assistants entre eux ne fait que multiplier la même source d'erreur potentielle, sans jamais remplacer la vérification à la source officielle.)*
+*(Petit exercice de réflexion : pour connaître le tarif actuel d'un service public, quel parcours est le plus solide ? Trois réponses possibles : demander un prix au modèle et garder sa première réponse ; chercher la page officielle, lire sa date et ses conditions, puis vérifier le montant ; faire voter trois assistants sur le prix. La bonne réponse est la deuxième : un modèle de langage peut très bien citer un tarif ancien ou inventé avec la même assurance qu'un tarif exact, et faire « voter » plusieurs assistants entre eux ne fait que multiplier la même source d'erreur potentielle, sans jamais remplacer la vérification à la source officielle.)*
 
 ## Ton petit banc d'essai : tester avant de s'équiper
 
@@ -56,10 +56,10 @@ Si tu disposes déjà d'un outil autorisé, essaie une tâche sans données sens
 
 **Quatre critères à observer :**
 
-- **Résultat** - est-ce le bon format, dans une langue que tu peux relire et comprendre toi-même ?
-- **Fidélité** - quels faits ont été conservés, lesquels ont été omis, lesquels ont été purement inventés ?
-- **Effort** - peux-tu corriger et récupérer le résultat sans tout refaire depuis zéro ?
-- **Conditions** - quelles données sont conservées par le service, quelles permissions sont nécessaires, et quelles limites de compte s'appliquent à ton usage ?
+- **Résultat** : est-ce le bon format, dans une langue que tu peux relire et comprendre toi-même ?
+- **Fidélité** : quels faits ont été conservés, lesquels ont été omis, lesquels ont été purement inventés ?
+- **Effort** : peux-tu corriger et récupérer le résultat sans tout refaire depuis zéro ?
+- **Conditions** : quelles données sont conservées par le service, quelles permissions sont nécessaires, et quelles limites de compte s'appliquent à ton usage ?
 
 Pour une image ou une vidéo, regarde aussi la cohérence des objets représentés, le texte éventuellement affiché, et la continuité entre les différents plans. Pour du son, vérifie la prononciation et l'autorisation réelle d'utiliser une voix donnée. Un rendu séduisant à l'écran ne suffit jamais, à lui seul, à établir que tu peux légalement le publier.
 

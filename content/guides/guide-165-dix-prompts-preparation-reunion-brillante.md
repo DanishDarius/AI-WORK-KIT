@@ -34,7 +34,7 @@ Paraître brillant en réunion ne tient pas à l'intelligence, mais à la prépa
 
 ## Le prompt de préparation complet
 
-> **Prompt - préparation de réunion**
+> **Prompt : préparation de réunion**
 >
 > Tu es mon préparateur de réunion.
 >
@@ -58,4 +58,4 @@ Paraître brillant en réunion ne tient pas à l'intelligence, mais à la prépa
 
 **Brillant équivaut à préparé.**
 
-Quinze minutes de préparation assistée par IA valent une heure d'effort de mémoire en réunion - et permettent de repartir avec une décision, pas avec une boucle sans fin.
+Quinze minutes de préparation assistée par IA valent une heure d'effort de mémoire en réunion, et permettent de repartir avec une décision, pas avec une boucle sans fin.

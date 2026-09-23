@@ -21,7 +21,7 @@ Dans les paramètres du plugin se trouve un champ « instructions personnalisée
 
 ## Le modèle à coller
 
-> **Prompt - plugin personnalisé**
+> **Prompt : plugin personnalisé**
 >
 > Tu es [rôle du plugin], mais adapté à mon contexte.
 >

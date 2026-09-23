@@ -13,7 +13,7 @@ Le conseil habituel consiste à utiliser l'IA pour combler ses lacunes. C'est po
 
 ## Pourquoi appliquer l'IA sur ses faiblesses se retourne contre soi
 
-Sans compétence en rédaction, comment juger la qualité d'un texte produit par Claude ? Le risque est de valider du contenu médiocre sans s'en rendre compte. Sans connaissance en fiscalité, un montage à moitié erroné peut être validé sans le voir. Une IA sans expertise humaine derrière elle produit un contenu plausible, pas nécessairement juste - et l'œil nécessaire pour faire la différence manque justement là où la compétence fait défaut.
+Sans compétence en rédaction, comment juger la qualité d'un texte produit par Claude ? Le risque est de valider du contenu médiocre sans s'en rendre compte. Sans connaissance en fiscalité, un montage à moitié erroné peut être validé sans le voir. Une IA sans expertise humaine derrière elle produit un contenu plausible, pas nécessairement juste, et l'œil nécessaire pour faire la différence manque justement là où la compétence fait défaut.
 
 ## Là où l'IA apporte le plus de valeur
 
@@ -21,7 +21,7 @@ Sur les domaines déjà maîtrisés. Une bonne connaissance en stratégie produi
 
 ## Le prompt d'audit des zones de force
 
-> **Prompt - audit zones de force**
+> **Prompt : audit zones de force**
 >
 > Je vais lister 5 choses que je fais bien, et 5 choses que je fais mal. Pour chacune :
 >
@@ -42,7 +42,7 @@ Une zone de force ne désigne pas ce qui est apprécié, mais ce qui peut être 
 
 **Cela veut-il dire qu'il ne faut jamais utiliser l'IA hors de ses points forts ?**
 
-C'est possible, à condition d'avoir conscience de ne pas pouvoir juger la qualité du résultat. Ces usages doivent alors rester réservés à du jetable - brouillon, exploration - jamais à un livrable final.
+C'est possible, à condition d'avoir conscience de ne pas pouvoir juger la qualité du résultat. Ces usages doivent alors rester réservés à du jetable (brouillon, exploration), jamais à un livrable final.
 
 **Et en cas de débutant sur tous les fronts ?**
 
@@ -52,4 +52,4 @@ Le mieux est alors de choisir une zone et d'y devenir réellement compétent. La
 
 **Pour combler ses faiblesses, mieux vaut payer un humain qu'une IA.**
 
-Une IA amplifie ce qui existe déjà, pas ce qui manque. Pour progresser sur une zone faible, un coach, un freelance ou un mentor reste la solution - l'IA n'offre pas de raccourci sur ce terrain précis.
+Une IA amplifie ce qui existe déjà, pas ce qui manque. Pour progresser sur une zone faible, un coach, un freelance ou un mentor reste la solution ; l'IA n'offre pas de raccourci sur ce terrain précis.

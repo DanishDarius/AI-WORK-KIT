@@ -9,31 +9,31 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Plutôt que d'accumuler encore de la théorie ou une énième newsletter, voici cinq actions concrètes à réaliser dans la semaine - cinq cases à cocher avant dimanche, sans phase de réflexion supplémentaire.
+Plutôt que d'accumuler encore de la théorie ou une énième newsletter, voici cinq actions concrètes à réaliser dans la semaine : cinq cases à cocher avant dimanche, sans phase de réflexion supplémentaire.
 
-## Lundi - Identifier les trois tâches les plus lourdes
+## Lundi : Identifier les trois tâches les plus lourdes
 
-Noter les trois tâches qui consomment le plus de temps dans la semaine. Une seule d'entre elles sera confiée à l'IA d'ici dimanche - une seule, pas plus.
+Noter les trois tâches qui consomment le plus de temps dans la semaine. Une seule d'entre elles sera confiée à l'IA d'ici dimanche. Une seule, pas plus.
 
-## Mardi - Calibrer sa voix
+## Mardi : Calibrer sa voix
 
 Coller cinq de ses meilleurs textes dans Claude et lui demander d'en extraire dix règles de style. Sauvegarder le résultat dans un fichier "voix.md", destiné à être joint à tous les Projets futurs.
 
-## Mercredi - Créer un Projet dédié
+## Mercredi : Créer un Projet dédié
 
 Créer un Projet Claude consacré à la tâche choisie le lundi. Y ajouter le fichier voix.md, trois exemples avant/après, ainsi qu'un prompt système décrivant la tâche en une dizaine de lignes.
 
-## Jeudi - Tester sur un cas réel
+## Jeudi : Tester sur un cas réel
 
-Utiliser le Projet trois fois sur la tâche réelle - pas un simple essai « pour voir », mais le véritable livrable. Noter précisément ce qui ne fonctionne pas.
+Utiliser le Projet trois fois sur la tâche réelle, pas un simple essai « pour voir », mais le véritable livrable. Noter précisément ce qui ne fonctionne pas.
 
-## Vendredi - Itérer puis partager ce qui a été appris
+## Vendredi : Itérer puis partager ce qui a été appris
 
 Corriger les trois défauts les plus importants identifiés la veille. Publier ensuite un post court (cinq lignes) sur LinkedIn ou X du type : « cette semaine j'ai automatisé X, voici les trois leçons retenues. » Le fait de partager publiquement pousse à réellement aller au bout de la démarche.
 
 ## Le prompt « semaine prête », à lancer le dimanche
 
-> **Prompt - Get ahead**
+> **Prompt : Get ahead**
 >
 > Tu es ma coach d'exécution. Aide-moi à finir cette feuille de route en 5 jours.
 >

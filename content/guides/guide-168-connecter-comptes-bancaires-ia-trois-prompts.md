@@ -17,7 +17,7 @@ Activer le mode lecture seule. Vérifier qu'aucune action ne peut être déclenc
 
 ## Les trois prompts pour bien démarrer
 
-> **Prompt 1 - Budget réel**
+> **Prompt 1 : Budget réel**
 >
 > Tu es mon analyste finance perso.
 >
@@ -31,7 +31,7 @@ Activer le mode lecture seule. Vérifier qu'aucune action ne peut être déclenc
 >
 > Pas de jugement. Du chiffre.
 
-> **Prompt 2 - Patrimoine**
+> **Prompt 2 : Patrimoine**
 >
 > Cartographie de mon patrimoine net.
 >
@@ -42,7 +42,7 @@ Activer le mode lecture seule. Vérifier qu'aucune action ne peut être déclenc
 > - Ratio liquidité / épargne / investi
 > - Une recommandation simple pour rééquilibrer (sans recommandation de produits)
 
-> **Prompt 3 - Dettes**
+> **Prompt 3 : Dettes**
 >
 > Plan de remboursement.
 >

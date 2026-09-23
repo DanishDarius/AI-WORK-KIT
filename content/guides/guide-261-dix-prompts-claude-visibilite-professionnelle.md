@@ -2,7 +2,7 @@
 Guide original : 10 prompts Claude pour être promu en 6 mois
 Source : https://www.saadiakaram.ai/guides/promotion-prompts
 Position réelle dans la bibliothèque au moment du traitement : 260/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Sur les 10 prompts annoncés dans la liste, seuls 2 sont développés avec leur texte complet dans le corps capturé (les 8 autres ne sont listés que par leur intitulé) - fidèlement reproduit tel quel, non une omission de ma part. Nom réel conservé (Claude).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Sur les 10 prompts annoncés dans la liste, seuls 2 sont développés avec leur texte complet dans le corps capturé (les 8 autres ne sont listés que par leur intitulé) ; fidèlement reproduit tel quel, non une omission de ma part. Nom réel conservé (Claude).
 ---
 
 # Dix usages de Claude pour gagner en visibilité professionnelle
@@ -30,7 +30,7 @@ Un prompt ne remplace jamais un vrai travail de fond, mais il peut l'accélérer
 
 ## Les deux prompts détaillés
 
-> **Prompt - préparation de 1:1**
+> **Prompt : préparation de 1:1**
 >
 > Tu es mon chief of staff. Mon 1:1 avec mon manager est dans 48h. Voici le contexte de mes 2 dernières semaines :
 >
@@ -44,7 +44,7 @@ Un prompt ne remplace jamais un vrai travail de fond, mais il peut l'accélérer
 >
 > Format : note prête à imprimer.
 
-> **Prompt - réécriture en version formelle**
+> **Prompt : réécriture en version formelle**
 >
 > Voici un email que je viens d'écrire. Réécris-le comme le ferait une dirigeante senior :
 >
@@ -58,7 +58,7 @@ Un prompt ne remplace jamais un vrai travail de fond, mais il peut l'accélérer
 
 ## Le garde-fou
 
-Mieux vaut ne pas tout changer d'un coup. Ces prompts modifient la perception qu'ont les autres - un changement à la fois, sur environ un mois, en mesurant la réaction avant d'ajuster.
+Mieux vaut ne pas tout changer d'un coup. Ces prompts modifient la perception qu'ont les autres : un changement à la fois, sur environ un mois, en mesurant la réaction avant d'ajuster.
 
 ## Questions fréquentes
 

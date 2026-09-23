@@ -13,15 +13,15 @@ Un mariage représente environ 200 décisions, une quinzaine de prestataires à 
 
 ## Les cinq workflows du Project
 
-1. **Planning** - une timeline allant de J-365 à J-1, avec jalons et dépendances entre les tâches.
-2. **Budget** - un suivi poste par poste, avec alertes de dépassement et comparatifs de devis.
-3. **Prise de contact prestataires** - des emails types pour la salle, le traiteur, le photographe, le fleuriste, le DJ.
-4. **Suivi de boîte mail** - des résumés hebdomadaires des réponses des prestataires, avec relances automatiques.
-5. **Identité visuelle** - charte graphique, textes des faire-part, site du mariage, hashtag dédié.
+1. **Planning** : une timeline allant de J-365 à J-1, avec jalons et dépendances entre les tâches.
+2. **Budget** : un suivi poste par poste, avec alertes de dépassement et comparatifs de devis.
+3. **Prise de contact prestataires** : des emails types pour la salle, le traiteur, le photographe, le fleuriste, le DJ.
+4. **Suivi de boîte mail** : des résumés hebdomadaires des réponses des prestataires, avec relances automatiques.
+5. **Identité visuelle** : charte graphique, textes des faire-part, site du mariage, hashtag dédié.
 
 ## Le prompt de configuration du Project
 
-> **Prompt - config Project mariage**
+> **Prompt : config Project mariage**
 >
 > Nous nous marions le [date] à [lieu] avec [nombre] invités et un budget de [montant].
 >

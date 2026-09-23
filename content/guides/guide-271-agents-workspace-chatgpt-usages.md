@@ -13,10 +13,10 @@ ChatGPT propose désormais des agents Workspace connectés à Drive, Gmail, Cale
 
 ## Ce que ces agents savent vraiment faire
 
-1. **Tri matinal de la boîte mail** - lecture de Gmail, classement, rédaction de brouillons pour les réponses simples.
-2. **Préparation du calendrier** - pour chaque réunion du jour : contexte, agenda, trois questions à poser.
-3. **Nettoyage du Drive** - rangement, étiquetage et résumé des nouveaux documents.
-4. **Suivi de projet** - croisement des données Slack et Drive pour signaler les points de blocage.
+1. **Tri matinal de la boîte mail** : lecture de Gmail, classement, rédaction de brouillons pour les réponses simples.
+2. **Préparation du calendrier**. Pour chaque réunion du jour : contexte, agenda, trois questions à poser.
+3. **Nettoyage du Drive** : rangement, étiquetage et résumé des nouveaux documents.
+4. **Suivi de projet** : croisement des données Slack et Drive pour signaler les points de blocage.
 
 ## Le garde-fou à respecter
 
@@ -24,7 +24,7 @@ Il est recommandé de faire fonctionner l'agent en mode « brouillon uniquement 
 
 ## Le prompt de brief pour l'agent du matin
 
-> **Prompt - brief agent matin**
+> **Prompt : brief agent matin**
 >
 > Tu es mon assistant exécutif.
 >
@@ -40,4 +40,4 @@ Il est recommandé de faire fonctionner l'agent en mode « brouillon uniquement 
 
 **Récupérer une heure par jour, pas davantage.**
 
-Un agent qui fait gagner une heure quotidienne représente déjà l'équivalent d'un mois de productivité sur une année - c'est cet objectif réaliste qu'il faut viser, plutôt qu'un gain miraculeux.
+Un agent qui fait gagner une heure quotidienne représente déjà l'équivalent d'un mois de productivité sur une année. C'est cet objectif réaliste qu'il faut viser, plutôt qu'un gain miraculeux.

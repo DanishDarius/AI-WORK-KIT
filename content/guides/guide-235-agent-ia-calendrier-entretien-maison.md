@@ -9,7 +9,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Une chaudière qui lâche en plein hiver, une VMC oubliée depuis des années, un détecteur de fumée à la batterie vide depuis des mois : l'entretien du logement n'est pas compliqué en soi, il est surtout invisible. Un agent IA correctement configuré peut devenir un rappel d'entretien personnalisé - une vingtaine de minutes de configuration pour des économies potentiellement importantes sur l'année.
+Une chaudière qui lâche en plein hiver, une VMC oubliée depuis des années, un détecteur de fumée à la batterie vide depuis des mois : l'entretien du logement n'est pas compliqué en soi, il est surtout invisible. Un agent IA correctement configuré peut devenir un rappel d'entretien personnalisé : une vingtaine de minutes de configuration pour des économies potentiellement importantes sur l'année.
 
 ## Pourquoi un agent plutôt qu'une application dédiée
 
@@ -27,7 +27,7 @@ Les applications d'entretien maison restent génériques : les mêmes rappels s'
 
 ## Le prompt de calendrier d'entretien sur mesure
 
-> **Prompt - maintenance maison**
+> **Prompt : maintenance maison**
 >
 > Tu es responsable maintenance pour mon logement. Crée un calendrier annuel personnalisé.
 >

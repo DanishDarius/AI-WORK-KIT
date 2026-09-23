@@ -17,13 +17,13 @@ Un agent local (sur un ordinateur personnel, via un outil comme Claude Code ou u
 
 ## Les trois cas d'usage les plus solides
 
-1. **Surveillance** - un agent qui scanne tableaux de bord, alertes et emails toutes les heures.
-2. **Pipeline** - un agent qui collecte, nettoie et résume des données à intervalle régulier.
-3. **Réponse** - un agent qui répond aux demandes simples sans intervention humaine.
+1. **Surveillance** : un agent qui scanne tableaux de bord, alertes et emails toutes les heures.
+2. **Pipeline** : un agent qui collecte, nettoie et résume des données à intervalle régulier.
+3. **Réponse** : un agent qui répond aux demandes simples sans intervention humaine.
 
 ## Le prompt de spécification
 
-> **Prompt - spec d'agent managé**
+> **Prompt : spec d'agent managé**
 >
 > Définis un Managed Agent pour cette tâche : [décris la tâche récurrente].
 >

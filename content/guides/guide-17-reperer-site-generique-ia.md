@@ -1,7 +1,7 @@
 ---
 Guide original : "27 preuves qu'un site est fait par une IA (et le prompt anti-slop)"
 Source : saadiakaram.ai/guides/20-preuves-site-fait-par-ia
-Statut : reformulé (texte) - aucun visuel/tableau HTML détecté sur cette page
+Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
 ---
 
 # 27 signes qui trahissent un site généré par IA (et le prompt pour l'éviter)
@@ -24,15 +24,15 @@ Tous les indices (visuels, textuels, structurels, techniques) pour repérer un s
 
 ---
 
-## 01 - Le problème dont personne ne parle
+## 01. Le problème dont personne ne parle
 
 Tu reconnais un site généré par IA en trois secondes à peine. Le dégradé violet, les trois cartes identiques, les faux témoignages. Le vrai problème n'est pas que ce soit laid : c'est que ça sent le jetable, et ça détruit instantanément la confiance du visiteur.
 
-Aujourd'hui, n'importe qui peut se créer un site en une soirée. La construction en elle-même ne vaut donc plus grand-chose. Ce qui te distingue réellement, c'est la finition : le goût, le souci du détail, le fait que ton site n'ait pas l'air sorti d'un moule industriel. Or les outils IA partagent tous le même moule par défaut. Sans direction précise de ta part, ils produisent le même site que tout le monde - et ton visiteur le ressent avant même d'avoir lu un seul mot. D'abord la liste pour les repérer. Ensuite le prompt pour les éviter.
+Aujourd'hui, n'importe qui peut se créer un site en une soirée. La construction en elle-même ne vaut donc plus grand-chose. Ce qui te distingue réellement, c'est la finition : le goût, le souci du détail, le fait que ton site n'ait pas l'air sorti d'un moule industriel. Or les outils IA partagent tous le même moule par défaut. Sans direction précise de ta part, ils produisent le même site que tout le monde, et ton visiteur le ressent avant même d'avoir lu un seul mot. D'abord la liste pour les repérer. Ensuite le prompt pour les éviter.
 
 ---
 
-## 02 - Les signes révélateurs, par catégorie
+## 02. Les signes révélateurs, par catégorie
 
 ### Le visuel (le plus évident)
 
@@ -44,7 +44,7 @@ Aujourd'hui, n'importe qui peut se créer un site en une soirée. La constructio
 6. Des émojis en guise de puces pour donner une impression de dynamisme.
 7. La grille de trois cartes « fonctionnalités » identiques, avec des icônes au trait toutes semblables.
 8. Des coins très arrondis et des ombres douces, uniformes sur l'ensemble de la page.
-9. Tout est centré - aucune tension visuelle, aucune asymétrie volontaire.
+9. Tout est centré : aucune tension visuelle, aucune asymétrie volontaire.
 10. Le dark mode violet néon appliqué par réflexe, sans réelle réflexion.
 
 ### Le texte (l'IA se trahit dans les mots)
@@ -77,11 +77,11 @@ Aujourd'hui, n'importe qui peut se créer un site en une soirée. La constructio
 
 ---
 
-## 03 - Le master prompt anti-générique
+## 03. Le master prompt anti-générique
 
 Colle ce bloc AVANT ta demande, dans Claude, Lovable, Bolt ou l'outil que tu utilises habituellement. Il interdit les clichés un par un et impose une véritable direction artistique.
 
-**Prompt à copier - Master anti-générique :**
+**Prompt à copier (Master anti-générique) :**
 > Avant de construire, applique ces règles de design NON négociables. Le but : que le résultat n'ait PAS l'air d'un site généré par IA. Tu es un directeur artistique avec du goût, pas un générateur de template.
 >
 > INTERDIT (n'utilise jamais, sauf si je le demande explicitement) :
@@ -110,15 +110,15 @@ Colle ce bloc AVANT ta demande, dans Claude, Lovable, Bolt ou l'outil que tu uti
 
 ---
 
-## 04 - Quand s'en servir
+## 04. Quand s'en servir
 
-Sur ton propre site avant de le publier, mais aussi pour auditer celui livré par un prestataire (« est-ce qu'on me livre vraiment du sur-mesure, ou un simple template IA repeint »). L'idée n'est pas de rejeter l'IA en tant qu'outil : c'est de s'en servir avec un vrai goût. L'IA construit pour tout le monde de la même façon - la finition, elle, c'est ce qui te distingue véritablement.
+Sur ton propre site avant de le publier, mais aussi pour auditer celui livré par un prestataire (« est-ce qu'on me livre vraiment du sur-mesure, ou un simple template IA repeint »). L'idée n'est pas de rejeter l'IA en tant qu'outil : c'est de s'en servir avec un vrai goût. L'IA construit pour tout le monde de la même façon ; la finition, elle, c'est ce qui te distingue véritablement.
 
 ---
 
 ## Le fichier complet
 
-*[Emplacement réservé à ton propre mécanisme d'accès à la liste complète et au master prompt téléchargeable - lead magnet, formulaire, ou lien selon ta plateforme.]*
+*[Emplacement réservé à ton propre mécanisme d'accès à la liste complète et au master prompt téléchargeable : lead magnet, formulaire, ou lien selon ta plateforme.]*
 
 ---
 

@@ -21,7 +21,7 @@ Choisir UNE audience précise (par exemple : « indépendants en France qui veul
 
 ## Le prompt à copier
 
-> **Prompt - calendrier 30 jours**
+> **Prompt : calendrier 30 jours**
 >
 > Tu es mon stratège content IA.
 >
@@ -41,7 +41,7 @@ Choisir UNE audience précise (par exemple : « indépendants en France qui veul
 
 ## Le piège à éviter
 
-Vouloir publier sur quatre plateformes à la fois. Une seule, à fond, pendant quatre-vingt-dix jours - la duplication vient après.
+Vouloir publier sur quatre plateformes à la fois. Une seule, à fond, pendant quatre-vingt-dix jours ; la duplication vient après.
 
 ## À retenir
 

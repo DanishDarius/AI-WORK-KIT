@@ -19,13 +19,13 @@ Claude dispose désormais d'un connecteur vers l'écosystème Meta (Facebook, In
 
 ## Le prompt d'audit publicitaire
 
-> **Prompt - audit Ads Meta**
+> **Prompt : audit Ads Meta**
 >
 > Tu es media buyer sénior Meta Ads.
 >
 > Accède à mon compte Ads. Sur les 30 derniers jours :
-> 1. Top 3 campagnes par ROAS - pourquoi elles marchent
-> 2. Flop 3 campagnes - couper / itérer / laisser ? Justifie
+> 1. Top 3 campagnes par ROAS : pourquoi elles marchent
+> 2. Flop 3 campagnes : couper / itérer / laisser ? Justifie
 > 3. 3 hypothèses créatives à tester cette semaine
 > 4. Le réglage de budget que tu changerais demain matin
 >

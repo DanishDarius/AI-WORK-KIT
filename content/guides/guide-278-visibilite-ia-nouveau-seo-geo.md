@@ -17,15 +17,15 @@ Une IA ne cite pas nécessairement le contenu le mieux positionné dans les mote
 
 ## Les cinq leviers qui fonctionnent
 
-1. **Des pages « définitives » sur une question précise** - un sujet, une page, une réponse claire dès l'introduction.
-2. **Des données originales** - un mini-sondage, un benchmark, un chiffre produit soi-même. C'est ce type de contenu que l'IA a tendance à citer.
-3. **Des mentions sur les sites régulièrement scrapés** - Reddit, GitHub, Wikipedia, la presse. Ce sont des sources fréquemment utilisées pour l'entraînement des modèles.
-4. **Une structure lisible par une machine** - des titres H2 clairs, une FAQ, un balisage JSON-LD.
-5. **Un nom propre identifiable** - un contenu nommable, comme « le framework X de Y », se cite plus facilement qu'un simple article de blog.
+1. **Des pages « définitives » sur une question précise** : un sujet, une page, une réponse claire dès l'introduction.
+2. **Des données originales** : un mini-sondage, un benchmark, un chiffre produit soi-même. C'est ce type de contenu que l'IA a tendance à citer.
+3. **Des mentions sur les sites régulièrement scrapés** : Reddit, GitHub, Wikipedia, la presse. Ce sont des sources fréquemment utilisées pour l'entraînement des modèles.
+4. **Une structure lisible par une machine** : des titres H2 clairs, une FAQ, un balisage JSON-LD.
+5. **Un nom propre identifiable** : un contenu nommable, comme « le framework X de Y », se cite plus facilement qu'un simple article de blog.
 
 ## Le prompt d'audit de visibilité IA
 
-> **Prompt - audit visibilité IA**
+> **Prompt : audit visibilité IA**
 >
 > Tu es un consultant GEO (Generative Engine Optimization).
 >

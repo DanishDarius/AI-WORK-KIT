@@ -17,39 +17,39 @@ Ces mots reviennent partout, rarement définis proprement. Voici un dico simple,
 
 ## Le lexique
 
-**LLM** - le modèle qui prédit le mot suivant. Claude, GPT, Gemini en sont des exemples.
+**LLM** : le modèle qui prédit le mot suivant. Claude, GPT, Gemini en sont des exemples.
 
-**Prompt** - ce qu'on écrit à l'IA. Un bon prompt combine contexte, objectif et format attendu.
+**Prompt** : ce qu'on écrit à l'IA. Un bon prompt combine contexte, objectif et format attendu.
 
-**Contexte** - la mémoire courte d'une conversation. Limité, donc précieux.
+**Contexte** : la mémoire courte d'une conversation. Limité, donc précieux.
 
-**Token** - l'unité que l'IA compte en interne. Un token équivaut environ à 0,75 mot en français.
+**Token** : l'unité que l'IA compte en interne. Un token équivaut environ à 0,75 mot en français.
 
-**Modèle** - la version utilisée (Sonnet, Opus, GPT-5, etc.). Plus puissant ne signifie pas toujours meilleur pour une tâche donnée.
+**Modèle** : la version utilisée (Sonnet, Opus, GPT-5, etc.). Plus puissant ne signifie pas toujours meilleur pour une tâche donnée.
 
-**Connecteur** - un pont entre l'IA et un outil tiers (Drive, Gmail).
+**Connecteur** : un pont entre l'IA et un outil tiers (Drive, Gmail).
 
-**MCP** - un protocole standardisé pour les connecteurs. C'est ce qui rend une IA réellement exploitable avec des outils externes.
+**MCP** : un protocole standardisé pour les connecteurs. C'est ce qui rend une IA réellement exploitable avec des outils externes.
 
-**Skill** - un workflow figé sous forme de fichier. Réutilisable, testable.
+**Skill** : un workflow figé sous forme de fichier. Réutilisable, testable.
 
-**Plugin** - une extension qui ajoute une capacité supplémentaire à l'IA.
+**Plugin** : une extension qui ajoute une capacité supplémentaire à l'IA.
 
-**Agent** - une IA qui agit en plusieurs étapes pour atteindre un but, sans que chaque étape soit pilotée manuellement.
+**Agent** : une IA qui agit en plusieurs étapes pour atteindre un but, sans que chaque étape soit pilotée manuellement.
 
-**Mode arrière-plan** - un agent qui travaille pendant que l'utilisateur fait autre chose.
+**Mode arrière-plan** : un agent qui travaille pendant que l'utilisateur fait autre chose.
 
-**Livrable structuré (« artifact »)** - un document, du code ou un tableau que l'IA isole de la conversation principale.
+**Livrable structuré (« artifact »)** : un document, du code ou un tableau que l'IA isole de la conversation principale.
 
-**Mémoire longue durée** - une mémoire optionnelle qui persiste au-delà d'une seule conversation. À utiliser avec parcimonie.
+**Mémoire longue durée** : une mémoire optionnelle qui persiste au-delà d'une seule conversation. À utiliser avec parcimonie.
 
-**RAG** - la technique par laquelle l'IA va chercher dans des documents avant de répondre.
+**RAG** : la technique par laquelle l'IA va chercher dans des documents avant de répondre.
 
-**Hallucination** - quand l'IA invente une information avec assurance. Toujours possible, quel que soit le modèle.
+**Hallucination** : quand l'IA invente une information avec assurance. Toujours possible, quel que soit le modèle.
 
 ## La règle à retenir
 
-Si une explication sur l'IA utilise des mots incompréhensibles, ce n'est pas un problème de compréhension personnelle - c'est que l'explication n'a pas pris la peine de traduire.
+Si une explication sur l'IA utilise des mots incompréhensibles, ce n'est pas un problème de compréhension personnelle : c'est que l'explication n'a pas pris la peine de traduire.
 
 ## À retenir
 

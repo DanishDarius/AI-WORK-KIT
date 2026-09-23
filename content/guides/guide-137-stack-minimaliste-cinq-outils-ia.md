@@ -15,23 +15,23 @@ Pas besoin de 25 applications. Cinq outils suffisent à couvrir l'essentiel. À 
 
 Cinq outils IA couvrent la grande majorité des usages courants. Le reste n'est que du bruit. Voici la stack minimaliste.
 
-## Claude - le cerveau
+## Claude : le cerveau
 
 Rédaction, analyse, raisonnement, création d'artefacts, Skills. L'outil principal pour tout ce qui demande du jugement.
 
-## Perplexity - les recherches
+## Perplexity : les recherches
 
 Questions factuelles, veille, études, chiffres. Ses sources citées le rendent fiable pour la recherche rapide.
 
-## Canva - les visuels
+## Canva : les visuels
 
 Posts, carrousels, présentations, PDF. L'IA génère, la finition se fait à la main. Le meilleur compromis entre vitesse et qualité.
 
-## NotebookLM - la mémoire
+## NotebookLM : la mémoire
 
 Les documents y sont déversés, les réponses arrivent avec citations exactes. Parfait pour les gros dossiers, les cours, les contrats.
 
-## Make ou Zapier - l'automatisation
+## Make ou Zapier : l'automatisation
 
 Le ciment entre les outils. Claude génère le contenu, l'automatisation le route vers la messagerie, la messagerie d'équipe, les espaces de travail et les tableurs.
 

@@ -2,7 +2,7 @@
 Guide original : Claude vient d'offrir un avantage injuste
 Source : https://www.saadiakaram.ai/guides/claude-for-small-business
 Position réelle dans la bibliothèque au moment du traitement : 119/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 104 (« Configurer un assistant IA pour une petite entreprise en quinze minutes », source claude-small-business) : ce guide-ci porte sur l'installation d'un plugin dédié via une marketplace et trois cas d'usage concrets, contenu distinct malgré la proximité thématique. Réglages/menus spécifiques à un produit - susceptibles d'évoluer - décrits en termes génériques par précaution.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 104 (« Configurer un assistant IA pour une petite entreprise en quinze minutes », source claude-small-business) : ce guide-ci porte sur l'installation d'un plugin dédié via une marketplace et trois cas d'usage concrets, contenu distinct malgré la proximité thématique. Réglages/menus spécifiques à un produit (susceptibles d'évoluer) décrits en termes génériques par précaution.
 ---
 
 # Un plugin gratuit pour petite entreprise : installation et premiers cas d'usage

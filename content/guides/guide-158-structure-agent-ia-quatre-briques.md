@@ -17,13 +17,13 @@ De nombreux agents IA en production suivent tous la même structure de base : qu
 
 ## Les quatre briques
 
-**1. Contexte** - qui est l'agent, à qui il s'adresse, son ton, ses non-négociables.
+**1. Contexte** : qui est l'agent, à qui il s'adresse, son ton, ses non-négociables.
 
-**2. Connexions** - quels outils il peut appeler (calendrier, messagerie, base de données, recherche web).
+**2. Connexions** : quels outils il peut appeler (calendrier, messagerie, base de données, recherche web).
 
-**3. Workflows** - les trois à cinq scénarios précis qu'il sait gérer, pas plus.
+**3. Workflows** : les trois à cinq scénarios précis qu'il sait gérer, pas plus.
 
-**4. Mémoire** - ce qu'il retient d'un échange à l'autre.
+**4. Mémoire** : ce qu'il retient d'un échange à l'autre.
 
 ## L'erreur classique
 
@@ -31,7 +31,7 @@ Vouloir un agent qui « fait tout » aboutit à un agent qui ne fait rien correc
 
 ## Le modèle de brief d'agent
 
-> **Prompt - agent en quatre briques**
+> **Prompt : agent en quatre briques**
 >
 > Tu es [nom de l'agent].
 >

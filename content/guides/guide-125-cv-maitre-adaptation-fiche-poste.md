@@ -9,7 +9,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Un CV maître conservé à jour, une fiche de poste collée, et une version adaptée en quelques secondes - même vocabulaire que l'offre, sans rien inventer.
+Un CV maître conservé à jour, une fiche de poste collée, et une version adaptée en quelques secondes : même vocabulaire que l'offre, sans rien inventer.
 
 ## Le principe
 
@@ -17,11 +17,11 @@ Conserver un CV maître à jour. Au moment de postuler, coller la fiche de poste
 
 ## Le CV maître
 
-Un seul fichier qui rassemble tout : toutes les missions, tous les chiffres, toutes les compétences. Il ne se montre jamais tel quel - c'est la base de données de référence.
+Un seul fichier qui rassemble tout : toutes les missions, tous les chiffres, toutes les compétences. Il ne se montre jamais tel quel : c'est la base de données de référence.
 
 ## Le prompt d'adaptation
 
-> **Prompt - tailleur de CV**
+> **Prompt : tailleur de CV**
 >
 > Voici mon CV maître :
 > [colle]

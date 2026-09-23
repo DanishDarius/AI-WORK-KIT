@@ -2,7 +2,7 @@
 Guide original : 5 Skills Claude qui gèrent toute ma vie
 Source : https://www.saadiakaram.ai/guides/5-life-skills
 Position réelle dans la bibliothèque au moment du traitement : 153/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le Skill 2 (sommeil) reste un outil de bien-être général, sans diagnostic. Le Skill 5 (revue de dépenses personnelles) porte sur un budget courant, pas sur des données financières sensibles (pas de revenu, patrimoine ou dette évoqués) - reformulé tel quel.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le Skill 2 (sommeil) reste un outil de bien-être général, sans diagnostic. Le Skill 5 (revue de dépenses personnelles) porte sur un budget courant, pas sur des données financières sensibles (pas de revenu, patrimoine ou dette évoqués) ; reformulé tel quel.
 ---
 
 # Cinq Skills personnels qui structurent le quotidien
@@ -21,7 +21,7 @@ Contraintes personnelles (allergies, budget, temps), goûts, restes disponibles 
 
 ## 2. Coach sommeil
 
-Les heures de coucher et de réveil sont consignées. Le Skill repère les tendances et propose un seul ajustement à la fois - jamais douze en même temps.
+Les heures de coucher et de réveil sont consignées. Le Skill repère les tendances et propose un seul ajustement à la fois, jamais douze en même temps.
 
 ## 3. Organisateur de soirées à deux
 
@@ -33,11 +33,11 @@ Chaque dimanche à 18h : revue de la semaine écoulée, plan des sept jours suiv
 
 ## 5. Suivi de dépenses apaisé
 
-Une fois par mois : revue des dépenses à partir d'un export, repérage des postes qui dérivent, proposition d'un arbitrage - sans jugement.
+Une fois par mois : revue des dépenses à partir d'un export, repérage des postes qui dérivent, proposition d'un arbitrage, sans jugement.
 
 ## Le prompt à copier
 
-> **Prompt - squelette d'un Skill personnel**
+> **Prompt : squelette d'un Skill personnel**
 >
 > Crée un Skill nommé [nom].
 > Déclencheur : quand je dis [déclencheur].

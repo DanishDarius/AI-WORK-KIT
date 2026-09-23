@@ -13,11 +13,11 @@ Construire des workflows IA qui rendent vraiment du temps chaque jour, plutôt q
 
 ## Le principe
 
-Arrêter d'accumuler des outils et commencer à concevoir des workflows qui rendent du temps RÉEL chaque jour - pas du temps « économisé sur le papier ».
+Arrêter d'accumuler des outils et commencer à concevoir des workflows qui rendent du temps RÉEL chaque jour, pas du temps « économisé sur le papier ».
 
 ## Les quatre règles
 
-Un workflow ne compte que s'il est possible de dire combien d'heures il rend par semaine. Un workflow doit tenir sans intervention pendant trois jours sans s'effondrer. Le suivant ne se lance pas tant que le précédent ne tourne pas seul. Mesurer est indispensable - sans mesure, ce n'est pas un workflow, c'est une intention.
+Un workflow ne compte que s'il est possible de dire combien d'heures il rend par semaine. Un workflow doit tenir sans intervention pendant trois jours sans s'effondrer. Le suivant ne se lance pas tant que le précédent ne tourne pas seul. Mesurer est indispensable : sans mesure, ce n'est pas un workflow, c'est une intention.
 
 ## Le test du vrai workflow
 
@@ -25,7 +25,7 @@ Il peut se décrire en cinq étapes. Il peut être confié à quelqu'un d'autre 
 
 ## Le prompt à copier
 
-> **Prompt - conception de workflow**
+> **Prompt : conception de workflow**
 >
 > Tu es mon designer de workflow IA.
 >
@@ -45,7 +45,7 @@ Il peut se décrire en cinq étapes. Il peut être confié à quelqu'un d'autre 
 
 ## Le piège à éviter
 
-Vouloir tout automatiser. Le bon réflexe consiste à garder le jugement humain et à ne lâcher que l'exécution - jamais l'inverse.
+Vouloir tout automatiser. Le bon réflexe consiste à garder le jugement humain et à ne lâcher que l'exécution, jamais l'inverse.
 
 ## À retenir
 

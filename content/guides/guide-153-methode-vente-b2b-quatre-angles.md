@@ -13,7 +13,7 @@ Trois tactiques tirées du vrai terrain commercial : préparation d'appels, pré
 
 ## Le constat
 
-L'équipe commerciale d'Anthropic a partagé comment elle utilise l'IA pour vendre son propre produit. La méthode est solide - voici ce qui peut s'en inspirer.
+L'équipe commerciale d'Anthropic a partagé comment elle utilise l'IA pour vendre son propre produit. La méthode est solide. Voici ce qui peut s'en inspirer.
 
 ## Les quatre angles qui marchent
 
@@ -27,7 +27,7 @@ L'équipe commerciale d'Anthropic a partagé comment elle utilise l'IA pour vend
 
 ## Le prompt de préparation de compte
 
-> **Prompt - préparation de rendez-vous B2B**
+> **Prompt : préparation de rendez-vous B2B**
 >
 > Tu es mon commercial senior.
 >

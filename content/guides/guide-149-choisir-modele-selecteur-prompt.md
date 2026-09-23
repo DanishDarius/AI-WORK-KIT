@@ -17,11 +17,11 @@ Cliquer au hasard entre Sonnet, Opus et Haiku finit par gaspiller crédits et pa
 
 ## Le bon modèle pour la bonne tâche
 
-**Haiku** - vitesse, volume, tâches simples : tri, résumé court, extraction. Rapide et économique.
+**Haiku**. Vitesse, volume, tâches simples : tri, résumé court, extraction. Rapide et économique.
 
-**Sonnet** - le choix par défaut. La grande majorité de l'usage quotidien : rédaction, analyse, code. Le meilleur rapport qualité-prix.
+**Sonnet**. Le choix par défaut. La grande majorité de l'usage quotidien : rédaction, analyse, code. Le meilleur rapport qualité-prix.
 
-**Opus** - raisonnement complexe, stratégie, code long, documents juridiques. Réservé aux cas qui comptent vraiment.
+**Opus**. Raisonnement complexe, stratégie, code long, documents juridiques. Réservé aux cas qui comptent vraiment.
 
 ## La règle du changement de modèle
 
@@ -29,7 +29,7 @@ Toujours démarrer avec Sonnet. Ne passer à Opus que si Sonnet donne un résult
 
 ## Le prompt qui choisit à votre place
 
-> **Prompt - sélecteur de modèle**
+> **Prompt : sélecteur de modèle**
 >
 > Voici ma tâche :
 > [décris en 2 lignes ce que tu veux faire]
@@ -45,4 +45,4 @@ Toujours démarrer avec Sonnet. Ne passer à Opus que si Sonnet donne un résult
 
 **Sonnet d'abord, toujours.**
 
-En cas d'hésitation, Sonnet reste le bon point de départ. La montée en gamme se fait seulement une fois la raison identifiée - c'est l'usage réfléchi d'un modèle de langage.
+En cas d'hésitation, Sonnet reste le bon point de départ. La montée en gamme se fait seulement une fois la raison identifiée : c'est l'usage réfléchi d'un modèle de langage.

@@ -7,7 +7,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 1 s
 
 # Bien dialoguer avec une IA : le contexte change tout
 
-*Multi-outils · 8 min de lecture - Fondations, livre 3 sur 5*
+*Multi-outils · 8 min de lecture (Fondations, livre 3 sur 5)*
 
 Rédiger un brief vérifiable et améliorer une réponse par itérations successives. Un guide pour débutant, avec démonstration, exercice et corrigé.
 
@@ -35,13 +35,13 @@ Aucun prérequis technique n'est nécessaire. Les exemples et les corrigés fonc
 **Anatomie d'un brief, en quatre couches :**
 
 1. **La tâche.** Rédige une invitation pour les habitants du quartier.
-2. **Les faits.** 14 novembre 2026, 10 h-12 h, 12 places, gratuit.
+2. **Les faits.** 14 novembre 2026, 10 h à 12 h, 12 places, gratuit.
 3. **Le format.** Un titre + 70 mots maximum, en français simple.
 4. **Les limites.** Aucun fait ajouté ; les informations manquantes listées à part.
 
-**La tâche, en détail :** un verbe, un livrable, un public. « Aide-moi pour mon atelier » laisse trop de décisions implicites à l'IA. Un rôle assigné peut orienter le ton ou le point de vue général, mais « tu es un expert » ne lui donne ni diplôme, ni accès à tes données, ni garantie d'exactitude. Commence toujours par les faits, les contraintes, et le résultat attendu - pas par le rôle.
+**La tâche, en détail :** un verbe, un livrable, un public. « Aide-moi pour mon atelier » laisse trop de décisions implicites à l'IA. Un rôle assigné peut orienter le ton ou le point de vue général, mais « tu es un expert » ne lui donne ni diplôme, ni accès à tes données, ni garantie d'exactitude. Commence toujours par les faits, les contraintes, et le résultat attendu, pas par le rôle.
 
-> **Prompt - l'invitation de notre atelier fictif, à essayer**
+> **Prompt : l'invitation de notre atelier fictif, à essayer**
 >
 > **Tâche** : rédige une invitation à un atelier de réparation pour les habitants du quartier.
 >
@@ -63,7 +63,7 @@ La mémoire d'une application est une fonction distincte, avec ses propres régl
 
 Organise tes pièces avec méthode : une rubrique « Consigne », une rubrique « Documents », et une rubrique « Résultat attendu ». Fournis le passage réellement pertinent plutôt qu'un dossier entier et énorme. Un exemple de résultat aide pour la forme attendue ; il peut aussi entraîner une imitation indésirable de ses défauts s'il contient lui-même des erreurs.
 
-*(Petit exercice de réflexion : tu passes à un nouveau projet dans une conversation remplie d'anciens tarifs périmés. Quel geste aide le plus ? Trois réponses possibles : ajouter « sois plus intelligent » ; repartir avec un brief clair et la version actuelle des faits ; supposer que le modèle repérera seul ce qui est périmé. La bonne réponse est la deuxième - un modèle ne devine pas quelles informations de l'historique sont devenues obsolètes ; c'est à toi de repartir sur des bases explicitement à jour.)*
+*(Petit exercice de réflexion : tu passes à un nouveau projet dans une conversation remplie d'anciens tarifs périmés. Quel geste aide le plus ? Trois réponses possibles : ajouter « sois plus intelligent » ; repartir avec un brief clair et la version actuelle des faits ; supposer que le modèle repérera seul ce qui est périmé. La bonne réponse est la deuxième : un modèle ne devine pas quelles informations de l'historique sont devenues obsolètes ; c'est à toi de repartir sur des bases explicitement à jour.)*
 
 ## La deuxième version : corrige ce qui compte
 
@@ -71,7 +71,7 @@ Une itération est un nouveau passage de travail à partir du résultat précéd
 
 **La méthode en trois temps :** observer (« tu as ajouté une adresse absente de mon dossier ») ; corriger (« retire cette adresse et garde la Maison des voisins ») ; recontrôler (vérifie que dates, places et gratuité restent toujours exactes après la correction).
 
-> **Prompt - un retour précis, à réutiliser**
+> **Prompt : un retour précis, à réutiliser**
 >
 > Révise le brouillon précédent.
 > À corriger : [nomme un écart observable et la correction souhaitée].
@@ -79,7 +79,7 @@ Une itération est un nouveau passage de travail à partir du résultat précéd
 > Donne la version révisée, puis une liste courte des changements.
 > N'invente pas d'information manquante.
 
-Tu peux aussi demander au modèle de signaler lui-même ses incohérences. Cette relecture fournit des pistes utiles, mais jamais une preuve indépendante et fiable en elle-même. Vérifie toujours les faits avec les documents ou les personnes réellement concernés. Arrête les révisions dès que les critères utiles sont atteints - multiplier les versions peut aussi introduire de nouvelles erreurs à chaque passage.
+Tu peux aussi demander au modèle de signaler lui-même ses incohérences. Cette relecture fournit des pistes utiles, mais jamais une preuve indépendante et fiable en elle-même. Vérifie toujours les faits avec les documents ou les personnes réellement concernés. Arrête les révisions dès que les critères utiles sont atteints ; multiplier les versions peut aussi introduire de nouvelles erreurs à chaque passage.
 
 ## Au-delà du texte : adapte le brief au support
 
@@ -93,7 +93,7 @@ Tu peux aussi demander au modèle de signaler lui-même ses incohérences. Cette
 
 Le brouillon annonce : « Venez dimanche à 9 h, au 18 rue des Fleurs. Réparations garanties, places illimitées ! » Écris toi-même le retour qui permet de le corriger avec les faits réels de notre atelier fictif, sans ajouter de nouvelles informations inventées.
 
-*(Piste de correction : le brouillon contient plusieurs écarts par rapport au brief de départ - un mauvais jour (dimanche au lieu de samedi), une mauvaise heure (9 h au lieu de 10 h-12 h), une adresse inventée qui n'a jamais été fournie, une garantie de réparation qui n'a jamais été annoncée, et un nombre de places illimité alors que le brief en précisait 12. Un bon retour nomme chacun de ces écarts un par un, en renvoyant systématiquement aux faits validés du brief initial, sans supposer ni inventer d'information supplémentaire pour combler les manques.)*
+*(Piste de correction : le brouillon contient plusieurs écarts par rapport au brief de départ : un mauvais jour (dimanche au lieu de samedi), une mauvaise heure (9 h au lieu de 10 h à 12 h), une adresse inventée qui n'a jamais été fournie, une garantie de réparation qui n'a jamais été annoncée, et un nombre de places illimité alors que le brief en précisait 12. Un bon retour nomme chacun de ces écarts un par un, en renvoyant systématiquement aux faits validés du brief initial, sans supposer ni inventer d'information supplémentaire pour combler les manques.)*
 
 **Avant de poursuivre :** conserve ton brief et ton critère de validation. Tu vas maintenant apprendre à vérifier une réponse au lieu de juger seulement son style.
 

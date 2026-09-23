@@ -9,7 +9,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-L'IA contribuerait, selon la source, à réduire progressivement l'attrait du défilement compulsif sur les réseaux sociaux - non pas par intention, mais par un effet de bord de sa propre diffusion.
+L'IA contribuerait, selon la source, à réduire progressivement l'attrait du défilement compulsif sur les réseaux sociaux, non pas par intention, mais par un effet de bord de sa propre diffusion.
 
 ## Ce qui se passerait
 
@@ -19,18 +19,18 @@ Parallèlement, des applications combinant actualité et IA (Particle, Bulletin,
 
 ## Comment en tirer parti
 
-1. Remplacer le défilement matinal par un brief généré par IA - quelques minutes au lieu de trois quarts d'heure.
+1. Remplacer le défilement matinal par un brief généré par IA : quelques minutes au lieu de trois quarts d'heure.
 2. Se désabonner des comptes publiant quotidiennement, souvent en grande partie générés par IA.
 3. Conserver un petit nombre de comptes réellement suivis avec attention, en activant les notifications uniquement pour ceux-ci.
 4. Bloquer les applications sociales pendant les heures de travail.
 
 ## Le prompt de brief du matin
 
-> **Prompt - ton brief du matin**
+> **Prompt : ton brief du matin**
 >
 > Tu es mon assistant news.
 >
-> Mes domaines : [liste 3-5 sujets : IA, économie, sport, etc.]
+> Mes domaines : [liste 3 à 5 sujets : IA, économie, sport, etc.]
 >
 > Donne-moi un brief de 5 minutes :
 > 1. Les 3 nouvelles qui comptent vraiment (pas le buzz)
@@ -41,7 +41,7 @@ Parallèlement, des applications combinant actualité et IA (Particle, Bulletin,
 
 ## L'effet caché
 
-Moins le temps passé à faire défiler un fil, plus il reste de temps pour agir concrètement. Et plus l'action concrète occupe l'esprit, moins le besoin de défilement pour se sentir productif se fait sentir - la dynamique s'inverse progressivement.
+Moins le temps passé à faire défiler un fil, plus il reste de temps pour agir concrètement. Et plus l'action concrète occupe l'esprit, moins le besoin de défilement pour se sentir productif se fait sentir. La dynamique s'inverse progressivement.
 
 ## À retenir
 

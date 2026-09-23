@@ -1,7 +1,7 @@
 ---
 Guide original : "Vole le site qui t'inspire : clone-le en code propre avec Ditto + Claude"
 Source : saadiakaram.ai/guides/cloner-un-site-en-code-avec-ditto
-Statut : reformulé (texte) - aucun visuel/tableau HTML détecté sur cette page
+Statut : reformulé (texte) : aucun visuel/tableau HTML détecté sur cette page
 ---
 
 # Reproduire la structure d'un site qui t'inspire, en code propre, avec Ditto et Claude
@@ -28,7 +28,7 @@ Tu repères un site dont le design t'inspire vraiment. Plutôt que de le décrir
 
 ---
 
-## 01 - C'est quoi Ditto, en une minute
+## 01. C'est quoi Ditto, en une minute
 
 Ditto est un outil open source de clonage de sites, développé par ion.design. Tu lui fournis une URL publique, il te restitue une copie fidèle sous forme de code Next.js ou Vite propre, en quelques minutes seulement.
 
@@ -41,9 +41,9 @@ Ditto est un outil open source de clonage de sites, développé par ion.design. 
 
 ---
 
-## 02 - Deux chemins possibles. Choisis le tien.
+## 02. Deux chemins possibles. Choisis le tien.
 
-### Chemin A - connecté à Claude via MCP
+### Chemin A : connecté à Claude via MCP
 
 Tu indiques simplement à Claude quel site cloner, et il s'en charge. Le serveur MCP hébergé se trouve à l'adresse https://api.ditto.site/mcp et nécessite une clé DITTO_API_KEY.
 
@@ -72,7 +72,7 @@ claude mcp add --transport http ditto https://api.ditto.site/mcp \
 > Options : framework Next.js, styling Tailwind, mode single page.
 > Récupère le projet, décompresse-le dans ./mon-site, puis fais npm install et lance npm run dev pour qu'il tourne en local.
 
-### Chemin B - la CLI, sans clé, directement sur ta machine
+### Chemin B : la CLI, sans clé, directement sur ta machine
 
 Aucun compte requis, aucune clé, tout fonctionne en local.
 
@@ -90,11 +90,11 @@ npm run clone -- https://LE-SITE-QUI-M-INSPIRE.com/ --out=./mon-site
 ```
 
 **Les options utiles :**
-- `--framework=next` / `--framework=vite` - Next.js App Router ou Vite React (par défaut : next).
-- `--styling=tailwind` / `--styling=css` - Tailwind ou CSS pur (par défaut : tailwind).
-- `--mode=single` / `--mode=multi` - une page ou multipage (par défaut : single).
-- `--serve` - clone, installe et lance directement le serveur de développement.
-- `--open` - ouvre automatiquement le navigateur après `--serve`.
+- `--framework=next` / `--framework=vite` : Next.js App Router ou Vite React (par défaut : next).
+- `--styling=tailwind` / `--styling=css` : Tailwind ou CSS pur (par défaut : tailwind).
+- `--mode=single` / `--mode=multi` : une page ou multipage (par défaut : single).
+- `--serve` : clone, installe et lance directement le serveur de développement.
+- `--open` : ouvre automatiquement le navigateur après `--serve`.
 
 **Le raccourci « je veux le voir tourner immédiatement » :**
 ```
@@ -103,7 +103,7 @@ npm run clone -- https://LE-SITE-QUI-M-INSPIRE.com/ --out=./mon-site --serve --o
 
 ---
 
-## 03 - Fais tourner la copie sur ta machine
+## 03. Fais tourner la copie sur ta machine
 
 Depuis le dossier généré :
 ```
@@ -116,37 +116,37 @@ Ouvre ensuite http://localhost:3000. Le site qui t'inspirait tourne désormais c
 
 ---
 
-## 04 - Maintenant, c'est dans TON code. Rends-le tien.
+## 04. Maintenant, c'est dans TON code. Rends-le tien.
 
 C'est ici que Claude reprend la main. Le projet généré est du Next.js componentisé avec des design tokens : tu peux modifier le texte, la marque, les couleurs directement par la conversation.
 
-**Prompt 1 - cartographier avant de toucher à quoi que ce soit :**
+**Prompt 1 (cartographier avant de toucher à quoi que ce soit) :**
 > Voici un projet Next.js dans ./mon-site généré par Ditto. Parcours l'arborescence et dresse-moi la carte : où sont les composants de sections (hero, features, pricing, footer), où vivent les design tokens (couleurs, polices, espacements), et où se trouve le contenu texte que je vais devoir remplacer. Ne modifie rien pour l'instant.
 
-**Prompt 2 - poser ta propre marque :**
+**Prompt 2 (poser ta propre marque) :**
 > Remplace la palette et la typographie par la mienne :
 > - couleur primaire : #____ secondaire : #____
 > - police titres : ____ police texte : ____
 > Mets à jour les design tokens Tailwind, pas les valeurs en dur dans chaque composant. Montre-moi le fichier de tokens modifié.
 
-**Prompt 3 - remplacer chaque mot et chaque image :**
+**Prompt 3 (remplacer chaque mot et chaque image) :**
 > Remplace TOUT le contenu par le mien, section par section. Voici mon texte : [colle ton hero, tes bénéfices, tes prix, ton CTA]. Remplace aussi le logo et les images par des placeholders nommés que je fournirai. Ne laisse aucun texte, logo ou visuel de la source d'origine dans le rendu final.
 
-**Prompt 4 - déployer :**
+**Prompt 4 (déployer) :**
 > Prépare ce projet pour un déploiement sur Vercel : vérifie le build avec npm run build, corrige les erreurs, puis donne-moi les étapes exactes pour le mettre en ligne.
 
 ---
 
-## 05 - La règle à ne jamais franchir
+## 05. La règle à ne jamais franchir
 
 S'inspirer d'une structure et d'une mise en page pour créer quelque chose de nouveau : oui. Republier le site de quelqu'un d'autre en ne changeant que les mots : non. La frontière est claire : tu peux t'approprier des idées, jamais des actifs qui ne t'appartiennent pas.
 
 **Ce que le droit protège, et que tu dois impérativement remplacer avant toute publication :**
-- **Logos et marques** - jamais ceux de la source d'origine.
-- **Textes, images, contenu écrit** - entièrement les tiens.
-- **Branding et messages** - ta propre voix, tes propres appels à l'action.
+- **Logos et marques** : jamais ceux de la source d'origine.
+- **Textes, images, contenu écrit** : entièrement les tiens.
+- **Branding et messages** : ta propre voix, tes propres appels à l'action.
 
-Une mise en page et des fonctionnalités génériques (grilles, formulaires, sections tarifaires) ne sont généralement pas protégeables en tant que telles. Le produit final doit être suffisamment distinct de l'original - pas simplement la même page avec le texte échangé. Le bon usage de cet outil : cloner un site sur lequel tu as un droit légitime (le tien, celui d'un client, un template open source, une démo), ou t'en servir comme simple référence de structure que tu rhabilles intégralement.
+Une mise en page et des fonctionnalités génériques (grilles, formulaires, sections tarifaires) ne sont généralement pas protégeables en tant que telles. Le produit final doit être suffisamment distinct de l'original, pas simplement la même page avec le texte échangé. Le bon usage de cet outil : cloner un site sur lequel tu as un droit légitime (le tien, celui d'un client, un template open source, une démo), ou t'en servir comme simple référence de structure que tu rhabilles intégralement.
 
 ---
 
@@ -163,7 +163,7 @@ Une mise en page et des fonctionnalités génériques (grilles, formulaires, sec
 
 ## Le fichier complet
 
-*[Emplacement réservé à ton propre mécanisme d'accès au guide complet - lead magnet, formulaire, ou lien selon ta plateforme.]*
+*[Emplacement réservé à ton propre mécanisme d'accès au guide complet : lead magnet, formulaire, ou lien selon ta plateforme.]*
 
 ---
 
@@ -177,8 +177,8 @@ Pour construire ton app écran par écran, direction le guide Vibe coding 101. P
 
 **Tu peux t'approprier des idées, jamais des actifs qui ne t'appartiennent pas.**
 
-Ditto capture ce que le navigateur affiche et te le restitue en Next.js propre, connecté à Claude via MCP ou en CLI sans clé. Tu ouvres le code, tu te l'appropries entièrement : tokens, texte, logo, images - rien de la source d'origine ne doit rester. C'est une base de départ à rhabiller complètement, jamais un site à republier tel quel.
+Ditto capture ce que le navigateur affiche et te le restitue en Next.js propre, connecté à Claude via MCP ou en CLI sans clé. Tu ouvres le code, tu te l'appropries entièrement : tokens, texte, logo, images. Rien de la source d'origine ne doit rester. C'est une base de départ à rhabiller complètement, jamais un site à republier tel quel.
 
 ---
 
-*Sources vérifiées : ditto.site · github.com/ion-design/ditto.site · Claude Code - documentation MCP · Codecademy - cloner légalement.*
+*Sources vérifiées : ditto.site · github.com/ion-design/ditto.site · Claude Code : documentation MCP · Codecademy : cloner légalement.*

@@ -17,15 +17,15 @@ Canva n'est plus le simple outil de templates qu'il était. Magic Design génèr
 
 ## Les trois fonctions qui changent le workflow
 
-**Magic Design** - taper un prompt, choisir trois visuels parmi vingt générés.
+**Magic Design** : taper un prompt, choisir trois visuels parmi vingt générés.
 
-**Magic Switch** - un même visuel devient post LinkedIn, story, miniature YouTube, en-tête d'e-mail.
+**Magic Switch** : un même visuel devient post LinkedIn, story, miniature YouTube, en-tête d'e-mail.
 
-**Magic Grab** - sélectionner un objet, le déplacer, changer le fond, sans passer par un logiciel de retouche complexe.
+**Magic Grab** : sélectionner un objet, le déplacer, changer le fond, sans passer par un logiciel de retouche complexe.
 
 ## Le brief qui produit de bons visuels
 
-> **Prompt - Magic Design**
+> **Prompt : Magic Design**
 >
 > Crée [nombre] visuels pour [usage : post LinkedIn / carrousel / story / cover].
 >

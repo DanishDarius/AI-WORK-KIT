@@ -21,7 +21,7 @@ Avant de générer quoi que ce soit : réunir cinq offres, un dossier d'inspirat
 
 ## Le prompt qui produit les cinq versions
 
-> **Prompt - cinq pages d'atterrissage**
+> **Prompt : cinq pages d'atterrissage**
 >
 > Tu es designer de pages d'atterrissage spécialisé conversion.
 >

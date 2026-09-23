@@ -27,7 +27,7 @@ Le principe : apprendre un concept, puis le réexpliquer à l'assistant avec ses
 
 ## Le prompt de session tuteur
 
-> **Prompt - session tuteur**
+> **Prompt : session tuteur**
 >
 > Je veux apprendre [sujet]. Mon niveau : [débutant/intermédiaire/avancé sur X]. Mon objectif : [pourquoi].
 >
@@ -41,4 +41,4 @@ Le principe : apprendre un concept, puis le réexpliquer à l'assistant avec ses
 
 **Le tuteur suit ton rythme, pas l'inverse.**
 
-En cas de décrochage, le dire. Si le rythme est trop lent, le dire aussi. Un vrai tuteur s'adapte en continu - un cours en ligne classique ne le fait pas.
+En cas de décrochage, le dire. Si le rythme est trop lent, le dire aussi. Un vrai tuteur s'adapte en continu ; un cours en ligne classique ne le fait pas.

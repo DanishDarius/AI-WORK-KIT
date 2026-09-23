@@ -9,14 +9,14 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Les outils IA ont une durée de vie courte - ChatGPT-3 n'a que quelques années et fait déjà figure d'antiquité. Les compétences, en revanche, restent transférables d'un outil à l'autre. Voici celles qui traversent les changements successifs.
+Les outils IA ont une durée de vie courte : ChatGPT-3 n'a que quelques années et fait déjà figure d'antiquité. Les compétences, en revanche, restent transférables d'un outil à l'autre. Voici celles qui traversent les changements successifs.
 
 ## Les compétences qui durent
 
 1. **Décomposer un problème.** Quel que soit l'outil utilisé, ce découpage reste un travail humain. Aucun modèle de langage ne le fait correctement à la place de l'utilisateur.
-2. **Évaluer une sortie.** Lire rapidement, repérer une erreur, comparer plusieurs versions entre elles - sans doute la compétence la plus rare et la plus précieuse.
+2. **Évaluer une sortie.** Lire rapidement, repérer une erreur, comparer plusieurs versions entre elles, sans doute la compétence la plus rare et la plus précieuse.
 3. **Fournir un contexte propre.** La majorité du résultat dépend du contexte donné en amont, un principe valable pour tous les modèles, présents comme futurs.
-4. **Concevoir un workflow.** Étapes, points de validation, garde-fous - une compétence indépendante de l'outil employé.
+4. **Concevoir un workflow.** Étapes, points de validation, garde-fous : une compétence indépendante de l'outil employé.
 5. **Décider quand ne pas utiliser l'IA.** Une compétence qui reste pertinente quelle que soit l'évolution technologique.
 
 ## Ce qui ne transfère pas
@@ -29,7 +29,7 @@ Environ 70 % du temps sur les fondamentaux durables, 20 % sur la pratique de l'o
 
 ## Le prompt d'audit de transférabilité
 
-> **Prompt - audit transférabilité**
+> **Prompt : audit transférabilité**
 >
 > Liste ce que j'ai appris sur l'IA cette année :
 > [liste libre]

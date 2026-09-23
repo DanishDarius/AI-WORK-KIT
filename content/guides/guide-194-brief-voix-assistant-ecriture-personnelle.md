@@ -2,7 +2,7 @@
 Guide original : Fais sonner Claude comme toi
 Source : https://www.saadiakaram.ai/guides/sound-like-you
 Position réelle dans la bibliothèque au moment du traitement : 193/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. À distinguer du guide 188 (entraîner l'IA à écrire avec sa voix) : thème proche mais méthode et prompt différents - celui-ci se concentre sur l'extraction de tics syntaxiques et sur la règle des « choses que je ne dirais jamais », avec un mémo réutilisable dans les instructions globales ; le guide 188 propose une méthode en 4 étapes distincte (analyse de style en 10 règles, fichier de voix, réutilisation via Projets, correction par l'exemple) - vérifié et confirmé suffisamment distinct pour être conservé comme guide séparé. Nom réel conservé (Claude).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. À distinguer du guide 188 (entraîner l'IA à écrire avec sa voix) : thème proche mais méthode et prompt différents : celui-ci se concentre sur l'extraction de tics syntaxiques et sur la règle des « choses que je ne dirais jamais », avec un mémo réutilisable dans les instructions globales ; le guide 188 propose une méthode en 4 étapes distincte (analyse de style en 10 règles, fichier de voix, réutilisation via Projets, correction par l'exemple). Vérifié et confirmé suffisamment distinct pour être conservé comme guide séparé. Nom réel conservé (Claude).
 ---
 
 # Construire un brief de voix réutilisable pour que l'IA écrive vraiment comme soi
@@ -13,13 +13,13 @@ Le problème d'un assistant IA n'est pas qu'il écrit mal. C'est qu'il écrit co
 
 ## Pourquoi le ton par défaut ne fonctionne pas
 
-Un assistant IA est entraîné pour plaire au plus grand nombre. Il neutralise donc naturellement les aspérités : pas de tics, pas d'angles vifs, pas de tournures qui dépassent. Or, ce qui rend une voix reconnaissable, ce sont précisément ces aspérités. Pour qu'il ressemble à quelqu'un en particulier, il faut lui donner ces angles à imiter - pas simplement lui demander d'« écrire dans son style ».
+Un assistant IA est entraîné pour plaire au plus grand nombre. Il neutralise donc naturellement les aspérités : pas de tics, pas d'angles vifs, pas de tournures qui dépassent. Or, ce qui rend une voix reconnaissable, ce sont précisément ces aspérités. Pour qu'il ressemble à quelqu'un en particulier, il faut lui donner ces angles à imiter, pas simplement lui demander d'« écrire dans son style ».
 
 ## Le brief de voix qui tient dans le temps
 
 Rassembler cinq à dix de ses meilleurs textes (publications, e-mails, notes vocales transcrites), puis les soumettre avec ce prompt.
 
-> **Prompt - extraction de voix**
+> **Prompt : extraction de voix**
 >
 > Voici 5 textes que j'ai écrits. Ne me complimente pas. Analyse-les comme un éditeur exigeant et extrais :
 >
@@ -35,7 +35,7 @@ Rassembler cinq à dix de ses meilleurs textes (publications, e-mails, notes voc
 
 ## Comment réutiliser ce mémo
 
-Ce mémo se sauvegarde dans les instructions globales de l'assistant, ou se recolle en tête de chaque nouvelle conversation d'écriture. C'est le « profil voix » - à mettre à jour environ tous les deux mois.
+Ce mémo se sauvegarde dans les instructions globales de l'assistant, ou se recolle en tête de chaque nouvelle conversation d'écriture. C'est le « profil voix », à mettre à jour environ tous les deux mois.
 
 ### Un garde-fou à garder en tête
 

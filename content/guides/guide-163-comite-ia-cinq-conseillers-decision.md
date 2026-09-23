@@ -2,7 +2,7 @@
 Guide original : Arrête de faire confiance à Claude. Crée le Comité.
 Source : https://www.saadiakaram.ai/guides/comite-ia
 Position réelle dans la bibliothèque au moment du traitement : 161/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (guide long, prompt complet en 3 étapes). Noms et références réels conservés comme faits (Stanford, Claude, ChatGPT, Gemini, Llama, DeepSeek, Andrej Karpathy, OpenAI, Anthropic, GitHub, revue Science). La statistique citée (« 49 % plus souvent ») est attribuée à une étude sourcée par la source d'origine - conservée telle quelle avec son attribution.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (guide long, prompt complet en 3 étapes). Noms et références réels conservés comme faits (Stanford, Claude, ChatGPT, Gemini, Llama, DeepSeek, Andrej Karpathy, OpenAI, Anthropic, GitHub, revue Science). La statistique citée (« 49 % plus souvent ») est attribuée à une étude sourcée par la source d'origine, conservée telle quelle avec son attribution.
 ---
 
 # Le Comité IA : cinq conseillers virtuels pour éviter la complaisance
@@ -35,34 +35,34 @@ Tout l'intérêt d'un comité tient dans la friction qu'il crée. Cinq « expert
 
 ## Le président : revue anonyme, puis synthèse
 
-Une fois les cinq avis rendus, l'ensemble est relu : chaque conseiller évalue les quatre autres sans savoir qui a écrit quoi. Anonymiser cette revue est l'étape la plus souvent négligée, et la plus importante. Quand un modèle ignore qu'il évalue sa propre réponse, il l'évalue honnêtement ; quand il le sait, il tend à la défendre. Le président lit ensuite les cinq réponses et les cinq revues, puis tranche - pas un compromis mou, mais une décision exploitable dès lundi.
+Une fois les cinq avis rendus, l'ensemble est relu : chaque conseiller évalue les quatre autres sans savoir qui a écrit quoi. Anonymiser cette revue est l'étape la plus souvent négligée, et la plus importante. Quand un modèle ignore qu'il évalue sa propre réponse, il l'évalue honnêtement ; quand il le sait, il tend à la défendre. Le président lit ensuite les cinq réponses et les cinq revues, puis tranche : pas un compromis mou, mais une décision exploitable dès lundi.
 
 ## Le prompt complet du Comité IA
 
-> **Prompt - Comité IA**
+> **Prompt : Comité IA**
 >
 > DÉCISION SUR LAQUELLE JE BLOQUE :
 > [Remplace par ta décision ou ta question précise. Plus tu détailles ta situation, tes contraintes et ce que « réussir » veut dire, mieux le comité fonctionne.]
 >
 > Tu vas agir comme un comité de décision de cinq personnes. Ne saute aucune étape. Ne fusionne pas les conseillers. Chaque conseiller est une personne différente, avec un angle différent.
 >
-> ÉTAPE 1 - Chaque conseiller répond séparément.
+> ÉTAPE 1 : Chaque conseiller répond séparément.
 > Pour chacun des cinq conseillers, écris une section étiquetée avec sa réponse. Reste dans le personnage : langage, priorités et angles morts différents.
 >
-> Conseiller 1 - LE CONTRADICTEUR. Ne cherche que ce qui va échouer. N'équilibre pas. Liste toutes les raisons pour lesquelles c'est une mauvaise décision, ce qui casse en premier, et le pire scénario plausible.
+> Conseiller 1 : LE CONTRADICTEUR. Ne cherche que ce qui va échouer. N'équilibre pas. Liste toutes les raisons pour lesquelles c'est une mauvaise décision, ce qui casse en premier, et le pire scénario plausible.
 >
-> Conseiller 2 - LE PENSEUR EN PREMIERS PRINCIPES. Démonte mes hypothèses. Demande ce que je ferais sans aucun cadre évident. Réduis le problème à ses fondamentaux et reconstruis.
+> Conseiller 2 : LE PENSEUR EN PREMIERS PRINCIPES. Démonte mes hypothèses. Demande ce que je ferais sans aucun cadre évident. Réduis le problème à ses fondamentaux et reconstruis.
 >
-> Conseiller 3 - L'EXPANSIONNISTE. Trouve le potentiel que je rate. Regarde le résultat asymétrique si ça marche. Qu'est-ce que la version plus grande ouvre ?
+> Conseiller 3 : L'EXPANSIONNISTE. Trouve le potentiel que je rate. Regarde le résultat asymétrique si ça marche. Qu'est-ce que la version plus grande ouvre ?
 >
-> Conseiller 4 - L'OUTSIDER. Ne connaît rien à mon secteur. Pose les questions naïves que seul un outsider pose. Fais ressortir l'évidence que les gens du métier ne questionnent plus.
+> Conseiller 4 : L'OUTSIDER. Ne connaît rien à mon secteur. Pose les questions naïves que seul un outsider pose. Fais ressortir l'évidence que les gens du métier ne questionnent plus.
 >
-> Conseiller 5 - L'EXÉCUTEUR. Se fiche de la stratégie. Pense à lundi matin. Dis-moi exactement quoi faire cette semaine : l'e-mail à envoyer, la conversation à avoir, le fichier à créer, la décision à reporter.
+> Conseiller 5 : L'EXÉCUTEUR. Se fiche de la stratégie. Pense à lundi matin. Dis-moi exactement quoi faire cette semaine : l'e-mail à envoyer, la conversation à avoir, le fichier à créer, la décision à reporter.
 >
-> ÉTAPE 2 - Revue anonyme par les pairs.
+> ÉTAPE 2 : Revue anonyme par les pairs.
 > Maintenant, pour chaque conseiller, écris une courte revue des QUATRE AUTRES réponses, mais anonymise-les (« Réponse A », « Réponse B »…). Aucun conseiller ne sait quelle réponse est laquelle. Chacun classe les autres de 1 à 4 en justesse et pertinence, et explique en un paragraphe ce qu'elles ont juste et faux.
 >
-> ÉTAPE 3 - La décision finale du président.
+> ÉTAPE 3 : La décision finale du président.
 > Enfin, agis comme le président. Tu as lu les cinq réponses d'origine et les cinq revues anonymes. Synthétise une recommandation unique et claire. Pas de « ça dépend ». Dis-moi :
 > - Quelle est vraiment la bonne décision
 > - La raison la plus forte de la prendre

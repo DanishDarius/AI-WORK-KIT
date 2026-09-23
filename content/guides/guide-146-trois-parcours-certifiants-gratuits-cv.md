@@ -11,15 +11,15 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 Trois parcours gratuits, les liens officiels et le processus pour les afficher correctement là où les recruteurs regardent vraiment.
 
-## Parcours 1 - Google AI Essentials
+## Parcours 1 : Google AI Essentials
 
 Gratuit, reconnu, concret. Une base solide en prompting, éthique de l'IA et applications métier. Le plus universel des trois parcours.
 
-## Parcours 2 - DeepLearning.AI Prompt Engineering
+## Parcours 2 : DeepLearning.AI Prompt Engineering
 
 Le classique porté par Andrew Ng. Technique mais accessible. Idéal pour les profils tech ou data souhaitant aller plus loin que les bases.
 
-## Parcours 3 - Certification Claude d'Anthropic
+## Parcours 3 : Certification Claude d'Anthropic
 
 La plus spécifique des trois. Elle couvre la maîtrise de Claude, de ses Skills et de ses connecteurs. Particulièrement recherchée quand l'entreprise ciblée utilise déjà cet outil.
 
@@ -29,7 +29,7 @@ Dans la section « Licences » : toutes les certifications, dates et liens. Dans
 
 ## Le prompt à copier
 
-> **Prompt - résumé de profil professionnel**
+> **Prompt : résumé de profil professionnel**
 >
 > Rédige ma section « À propos » en intégrant mes 3 certifications IA et mon projet concret.
 >

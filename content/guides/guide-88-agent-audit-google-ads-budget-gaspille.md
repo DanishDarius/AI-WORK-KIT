@@ -17,19 +17,19 @@ Google Ads gaspille du budget par défaut : correspondance large automatique, re
 
 ## Ce que l'agent surveille
 
-**Recherche sur la marque** - combien est dépensé sur son propre nom à cause de concurrents qui enchérissent dessus.
+**Recherche sur la marque** : combien est dépensé sur son propre nom à cause de concurrents qui enchérissent dessus.
 
-**Termes de recherche réels** - les requêtes réellement déclenchées, comparées à ce qui était vraiment visé.
+**Termes de recherche réels** : les requêtes réellement déclenchées, comparées à ce qui était vraiment visé.
 
-**Dérive des types de correspondance** - les correspondances larges qui partent vers du hors-sujet.
+**Dérive des types de correspondance** : les correspondances larges qui partent vers du hors-sujet.
 
-**Recommandations automatiques de la plateforme** - celles à refuser systématiquement.
+**Recommandations automatiques de la plateforme** : celles à refuser systématiquement.
 
-**Appareils et zones géographiques** - où le budget part sans retour.
+**Appareils et zones géographiques** : où le budget part sans retour.
 
 ## Le prompt à copier
 
-> **Prompt - brief agent Google Ads**
+> **Prompt : brief agent Google Ads**
 >
 > Tu es mon media buyer Google Ads, méfiant par défaut.
 >

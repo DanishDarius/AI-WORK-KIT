@@ -1,7 +1,7 @@
 ---
 Guide original : "Claude réserve ton voyage"
 Source : saadiakaram.ai/guides/claude-reserve-ton-voyage
-Statut : reformulé (texte) - aucun visuel/tableau HTML détecté sur cette page
+Statut : reformulé (texte) : aucun visuel/tableau HTML détecté sur cette page
 ---
 
 # Faire réserver ton voyage par Claude, sans jamais lui confier ta carte bancaire
@@ -27,7 +27,7 @@ Tout le monde explique comment faire planifier un voyage par une IA. Peu de mond
 
 ---
 
-## 01 - Le problème dont personne ne te parle
+## 01. Le problème dont personne ne te parle
 
 Une IA capable de réserver toute seule et de payer à ta place, ce n'est pas un rêve : c'est un risque. Le jour où tu donnes à un agent l'accès à ton moyen de paiement et le droit de cliquer sur « Acheter », tu deviens responsable de chacune de ses erreurs : la mauvaise date, le mauvais aéroport, le billet non remboursable réservé deux fois.
 
@@ -37,17 +37,17 @@ Retiens cette règle avant même de lire les prompts : Claude s'occupe de la rec
 
 ---
 
-## 02 - Les deux méthodes qui fonctionnent réellement
+## 02. Les deux méthodes qui fonctionnent réellement
 
-**Méthode 1, la plus simple : les connecteurs de voyage, directement dans l'app Claude.** Depuis le 8 mai 2026, Claude se connecte à Expedia : tu décris ton voyage en langage naturel (« un aller-retour Paris-Lisbonne mi-octobre, hôtel en bord de mer sous 150 € la nuit ») et Claude te renvoie de vraies options, avec prix et disponibilités en direct, issus d'Expedia dans la conversation. Pas besoin de compte Expedia ni de carte bancaire pour simplement chercher. Une fois une option choisie, Claude te fournit le lien pour finaliser la réservation sur le site officiel - ta carte, tu ne la donnes qu'à Expedia, jamais à Claude. Des connecteurs Booking.com et lastminute.com fonctionnent sur le même principe. Précision utile : le connecteur Expedia s'est d'abord ouvert côté États-Unis et se déploie progressivement ailleurs. S'il n'est pas encore disponible chez toi, la méthode 2 ci-dessous ne dépend d'aucune zone géographique.
+**Méthode 1, la plus simple : les connecteurs de voyage, directement dans l'app Claude.** Depuis le 8 mai 2026, Claude se connecte à Expedia : tu décris ton voyage en langage naturel (« un aller-retour Paris-Lisbonne mi-octobre, hôtel en bord de mer sous 150 € la nuit ») et Claude te renvoie de vraies options, avec prix et disponibilités en direct, issus d'Expedia dans la conversation. Pas besoin de compte Expedia ni de carte bancaire pour simplement chercher. Une fois une option choisie, Claude te fournit le lien pour finaliser la réservation sur le site officiel : ta carte, tu ne la donnes qu'à Expedia, jamais à Claude. Des connecteurs Booking.com et lastminute.com fonctionnent sur le même principe. Précision utile : le connecteur Expedia s'est d'abord ouvert côté États-Unis et se déploie progressivement ailleurs. S'il n'est pas encore disponible chez toi, la méthode 2 ci-dessous ne dépend d'aucune zone géographique.
 
 **Méthode 2, la plus poussée : Claude for Chrome effectue le parcours à ta place.** C'est l'extension navigateur d'Anthropic (en bêta, réservée aux offres payantes Pro, Max, Team, Enterprise, sur Google Chrome). Claude agit directement dans ton navigateur connecté : il ouvre les sites, compare d'un onglet à l'autre, sélectionne selon tes critères, pré-remplit les informations passager, puis s'arrête à l'écran de paiement. Tu relis, tu confirmes, tu payes toi-même. Le réglage « demander confirmation avant un achat » reste activé en permanence.
 
 ---
 
-## 03 - Les 3 prompts
+## 03. Les 3 prompts
 
-**Prompt 1 - Le brief de voyage clé en main (à donner au connecteur ou à Claude) :**
+**Prompt 1. Le brief de voyage clé en main (à donner au connecteur ou à Claude) :**
 
 Plus tu fournis de contexte, meilleures seront les 3 options proposées. Colle ce brief dans Claude, avec le connecteur Expedia ou Booking activé.
 
@@ -70,7 +70,7 @@ Plus tu fournis de contexte, meilleures seront les 3 options proposées. Colle c
 >
 > Cite le prix et sa source pour chaque ligne. Si une information manque, dis-le, ne l'invente pas. Ne réserve rien : je choisis d'abord.
 
-**Prompt 2 - Le pilote de réservation « stop avant paiement » (pour Claude for Chrome) :**
+**Prompt 2. Le pilote de réservation « stop avant paiement » (pour Claude for Chrome) :**
 
 Une fois ton option choisie, tu laisses Claude exécuter les étapes, mais tu poses le garde-fou dès la première ligne.
 
@@ -87,7 +87,7 @@ Une fois ton option choisie, tu laisses Claude exécuter les étapes, mais tu po
 > - Tu ne cliques JAMAIS sur « Payer » ni « Confirmer l'achat ».
 > - Tu t'arrêtes à l'écran de paiement et tu me montres un récapitulatif : trajet, dates, prix total final, politique d'annulation. J'ai le dernier mot.
 
-**Prompt 3 - Le contrôle des 60 secondes avant de payer :**
+**Prompt 3. Le contrôle des 60 secondes avant de payer :**
 
 Le prompt qui t'évite l'erreur coûteuse. Colle le récapitulatif que Claude te présente, avant de sortir ta carte.
 
@@ -105,7 +105,7 @@ Le prompt qui t'évite l'erreur coûteuse. Colle le récapitulatif que Claude te
 
 ---
 
-## 04 - L'astuce de pro
+## 04. L'astuce de pro
 
 Garde toujours la recherche et l'exécution séparées. Utilise la méthode 1 (connecteur, dans l'app) pour chercher et comparer : c'est sans risque, rien ne s'exécute, ta carte n'entre jamais dans Claude. Réserve la méthode 2 (Claude for Chrome) à la seule étape de saisie, avec le prompt 2 qui verrouille l'arrêt avant paiement. Et laisse toujours le réglage « demander confirmation avant un achat » activé. Le confort d'un agent qui remplit tout pour toi ne vaut jamais le risque de lui laisser le clic final.
 
@@ -113,12 +113,12 @@ Garde toujours la recherche et l'exécution séparées. Utilise la méthode 1 (c
 
 ## Quand s'en servir, et quand surtout pas
 
-Idéal pour comparer vols et hôtels, préparer une réservation, gagner l'heure que tu passais habituellement à ouvrir quinze onglets. À éviter absolument : ne branche jamais un agent sur ta banque, ta bourse, un portail de santé, ou sur toute action irréversible - Anthropic elle-même déconseille ces usages pendant la période bêta. Et vérifie toujours toi-même ce qu'aucune IA ne doit décider à ta place : validité du passeport, visa, conditions d'entrée du pays, assurance voyage. L'IA te fait gagner du temps ; la responsabilité du voyage reste entièrement la tienne.
+Idéal pour comparer vols et hôtels, préparer une réservation, gagner l'heure que tu passais habituellement à ouvrir quinze onglets. À éviter absolument : ne branche jamais un agent sur ta banque, ta bourse, un portail de santé, ou sur toute action irréversible : Anthropic elle-même déconseille ces usages pendant la période bêta. Et vérifie toujours toi-même ce qu'aucune IA ne doit décider à ta place : validité du passeport, visa, conditions d'entrée du pays, assurance voyage. L'IA te fait gagner du temps ; la responsabilité du voyage reste entièrement la tienne.
 
 ---
 
 ## À retenir
 
-**Claude peut faire 95 % du travail de réservation. Le dernier clic - celui qui engage ton argent - reste toujours le tien.**
+**Claude peut faire 95 % du travail de réservation. Le dernier clic (celui qui engage ton argent) reste toujours le tien.**
 
 Deux méthodes vérifiées (connecteurs de voyage dans l'app, ou Claude for Chrome pour aller jusqu'à l'écran de paiement), trois prompts qui verrouillent chaque étape sensible, et une règle simple à ne jamais lever : aucune IA ne doit saisir tes coordonnées bancaires ni cliquer sur « Payer » à ta place.

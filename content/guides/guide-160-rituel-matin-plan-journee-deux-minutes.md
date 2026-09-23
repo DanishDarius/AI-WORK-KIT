@@ -21,7 +21,7 @@ Le prompt se lance en même temps que le café du matin. Un plan en trois blocs 
 
 ## Le prompt à programmer
 
-> **Prompt - rituel du matin**
+> **Prompt : rituel du matin**
 >
 > Tu es mon chef de cabinet du matin.
 >

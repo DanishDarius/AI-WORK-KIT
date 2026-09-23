@@ -17,7 +17,7 @@ insert into taches (code, titre, limite_connue, ia_alternative_conseillee) value
 insert into taches (code, titre, limite_connue, ia_alternative_conseillee) values ($t$F15$t$, $t$Création de présentations à partir d'un brief$t$, false, null);
 insert into taches (code, titre, limite_connue, ia_alternative_conseillee) values ($t$F16$t$, $t$Organisation de projets et suivi des actions$t$, false, null);
 insert into taches (code, titre, limite_connue, ia_alternative_conseillee) values ($t$F02$t$, $t$Création et planification de contenus pour les réseaux sociaux$t$, false, null);
-insert into taches (code, titre, limite_connue, ia_alternative_conseillee) values ($t$F06$t$, $t$Service client de premier niveau - FAQ$t$, false, null);
+insert into taches (code, titre, limite_connue, ia_alternative_conseillee) values ($t$F06$t$, $t$Service client de premier niveau (FAQ)$t$, false, null);
 insert into taches (code, titre, limite_connue, ia_alternative_conseillee) values ($t$F25$t$, $t$Tri et orientation des demandes clients$t$, false, null);
 insert into taches (code, titre, limite_connue, ia_alternative_conseillee) values ($t$F26$t$, $t$Analyse des avis et enquêtes de satisfaction$t$, false, null);
 insert into taches (code, titre, limite_connue, ia_alternative_conseillee) values ($t$F27$t$, $t$Construction de segments de clientèle$t$, false, null);

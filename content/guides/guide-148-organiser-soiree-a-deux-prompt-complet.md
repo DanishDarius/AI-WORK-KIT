@@ -17,7 +17,7 @@ Une soirée à deux échoue rarement par manque d'envie. Elle échoue par manque
 
 ## Le brief complet
 
-> **Prompt - soirée à deux**
+> **Prompt : soirée à deux**
 >
 > Tu es mon architecte de soirée.
 >

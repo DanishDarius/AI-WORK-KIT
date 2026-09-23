@@ -15,11 +15,11 @@ Trois niveaux pilotent réellement le comportement d'un assistant conversationne
 
 L'assistant obéit à trois niveaux, dans cet ordre : le système (défini par l'éditeur du modèle), le projet (les instructions propres à un espace de travail), et la conversation (le message du moment). La grande majorité des utilisateurs ne joue qu'au niveau de la conversation, et s'étonne ensuite que rien ne tienne d'un échange à l'autre.
 
-**Système** - défini par l'éditeur du modèle. Impossible à modifier, mais le connaître évite de s'y opposer inutilement.
+**Système** : défini par l'éditeur du modèle. Impossible à modifier, mais le connaître évite de s'y opposer inutilement.
 
-**Projet** - les règles globales propres à un contexte donné. C'est là que se joue l'essentiel de la cohérence.
+**Projet** : les règles globales propres à un contexte donné. C'est là que se joue l'essentiel de la cohérence.
 
-**Conversation** - le message du moment, à réserver aux demandes ponctuelles.
+**Conversation** : le message du moment, à réserver aux demandes ponctuelles.
 
 ## Comment s'en servir
 
@@ -27,7 +27,7 @@ Identité, ton, contraintes → au niveau Projet. Format de livrable récurrent 
 
 ## Le gabarit à copier
 
-> **Prompt - squelette d'instructions de Projet**
+> **Prompt : squelette d'instructions de Projet**
 >
 > # Contexte
 > Projet : [nom]

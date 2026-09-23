@@ -2,7 +2,7 @@
 Guide original : Cet email est une arnaque ?
 Source : https://www.saadiakaram.ai/guides/email-scam-detector
 Position réelle dans la bibliothèque au moment du traitement : 140/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu de sécurité défensive (aide à repérer les tentatives de phishing) - aucun souci de conformité.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu de sécurité défensive (aide à repérer les tentatives de phishing) ; aucun souci de conformité.
 ---
 
 # Détecter une tentative d'arnaque par e-mail en dix secondes
@@ -17,19 +17,19 @@ Face à un e-mail douteux, plutôt que de stresser ou de l'ignorer, il suffit de
 
 ## Les cinq signaux que le Skill vérifie
 
-**L'expéditeur** - le vrai domaine, pas seulement le nom affiché.
+**L'expéditeur** : le vrai domaine, pas seulement le nom affiché.
 
-**L'urgence** - « agissez maintenant » reste une pression classique.
+**L'urgence** : « agissez maintenant » reste une pression classique.
 
-**Le lien** - la véritable URL derrière le texte cliquable.
+**Le lien** : la véritable URL derrière le texte cliquable.
 
-**La demande** - mot de passe, carte bancaire, virement : un signal d'alerte immédiat.
+**La demande** (mot de passe, carte bancaire, virement) : un signal d'alerte immédiat.
 
-**Le ton** - fautes, formules génériques, absence de personnalisation.
+**Le ton** : fautes, formules génériques, absence de personnalisation.
 
 ## Le prompt à copier
 
-> **Prompt - détecteur d'arnaque**
+> **Prompt : détecteur d'arnaque**
 >
 > Voici un e-mail que je viens de recevoir :
 > [colle l'e-mail complet, en-têtes inclus si possible]

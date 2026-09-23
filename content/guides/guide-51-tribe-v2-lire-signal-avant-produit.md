@@ -15,7 +15,7 @@ Ce que fait réellement TRIBE v2, le parallèle avec le papier de recherche de 2
 
 Le titre qui circule, c'est « Meta prédit ton cerveau ». Le fantasme sous-jacent : une IA qui lirait tes pensées ou ciblerait déjà des publicités à partir de ton activité neuronale. Les deux affirmations sont fausses aujourd'hui, et les confondre empêche de voir ce qui compte réellement.
 
-Ce que TRIBE v2 fait, précisément : à partir d'un contenu (image, vidéo, podcast, texte), il prédit la réponse d'un cerveau telle que mesurée par IRM fonctionnelle. Il ne lit pas une pensée, il ne décode pas une intention. Il modélise la façon dont un cerveau moyen réagit à un stimulus. C'est un outil de recherche en neurosciences, publié à des fins scientifiques, pas un moteur de ciblage publicitaire - Meta l'a d'ailleurs diffusé sous licence non commerciale, code et poids inclus, en accès public. Cette précision est le point de départ ; sans elle, on tire les mauvaises conclusions.
+Ce que TRIBE v2 fait, précisément : à partir d'un contenu (image, vidéo, podcast, texte), il prédit la réponse d'un cerveau telle que mesurée par IRM fonctionnelle. Il ne lit pas une pensée, il ne décode pas une intention. Il modélise la façon dont un cerveau moyen réagit à un stimulus. C'est un outil de recherche en neurosciences, publié à des fins scientifiques, pas un moteur de ciblage publicitaire ; Meta l'a d'ailleurs diffusé sous licence non commerciale, code et poids inclus, en accès public. Cette précision est le point de départ ; sans elle, on tire les mauvaises conclusions.
 
 Mais voici ce que le débat « pour ou contre la lecture de pensées » rate complètement : une entreprise dont le métier consiste à capter l'attention sait désormais modéliser, en laboratoire, la réaction d'un cerveau à ce qu'il voit, entend et lit. Ce n'est pas le produit d'aujourd'hui. C'est la direction prise. Et une capacité comme celle-ci n'est jamais publiée par hasard.
 
@@ -23,13 +23,13 @@ Mais voici ce que le débat « pour ou contre la lecture de pensées » rate com
 
 ## Ce qu'est réellement TRIBE v2, sans l'emballage
 
-TRIBE signifie Tri-modal Brain Encoding : « tri-modal » parce que le modèle travaille sur trois entrées à la fois - ce qu'on voit, ce qu'on entend, ce qu'on lit. Les chiffres, tirés de l'annonce de Meta :
+TRIBE signifie Tri-modal Brain Encoding : « tri-modal » parce que le modèle travaille sur trois entrées à la fois (ce qu'on voit, ce qu'on entend, ce qu'on lit). Les chiffres, tirés de l'annonce de Meta :
 
-**720 sujets, plus de 1 000 heures d'IRM.** Le modèle a été entraîné sur des données de plus de 700 volontaires sains, exposés à des images, vidéos, podcasts et textes - un ordre de grandeur inédit pour ce type de recherche.
+**720 sujets, plus de 1 000 heures d'IRM.** Le modèle a été entraîné sur des données de plus de 700 volontaires sains, exposés à des images, vidéos, podcasts et textes, un ordre de grandeur inédit pour ce type de recherche.
 
-**70 000 points du cerveau, une résolution 70 fois plus fine.** Les modèles précédents suivaient environ 1 000 régions du cortex. TRIBE v2 en prédit près de 70 000 (des « voxels », de petits volumes cérébraux) sur l'ensemble du cerveau - une carte 70 fois plus détaillée, avec une précision plusieurs fois supérieure aux modèles classiques.
+**70 000 points du cerveau, une résolution 70 fois plus fine.** Les modèles précédents suivaient environ 1 000 régions du cortex. TRIBE v2 en prédit près de 70 000 (des « voxels », de petits volumes cérébraux) sur l'ensemble du cerveau, une carte 70 fois plus détaillée, avec une précision plusieurs fois supérieure aux modèles classiques.
 
-**Zero-shot - le point le plus important.** Le modèle prédit correctement l'activité pour de nouveaux sujets, de nouvelles langues et de nouvelles tâches qu'il n'a jamais rencontrés à l'entraînement. « Zero-shot » signifie : il généralise à l'inconnu sans réapprendre. C'est ce qui fait passer un modèle du statut d'expérience à celui de fondation.
+**Zero-shot : le point le plus important.** Le modèle prédit correctement l'activité pour de nouveaux sujets, de nouvelles langues et de nouvelles tâches qu'il n'a jamais rencontrés à l'entraînement. « Zero-shot » signifie : il généralise à l'inconnu sans réapprendre. C'est ce qui fait passer un modèle du statut d'expérience à celui de fondation.
 
 **Ouvert.** Meta a publié les poids sur Hugging Face, le code sur GitHub, un papier et une démo, sous licence CC BY-NC (usage non commercial). N'importe quel laboratoire peut le reprendre.
 
@@ -37,7 +37,7 @@ Le mot à retenir, c'est « fondation ». Ce n'est pas un outil pour une seule t
 
 ## Le vrai précédent : « Attention Is All You Need » (2017)
 
-En 2017, huit chercheurs de Google publient un papier au titre presque anodin, *Attention Is All You Need*. Il introduit une nouvelle architecture, le Transformer, qui abandonne les approches de l'époque pour ne garder qu'un seul mécanisme : l'attention. À sa sortie, l'intérêt reste confiné à une poignée de chercheurs - aucun grand titre, aucun retentissement public.
+En 2017, huit chercheurs de Google publient un papier au titre presque anodin, *Attention Is All You Need*. Il introduit une nouvelle architecture, le Transformer, qui abandonne les approches de l'époque pour ne garder qu'un seul mécanisme : l'attention. À sa sortie, l'intérêt reste confiné à une poignée de chercheurs : aucun grand titre, aucun retentissement public.
 
 Huit ans plus tard, ce papier est devenu la fondation de toute la vague d'IA générative en usage aujourd'hui. Le « T » de ChatGPT veut dire Transformer. Claude, Gemini, Mistral : tous descendent de cette publication de 2017. Une page de recherche discrète est devenue le socle d'une industrie à mille milliards.
 
@@ -45,17 +45,17 @@ Le parallèle avec TRIBE v2 tient sur deux niveaux. D'abord, TRIBE v2 tourne lit
 
 ## Les 3 points à retenir et à appliquer
 
-**L'attention est le produit - traite la tienne comme ton actif le plus rare.** Quand un service est gratuit, ce qui se vend, c'est l'attention de l'utilisateur. TRIBE v2 montre où se situe désormais la frontière technique : on sait modéliser en laboratoire la réaction d'un cerveau à un contenu. Pas besoin d'attendre que ça devienne un produit pour agir dès maintenant. Gère ton attention comme un budget alloué exprès : coupe les notifications par défaut, distingue les plages où tu consommes de celles où tu crées, et pose-toi une question avant chaque scroll : « est-ce moi qui ai décidé d'ouvrir ça ? ». La ressource que tout le monde cherche à optimiser à ta place commence par être pilotée par toi-même.
+**L'attention est le produit ; traite la tienne comme ton actif le plus rare.** Quand un service est gratuit, ce qui se vend, c'est l'attention de l'utilisateur. TRIBE v2 montre où se situe désormais la frontière technique : on sait modéliser en laboratoire la réaction d'un cerveau à un contenu. Pas besoin d'attendre que ça devienne un produit pour agir dès maintenant. Gère ton attention comme un budget alloué exprès : coupe les notifications par défaut, distingue les plages où tu consommes de celles où tu crées, et pose-toi une question avant chaque scroll : « est-ce moi qui ai décidé d'ouvrir ça ? ». La ressource que tout le monde cherche à optimiser à ta place commence par être pilotée par toi-même.
 
-**Regarde la recherche, pas seulement les produits - c'est ton indicateur d'avance.** La leçon d'*Attention Is All You Need* est précieuse : les publications de recherche constituent un signal avancé de trois à sept ans sur les produits qui en découleront. Le grand public réagit aux lancements ; ceux qui prennent de l'avance lisent les papiers. Prends l'habitude d'aller à la source primaire (le blog de recherche, le papier, la démo) plutôt qu'au résumé sensationnaliste. Tu comprendras la direction avant les autres - un avantage réel quand on crée ou qu'on vend quelque chose. Le prompt ci-dessous fait ce travail de décryptage en deux minutes.
+**Regarde la recherche, pas seulement les produits : c'est ton indicateur d'avance.** La leçon d'*Attention Is All You Need* est précieuse : les publications de recherche constituent un signal avancé de trois à sept ans sur les produits qui en découleront. Le grand public réagit aux lancements ; ceux qui prennent de l'avance lisent les papiers. Prends l'habitude d'aller à la source primaire (le blog de recherche, le papier, la démo) plutôt qu'au résumé sensationnaliste. Tu comprendras la direction avant les autres, un avantage réel quand on crée ou qu'on vend quelque chose. Le prompt ci-dessous fait ce travail de décryptage en deux minutes.
 
-**Choisis tes entrées - c'est là que se joue ta marge de manœuvre.** Si la réaction d'un cerveau à un contenu devient modélisable, alors le vrai levier qui reste, c'est de choisir délibérément ce qu'on lui donne à consommer. Sélectionne tes sources comme une rédaction sélectionne sa une : qui tu suis, ce que tu lis, ce que tu regardes en premier le matin. La même science qui modélise une réaction peut servir à fabriquer du contenu conçu pour la capter. La défense ne consiste pas à se couper du monde, mais à rester aux commandes de ce qui entre. Utilise l'IA comme un outil que tu diriges, jamais comme un flux qui te dirige.
+**Choisis tes entrées : c'est là que se joue ta marge de manœuvre.** Si la réaction d'un cerveau à un contenu devient modélisable, alors le vrai levier qui reste, c'est de choisir délibérément ce qu'on lui donne à consommer. Sélectionne tes sources comme une rédaction sélectionne sa une : qui tu suis, ce que tu lis, ce que tu regardes en premier le matin. La même science qui modélise une réaction peut servir à fabriquer du contenu conçu pour la capter. La défense ne consiste pas à se couper du monde, mais à rester aux commandes de ce qui entre. Utilise l'IA comme un outil que tu diriges, jamais comme un flux qui te dirige.
 
 ## Le prompt : ton décrypteur d'actualité IA
 
 Voici l'outil qui transforme le deuxième point en réflexe. Colle ce prompt dans Claude, ChatGPT ou Mistral, ajoute le lien ou le texte d'une annonce IA, et obtiens un décryptage lucide en deux minutes, sans emballement ni alarmisme.
 
-> **Prompt - décrypteur d'actu IA**
+> **Prompt : décrypteur d'actu IA**
 >
 > Tu es un analyste IA sobre et rigoureux. Je te donne une annonce, un article ou un papier de recherche sur l'IA. Décrypte-le pour quelqu'un d'intelligent mais non technique, sans hype et sans catastrophisme.
 >
@@ -66,11 +66,11 @@ Voici l'outil qui transforme le deuxième point en réflexe. Colle ce prompt dan
 > [En une ligne : mon métier / activité, pour que les implications soient concrètes.]
 >
 > Réponds en 5 blocs courts, sans jargon inutile :
-> 1. CE QUE C'EST VRAIMENT - en 3 phrases maximum, en langage clair. Traduis chaque terme technique.
-> 2. CE QUI EST RÉELLEMENT NOUVEAU - la seule chose qui n'existait pas avant. Si rien de nouveau, dis-le franchement.
-> 3. CE QUE ÇA NE FAIT PAS - dissipe le fantasme. Liste 2 ou 3 choses que les titres laissent croire mais qui sont fausses.
-> 4. L'HORIZON - d'après le précédent historique (un papier de recherche met souvent 3 à 7 ans à devenir un produit), qu'est-ce que cette capacité rend plausible d'ici 5 ans ? Distingue le certain du spéculatif.
-> 5. POUR MOI, CONCRÈTEMENT - 3 implications précises pour mon métier et ma vie, dont au moins une action réalisable cette semaine.
+> 1. CE QUE C'EST VRAIMENT : en 3 phrases maximum, en langage clair. Traduis chaque terme technique.
+> 2. CE QUI EST RÉELLEMENT NOUVEAU : la seule chose qui n'existait pas avant. Si rien de nouveau, dis-le franchement.
+> 3. CE QUE ÇA NE FAIT PAS : dissipe le fantasme. Liste 2 ou 3 choses que les titres laissent croire mais qui sont fausses.
+> 4. L'HORIZON : d'après le précédent historique (un papier de recherche met souvent 3 à 7 ans à devenir un produit), qu'est-ce que cette capacité rend plausible d'ici 5 ans ? Distingue le certain du spéculatif.
+> 5. POUR MOI, CONCRÈTEMENT : 3 implications précises pour mon métier et ma vie, dont au moins une action réalisable cette semaine.
 >
 > Ton : lucide, précis, jamais alarmiste, jamais vendeur. Si une information n'est pas dans le contenu fourni, réponds « non précisé » plutôt que d'inventer.
 

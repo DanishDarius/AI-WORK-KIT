@@ -24,7 +24,7 @@ Avant : générer un tableau de bord, le capturer en image, l'envoyer, puis le v
 
 ## Le prompt de tableau de bord connecté
 
-> **Prompt - live KPI**
+> **Prompt : live KPI**
 >
 > Crée un Artifact HTML qui affiche 4 KPIs depuis cette source de données : [colle le lien ou décris la source].
 >
@@ -46,4 +46,4 @@ Avant : générer un tableau de bord, le capturer en image, l'envoyer, puis le v
 
 **Le meilleur outil est celui qu'on n'a pas à refaire.**
 
-Un artifact obsolète en quarante-huit heures représente du temps perdu. Un artifact connecté en continu devient un outil qu'on peut oublier tout en continuant à s'en servir - la différence entre une astuce ponctuelle et un vrai système.
+Un artifact obsolète en quarante-huit heures représente du temps perdu. Un artifact connecté en continu devient un outil qu'on peut oublier tout en continuant à s'en servir : la différence entre une astuce ponctuelle et un vrai système.

@@ -25,7 +25,7 @@ Un guide pratique de ce type peut facilement faire quatre-vingts pages, dont la 
 
 ## Le prompt à copier
 
-> **Prompt - démontage d'idée**
+> **Prompt : démontage d'idée**
 >
 > Tu es un investisseur cynique. Je te pitche mon idée de produit IA :
 > [décris en 5 lignes : pour qui, quel problème, quelle solution]

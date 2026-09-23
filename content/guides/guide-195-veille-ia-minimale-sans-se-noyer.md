@@ -2,7 +2,7 @@
 Guide original : Reste en avance en IA sans te noyer
 Source : https://www.saadiakaram.ai/guides/ai-update-stack
 Position réelle dans la bibliothèque au moment du traitement : 194/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche d'introduction de la source mentionnait « 17 sources gratuites » sans qu'une liste nominative de 17 sources n'apparaisse dans le corps du guide capturé (seulement 3 catégories génériques : une newsletter, un agrégateur, deux comptes) - incohérence présente dans la source elle-même, non reprise dans le titre reformulé pour rester fidèle au contenu réellement présent. Nom réel conservé (Perplexity Discover).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche d'introduction de la source mentionnait « 17 sources gratuites » sans qu'une liste nominative de 17 sources n'apparaisse dans le corps du guide capturé (seulement 3 catégories génériques : une newsletter, un agrégateur, deux comptes). Incohérence présente dans la source elle-même, non reprise dans le titre reformulé pour rester fidèle au contenu réellement présent. Nom réel conservé (Perplexity Discover).
 ---
 
 # Une veille IA minimale pour rester à jour sans s'y noyer
@@ -17,19 +17,19 @@ Inutile de « tout suivre ». Trois canaux fiables et un rythme régulier suffis
 
 ## La base à mettre en place
 
-1. Une newsletter par acteur majeur - une seule par source, choisie pour ses notes de mise à jour concrètes, pas pour ses opinions.
+1. Une newsletter par acteur majeur : une seule par source, choisie pour ses notes de mise à jour concrètes, pas pour ses opinions.
 
-2. Un agrégateur - un onglet ouvert chaque lundi (Perplexity Discover ou équivalent).
+2. Un agrégateur : un onglet ouvert chaque lundi (Perplexity Discover ou équivalent).
 
-3. Deux comptes suivis pour leur utilité opérationnelle - des personnes qui montrent de vrais workflows plutôt que de se contenter d'enthousiasme général.
+3. Deux comptes suivis pour leur utilité opérationnelle : des personnes qui montrent de vrais workflows plutôt que de se contenter d'enthousiasme général.
 
 ### Le test à appliquer
 
-Si une actualité IA ne change rien à un workflow concret dans la semaine, c'est du divertissement - elle peut être ignorée sans regret.
+Si une actualité IA ne change rien à un workflow concret dans la semaine, c'est du divertissement ; elle peut être ignorée sans regret.
 
 ## Le prompt de tri du lundi
 
-> **Prompt - veille IA**
+> **Prompt : veille IA**
 >
 > Tu es mon analyste veille IA.
 >

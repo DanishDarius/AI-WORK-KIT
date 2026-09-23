@@ -17,21 +17,21 @@ Plutôt que de deviner ce que cherchent les recruteurs, autant lire directement 
 
 ## Le prompt à utiliser
 
-> **Prompt - aimant LinkedIn**
+> **Prompt : aimant LinkedIn**
 >
 > Tu es mon stratège LinkedIn.
 >
-> Étape 1 - Recherche
+> Étape 1 : Recherche
 > Va chercher 20 offres actives pour le poste : [titre cible] dans [zone géographique].
 >
-> Étape 2 - Extraction
+> Étape 2 : Extraction
 > Sors :
 > - Top 15 compétences techniques mentionnées (avec fréquence)
 > - Top 10 soft skills attendues
 > - Les 5 verbes d'action récurrents
 > - 3 patterns de titre de poste qui reviennent
 >
-> Étape 3 - Réécriture
+> Étape 3 : Réécriture
 > Réécris :
 > 1. Mon titre LinkedIn (3 versions)
 > 2. Mon résumé « À propos » en intégrant naturellement les mots-clés (pas du bourrage)

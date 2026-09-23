@@ -9,17 +9,17 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Une fois configuré, ce système fonctionne en continu : chaque jeudi soir, l'assistant consulte l'agenda de la semaine, la météo du week-end et les événements alentour, puis prépare un plan complet avec options, horaires et réservations - prêt avant vendredi matin. Il ne reste plus qu'à choisir.
+Une fois configuré, ce système fonctionne en continu : chaque jeudi soir, l'assistant consulte l'agenda de la semaine, la météo du week-end et les événements alentour, puis prépare un plan complet avec options, horaires et réservations, prêt avant vendredi matin. Il ne reste plus qu'à choisir.
 
 ## Les trois informations à fournir
 
-1. Le niveau d'énergie souhaité - calme, actif, ou un mélange des deux.
-2. Le contexte - seul, en couple, en famille, ou entre amis.
-3. Le budget - gratuit, modéré, ou « ce week-end on se fait plaisir ».
+1. Le niveau d'énergie souhaité : calme, actif, ou un mélange des deux.
+2. Le contexte : seul, en couple, en famille, ou entre amis.
+3. Le budget : gratuit, modéré, ou « ce week-end on se fait plaisir ».
 
 ## Le prompt du jeudi soir
 
-> **Prompt - week-end**
+> **Prompt : week-end**
 >
 > Je veux un plan de week-end. Voici mon contexte :
 >

@@ -13,7 +13,7 @@ Claude propose désormais des connecteurs natifs vers les principaux outils cré
 
 ## Ce que ça change
 
-Auparavant, un aller-retour permanent de copier-coller était nécessaire entre Claude et les outils créatifs. Désormais, Claude peut lire directement un fichier Figma, faire des propositions et les appliquer - le workflow devient continu, sans rupture entre la réflexion et l'exécution.
+Auparavant, un aller-retour permanent de copier-coller était nécessaire entre Claude et les outils créatifs. Désormais, Claude peut lire directement un fichier Figma, faire des propositions et les appliquer : le workflow devient continu, sans rupture entre la réflexion et l'exécution.
 
 ## Les trois enchaînements les plus rentables
 
@@ -23,7 +23,7 @@ Auparavant, un aller-retour permanent de copier-coller était nécessaire entre 
 
 ## Le prompt de revue créative
 
-> **Prompt - revue créa**
+> **Prompt : revue créa**
 >
 > Tu es directeur artistique sénior.
 >

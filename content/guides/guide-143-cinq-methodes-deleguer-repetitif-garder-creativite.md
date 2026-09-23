@@ -37,7 +37,7 @@ Un brouillon collé est resserré par l'IA. Après modification, un nouveau ress
 
 ## Le prompt à copier
 
-> **Prompt - brainstorm créatif**
+> **Prompt : brainstorm créatif**
 >
 > Je travaille sur [projet].
 >
@@ -51,4 +51,4 @@ Un brouillon collé est resserré par l'IA. Après modification, un nouveau ress
 
 **Le créatif garde le choix.**
 
-L'IA produit des options. L'humain choisit, combine, rejette, transforme. C'est dans ce choix que se joue la créativité humaine - le choix final ne se délègue jamais.
+L'IA produit des options. L'humain choisit, combine, rejette, transforme. C'est dans ce choix que se joue la créativité humaine ; le choix final ne se délègue jamais.

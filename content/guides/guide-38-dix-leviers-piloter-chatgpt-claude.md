@@ -33,15 +33,15 @@ Le rôle, le contexte, la contradiction, la vérification, et six autres leviers
 
 Une demande bien cadrée précise davantage que le ton ou la longueur de la réponse obtenue. Ce guide rassemble dix leviers pour travailler le rôle, le contexte, les options, la contradiction et la vérification. Tu peux les utiliser séparément ou les combiner selon ta tâche.
 
-**Comment t'en servir :** chaque commande est une phrase que tu places AVANT ta demande. Copie-la telle quelle, remplace les crochets, colle-la, puis écris ta question. Elles fonctionnent dans la plupart des assistants conversationnels, sur n'importe quel plan d'abonnement. Commence par une commande à la fois, puis combine-les - la méthode est expliquée en fin de guide.
+**Comment t'en servir :** chaque commande est une phrase que tu places AVANT ta demande. Copie-la telle quelle, remplace les crochets, colle-la, puis écris ta question. Elles fonctionnent dans la plupart des assistants conversationnels, sur n'importe quel plan d'abonnement. Commence par une commande à la fois, puis combine-les ; la méthode est expliquée en fin de guide.
 
-**Honnêteté d'entrée :** aucune commande ne rend une IA infaillible. Celles-ci réduisent les réponses tièdes, les inventions et la flatterie ; elles ne les suppriment pas entièrement. La commande 6 te fait voir où douter - c'est toujours à toi de vérifier ensuite.
+**Honnêteté d'entrée :** aucune commande ne rend une IA infaillible. Celles-ci réduisent les réponses tièdes, les inventions et la flatterie ; elles ne les suppriment pas entièrement. La commande 6 te fait voir où douter. C'est toujours à toi de vérifier ensuite.
 
-## 1. Le rôle - réponds en tant qu'expert précis
+## 1. Le rôle : réponds en tant qu'expert précis
 
 **Ce que tu contrôles :** le niveau d'expertise. Sans rôle assigné, l'IA répond en généraliste prudent. Avec un rôle précis, elle mobilise les critères, le vocabulaire et les réflexes propres à ce métier. Le secret : un rôle précis (« directeur financier d'une PME de 40 personnes »), jamais vague (« un expert »).
 
-> **Commande 1 - le rôle**
+> **Commande 1 : le rôle**
 >
 > Réponds en tant que [métier précis, ex. directrice financière d'une PME de 40 personnes], avec les critères et les réflexes de ce métier, pas en généraliste. Si mon rôle demande une nuance que je n'ai pas vue, signale-la.
 >
@@ -49,11 +49,11 @@ Une demande bien cadrée précise davantage que le ton ou la longueur de la rép
 
 **Quand l'utiliser :** dès que la question touche un métier (finance, droit, marketing, RH, technique). **Le test :** pose la même question sans le rôle, puis avec. La deuxième réponse doit citer des critères que la première n'avait pas.
 
-## 2. Le contexte - utilise ma situation, ne devine rien
+## 2. Le contexte : utilise ma situation, ne devine rien
 
 **Ce que tu contrôles :** la pertinence. La plupart des mauvaises réponses viennent d'un contexte absent, pas d'un mauvais modèle. Trois lignes de contexte changent tout : qui tu es, pour qui c'est, ce qui est déjà décidé.
 
-> **Commande 2 - le contexte**
+> **Commande 2 : le contexte**
 >
 > Voici mon contexte, utilise-le et ne devine rien :
 > - Qui je suis : [une phrase]
@@ -65,11 +65,11 @@ Une demande bien cadrée précise davantage que le ton ou la longueur de la rép
 
 **Quand l'utiliser :** toujours, sur tout ce qui compte réellement. **Le test :** si la réponse pourrait s'appliquer à n'importe qui, c'est qu'il manquait du contexte.
 
-## 3. La contradiction - trouve la faille avant de m'aider
+## 3. La contradiction : trouve la faille avant de m'aider
 
-**Ce que tu contrôles :** la flatterie. Par défaut, l'IA valide ton plan et l'améliore à la marge. Cette commande la force à chercher ce qui casse. C'est la plus inconfortable des dix - et probablement la plus rentable.
+**Ce que tu contrôles :** la flatterie. Par défaut, l'IA valide ton plan et l'améliore à la marge. Cette commande la force à chercher ce qui casse. C'est la plus inconfortable des dix, et probablement la plus rentable.
 
-> **Commande 3 - la contradiction**
+> **Commande 3 : la contradiction**
 >
 > Avant de m'aider, contredis-moi. Trouve la faille principale de ce que je te propose, l'hypothèse que je prends pour acquise, et ce qui casse en premier si j'ai tort. Ne m'aide à avancer qu'après. Ne me flatte pas.
 >
@@ -77,11 +77,11 @@ Une demande bien cadrée précise davantage que le ton ou la longueur de la rép
 
 **Quand l'utiliser :** avant une décision, un investissement, un envoi important. **Le test :** si l'IA ne trouve aucune faille, c'est que ta demande n'était pas assez précise, ou que tu ne lui as pas donné la vraie situation.
 
-## 4. Les questions d'abord - demande-moi ce qui te manque
+## 4. Les questions d'abord : demande-moi ce qui te manque
 
 **Ce que tu contrôles :** l'ambiguïté. Face à une demande floue, l'IA choisit une interprétation et fonce. Cette commande inverse l'ordre : elle pose ses questions avant de produire quoi que ce soit. Tu perds une minute, tu gagnes la bonne réponse du premier coup.
 
-> **Commande 4 - les questions d'abord**
+> **Commande 4 : les questions d'abord**
 >
 > Avant de répondre, pose-moi les 3 questions dont tu as besoin pour ne pas deviner. Attends mes réponses. Ne produis rien tant que je n'ai pas répondu.
 >
@@ -89,11 +89,11 @@ Une demande bien cadrée précise davantage que le ton ou la longueur de la rép
 
 **Quand l'utiliser :** toute demande de plus de deux lignes où le résultat compte vraiment. **Le test :** si ses trois questions te semblent évidentes, réponds-y vite ; si elles te font réfléchir, tu viens d'éviter une réponse à côté du sujet.
 
-## 5. Les options - trois choix, les compromis, ta recommandation
+## 5. Les options : trois choix, les compromis, ta recommandation
 
 **Ce que tu contrôles :** la décision. Une seule réponse te donne l'impression qu'il n'y avait qu'un chemin possible. Trois options avec leurs compromis te montrent le terrain réel, et tu choisis en connaissance de cause.
 
-> **Commande 5 - les options**
+> **Commande 5 : les options**
 >
 > Donne-moi 3 options différentes, pas 3 variantes de la même. Pour chacune : ce qu'elle apporte, ce qu'elle coûte, et dans quel cas elle est la bonne. Termine par ta recommandation en une phrase, et pourquoi.
 >
@@ -101,11 +101,11 @@ Une demande bien cadrée précise davantage que le ton ou la longueur de la rép
 
 **Quand l'utiliser :** dès qu'il y a une décision à prendre (prix, canal, structure, outil, formulation). **Le test :** les trois options doivent avoir des inconvénients différents ; sinon, ce ne sont que des variantes déguisées.
 
-## 6. Le niveau de certitude - marque ce dont tu n'es pas sûr
+## 6. Le niveau de certitude : marque ce dont tu n'es pas sûr
 
 **Ce que tu contrôles :** l'invention. L'IA écrit avec la même assurance ce qu'elle sait et ce qu'elle suppose. Cette commande la force à séparer les deux. C'est ta ceinture de sécurité sur les chiffres, les dates, les noms et les faits.
 
-> **Commande 6 - le niveau de certitude**
+> **Commande 6 : le niveau de certitude**
 >
 > Dans ta réponse, marque [?] devant toute affirmation dont tu n'es pas sûr ou que tu ne peux pas sourcer. À la fin, liste les 3 points que je dois vérifier moi-même avant d'utiliser cette réponse. N'invente ni chiffre, ni date, ni nom.
 >
@@ -113,11 +113,11 @@ Une demande bien cadrée précise davantage que le ton ou la longueur de la rép
 
 **Quand l'utiliser :** tout ce qui contient un fait (une statistique, un prix, une règle, une citation). **Le test :** une réponse sans aucun [?] sur un sujet factuel est suspecte, pas rassurante.
 
-## 7. L'exemple d'abord - montre avant d'expliquer
+## 7. L'exemple d'abord : montre avant d'expliquer
 
 **Ce que tu contrôles :** la compréhension. Une explication abstraite glisse ; un exemple concret s'imprime durablement. Cette commande renverse l'ordre habituel : le cas d'abord, le principe ensuite.
 
-> **Commande 7 - l'exemple d'abord**
+> **Commande 7 : l'exemple d'abord**
 >
 > Montre-moi d'abord un exemple concret et complet, tiré de [mon secteur / ma situation], avant d'expliquer le principe. Puis explique le principe en 3 lignes maximum, en pointant ce que l'exemple illustre.
 >
@@ -125,21 +125,21 @@ Une demande bien cadrée précise davantage que le ton ou la longueur de la rép
 
 **Quand l'utiliser :** pour apprendre une notion, un outil, une méthode. **Le test :** si tu peux refaire l'exemple toi-même après lecture, tu as compris ; sinon, demande un deuxième exemple, plus proche de ta situation.
 
-## 8. L'auto-correction - note ta réponse et améliore le point faible
+## 8. L'auto-correction : note ta réponse et améliore le point faible
 
 **Ce que tu contrôles :** la qualité. Le premier jet de l'IA est rarement son meilleur. Lui demander de se relire en critique sévère, de se noter et de corriger le point le plus faible fait monter la qualité d'un cran, sans que tu aies à réécrire quoi que ce soit toi-même.
 
-> **Commande 8 - l'auto-correction**
+> **Commande 8 : l'auto-correction**
 >
 > Relis ta réponse comme un critique sévère. Note-la sur 10 selon ces critères : [ex. précision, utilité concrète, clarté, respect de ma demande]. Identifie le point le plus faible, corrige-le, et rends-moi UNIQUEMENT la version améliorée, suivie d'une ligne : ce que tu as changé et pourquoi.
 
 **Quand l'utiliser :** après n'importe quelle réponse qui compte, avant de t'en servir réellement. **Le test :** la version 2 doit être meilleure sur un point précis, pas simplement plus longue.
 
-## 9. Le pas à pas - une étape, puis attends mon ok
+## 9. Le pas à pas : une étape, puis attends mon ok
 
 **Ce que tu contrôles :** le rythme. Sur une tâche longue (un plan, un texte en plusieurs parties, une procédure), l'IA déroule tout d'un coup et tu perds le fil dès la deuxième étape. Cette commande impose un tempo : une étape, ta validation, puis la suivante.
 
-> **Commande 9 - le pas à pas**
+> **Commande 9 : le pas à pas**
 >
 > On avance une étape à la fois. Fais uniquement l'étape 1, puis arrête-toi et attends mon « ok » avant de passer à la suivante. Si je te corrige, intègre la correction avant de continuer.
 >
@@ -147,11 +147,11 @@ Une demande bien cadrée précise davantage que le ton ou la longueur de la rép
 
 **Quand l'utiliser :** tout ce qui a plus de trois étapes, ou que tu veux pouvoir ajuster en cours de route. **Le test :** tu ne dois jamais te retrouver avec vingt lignes à relire d'un seul coup.
 
-## 10. Le réutilisable - transforme ça en template
+## 10. Le réutilisable : transforme ça en template
 
 **Ce que tu contrôles :** le temps que tu ne perds plus par la suite. Une bonne réponse utilisée une fois reste une réponse ponctuelle. Transformée en template avec des crochets, c'est un outil que tu relances en dix secondes la semaine suivante. C'est ainsi qu'on passe de « je demande » à « j'ai un système ».
 
-> **Commande 10 - le réutilisable**
+> **Commande 10 : le réutilisable**
 >
 > Transforme ta réponse en template réutilisable : garde la structure, remplace tout ce qui est spécifique à ce cas par des crochets [à remplir] avec une consigne courte dans chaque crochet. Ajoute en tête la ligne de contexte que je devrai coller à chaque fois. Je veux pouvoir le réutiliser sans réexpliquer.
 

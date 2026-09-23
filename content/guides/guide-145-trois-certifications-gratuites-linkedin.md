@@ -15,15 +15,15 @@ Trois certifications gratuites, la configuration exacte à adopter sur LinkedIn,
 
 Trois certifications gratuites proposées par Anthropic, la configuration à adopter sur LinkedIn, et comment en parler en entretien : savoir parler d'IA se valorise aujourd'hui professionnellement.
 
-## Certification 1 - Prompt Engineering
+## Certification 1 : Prompt Engineering
 
 Le socle de base : comment structurer un prompt, itérer, évaluer. Particulièrement adaptée aux rôles marketing, contenu, support. Démontrable dès le premier jour.
 
-## Certification 2 - AI Safety & Alignment
+## Certification 2 : AI Safety & Alignment
 
 Le versant plus sérieux : biais, fiabilité, supervision humaine. Très recherchée pour les postes opérationnels, qualité, conformité. Elle montre une réelle maîtrise du sujet.
 
-## Certification 3 - Claude for Business
+## Certification 3 : Claude for Business
 
 Le versant pratique : workflows, Skills, connecteurs. Idéale pour les rôles de gestion, de gestion de projet, d'opérations. Un projet concret peut venir l'illustrer.
 
@@ -33,7 +33,7 @@ Ajouter les certifications à la section « Licences et certifications ». Publi
 
 ## Le prompt à copier
 
-> **Prompt - présenter une certification en entretien**
+> **Prompt : présenter une certification en entretien**
 >
 > J'ai passé la certification [nom].
 > Rédige 3 phrases pour en parler en entretien :

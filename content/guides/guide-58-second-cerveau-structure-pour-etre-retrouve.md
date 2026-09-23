@@ -13,7 +13,7 @@ Des notes ne servent à rien si elles ne se retrouvent pas. Comment structurer u
 
 ## Le vrai problème
 
-Le problème de la plupart des systèmes de notes n'est pas la capture, c'est la récupération. L'information a bien été notée - elle ne se retrouve simplement plus huit mois plus tard.
+Le problème de la plupart des systèmes de notes n'est pas la capture, c'est la récupération. L'information a bien été notée ; elle ne se retrouve simplement plus huit mois plus tard.
 
 ## Structurer pour une lecture machine
 

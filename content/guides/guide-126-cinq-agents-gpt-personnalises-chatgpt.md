@@ -15,29 +15,29 @@ Tri de boîte mail, réponse aux prospects, préparation de réunions, rapport d
 
 ChatGPT propose des GPTs personnalisés configurables comme de véritables agents. Voici cinq d'entre eux, avec la configuration exacte pour chacun.
 
-## Agent 1 - Le trieur de mails
+## Agent 1 : Le trieur de mails
 
 Il lit la boîte mail, classe en trois catégories (action, information, à supprimer), rédige les réponses aux demandes simples et laisse un récapitulatif à 8h.
 
-## Agent 2 - Le répondeur aux prospects
+## Agent 2 : Le répondeur aux prospects
 
 Dès qu'un formulaire ou un e-mail arrive, il évalue le prospect, pose les trois questions de qualification et prépare une réponse personnalisée à valider.
 
-## Agent 3 - Le préparateur de réunions
+## Agent 3 : Le préparateur de réunions
 
 Il scanne l'agenda du lendemain, lit les documents liés, résume les enjeux et prépare trois questions à poser à chaque réunion.
 
-## Agent 4 - Le rapport du vendredi
+## Agent 4 : Le rapport du vendredi
 
 Chaque vendredi à 17h, il interroge les différents outils utilisés et sort un rapport de la semaine en cinq puces.
 
-## Agent 5 - La machine à relances
+## Agent 5 : La machine à relances
 
 Il surveille les opportunités commerciales en cours. Si un contact n'a pas répondu depuis un certain nombre de jours, il rédige une relance adaptée à l'étape de la négociation.
 
 ## Le prompt à copier
 
-> **Prompt - fiche d'un agent GPT**
+> **Prompt : fiche d'un agent GPT**
 >
 > Tu vas créer un GPT personnalisé nommé « [NOM] ».
 >

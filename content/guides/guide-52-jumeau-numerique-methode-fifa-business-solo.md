@@ -19,13 +19,13 @@ Douze caméras fixées au plafond du stade suivent chaque joueur 50 fois par sec
 
 La FIFA n'a pas simplement « ajouté de l'IA au football ». Elle a construit un jumeau numérique : capter le réel, le modéliser, puis décider dessus en continu. C'est exactement l'architecture qui devient le socle de toute décision business bien pilotée. Voici comment la reproduire seul, sans équipe technique.
 
-## Étape 1 - Capter (tes douze caméras)
+## Étape 1 : Capter (tes douze caméras)
 
 La FIFA capte 50 fois par seconde. Sans système équivalent, les données clients restent éparpillées entre la mémoire, les messages privés et les commentaires. La première « caméra » à installer, c'est un endroit unique où atterrit tout ce que disent les prospects.
 
 **À faire maintenant :** crée une base unique (Notion ou Google Sheets) avec quatre colonnes : Date · Source (DM, commentaire, appel) · Verbatim exact du client · Problème sous-jacent. À chaque fois qu'un prospect s'exprime, colle ses mots bruts, sans reformuler. C'est le flux de captation.
 
-> **Prompt - transformer un brut en signal**
+> **Prompt : transformer un brut en signal**
 >
 > Voici 15 verbatims bruts de mes prospects (DM, commentaires, mails).
 >
@@ -41,13 +41,13 @@ La FIFA capte 50 fois par seconde. Sans système équivalent, les données clien
 
 *Outils cités : Notion (base), Google Sheets (alternative gratuite), Claude ou ChatGPT (l'analyse).*
 
-## Étape 2 - Modéliser (ton avatar 3D)
+## Étape 2 : Modéliser (ton avatar 3D)
 
 La FIFA ne décide pas sur le joueur réel : elle décide sur son jumeau numérique, un modèle stable et précis. L'équivalent business : un profil client unique, écrit noir sur blanc, contre lequel tester chaque décision. Sans ce modèle, chaque décision se prend à l'instinct, comme un arbitre qui devine.
 
 **À faire maintenant :** à partir des cinq problèmes identifiés à l'étape 1, génère UNE fiche de jumeau numérique du client idéal. Colle-la en haut de la base de données et relis-la avant chaque offre, chaque publication, chaque prix fixé.
 
-> **Prompt - construire le jumeau**
+> **Prompt : construire le jumeau**
 >
 > À partir de ces 5 problèmes récurrents et de leurs verbatims :
 >
@@ -65,13 +65,13 @@ La FIFA ne décide pas sur le joueur réel : elle décide sur son jumeau numéri
 
 *Outils cités : Claude ou ChatGPT (génération), Notion (où vit la fiche). Placer ce jumeau en page d'accueil de l'espace de travail.*
 
-## Étape 3 - Décider en temps réel (ta décision automatique de hors-jeu)
+## Étape 3 : Décider en temps réel (ta décision automatique de hors-jeu)
 
 La vraie puissance du système n'est ni de capter ni de modéliser : c'est que l'IA tranche à l'instant précis, sans attendre l'intervention humaine. La « décision de hors-jeu » la plus rentable pour une activité solo, c'est : un prospect lève la main → il reçoit la bonne réponse en quelques secondes, sans intervention manuelle. C'est exactement ce que fait un mot-clé placé sous une publication.
 
 **À faire maintenant :** installer UN automatisme de décision. Quelqu'un commente un mot-clé → il reçoit automatiquement la ressource promise plus une question de qualification. La règle se décide une fois, la machine l'applique des centaines de fois.
 
-> **Prompt - ta règle de décision automatique**
+> **Prompt : ta règle de décision automatique**
 >
 > Mon client idéal est : [colle le jumeau de l'étape 2].
 >

@@ -9,39 +9,39 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Trouver un problème, poser une marque, lancer un produit et automatiser le reste - même sans bagage technique. Tous les prompts nécessaires sont inclus.
+Trouver un problème, poser une marque, lancer un produit et automatiser le reste, même sans bagage technique. Tous les prompts nécessaires sont inclus.
 
 ## Le principe
 
 Monter un projet ambitieux sans équipe technique est possible, sans être facile. Voici dix outils IA à mobiliser, dans l'ordre.
 
-## Phase 1 - Trouver le problème (outils 1-2)
+## Phase 1 : Trouver le problème (outils 1-2)
 
-**Claude** - pour interroger des niches, démonter des idées et trouver le véritable manque à combler.
+**Claude** : pour interroger des niches, démonter des idées et trouver le véritable manque à combler.
 
-**Perplexity** - pour la recherche en temps réel : quels acteurs, quels tarifs, quelles plaintes client.
+**Perplexity** : pour la recherche en temps réel : quels acteurs, quels tarifs, quelles plaintes client.
 
-## Phase 2 - Poser la marque (outils 3-5)
+## Phase 2 : Poser la marque (outils 3-5)
 
-**Claude et Canva** - le nom, le logo, la palette, le site vitrine sur une seule page.
+**Claude et Canva** : le nom, le logo, la palette, le site vitrine sur une seule page.
 
-**Gamma** - le deck pour les premiers partenariats ou une levée de fonds.
+**Gamma** : le deck pour les premiers partenariats ou une levée de fonds.
 
-**ElevenLabs** - pour du contenu vocal ou des vidéos.
+**ElevenLabs** : pour du contenu vocal ou des vidéos.
 
-## Phase 3 - Lancer le produit (outils 6-8)
+## Phase 3 : Lancer le produit (outils 6-8)
 
-**Claude Code** - le produit minimum viable si c'est un outil numérique : on décrit, l'IA construit.
+**Claude Code**. Le produit minimum viable si c'est un outil numérique : on décrit, l'IA construit.
 
-**Notion** - le cerveau opérationnel : documents, wiki, bases de données.
+**Notion**. Le cerveau opérationnel : documents, wiki, bases de données.
 
-**Make ou Zapier** - l'automatisation entre les différents outils.
+**Make ou Zapier** : l'automatisation entre les différents outils.
 
-## Phase 4 - Passer à l'échelle (outils 9-10)
+## Phase 4 : Passer à l'échelle (outils 9-10)
 
-**Claude Cowork** - les workflows automatisés qui tournent en autonomie.
+**Claude Cowork** : les workflows automatisés qui tournent en autonomie.
 
-**API ChatGPT ou Claude** - pour passer de l'automatisation à l'intégration directe dans le produit.
+**API ChatGPT ou Claude** : pour passer de l'automatisation à l'intégration directe dans le produit.
 
 ## L'erreur du débutant
 

@@ -21,7 +21,7 @@ L'agenda partagé de la semaine. Les derniers échanges avec la personne concern
 
 ## Le prompt à copier
 
-> **Skill - ordre du jour 1:1**
+> **Skill : ordre du jour 1:1**
 >
 > Tu es mon préparateur de 1:1.
 >

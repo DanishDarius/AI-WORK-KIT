@@ -9,17 +9,17 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Claude peut rechercher hôtels, restaurants et activités avec des prix réels, puis construire un itinéraire jour par jour incluant des temps de trajet réalistes - pas un simple copier-coller de blog de voyage, mais un plan ajusté au budget, au rythme et aux contraintes propres à chacun.
+Claude peut rechercher hôtels, restaurants et activités avec des prix réels, puis construire un itinéraire jour par jour incluant des temps de trajet réalistes, pas un simple copier-coller de blog de voyage, mais un plan ajusté au budget, au rythme et aux contraintes propres à chacun.
 
 ## Les trois éléments à fournir pour un bon plan
 
-1. **Soi-même** - budget, rythme (matinal ou nocturne), contraintes alimentaires, mobilité.
-2. **Le voyage** - dates, ville de départ, durée.
-3. **L'objectif** - découverte, travail, famille, escapade romantique, aventure.
+1. **Soi-même** : budget, rythme (matinal ou nocturne), contraintes alimentaires, mobilité.
+2. **Le voyage** : dates, ville de départ, durée.
+3. **L'objectif** : découverte, travail, famille, escapade romantique, aventure.
 
 ## Le prompt d'itinéraire
 
-> **Prompt - itinéraire**
+> **Prompt : itinéraire**
 >
 > Je pars à [destination] du [date] au [date].
 >
@@ -42,4 +42,4 @@ Claude peut rechercher hôtels, restaurants et activités avec des prix réels, 
 
 **Un bon voyage se prépare, un excellent voyage s'improvise.**
 
-Claude apporte une structure solide ; le reste consiste à laisser de la place à l'imprévu. Un itinéraire trop serré tue le voyage, un itinéraire trop flou tue le budget - l'équilibre se trouve entre les deux.
+Claude apporte une structure solide ; le reste consiste à laisser de la place à l'imprévu. Un itinéraire trop serré tue le voyage, un itinéraire trop flou tue le budget ; l'équilibre se trouve entre les deux.

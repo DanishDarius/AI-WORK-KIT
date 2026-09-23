@@ -1,7 +1,7 @@
 ---
 Guide original : "Filigrane Humain : le protocole pour utiliser l'IA sans devenir du slop"
 Source : saadiakaram.ai/guides/filigrane-humain-anti-slop
-Statut : reformulé (texte) - voir ressources-visuelles.md pour les éléments non modifiables
+Statut : reformulé (texte) ; voir ressources-visuelles.md pour les éléments non modifiables
 ---
 
 # Signature Humaine : le protocole pour utiliser l'IA sans produire du contenu jetable
@@ -27,7 +27,7 @@ Guide écrit après 18 ans passés en stratégie de croissance chez Microsoft, M
 
 ---
 
-## 01 - Comprendre : pourquoi ce protocole existe
+## 01. Comprendre : pourquoi ce protocole existe
 
 En août 2026, deux événements sont tombés presque en même temps. D'un côté, l'Europe a rendu obligatoire le marquage du contenu IA (jusqu'à 15 M€ d'amende, Article 50 de l'AI Act, en vigueur depuis le 2 août 2026). De l'autre, un outil permettant d'effacer le filigrane de Claude s'est répandu très vite sur GitHub.
 
@@ -37,23 +37,23 @@ Ce protocole t'aide justement à te positionner du bon côté de cette frontièr
 
 ---
 
-## 02 - Les 3 faits à connaître pour en parler avec assurance
+## 02. Les 3 faits à connaître pour en parler avec assurance
 
-**1. La marque atteste un traitement, pas une paternité.** Depuis le 2 août 2026, les modèles Claude intègrent un filigrane statistique invisible dans leur choix des mots, et signent leurs fichiers selon le standard C2PA. Point important : cette marque signale seulement que Claude a manipulé le texte - pas qu'il en est l'auteur. Si tu rédiges un texte toi-même et demandes simplement à Claude de le résumer ou de le corriger, le résultat portera quand même la marque, alors que le fond reste ton travail.
+**1. La marque atteste un traitement, pas une paternité.** Depuis le 2 août 2026, les modèles Claude intègrent un filigrane statistique invisible dans leur choix des mots, et signent leurs fichiers selon le standard C2PA. Point important : cette marque signale seulement que Claude a manipulé le texte, pas qu'il en est l'auteur. Si tu rédiges un texte toi-même et demandes simplement à Claude de le résumer ou de le corriger, le résultat portera quand même la marque, alors que le fond reste ton travail.
 
 **2. Ce n'est pas un cas isolé.** La même famille de technologies (SynthID, développé par Google DeepMind) a déjà marqué des dizaines de milliards d'images et de vidéos ; OpenAI, Nvidia et ElevenLabs avancent sur des systèmes similaires ; la coalition de provenance C2PA compte désormais plusieurs milliers de membres. L'AI Act cite explicitement deux méthodes conformes : le filigrane invisible et les content credentials C2PA.
 
 **3. La raison profonde : le risque d'effondrement des modèles.** L'IA s'entraîne en absorbant le contenu du web ; ce web se remplit de plus en plus de contenu généré par IA ; un modèle nourri majoritairement de ce type de contenu finit par « oublier les événements rares » et dérive de la réalité (étude publiée dans Nature, Shumailov et al., 2024). D'où l'intérêt d'étiqueter pour pouvoir filtrer.
 
-*Par souci d'honnêteté : Anthropic présente aussi cette marque comme un outil de conformité européenne et de lutte contre les deepfakes, pas uniquement comme une protection contre l'effondrement des modèles. Et à ce jour, aucun détecteur public fiable n'est largement disponible. Ni Anthropic, ni l'outil disponible sur GitHub, ne peuvent donc garantir qu'une marque a réellement disparu. La course technique existe bel et bien, mais elle reste pour l'instant invérifiable - on ne construit pas une réputation sur un pari de ce type.*
+*Par souci d'honnêteté : Anthropic présente aussi cette marque comme un outil de conformité européenne et de lutte contre les deepfakes, pas uniquement comme une protection contre l'effondrement des modèles. Et à ce jour, aucun détecteur public fiable n'est largement disponible. Ni Anthropic, ni l'outil disponible sur GitHub, ne peuvent donc garantir qu'une marque a réellement disparu. La course technique existe bel et bien, mais elle reste pour l'instant invérifiable. On ne construit pas une réputation sur un pari de ce type.*
 
 ---
 
-## 03 - Le protocole en 5 étapes
+## 03. Le protocole en 5 étapes
 
 La logique de fond : l'IA exécute, toi tu décides et tu assumes. Chaque étape est accompagnée d'un prompt prêt à copier et de l'outil concerné.
 
-### Étape 1 - Le point de vue avant le prompt (c'est ici que naît le contenu creux)
+### Étape 1 : Le point de vue avant le prompt (c'est ici que naît le contenu creux)
 
 Le pire contenu jetable ne commence pas au moment où l'IA se met à écrire. Il commence dès qu'on lui demande quoi penser. Pas d'angle, pas de thèse, pas de toi dans l'équation. Avant même d'ouvrir un modèle, écris (ou dicte) ces 3 lignes à la main :
 
@@ -61,13 +61,13 @@ Le pire contenu jetable ne commence pas au moment où l'IA se met à écrire. Il
 > La preuve ou l'expérience qui m'amène à le penser : …
 > À qui je m'adresse, et ce que cette personne doit ressentir : …
 
-Ces 3 lignes constituent ta Signature Humaine. L'IA ne les invente jamais - elle se contente de les mettre en forme.
+Ces 3 lignes constituent ta Signature Humaine. L'IA ne les invente jamais : elle se contente de les mettre en forme.
 
-### Étape 2 - L'IA comme levier, briefée avec ta propre matière
+### Étape 2 : L'IA comme levier, briefée avec ta propre matière
 
-Évite de demander « écris-moi un post sur X ». Fournis plutôt ta thèse et ta preuve, et laisse l'IA prendre en charge le travail d'exécution (structure, variantes, angles) - jamais la réflexion elle-même.
+Évite de demander « écris-moi un post sur X ». Fournis plutôt ta thèse et ta preuve, et laisse l'IA prendre en charge le travail d'exécution (structure, variantes, angles), jamais la réflexion elle-même.
 
-**Prompt à copier - l'IA sert ta thèse, elle ne la remplace pas :**
+**Prompt à copier (l'IA sert ta thèse, elle ne la remplace pas) :**
 > Tu es mon assistant d'exécution, pas mon cerveau. Voici MA thèse et MA preuve, je ne veux pas que tu les changes, seulement que tu les serves.
 >
 > THÈSE (la mienne, non négociable) : [colle tes 3 lignes de l'étape 1]
@@ -82,19 +82,19 @@ Ces 3 lignes constituent ta Signature Humaine. L'IA ne les invente jamais - elle
 
 *Outils compatibles : Claude, ChatGPT ou Gemini. La règle du [?] fonctionne comme une ceinture de sécurité anti-hallucination.*
 
-### Étape 3 - Poser ta Signature Humaine (réinjecter ta voix)
+### Étape 3 : Poser ta Signature Humaine (réinjecter ta voix)
 
-Un brouillon généré par l'IA est lisse - donc sans vie. Tu le fais respirer avec ce qui ne peut pas s'automatiser : une opinion tranchée, un souvenir précis, une phrase que toi seul(e) pourrais écrire.
+Un brouillon généré par l'IA est lisse, donc sans vie. Tu le fais respirer avec ce qui ne peut pas s'automatiser : une opinion tranchée, un souvenir précis, une phrase que toi seul(e) pourrais écrire.
 
-**Prompt à copier - débusquer le générique, réinjecter du vécu :**
+**Prompt à copier (débusquer le générique, réinjecter du vécu) :**
 > Voici le brouillon. Ne le réécris pas. Fais UNIQUEMENT ceci :
 > 1. Souligne les 5 phrases les plus génériques (celles que n'importe quel compte du secteur pourrait publier).
 > 2. Pour chacune, pose-moi UNE question dont la réponse ne peut venir que de mon expérience personnelle (un chiffre vécu, un client, une erreur, une date).
 > Je répondrai, et TOI tu remplaceras la phrase générique par ma réponse, mot pour mot, sans l'adoucir.
 
-*C'est l'étape que la plupart des gens sautent - et c'est justement celle qui évite de tomber dans le contenu jetable.*
+*C'est l'étape que la plupart des gens sautent, et c'est justement celle qui évite de tomber dans le contenu jetable.*
 
-### Étape 4 - Le test du sceptique (avant toute publication)
+### Étape 4 : Le test du sceptique (avant toute publication)
 
 Relis ton texte comme si tu étais quelqu'un qui cherche la faille. Trois filtres, dans cet ordre :
 
@@ -102,14 +102,14 @@ Relis ton texte comme si tu étais quelqu'un qui cherche la faille. Trois filtre
 - **Preuve :** chaque chiffre a-t-il une source que je peux montrer ? Sinon, je le retire.
 - **Voix :** est-ce que je dirais ça à voix haute, à cette personne précise, de cette façon ? Sinon, je réécris.
 
-**Prompt à copier - l'avocat du diable :**
+**Prompt à copier (l'avocat du diable) :**
 > Attaque ce texte comme un troll intelligent en commentaire.
 > Trouve : 1 affirmation non prouvée, 1 phrase creuse type "contenu IA générique", 1 endroit où ça sonne comme un modèle et pas comme un humain.
 > Cite-les. Ne corrige rien, montre-moi juste les failles.
 
-### Étape 5 - Assumer et vérifier (le côté clair de la ligne)
+### Étape 5 : Assumer et vérifier (le côté clair de la ligne)
 
-Ne cache rien : assume. Les plateformes récompensent déjà celles et ceux qui jouent la transparence - LinkedIn a ajouté fin juillet 2026 un bouton pour signaler le contenu creux, et une étude récente a identifié une part importante des posts longs comme entièrement générés ; Instagram teste de son côté un label « AI creator ». Ce qui te protège n'est pas d'effacer la marque, c'est d'apporter une valeur qu'une IA seule ne pourrait pas produire : ton jugement, ta preuve, ta voix.
+Ne cache rien : assume. Les plateformes récompensent déjà celles et ceux qui jouent la transparence : LinkedIn a ajouté fin juillet 2026 un bouton pour signaler le contenu creux, et une étude récente a identifié une part importante des posts longs comme entièrement générés ; Instagram teste de son côté un label « AI creator ». Ce qui te protège n'est pas d'effacer la marque, c'est d'apporter une valeur qu'une IA seule ne pourrait pas produire : ton jugement, ta preuve, ta voix.
 
 **Avant de publier :**
 - Si un visuel est fortement généré par IA, coche le label « contenu IA » proposé par la plateforme. Assumer vaut toujours mieux que se faire démasquer.
@@ -117,7 +117,7 @@ Ne cache rien : assume. Les plateformes récompensent déjà celles et ceux qui 
 
 ---
 
-## 04 - La boîte à prompts anti-contenu-jetable
+## 04. La boîte à prompts anti-contenu-jetable
 
 **Éliminer les phrases creuses :**
 > Réécris ce passage en supprimant tout mot de remplissage : "à l'ère de", "dans un monde où", "il est important de noter", "révolutionnaire", "game-changer", "libère ton potentiel". Une idée par phrase. Si une phrase ne dit rien de concret, supprime-la au lieu de la reformuler.
@@ -133,7 +133,7 @@ Ne cache rien : assume. Les plateformes récompensent déjà celles et ceux qui 
 
 ---
 
-## 05 - La checklist « de quel côté de la ligne suis-je ? »
+## 05. La checklist « de quel côté de la ligne suis-je ? »
 
 *30 secondes avant de publier :*
 
@@ -145,17 +145,17 @@ Ne cache rien : assume. Les plateformes récompensent déjà celles et ceux qui 
 - [ ] Si le contenu est fortement généré : le label plateforme est coché, j'assume.
 - [ ] Les fichiers importants ont été vérifiés via un lecteur C2PA si nécessaire.
 
-Si toutes les cases sont cochées, tu te situes du côté « jugement vérifiable » - le seul côté qui garde de la valeur à mesure que le contenu, lui, en perd.
+Si toutes les cases sont cochées, tu te situes du côté « jugement vérifiable », le seul côté qui garde de la valeur à mesure que le contenu, lui, en perd.
 
 ---
 
-## 06 - Le fichier complet
+## 06. Le fichier complet
 
-*[Emplacement réservé à ton propre mécanisme d'accès au protocole complet - lead magnet, formulaire, ou lien de téléchargement selon ta plateforme.]*
+*[Emplacement réservé à ton propre mécanisme d'accès au protocole complet (lead magnet, formulaire, ou lien de téléchargement selon ta plateforme).]*
 
 ---
 
-## 07 - Pour aller plus loin
+## 07. Pour aller plus loin
 
 Pour repérer un site ou un texte produit à la chaîne par une IA, direction le guide sur les signes qui trahissent un site généré par IA. Et pour apprendre à faire exécuter l'IA sans jamais la laisser penser à ta place, direction le guide sur les compétences qui valent plus qu'un diplôme.
 
@@ -169,4 +169,4 @@ L'IA reste ton levier, jamais ton auteur. Écris ta thèse à la main avant chaq
 
 ---
 
-*Sources vérifiées : Anthropic - filigrane texte de Claude · EU AI Act, Article 50 (transparence, applicable depuis le 2 août 2026, amende jusqu'à 15 M€) · Nature - étude sur l'effondrement des modèles (Shumailov et al., 2024) · C2PA (documentation officielle).*
+*Sources vérifiées : Anthropic, filigrane texte de Claude · EU AI Act, Article 50 (transparence, applicable depuis le 2 août 2026, amende jusqu'à 15 M€) · Nature, étude sur l'effondrement des modèles (Shumailov et al., 2024) · C2PA (documentation officielle).*

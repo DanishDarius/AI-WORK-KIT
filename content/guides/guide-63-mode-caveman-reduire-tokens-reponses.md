@@ -13,13 +13,13 @@ Une astuce gratuite réduit fortement la consommation de tokens en forçant l'IA
 
 ## Pourquoi ça marche
 
-Atteindre rapidement sa limite d'usage sur un modèle avancé arrive souvent parce que chaque réponse s'étale sur plusieurs pages, sans que le contenu soit meilleur pour autant - juste plus long. L'astuce consiste à forcer un style de réponse dépouillé à l'extrême. La réduction de tokens peut atteindre 75 %, avec une qualité de fond identique.
+Atteindre rapidement sa limite d'usage sur un modèle avancé arrive souvent parce que chaque réponse s'étale sur plusieurs pages, sans que le contenu soit meilleur pour autant, juste plus long. L'astuce consiste à forcer un style de réponse dépouillé à l'extrême. La réduction de tokens peut atteindre 75 %, avec une qualité de fond identique.
 
-Le verbiage poli type « je serais ravi de vous aider » et les transitions type « laissez-moi vous expliquer » pèsent en tokens sans apporter d'information. Les supprimer laisse le contenu utile intact - et sur les modèles les plus coûteux, ça change directement la facture d'usage.
+Le verbiage poli type « je serais ravi de vous aider » et les transitions type « laissez-moi vous expliquer » pèsent en tokens sans apporter d'information. Les supprimer laisse le contenu utile intact, et sur les modèles les plus coûteux, ça change directement la facture d'usage.
 
 ## Le prompt à activer
 
-> **Prompt - mode dépouillé**
+> **Prompt : mode dépouillé**
 >
 > À partir de maintenant, dans cette conversation, tu réponds en mode « minimaliste ».
 >
@@ -39,7 +39,7 @@ Pour tout ce qui est opérationnel : check-lists, brouillons d'e-mails, plans d'
 
 ## À retenir
 
-Le verbiage n'est pas de l'intelligence, c'est du remplissage. Ce prompt peut être enregistré comme style personnalisé, activable à la demande - de quoi doubler son autonomie d'usage sans changer de forfait.
+Le verbiage n'est pas de l'intelligence, c'est du remplissage. Ce prompt peut être enregistré comme style personnalisé, activable à la demande : de quoi doubler son autonomie d'usage sans changer de forfait.
 
 ## Question fréquente
 

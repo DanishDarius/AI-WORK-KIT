@@ -21,7 +21,7 @@ D'abord, une interview de cadrage (une vingtaine de questions). Ensuite, le char
 
 ## Le prompt d'interview de goût
 
-> **Prompt - profil de goût**
+> **Prompt : profil de goût**
 >
 > Tu es mon profileur de goût personnel.
 >
@@ -36,7 +36,7 @@ D'abord, une interview de cadrage (une vingtaine de questions). Ensuite, le char
 
 ## Le prompt de recommandations du week-end
 
-> **Prompt - reco du week-end**
+> **Prompt : reco du week-end**
 >
 > Voici mon profil de goût :
 > [colle le paragraphe]

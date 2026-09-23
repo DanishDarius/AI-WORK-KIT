@@ -15,33 +15,33 @@ Le plan jour par jour pour passer de « je découvre » à « l'assistant gère 
 
 Ce plan jour par jour permet de passer de « curieux » à « l'assistant gère la moitié de mes journées » en une semaine.
 
-## Jour 1 - Calibrer la voix
+## Jour 1 : Calibrer la voix
 
 Coller trois à cinq textes personnels. Demander une analyse de style en dix règles. Conserver ces règles dans un document de référence.
 
-## Jour 2 - Instructions personnalisées
+## Jour 2 : Instructions personnalisées
 
 Ajouter dans les réglages : qui on est, ce que l'on fait, son ton, ce que l'on n'aime pas (jargon, émojis, etc.). Une fois pour toutes.
 
-## Jour 3 - Mémoire
+## Jour 3 : Mémoire
 
 Activer la mémoire. Fournir cinq faits importants : les outils utilisés, les clients clés, les objectifs trimestriels.
 
-## Jour 4 - Espaces de travail
+## Jour 4 : Espaces de travail
 
 Créer trois espaces de travail : « Contenu », « Clients », « Stratégie ». Y déposer les documents de référence et les consignes propres à chacun.
 
-## Jour 5 - Connecteurs
+## Jour 5 : Connecteurs
 
 Activer trois connecteurs au maximum : messagerie, agenda, stockage de fichiers. Lancer un premier prompt qui exploite vraiment ces données.
 
-## Jour 6 - Artefacts
+## Jour 6 : Artefacts
 
 Demander un tableau, un mini-site, un document long. Découvrir la différence entre une simple réponse textuelle et un artefact réutilisable.
 
-## Jour 7 - Le rituel
+## Jour 7 : Le rituel
 
-Identifier LA tâche qui sera confiée à l'assistant chaque semaine. C'est ce rituel qui ancre l'habitude - pas la collection de prompts.
+Identifier LA tâche qui sera confiée à l'assistant chaque semaine. C'est ce rituel qui ancre l'habitude, pas la collection de prompts.
 
 ## À retenir
 

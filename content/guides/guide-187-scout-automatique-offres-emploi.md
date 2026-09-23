@@ -17,7 +17,7 @@ Il balaie plusieurs sources (LinkedIn, Welcome, Indeed, sites propres des entrep
 
 ## Le prompt à programmer
 
-> **Prompt - scout d'offres**
+> **Prompt : scout d'offres**
 >
 > Tu es mon scout d'offres d'emploi.
 >
