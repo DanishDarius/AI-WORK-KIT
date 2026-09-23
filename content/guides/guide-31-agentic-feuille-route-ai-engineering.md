@@ -11,30 +11,30 @@ Statut : reformulé (texte) ; aucune image ni tableau HTML détecté sur cette p
 ## Sommaire
 
 - Introduction
-- 01. Lis la carte : repère les preuves
-- 02. Pars de ton niveau, garde un cap réaliste
-- 03. Choisis un cas simple, construis quelque chose d'utile
-- 04. Mesure les réponses, corrige la bonne erreur
-- 05. Comprends le système, assume les compromis
-- 06. Confie une modification, reste capable de la vérifier
-- 07. Rassemble tes preuves, explique ta contribution
-- 08. Retourne aux sources
+- 01. Lisez la carte : repérez les preuves
+- 02. Partez de votre niveau, gardez un cap réaliste
+- 03. Choisissez un cas simple, construisez quelque chose d'utile
+- 04. Mesurez les réponses, corrigez la bonne erreur
+- 05. Comprenez le système, assumez les compromis
+- 06. Confiez une modification, restez capable de la vérifier
+- 07. Rassemblez vos preuves, expliquez votre contribution
+- 08. Retournez aux sources
 
 ## Introduction
 
 Le 14 août 2026, Andrew Ng et DeepLearning.AI ont présenté leur « AI Engineering Skills Map » (carte des compétences en ingénierie IA). Ils déclarent avoir analysé plus de 10 000 offres d'emploi, mené des dizaines d'entretiens structurés, et utilisé des enquêtes ainsi que d'autres données en ligne pour la construire. Cette carte vise les compétences des développeurs au sens large, bien au-delà du seul intitulé de poste « AI Engineer ».
 
-Ce guide situe ton niveau actuel, propose de construire un assistant documentaire concret, et aide à rassembler quatre preuves : une application évaluée, des décisions techniques argumentées, un travail encadré avec un agent de code, et un choix produit assumé.
+Ce guide situe votre niveau actuel, propose de construire un assistant documentaire concret, et aide à rassembler quatre preuves : une application évaluée, des décisions techniques argumentées, un travail encadré avec un agent de code, et un choix produit assumé.
 
 Important à préciser : la feuille de route détaillée ci-dessous est une proposition pédagogique originale de ce guide. Le rythme de six ou douze semaines, le projet fil rouge et les critères de passage d'une étape à l'autre ne constituent pas un cursus officiel de DeepLearning.AI. Ils servent uniquement à organiser sa propre pratique, sans garantir un emploi ni la maîtrise du métier à une date donnée.
 
 ---
 
-## 01. Lis la carte : repère les preuves
+## 01. Lisez la carte : repérez les preuves
 
 Quatre compétences à explorer, chacune avec son verbe d'action et sa preuve à produire :
 
-**1. L'application IA : mesurer.** La question à se poser : peux-tu expliquer une mauvaise réponse avec ses sources et un test reproductible ? Exercice : prépare des questions dont tu connais déjà la réponse, compare le système avant et après une seule modification. Preuve à garder : un jeu d'évaluation, ses résultats bruts, et une correction mesurée.
+**1. L'application IA : mesurer.** La question à se poser : pouvez-vous expliquer une mauvaise réponse avec ses sources et un test reproductible ? Exercice : préparez des questions dont vous connaissez déjà la réponse, comparez le système avant et après une seule modification. Preuve à garder : un jeu d'évaluation, ses résultats bruts, et une correction mesurée.
 
 **2. Le logiciel : arbitrer.** Les fondamentaux techniques (interfaces, serveurs, données, sécurité, exploitation) permettant de choisir entre simplicité, fiabilité, coût et capacité à servir davantage d'utilisateurs.
 
@@ -48,25 +48,25 @@ Comprendre les bases reste indispensable : la carte complète inclut aussi les f
 
 ---
 
-## 02. Pars de ton niveau, garde un cap réaliste
+## 02. Partez de votre niveau, gardez un cap réaliste
 
 Ce parcours suppose de pouvoir déjà ouvrir un projet de code, le lancer, et comprendre une petite modification apportée. Si le développement reste une découverte complète, mieux vaut d'abord acquérir ce socle avant de se lancer. Prévoir ensuite environ 36 heures de pratique, réparties selon son propre rythme, plus le temps nécessaire aux prérequis et aux retours utilisateurs recueillis en cours de route. C'est un budget de départ indicatif ; les critères de passage d'une étape à l'autre priment toujours sur le calendrier fixé.
 
-**Positionne-toi sur les quatre compétences** (à découvrir / avec aide / en autonomie / preuve partageable) : construire l'application IA, maîtriser les fondamentaux, piloter les agents de code, façonner le produit. Ce positionnement reste purement déclaratif, sans certification ni validation externe. Il sert uniquement à identifier la compétence à approfondir en priorité et le rythme hebdomadaire réaliste (par exemple 6h ou 3h par semaine).
+**Positionnez-vous sur les quatre compétences** (à découvrir / avec aide / en autonomie / preuve partageable) : construire l'application IA, maîtriser les fondamentaux, piloter les agents de code, façonner le produit. Ce positionnement reste purement déclaratif, sans certification ni validation externe. Il sert uniquement à identifier la compétence à approfondir en priorité et le rythme hebdomadaire réaliste (par exemple 6h ou 3h par semaine).
 
 **Le parcours fil rouge en six semaines :**
 
-**Semaine 1 (Produit) : choisis le problème.** Décris un utilisateur, une tâche récurrente, et la façon dont il la réalise aujourd'hui. Écris la spécification et prépare le corpus fictif décrit plus bas. À produire : une spec d'une page + six documents datés. Passage à l'étape suivante quand tu peux dire qui utilise l'outil, quelle réponse il attend, et ce que l'outil ne fera pas.
+**Semaine 1 (Produit) : choisissez le problème.** Décrivez un utilisateur, une tâche récurrente, et la façon dont il la réalise aujourd'hui. Écrivez la spécification et préparez le corpus fictif décrit plus bas. À produire : une spec d'une page + six documents datés. Passage à l'étape suivante quand vous pouvez dire qui utilise l'outil, quelle réponse il attend, et ce que l'outil ne fera pas.
 
-**Semaine 2 (Application IA) : construis une première réponse.** Dans un petit prototype, fournis le corpus complet au modèle. Affiche une réponse et les passages qui la soutiennent. Prépare les cas d'évaluation avant même d'améliorer le système. À produire : un prototype local + douze cas de développement et huit cas réservés. Passage à l'étape suivante quand une question connue renvoie une réponse justifiée, et qu'une information absente reste bien signalée comme absente.
+**Semaine 2 (Application IA) : construisez une première réponse.** Dans un petit prototype, fournissez le corpus complet au modèle. Affichez une réponse et les passages qui la soutiennent. Préparez les cas d'évaluation avant même d'améliorer le système. À produire : un prototype local + douze cas de développement et huit cas réservés. Passage à l'étape suivante quand une question connue renvoie une réponse justifiée, et qu'une information absente reste bien signalée comme absente.
 
-**Semaine 3 (Application IA) : mesure, puis corrige.** Classe les erreurs rencontrées : source absente, mauvais passage sélectionné, réponse infidèle, ou simple problème d'interface. Essaie une seule correction à la fois. Si le corpus devient trop volumineux, compare une recherche de passages à la version initiale complète. À produire : deux versions identifiées + résultats comparables + décision de garder ou annuler la correction. Passage à l'étape suivante quand les résultats complets sont montrés, régressions comprises, sur les mêmes cas de développement.
+**Semaine 3 (Application IA) : mesurez, puis corrigez.** Classez les erreurs rencontrées : source absente, mauvais passage sélectionné, réponse infidèle, ou simple problème d'interface. Essayez une seule correction à la fois. Si le corpus devient trop volumineux, comparez une recherche de passages à la version initiale complète. À produire : deux versions identifiées + résultats comparables + décision de garder ou annuler la correction. Passage à l'étape suivante quand les résultats complets sont montrés, régressions comprises, sur les mêmes cas de développement.
 
-**Semaine 4 (Fondamentaux) : rends le logiciel fiable.** Sépare l'interface et l'appel au modèle. Protège la clé d'API côté serveur, borne les entrées et les appels, traite les pannes possibles. Mesure le coût et la durée. Prépare un aperçu privé avec un retour possible à la version précédente. À produire : un schéma + une décision technique + une panne simulée et effectivement récupérée. Passage à l'étape suivante quand le parcours de bout en bout et la reprise après panne sont vérifiés, et que les accès de l'aperçu sont bien contrôlés.
+**Semaine 4 (Fondamentaux) : rendez le logiciel fiable.** Séparez l'interface et l'appel au modèle. Protégez la clé d'API côté serveur, bornez les entrées et les appels, traitez les pannes possibles. Mesurez le coût et la durée. Préparez un aperçu privé avec un retour possible à la version précédente. À produire : un schéma + une décision technique + une panne simulée et effectivement récupérée. Passage à l'étape suivante quand le parcours de bout en bout et la reprise après panne sont vérifiés, et que les accès de l'aperçu sont bien contrôlés.
 
-**Semaine 5 (Agents de code) : délègue un changement.** Confie une petite amélioration à un seul agent. Fournis-lui la spec, les fichiers autorisés, et les tests attendus. Relis toi-même les modifications, refuse un résultat insuffisant s'il y en a un, et conserve trace de la correction. À produire : un dossier de revue (demande, changement, vérifications, décision et limites). Passage à l'étape suivante quand tu sais expliquer ce que l'agent a réellement changé, et reproduire toi-même au moins un test important.
+**Semaine 5 (Agents de code) : déléguez un changement.** Confiez une petite amélioration à un seul agent. Fournissez-lui la spec, les fichiers autorisés, et les tests attendus. Relisez vous-même les modifications, refusez un résultat insuffisant s'il y en a un, et conservez trace de la correction. À produire : un dossier de revue (demande, changement, vérifications, décision et limites). Passage à l'étape suivante quand vous savez expliquer ce que l'agent a réellement changé, et reproduire vous-même au moins un test important.
 
-**Semaine 6 (Produit + synthèse) : teste l'usage et présente la preuve.** Fais essayer l'aperçu privé à une personne volontaire, avec uniquement des données fictives. Observe sans guider. Évalue la version figée sur les huit cas réservés, et prépare le portfolio final. À produire : un retour utilisateur anonymisé + une évaluation finale + quatre preuves consultables. Passage réussi quand tu distingues clairement résultats observés, limites, et prochaine décision. Et si l'essai utilisateur n'a pas eu lieu, il faut simplement l'indiquer tel quel.
+**Semaine 6 (Produit + synthèse) : testez l'usage et présentez la preuve.** Faites essayer l'aperçu privé à une personne volontaire, avec uniquement des données fictives. Observez sans guider. Évaluez la version figée sur les huit cas réservés, et préparez le portfolio final. À produire : un retour utilisateur anonymisé + une évaluation finale + quatre preuves consultables. Passage réussi quand vous distinguez clairement résultats observés, limites, et prochaine décision. Et si l'essai utilisateur n'a pas eu lieu, il faut simplement l'indiquer tel quel.
 
 **Prompt à copier (Mon plan de progression à conserver) :**
 > Mon point de départ AGENTIC (auto-positionnement déclaratif, sans certification ni validation externe)
@@ -86,11 +86,11 @@ Ce parcours suppose de pouvoir déjà ouvrir un projet de code, le lancer, et co
 
 ---
 
-## 03. Choisis un cas simple, construis quelque chose d'utile
+## 03. Choisissez un cas simple, construisez quelque chose d'utile
 
 Le cas proposé ici est entièrement fictif : une petite équipe organise des ateliers et cherche souvent les mêmes informations. L'assistant à construire répond à une question, affiche les passages utilisés pour y répondre, et reconnaît explicitement les informations manquantes. Il ne réserve rien et n'envoie aucun message de son propre chef. Pour un premier essai, mieux vaut éviter les documents personnels ou clients réels.
 
-**Le dossier d'exercice « Atelier Atlas » : six documents pour une réponse vérifiable.** Crée six petits fichiers texte avec les identifiants suivants (tous les faits ci-dessous sont inventés pour l'exercice) :
+**Le dossier d'exercice « Atelier Atlas » : six documents pour une réponse vérifiable.** Créez six petits fichiers texte avec les identifiants suivants (tous les faits ci-dessous sont inventés pour l'exercice) :
 
 - **D1 : Programme (1er septembre 2026).** L'atelier Découverte dure 90 minutes. Il s'adresse aux débutants et se déroule en français.
 - **D2 : Organisation (1er septembre 2026).** Groupe de huit personnes maximum. Chaque participant apporte un ordinateur. Aucun logiciel payant n'est requis.
@@ -115,13 +115,13 @@ Il faut définir la priorité des sources dans sa spec : D2 remplace D5 sur la t
 > Pour un assistant documentaire : réponse courte, identifiants de sources, indication claire si les documents sont insuffisants ou contradictoires. Aucune action sur un compte client, aucun envoi automatique.
 > Termine par ce que je dois observer pour continuer, modifier ou arrêter le projet. Fournis une proposition ; ne construis et ne déploie rien à cette étape.
 
-La toute première décision produit à prendre : une simple page de recherche classique suffit-elle ? Compare-la systématiquement à la réponse rédigée avec citations. Si les utilisateurs retrouvent tout aussi vite les informations sans génération par IA, garder cette option plus simple reste le bon choix. Consigne toujours ce choix et ce qui pourrait le faire évoluer plus tard.
+La toute première décision produit à prendre : une simple page de recherche classique suffit-elle ? Comparez-la systématiquement à la réponse rédigée avec citations. Si les utilisateurs retrouvent tout aussi vite les informations sans génération par IA, garder cette option plus simple reste le bon choix. Consignez toujours ce choix et ce qui pourrait le faire évoluer plus tard.
 
 La quatrième compétence de la carte consiste précisément à participer à la définition du produit : clarifier le besoin, obtenir du retour, communiquer les arbitrages, et décider de la prochaine étape. Le niveau de soin à y apporter dépend du risque et de la maturité du projet.
 
 ---
 
-## 04. Mesure les réponses, corrige la bonne erreur
+## 04. Mesurez les réponses, corrigez la bonne erreur
 
 Le « context engineering » consiste ici à choisir les instructions, passages, dates et résultats d'outils disponibles au moment de répondre. Le RAG ajoute une étape de récupération de documents ou de passages avant la génération elle-même. Une recherche vectorielle est une option de récupération parmi d'autres ; elle ne garantit en rien que le bon passage sera effectivement choisi.
 
@@ -152,7 +152,7 @@ Si une correction aide certains cas mais en abîme d'autres, il faut noter cette
 
 ---
 
-## 05. Comprends le système, assume les compromis
+## 05. Comprenez le système, assumez les compromis
 
 Les fondamentaux techniques couvrent notamment les interfaces, les serveurs, les données, les tests, la sécurité et l'exploitation. Ils permettent de décider entre simplicité, fiabilité, coût, et capacité à servir davantage d'utilisateurs à la fois.
 
@@ -180,7 +180,7 @@ Avant un aperçu privé, configurer un plafond d'usage réel, un délai maximal,
 
 ---
 
-## 06. Confie une modification, reste capable de la vérifier
+## 06. Confiez une modification, restez capable de la vérifier
 
 La carte distingue la préparation, l'exécution vérifiée, et le suivi après déploiement. Piloter un agent de code demande aussi de gérer son contexte, ses permissions, et le niveau d'autonomie pertinent pour la tâche. Un long fonctionnement autonome ne suffit en rien à établir la qualité réelle du résultat produit.
 
@@ -207,7 +207,7 @@ Il faut relire soi-même les fichiers modifiés et reproduire le parcours normal
 
 ---
 
-## 07. Rassemble tes preuves, explique ta contribution
+## 07. Rassemblez vos preuves, expliquez votre contribution
 
 Il faut choisir un rôle concret qui intéresse réellement, et lire quelques offres d'emploi actuelles. Relier les exigences de ces offres à son propre travail observable ; ne jamais déduire son admissibilité d'un simple titre de guide suivi. Ce projet peut appuyer une candidature en développement applicatif, en intégration IA, ou en produit technique, avec des attentes différentes selon le poste visé.
 
@@ -235,7 +235,7 @@ Il faut commencer maintenant par renseigner les quatre niveaux du diagnostic, bl
 
 ---
 
-## 08. Retourne aux sources
+## 08. Retournez aux sources
 
 Les cinq lettres d'Andrew Ng citées dans le guide original ont été consultées le 13 septembre 2026 : la carte des compétences (14 août 2026), créer et déployer des applications IA (21 août 2026), les fondamentaux du logiciel (28 août 2026), utiliser les agents de code (4 septembre 2026), et façonner le produit (11 septembre 2026), toutes publiées par DeepLearning.AI. Le parcours en six semaines, le cas « Atelier Atlas », les consignes et l'exercice de diagnostic sont des créations pédagogiques originales de ce guide ; les exemples ne sont pas des sorties de modèles réellement exécutées pour cette publication.
 
@@ -243,6 +243,6 @@ Les cinq lettres d'Andrew Ng citées dans le guide original ont été consultée
 
 ## À retenir
 
-**Garde la trace de tes choix.**
+**Gardez la trace de vos choix.**
 
-Conserve une erreur que tu sais expliquer, la correction essayée, et son résultat réel. Ce trio de documents montre comment tu raisonnes lorsque l'application ne fait pas ce qui était prévu. C'est précisément cette capacité à argumenter ses décisions techniques, bien plus qu'un simple titre de projet, qui constitue la vraie preuve de compétence en ingénierie IA.
+Conservez une erreur que vous savez expliquer, la correction essayée, et son résultat réel. Ce trio de documents montre comment vous raisonnez lorsque l'application ne fait pas ce qui était prévu. C'est précisément cette capacité à argumenter ses décisions techniques, bien plus qu'un simple titre de projet, qui constitue la vraie preuve de compétence en ingénierie IA.

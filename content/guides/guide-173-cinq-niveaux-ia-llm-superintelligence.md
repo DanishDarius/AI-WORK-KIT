@@ -29,7 +29,7 @@ ChatGPT, Claude, Gemini, Mistral : on tape une question, l'assistant répond. C'
 >
 > MES PROMPTS :
 > """
-> [colle ici tes prompts]
+> [collez ici vos prompts]
 > """
 >
 > TON TRAVAIL :
@@ -57,10 +57,10 @@ On ne pose plus une question, on confie un objectif. Pas « écris-moi un e-mail
 > Tu es architecte d'agents IA. Aide-moi à transformer une tâche récurrente en agent autonome que je peux confier à un assistant en mode agent (ou à un outil d'automatisation combiné à un LLM).
 >
 > MA TÂCHE À DÉLÉGUER :
-> - Ce que je fais aujourd'hui : [décris précisément, étape par étape]
+> - Ce que je fais aujourd'hui : [décrivez précisément, étape par étape]
 > - Fréquence : [x fois par semaine]
 > - Temps que ça me prend : [x h]
-> - Ce qui rate quand c'est mal fait : [décris]
+> - Ce qui rate quand c'est mal fait : [décrivez]
 >
 > CONSTRUIS-MOI :
 > 1. L'OBJECTIF (une phrase, mesurable, pas « aide-moi à… »)
@@ -86,10 +86,10 @@ Non plus un agent, mais une équipe. Un chercheur creuse, un rédacteur écrit, 
 >
 > MON PROCESSUS À AUTOMATISER :
 > - Nom du processus : [ex : produire un post LinkedIn hebdo + carrousel + newsletter]
-> - Étapes actuelles quand je le fais moi-même : [liste 5-10 étapes]
+> - Étapes actuelles quand je le fais moi-même : [listez 5-10 étapes]
 > - Sources d'info que j'utilise : [liste]
-> - Ce qui rate le plus souvent : [décris]
-> - À quoi ressemble un livrable « excellent » : [décris]
+> - Ce qui rate le plus souvent : [décrivez]
+> - À quoi ressemble un livrable « excellent » : [décrivez]
 >
 > CONSTRUIS L'ÉQUIPE :
 > 1. AGENT A (Chercheur/Collecteur) : rôle exact, sources, prompt système complet, format de sortie qu'il passe à B

@@ -27,8 +27,8 @@ La recherche d'emploi peut facilement envahir les week-ends. Trois usages d'une 
 
 > **Prompt : vérification honnête**
 >
-> Voici mon CV : [colle ou uploade]
-> Voici l'offre : [colle]
+> Voici mon CV : [collez ou uploadez]
+> Voici l'offre : [collez]
 >
 > Procédure :
 > 1. Score mon fit sur 100. Sois SÉVÈRE. Si je suis à 60, ne mets pas 80.

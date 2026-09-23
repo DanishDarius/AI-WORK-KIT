@@ -29,11 +29,11 @@ Toujours par les Skills. Cette étape permet de découvrir une dizaine de cas d'
 
 ## Le prompt pour détecter son premier Skill
 
-> **Prompt : détecter ton premier Skill**
+> **Prompt : détecter votre premier Skill**
 >
 > Je fais ces 10 tâches dans ma semaine :
 >
-> [liste tes 10 tâches récurrentes]
+> [listez vos 10 tâches récurrentes]
 >
 > Pour chacune :
 > 1. Évalue si un Skill (prompt réutilisable) suffirait : oui / non.

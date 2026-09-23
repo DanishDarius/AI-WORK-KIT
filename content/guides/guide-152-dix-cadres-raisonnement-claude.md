@@ -61,7 +61,7 @@ Demander une explication « comme à un enfant de 5 ans » décortique le sujet 
 
 > **Prompt : à tester**
 >
-> Explique-moi comme à un enfant de 5 ans : que veut dire cette clause de mon bail ? [colle la clause]
+> Explique-moi comme à un enfant de 5 ans : que veut dire cette clause de mon bail ? [collez la clause]
 
 ## 7. Pre-mortem
 
@@ -85,7 +85,7 @@ Ajouter « attaque ça comme une red team » devant un plan, un pitch ou une dé
 
 > **Prompt : à tester**
 >
-> Attaque ce pitch deck comme le ferait une red team. Où un investisseur creuserait-il ? [colle le deck ou décris-le]
+> Attaque ce pitch deck comme le ferait une red team. Où un investisseur creuserait-il ? [collez le deck ou décrivez-le]
 
 ## 10. Premiers principes
 

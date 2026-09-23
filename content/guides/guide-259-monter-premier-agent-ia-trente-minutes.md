@@ -38,14 +38,14 @@ Les critères à respecter : la tâche revient au moins trois fois par semaine, 
 > - Tu ne fais JAMAIS : [liste]
 >
 > INPUTS QUE J'ENVERRAI :
-> [décris]
+> [décrivez]
 >
 > AVANT DE RÉPONDRE :
 > - Si une info clé manque, pose-moi UNE question
 > - Sinon, livre. Pas d'intro, pas de "voici"
 >
 > EXEMPLES :
-> [colle 3 paires input → output idéal]
+> [collez 3 paires input → output idéal]
 
 ## À retenir
 

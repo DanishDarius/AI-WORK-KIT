@@ -45,7 +45,7 @@ Inutile de connaître deux cents termes techniques. Quinze suffisent pour suivre
 
 ## Le prompt d'auto-évaluation
 
-> **Prompt : quiz toi-même**
+> **Prompt : quiz vous-même**
 >
 > Pose-moi 10 questions sur les termes : LLM, token, context window, RAG, agent, MCP, embedding, inference, hallucination, fine-tuning.
 > Format : QCM 4 options.

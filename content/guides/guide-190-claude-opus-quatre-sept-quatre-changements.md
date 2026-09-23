@@ -21,7 +21,7 @@ Auto-vérification : Opus 4.7 se relit avant de répondre. Ce n'est pas parfait,
 >
 > Tu es un consultant senior. Voici un brief client avec des données contradictoires :
 >
-> [Colle ton brief, ta capture d'écran ou ton PDF]
+> [Collez votre brief, votre capture d'écran ou votre PDF]
 >
 > 1. Identifie les 3 contradictions ou zones floues.
 > 2. Propose une recommandation tranchée avec pour et contre.

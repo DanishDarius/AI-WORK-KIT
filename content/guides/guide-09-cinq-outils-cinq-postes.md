@@ -21,7 +21,7 @@ Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
 - Poste 3 : Chercher → Perplexity
 - Poste 4 : Ton marketing → Helena
 - Poste 5 : Publier → Lovable
-- Ta liste récapitulative
+- Votre liste récapitulative
 - Le fichier complet
 - Pour aller plus loin
 
@@ -29,4 +29,4 @@ Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
 ## Introduction
 
 
-Les 5 seuls outils IA dont tu as vraiment besoin pour avancer, un poste unique confié à chacun : écrire (Claude), répondre (Tidio), chercher (Perplexity), ton marketing (Helena), publier (Lovable). Pour chaque poste : le réglage de départ, et un prompt prêt à copier-coller.
+Les 5 seuls outils IA dont vous avez vraiment besoin pour avancer, un poste unique confié à chacun : écrire (Claude), répondre (Tidio), chercher (Perplexity), ton marketing (Helena), publier (Lovable). Pour chaque poste : le réglage de départ, et un prompt prêt à copier-coller.

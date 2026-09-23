@@ -5,7 +5,7 @@ Position réelle dans la bibliothèque au moment du traitement : 54/293.
 Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court, contenu intégralement capturé, aucune troncature détectée.
 ---
 
-# Une veille hebdomadaire automatisée, calée sur ton secteur et rien d'autre
+# Une veille hebdomadaire automatisée, calée sur votre secteur et rien d'autre
 
 *Perplexity · 5 min de lecture*
 

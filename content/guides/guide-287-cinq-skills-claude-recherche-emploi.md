@@ -34,7 +34,7 @@ Chercher un emploi sans s'appuyer sur l'IA revient, selon la source, à partir m
 >
 > Sois direct.
 >
-> [Colle l'offre, le CV, ton contexte]
+> [Collez l'offre, le CV, votre contexte]
 
 ## Le prompt de négociation salariale
 

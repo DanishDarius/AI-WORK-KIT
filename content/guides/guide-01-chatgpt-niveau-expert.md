@@ -10,7 +10,7 @@ Statut : reformulé (texte) ; voir ressources-visuelles.md, réf. #4, pour les i
 
 *ChatGPT · 8 min de lecture*
 
-## Ce que tu vas trouver ici
+## Ce que vous allez trouver ici
 
 - Introduction
 - 01 L'application de bureau
@@ -24,39 +24,39 @@ Statut : reformulé (texte) ; voir ressources-visuelles.md, réf. #4, pour les i
 
 Chaque réglage est traité en une section autonome : à quoi il sert concrètement, les prérequis à checker avant de s'en servir, et une manière simple de vérifier que ça fonctionne comme prévu. Le repère « 10 % à 100 % » est une façon de parler, pas un chiffre à prendre au pied de la lettre.
 
-**Tu débutes avec ChatGPT ?** Commence par le cadre ci-dessous, parcours les réglages 1 et 2, puis termine par l'exercice de mise en pratique. Les réglages 3 à 5 sont optionnels : tu n'as besoin ni de brancher ta boîte mail, ni de payer un abonnement, ni de programmer quoi que ce soit pour compléter ce parcours avec succès.
+**Vous débutez avec ChatGPT ?** Commencez par le cadre ci-dessous, parcourez les réglages 1 et 2, puis terminez par l'exercice de mise en pratique. Les réglages 3 à 5 sont optionnels : vous n'avez besoin ni de brancher votre boîte mail, ni de payer un abonnement, ni de programmer quoi que ce soit pour compléter ce parcours avec succès.
 
-Compte environ 30 minutes pour la version débutant. Connecte-toi à ChatGPT depuis ton navigateur, avec un compte perso ou pro autorisé. Sache que les noms de fonctionnalités et leur disponibilité varient selon le type de compte et l'appareil utilisé.
+Comptez environ 30 minutes pour la version débutant. Connectez-vous à ChatGPT depuis votre navigateur, avec un compte perso ou pro autorisé. Sachez que les noms de fonctionnalités et leur disponibilité varient selon le type de compte et l'appareil utilisé.
 
-*Avant de te lancer, pense à vérifier tes réglages de confidentialité et tes préférences.*
+*Avant de vous lancer, pensez à vérifier vos réglages de confidentialité et vos préférences.*
 
 ---
 
-## 01. L'application de bureau : ton outil toujours accessible
+## 01. L'application de bureau : votre outil toujours accessible
 
-L'application desktop n'est qu'une porte d'entrée alternative vers ChatGPT ; elle n'est pas obligatoire pour suivre ce guide, le navigateur fait très bien l'affaire. Si tu choisis de l'installer, télécharge-la uniquement depuis le site officiel et vérifie la compatibilité avec ton système avant de lancer l'installation.
+L'application desktop n'est qu'une porte d'entrée alternative vers ChatGPT ; elle n'est pas obligatoire pour suivre ce guide, le navigateur fait très bien l'affaire. Si vous choisissez de l'installer, téléchargez-la uniquement depuis le site officiel et vérifiez la compatibilité avec votre système avant de lancer l'installation.
 
-Sur Mac, la fonction *Work with Apps* permet à ChatGPT de lire le contenu d'applications compatibles directement dans tes échanges, sous réserve des autorisations que tu accordes. Un bandeau t'indique toujours quelle application et quel contenu sont utilisés. Cette fonction ne donne jamais un accès automatique à tout ce qui est affiché à l'écran.
+Sur Mac, la fonction *Work with Apps* permet à ChatGPT de lire le contenu d'applications compatibles directement dans vos échanges, sous réserve des autorisations que vous accordez. Un bandeau vous indique toujours quelle application et quel contenu sont utilisés. Cette fonction ne donne jamais un accès automatique à tout ce qui est affiché à l'écran.
 
 **À tester (navigateur ou app) :**
 > Voici un texte fictif à résumer :
-> [COLLE UN COURT TEXTE SANS DONNÉES PERSONNELLES]
+> [COLLEZ UN COURT TEXTE SANS DONNÉES PERSONNELLES]
 > Résume uniquement ce texte en 3 puces. N'ajoute aucune information.
 > Si tu ne peux pas lire le contenu fourni, dis-le.
 
-*Vérification : retrouve dans le texte original ce qui justifie chaque puce du résumé. Pour ce premier essai, un extrait fictif collé directement suffit largement : pas besoin d'ouvrir l'accès à d'autres applications.*
+*Vérification : retrouvez dans le texte original ce qui justifie chaque puce du résumé. Pour ce premier essai, un extrait fictif collé directement suffit largement : pas besoin d'ouvrir l'accès à d'autres applications.*
 
 ---
 
-## 02. L'espace Projet : un dossier pour garder ton contexte
+## 02. L'espace Projet : un dossier pour garder votre contexte
 
 Un Projet regroupe conversations, fichiers et instructions dans un même espace. Disponible aussi bien en gratuit qu'en payant (avec des limites différentes selon le plan), il aide à garder le fil d'une tâche dans le temps, sans pour autant garantir que chaque ancienne information sera toujours retrouvée ou bien interprétée.
 
 **Comment faire :**
-1. Dans la barre latérale, clique sur *Nouveau projet*.
-2. Nomme-le « Mon premier atelier IA » et garde-le en privé.
-3. Colle les instructions ci-dessous : elles s'appliqueront uniquement dans ce Projet, en priorité sur tes instructions générales.
-4. Ajoute un seul document fictif pertinent, ou colle directement les infos dans la conversation. Mieux vaut démarrer avec peu de sources, mais bien nommées et datées.
+1. Dans la barre latérale, cliquez sur *Nouveau projet*.
+2. Nommez-le « Mon premier atelier IA » et gardez-le en privé.
+3. Collez les instructions ci-dessous : elles s'appliqueront uniquement dans ce Projet, en priorité sur vos instructions générales.
+4. Ajoutez un seul document fictif pertinent, ou collez directement les infos dans la conversation. Mieux vaut démarrer avec peu de sources, mais bien nommées et datées.
 
 **Instructions à coller (version débutant) :**
 > Nous préparons un atelier fictif pour apprendre à utiliser l'IA.
@@ -66,37 +66,37 @@ Un Projet regroupe conversations, fichiers et instructions dans un même espace.
 > N'invente ni adresse, ni lien, ni garantie.
 > Ne publie et n'envoie rien. Je valide le résultat.
 
-*Si l'option Projet n'apparaît pas chez toi : ouvre simplement une conversation neuve avec les mêmes instructions, et garde ton brief dans un document à part. Tu peux mener tout l'exercice de cette façon. Note que les accès peuvent être restreints dans un espace professionnel géré par une entreprise.*
+*Si l'option Projet n'apparaît pas chez vous : ouvrez simplement une conversation neuve avec les mêmes instructions, et gardez votre brief dans un document à part. Vous pouvez mener tout l'exercice de cette façon. Notez que les accès peuvent être restreints dans un espace professionnel géré par une entreprise.*
 
 ---
 
-## 03. Les connecteurs : n'ouvre que l'accès dont tu as besoin
+## 03. Les connecteurs : n'ouvrez que l'accès dont vous avez besoin
 
 *Optionnel : à voir une fois les bases acquises.*
 
-Les applications connectées donnent à ChatGPT accès à certains services (fichiers, messages...), et selon le service, peuvent aussi lui permettre d'agir à ta place. Ce menu peut aussi s'appeler « Plugins » selon les cas ; sa disponibilité dépend de l'app, du plan, de la région, de ton rôle et de ton espace de travail. Il n'y a pas de règle simple du type « payant et hors Europe » qui s'applique partout.
+Les applications connectées donnent à ChatGPT accès à certains services (fichiers, messages...), et selon le service, peuvent aussi lui permettre d'agir à votre place. Ce menu peut aussi s'appeler « Plugins » selon les cas ; sa disponibilité dépend de l'app, du plan, de la région, de votre rôle et de votre espace de travail. Il n'y a pas de règle simple du type « payant et hors Europe » qui s'applique partout.
 
 **Avant de connecter quoi que ce soit :**
-1. Clarifie la tâche : un simple extrait collé manuellement suffit-il ?
-2. Consulte la fiche officielle du service et les permissions qu'il demande.
-3. Si tu connectes malgré tout un service, choisis les droits les plus restrictifs disponibles pour ton besoin.
-4. Teste avec un document fictif, et repère où déconnecter le service avant de passer à de vraies données.
+1. Clarifiez la tâche : un simple extrait collé manuellement suffit-il ?
+2. Consultez la fiche officielle du service et les permissions qu'il demande.
+3. Si vous connectez malgré tout un service, choisissez les droits les plus restrictifs disponibles pour votre besoin.
+4. Testez avec un document fictif, et repérez où déconnecter le service avant de passer à de vraies données.
 
-*Pour ce parcours débutant : ne connecte rien. L'objectif ici, c'est de bien comprendre la différence entre lire, préparer un brouillon, et envoyer réellement quelque chose.*
+*Pour ce parcours débutant : ne connectez rien. L'objectif ici, c'est de bien comprendre la différence entre lire, préparer un brouillon, et envoyer réellement quelque chose.*
 
 ---
 
-## 04. Le GPT sur mesure : capitalise sur une méthode qui marche
+## 04. Le GPT sur mesure : capitalisez sur une méthode qui marche
 
-*Optionnel : vérifie d'abord que la création est accessible sur ton compte.*
+*Optionnel : vérifiez d'abord que la création est accessible sur votre compte.*
 
-Un GPT personnalisé combine des instructions fixes avec, si besoin, des connaissances ou des outils supplémentaires, pour une tâche que tu répètes souvent. Sa création dépend de ton abonnement et des droits de ton espace de travail : vérifie que l'éditeur est bien accessible avant de t'engager dans cette étape.
+Un GPT personnalisé combine des instructions fixes avec, si besoin, des connaissances ou des outils supplémentaires, pour une tâche que vous répétez souvent. Sa création dépend de votre abonnement et des droits de votre espace de travail : vérifiez que l'éditeur est bien accessible avant de vous engager dans cette étape.
 
 **Comment faire :**
-1. Ouvre la section GPT et son éditeur, si ton compte y donne accès.
-2. Décris une seule tâche : son entrée, sa sortie.
-3. N'ajoute que les connaissances et capacités réellement nécessaires ; garde-le en privé pendant que tu testes.
-4. Essaie-le sur un cas standard, un cas incomplet, et une demande hors sujet.
+1. Ouvrez la section GPT et son éditeur, si votre compte y donne accès.
+2. Décrivez une seule tâche : son entrée, sa sortie.
+3. N'ajoutez que les connaissances et capacités réellement nécessaires ; gardez-le en privé pendant que vous testez.
+4. Essayez-le sur un cas standard, un cas incomplet, et une demande hors sujet.
 
 **Méthode réutilisable (dans un GPT ou simplement un document) :**
 > Tu aides à préparer des invitations à des ateliers.
@@ -106,35 +106,35 @@ Un GPT personnalisé combine des instructions fixes avec, si besoin, des connais
 > Si les faits se contredisent, signale le conflit et demande une clarification.
 > Ne publie et n'envoie rien.
 
-*Pas d'accès à l'éditeur ? Garde ces instructions dans un document et colle-les en début de conversation. Formaliser une méthode ne la rend pas automatiquement plus fiable : les mêmes vérifications restent nécessaires.*
+*Pas d'accès à l'éditeur ? Gardez ces instructions dans un document et collez-les en début de conversation. Formaliser une méthode ne la rend pas automatiquement plus fiable : les mêmes vérifications restent nécessaires.*
 
 ---
 
-## 05. L'automatisation planifiée : programme une tâche bien cadrée
+## 05. L'automatisation planifiée : programmez une tâche bien cadrée
 
-*Optionnel : disponibilité selon ton compte.*
+*Optionnel : disponibilité selon votre compte.*
 
-Une tâche planifiée peut s'exécuter plus tard, ou de façon récurrente. Quotas, horaires et outils compatibles dépendent de ton compte. Pour t'entraîner, un simple rappel dans ton agenda fait tout aussi bien l'affaire.
+Une tâche planifiée peut s'exécuter plus tard, ou de façon récurrente. Quotas, horaires et outils compatibles dépendent de votre compte. Pour vous entraîner, un simple rappel dans votre agenda fait tout aussi bien l'affaire.
 
 **Comment faire :**
-1. Commence par un rappel qui n'accède à aucune donnée externe.
-2. Vérifie la date, le fuseau horaire et la fréquence affichés avant de valider.
-3. Retrouve ensuite la tâche dans l'espace de gestion, et repère les options pour la modifier, la suspendre ou la supprimer.
+1. Commencez par un rappel qui n'accède à aucune donnée externe.
+2. Vérifiez la date, le fuseau horaire et la fréquence affichés avant de valider.
+3. Retrouvez ensuite la tâche dans l'espace de gestion, et repérez les options pour la modifier, la suspendre ou la supprimer.
 
 **À tester (optionnel) :**
 > Rappelle-moi demain de relire mon brief d'atelier et de vérifier les informations manquantes.
 > Montre-moi la date, le fuseau et le créneau proposés avant confirmation.
 > N'accède à aucun service externe.
 
-*Une tâche planifiée peut demander une action de ta part, ou être mise en pause. Ne t'y fie pas comme unique filet de sécurité pour une échéance importante. Et retiens que GPT personnalisé, Projet et tâche planifiée ne se connectent pas automatiquement entre eux.*
+*Une tâche planifiée peut demander une action de votre part, ou être mise en pause. Ne vous y fiez pas comme unique filet de sécurité pour une échéance importante. Et retenez que GPT personnalisé, Projet et tâche planifiée ne se connectent pas automatiquement entre eux.*
 
 ---
 
 ## Mise en pratique : du réglage au résultat concret
 
-**Ton livrable : une invitation, relue et validée par toi.**
+**Votre livrable : une invitation, relue et validée par vous.**
 
-Dans ton Projet ou une conversation neuve, utilise le brief ci-dessous. Relis attentivement le résultat, corrige si besoin, et garde le brouillon de côté. N'envoie rien, il s'agit d'un événement fictif.
+Dans votre Projet ou une conversation neuve, utilisez le brief ci-dessous. Relisez attentivement le résultat, corrigez si besoin, et gardez le brouillon de côté. N'envoyez rien, il s'agit d'un événement fictif.
 
 **Checklist d'auto-contrôle :**
 - [ ] J'ai choisi un assistant pour rédiger un brouillon, sans lui confier l'envoi.
@@ -143,7 +143,7 @@ Dans ton Projet ou une conversation neuve, utilise le brief ci-dessous. Relis at
 - [ ] J'ai corrigé les écarts et mis à part les informations manquantes.
 - [ ] J'ai conservé le résultat et je sais ce qu'il reste à confirmer avant diffusion.
 
-*Auto-évaluation informelle, réinitialisée à chaque actualisation : ni un examen certifiant, ni une validation automatique de ta réponse.*
+*Auto-évaluation informelle, réinitialisée à chaque actualisation : ni un examen certifiant, ni une validation automatique de votre réponse.*
 
 **Le brief à utiliser :**
 > **Tâche :** Rédige une invitation à un atelier de réparation pour les habitants du quartier.
@@ -154,9 +154,9 @@ Dans ton Projet ou une conversation neuve, utilise le brief ci-dessous. Relis at
 >
 > **Limites :** N'ajoute aucun fait, aucune garantie de réparation, aucun lien. Après le brouillon, liste séparément ce qui reste à confirmer avant envoi. Ne publie et n'envoie rien.
 
-*Petit exercice de réflexion : ton invitation est agréable à lire, mais elle contient un lien d'inscription qui n'existe pas dans le dossier de départ. Le parcours est-il réussi pour autant ? Non : il faut retirer ce lien inventé et faire confirmer le vrai moyen d'inscription avant toute diffusion.*
+*Petit exercice de réflexion : votre invitation est agréable à lire, mais elle contient un lien d'inscription qui n'existe pas dans le dossier de départ. Le parcours est-il réussi pour autant ? Non : il faut retirer ce lien inventé et faire confirmer le vrai moyen d'inscription avant toute diffusion.*
 
-**Pour aller plus loin :** une fois cette méthode assimilée, applique-la à une tâche simple de ta vie réelle. Définis le résultat attendu, les données autorisées, le brief et les critères de vérification. Évite de commencer directement par un contrat, un dossier médical, ou une décision qui concerne quelqu'un d'autre.
+**Pour aller plus loin :** une fois cette méthode assimilée, appliquez-la à une tâche simple de votre vie réelle. Définissez le résultat attendu, les données autorisées, le brief et les critères de vérification. Évitez de commencer directement par un contrat, un dossier médical, ou une décision qui concerne quelqu'un d'autre.
 
 ---
 
@@ -164,7 +164,7 @@ Dans ton Projet ou une conversation neuve, utilise le brief ci-dessous. Relis at
 
 **Un bon réglage sert toujours une tâche précise.**
 
-Tu maîtrises les bases quand tu sais choisir l'aide adaptée, fournir le bon contexte, vérifier le résultat obtenu, et garder la main sur la décision finale. Le nombre de fonctionnalités activées n'est pas ce qui mesure cette compétence.
+Vous maîtrisez les bases quand vous savez choisir l'aide adaptée, fournir le bon contexte, vérifier le résultat obtenu, et garder la main sur la décision finale. Le nombre de fonctionnalités activées n'est pas ce qui mesure cette compétence.
 
 ---
 

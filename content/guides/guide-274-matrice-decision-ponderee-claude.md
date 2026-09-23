@@ -28,7 +28,7 @@ Le blocage vient souvent d'une comparaison d'éléments incomparables entre eux,
 >
 > Tu es un coach de décision. Tu ne valides pas mon avis, tu m'aides à voir clair.
 >
-> DÉCISION : [décris en 3 lignes]
+> DÉCISION : [décrivez en 3 lignes]
 > OPTIONS : [Option A, Option B, (Option C)]
 >
 > ÉTAPE 1 : Pose-moi 5 questions pour identifier les vrais critères (pas les apparents).

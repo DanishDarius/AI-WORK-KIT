@@ -30,10 +30,10 @@ Sans contexte : « Écris un post sur l'IA » donne un résultat tiède et inter
 > **Prompt : template context-stacking**
 >
 > RÔLE : Tu es [expertise précise].
-> MOI : Je suis [qui tu es]. Mon objectif : [résultat visé].
-> EXEMPLE : Le ton/format que je veux → [colle un exemple].
+> MOI : Je suis [qui vous êtes]. Mon objectif : [résultat visé].
+> EXEMPLE : Le ton/format que je veux → [collez un exemple].
 > FORMAT : Réponds en [nombre d'options, longueur, structure].
-> MA DEMANDE : [ta demande].
+> MA DEMANDE : [votre demande].
 
 ## À retenir
 

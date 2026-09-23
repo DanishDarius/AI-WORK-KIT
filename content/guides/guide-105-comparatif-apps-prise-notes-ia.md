@@ -31,7 +31,7 @@ Granola pendant la réunion, puis export du résumé vers NotebookLM en fin de s
 
 > **Prompt : compte-rendu depuis une transcription**
 >
-> Voici la transcription brute d'une réunion : [colle].
+> Voici la transcription brute d'une réunion : [collez].
 >
 > Sortie :
 > 1. Décisions prises (bullet points)

@@ -23,7 +23,7 @@ Un unique prompt permet une préparation d'entretien digne d'un accompagnement p
 >
 > Entreprise : [nom + lien site/LinkedIn]
 > Poste : [titre + lien offre]
-> Mon CV : [colle ou résume]
+> Mon CV : [collez ou résumez]
 > Date de l'entretien : [date]
 > Interlocuteur(s) : [nom(s) + rôle si connu]
 >

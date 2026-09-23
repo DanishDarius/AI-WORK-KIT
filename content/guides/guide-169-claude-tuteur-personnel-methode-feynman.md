@@ -39,6 +39,6 @@ Le principe : apprendre un concept, puis le réexpliquer à l'assistant avec ses
 
 ## À retenir
 
-**Le tuteur suit ton rythme, pas l'inverse.**
+**Le tuteur suit votre rythme, pas l'inverse.**
 
 En cas de décrochage, le dire. Si le rythme est trop lent, le dire aussi. Un vrai tuteur s'adapte en continu ; un cours en ligne classique ne le fait pas.

@@ -27,7 +27,7 @@ Ce Skill ne se contente pas d'un plan vague à cinq ans. Il trace un chemin pré
 > - Ce qui m'épuise : [1-2]
 >
 > Où je veux être dans 5 ans :
-> - Rôle / impact : [décris]
+> - Rôle / impact : [décrivez]
 > - Style de vie : [salarié / freelance / fondatrice / mix]
 > - Sujet qui me motive vraiment : [thème]
 >

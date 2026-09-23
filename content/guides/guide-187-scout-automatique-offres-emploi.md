@@ -37,7 +37,7 @@ Il balaie plusieurs sources (LinkedIn, Welcome, Indeed, sites propres des entrep
 > Retiens-moi top 5 du jour. Pour le top 3, génère un brouillon de lettre adapté.
 >
 > Mon CV :
-> [colle CV ou résumé]
+> [collez CV ou résumé]
 >
 > Format : email court avec le top 5 en tableau et les 3 lettres en pièce jointe / blocs dépliables.
 

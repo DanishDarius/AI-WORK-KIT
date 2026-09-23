@@ -26,7 +26,7 @@ Parallèlement, des applications combinant actualité et IA (Particle, Bulletin,
 
 ## Le prompt de brief du matin
 
-> **Prompt : ton brief du matin**
+> **Prompt : votre brief du matin**
 >
 > Tu es mon assistant news.
 >

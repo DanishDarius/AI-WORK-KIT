@@ -39,7 +39,7 @@ Le texte des pages peut être fourni à une IA, à condition de retirer d'abord 
 
 Le prompt ci-dessous demande à l'IA de n'utiliser que les informations fournies, de signaler ce qui manque, et de produire un fichier fidèle aux pages sources. Une consigne ne vérifie cependant pas les faits à la place de l'utilisateur : chaque ligne doit être relue avant transmission au webmaster.
 
-> **Prompt : créer le fichier depuis tes pages**
+> **Prompt : créer le fichier depuis vos pages**
 >
 > Crée un fichier llms.txt qui présente mon activité et renvoie vers mes offres. Utilise seulement les informations que je te fournis.
 >
@@ -58,7 +58,7 @@ Le prompt ci-dessous demande à l'IA de n'utiliser que les informations fournies
 > [URL EXACTE DE LA PAGE 2]
 > [CONTENU DE LA PAGE 2]
 >
-> [AJOUTE LES AUTRES PAGES UTILES : OFFRES, À PROPOS, RÉALISATIONS, CONTACT]
+> [AJOUTEZ LES AUTRES PAGES UTILES : OFFRES, À PROPOS, RÉALISATIONS, CONTACT]
 >
 > TA TÂCHE
 > 1. Repère le métier, le public, les offres, les zones réellement couvertes, les preuves et les conditions d'accès explicitement présents dans ces sources.
@@ -136,7 +136,7 @@ Trois règles à respecter : utiliser des URL absolues (adresse complète en HTT
 
 ## Publier à la racine et tester la vraie URL
 
-La publication doit se faire à l'adresse https://ton-domaine.com/llms.txt : le fichier doit être public, servi comme texte lisible en UTF-8, et répondre directement. La convention porte sur le chemin exact et le format ; la méthode d'installation dépend du CMS, de l'hébergeur ou de l'application utilisés.
+La publication doit se faire à l'adresse https://votre-domaine.com/llms.txt : le fichier doit être public, servi comme texte lisible en UTF-8, et répondre directement. La convention porte sur le chemin exact et le format ; la méthode d'installation dépend du CMS, de l'hébergeur ou de l'application utilisés.
 
 Pour un exemple observable du résultat attendu, le fichier public de l'auteure du guide original est accessible à saadiakaram.ai/llms.txt, à lire comme un exemple, non comme la preuve qu'il aurait provoqué une recommandation.
 
@@ -185,7 +185,7 @@ Il s'agit de relire le fichier comme le ferait un vérificateur externe : pour c
 > Vérifie ce brouillon llms.txt en le comparant uniquement aux contenus publics fournis ci-dessous. Ne complète pas les lacunes avec tes connaissances générales.
 >
 > BROUILLON
-> [COLLE LE CONTENU COMPLET DE TON llms.txt]
+> [COLLEZ LE CONTENU COMPLET DE VOTRE llms.txt]
 >
 > SOURCES
 > [POUR CHAQUE PAGE : URL EXACTE + CONTENU PUBLIC]

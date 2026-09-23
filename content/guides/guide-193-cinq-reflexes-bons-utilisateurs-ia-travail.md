@@ -34,7 +34,7 @@ Demander systématiquement à l'assistant, avant de partager un contenu : « Est
 > **Prompt : retirer les marqueurs IA d'un texte**
 >
 > Voici un texte généré par IA :
-> [colle le texte]
+> [collez le texte]
 >
 > Audit en 3 temps :
 > 1. Liste les marqueurs typiques « écrit par IA » (mots, tournures, structure)

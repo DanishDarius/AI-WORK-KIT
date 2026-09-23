@@ -28,7 +28,7 @@ Plutôt que de demander directement « fais-moi une landing page », il est plus
 >
 > Voici un composant React/Tailwind que je veux intégrer :
 >
-> [COLLE LE CODE 21st.dev]
+> [COLLEZ LE CODE 21st.dev]
 >
 > Mon contexte produit :
 > - Nom : [nom]

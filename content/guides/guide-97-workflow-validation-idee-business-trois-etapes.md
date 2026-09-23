@@ -40,7 +40,7 @@ Une plainte seule ne suffit pas : beaucoup de choses agacent sans que personne n
 
 > **Prompt : validation de la demande**
 >
-> Le point de douleur que je veux valider : [INSÈRE LA PLAINTE PRÉCISE ISSUE DE L'ÉTAPE 1].
+> Le point de douleur que je veux valider : [INSÉREZ LA PLAINTE PRÉCISE ISSUE DE L'ÉTAPE 1].
 >
 > Réponds à ce qui suit avec des sources :
 >
@@ -64,7 +64,7 @@ La plupart des gens s'arrêtent après « ça semble prometteur » et partent co
 >
 > J'envisage de construire le business suivant :
 >
-> [COLLE UNE DESCRIPTION CLAIRE ET SPÉCIFIQUE EN 1 PARAGRAPHE DE TON IDÉE : ce que ça fait, pour qui, comment ça gagne de l'argent, ce qui le différencie.]
+> [COLLEZ UNE DESCRIPTION CLAIRE ET SPÉCIFIQUE EN 1 PARAGRAPHE DE VOTRE IDÉE : ce que ça fait, pour qui, comment ça gagne de l'argent, ce qui le différencie.]
 >
 > Ne sois pas gentil. N'adoucis pas. Ne valide pas. Ton travail est de me faire abandonner cette idée si elle mérite d'être abandonnée, ou de la reconstruire si elle peut être sauvée.
 >

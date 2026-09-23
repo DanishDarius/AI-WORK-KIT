@@ -42,7 +42,7 @@ Une fois les cinq avis rendus, l'ensemble est relu : chaque conseiller évalue l
 > **Prompt : Comité IA**
 >
 > DÉCISION SUR LAQUELLE JE BLOQUE :
-> [Remplace par ta décision ou ta question précise. Plus tu détailles ta situation, tes contraintes et ce que « réussir » veut dire, mieux le comité fonctionne.]
+> [Remplacez par votre décision ou votre question précise. Plus vous détaillez votre situation, vos contraintes et ce que « réussir » veut dire, mieux le comité fonctionne.]
 >
 > Tu vas agir comme un comité de décision de cinq personnes. Ne saute aucune étape. Ne fusionne pas les conseillers. Chaque conseiller est une personne différente, avec un angle différent.
 >

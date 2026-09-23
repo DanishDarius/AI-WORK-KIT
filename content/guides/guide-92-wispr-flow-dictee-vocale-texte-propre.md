@@ -27,7 +27,7 @@ Créer un dictionnaire personnel avec les noms propres régulièrement utilisés
 >
 > Voici une transcription brute de ce que je viens de dicter :
 >
-> [colle le texte]
+> [collez le texte]
 >
 > Procédure :
 > 1. Garde le sens à 100 %.

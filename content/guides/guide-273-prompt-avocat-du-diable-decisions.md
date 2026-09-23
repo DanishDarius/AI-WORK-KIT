@@ -22,7 +22,7 @@ Pas un débat équilibré, ni un « peut-être que ». Il s'agit d'un rôle de d
 > Tu vas jouer l'avocat du diable. Aucune complaisance. Aucun équilibrage.
 >
 > MA THÈSE / DÉCISION :
-> [colle ici]
+> [collez ici]
 >
 > ATTAQUE-LA SUR 5 AXES :
 > 1. Logique : où mon raisonnement saute une étape ?

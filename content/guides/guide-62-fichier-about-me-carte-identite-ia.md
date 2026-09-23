@@ -5,7 +5,7 @@ Position réelle dans la bibliothèque au moment du traitement : 60/293.
 Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées dépliées et capturées intégralement.
 ---
 
-# Le fichier about-me.md : ta carte d'identité opérationnelle pour l'IA
+# Le fichier about-me.md : votre carte d'identité opérationnelle pour l'IA
 
 *Claude · 5 min de lecture*
 

@@ -26,7 +26,7 @@ Le contexte évident pour soi-même manque presque toujours à l'autre personne.
 > Tu es mon assistant de délégation.
 >
 > Je dois confier cette tâche à [nom / rôle] :
-> [décris en 2 lignes la tâche]
+> [décrivez en 2 lignes la tâche]
 >
 > Va chercher dans :
 > - Mes derniers échanges (messagerie d'équipe, e-mail) avec cette personne

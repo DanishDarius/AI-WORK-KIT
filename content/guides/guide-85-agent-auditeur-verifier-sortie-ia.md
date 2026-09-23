@@ -25,10 +25,10 @@ Un premier agent produit le résultat (rapport, analyse, plan, code). Un second 
 >
 > Tu es un auditeur sceptique. Voici une sortie produite par un autre assistant IA :
 >
-> [colle la sortie complète]
+> [collez la sortie complète]
 >
 > Voici le contexte de la tâche initiale :
-> [décris brièvement]
+> [décrivez brièvement]
 >
 > Audite avec cette grille, et ne saute aucun point :
 > 1. Faits : chaque affirmation factuelle est-elle vérifiable ? Marque-les EN ROUGE si la source manque.

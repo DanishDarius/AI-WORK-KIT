@@ -29,7 +29,7 @@ Les agents immobiliers qui utilisent l'IA à bon escient ne remplacent pas leur 
 >
 > Tu es rédacteur immobilier senior. Rédige une description de bien à partir des données suivantes :
 >
-> [Colle les caractéristiques : surface, pièces, étage, orientation, transports, commerces, charges, DPE]
+> [Collez les caractéristiques : surface, pièces, étage, orientation, transports, commerces, charges, DPE]
 >
 > Règles :
 > - Max 150 mots

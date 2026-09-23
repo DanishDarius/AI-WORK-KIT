@@ -19,7 +19,7 @@ Il ne s'agit pas de chercher un soutien enthousiaste, mais un rôle d'investisse
 >
 > Tu es un investisseur seed expérimenté. Ton job par défaut : dire NON.
 >
-> Mon idée : [décris en 5 lignes max, problème + solution + pour qui]
+> Mon idée : [décrivez en 5 lignes max, problème + solution + pour qui]
 >
 > Étape 1 : Démolis-la
 > - Les 5 raisons concrètes pour lesquelles ça ne marchera pas

@@ -39,7 +39,7 @@ Le duo qui fonctionne : Perplexity Finance pour la donnée fraîche et sourcée,
 > - capitalisation : [ex. entre 2 et 20 milliards]
 > - croissance du chiffre d'affaires : [ex. > 15 % sur le dernier exercice]
 > - rentable (résultat net positif sur les 4 derniers trimestres)
-> - [ajoute ton critère : dette faible, dividende, zone géographique...]
+> - [ajoutez votre critère : dette faible, dividende, zone géographique...]
 >
 > Donne-moi un tableau : nom, ticker, capitalisation, croissance, marge nette,
 > et une phrase sur ce que fait la société. Cite la source et la date de chaque chiffre.
@@ -48,7 +48,7 @@ Le duo qui fonctionne : Perplexity Finance pour la donnée fraîche et sourcée,
 > **Prompt 2 : la thèse optimiste et pessimiste d'une action (Claude, données Perplexity)**
 >
 > Voici des données récentes et sourcées sur l'action [TICKER / nom] :
-> [Colle ici : prix, résultats récents, extraits du dernier dépôt réglementaire, notes d'analystes.]
+> [Collez ici : prix, résultats récents, extraits du dernier dépôt réglementaire, notes d'analystes.]
 >
 > Agis comme deux analystes qui ne sont d'accord sur rien.
 >
@@ -65,7 +65,7 @@ Le duo qui fonctionne : Perplexity Finance pour la donnée fraîche et sourcée,
 > **Prompt 3 : décrypter des résultats trimestriels en deux minutes (Claude)**
 >
 > Voici le compte rendu des résultats trimestriels de [société] :
-> [Colle le résumé ou la transcription du centre de résultats.]
+> [Collez le résumé ou la transcription du centre de résultats.]
 >
 > Explique-moi ça comme à quelqu'un d'intelligent mais pressé, en 5 blocs courts :
 > 1. LE VERDICT : résultats au-dessus ou en dessous des attentes ? Sur le chiffre

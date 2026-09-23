@@ -26,7 +26,7 @@ Toujours donner le contexte avant la question. Toujours dire à quoi ressemble u
 > **Prompt : premier vrai test**
 >
 > Je débute avec l'IA. Voici une vraie tâche de mon quotidien :
-> [décris la tâche en 3 lignes : input, output attendu, contrainte de temps]
+> [décrivez la tâche en 3 lignes : input, output attendu, contrainte de temps]
 >
 > Fais 3 choses :
 > 1. Liste les questions que tu dois me poser pour bien la faire.

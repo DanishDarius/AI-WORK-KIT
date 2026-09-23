@@ -21,15 +21,15 @@ Les démonstrations habituelles (calculatrice de pourboire, liste de tâches) re
 >
 > Liste 5 micro-tâches que je fais à la main chaque semaine et qui prennent moins de 10 minutes chacune, mais que je répète. Pour chacune, dis-moi si un Artifact HTML interactif pourrait la remplacer en un clic, et pourquoi.
 >
-> Mon contexte : [ton métier, tes outils actuels]
+> Mon contexte : [votre métier, vos outils actuels]
 
 > **Prompt 2 : le brief outil**
 >
 > Construis-moi un Artifact HTML / JS interactif qui fait exactement ceci :
 >
-> - Entrée : [décris les champs]
-> - Calcul : [décris la logique]
-> - Sortie : [décris le format]
+> - Entrée : [décrivez les champs]
+> - Calcul : [décrivez la logique]
+> - Sortie : [décrivez le format]
 >
 > Contraintes : minimal, lisible sur mobile, sans dépendance externe. Stocke les données en localStorage. Donne-moi le code complet en un seul fichier.
 
@@ -39,7 +39,7 @@ Les démonstrations habituelles (calculatrice de pourboire, liste de tâches) re
 
 > **Prompt 4 : l'itération**
 >
-> Voici comment je viens d'utiliser ton outil. Voici ce qui m'a manqué : [décris]. Corrige et ressors une v2, en gardant tout ce qui marchait déjà.
+> Voici comment je viens d'utiliser ton outil. Voici ce qui m'a manqué : [décrivez]. Corrige et ressors une v2, en gardant tout ce qui marchait déjà.
 
 > **Prompt 5 : le partage**
 >

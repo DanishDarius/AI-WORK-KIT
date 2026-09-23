@@ -20,15 +20,15 @@ Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
 
 ## Introduction
 
-Tous les indices (visuels, textuels, structurels, techniques) pour repérer un site généré par IA, accompagnés du master prompt à coller avant de construire, pour que le tien échappe justement à ces travers.
+Tous les indices (visuels, textuels, structurels, techniques) pour repérer un site généré par IA, accompagnés du master prompt à coller avant de construire, pour que le vôtre échappe justement à ces travers.
 
 ---
 
 ## 01. Le problème dont personne ne parle
 
-Tu reconnais un site généré par IA en trois secondes à peine. Le dégradé violet, les trois cartes identiques, les faux témoignages. Le vrai problème n'est pas que ce soit laid : c'est que ça sent le jetable, et ça détruit instantanément la confiance du visiteur.
+Vous reconnaissez un site généré par IA en trois secondes à peine. Le dégradé violet, les trois cartes identiques, les faux témoignages. Le vrai problème n'est pas que ce soit laid : c'est que ça sent le jetable, et ça détruit instantanément la confiance du visiteur.
 
-Aujourd'hui, n'importe qui peut se créer un site en une soirée. La construction en elle-même ne vaut donc plus grand-chose. Ce qui te distingue réellement, c'est la finition : le goût, le souci du détail, le fait que ton site n'ait pas l'air sorti d'un moule industriel. Or les outils IA partagent tous le même moule par défaut. Sans direction précise de ta part, ils produisent le même site que tout le monde, et ton visiteur le ressent avant même d'avoir lu un seul mot. D'abord la liste pour les repérer. Ensuite le prompt pour les éviter.
+Aujourd'hui, n'importe qui peut se créer un site en une soirée. La construction en elle-même ne vaut donc plus grand-chose. Ce qui vous distingue réellement, c'est la finition : le goût, le souci du détail, le fait que votre site n'ait pas l'air sorti d'un moule industriel. Or les outils IA partagent tous le même moule par défaut. Sans direction précise de votre part, ils produisent le même site que tout le monde, et votre visiteur le ressent avant même d'avoir lu un seul mot. D'abord la liste pour les repérer. Ensuite le prompt pour les éviter.
 
 ---
 
@@ -73,13 +73,13 @@ Aujourd'hui, n'importe qui peut se créer un site en une soirée. La constructio
 26. Aucun vrai contenu : tout n'est que du placeholder à peine habillé.
 27. Des métadonnées laissées par défaut (titre d'onglet générique, aperçu de partage vide).
 
-*Trois de ces signes réunis, et c'est joué : ton visiteur a déjà compris. L'objectif n'est pas d'en éviter un seul, mais bien de casser complètement le moule par défaut.*
+*Trois de ces signes réunis, et c'est joué : votre visiteur a déjà compris. L'objectif n'est pas d'en éviter un seul, mais bien de casser complètement le moule par défaut.*
 
 ---
 
 ## 03. Le master prompt anti-générique
 
-Colle ce bloc AVANT ta demande, dans Claude, Lovable, Bolt ou l'outil que tu utilises habituellement. Il interdit les clichés un par un et impose une véritable direction artistique.
+Collez ce bloc AVANT votre demande, dans Claude, Lovable, Bolt ou l'outil que vous utilisez habituellement. Il interdit les clichés un par un et impose une véritable direction artistique.
 
 **Prompt à copier (Master anti-générique) :**
 > Avant de construire, applique ces règles de design NON négociables. Le but : que le résultat n'ait PAS l'air d'un site généré par IA. Tu es un directeur artistique avec du goût, pas un générateur de template.
@@ -102,7 +102,7 @@ Colle ce bloc AVANT ta demande, dans Claude, Lovable, Bolt ou l'outil que tu uti
 > - Zéro élément décoratif gratuit : chaque bloc justifie sa présence.
 >
 > MON PROJET :
-> - Ce que je construis : [décris]
+> - Ce que je construis : [décrivez]
 > - L'ambiance / les références que j'aime : [ex. site de magazine, studio de design...]
 > - Ma palette et mes polices si j'en ai : [sinon, propose et explique]
 >
@@ -112,13 +112,13 @@ Colle ce bloc AVANT ta demande, dans Claude, Lovable, Bolt ou l'outil que tu uti
 
 ## 04. Quand s'en servir
 
-Sur ton propre site avant de le publier, mais aussi pour auditer celui livré par un prestataire (« est-ce qu'on me livre vraiment du sur-mesure, ou un simple template IA repeint »). L'idée n'est pas de rejeter l'IA en tant qu'outil : c'est de s'en servir avec un vrai goût. L'IA construit pour tout le monde de la même façon ; la finition, elle, c'est ce qui te distingue véritablement.
+Sur votre propre site avant de le publier, mais aussi pour auditer celui livré par un prestataire (« est-ce qu'on me livre vraiment du sur-mesure, ou un simple template IA repeint »). L'idée n'est pas de rejeter l'IA en tant qu'outil : c'est de s'en servir avec un vrai goût. L'IA construit pour tout le monde de la même façon ; la finition, elle, c'est ce qui vous distingue véritablement.
 
 ---
 
 ## Le fichier complet
 
-*[Emplacement réservé à ton propre mécanisme d'accès à la liste complète et au master prompt téléchargeable : lead magnet, formulaire, ou lien selon ta plateforme.]*
+*[Emplacement réservé à votre propre mécanisme d'accès à la liste complète et au master prompt téléchargeable : lead magnet, formulaire, ou lien selon votre plateforme.]*
 
 ---
 
@@ -130,6 +130,6 @@ Pour construire proprement, écran par écran, direction le guide Vibe coding 10
 
 ## À retenir
 
-**Le contenu générique vient d'une IA qui comble les vides par la moyenne. Oblige-la à te demander le vrai contenu.**
+**Le contenu générique vient d'une IA qui comble les vides par la moyenne. Obligez-la à vous demander le vrai contenu.**
 
-Dès que tu forces l'IA à choisir un vrai parti pris et à te demander l'information réelle avant de dessiner quoi que ce soit, elle sort naturellement du moule par défaut. Une fois la construction terminée, repasse sur la liste des 27 signes et corrige le moindre indice qui subsisterait. C'est précisément ce qui fait toute la différence.
+Dès que vous forcez l'IA à choisir un vrai parti pris et à vous demander l'information réelle avant de dessiner quoi que ce soit, elle sort naturellement du moule par défaut. Une fois la construction terminée, repassez sur la liste des 27 signes et corrigez le moindre indice qui subsisterait. C'est précisément ce qui fait toute la différence.

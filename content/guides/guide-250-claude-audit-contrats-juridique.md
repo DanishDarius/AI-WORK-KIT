@@ -25,7 +25,7 @@ Conseiller sur un point de droit local très spécifique. Sur le fiscal, le soci
 >
 > Tu es juriste sénior en droit des contrats (droit français).
 >
-> Contrat à auditer : [colle le texte]
+> Contrat à auditer : [collez le texte]
 > Mon rôle dans ce contrat : [client / prestataire / employé / autre]
 >
 > Donne-moi :

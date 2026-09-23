@@ -4,7 +4,7 @@ Source : saadiakaram.ai/guides/7-leviers-attention
 Statut : reformulé (texte). Aucun visuel/tableau HTML détecté sur cette page
 ---
 
-# Les 7 leviers d'attention de la Silicon Valley, détournés au profit de ton audience
+# Les 7 leviers d'attention de la Silicon Valley, détournés au profit de votre audience
 
 *Multi-outils · 9 min de lecture*
 
@@ -24,11 +24,11 @@ Statut : reformulé (texte). Aucun visuel/tableau HTML détecté sur cette page
 
 Ce guide décrit les mécaniques d'attention couramment utilisées par les grandes plateformes technologiques et les casinos, transposées en version éthique pour du contenu qui tient réellement ses promesses.
 
-Ces leviers ne sont ni bons ni mauvais en eux-mêmes : une machine à sous les utilise pour vider le joueur ; ici, l'idée est de les utiliser pour faire choisir TON contenu à une audience qui, sinon, continuerait de scroller sans but. Une seule règle éthique gouverne tout le reste : ces leviers doivent servir à tenir une promesse réelle, jamais à créer un manque que seul le créateur pourrait combler.
+Ces leviers ne sont ni bons ni mauvais en eux-mêmes : une machine à sous les utilise pour vider le joueur ; ici, l'idée est de les utiliser pour faire choisir VOTRE contenu à une audience qui, sinon, continuerait de scroller sans but. Une seule règle éthique gouverne tout le reste : ces leviers doivent servir à tenir une promesse réelle, jamais à créer un manque que seul le créateur pourrait combler.
 
 Pourquoi ça compte maintenant : selon le rapport Adobe *Creators' Toolkit 2026* (plus de 16 000 créateurs interrogés dans 8 pays), 87 % des créateurs déclarent que l'IA créative a accéléré la croissance de leur activité ou de leur audience, et 40 % constatent que leur contenu assisté par IA performe mieux de façon constante. Structurer l'attention paie. Mais comme 75 % des créateurs décrivent l'IA comme désormais intégrée à leur travail quotidien, tout le monde produit du contenu de facture assez proche. Ce qui distingue vraiment un créateur, ce ne sont pas les outils utilisés, c'est l'architecture d'attention posée par-dessus.
 
-Comment utiliser ce guide : chaque levier suit la même structure (comment il est exploité côté casino/plateforme, sa version éthique appliquée au contenu, un prompt à copier-coller dans ton IA, et l'outil recommandé). Travaille un levier par jour pendant 7 jours, sur un seul contenu réel.
+Comment utiliser ce guide : chaque levier suit la même structure (comment il est exploité côté casino/plateforme, sa version éthique appliquée au contenu, un prompt à copier-coller dans votre IA, et l'outil recommandé). Travaillez un levier par jour pendant 7 jours, sur un seul contenu réel.
 
 ---
 
@@ -36,7 +36,7 @@ Comment utiliser ce guide : chaque levier suit la même structure (comment il es
 
 **Côté casino :** une partie qui ne se termine jamais vraiment (un résultat presque gagné, une suite floue). Le cerveau supporte mal l'inachevé (effet Zeigarnik) et reste accroché pour fermer la boucle.
 
-**Version éthique :** ta première phrase ouvre une question dont la réponse est la valeur réelle de ton contenu. Pas de mystère creux inventé : tu promets une réponse que tu vas réellement donner avant la fin. La boucle se referme DANS ton contenu, jamais dans le suivant.
+**Version éthique :** votre première phrase ouvre une question dont la réponse est la valeur réelle de votre contenu. Pas de mystère creux inventé : vous promettez une réponse que vous allez réellement donner avant la fin. La boucle se referme DANS votre contenu, jamais dans le suivant.
 
 **Prompt à copier :**
 > Voici le sujet de mon prochain post : [SUJET].
@@ -57,7 +57,7 @@ Outil : ChatGPT ou Claude.
 
 **Côté casino :** on ne sait jamais quand tombe le gain. Cette imprévisibilité (la même mécanique que la machine à sous) crée plus d'engagement qu'une récompense fixe. C'est le cœur du modèle Hook théorisé par Nir Eyal.
 
-**Version éthique :** rends imprévisible le FORMAT de ta valeur, jamais le fait de la livrer. Ton audience sait qu'elle apprend toujours quelque chose, mais ne sait pas sous quelle forme : un chiffre, une histoire, un raccourci, un contre-exemple. La surprise est dans l'emballage, la valeur reste garantie.
+**Version éthique :** rendez imprévisible le FORMAT de votre valeur, jamais le fait de la livrer. Votre audience sait qu'elle apprend toujours quelque chose, mais ne sait pas sous quelle forme : un chiffre, une histoire, un raccourci, un contre-exemple. La surprise est dans l'emballage, la valeur reste garantie.
 
 **Prompt à copier :**
 > Voici l'idée centrale de mon contenu : [IDÉE].
@@ -74,24 +74,24 @@ Outil : ChatGPT ou Claude.
 
 **Côté casino :** aucun signal de fin. Pas d'horloge, pas de dernière page, l'autoplay enchaîne automatiquement. En supprimant tout moment naturel pour s'arrêter, on supprime aussi la décision de partir.
 
-**Version éthique :** retire les points d'arrêt INTERNES à ton contenu (les moments où l'attention décroche), jamais la liberté de ton audience. Coupe les phrases molles, enchaîne chaque idée sur un mini-crochet, et termine par un point d'arrêt CHOISI : un appel à l'action clair, pas un vide qui renvoie vers le scroll infini.
+**Version éthique :** retirez les points d'arrêt INTERNES à votre contenu (les moments où l'attention décroche), jamais la liberté de votre audience. Coupez les phrases molles, enchaînez chaque idée sur un mini-crochet, et terminez par un point d'arrêt CHOISI : un appel à l'action clair, pas un vide qui renvoie vers le scroll infini.
 
 **Prompt à copier :**
-> Voici le texte / script de mon contenu : [COLLE LE TEXTE].
+> Voici le texte / script de mon contenu : [COLLEZ LE TEXTE].
 >
 > Repère chaque endroit où l'attention risque de décrocher (phrase plate, transition molle, idée qui traîne). Pour chacun : réécris pour relancer sur la phrase suivante.
 >
 > Garde le sens, raccourcis. À la fin, propose UN point d'arrêt net : la dernière ligne doit donner envie d'agir, pas de continuer à scroller ailleurs.
 
-Outil : ChatGPT ou Claude. Pour repérer les décrochages à l'oral, relis le script à voix haute avec le minuteur de ton téléphone.
+Outil : ChatGPT ou Claude. Pour repérer les décrochages à l'oral, relisez le script à voix haute avec le minuteur de votre téléphone.
 
 ---
 
 ## 04. Levier 4 : l'ancrage
 
-**Côté casino :** le premier chiffre que tu vois (la grosse mise affichée, le montant du jackpot) devient ta référence et déforme tout ce qui suit. Le premier stimulus fixe l'échelle de jugement.
+**Côté casino :** le premier chiffre que vous voyez (la grosse mise affichée, le montant du jackpot) devient votre référence et déforme tout ce qui suit. Le premier stimulus fixe l'échelle de jugement.
 
-**Version éthique :** ta première phrase ou ton premier chiffre installe le cadre par lequel ton audience va juger tout le reste. Choisis délibérément un ancrage VRAI et fort (un chiffre réel, une affirmation nette) plutôt que de laisser un début tiède décider à ta place.
+**Version éthique :** votre première phrase ou votre premier chiffre installe le cadre par lequel votre audience va juger tout le reste. Choisissez délibérément un ancrage VRAI et fort (un chiffre réel, une affirmation nette) plutôt que de laisser un début tiède décider à votre place.
 
 **Prompt à copier :**
 > Sujet de mon contenu : [SUJET]. Public : [QUI].
@@ -102,7 +102,7 @@ Outil : ChatGPT ou Claude. Pour repérer les décrochages à l'oral, relis le sc
 >
 > Interdit : chiffre inventé ou non sourçable. Si tu n'es pas sûr d'un chiffre, signale-le.
 
-Outil : ChatGPT ou Claude. Vérifie tout chiffre à la source avant publication : un ancrage faux détruit la crédibilité.
+Outil : ChatGPT ou Claude. Vérifiez tout chiffre à la source avant publication : un ancrage faux détruit la crédibilité.
 
 ---
 
@@ -110,16 +110,16 @@ Outil : ChatGPT ou Claude. Vérifie tout chiffre à la source avant publication 
 
 **Côté casino :** les lumières, les cloches, le son des pièces qui tombent : tout signale que d'autres gagnent, donc on reste. On montre une foule qui joue pour que jouer paraisse normal.
 
-**Version éthique :** rends visible la preuve RÉELLE que ta méthode fonctionne (un résultat client, un retour authentique, un avant/après honnête). Pas de faux chiffres, pas de bots. La preuve sociale éthique montre des personnes réelles ayant obtenu un résultat réel.
+**Version éthique :** rendez visible la preuve RÉELLE que votre méthode fonctionne (un résultat client, un retour authentique, un avant/après honnête). Pas de faux chiffres, pas de bots. La preuve sociale éthique montre des personnes réelles ayant obtenu un résultat réel.
 
 **Prompt à copier :**
-> Voici une preuve réelle que je possède (résultat, témoignage, retour) : [COLLE LA PREUVE BRUTE].
+> Voici une preuve réelle que je possède (résultat, témoignage, retour) : [COLLEZ LA PREUVE BRUTE].
 >
 > Reformule-la en 3 façons de l'intégrer dans mon contenu sans exagérer : 1) en ouverture comme déclencheur de crédibilité, 2) au milieu comme preuve de l'idée, 3) avant l'appel à l'action.
 >
 > Garde les faits exacts. Ne gonfle aucun chiffre, n'ajoute rien que je ne t'aie pas donné.
 
-Outil : ChatGPT ou Claude. Garde une trace écrite de chaque preuve (capture, message) avant de la citer.
+Outil : ChatGPT ou Claude. Gardez une trace écrite de chaque preuve (capture, message) avant de la citer.
 
 ---
 
@@ -127,7 +127,7 @@ Outil : ChatGPT ou Claude. Garde une trace écrite de chaque preuve (capture, me
 
 **Côté casino :** barres qui se remplissent, niveaux, « presque gagné ». Plus on se sent proche du but, plus on accélère (effet de gradient vers l'objectif) ; la progression affichée fait ressembler l'arrêt à un abandon.
 
-**Version éthique :** montre à ton audience le chemin parcouru et où elle en est. Dans un guide, une série, un carrousel : numérote, situe (« étape 3 sur 7 »), rends le progrès tangible. Le but n'est pas qu'elle reste accrochée à toi, mais qu'elle voie qu'elle avance vers SA propre compétence.
+**Version éthique :** montrez à votre audience le chemin parcouru et où elle en est. Dans un guide, une série, un carrousel : numérotez, situez (« étape 3 sur 7 »), rendez le progrès tangible. Le but n'est pas qu'elle reste accrochée à vous, mais qu'elle voie qu'elle avance vers SA propre compétence.
 
 **Prompt à copier :**
 > Voici le contenu que je veux structurer en progression : [SUJET / LISTE D'IDÉES].
@@ -144,7 +144,7 @@ Outil : ChatGPT ou Claude pour la structure ; Canva pour rendre la barre de prog
 
 **Côté casino :** notifications, vibrations, l'app qui s'accroche à un moment précis de la journée (l'ennui, l'attente). Le déclencheur externe devient interne : on ouvre l'app sans même y penser.
 
-**Version éthique :** attache ton contenu à un moment ou une émotion réelle que vit déjà ton audience (« quand tu fixes ta page blanche », « le dimanche soir avant la semaine »). Ne fabrique pas d'anxiété : nomme une situation existante et propose l'issue. Le déclencheur devient un service, pas un piège.
+**Version éthique :** attachez votre contenu à un moment ou une émotion réelle que vit déjà votre audience (« quand tu fixes ta page blanche », « le dimanche soir avant la semaine »). Ne fabriquez pas d'anxiété : nommez une situation existante et proposez l'issue. Le déclencheur devient un service, pas un piège.
 
 **Prompt à copier :**
 > Mon audience : [QUI]. Le problème que je résous : [PROBLÈME].
@@ -159,7 +159,7 @@ Outil : ChatGPT ou Claude.
 
 ## Le test des 60 secondes
 
-À faire avant chaque publication. Passe ton contenu à cette grille : si tu réponds non à une seule ligne, ce levier devient manipulatoire plutôt qu'éthique. Réécris.
+À faire avant chaque publication. Passez votre contenu à cette grille : si vous répondez non à une seule ligne, ce levier devient manipulatoire plutôt qu'éthique. Réécrivez.
 
 La boucle que j'ouvre, est-ce que je la referme DANS ce contenu ?
 

@@ -28,9 +28,9 @@ Les cabinets comptables, les agences immobilières et les agences marketing : de
 
 ## Le prompt de génération du rapport
 
-> **Prompt : génère ton rapport**
+> **Prompt : générez votre rapport**
 >
-> Voici les réponses du questionnaire pré-audit du client : [colle].
+> Voici les réponses du questionnaire pré-audit du client : [collez].
 > Génère un rapport en 5 sections :
 > 1. État actuel
 > 2. Top 3 opportunités IA (impact € + effort)

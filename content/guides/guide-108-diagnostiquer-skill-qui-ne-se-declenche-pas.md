@@ -27,7 +27,7 @@ Quand un Skill ne se déclenche pas, le contenu du Skill lui-même est correct n
 
 > **Prompt : diagnostic de Skill**
 >
-> Voici mon Skill : [colle SKILL.md].
+> Voici mon Skill : [collez SKILL.md].
 >
 > Audite :
 > 1. La description déclenche-t-elle clairement ? Reformule si flou.

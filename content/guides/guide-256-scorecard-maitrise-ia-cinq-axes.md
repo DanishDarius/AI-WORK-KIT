@@ -27,7 +27,7 @@ Chaque axe est noté sur 5, pour un total sur 25. En dessous de 10 : niveau déb
 
 > **Prompt : audit trimestriel**
 >
-> Voici mes réponses pour chaque axe : [colle].
+> Voici mes réponses pour chaque axe : [collez].
 >
 > 1. Note honnêtement chaque axe sur 5, avec justification
 > 2. Identifie mon axe le plus faible
