@@ -1068,6 +1068,16 @@ body {
     width: 320px;
     margin: 0;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+  }
+  #awk-studio .aw-dock.is-revealed {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s;
   }
 }
 #awk-studio .aw-dock-close {

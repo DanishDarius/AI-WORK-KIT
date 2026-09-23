@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Progression, tacheHref, useResource } from "@/lib/kit-api";
 
 export function ProgressBar({
@@ -81,6 +81,19 @@ export function ProgressDock({
   metiers?: { slug: string; nom: string; nb_taches: number; taches_faites: number }[];
 }) {
   const { data } = useResource<Progression>("/api/progression");
+  // Sur ordinateur, le module flotte en bas à droite : il n'apparaît qu'une
+  // fois l'introduction de l'accueil dépassée, pour ne jamais la masquer.
+  const [revealed, setRevealed] = useState(false);
+  useEffect(() => {
+    const update = () => setRevealed(window.scrollY > window.innerHeight * 0.55);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
   // Lu au premier rendu client : tant que `data` est absent (y compris côté
   // serveur), le module ne s'affiche pas, donc aucun écart d'hydratation.
   const [hidden, setHidden] = useState(() => {
@@ -108,7 +121,10 @@ export function ProgressDock({
       : "/metiers";
   const days = data.serie_jours;
   return (
-    <aside className="aw-dock" aria-label="Votre progression">
+    <aside
+      className={`aw-dock${revealed ? " is-revealed" : ""}`}
+      aria-label="Votre progression"
+    >
       <button
         type="button"
         className="aw-dock-close"
