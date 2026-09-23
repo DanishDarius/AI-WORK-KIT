@@ -1,7 +1,7 @@
 ---
 Guide original : "Le stack IA à 5 métiers : remplace tes 20 outils par 5 employés"
 Source : saadiakaram.ai/guides/5-outils-ia-un-job-chacun
-Statut : reformulé (texte) — aucun visuel/tableau HTML détecté sur cette page
+Statut : reformulé (texte) - aucun visuel/tableau HTML détecté sur cette page
 ---
 
 
@@ -16,11 +16,11 @@ Statut : reformulé (texte) — aucun visuel/tableau HTML détecté sur cette pa
 
 - Introduction
 - Comment lire ce guide (30 secondes)
-- Poste 1 — Écrire → Claude
-- Poste 2 — Répondre → Tidio
-- Poste 3 — Chercher → Perplexity
-- Poste 4 — Ton marketing → Helena
-- Poste 5 — Publier → Lovable
+- Poste 1 - Écrire → Claude
+- Poste 2 - Répondre → Tidio
+- Poste 3 - Chercher → Perplexity
+- Poste 4 - Ton marketing → Helena
+- Poste 5 - Publier → Lovable
 - Ta liste récapitulative
 - Le fichier complet
 - Pour aller plus loin

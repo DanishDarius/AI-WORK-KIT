@@ -21,7 +21,7 @@ Pour les tâches longues : analyse de cinquante PDF, traitement d'un export CSV 
 
 ## Le brief qui fonctionne
 
-> **Prompt — brief type**
+> **Prompt - brief type**
 >
 > Tu vas travailler en arrière-plan sur ce job.
 >
@@ -39,7 +39,7 @@ Pour les tâches longues : analyse de cinquante PDF, traitement d'un export CSV 
 
 ## L'erreur classique
 
-Donner un objectif vague (« améliore ces docs »). Ce mode agent est puissant quand l'objectif est binaire — réussi ou pas réussi. Sinon, il dérive.
+Donner un objectif vague (« améliore ces docs »). Ce mode agent est puissant quand l'objectif est binaire - réussi ou pas réussi. Sinon, il dérive.
 
 ## À retenir
 

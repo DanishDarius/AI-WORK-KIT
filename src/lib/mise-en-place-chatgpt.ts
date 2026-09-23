@@ -38,13 +38,13 @@ export const miseEnPlaceChatgpt: Partial<Record<string, MiseEnPlace>> = {
         type: "officiel",
       },
       {
-        nom: "Tasks (taches planifiees ChatGPT)",
+        nom: "Tasks (tâches planifiées ChatGPT)",
         lien: "https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt",
         type: "officiel",
       },
     ],
     tachePlanifiee: {
-      nom: "Tri de la boite mail",
+      nom: "Tri de la boîte mail",
       frequence: "Quotidien (matin)",
       prompt: `<system_prompt>
 Tu es mon assistant de gestion de boite mail.
@@ -66,7 +66,7 @@ Une liste groupee par categorie, avec pour chaque e-mail : expediteur, objet en 
 </output_format>`,
     },
     uneSeuleFois:
-      "ChatGPT n'a pas de reglage d'approbation automatique/manuelle comme Cowork : le prompt interdit explicitement l'envoi automatique, ce qui joue le meme role. Si la tache modifie des donnees sensibles, ChatGPT peut aussi la mettre en pause de lui-meme pour demander une validation.",
+      "ChatGPT n'a pas de réglage d'approbation automatique/manuelle comme Cowork : le prompt interdit explicitement l'envoi automatique, ce qui joue le même rôle. Si la tâche modifie des données sensibles, ChatGPT peut aussi la mettre en pause de lui-même pour demander une validation.",
   },
   F02: {
     outils: [
@@ -76,12 +76,12 @@ Une liste groupee par categorie, avec pour chaque e-mail : expediteur, objet en 
         type: "officiel",
       },
       {
-        nom: "Connecteur MCP Buffer (publication programmee, mode developpeur)",
+        nom: "Connecteur MCP Buffer (publication programmée, mode développeur)",
         lien: "https://buffer.com/mcp",
         type: "tiers",
       },
       {
-        nom: "Connecteur MCP Hootsuite (publication programmee, mode developpeur)",
+        nom: "Connecteur MCP Hootsuite (publication programmée, mode développeur)",
         lien: "https://www.hootsuite.com/integrations/mcp",
         type: "tiers",
       },
@@ -104,12 +104,12 @@ Public cible : [a preciser]. Ton de marque : [a preciser]. Reseaux vises : [Link
 Un tableau : Jour | Reseau | Texte de la publication | Hashtags | Creneau conseille.
 </output_format>`,
     uneSeuleFois:
-      "Le mode developpeur (ajout de connecteurs MCP comme Buffer ou Hootsuite) est surtout accessible aux espaces ChatGPT Business/Enterprise/Edu, avec un acces lecture seule limite sur Pro. Sans ce mode, copiez simplement les publications validees dans Buffer ou Hootsuite manuellement, ou demandez a l'app Canva de preparer les visuels associes.",
+      "Le mode développeur (ajout de connecteurs MCP comme Buffer ou Hootsuite) est surtout accessible aux espaces ChatGPT Business/Enterprise/Edu, avec un accès lecture seule limite sur Pro. Sans ce mode, copiez simplement les publications validées dans Buffer ou Hootsuite manuellement, ou demandez à l'app Canva de préparer les visuels associés.",
   },
   F03: {
     outils: [
       {
-        nom: "ChatGPT for Word (complement Office, gratuit sur tous les plans)",
+        nom: "ChatGPT for Word (complément Office, gratuit sur tous les plans)",
         lien: "https://help.openai.com/en/articles/20001526-chatgpt-for-word",
         type: "officiel",
       },
@@ -136,7 +136,7 @@ Le document corrigé en entier, suivi d'une liste à puces des changements de fo
   F04: {
     outils: [
       {
-        nom: "ChatGPT for Word (redaction du compte-rendu)",
+        nom: "ChatGPT for Word (rédaction du compte-rendu)",
         lien: "https://help.openai.com/en/articles/20001526-chatgpt-for-word",
         type: "officiel",
       },
@@ -147,8 +147,8 @@ Le document corrigé en entier, suivi d'une liste à puces des changements de fo
       },
     ],
     tachePlanifiee: {
-      nom: "Compte-rendu de reunion recurrente",
-      frequence: "Quotidien (fin de journee)",
+      nom: "Compte-rendu de réunion récurrente",
+      frequence: "Quotidien (fin de journée)",
       prompt: `<system_prompt>
 Tu es assistant de reunion, tu rediges des comptes-rendus clairs et actionnables.
 </system_prompt>
@@ -168,7 +168,7 @@ Un compte-rendu par reunion traitee, avec les sections Decisions / Actions / Poi
 </output_format>`,
     },
     uneSeuleFois:
-      "Si aucun connecteur de stockage n'est disponible sur votre plan, collez simplement la transcription dans le chat au fil de l'eau : cette tache devient alors un prompt ponctuel plutot qu'une tache planifiee.",
+      "Si aucun connecteur de stockage n'est disponible sur votre plan, collez simplement la transcription dans le chat au fil de l'eau : cette tâche devient alors un prompt ponctuel plutôt qu'une tâche planifiée.",
   },
   F05: {
     outils: [
@@ -178,13 +178,13 @@ Un compte-rendu par reunion traitee, avec les sections Decisions / Actions / Poi
         type: "officiel",
       },
       {
-        nom: "Tasks (taches planifiees ChatGPT)",
+        nom: "Tasks (tâches planifiées ChatGPT)",
         lien: "https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt",
         type: "officiel",
       },
     ],
     tachePlanifiee: {
-      nom: "Preparation de l'agenda",
+      nom: "Préparation de l'agenda",
       frequence: "Quotidien (matin)",
       prompt: `<system_prompt>
 Tu es mon assistant d'organisation quotidienne.
@@ -231,12 +231,12 @@ Voici notre base de connaissances / FAQ : [connecter la source via le connecteur
 La reponse proposee au client, precedee d'une ligne "Source trouvee : oui/non".
 </output_format>`,
     uneSeuleFois:
-      "Les GPT personnalises (Custom GPTs) sont en cours de retrait progressif chez OpenAI : pour un bot de support reutilisable, preferez un Projet ChatGPT avec vos documents de FAQ attaches et ces instructions en instructions de projet, plutot que de creer un GPT dedie.",
+      "Les GPT personnalisés (Custom GPTs) sont en cours de retrait progressif chez OpenAI : pour un bot de support réutilisable, préférez un Projet ChatGPT avec vos documents de FAQ attachés et ces instructions en instructions de projet, plutôt que de créer un GPT dédié.",
   },
   F07: {
     outils: [
       {
-        nom: "Recherche web native de ChatGPT (aucune activation necessaire)",
+        nom: "Recherche web native de ChatGPT (aucune activation nécessaire)",
         lien: "https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt",
         type: "officiel",
       },
@@ -273,17 +273,17 @@ Une liste groupee par theme (concurrents / marche / reglementation), chaque entr
 </output_format>`,
     },
     uneSeuleFois:
-      "Pour un rapport plus approfondi et sourcé ponctuellement (au-dela de la veille hebdomadaire courante), lancez Deep Research avec /deepresearch depuis le chat.",
+      "Pour un rapport plus approfondi et sourcé ponctuellement (au-delà de la veille hebdomadaire courante), lancez Deep Research avec /deepresearch depuis le chat.",
   },
   F08: {
     outils: [
       {
-        nom: "Analyse de donnees / Advanced Data Analysis (officiel)",
+        nom: "Analyse de données / Advanced Data Analysis (officiel)",
         lien: "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
         type: "officiel",
       },
       {
-        nom: "ChatGPT for Excel (complement Office)",
+        nom: "ChatGPT for Excel (complément Office)",
         lien: "https://help.openai.com/en/articles/20001526-chatgpt-for-word",
         type: "officiel",
       },
@@ -314,7 +314,7 @@ Une synthese en 5 points cles maximum, suivie des tableaux/graphiques detailles.
         type: "officiel",
       },
       {
-        nom: "Generation et edition d'images ChatGPT",
+        nom: "Génération et édition d'images ChatGPT",
         lien: "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
         type: "officiel",
       },
@@ -345,7 +345,7 @@ Les 3 pistes decrites brievement, puis le visuel genere pour la piste retenue.
         type: "officiel",
       },
       {
-        nom: "Agentforce / serveur MCP Salesforce (officiel Salesforce, mode developpeur)",
+        nom: "Agentforce / serveur MCP Salesforce (officiel Salesforce, mode développeur)",
         lien: "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/chatgpt.html",
         type: "officiel",
       },
@@ -375,12 +375,12 @@ Un tableau : Fiche concernee | Probleme detecte | Correction proposee.
   F11: {
     outils: [
       {
-        nom: "Lecture native de PDF et formulaires (aucune activation necessaire)",
+        nom: "Lecture native de PDF et formulaires (aucune activation nécessaire)",
         lien: "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
         type: "officiel",
       },
       {
-        nom: "ChatGPT for Excel (export des donnees extraites)",
+        nom: "ChatGPT for Excel (export des données extraites)",
         lien: "https://help.openai.com/en/articles/20001526-chatgpt-for-word",
         type: "officiel",
       },
@@ -441,12 +441,12 @@ Un tableau : Document | Nom propose | Dossier de destination propose.
   F13: {
     outils: [
       {
-        nom: "Lecture native de PDF (aucune activation necessaire)",
+        nom: "Lecture native de PDF (aucune activation nécessaire)",
         lien: "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
         type: "officiel",
       },
       {
-        nom: "Connecteur Google Drive (recuperation des pieces si besoin)",
+        nom: "Connecteur Google Drive (récupération des pièces si besoin)",
         lien: "https://help.openai.com/en/articles/11487775-connectors-in-chatgpt",
         type: "officiel",
       },
@@ -498,7 +498,7 @@ Le document traduit en entier, suivi d'une liste des choix de traduction a valid
   F15: {
     outils: [
       {
-        nom: "ChatGPT Work (creation de presentations PowerPoint)",
+        nom: "ChatGPT Work (création de présentations PowerPoint)",
         lien: "https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work",
         type: "officiel",
       },
@@ -526,17 +526,17 @@ Voici le brief : [coller le brief]. Public : [a preciser]. Duree de presentation
 D'abord le plan sous forme de liste, puis le fichier de presentation genere une fois le plan valide.
 </output_format>`,
     uneSeuleFois:
-      "La creation directe de fichiers .pptx via ChatGPT Work depend du plan, de l'espace de travail et de la surface utilisee (elle n'etait pas incluse au lancement initial du flux Work) : verifiez la disponibilite au moment de l'usage, sinon demandez le contenu texte pret a coller dans PowerPoint ou Google Slides.",
+      "La création directe de fichiers .pptx via ChatGPT Work depend du plan, de l'espace de travail et de la surface utilisée (elle n'était pas incluse au lancement initial du flux Work) : vérifiez la disponibilité au moment de l'usage, sinon demandez le contenu texte prêt à coller dans PowerPoint ou Google Slides.",
   },
   F16: {
     outils: [
       {
-        nom: "Connecteur GitHub, GitLab ou Notion (selon l'outil utilise)",
+        nom: "Connecteur GitHub, GitLab ou Notion (selon l'outil utilisé)",
         lien: "https://help.openai.com/en/articles/11487775-connectors-in-chatgpt",
         type: "officiel",
       },
       {
-        nom: "Connecteur MCP Asana, Jira, Linear, Monday ou ClickUp (mode developpeur, non officiellement liste par OpenAI)",
+        nom: "Connecteur MCP Asana, Jira, Linear, Monday ou ClickUp (mode développeur, non officiellement listé par OpenAI)",
         lien: "https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt",
         type: "tiers",
       },
@@ -563,7 +563,7 @@ Trois listes (Retard / Terminees / A venir), suivies du resume d'avancement en u
 </output_format>`,
     },
     uneSeuleFois:
-      "Asana, Jira, Linear, Monday et ClickUp n'ont pas de connecteur officiel liste par OpenAI a ce jour : leur ajout passe par le mode developpeur (serveur MCP du fournisseur), surtout accessible aux espaces Business/Enterprise/Edu. Sur un compte individuel, exportez plutot un etat du projet (CSV/liste) et collez-le dans le chat.",
+      "Asana, Jira, Linear, Monday et ClickUp n'ont pas de connecteur officiel listé par OpenAI à ce jour : leur ajout passe par le mode développeur (serveur MCP du fournisseur), surtout accessible aux espaces Business/Enterprise/Edu. Sur un compte individuel, exportez plutôt un état du projet (CSV/listé) et collez-le dans le chat.",
   },
   F17: {
     outils: [
@@ -573,7 +573,7 @@ Trois listes (Retard / Terminees / A venir), suivies du resume d'avancement en u
         type: "officiel",
       },
       {
-        nom: "Agentforce / serveur MCP Salesforce (officiel Salesforce, mode developpeur)",
+        nom: "Agentforce / serveur MCP Salesforce (officiel Salesforce, mode développeur)",
         lien: "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/chatgpt.html",
         type: "officiel",
       },
@@ -605,7 +605,7 @@ Un tableau : Prospect | Dernier contact | Brouillon de relance propose.
 </output_format>`,
     },
     uneSeuleFois:
-      "ChatGPT n'a pas de reglage d'approbation automatique/manuelle comme Cowork : le prompt interdit explicitement l'envoi automatique, ce qui joue le meme role.",
+      "ChatGPT n'a pas de réglage d'approbation automatique/manuelle comme Cowork : le prompt interdit explicitement l'envoi automatique, ce qui joue le même rôle.",
   },
   F18: {
     outils: [
@@ -615,7 +615,7 @@ Un tableau : Prospect | Dernier contact | Brouillon de relance propose.
         type: "officiel",
       },
       {
-        nom: "Connecteur/app HubSpot (donnees client, si CRM connecte)",
+        nom: "Connecteur/app HubSpot (données client, si CRM connecté)",
         lien: "https://help.openai.com/en/articles/12084614-connector-use-cases-and-prompts",
         type: "officiel",
       },
@@ -641,18 +641,18 @@ Le document (devis ou facture) complet, pret a etre exporte en Word ou Excel.
   F19: {
     outils: [
       {
-        nom: "Connecter QuickBooks Online a ChatGPT (guide officiel Intuit)",
+        nom: "Connecter QuickBooks Online à ChatGPT (guide officiel Intuit)",
         lien: "https://quickbooks.intuit.com/learn-support/en-us/help-article/mobile-and-apps/connect-quickbooks-online-chatgpt/L0RDe9RPd_US_en_US",
         type: "officiel",
       },
       {
-        nom: "Connecteur MCP Xero (tiers, mode developpeur, a verifier avant mise en prod)",
+        nom: "Connecteur MCP Xero (tiers, mode développeur, à vérifier avant mise en prod)",
         lien: "https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt",
         type: "tiers",
       },
     ],
     tachePlanifiee: {
-      nom: "Categorisation des transactions",
+      nom: "Catégorisation des transactions",
       frequence: "Hebdomadaire",
       prompt: `<system_prompt>
 Tu es assistant comptable, tu categorises les transactions selon le plan comptable fourni.
@@ -676,7 +676,7 @@ Un tableau : Transaction | Categorie proposee | Confiance | Remarque si faible c
   F20: {
     outils: [
       {
-        nom: "Connecter QuickBooks Online a ChatGPT (guide officiel Intuit, meme mise en place que F19)",
+        nom: "Connecter QuickBooks Online à ChatGPT (guide officiel Intuit, même mise en place que F19)",
         lien: "https://quickbooks.intuit.com/learn-support/en-us/help-article/mobile-and-apps/connect-quickbooks-online-chatgpt/L0RDe9RPd_US_en_US",
         type: "officiel",
       },
@@ -711,7 +711,7 @@ Un tableau : Transaction bancaire | Ecriture correspondante (ou "aucune") | Ecar
   F21: {
     outils: [
       {
-        nom: "Connecter QuickBooks Online a ChatGPT (guide officiel Intuit)",
+        nom: "Connecter QuickBooks Online à ChatGPT (guide officiel Intuit)",
         lien: "https://quickbooks.intuit.com/learn-support/en-us/help-article/mobile-and-apps/connect-quickbooks-online-chatgpt/L0RDe9RPd_US_en_US",
         type: "officiel",
       },
@@ -743,7 +743,7 @@ Un tableau : Client | Facture | Retard | Palier | Brouillon de relance propose.
 </output_format>`,
     },
     uneSeuleFois:
-      "ChatGPT n'a pas de reglage d'approbation automatique/manuelle comme Cowork : le prompt interdit explicitement l'envoi automatique, ce qui joue le meme role.",
+      "ChatGPT n'a pas de réglage d'approbation automatique/manuelle comme Cowork : le prompt interdit explicitement l'envoi automatique, ce qui joue le même rôle.",
   },
   F22: {
     outils: [
@@ -753,7 +753,7 @@ Un tableau : Client | Facture | Retard | Palier | Brouillon de relance propose.
         type: "officiel",
       },
       {
-        nom: "Connecteur MCP de l'ERP utilise, ex. Dynamics 365 (tiers, mode developpeur, a valider avant prod)",
+        nom: "Connecteur MCP de l'ERP utilisé, ex. Dynamics 365 (tiers, mode développeur, à valider avant prod)",
         lien: "https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt",
         type: "tiers",
       },
@@ -783,7 +783,7 @@ Un tableau : Commande | Fournisseur | Statut | Retard (oui/non) | Brouillon de r
   F23: {
     outils: [
       {
-        nom: "Analyse de donnees / Advanced Data Analysis (officiel)",
+        nom: "Analyse de données / Advanced Data Analysis (officiel)",
         lien: "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
         type: "officiel",
       },
@@ -794,7 +794,7 @@ Un tableau : Commande | Fournisseur | Statut | Retard (oui/non) | Brouillon de r
       },
     ],
     tachePlanifiee: {
-      nom: "Prevision de la demande",
+      nom: "Prévision de la demande",
       frequence: "Mensuel",
       prompt: `<system_prompt>
 Tu es analyste previsionniste, tu t'appuies sur les donnees historiques fournies.
@@ -841,17 +841,17 @@ Livraisons/interventions du jour : [liste des adresses et contraintes horaires].
 La tournee proposee, adresse par adresse, avec l'heure de passage estimee.
 </output_format>`,
     uneSeuleFois:
-      "ChatGPT n'a pas de connecteur cartographique officiel dedie (contrairement au MCP Google Maps utilise par Claude) : l'estimation des trajets passe par le navigateur cloud de ChatGPT Work, qui consulte un site de cartographie a la demande, ou par un outil de tournee tiers pour un usage intensif.",
+      "ChatGPT n'a pas de connecteur cartographique officiel dédié (contrairement au MCP Google Maps utilisé par Claude) : l'estimation des trajets passe par le navigateur cloud de ChatGPT Work, qui consulte un site de cartographie à la demande, ou par un outil de tournée tiers pour un usage intensif.",
   },
   F25: {
     outils: [
       {
-        nom: "Connecteur Gmail, Outlook ou Slack (canaux de reception des demandes)",
+        nom: "Connecteur Gmail, Outlook ou Slack (canaux de réception des demandes)",
         lien: "https://help.openai.com/en/articles/11487775-connectors-in-chatgpt",
         type: "officiel",
       },
       {
-        nom: "Connecteur MCP Zendesk ou Intercom (tiers, mode developpeur, non officiellement liste par OpenAI)",
+        nom: "Connecteur MCP Zendesk ou Intercom (tiers, mode développeur, non officiellement listé par OpenAI)",
         lien: "https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt",
         type: "tiers",
       },
@@ -881,7 +881,7 @@ Un tableau : Demande (resume) | Urgence | Equipe assignee.
   F26: {
     outils: [
       {
-        nom: "Analyse de donnees / Advanced Data Analysis (officiel)",
+        nom: "Analyse de données / Advanced Data Analysis (officiel)",
         lien: "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
         type: "officiel",
       },
@@ -907,7 +907,7 @@ Un tableau des themes avec leur frequence, suivi des 3 pistes d'amelioration pri
   F27: {
     outils: [
       {
-        nom: "Analyse de donnees / Advanced Data Analysis (officiel)",
+        nom: "Analyse de données / Advanced Data Analysis (officiel)",
         lien: "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
         type: "officiel",
       },
@@ -938,12 +938,12 @@ Un tableau : Segment | Criteres | Taille | Accroche marketing proposee.
   F28: {
     outils: [
       {
-        nom: "Connecteur MCP Google Ads (tiers, mode developpeur, a evaluer avant connexion d'un compte reel)",
+        nom: "Connecteur MCP Google Ads (tiers, mode développeur, à évaluer avant connexion d'un compte réel)",
         lien: "https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt",
         type: "tiers",
       },
       {
-        nom: "Connecteur MCP Meta Ads (tiers, mode developpeur, a evaluer avant connexion d'un compte reel)",
+        nom: "Connecteur MCP Meta Ads (tiers, mode développeur, à évaluer avant connexion d'un compte réel)",
         lien: "https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt",
         type: "tiers",
       },
@@ -970,12 +970,12 @@ Un tableau : Campagne | Performance vs objectif | Ajustement propose.
 </output_format>`,
     },
     uneSeuleFois:
-      "Google Ads et Meta Ads n'ont pas de connecteur officiel liste par OpenAI a ce jour : leur ajout passe par le mode developpeur (serveur MCP tiers), surtout accessible aux espaces Business/Enterprise/Edu. Evaluez la fiabilite du serveur MCP avant de connecter un compte publicitaire reel.",
+      "Google Ads et Meta Ads n'ont pas de connecteur officiel listé par OpenAI à ce jour : leur ajout passe par le mode développeur (serveur MCP tiers), surtout accessible aux espaces Business/Enterprise/Edu. Évaluez la fiabilité du serveur MCP avant de connecter un compte publicitaire réel.",
   },
   F29: {
     outils: [
       {
-        nom: "Lecture native de PDF (CV, aucune activation necessaire)",
+        nom: "Lecture native de PDF (CV, aucune activation nécessaire)",
         lien: "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt",
         type: "officiel",
       },
@@ -1037,7 +1037,7 @@ Un plan de formation en etapes numerotees, avec objectif, duree, ressource/exerc
   F31: {
     outils: [
       {
-        nom: "Lecture d'image/plan native de ChatGPT (aucune activation necessaire)",
+        nom: "Lecture d'image/plan native de ChatGPT (aucune activation nécessaire)",
         lien: "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
         type: "officiel",
       },
@@ -1063,7 +1063,7 @@ Un tableau : Element | Nombre trouve | Emplacements (par piece/zone).
   F32: {
     outils: [
       {
-        nom: "Connecteur Google Drive, SharePoint ou OneDrive (depot des photos de chantier)",
+        nom: "Connecteur Google Drive, SharePoint ou OneDrive (dépôt des photos de chantier)",
         lien: "https://help.openai.com/en/articles/11487775-connectors-in-chatgpt",
         type: "officiel",
       },
@@ -1119,7 +1119,7 @@ Un tableau : Risque identifie | Gravite estimee | Mesure de prevention proposee.
   F34: {
     outils: [
       {
-        nom: "Generation et edition d'images ChatGPT",
+        nom: "Génération et édition d'images ChatGPT",
         lien: "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
         type: "officiel",
       },
@@ -1145,7 +1145,7 @@ L'image modifiee, suivie d'une ligne resumant les modifications appliquees.
   F35: {
     outils: [
       {
-        nom: "Generation et edition d'images ChatGPT",
+        nom: "Génération et édition d'images ChatGPT",
         lien: "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
         type: "officiel",
       },
@@ -1188,7 +1188,7 @@ ChatGPT n'a pas de connecteur officiel vers un logiciel de montage video (type D
 Une liste des timecodes trouves avec, pour chacun, l'extrait correspondant de la transcription.
 </output_format>`,
     uneSeuleFois:
-      "A la difference de Claude (integration officielle Descript via MCP), ChatGPT n'a pas d'equivalent officiel pour piloter un logiciel de montage video : le contournement ci-dessus (transcription texte + timecodes) est la methode la plus fiable actuellement.",
+      "À la différence de Claude (intégration officielle Descript via MCP), ChatGPT n'a pas d'équivalent officiel pour piloter un logiciel de montage vidéo : le contournement ci-dessus (transcription texte + timecodes) est la méthode la plus fiable actuellement.",
   },
   F37: {
     outils: [],
@@ -1210,7 +1210,7 @@ ChatGPT n'a pas de connecteur officiel vers un logiciel de montage video a ce jo
 Un script de montage numerote : Ordre | Timecode | Extrait | Justification.
 </output_format>`,
     uneSeuleFois:
-      "Le resultat est un script de montage a appliquer soi-meme dans le logiciel de montage : ChatGPT ne decoupe pas la video directement, faute de connecteur officiel vers un outil de montage.",
+      "Le résultat est un script de montage à appliquer soi-même dans le logiciel de montage : ChatGPT ne découpe pas la vidéo directement, faute de connecteur officiel vers un outil de montage.",
   },
   F38: {
     outils: [],
@@ -1232,12 +1232,12 @@ Transcription avec timecodes : [joindre/connecter]. Langue(s) cible(s) des sous-
 Le fichier de sous-titres au format demande, une langue a la fois si plusieurs langues cibles.
 </output_format>`,
     uneSeuleFois:
-      "ChatGPT ne genere pas de fichier .srt directement depuis une video : il traduit le texte avec timecodes que vous lui fournissez. L'export SRT final se fait en copiant le resultat dans votre logiciel de sous-titrage.",
+      "ChatGPT ne généré pas de fichier .srt directement depuis une vidéo : il traduit le texte avec timecodes que vous lui fournissez. L'export SRT final se fait en copiant le résultat dans votre logiciel de sous-titrage.",
   },
   F39: {
     outils: [
       {
-        nom: "App ElevenLabs dans ChatGPT (officiel, outils voix selon disponibilite au moment de l'usage)",
+        nom: "App ElevenLabs dans ChatGPT (officiel, outils voix selon disponibilité au moment de l'usage)",
         lien: "https://openai.com/index/introducing-apps-in-chatgpt/",
         type: "officiel",
       },
@@ -1260,7 +1260,7 @@ Enregistrement vocal a nettoyer : [joindre ou traiter via l'app ElevenLabs si di
 Le fichier nettoye si l'outil le permet, sinon une liste des passages a traiter avec la recommandation de traitement.
 </output_format>`,
     uneSeuleFois:
-      "Verifiez au moment de l'usage que l'app ElevenLabs propose bien un outil de nettoyage audio (isolation de la voix) et pas seulement de la synthese vocale : les apps tierces dans ChatGPT evoluent regulierement.",
+      "Vérifiez au moment de l'usage que l'app ElevenLabs propose bien un outil de nettoyage audio (isolation de la voix) et pas seulement de la synthèse vocale : les apps tierces dans ChatGPT évoluent régulièrement.",
   },
   F40: {
     outils: [],
@@ -1282,7 +1282,7 @@ ChatGPT n'a pas de connecteur officiel vers un logiciel de montage video a ce jo
 Un plan de recadrage par format : Format | Zone a conserver | Points de vigilance.
 </output_format>`,
     uneSeuleFois:
-      "Le resultat est un plan a appliquer dans un logiciel de montage ou l'app Canva : ChatGPT ne recadre pas la video directement, faute de connecteur officiel vers un outil de montage.",
+      "Le résultat est un plan à appliquer dans un logiciel de montage ou l'app Canva : ChatGPT ne recadre pas la vidéo directement, faute de connecteur officiel vers un outil de montage.",
   },
   F41: {
     outils: [
@@ -1330,6 +1330,6 @@ IMPORTANT : Sora, l'outil de generation video d'OpenAI, a ete arrete (experience
 Un storyboard numerote : Plan | Description visuelle | Prompt pret a l'emploi pour un outil de generation video.
 </output_format>`,
     uneSeuleFois:
-      "Verifiez la disponibilite d'un outil de generation video OpenAI au moment de l'usage : la situation peut avoir change depuis la redaction de ce guide (22 septembre 2026). En l'absence d'outil officiel, ce storyboard peut etre confie a un outil de generation video tiers ou reserve pour le jour ou OpenAI proposera une alternative a Sora.",
+      "Vérifiez la disponibilité d'un outil de génération vidéo OpenAI au moment de l'usage : la situation peut avoir change depuis la rédaction de ce guide (22 septembre 2026). En l'absence d'outil officiel, ce storyboard peut être confie à un outil de génération vidéo tiers ou réservé pour le jour ou OpenAI proposera une alternative à Sora.",
   },
 };

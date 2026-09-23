@@ -17,7 +17,7 @@ Un unique prompt permet une préparation d'entretien digne d'un accompagnement p
 
 ## Le prompt à copier
 
-> **Prompt — coach d'entretien**
+> **Prompt - coach d'entretien**
 >
 > Tu es coach d'entretien senior.
 >
@@ -27,20 +27,20 @@ Un unique prompt permet une préparation d'entretien digne d'un accompagnement p
 > Date de l'entretien : [date]
 > Interlocuteur(s) : [nom(s) + rôle si connu]
 >
-> Étape 1 — RECHERCHE
+> Étape 1 - RECHERCHE
 > - Mission, taille, actualité récente (12 derniers mois)
 > - Culture et style de management (à partir des avis publics)
 > - 3 chantiers probables du poste
 >
-> Étape 2 — QUESTIONS ATTENDUES
+> Étape 2 - QUESTIONS ATTENDUES
 > - 5 questions techniques probables
 > - 5 questions comportementales (format STAR attendu)
 > - 3 questions pièges propres à cette entreprise
 >
-> Étape 3 — FAUX ENTRETIEN
+> Étape 3 - FAUX ENTRETIEN
 > - Pose-moi 5 questions, une par une, attends ma réponse, note-la sur 10 avec une amélioration concrète
 >
-> Étape 4 — ANTISÈCHE DU JOUR J
+> Étape 4 - ANTISÈCHE DU JOUR J
 > - 3 stories STAR à avoir en tête
 > - 3 questions intelligentes à poser à la fin
 > - 1 phrase de clôture qui marque

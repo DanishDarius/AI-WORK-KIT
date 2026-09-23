@@ -9,7 +9,7 @@ function un<T>(valeur: T | T[] | null): T | null {
   return valeur;
 }
 
-// GET /api/favoris — liste des tâches mises en favori par l'utilisateur
+// GET /api/favoris - liste des tâches mises en favori par l'utilisateur
 // connecté, avec le contexte métier permettant de reconstruire le lien
 // /taches/[id]?metier=<slug>. Triées de la plus récente à la plus ancienne.
 export async function GET() {

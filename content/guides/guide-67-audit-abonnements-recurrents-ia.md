@@ -13,13 +13,13 @@ Une IA capable de scanner une boîte mail, repérer chaque paiement récurrent, 
 
 ## Le constat de départ
 
-Entre 80 et 300 € par mois passent souvent dans des abonnements qui ne sont plus vraiment utilisés. Personne ne fait cet audit parce que c'est fastidieux — une IA peut le faire en dix minutes.
+Entre 80 et 300 € par mois passent souvent dans des abonnements qui ne sont plus vraiment utilisés. Personne ne fait cet audit parce que c'est fastidieux - une IA peut le faire en dix minutes.
 
 ## Ce dont on a besoin
 
 Un export des e-mails des douze derniers mois (dans Gmail : Paramètres → Importer/Exporter). Ou, à défaut, un export CSV du relevé bancaire sur douze mois. Un assistant IA avec accès aux fichiers.
 
-> **Prompt — audit abonnements**
+> **Prompt - audit abonnements**
 >
 > Tu es mon auditeur financier personnel. Voici 12 mois de mails de confirmation de paiement (ou de relevés bancaires).
 >
@@ -34,7 +34,7 @@ Un export des e-mails des douze derniers mois (dans Gmail : Paramètres → Impo
 
 ## Le rappel à ne pas sauter
 
-Ne pas valider la liste sans en avoir imprimé le total. C'est justement cette friction — lire le montant annuel noir sur blanc — qui pousse réellement à passer à l'action.
+Ne pas valider la liste sans en avoir imprimé le total. C'est justement cette friction - lire le montant annuel noir sur blanc - qui pousse réellement à passer à l'action.
 
 ## À retenir
 

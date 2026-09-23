@@ -13,11 +13,11 @@ Mesurer sa progression réelle en matière d'usage de l'IA reste difficile sans 
 
 ## Les cinq axes
 
-1. **Vitesse** — combien de minutes faut-il pour produire un livrable type ? Une mesure de référence (T0) permet une comparaison trois mois plus tard.
-2. **Profondeur** — l'usage se limite-t-il au simple chat, ou mobilise-t-il des fonctions comme Projects, Skills, Connectors ou Cowork ?
-3. **Autonomie** — combien de tâches tournent sans intervention directe au cours d'une semaine donnée ?
-4. **Discernement** — sait-on reconnaître les situations où l'IA ne doit justement PAS être utilisée ?
-5. **Transmission** — la méthode employée peut-elle être enseignée à un collègue en trente minutes ?
+1. **Vitesse** - combien de minutes faut-il pour produire un livrable type ? Une mesure de référence (T0) permet une comparaison trois mois plus tard.
+2. **Profondeur** - l'usage se limite-t-il au simple chat, ou mobilise-t-il des fonctions comme Projects, Skills, Connectors ou Cowork ?
+3. **Autonomie** - combien de tâches tournent sans intervention directe au cours d'une semaine donnée ?
+4. **Discernement** - sait-on reconnaître les situations où l'IA ne doit justement PAS être utilisée ?
+5. **Transmission** - la méthode employée peut-elle être enseignée à un collègue en trente minutes ?
 
 ## Le système de notation
 
@@ -25,7 +25,7 @@ Chaque axe est noté sur 5, pour un total sur 25. En dessous de 10 : niveau déb
 
 ## Le prompt d'audit trimestriel
 
-> **Prompt — audit trimestriel**
+> **Prompt - audit trimestriel**
 >
 > Voici mes réponses pour chaque axe : [colle].
 >

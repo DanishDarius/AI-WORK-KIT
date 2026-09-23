@@ -13,7 +13,7 @@ Il suffit d'indiquer ce que l'on souhaite manger dans la semaine : Claude constr
 
 ## Le brief de base
 
-> **Prompt — Skill cerveau repas**
+> **Prompt - Skill cerveau repas**
 >
 > Tu es mon chef et mon nutritionniste. Mes contraintes :
 >
@@ -39,7 +39,7 @@ Il suffit d'indiquer ce que l'on souhaite manger dans la semaine : Claude constr
 
 ## Comment le connecter à son drive
 
-Une fois la liste générée, elle peut être copiée directement dans Carrefour Drive, Chronodrive ou Auchan — la plupart de ces services proposent une fonction d'importation de liste. À défaut, saisir les articles un par un ne prend guère plus de cinq minutes. Une automatisation complète via un Plugin Claude reste également possible, mais commencer sans est recommandé.
+Une fois la liste générée, elle peut être copiée directement dans Carrefour Drive, Chronodrive ou Auchan - la plupart de ces services proposent une fonction d'importation de liste. À défaut, saisir les articles un par un ne prend guère plus de cinq minutes. Une automatisation complète via un Plugin Claude reste également possible, mais commencer sans est recommandé.
 
 ## Le garde-fou
 

@@ -2,7 +2,7 @@
 Guide original : 5 updates IA à connaître cette semaine
 Source : https://www.saadiakaram.ai/guides/ai-news-this-week
 Position réelle dans la bibliothèque au moment du traitement : 76/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : le guide source, bien que titré comme une actualité hebdomadaire datée, contient en réalité une méthode générique de tri de l'actualité IA, sans événement daté spécifique — reformulé comme méthode réutilisable.
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : le guide source, bien que titré comme une actualité hebdomadaire datée, contient en réalité une méthode générique de tri de l'actualité IA, sans événement daté spécifique - reformulé comme méthode réutilisable.
 ---
 
 # Trier l'actualité IA : distinguer le signal du bruit
@@ -15,7 +15,7 @@ Une méthode pour lire l'actualité IA sans s'y noyer : ce qui compte vraiment, 
 
 Le bon filtre n'est pas « waouh, c'est impressionnant ». C'est « est-ce que ça change quelque chose à ma semaine prochaine ? ». Neuf actualités sur dix répondent non.
 
-> **Prompt — filtre actu IA**
+> **Prompt - filtre actu IA**
 >
 > Tu es mon analyste IA. Je te colle 5 actus de la semaine.
 >

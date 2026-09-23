@@ -9,7 +9,7 @@ function un<T>(valeur: T | T[] | null): T | null {
   return valeur;
 }
 
-// GET /api/recherche?q=<terme> — recherche transverse sur les titres de
+// GET /api/recherche?q=<terme> - recherche transverse sur les titres de
 // tâches (une ligne par métier où la tâche apparaît, pour un lien direct
 // /taches/[id]?metier=<slug>) et sur les termes/définitions du glossaire.
 // Renvoie des listes vides si le terme fait moins de 2 caractères.

@@ -17,23 +17,23 @@ Le marché évolue trop vite pour perdre du temps sur des outils moyens. Une lis
 
 ## Les six outils qui valent le détour
 
-**Claude** — pour écrire, réfléchir, structurer, analyser, automatiser.
+**Claude** - pour écrire, réfléchir, structurer, analyser, automatiser.
 
-**ChatGPT Images** — pour les visuels, maquettes, infographies, images contenant du texte.
+**ChatGPT Images** - pour les visuels, maquettes, infographies, images contenant du texte.
 
-**Perplexity** — pour la recherche web en direct avec sources citées.
+**Perplexity** - pour la recherche web en direct avec sources citées.
 
-**Asana AI** — pour transformer la gestion de projet en système plus intelligent.
+**Asana AI** - pour transformer la gestion de projet en système plus intelligent.
 
-**Fathom** — pour enregistrer, transcrire et résumer les réunions.
+**Fathom** - pour enregistrer, transcrire et résumer les réunions.
 
-**Gemini associé à Google Photos** — pour générer des images IA à partir de ses propres photos personnelles.
+**Gemini associé à Google Photos** - pour générer des images IA à partir de ses propres photos personnelles.
 
 ## À quoi sert vraiment chaque outil
 
-**Claude** : le meilleur choix quand la qualité de la réflexion compte. Rédaction, stratégie, workflows, analyse de documents, automatisations — l'outil de référence pour une colonne vertébrale IA du travail quotidien.
+**Claude** : le meilleur choix quand la qualité de la réflexion compte. Rédaction, stratégie, workflows, analyse de documents, automatisations - l'outil de référence pour une colonne vertébrale IA du travail quotidien.
 
-**ChatGPT Images** : particulièrement solide dès qu'il y a du texte dans l'image. Publicité, visuels marketing, produits, infographies — là où d'autres outils produisent un texte déformé, celui-ci tient mieux la route.
+**ChatGPT Images** : particulièrement solide dès qu'il y a du texte dans l'image. Publicité, visuels marketing, produits, infographies - là où d'autres outils produisent un texte déformé, celui-ci tient mieux la route.
 
 **Perplexity** : recherche actuelle, vérification, veille concurrentielle, marché, tendances. Une question posée reçoit une réponse sourcée, avec moins de bruit que sur un moteur de recherche classique.
 
@@ -41,7 +41,7 @@ Le marché évolue trop vite pour perdre du temps sur des outils moyens. Une lis
 
 **Fathom** : la bonne façon d'arrêter de prendre des notes de réunion à l'ancienne. Il enregistre, transcrit, résume, et ressort actions et décisions.
 
-**Gemini associé à Google Photos** : un cas d'usage très précis — générer des images IA de soi-même, de sa famille, de ses animaux ou de lieux déjà présents dans sa photothèque, sans avoir à les téléverser manuellement. C'est là que l'intégration devient intéressante.
+**Gemini associé à Google Photos** : un cas d'usage très précis - générer des images IA de soi-même, de sa famille, de ses animaux ou de lieux déjà présents dans sa photothèque, sans avoir à les téléverser manuellement. C'est là que l'intégration devient intéressante.
 
 ## Choisir par besoin, pas par tendance
 

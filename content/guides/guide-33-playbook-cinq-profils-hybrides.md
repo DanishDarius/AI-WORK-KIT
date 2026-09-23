@@ -1,7 +1,7 @@
 ---
 Guide original : PLAYBOOK : 5 parcours pour croiser tes compétences
 Source : https://www.saadiakaram.ai/guides/playbook-5-profils-competences-hybrides
-Statut : 0 image trouvée dans le DOM (imgCount: 0). 1 tableau de données réel détecté (comparaison CA/coûts sur deux périodes) — recréé en Markdown ci-dessous.
+Statut : 0 image trouvée dans le DOM (imgCount: 0). 1 tableau de données réel détecté (comparaison CA/coûts sur deux périodes) - recréé en Markdown ci-dessous.
 ---
 
 # Cinq croisements de compétences pour élargir ton métier : le guide pratique
@@ -45,9 +45,9 @@ Repense à une friction rencontrée cette semaine : une petite modification que 
 - **Vise une seule capacité précise.** « Lire et corriger une fonction de calcul » est un point de départ plus utile que « apprendre tout le code ».
 - **Prévois un terrain d'essai.** Un fichier fictif, un écran de démonstration ou des notes anonymisées suffisent. Identifie aussi qui pourra te donner un retour sur le résultat.
 
-Si deux profils te parlent également, choisis celui dont tu peux tester le résultat dès cette semaine — ton choix pourra évoluer après un premier essai. Si aucun des cinq ne te correspond, applique la même méthode à une tâche de ton propre métier : ces cinq profils sont avant tout des portes d'entrée, pas une liste fermée.
+Si deux profils te parlent également, choisis celui dont tu peux tester le résultat dès cette semaine - ton choix pourra évoluer après un premier essai. Si aucun des cinq ne te correspond, applique la même méthode à une tâche de ton propre métier : ces cinq profils sont avant tout des portes d'entrée, pas une liste fermée.
 
-> **Prompt — Choisir une compétence complémentaire**
+> **Prompt - Choisir une compétence complémentaire**
 >
 > Aide-moi à choisir une compétence complémentaire utile à mon métier.
 > Métier actuel : [métier]. Ce que je sais déjà faire, avec un exemple : [preuve]. Friction rencontrée cette semaine : [situation]. Temps disponible : [créneaux réalistes]. Personne pouvant me donner un retour : [rôle ou « personne pour l'instant »].
@@ -74,21 +74,21 @@ Tu sais déjà quelle question une campagne doit résoudre. En apprenant à code
 **Ce que tu vas apprendre :**
 
 - *HTML* : donner un nom à chaque champ, relier son étiquette, afficher une réponse lisible. Le HTML structure la page ; c'est JavaScript qui exécutera le calcul.
-- *JavaScript* : lire une valeur, la convertir en nombre, écrire une fonction et une condition. Attention à traiter le champ vide avant la conversion — `Number('')` vaut 0 et peut masquer une saisie manquante.
+- *JavaScript* : lire une valeur, la convertir en nombre, écrire une fonction et une condition. Attention à traiter le champ vide avant la conversion - `Number('')` vaut 0 et peut masquer une saisie manquante.
 - *Débogage* : lire un message dans la console du navigateur, reproduire une erreur avec les mêmes entrées, et ne changer qu'un seul élément à la fois.
 
 *(Exemple pédagogique fictif, à adapter à ta propre activité.)* Le calcul avant le code : 600 DH dépensés ÷ 20 leads = 30 DH par lead. Cas limite à prévoir : zéro lead → un message explicite, sans coût calculé.
 
 **Le projet à garder :** un fichier HTML local avec deux champs étiquetés, un résultat exprimé en DH par lead, une gestion des saisies invalides, et une fiche de cinq tests.
 
-- *Semaine 1* — Crée `index.html` avec deux champs et un bouton. Apprends les bases HTML via une documentation ouverte, puis écris le calcul sur papier avant de l'automatiser.
-- *Semaine 2* — Branche la fonction JavaScript. Vérifie les cas : 600/20 → 30 ; 0/20 → 0 ; 600/0 → message « nombre de leads supérieur à zéro requis » ; champ vide → « complète les champs » ; dépense négative → refus.
-- *Semaine 3* — Fais utiliser le fichier à un collègue avec des chiffres fictifs. Demande-lui ce que représente le résultat affiché. Ajoute les unités et corrige le premier blocage observé.
-- *Semaine 4* — Recrée la fonction sans copier ton code précédent. Ajoute ensuite un calcul distinct, celui du taux de conversion, avec ses propres entrées. Explique la différence entre les deux indicateurs.
+- *Semaine 1* - Crée `index.html` avec deux champs et un bouton. Apprends les bases HTML via une documentation ouverte, puis écris le calcul sur papier avant de l'automatiser.
+- *Semaine 2* - Branche la fonction JavaScript. Vérifie les cas : 600/20 → 30 ; 0/20 → 0 ; 600/0 → message « nombre de leads supérieur à zéro requis » ; champ vide → « complète les champs » ; dépense négative → refus.
+- *Semaine 3* - Fais utiliser le fichier à un collègue avec des chiffres fictifs. Demande-lui ce que représente le résultat affiché. Ajoute les unités et corrige le premier blocage observé.
+- *Semaine 4* - Recrée la fonction sans copier ton code précédent. Ajoute ensuite un calcul distinct, celui du taux de conversion, avec ses propres entrées. Explique la différence entre les deux indicateurs.
 
 **Où commencer à apprendre :** la documentation ouverte MDN, en français, pour structurer du contenu en HTML (syntaxe de base, puis formulaires et boutons) et pour les premiers pas en JavaScript (variables, nombres, conditions, fonctions).
 
-> **Prompt — Coach marketing + code**
+> **Prompt - Coach marketing + code**
 >
 > Tu es mon tuteur de code pour un exercice marketing. Je dois comprendre ce que je construis.
 > Niveau en code : [débutant ou acquis précis]. Ordinateur et éditeur utilisés : [outils disponibles].
@@ -107,7 +107,7 @@ Tu sais déjà quelle question une campagne doit résoudre. En apprenant à code
 
 ## 02 · Ingénierie + Psychologie
 
-Tu sais faire fonctionner un système. Comprendre les attentes, l'attention et les hésitations des utilisateurs t'aide à construire une fonctionnalité qu'ils arrivent réellement à utiliser. Le terrain de départ : la psychologie de l'usage — observer une tâche réelle, puis améliorer un seul écran.
+Tu sais faire fonctionner un système. Comprendre les attentes, l'attention et les hésitations des utilisateurs t'aide à construire une fonctionnalité qu'ils arrivent réellement à utiliser. Le terrain de départ : la psychologie de l'usage - observer une tâche réelle, puis améliorer un seul écran.
 
 **Point de départ.** Connaître un produit ou un processus technique. Aucune formation en psychologie n'est requise pour cet exercice d'observation ; il ne s'agit pas d'évaluer une personnalité.
 
@@ -115,7 +115,7 @@ Tu sais faire fonctionner un système. Comprendre les attentes, l'attention et l
 
 **Ce que tu vas apprendre :**
 
-- *Modèle mental* : ce que la personne croit que le système va faire. Un bouton nommé « Archiver » peut annoncer une action différente dans sa tête et dans la tienne — vérifie le sens qu'elle lui donne.
+- *Modèle mental* : ce que la personne croit que le système va faire. Un bouton nommé « Archiver » peut annoncer une action différente dans sa tête et dans la tienne - vérifie le sens qu'elle lui donne.
 - *Charge cognitive* : les informations qu'il faut garder en tête pour accomplir la tâche. Repère les allers-retours, les termes à décoder, et les choix proposés trop tôt.
 - *Observation et entretien* : distingue « elle a cliqué trois fois » de « elle est impatiente ». Pose des questions sur une situation passée, sans suggérer la réponse ni attribuer un trait psychologique.
 
@@ -123,14 +123,14 @@ Tu sais faire fonctionner un système. Comprendre les attentes, l'attention et l
 
 **Le projet à garder :** une fiche d'observation anonymisée, une hypothèse sur un blocage, une version corrigée de l'écran, et un compte rendu du nouvel essai.
 
-- *Semaine 1* — Lis une ressource sur les modèles mentaux. Prépare une tâche neutre et cinq questions ouvertes. Fais relire tes questions pour enlever toute formulation qui suggère la réponse.
-- *Semaine 2* — Avec leur accord, observe trois personnes qui connaissent le contexte. Note les actions, les mots exacts et les hésitations. Ce petit groupe sert à repérer des problèmes, pas à estimer leur fréquence dans l'ensemble de la population.
-- *Semaine 3* — Classe tes notes en observations, hypothèses et inconnues. Modifie un seul point : le libellé, l'ordre des actions, ou l'explication donnée. Écris ce que tu t'attends à voir changer.
-- *Semaine 4* — Fais essayer la version corrigée dans les mêmes conditions, si possible à une personne qui ne l'a pas encore vue. Compare la réussite de la tâche, les demandes d'aide et les erreurs. Mentionne les différences de contexte et l'effet d'apprentissage possible.
+- *Semaine 1* - Lis une ressource sur les modèles mentaux. Prépare une tâche neutre et cinq questions ouvertes. Fais relire tes questions pour enlever toute formulation qui suggère la réponse.
+- *Semaine 2* - Avec leur accord, observe trois personnes qui connaissent le contexte. Note les actions, les mots exacts et les hésitations. Ce petit groupe sert à repérer des problèmes, pas à estimer leur fréquence dans l'ensemble de la population.
+- *Semaine 3* - Classe tes notes en observations, hypothèses et inconnues. Modifie un seul point : le libellé, l'ordre des actions, ou l'explication donnée. Écris ce que tu t'attends à voir changer.
+- *Semaine 4* - Fais essayer la version corrigée dans les mêmes conditions, si possible à une personne qui ne l'a pas encore vue. Compare la réussite de la tâche, les demandes d'aide et les erreurs. Mentionne les différences de contexte et l'effet d'apprentissage possible.
 
-**Où commencer à apprendre :** un article du Nielsen Norman Group sur les modèles mentaux (en anglais) pour relever un exemple de décalage entre attente et fonctionnement ; un guide GOV.UK sur la conduite d'entretiens approfondis (en anglais), dont les sections de préparation et de conduite servent à formuler tes questions — ton essai court ne remplace pas l'entretien approfondi décrit dans cette source.
+**Où commencer à apprendre :** un article du Nielsen Norman Group sur les modèles mentaux (en anglais) pour relever un exemple de décalage entre attente et fonctionnement ; un guide GOV.UK sur la conduite d'entretiens approfondis (en anglais), dont les sections de préparation et de conduite servent à formuler tes questions - ton essai court ne remplace pas l'entretien approfondi décrit dans cette source.
 
-> **Prompt — Coach ingénierie + psychologie**
+> **Prompt - Coach ingénierie + psychologie**
 >
 > Aide-moi à préparer une observation d'usage, puis à analyser uniquement les éléments que je te fournis.
 > Produit et tâche : [contexte]. Public concerné : [utilisateurs]. Ma prédiction : [ce qui devrait se passer]. Notes anonymisées disponibles : [notes ou « pas encore d'essai »].
@@ -164,14 +164,14 @@ Tu connais les décisions derrière ton produit. Apprendre à en tirer un conten
 
 **Le projet à garder :** un contenu de fond sur une question client, décliné en trois pièces : un post explicatif, une démonstration vidéo courte, et une réponse à une objection. Chaque pièce doit porter une idée utile.
 
-- *Semaine 1* — Collecte cinq questions client et choisis la plus récurrente dans tes échanges. Lis les modules utiles d'une formation en marketing de contenu, puis écris ton premier brouillon sans IA.
-- *Semaine 2* — Construis une réponse de fond : situation, geste montré, limite, prochaine étape. Crée le post et le script de démonstration à partir de cette même matière.
-- *Semaine 3* — Fais lire ou regarder les trois pièces à une personne du public visé. Demande ce qu'elle a compris et ce qu'elle ferait ensuite. Corrige les passages vagues avant de publier sur ton canal habituel.
-- *Semaine 4* — Note les questions reçues, les conversations pertinentes et les incompréhensions. Écris le contenu suivant à partir de ce retour. Si tu n'as encore rien publié, documente les retours de lecture sans inventer de métriques de diffusion.
+- *Semaine 1* - Collecte cinq questions client et choisis la plus récurrente dans tes échanges. Lis les modules utiles d'une formation en marketing de contenu, puis écris ton premier brouillon sans IA.
+- *Semaine 2* - Construis une réponse de fond : situation, geste montré, limite, prochaine étape. Crée le post et le script de démonstration à partir de cette même matière.
+- *Semaine 3* - Fais lire ou regarder les trois pièces à une personne du public visé. Demande ce qu'elle a compris et ce qu'elle ferait ensuite. Corrige les passages vagues avant de publier sur ton canal habituel.
+- *Semaine 4* - Note les questions reçues, les conversations pertinentes et les incompréhensions. Écris le contenu suivant à partir de ce retour. Si tu n'as encore rien publié, documente les retours de lecture sans inventer de métriques de diffusion.
 
-**Où commencer à apprendre :** un cours gratuit de marketing de contenu (inscription requise ; vérifie la langue proposée) — commence par les modules sur la génération d'idées de contenu et sur le recyclage de contenu existant ; le programme complet est annoncé à un peu plus de sept heures, ce qui n'est pas un prérequis pour ton premier brouillon.
+**Où commencer à apprendre :** un cours gratuit de marketing de contenu (inscription requise ; vérifie la langue proposée) - commence par les modules sur la génération d'idées de contenu et sur le recyclage de contenu existant ; le programme complet est annoncé à un peu plus de sept heures, ce qui n'est pas un prérequis pour ton premier brouillon.
 
-> **Prompt — Coach porteur de projet + contenu**
+> **Prompt - Coach porteur de projet + contenu**
 >
 > Tu es mon éditeur et mon coach de contenu. Aide-moi à apprendre à expliquer mon produit à un public précis.
 > Offre : [offre]. Public et canal : [public, canal]. Question client : [question réelle ou hypothèse signalée]. Matière vérifiable : [notes, démonstration, faits autorisés]. Mon brouillon : [texte ou « à écrire »].
@@ -189,7 +189,7 @@ Tu connais les décisions derrière ton produit. Apprendre à en tirer un conten
 
 ## 04 · Finance + Storytelling
 
-Tu sais analyser un tableau. Le storytelling t'aide à rendre son enjeu compréhensible pour une personne qui doit décider. Tu vas construire une note d'une page qui expose un changement, sa portée, et la question à trancher — tout en conservant les limites propres aux données utilisées.
+Tu sais analyser un tableau. Le storytelling t'aide à rendre son enjeu compréhensible pour une personne qui doit décider. Tu vas construire une note d'une page qui expose un changement, sa portée, et la question à trancher - tout en conservant les limites propres aux données utilisées.
 
 **Point de départ.** Savoir lire un tableau de gestion et vérifier ses calculs. Ce parcours travaille la communication de données, pas le choix d'un investissement.
 
@@ -198,7 +198,7 @@ Tu sais analyser un tableau. Le storytelling t'aide à rendre son enjeu compréh
 **Ce que tu vas apprendre :**
 
 - *Destinataire et enjeu* : pars de la décision à éclairer. Un dirigeant et un analyste n'ont pas besoin du même niveau de détail ; garde les calculs en annexe pour qu'ils restent vérifiables.
-- *Fil narratif* : établis ce qui change, pourquoi cela mérite attention, et ce qu'il faut examiner ensuite. Un écart simultané ne prouve pas sa cause — « les coûts augmentent » se lit directement dans le tableau, mais « c'est dû aux remises » exige d'autres données.
+- *Fil narratif* : établis ce qui change, pourquoi cela mérite attention, et ce qu'il faut examiner ensuite. Un écart simultané ne prouve pas sa cause - « les coûts augmentent » se lit directement dans le tableau, mais « c'est dû aux remises » exige d'autres données.
 - *Honnêteté visuelle* : indique les unités, les périodes, les sources et le périmètre. Distingue ce qui est observé de ce qui relève de la prévision. Garde une base zéro pour comparer des longueurs de barres ; n'utilise jamais le dessin pour amplifier artificiellement un écart.
 
 *(Exemple pédagogique fictif, à adapter à ta propre activité.)* Le constat : le CA augmente, le solde diminue.
@@ -207,20 +207,20 @@ Tu sais analyser un tableau. Le storytelling t'aide à rendre son enjeu compréh
 |---|---|---|
 | CA | 100 | 120 |
 | Coûts | 80 | 102 |
-| CA − Coûts | 20 | 18 |
+| CA - Coûts | 20 | 18 |
 
 *Données fictives, même périmètre, en milliers de DH.* Question à examiner : quels postes expliquent la hausse des coûts ? Le tableau seul ne permet pas encore d'en connaître la cause.
 
 **Le projet à garder :** une note d'une page avec un titre factuel, un tableau ou graphique lisible, une interprétation prudente, la question à trancher, et les informations encore nécessaires pour trancher.
 
-- *Semaine 1* — Choisis un petit tableau public ou fictif et recalcule ses totaux. Lis une ressource sur la formulation du message clé (« Big Idea ») pour préparer ce que ton lecteur doit comprendre.
-- *Semaine 2* — Construis une page : titre factuel, un visuel utile, contexte, question et limite. Dans l'exemple, chiffre l'évolution du CA (+20 %), des coûts (+27,5 %) et du solde (−10 %).
-- *Semaine 3* — Présente la page en deux minutes à un collègue qui ne connaît pas les données. Demande-lui le constat qu'il en tire, la décision à préparer, et la limite principale qu'il perçoit. Note ses mots avant de réexpliquer.
-- *Semaine 4* — Réécris la page à partir de ses incompréhensions. Recommence sans IA avec un autre tableau. Conserve les données d'origine et une annexe permettant de reproduire les calculs.
+- *Semaine 1* - Choisis un petit tableau public ou fictif et recalcule ses totaux. Lis une ressource sur la formulation du message clé (« Big Idea ») pour préparer ce que ton lecteur doit comprendre.
+- *Semaine 2* - Construis une page : titre factuel, un visuel utile, contexte, question et limite. Dans l'exemple, chiffre l'évolution du CA (+20 %), des coûts (+27,5 %) et du solde (-10 %).
+- *Semaine 3* - Présente la page en deux minutes à un collègue qui ne connaît pas les données. Demande-lui le constat qu'il en tire, la décision à préparer, et la limite principale qu'il perçoit. Note ses mots avant de réexpliquer.
+- *Semaine 4* - Réécris la page à partir de ses incompréhensions. Recommence sans IA avec un autre tableau. Conserve les données d'origine et une annexe permettant de reproduire les calculs.
 
-**Où commencer à apprendre :** un article de référence en storytelling de données (en anglais) sur la formulation du message clé avant de dessiner un visuel ; un guide de l'office statistique britannique sur la représentation de l'incertitude dans les graphiques (en anglais) — à consulter avant d'utiliser des estimations, sans jamais fabriquer un intervalle que la source ne fournit pas.
+**Où commencer à apprendre :** un article de référence en storytelling de données (en anglais) sur la formulation du message clé avant de dessiner un visuel ; un guide de l'office statistique britannique sur la représentation de l'incertitude dans les graphiques (en anglais) - à consulter avant d'utiliser des estimations, sans jamais fabriquer un intervalle que la source ne fournit pas.
 
-> **Prompt — Coach finance + storytelling**
+> **Prompt - Coach finance + storytelling**
 >
 > Tu es mon coach de communication de données. Nous travaillons une explication, sans conseil d'investissement.
 > Destinataire : [personne et niveau]. Question à éclairer : [question]. Données autorisées : [tableau public, fictif ou anonymisé avec unités, périodes, source et périmètre]. Ma phrase de constat : [tentative].
@@ -251,16 +251,16 @@ Tu sais écouter et faire avancer une conversation. L'écriture prolonge cette p
 
 *(Exemple pédagogique fictif, à adapter à ta propre activité.)* Un suivi qui peut être transféré tel quel : objet « Démonstration du suivi des demandes », un besoin rappelé en une phrase, une proposition de démonstration sur des données fictives, une seule question à la fin (« Quel créneau te conviendrait cette semaine ? »). Une seule action à la fin : la démonstration est proposée, sans inventer un accord préalable qui n'existe pas.
 
-**Le projet à garder :** trois e-mails — compte rendu, clarification d'une objection, relance utile. Pour chacun : une version initiale, une version corrigée, et l'explication de tes changements.
+**Le projet à garder :** trois e-mails - compte rendu, clarification d'une objection, relance utile. Pour chacun : une version initiale, une version corrigée, et l'explication de tes changements.
 
-- *Semaine 1* — Choisis un e-mail anonymisé et surligne le besoin, la preuve et l'action qu'il contient. Lis une ressource sur le langage clair. Réécris l'objet et les deux premières phrases.
-- *Semaine 2* — Rédige les trois e-mails à partir des mêmes notes. Pour la relance, apporte une information utile déjà vérifiée ; n'invente ni urgence ni disponibilité limitée.
-- *Semaine 3* — Fais lire les messages à un collègue : de quoi parle-t-on, qu'est-ce qui est acquis, que faut-il faire ? Note ses réponses. Ne transforme pas ce test en envoi automatique à de vrais prospects.
-- *Semaine 4* — Réécris sans IA un nouveau suivi. Compare les incompréhensions et les corrections nécessaires avec ta toute première version. Le taux de réponse éventuel dépend aussi de l'offre et de la relation, pas seulement de la rédaction.
+- *Semaine 1* - Choisis un e-mail anonymisé et surligne le besoin, la preuve et l'action qu'il contient. Lis une ressource sur le langage clair. Réécris l'objet et les deux premières phrases.
+- *Semaine 2* - Rédige les trois e-mails à partir des mêmes notes. Pour la relance, apporte une information utile déjà vérifiée ; n'invente ni urgence ni disponibilité limitée.
+- *Semaine 3* - Fais lire les messages à un collègue : de quoi parle-t-on, qu'est-ce qui est acquis, que faut-il faire ? Note ses réponses. Ne transforme pas ce test en envoi automatique à de vrais prospects.
+- *Semaine 4* - Réécris sans IA un nouveau suivi. Compare les incompréhensions et les corrections nécessaires avec ta toute première version. Le taux de réponse éventuel dépend aussi de l'offre et de la relation, pas seulement de la rédaction.
 
-**Où commencer à apprendre :** un guide GOV.UK sur le langage clair (en anglais) — travaille les mots usuels, les termes techniques expliqués et la voix active, puis applique ces principes à ton e-mail en français, sans reprendre les règles propres à l'anglais.
+**Où commencer à apprendre :** un guide GOV.UK sur le langage clair (en anglais) - travaille les mots usuels, les termes techniques expliqués et la voix active, puis applique ces principes à ton e-mail en français, sans reprendre les règles propres à l'anglais.
 
-> **Prompt — Coach commercial + écriture**
+> **Prompt - Coach commercial + écriture**
 >
 > Tu es mon coach d'écriture commerciale. Aide-moi à rendre un message exact et facile à suivre.
 > Type de message : [suivi, objection ou relance]. Destinataire et contexte : [description sans donnée personnelle]. Notes autorisées : [faits, décisions, prix et dates confirmés]. Brouillon : [ma tentative]. Action souhaitée : [une action].
@@ -281,11 +281,11 @@ Tu sais écouter et faire avancer une conversation. L'écriture prolonge cette p
 
 Réserve trois créneaux de 30 minutes par semaine, soit six heures de travail personnel sur quatre semaines, en ajoutant le temps nécessaire aux retours humains. Ce volume sert à lancer un petit projet ; il ne couvre pas les formations complètes citées en ressources. Si la tâche déborde, réduis le livrable ou étale le calendrier plutôt que d'abandonner.
 
-- **30 min — Comprendre.** Lis un passage de ta ressource, ferme-le, puis explique la notion avec tes propres mots. Note la question qui subsiste.
-- **30 min — Produire.** Travaille sur le projet de ta semaine. Fais une tentative avant de demander une correction. Garde le brouillon.
-- **30 min — Corriger et retester.** Vérifie un critère précis, corrige le principal blocage, et essaie de nouveau. Le test final utilise un cas différent, sans aide.
+- **30 min - Comprendre.** Lis un passage de ta ressource, ferme-le, puis explique la notion avec tes propres mots. Note la question qui subsiste.
+- **30 min - Produire.** Travaille sur le projet de ta semaine. Fais une tentative avant de demander une correction. Garde le brouillon.
+- **30 min - Corriger et retester.** Vérifie un critère précis, corrige le principal blocage, et essaie de nouveau. Le test final utilise un cas différent, sans aide.
 
-Un cours consommé sans exercice ne remplace pas le livrable. Une sortie d'IA que tu ne sais pas expliquer ne prouve pas ton autonomie. Si tu manques une séance, reprends simplement la prochaine étape utile — inutile de recommencer tout le programme depuis le début.
+Un cours consommé sans exercice ne remplace pas le livrable. Une sortie d'IA que tu ne sais pas expliquer ne prouve pas ton autonomie. Si tu manques une séance, reprends simplement la prochaine étape utile - inutile de recommencer tout le programme depuis le début.
 
 ## Rendre ton progrès visible
 
@@ -295,7 +295,7 @@ Repères personnels à cocher toi-même, sans certification associée : une prem
 
 Exemple de formulation honnête : « J'ai construit un calculateur local de coût par lead. J'ai ajouté la gestion d'un champ vide après un test. Les cinq cas prévus donnent le résultat attendu. L'IA m'a aidé à lire une erreur ; j'ai ensuite réécrit la fonction seul. L'outil n'est pas connecté à un compte publicitaire. » N'utilise cette formulation que si ces étapes ont réellement eu lieu.
 
-> **Prompt — Relire la preuve et préparer le prochain essai**
+> **Prompt - Relire la preuve et préparer le prochain essai**
 >
 > Évalue ma preuve de compétence sans me flatter et sans inventer un essai qui n'a pas eu lieu.
 > Intersection choisie : [métier + compétence]. Tâche et destinataire : [contexte]. Version initiale : [extrait]. Version corrigée : [extrait]. Critères prévus : [critères]. Retours ou résultats réellement observés : [faits ou « non testé »]. Aide reçue de l'IA : [détails].
@@ -314,4 +314,4 @@ Les projets, le calendrier et les critères proposés ici sont des repères péd
 
 ## À retenir
 
-Commence par le geste d'aujourd'hui. Choisis ton profil, garde ta première tentative, et construis une preuve que tu pourras expliquer toi-même — à un collègue, à un recruteur, ou à toi-même dans six mois.
+Commence par le geste d'aujourd'hui. Choisis ton profil, garde ta première tentative, et construis une preuve que tu pourras expliquer toi-même - à un collègue, à un recruteur, ou à toi-même dans six mois.

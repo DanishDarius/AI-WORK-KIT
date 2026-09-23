@@ -1,7 +1,7 @@
 ---
 Guide original : "PRODUIT : crée ton produit digital avec la méthode sandwich IA"
 Source : saadiakaram.ai/guides/produit-sandwich-ia-skill-produit-digital
-Statut : reformulé (texte) — aucune image détectée ; 17 balises <table> vides détectées dans le DOM (éléments de mise en page sans contenu textuel, rien à recréer) ; plusieurs ressources téléchargeables (skill .zip, PDF 28 pages, kit .zip) non récupérées — voir ressources-visuelles.md
+Statut : reformulé (texte) - aucune image détectée ; 17 balises <table> vides détectées dans le DOM (éléments de mise en page sans contenu textuel, rien à recréer) ; plusieurs ressources téléchargeables (skill .zip, PDF 28 pages, kit .zip) non récupérées - voir ressources-visuelles.md
 ---
 
 # La méthode sandwich : garder ton expertise aux deux bouts, laisser l'IA construire au milieu
@@ -27,13 +27,13 @@ Ce guide décrit une méthode structurée en 20/60/20, accompagnée d'un exemple
 
 ---
 
-## 01 — Le sandwich IA : qui décide de quoi ?
+## 01 - Le sandwich IA : qui décide de quoi ?
 
-**20 % — Toi (le sujet et le jugement).** Choisis un problème que tu connais, une personne précise à aider, et une preuve de réussite. Apporte tes décisions, tes exemples et tes limites. Ce que tu dois garder à la fin de cette étape : un brief validé et un dossier de connaissances utilisable.
+**20 % - Toi (le sujet et le jugement).** Choisis un problème que tu connais, une personne précise à aider, et une preuve de réussite. Apporte tes décisions, tes exemples et tes limites. Ce que tu dois garder à la fin de cette étape : un brief validé et un dossier de connaissances utilisable.
 
-**60 % — Avec l'IA (la construction).** L'IA t'aide à produire le contenu à partir de ce cadrage.
+**60 % - Avec l'IA (la construction).** L'IA t'aide à produire le contenu à partir de ce cadrage.
 
-**20 % — Toi (la vérification finale).** Tu reprends la main pour essayer le produit et corriger ce qui ne fonctionne pas.
+**20 % - Toi (la vérification finale).** Tu reprends la main pour essayer le produit et corriger ce qui ne fonctionne pas.
 
 Ces proportions illustrent une répartition des responsabilités, pas une mesure exacte du temps ni de la contribution réelle d'un modèle.
 
@@ -41,19 +41,19 @@ Pour choisir ton propre terrain, prends un sujet sur lequel tu sais expliquer un
 
 ---
 
-## 02 — Le premier 20 % : choisir une promesse
+## 02 - Le premier 20 % : choisir une promesse
 
 **Exemple pédagogique de cadrage :**
 
 - Sujet trop large : « Un ebook sur les publicités Meta. »
 - Public précis : une personne qui lance ses premières campagnes pour une petite boutique et sait déjà naviguer dans son compte publicitaire.
 - Problème : elle teste plusieurs idées à la fois et ne sait pas quelle décision prendre après les premiers résultats.
-- Produit délimité : un kit pour préparer un test — hypothèse, variable, budget limite, mesure et règle de décision. Il ne promet pas un résultat publicitaire garanti.
+- Produit délimité : un kit pour préparer un test - hypothèse, variable, budget limite, mesure et règle de décision. Il ne promet pas un résultat publicitaire garanti.
 - Preuve d'utilité : le lecteur remplit un plan cohérent et explique ce qu'il observera avant de décider de poursuivre, modifier ou arrêter.
 
 Écris le résultat attendu avant même le sommaire. Rassemble ensuite trois types de matière : ce que tu fais concrètement, ce que tu as appris en le faisant, et ce que tu ne recommanderais pas dans certaines situations. Si cette matière te manque encore, commence par un outil de travail modeste, ou acquiers d'abord l'expérience nécessaire.
 
-**Prompt à copier — Cadrer mon produit :**
+**Prompt à copier - Cadrer mon produit :**
 > Mon brief de produit digital
 > Sujet que je maîtrise : [sujet précis]
 > Mon expérience réelle : [décisions, situations, erreurs et résultats que je peux documenter]
@@ -72,25 +72,25 @@ Vérifie que tu reconnais une vraie personne dans le public proposé, que la pro
 
 ---
 
-## 03 — Donner la matière : montrer la direction
+## 03 - Donner la matière : montrer la direction
 
 Le dossier à préparer comporte quatre éléments :
 
 **1. Ton brief.** Public, résultat, format, limites et critères de qualité.
 
-**2. Ton expertise.** Notes, méthodes, décisions commentées, erreurs et cas utilisables — retire toute information confidentielle avant l'envoi.
+**2. Ton expertise.** Notes, méthodes, décisions commentées, erreurs et cas utilisables - retire toute information confidentielle avant l'envoi.
 
 **3. Les faits externes.** Documentation officielle et références, avec leurs dates. D'anciennes captures d'écran ne prouvent pas l'état actuel d'une interface.
 
 **4. Le style.** Deux ou trois références visuelles, avec ce que tu veux en reprendre précisément : rythme, marges, taille des titres, place des exemples. Une inspiration visuelle ne transfère aucun droit sur une image.
 
-Tu peux regrouper ces éléments dans une archive si l'outil sait l'ouvrir. Demande toujours l'inventaire réel des fichiers effectivement lus — un fichier présent dans l'archive peut rester illisible ou être ignoré. Si l'archive échoue, fournis les documents séparément, avec une table de correspondance. Pour un document trop long, travaille par parties identifiées et conserve les décisions prises dans une note de reprise.
+Tu peux regrouper ces éléments dans une archive si l'outil sait l'ouvrir. Demande toujours l'inventaire réel des fichiers effectivement lus - un fichier présent dans l'archive peut rester illisible ou être ignoré. Si l'archive échoue, fournis les documents séparément, avec une table de correspondance. Pour un document trop long, travaille par parties identifiées et conserve les décisions prises dans une note de reprise.
 
-Une bonne référence visuelle se commente précisément : « les exercices sont isolés dans la marge », « les titres permettent de retrouver une étape », « les pages restent respirantes ». Cela donne une intention à adapter à ton propre contenu — garde le texte sélectionnable et vérifie la lecture sur le support réellement prévu.
+Une bonne référence visuelle se commente précisément : « les exercices sont isolés dans la marge », « les titres permettent de retrouver une étape », « les pages restent respirantes ». Cela donne une intention à adapter à ton propre contenu - garde le texte sélectionnable et vérifie la lecture sur le support réellement prévu.
 
 ---
 
-## 04 — Construire ta propre version de la skill
+## 04 - Construire ta propre version de la skill
 
 Le guide original propose une skill téléchargeable prête à l'emploi pour Claude, construite autour d'un fichier d'instructions unique (SKILL.md) sans code à exécuter ni donnée cachée. Le principe général, à reproduire toi-même si tu veux construire ta propre version :
 
@@ -99,9 +99,9 @@ Le guide original propose une skill téléchargeable prête à l'emploi pour Cla
 - La skill s'installe via le menu de personnalisation, en créant une nouvelle skill à partir d'un fichier d'instructions.
 - Une fois installée, elle s'utilise en l'invoquant explicitement dans une nouvelle conversation, accompagnée de ton brief et de tes pièces.
 
-Si l'option d'import d'une skill manque dans ton outil, tu peux aussi copier directement les instructions dans une conversation avec un assistant compatible avec tes documents — cela en fait un simple cadre de travail pour cette conversation, sans installer une skill native.
+Si l'option d'import d'une skill manque dans ton outil, tu peux aussi copier directement les instructions dans une conversation avec un assistant compatible avec tes documents - cela en fait un simple cadre de travail pour cette conversation, sans installer une skill native.
 
-**Prompt à copier — Lancer la fabrication :**
+**Prompt à copier - Lancer la fabrication :**
 > Utilise une méthode structurée pour créer mon [format] sur [sujet] à destination de [public].
 > Voici mon brief validé : [coller].
 > Voici le dossier de connaissances : [joindre les fichiers ou extraits].
@@ -117,7 +117,7 @@ Le signal à rechercher : l'outil fait l'inventaire des pièces, respecte ton br
 
 ---
 
-## 05 — Les 60 % du milieu : construire une vraie version
+## 05 - Les 60 % du milieu : construire une vraie version
 
 Demande à l'IA une sortie concrète : une source éditable, un export dans le format choisi, les modèles annoncés, et la liste des références utilisées. Pour chaque partie, elle doit expliquer quoi faire, montrer un exemple, et proposer un contrôle. Un texte long sans ces éléments risque de laisser le lecteur seul au moment d'agir.
 
@@ -132,9 +132,9 @@ Si l'outil ne peut pas fabriquer le fichier final, récupère une source structu
 
 ---
 
-## 06 — Le dernier 20 % : essayer, puis corriger
+## 06 - Le dernier 20 % : essayer, puis corriger
 
-**Prompt à copier — Préparer ma revue humaine :**
+**Prompt à copier - Préparer ma revue humaine :**
 > Prépare la revue humaine de ce produit digital.
 > Brief et promesse : [coller]. Version à revoir : [joindre]. Sources : [joindre].
 > Commence par vérifier toi-même les liens, les calculs, les consignes d'exercices, les champs des modèles, les répétitions et les affirmations sans preuve. Compare chaque partie au résultat promis. Signale toute ressource annoncée mais absente. N'invente aucune validation de lecteur.
@@ -158,11 +158,11 @@ Une checklist déclarative comme celle-ci ne mesure pas la demande du marché : 
 
 ---
 
-## 07 — L'exemple appliqué : un produit terminé
+## 07 - L'exemple appliqué : un produit terminé
 
 Le guide original inclut un exemple complet : un playbook fictif consacré à la publicité Meta (28 pages : économie du compte, mesure, campagne, création, test, diagnostic, budget), avec un cas chiffré corrigé, des prompts et des fiches réutilisables. Le cas utilisé (une boutique fictive nommée « Atelier Nacre ») illustre comment refaire la démarche avec tes propres données.
 
-Quand tu regardes un produit fini de ce type, observe comment sa promesse se traduit concrètement en outils, décisions et exercices. Reprends cette méthode de construction pour ton propre sujet, en y apportant ta propre expertise et tes propres exemples — pas ceux de quelqu'un d'autre.
+Quand tu regardes un produit fini de ce type, observe comment sa promesse se traduit concrètement en outils, décisions et exercices. Reprends cette méthode de construction pour ton propre sujet, en y apportant ta propre expertise et tes propres exemples - pas ceux de quelqu'un d'autre.
 
 ---
 
@@ -170,4 +170,4 @@ Quand tu regardes un produit fini de ce type, observe comment sa promesse se tra
 
 **Fais essayer ce que tu transmets. Une correction qui débloque un lecteur vaut davantage qu'une page ajoutée pour épaissir le produit.**
 
-Le sandwich IA fonctionne dans ce sens précis : ton expertise cadre le projet au départ, l'IA construit le volume au milieu, et ton jugement vérifie chaque partie à la fin. Sauter l'une des deux tranches — le cadrage ou la vérification — produit un contenu qui ressemble à un produit fini sans en avoir l'utilité réelle.
+Le sandwich IA fonctionne dans ce sens précis : ton expertise cadre le projet au départ, l'IA construit le volume au milieu, et ton jugement vérifie chaque partie à la fin. Sauter l'une des deux tranches - le cadrage ou la vérification - produit un contenu qui ressemble à un produit fini sans en avoir l'utilité réelle.

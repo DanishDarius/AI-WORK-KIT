@@ -9,20 +9,20 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Claude · 5 min de lecture*
 
-Le dimanche soir n'a pas besoin d'être source d'appréhension. Six prompts organisés en six blocs de dix minutes permettent d'arriver au lundi avec la semaine, les repas, les finances et les priorités déjà clarifiés — sans charge mentale au réveil, juste de l'exécution.
+Le dimanche soir n'a pas besoin d'être source d'appréhension. Six prompts organisés en six blocs de dix minutes permettent d'arriver au lundi avec la semaine, les repas, les finances et les priorités déjà clarifiés - sans charge mentale au réveil, juste de l'exécution.
 
 ## Les six blocs de dix minutes
 
-1. **Semaine** — les trois résultats marquants de la semaine passée et les trois priorités de celle à venir.
-2. **Repas** — le menu de la semaine, la liste de courses, une éventuelle commande.
-3. **Argent** — les dépenses de la semaine, les ajustements nécessaires, les factures à régler.
-4. **Boîte mail** — les messages en retard et les relances à envoyer.
-5. **Corps** — trois séances de sport, à des horaires fixés d'avance.
-6. **Esprit** — une lecture, une écoute, une personne à contacter.
+1. **Semaine** - les trois résultats marquants de la semaine passée et les trois priorités de celle à venir.
+2. **Repas** - le menu de la semaine, la liste de courses, une éventuelle commande.
+3. **Argent** - les dépenses de la semaine, les ajustements nécessaires, les factures à régler.
+4. **Boîte mail** - les messages en retard et les relances à envoyer.
+5. **Corps** - trois séances de sport, à des horaires fixés d'avance.
+6. **Esprit** - une lecture, une écoute, une personne à contacter.
 
 ## Le prompt de reset du dimanche
 
-> **Prompt — reset du dimanche**
+> **Prompt - reset du dimanche**
 >
 > C'est dimanche soir. Fais mon reset hebdo en 6 blocs.
 >
@@ -37,6 +37,6 @@ Le dimanche soir n'a pas besoin d'être source d'appréhension. Six prompts orga
 
 ## À retenir
 
-**Le lundi matin ne décide pas de la semaine — le dimanche soir, si.**
+**Le lundi matin ne décide pas de la semaine - le dimanche soir, si.**
 
 Ce rituel ne rend pas nécessairement plus productif en soi, il rend surtout plus présent : la direction de la semaine étant déjà claire, il n'y a plus à se demander quoi faire dès neuf heures. C'est précisément là que se joue la vraie productivité.

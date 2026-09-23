@@ -25,7 +25,7 @@ La recherche d'emploi peut facilement envahir les week-ends. Trois usages d'une 
 
 ## Le prompt pour vérifier son adéquation
 
-> **Prompt — vérification honnête**
+> **Prompt - vérification honnête**
 >
 > Voici mon CV : [colle ou uploade]
 > Voici l'offre : [colle]
@@ -40,7 +40,7 @@ La recherche d'emploi peut facilement envahir les week-ends. Trois usages d'une 
 
 ## Le prompt pour relancer un recruteur
 
-> **Prompt — relance recruteur**
+> **Prompt - relance recruteur**
 >
 > Le recruteur s'appelle [prénom], poste [titre], chez [boîte].
 >

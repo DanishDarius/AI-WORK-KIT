@@ -12,7 +12,7 @@ export const miseEnPlaceGemini: Partial<Record<string, MiseEnPlace>> = {
   F01: {
     outils: [
       {
-        nom: "Application connectee Gmail (compte personnel)",
+        nom: "Application connectée Gmail (compte personnel)",
         lien: "https://support.google.com/gemini/answer/13695044",
         type: "officiel",
       },
@@ -23,7 +23,7 @@ export const miseEnPlaceGemini: Partial<Record<string, MiseEnPlace>> = {
       },
     ],
     tachePlanifiee: {
-      nom: "Tri de la boite mail",
+      nom: "Tri de la boîte mail",
       frequence: "Quotidien (matin)",
       prompt: `<system_prompt>
 Tu es mon assistant de gestion de boite mail.
@@ -45,17 +45,17 @@ Une liste groupee par categorie, avec pour chaque e-mail : expediteur, objet en 
 </output_format>`,
     },
     uneSeuleFois:
-      "Gemini n'a pas de reglage d'approbation automatique/manuelle comme Cowork : le prompt interdit explicitement l'envoi automatique, ce qui joue le meme role.",
+      "Gemini n'a pas de réglage d'approbation automatique/manuelle comme Cowork : le prompt interdit explicitement l'envoi automatique, ce qui joue le même rôle.",
   },
   F02: {
     outils: [
       {
-        nom: "Nano Banana Pro (generation de visuels, natif)",
+        nom: "Nano Banana Pro (génération de visuels, natif)",
         lien: "https://gemini.google/overview/image-generation/",
         type: "officiel",
       },
       {
-        nom: "Application personnalisee MCP Buffer ou Hootsuite (planification multi-reseaux)",
+        nom: "Application personnalisée MCP Buffer ou Hootsuite (planification multi-réseaux)",
         lien: "https://support.google.com/gemini/answer/17209137",
         type: "tiers",
       },
@@ -78,7 +78,7 @@ Public cible : [a preciser]. Ton de marque : [a preciser]. Reseaux vises : [Link
 Un tableau : Jour | Reseau | Texte de la publication | Hashtags | Creneau conseille.
 </output_format>`,
     uneSeuleFois:
-      "Genere les visuels avec Nano Banana Pro, puis programme leur envoi vers Buffer/Hootsuite via l'application personnalisee MCP (frequence : hebdomadaire, jour de preparation du calendrier de la semaine suivante).",
+      "Généré les visuels avec Nano Banana Pro, puis programme leur envoi vers Buffer/Hootsuite via l'application personnalisée MCP (fréquence : hebdomadaire, jour de préparation du calendrier de la semaine suivante).",
   },
   F03: {
     outils: [
@@ -142,13 +142,13 @@ Quatre sections : Resume, Decisions, Actions (tableau Action | Responsable | Ech
   F05: {
     outils: [
       {
-        nom: "Application connectee Google Calendar",
+        nom: "Application connectée Google Calendar",
         lien: "https://support.google.com/gemini/answer/13695044",
         type: "officiel",
       },
     ],
     tachePlanifiee: {
-      nom: "Preparation de l'agenda",
+      nom: "Préparation de l'agenda",
       frequence: "Quotidien (veille au soir ou matin)",
       prompt: `<system_prompt>
 Tu es mon assistant de gestion d'agenda.
@@ -169,17 +169,17 @@ Une liste chronologique des rendez-vous avec alertes en gras pour les conflits, 
 </output_format>`,
     },
     uneSeuleFois:
-      "Le prompt interdit explicitement la creation automatique d'evenements, faute de reglage d'approbation natif sur les actions planifiees Gemini.",
+      "Le prompt interdit explicitement la création automatique d'événements, faute de réglage d'approbation natif sur les actions planifiées Gemini.",
   },
   F06: {
     outils: [
       {
-        nom: "Gem dedie support client (FAQ en source permanente)",
+        nom: "Gem dédié support client (FAQ en source permanente)",
         lien: "https://support.google.com/gemini/answer/15146780",
         type: "officiel",
       },
       {
-        nom: "Application personnalisee MCP Zendesk ou Intercom (si ticketing hors Google)",
+        nom: "Application personnalisée MCP Zendesk ou Intercom (si ticketing hors Google)",
         lien: "https://support.google.com/gemini/answer/17209137",
         type: "tiers",
       },
@@ -217,7 +217,7 @@ La reponse au client (pret a envoyer), ou la mention "A escalader" suivie du mot
     ],
     tachePlanifiee: {
       nom: "Veille sectorielle hebdomadaire",
-      frequence: "Hebdomadaire (debut de semaine)",
+      frequence: "Hebdomadaire (début de semaine)",
       prompt: `<system_prompt>
 Tu es analyste de veille sectorielle.
 </system_prompt>
@@ -266,7 +266,7 @@ Un resume en 5 lignes maximum, suivi des chiffres cles en tableau, puis les grap
   F09: {
     outils: [
       {
-        nom: "Nano Banana Pro (generation d'image native)",
+        nom: "Nano Banana Pro (génération d'image native)",
         lien: "https://gemini.google/overview/image-generation/",
         type: "officiel",
       },
@@ -297,7 +297,7 @@ Le ou les visuels generes, avec une courte explication du choix de composition p
         type: "officiel",
       },
       {
-        nom: "Application personnalisee MCP HubSpot ou Salesforce",
+        nom: "Application personnalisée MCP HubSpot ou Salesforce",
         lien: "https://support.google.com/gemini/answer/17209137",
         type: "tiers",
       },
@@ -379,7 +379,7 @@ Un tableau : Document | Nom propose | Dossier de destination propose | A verifie
   F13: {
     outils: [
       {
-        nom: "Gemini Notebook (analyse ancree sur les sources fournies)",
+        nom: "Gemini Notebook (analyse ancrée sur les sources fournies)",
         lien: "https://workspace.google.com/products/notebooklm/",
         type: "officiel",
       },
@@ -462,7 +462,7 @@ Une diapositive par section : Numero | Titre | Texte | Visuel suggere.
         type: "officiel",
       },
       {
-        nom: "Application personnalisee MCP Asana, Jira ou Monday",
+        nom: "Application personnalisée MCP Asana, Jira ou Monday",
         lien: "https://support.google.com/gemini/answer/17209137",
         type: "tiers",
       },
@@ -492,12 +492,12 @@ Trois sections : Taches en retard, Taches bloquantes, Point de suivi synthetique
   F17: {
     outils: [
       {
-        nom: "Gem dedie prospection commerciale",
+        nom: "Gem dédié prospection commerciale",
         lien: "https://support.google.com/gemini/answer/15146780",
         type: "officiel",
       },
       {
-        nom: "Application connectee Gmail (brouillons uniquement)",
+        nom: "Application connectée Gmail (brouillons uniquement)",
         lien: "https://support.google.com/gemini/answer/13695044",
         type: "officiel",
       },
@@ -554,13 +554,13 @@ Le devis structure : Prestation | Quantite | Prix unitaire | Total, suivi des co
         type: "officiel",
       },
       {
-        nom: "Application personnalisee MCP QuickBooks ou Xero",
+        nom: "Application personnalisée MCP QuickBooks ou Xero",
         lien: "https://support.google.com/gemini/answer/17209137",
         type: "tiers",
       },
     ],
     tachePlanifiee: {
-      nom: "Categorisation des transactions",
+      nom: "Catégorisation des transactions",
       frequence: "Hebdomadaire",
       prompt: `<system_prompt>
 Tu es assistant comptable charge de la categorisation des transactions.
@@ -589,7 +589,7 @@ Un tableau : Date | Libelle | Montant | Categorie proposee | A verifier (oui/non
         type: "officiel",
       },
       {
-        nom: "Application personnalisee MCP du logiciel comptable utilise",
+        nom: "Application personnalisée MCP du logiciel comptable utilisé",
         lien: "https://support.google.com/gemini/answer/17209137",
         type: "tiers",
       },
@@ -619,18 +619,18 @@ Un tableau des ecarts : Operation | Montant | Type d'ecart | Explication probabl
   F21: {
     outils: [
       {
-        nom: "Application connectee Gmail",
+        nom: "Application connectée Gmail",
         lien: "https://support.google.com/gemini/answer/13695044",
         type: "officiel",
       },
       {
-        nom: "Gemini dans Google Sheets (suivi des echeances)",
+        nom: "Gemini dans Google Sheets (suivi des échéances)",
         lien: "https://support.google.com/docs/answer/14218565",
         type: "officiel",
       },
     ],
     tachePlanifiee: {
-      nom: "Suivi des impayes",
+      nom: "Suivi des impayés",
       frequence: "Hebdomadaire",
       prompt: `<system_prompt>
 Tu es assistant de recouvrement, ferme mais courtois.
@@ -654,12 +654,12 @@ Un tableau : Client | Facture | Montant | Jours de retard | Niveau de relance, s
   F22: {
     outils: [
       {
-        nom: "Application connectee Gmail et Google Sheets",
+        nom: "Application connectée Gmail et Google Sheets",
         lien: "https://support.google.com/gemini/answer/13695044",
         type: "officiel",
       },
       {
-        nom: "Application personnalisee MCP de l'ERP utilise (si applicable)",
+        nom: "Application personnalisée MCP de l'ERP utilisé (si applicable)",
         lien: "https://support.google.com/gemini/answer/17209137",
         type: "tiers",
       },
@@ -689,13 +689,13 @@ Un tableau : Commande | Fournisseur | Ancien statut | Nouveau statut | Action a 
   F23: {
     outils: [
       {
-        nom: "Gemini dans Google Sheets (formules de prevision)",
+        nom: "Gemini dans Google Sheets (formules de prévision)",
         lien: "https://support.google.com/docs/answer/14218565",
         type: "officiel",
       },
     ],
     tachePlanifiee: {
-      nom: "Prevision des approvisionnements",
+      nom: "Prévision des approvisionnements",
       frequence: "Mensuel",
       prompt: `<system_prompt>
 Tu es assistant logistique charge des previsions d'approvisionnement.
@@ -719,14 +719,14 @@ Un tableau : Reference | Prevision de demande | Stock actuel | Quantite a comman
   F24: {
     outils: [
       {
-        nom: "Informations Google Maps utilisees automatiquement par Gemini",
+        nom: "Informations Google Maps utilisées automatiquement par Gemini",
         lien: "https://support.google.com/gemini/answer/13695044",
         type: "officiel",
       },
     ],
     tachePlanifiee: {
-      nom: "Planification de tournee",
-      frequence: "Quotidien (veille ou matin du jour de tournee)",
+      nom: "Planification de tournée",
+      frequence: "Quotidien (veille ou matin du jour de tournée)",
       prompt: `<system_prompt>
 Tu es assistant logistique charge de la planification des tournees.
 </system_prompt>
@@ -749,12 +749,12 @@ Un tableau ordonne : Ordre | Adresse | Heure d'arrivee estimee | Alerte eventuel
   F25: {
     outils: [
       {
-        nom: "Gem dedie triage support client",
+        nom: "Gem dédié triage support client",
         lien: "https://support.google.com/gemini/answer/15146780",
         type: "officiel",
       },
       {
-        nom: "Application connectee Gmail ou application personnalisee MCP du ticketing utilise",
+        nom: "Application connectée Gmail ou application personnalisée MCP du ticketing utilisé",
         lien: "https://support.google.com/gemini/answer/17209137",
         type: "tiers",
       },
@@ -860,7 +860,7 @@ Campagne concernee : [nom/ID]. Objectif : [notoriete / conversions / ROAS cible]
 Un diagnostic en 3 points, suivi d'un tableau : Levier | Ajustement propose | Impact attendu.
 </output_format>`,
     uneSeuleFois:
-      "Ask Advisor n'est pas disponible pour les comptes Manager (MCC) au moment de la redaction de ce guide.",
+      "Ask Advisor n'est pas disponible pour les comptes Manager (MCC) au moment de la rédaction de ce guide.",
   },
   F29: {
     outils: [
@@ -999,7 +999,7 @@ Un tableau : Risque | Gravite | Probabilite | Action corrective proposee, trie d
   F34: {
     outils: [
       {
-        nom: "Nano Banana Pro (edition d'une photo existante)",
+        nom: "Nano Banana Pro (édition d'une photo existante)",
         lien: "https://gemini.google/overview/image-generation/",
         type: "officiel",
       },
@@ -1022,7 +1022,7 @@ Image source : [joindre]. Modifications demandees : [a preciser precisement, ele
 L'image modifiee, suivie d'une courte note sur les choix faits en cas d'ambiguite.
 </output_format>`,
     uneSeuleFois:
-      "Point fort reconnu de Gemini : l'edition de photo existante en langage naturel (Nano Banana Pro) est plus aboutie que les outils generalistes equivalents.",
+      "Point fort reconnu de Gemini : l'édition de photo existante en langage naturel (Nano Banana Pro) est plus aboutie que les outils généralistes équivalents.",
   },
   F35: {
     outils: [
@@ -1053,7 +1053,7 @@ Une variante par palette demandee, avec la mention de fidelite pour chacune.
   F36: {
     outils: [
       {
-        nom: "Comprehension video native Gemini (upload direct des rushes)",
+        nom: "Compréhension vidéo native Gemini (upload direct des rushes)",
         lien: "https://ai.google.dev/gemini-api/docs/video-understanding",
         type: "officiel",
       },
@@ -1076,12 +1076,12 @@ Voici le ou les fichiers de rushes : [joindre]. Type de plan recherche : [a prec
 Un tableau trie par pertinence : Fichier | Timecode debut | Timecode fin | Description du plan.
 </output_format>`,
     uneSeuleFois:
-      "Point fort reconnu de Gemini : l'upload direct de fichiers video et leur analyse de contenu sont nativement geres.",
+      "Point fort reconnu de Gemini : l'upload direct de fichiers vidéo et leur analyse de contenu sont nativement gérés.",
   },
   F37: {
     outils: [
       {
-        nom: "Google Vids (montage assiste a partir d'un script)",
+        nom: "Google Vids (montage assisté à partir d'un script)",
         lien: "https://workspace.google.com/products/vids/",
         type: "officiel",
       },
@@ -1135,12 +1135,12 @@ Transcription avec timecodes : [joindre/connecter]. Langue(s) cible(s) des sous-
 Un fichier de sous-titres au format SRT (numero, timecode, texte) pour chaque langue demandee.
 </output_format>`,
     uneSeuleFois:
-      "Aucune activation necessaire au-dela de la transcription (voir F04) ; le doublage automatique YouTube peut completer le sous-titrage pour une video deja publiee.",
+      "Aucune activation nécessaire au-delà de la transcription (voir F04) ; le doublage automatique YouTube peut compléter le sous-titrage pour une vidéo déjà publiée.",
   },
   F39: {
     outils: [
       {
-        nom: "Outil audio dedie tiers (ex. Adobe Podcast Enhance Speech, Audo Studio)",
+        nom: "Outil audio dédié tiers (ex. Adobe Podcast Enhance Speech, Audo Studio)",
         lien: "https://podcast.adobe.com/enhance",
         type: "tiers",
       },
@@ -1163,7 +1163,7 @@ Voici la transcription de l'enregistrement a nettoyer : [joindre]. Problemes con
 Une liste des passages a traiter avec leur timecode, suivie de la recommandation d'outil.
 </output_format>`,
     uneSeuleFois:
-      "Limite connue : Google ne propose pas d'outil natif Gemini de nettoyage audio. Gemini identifie les passages a traiter et transcrit, mais le nettoyage du fichier audio lui-meme passe par un outil dedie (Adobe Podcast Enhance Speech, Audo Studio).",
+      "Limite connue : Google ne propose pas d'outil natif Gemini de nettoyage audio. Gemini identifie les passages à traiter et transcrit, mais le nettoyage du fichier audio lui-même passe par un outil dédié (Adobe Podcast Enhance Speech, Audo Studio).",
   },
   F40: {
     outils: [
@@ -1194,7 +1194,7 @@ Un export par format demande, suivi de la liste des formats necessitant une veri
   F41: {
     outils: [
       {
-        nom: "Synthese vocale native Gemini (voix off multilingue)",
+        nom: "Synthèse vocale native Gemini (voix off multilingue)",
         lien: "https://gemini.google/overview/video-generation/",
         type: "officiel",
       },
@@ -1222,12 +1222,12 @@ Script ou transcription source : [joindre]. Langue(s) cible(s) de la voix off/do
 Le texte adapte pour chaque langue, suivi de la voix off generee, et des passages a verifier pour la synchronisation.
 </output_format>`,
     uneSeuleFois:
-      "Point fort reconnu de Gemini sur cette tache. Pour un doublage integre directement a une video deja publiee sur YouTube, le doublage automatique natif de YouTube est une alternative complementaire.",
+      "Point fort reconnu de Gemini sur cette tâche. Pour un doublage intégré directement à une vidéo déjà publiée sur YouTube, le doublage automatique natif de YouTube est une alternative complémentaire.",
   },
   F42: {
     outils: [
       {
-        nom: "Veo (generation video native dans Gemini et Google Vids)",
+        nom: "Veo (génération vidéo native dans Gemini et Google Vids)",
         lien: "https://gemini.google/overview/video-generation/",
         type: "officiel",
       },
@@ -1250,6 +1250,6 @@ Sequence a illustrer : [decrire precisement : decor, action, mouvement de camera
 La sequence video generee, precedee du brief plan par plan utilise pour la generer.
 </output_format>`,
     uneSeuleFois:
-      "Point fort reconnu de Gemini sur cette tache : generation video texte-vers-video native, directement dans l'app Gemini ou dans Google Vids.",
+      "Point fort reconnu de Gemini sur cette tâche : génération vidéo texte-vers-vidéo native, directement dans l'app Gemini ou dans Google Vids.",
   },
 };

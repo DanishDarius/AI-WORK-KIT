@@ -13,11 +13,11 @@ Au moment de l'auto-évaluation, une bonne partie du travail effectué au cours 
 
 ## Pourquoi le trimestre est presque toujours sous-évalué
 
-La mémoire retient plus facilement les échecs que les réussites : les sprints ratés restent mieux gravés que les projets bouclés avec succès. Le résultat est souvent une liste de trois réalisations citées, alors que le trimestre en comptait réellement une douzaine — ce qui conduit à se présenter en dessous de sa performance réelle, sans que l'entourage professionnel corrige naturellement cette perception.
+La mémoire retient plus facilement les échecs que les réussites : les sprints ratés restent mieux gravés que les projets bouclés avec succès. Le résultat est souvent une liste de trois réalisations citées, alors que le trimestre en comptait réellement une douzaine - ce qui conduit à se présenter en dessous de sa performance réelle, sans que l'entourage professionnel corrige naturellement cette perception.
 
 ## Le Skill à mettre en place
 
-> **Prompt — Skill auto-évaluation trimestrielle**
+> **Prompt - Skill auto-évaluation trimestrielle**
 >
 > Tu es mon rédacteur d'auto-évaluation. Je vais te donner :
 >
@@ -36,7 +36,7 @@ La mémoire retient plus facilement les échecs que les réussites : les sprints
 
 ## Le garde-fou
 
-Aucun chiffre ne doit être inventé. En l'absence de donnée précise, mieux vaut écrire « non mesuré » et proposer une méthode de mesure pour le trimestre suivant — la crédibilité prime toujours sur l'effet recherché.
+Aucun chiffre ne doit être inventé. En l'absence de donnée précise, mieux vaut écrire « non mesuré » et proposer une méthode de mesure pour le trimestre suivant - la crédibilité prime toujours sur l'effet recherché.
 
 ## Questions fréquentes
 

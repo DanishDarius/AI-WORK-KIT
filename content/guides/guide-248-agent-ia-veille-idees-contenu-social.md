@@ -9,18 +9,18 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Multi-outils · 5 min de lecture*
 
-Il est possible de construire un agent IA qui travaille la nuit au service de la croissance sur les réseaux sociaux : il scrape les meilleurs créateurs d'une niche donnée, analyse les contenus déjà publiés, et livre cinq idées chaque matin — non pas un calendrier éditorial figé, mais des idées déjà testées, des formats qui fonctionnent et des angles qu'il aurait été difficile de trouver seul.
+Il est possible de construire un agent IA qui travaille la nuit au service de la croissance sur les réseaux sociaux : il scrape les meilleurs créateurs d'une niche donnée, analyse les contenus déjà publiés, et livre cinq idées chaque matin - non pas un calendrier éditorial figé, mais des idées déjà testées, des formats qui fonctionnent et des angles qu'il aurait été difficile de trouver seul.
 
 ## L'architecture de l'agent
 
-- **Veille** — l'agent collecte chaque nuit les publications virales de cinq comptes cibles.
-- **Analyse** — il identifie les patterns récurrents : accroches, formats, durées, angles.
-- **Génération** — il croise ces patterns avec les contenus déjà publiés pour proposer cinq idées originales.
-- **Validation** — la sélection finale reste humaine, l'agent préparant ensuite le brief créatif correspondant.
+- **Veille** - l'agent collecte chaque nuit les publications virales de cinq comptes cibles.
+- **Analyse** - il identifie les patterns récurrents : accroches, formats, durées, angles.
+- **Génération** - il croise ces patterns avec les contenus déjà publiés pour proposer cinq idées originales.
+- **Validation** - la sélection finale reste humaine, l'agent préparant ensuite le brief créatif correspondant.
 
 ## Le prompt de spécification de l'agent
 
-> **Prompt — spec agent social**
+> **Prompt - spec agent social**
 >
 > Tu es mon agent de croissance social media. Voici ma niche : [décris]. Voici mes 3 comptes références : [liens]. Voici mon style : [décris].
 >

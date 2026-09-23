@@ -19,7 +19,7 @@ Une transcription ne donne jamais que la moitié d'une vidéo. Le rythme, les te
 
 Cette approche prend en compte les deux pistes à la fois, image et son. Elle décrit ce qui se passe visuellement seconde par seconde, l'aligne précisément avec ce qui est dit au même moment, puis résume l'ensemble de la structure sous forme d'un format reproductible ailleurs.
 
-Le vrai intérêt de cette méthode réside dans l'extraction du format lui-même. Au lieu d'un simple résumé du contenu, on obtient un véritable modèle structurel : type d'accroche utilisé, promesse formulée, preuve apportée, tension créée, résolution proposée, appel à l'action final — le tout avec les minutages précis de chaque temps fort.
+Le vrai intérêt de cette méthode réside dans l'extraction du format lui-même. Au lieu d'un simple résumé du contenu, on obtient un véritable modèle structurel : type d'accroche utilisé, promesse formulée, preuve apportée, tension créée, résolution proposée, appel à l'action final - le tout avec les minutages précis de chaque temps fort.
 
 ## Comment s'en servir
 

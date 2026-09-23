@@ -24,7 +24,7 @@ Plutôt que de demander directement « fais-moi une landing page », il est plus
 
 ## Le prompt d'adaptation d'un composant
 
-> **Prompt — adapter un composant**
+> **Prompt - adapter un composant**
 >
 > Voici un composant React/Tailwind que je veux intégrer :
 >

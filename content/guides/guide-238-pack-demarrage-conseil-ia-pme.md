@@ -13,14 +13,14 @@ Vendre du consulting en intelligence artificielle aux PME demande de passer d'un
 
 ## L'offre minimum viable
 
-Un audit IA sur cinq jours, avec pour livrable un rapport accompagné de trois workflows priorisés et d'une feuille de route sur 90 jours. Le prix d'entrée se situe généralement entre 3 000 et 5 000 euros — une offre qui peut être vendue dès la semaine suivante.
+Un audit IA sur cinq jours, avec pour livrable un rapport accompagné de trois workflows priorisés et d'une feuille de route sur 90 jours. Le prix d'entrée se situe généralement entre 3 000 et 5 000 euros - une offre qui peut être vendue dès la semaine suivante.
 
 ## Les quatre supports à préparer
 
-1. **Le questionnaire pré-audit** — une quinzaine de questions sur la stack technologique du client, ses points de friction et son budget.
-2. **La grille de maturité IA** — cinq niveaux permettant de situer le client et d'identifier où il peut aller en 90 jours.
-3. **Le modèle de rapport** — douze pages, sections fixes, prêt à être rempli.
-4. **Le pack de workflows de démarrage** — dix prompts ou Skills prêts à être déployés dans l'outil du client.
+1. **Le questionnaire pré-audit** - une quinzaine de questions sur la stack technologique du client, ses points de friction et son budget.
+2. **La grille de maturité IA** - cinq niveaux permettant de situer le client et d'identifier où il peut aller en 90 jours.
+3. **Le modèle de rapport** - douze pages, sections fixes, prêt à être rempli.
+4. **Le pack de workflows de démarrage** - dix prompts ou Skills prêts à être déployés dans l'outil du client.
 
 ## Les trois secteurs les plus accessibles
 
@@ -28,7 +28,7 @@ Les cabinets comptables, les agences immobilières et les agences marketing : de
 
 ## Le prompt de génération du rapport
 
-> **Prompt — génère ton rapport**
+> **Prompt - génère ton rapport**
 >
 > Voici les réponses du questionnaire pré-audit du client : [colle].
 > Génère un rapport en 5 sections :

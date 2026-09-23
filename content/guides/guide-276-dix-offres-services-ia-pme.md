@@ -9,24 +9,24 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 s
 
 *Multi-outils · 5 min de lecture*
 
-Les PME et entreprises de services paient déjà des montants significatifs pour des prestations liées à l'IA — non pas parce que le sujet est complexe en soi, mais parce qu'elles manquent en interne de quelqu'un capable de le livrer concrètement. Voici dix offres packagées, avec cible, script de vente et trajectoire sur 90 jours.
+Les PME et entreprises de services paient déjà des montants significatifs pour des prestations liées à l'IA - non pas parce que le sujet est complexe en soi, mais parce qu'elles manquent en interne de quelqu'un capable de le livrer concrètement. Voici dix offres packagées, avec cible, script de vente et trajectoire sur 90 jours.
 
 ## Les dix offres
 
-- **Audit IA en 5 jours** — environ 5 000 €. Cartographie des tâches automatisables et plan d'action.
-- **Chatbot client interne** — environ 7 000 €. Connecté à la documentation de l'entreprise (FAQ, contrats, procédures).
-- **Automatisation du reporting** — environ 6 000 €. Extraits Notion, Excel ou CRM transformés en rapports hebdomadaires.
-- **Onboarding employé assisté par IA** — environ 8 000 €. Un assistant qui répond aux questions des nouveaux arrivants pendant trente jours.
-- **Génération de propositions commerciales** — environ 5 500 €. Un système qui rédige la majorité d'une proposition en dix minutes.
-- **Veille concurrentielle** — environ 4 500 € plus 800 € par mois. Un rapport mensuel généré par IA, sous supervision humaine.
-- **Réponses aux appels d'offres** — environ 9 000 €. Bibliothèque de contenus, prompts dédiés et checklist qualité.
-- **Formation d'équipe à l'IA** — environ 6 000 € pour dix personnes. Deux jours en présentiel suivis de quatre semaines d'accompagnement.
-- **Migration de scripts internes vers Claude** — environ 7 500 €. Remplacement de processus Zapier vieillissants.
-- **Lancement d'un Skill métier** — environ 5 000 €. Brief, construction, test, documentation, formation.
+- **Audit IA en 5 jours** - environ 5 000 €. Cartographie des tâches automatisables et plan d'action.
+- **Chatbot client interne** - environ 7 000 €. Connecté à la documentation de l'entreprise (FAQ, contrats, procédures).
+- **Automatisation du reporting** - environ 6 000 €. Extraits Notion, Excel ou CRM transformés en rapports hebdomadaires.
+- **Onboarding employé assisté par IA** - environ 8 000 €. Un assistant qui répond aux questions des nouveaux arrivants pendant trente jours.
+- **Génération de propositions commerciales** - environ 5 500 €. Un système qui rédige la majorité d'une proposition en dix minutes.
+- **Veille concurrentielle** - environ 4 500 € plus 800 € par mois. Un rapport mensuel généré par IA, sous supervision humaine.
+- **Réponses aux appels d'offres** - environ 9 000 €. Bibliothèque de contenus, prompts dédiés et checklist qualité.
+- **Formation d'équipe à l'IA** - environ 6 000 € pour dix personnes. Deux jours en présentiel suivis de quatre semaines d'accompagnement.
+- **Migration de scripts internes vers Claude** - environ 7 500 €. Remplacement de processus Zapier vieillissants.
+- **Lancement d'un Skill métier** - environ 5 000 €. Brief, construction, test, documentation, formation.
 
 ## Le script de premier contact
 
-> **Prompt — script premier contact**
+> **Prompt - script premier contact**
 >
 > Bonjour [prénom],
 >

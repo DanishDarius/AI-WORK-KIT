@@ -17,7 +17,7 @@ La plupart des créateurs cherchent « ce qui marche » dans leur niche, s'en in
 
 ## Le prompt à copier
 
-> **Prompt — gap finder**
+> **Prompt - gap finder**
 >
 > Tu es analyste contenu senior.
 >
@@ -35,7 +35,7 @@ La plupart des créateurs cherchent « ce qui marche » dans leur niche, s'en in
 
 ## L'erreur de débutant à éviter
 
-Ne pas fournir d'angle personnel. Sans un positionnement propre, l'IA propose la même stratégie que celle des concurrents — c'est justement ce positionnement personnel qui fait la différence dans le résultat.
+Ne pas fournir d'angle personnel. Sans un positionnement propre, l'IA propose la même stratégie que celle des concurrents - c'est justement ce positionnement personnel qui fait la différence dans le résultat.
 
 ## À retenir
 

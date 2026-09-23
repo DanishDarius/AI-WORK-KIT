@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
-// GET /api/metiers/[slug] — détail d'un métier + ses tâches (via la table de
+// GET /api/metiers/[slug] - détail d'un métier + ses tâches (via la table de
 // liaison metiers_taches, une tâche pouvant appartenir à plusieurs métiers)
 // + le chemin choisi par l'utilisateur connecté pour CE métier.
 export async function GET(

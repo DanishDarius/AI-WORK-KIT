@@ -13,29 +13,29 @@ Inutile de collectionner deux cents prompts différents. Une dizaine, couvrant l
 
 ## Les dix prompts à retenir
 
-1. Le brief inversé — « Reformule mon problème en 3 phrases avant de répondre. »
+1. Le brief inversé - « Reformule mon problème en 3 phrases avant de répondre. »
 
-2. Le critique — « Liste ce qui cloche dans ce texte, par ordre de gravité. »
+2. Le critique - « Liste ce qui cloche dans ce texte, par ordre de gravité. »
 
-3. Le résumé exécutif — « 5 bullets, sans jargon, pour mon boss pressé. »
+3. Le résumé exécutif - « 5 bullets, sans jargon, pour mon boss pressé. »
 
-4. L'arbitre — « Donne-moi les 2 meilleures options + une recommandation argumentée. »
+4. L'arbitre - « Donne-moi les 2 meilleures options + une recommandation argumentée. »
 
-5. Le tri — « Classe ces items par impact / effort. »
+5. Le tri - « Classe ces items par impact / effort. »
 
-6. Le brouillon — « Première version, brute, qu'on raffine ensemble. »
+6. Le brouillon - « Première version, brute, qu'on raffine ensemble. »
 
-7. Le changement d'angle — « Et si on attaquait ce problème depuis l'angle opposé ? »
+7. Le changement d'angle - « Et si on attaquait ce problème depuis l'angle opposé ? »
 
-8. La checklist — « Transforme ça en checklist exploitable. »
+8. La checklist - « Transforme ça en checklist exploitable. »
 
-9. Le bilan rétrospectif — « Qu'est-ce qui a marché, qu'est-ce qui a foiré, quoi changer ? »
+9. Le bilan rétrospectif - « Qu'est-ce qui a marché, qu'est-ce qui a foiré, quoi changer ? »
 
-10. La reformulation de vérification — « Réexplique-moi ce que je viens de dire pour vérifier que tu as compris. »
+10. La reformulation de vérification - « Réexplique-moi ce que je viens de dire pour vérifier que tu as compris. »
 
 ## Le prompt combiné
 
-> **Prompt — combo**
+> **Prompt - combo**
 >
 > Avant de me répondre :
 > 1. Reformule mon problème (#1)

@@ -17,7 +17,7 @@ La grande majorité des allers-retours en phase de design viennent d'un brief tr
 
 ## Le prompt du brief en une page
 
-> **Prompt — brief design**
+> **Prompt - brief design**
 >
 > Tu es directrice de création. Transforme mes notes en brief structuré.
 >

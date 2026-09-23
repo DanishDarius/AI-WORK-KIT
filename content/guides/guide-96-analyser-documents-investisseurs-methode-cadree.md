@@ -21,7 +21,7 @@ Créer un espace de travail dédié à l'entreprise étudiée. Uploader : le der
 
 ## Le prompt à copier
 
-> **Prompt — analyse cadrée**
+> **Prompt - analyse cadrée**
 >
 > Tu es mon analyste actions. Voici les documents officiels que je te fournis : [liste les fichiers]
 >

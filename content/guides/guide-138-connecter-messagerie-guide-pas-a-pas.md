@@ -21,7 +21,7 @@ Ouvrir les paramètres de l'assistant, section Connecteurs. Cliquer sur Gmail, p
 
 ## La première commande
 
-> **Prompt — premier test**
+> **Prompt - premier test**
 >
 > Tu as accès à mon Gmail. Cherche les 10 e-mails les plus importants des 7 derniers jours et classe-les par urgence.
 >

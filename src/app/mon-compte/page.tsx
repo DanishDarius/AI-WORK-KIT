@@ -15,7 +15,7 @@ export default function Compte() {
     <>
       <Back />
       <Intro eyebrow="Votre espace personnel" title="Ma progression">
-        Retrouvez votre avancement et poursuivez votre pratique à votre rythme.
+        Ce que vous avez fait, votre série en cours, et la suite.
       </Intro>
       <div className="aw-personal space-y-8">
         {!progression.data ? (
@@ -55,7 +55,7 @@ export default function Compte() {
           <ResourceState error={error} retry={retry} />
         ) : (
           <section className="panel">
-            <h2>Informations du compte</h2>
+            <h2>Votre compte</h2>
             <dl className="mt-6 divide-y divide-[var(--border)]">
               <div className="py-4">
                 <dt className="eyebrow">Adresse email</dt>

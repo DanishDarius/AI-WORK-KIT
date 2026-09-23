@@ -19,11 +19,11 @@ export const miseEnPlaceClaude: Partial<Record<string, MiseEnPlace>> = {
       },
     ],
     tachePlanifiee: {
-      nom: "Tri de la boite mail",
+      nom: "Tri de la boîte mail",
       frequence: "Quotidien (matin)",
       modeApprobation: "Automatique",
       raisonApprobation:
-        "Classe et redige des brouillons, n'envoie rien automatiquement.",
+        "Classe et rédige des brouillons, n'envoie rien automatiquement.",
       prompt: `<system_prompt>
 Tu es mon assistant de gestion de boite mail.
 </system_prompt>
@@ -52,12 +52,12 @@ Une liste groupee par categorie, avec pour chaque e-mail : expediteur, objet en 
         type: "officiel",
       },
       {
-        nom: "MCP Buffer (publication programmee)",
+        nom: "MCP Buffer (publication programmée)",
         lien: "https://buffer.com/mcp",
         type: "tiers",
       },
       {
-        nom: "MCP Hootsuite (publication programmee)",
+        nom: "MCP Hootsuite (publication programmée)",
         lien: "https://www.hootsuite.com/integrations/mcp",
         type: "tiers",
       },
@@ -80,7 +80,7 @@ Public cible : [a preciser]. Ton de marque : [a preciser]. Reseaux vises : [Link
 Un tableau : Jour | Reseau | Texte de la publication | Hashtags | Creneau conseille.
 </output_format>`,
     uneSeuleFois:
-      "Une fois les publications validees, programmez leur envoi vers Buffer ou Hootsuite via le connecteur MCP (frequence conseillee : hebdomadaire, au moment de preparer le calendrier de la semaine suivante).",
+      "Une fois les publications validées, programmez leur envoi vers Buffer ou Hootsuite via le connecteur MCP (fréquence conseillée : hebdomadaire, au moment de préparer le calendrier de la semaine suivante).",
   },
   F03: {
     outils: [
@@ -117,7 +117,7 @@ Le document corrigé en entier, suivi d'une liste à puces des changements de fo
         type: "officiel",
       },
       {
-        nom: "Integration Fireflies (capture automatique de reunions, optionnelle)",
+        nom: "Intégration Fireflies (capture automatique de réunions, optionnelle)",
         lien: "https://github.com/anthropics/knowledge-work-plugins",
         type: "tiers",
       },
@@ -141,11 +141,11 @@ Voici la transcription ou l'enregistrement de la reunion : [coller/joindre]. Par
 Quatre sections : Resume, Decisions, Actions (tableau Action | Responsable | Echeance), Points en suspens.
 </output_format>`,
     tachePlanifiee: {
-      nom: "Compte-rendu de reunion recurrente",
-      frequence: "Chaque semaine, le jour de la reunion recurrente",
+      nom: "Compte-rendu de réunion récurrente",
+      frequence: "Chaque semaine, le jour de la réunion récurrente",
       modeApprobation: "Automatique",
       raisonApprobation:
-        "Lit un enregistrement et redige un compte-rendu, n'envoie rien automatiquement.",
+        "Lit un enregistrement et rédige un compte-rendu, n'envoie rien automatiquement.",
       optionnelle: true,
       prompt: `Chaque semaine, prends le dernier enregistrement de la reunion recurrente dans le dossier partage et produis le compte-rendu au format habituel (Resume, Decisions, Actions, Points en suspens).`,
     },
@@ -168,7 +168,7 @@ Quatre sections : Resume, Decisions, Actions (tableau Action | Responsable | Ech
       frequence: "Quotidien (veille au soir ou matin)",
       modeApprobation: "Manuelle",
       raisonApprobation:
-        "Cree ou modifie des evenements et invitations visibles par d'autres personnes.",
+        "Crée ou modifie des événements et invitations visibles par d'autres personnes.",
       prompt: `<system_prompt>
 Tu es mon assistant de gestion d'agenda.
 </system_prompt>
@@ -196,7 +196,7 @@ Une liste chronologique des rendez-vous avec alertes en gras pour les conflits, 
         type: "officiel",
       },
       {
-        nom: "MCP communautaire Zendesk (a verifier avant mise en prod)",
+        nom: "MCP communautaire Zendesk (à vérifier avant mise en prod)",
         lien: "https://github.com/michaelrice/zendesk-mcp",
         type: "tiers",
       },
@@ -222,7 +222,7 @@ La reponse au client (pret a envoyer), ou la mention "A escalader" suivie du mot
   F07: {
     outils: [
       {
-        nom: "Recherche web native de Claude (aucune activation necessaire)",
+        nom: "Recherche web native de Claude (aucune activation nécessaire)",
         lien: "https://claude.ai/",
         type: "officiel",
       },
@@ -237,7 +237,7 @@ La reponse au client (pret a envoyer), ou la mention "A escalader" suivie du mot
       frequence: "Hebdomadaire",
       modeApprobation: "Automatique",
       raisonApprobation:
-        "Ne fait que lire et synthetiser des informations publiques, aucune action externe.",
+        "Ne fait que lire et synthétiser des informations publiques, aucune action externe.",
       prompt: `<system_prompt>
 Tu es analyste de veille sectorielle.
 </system_prompt>
@@ -314,7 +314,7 @@ Objectif du visuel : [a preciser]. Format cible : [post Instagram, banniere, etc
 Le brief ecrit, suivi des visuels generes.
 </output_format>`,
     uneSeuleFois:
-      "La generation d'images native de Claude reste en retrait sur ce type de visuel. Pour un rendu marketing fiable, privilegiez Gemini en complement.",
+      "La génération d'images native de Claude reste en retrait sur ce type de visuel. Pour un rendu marketing fiable, privilégiez Gemini en complément.",
   },
   F10: {
     outils: [
@@ -339,7 +339,7 @@ Le brief ecrit, suivi des visuels generes.
       frequence: "Hebdomadaire",
       modeApprobation: "Manuelle",
       raisonApprobation:
-        "Modifie des fiches CRM partagees avec l'equipe commerciale.",
+        "Modifie des fiches CRM partagées avec l'équipe commerciale.",
       prompt: `<system_prompt>
 Tu es assistant de gestion de base CRM.
 </system_prompt>
@@ -408,7 +408,7 @@ Un tableau avec une ligne par document et une colonne par champ demande.
       frequence: "Hebdomadaire",
       modeApprobation: "Automatique",
       raisonApprobation:
-        "Classement et rangement de documents, reversible, aucune suppression.",
+        "Classement et rangement de documents, réversible, aucune suppression.",
       prompt: `<system_prompt>
 Tu es assistant de classement documentaire.
 </system_prompt>
@@ -437,7 +437,7 @@ Un journal des actions effectuees (Document | Action | Destination) et la liste 
         type: "officiel",
       },
       {
-        nom: "Connecteur Google Drive (pour recuperer les pieces si besoin)",
+        nom: "Connecteur Google Drive (pour récupérer les pièces si besoin)",
         lien: "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities",
         type: "officiel",
       },
@@ -525,7 +525,7 @@ Un fichier PowerPoint complet, diapositive par diapositive.
         type: "officiel",
       },
       {
-        nom: "Plugin Atlassian (Jira/Confluence, si utilise)",
+        nom: "Plugin Atlassian (Jira/Confluence, si utilisé)",
         lien: "https://github.com/anthropics/claude-plugins-official",
         type: "officiel",
       },
@@ -535,7 +535,7 @@ Un fichier PowerPoint complet, diapositive par diapositive.
       frequence: "Quotidien ou hebdomadaire selon le rythme du projet",
       modeApprobation: "Manuelle",
       raisonApprobation:
-        "Modifie un outil de suivi de projet visible par toute l'equipe.",
+        "Modifie un outil de suivi de projet visible par toute l'équipe.",
       prompt: `<system_prompt>
 Tu es assistant de suivi de projet.
 </system_prompt>
@@ -565,10 +565,10 @@ Trois sections : Taches en retard, Taches bloquees, Point d'avancement (5 lignes
     ],
     tachePlanifiee: {
       nom: "Relances commerciales",
-      frequence: "Hebdomadaire (jour de relance defini)",
+      frequence: "Hebdomadaire (jour de relance défini)",
       modeApprobation: "Manuelle",
       raisonApprobation:
-        "Envoie des messages de prospection a des tiers externes.",
+        "Envoie des messages de prospection à des tiers externes.",
       prompt: `<system_prompt>
 Tu es commercial charge de la prospection.
 </system_prompt>
@@ -596,7 +596,7 @@ Un tableau : Prospect | Dernier contact | Message de relance propose.
         type: "officiel",
       },
       {
-        nom: "Plugin Sales (donnees client, si CRM connecte)",
+        nom: "Plugin Sales (données client, si CRM connecté)",
         lien: "https://github.com/anthropics/knowledge-work-plugins",
         type: "officiel",
       },
@@ -638,10 +638,10 @@ Un document (Word ou Excel selon le format demande) pret a envoyer, avec le deta
       },
     ],
     tachePlanifiee: {
-      nom: "Categorisation des transactions",
+      nom: "Catégorisation des transactions",
       frequence: "Hebdomadaire",
       modeApprobation: "Manuelle",
-      raisonApprobation: "Touche des donnees comptables sensibles.",
+      raisonApprobation: "Touche des données comptables sensibles.",
       prompt: `<system_prompt>
 Tu es assistant comptable.
 </system_prompt>
@@ -661,7 +661,7 @@ Un tableau : Transaction | Montant | Categorie proposee | Confiance (haute/moyen
 </output_format>`,
     },
     uneSeuleFois:
-      "Deja connecte votre logiciel comptable pour une autre tache ? Vous n'avez rien a refaire.",
+      "Déjà connecté votre logiciel comptable pour une autre tâche ? Vous n'avez rien à refaire.",
   },
   F20: {
     outils: [
@@ -676,17 +676,17 @@ Un tableau : Transaction | Montant | Categorie proposee | Confiance (haute/moyen
         type: "officiel",
       },
       {
-        nom: "Connecteur QuickBooks ou Xero (meme mise en place que F19)",
+        nom: "Connecteur QuickBooks ou Xero (même mise en place que F19)",
         lien: "https://github.com/intuit/quickbooks-online-mcp-server",
         type: "officiel",
       },
     ],
     tachePlanifiee: {
       nom: "Rapprochement bancaire",
-      frequence: "Hebdomadaire ou mensuelle selon la cloture",
+      frequence: "Hebdomadaire ou mensuelle selon la clôture",
       modeApprobation: "Manuelle",
       raisonApprobation:
-        "Touche des donnees financieres sensibles ; les ecarts doivent etre valides avant correction.",
+        "Touche des données financières sensibles ; les écarts doivent être validés avant correction.",
       prompt: `<system_prompt>
 Tu es assistant comptable charge du rapprochement bancaire.
 </system_prompt>
@@ -762,7 +762,7 @@ Un tableau : Client | Facture | Jours de retard | Message de relance propose.
         type: "officiel",
       },
       {
-        nom: "Connecteur communautaire Dynamics 365 (a valider avant prod, si ERP Dynamics)",
+        nom: "Connecteur communautaire Dynamics 365 (à valider avant prod, si ERP Dynamics)",
         lien: "https://github.com/zhound420/D365FO-claude-connector",
         type: "tiers",
       },
@@ -772,7 +772,7 @@ Un tableau : Client | Facture | Jours de retard | Message de relance propose.
       frequence: "Quotidien",
       modeApprobation: "Manuelle",
       raisonApprobation:
-        "Touche des donnees partagees avec des fournisseurs externes.",
+        "Touche des données partagées avec des fournisseurs externes.",
       prompt: `<system_prompt>
 Tu es assistant logistique charge du suivi des commandes.
 </system_prompt>
@@ -795,7 +795,7 @@ Un tableau : Commande | Fournisseur | Statut | Action proposee.
   F23: {
     outils: [
       {
-        nom: "Plugin Data (requetes SQL, analyse de tendances)",
+        nom: "Plugin Data (requêtes SQL, analyse de tendances)",
         lien: "https://github.com/anthropics/knowledge-work-plugins",
         type: "officiel",
       },
@@ -806,11 +806,11 @@ Un tableau : Commande | Fournisseur | Statut | Action proposee.
       },
     ],
     tachePlanifiee: {
-      nom: "Prevision de la demande",
+      nom: "Prévision de la demande",
       frequence: "Mensuelle",
       modeApprobation: "Automatique",
       raisonApprobation:
-        "Produit un rapport de prevision, ne passe aucune commande.",
+        "Produit un rapport de prévision, ne passe aucune commande.",
       prompt: `<system_prompt>
 Tu es analyste supply chain.
 </system_prompt>
@@ -833,7 +833,7 @@ Un tableau Excel : Reference | Prevision de demande | Stock actuel | Quantite a 
   F24: {
     outils: [
       {
-        nom: "MCP Google Maps (serveur de reference, a heberger soi-meme ou via un hebergeur MCP)",
+        nom: "MCP Google Maps (serveur de référence, à héberger soi-même ou via un hébergeur MCP)",
         lien: "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps",
         type: "officiel",
       },
@@ -866,10 +866,10 @@ Un tableau ordonne : Ordre | Adresse | Heure d'arrivee estimee | Alerte eventuel
     ],
     tachePlanifiee: {
       nom: "Tri des demandes clients",
-      frequence: "Quotidien, plusieurs fois par jour si volume eleve",
+      frequence: "Quotidien, plusieurs fois par jour si volume élevé",
       modeApprobation: "Manuelle",
       raisonApprobation:
-        "Oriente des demandes clients, contact potentiellement visible par le client.",
+        "Orienté des demandes clients, contact potentiellement visible par le client.",
       prompt: `<system_prompt>
 Tu es assistant de tri des demandes clients.
 </system_prompt>
@@ -897,7 +897,7 @@ Un tableau : Demande | Sujet | Urgence | Equipe assignee.
         type: "officiel",
       },
       {
-        nom: "Skill native Excel (synthese chiffree)",
+        nom: "Skill native Excel (synthèse chiffrée)",
         lien: "https://support.claude.com/en/articles/12650343-use-claude-for-excel",
         type: "officiel",
       },
@@ -954,12 +954,12 @@ Un tableau : Segment | Criteres | Taille | Description courte.
         type: "officiel",
       },
       {
-        nom: "MCP tiers Google Ads (a evaluer avant connexion d'un compte reel)",
+        nom: "MCP tiers Google Ads (à évaluer avant connexion d'un compte réel)",
         lien: "https://mcp-ads.com/",
         type: "tiers",
       },
       {
-        nom: "MCP tiers Meta Ads (a evaluer avant connexion d'un compte reel)",
+        nom: "MCP tiers Meta Ads (à évaluer avant connexion d'un compte réel)",
         lien: "https://pasqualepillitteri.it/en/news/1707/official-meta-ads-mcp-claude-29-tools-2026",
         type: "tiers",
       },
@@ -969,7 +969,7 @@ Un tableau : Segment | Criteres | Taille | Description courte.
       frequence: "Hebdomadaire",
       modeApprobation: "Manuelle",
       raisonApprobation:
-        "Modifie des budgets publicitaires reels sur des plateformes externes.",
+        "Modifie des budgets publicitaires réels sur des plateformes externes.",
       prompt: `<system_prompt>
 Tu es assistant en optimisation publicitaire.
 </system_prompt>
@@ -1054,7 +1054,7 @@ Un plan de formation structure par module (Objectif | Contenu | Duree | Evaluati
   F31: {
     outils: [
       {
-        nom: "Lecture d'image/plan native de Claude (aucune activation necessaire)",
+        nom: "Lecture d'image/plan native de Claude (aucune activation nécessaire)",
         lien: "https://claude.ai/",
         type: "officiel",
       },
@@ -1080,7 +1080,7 @@ Le total par element demande, suivi d'une liste des zones incertaines.
   F32: {
     outils: [
       {
-        nom: "Connecteur Google Drive ou Microsoft 365 (depot des photos de chantier)",
+        nom: "Connecteur Google Drive ou Microsoft 365 (dépôt des photos de chantier)",
         lien: "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities",
         type: "officiel",
       },
@@ -1162,7 +1162,7 @@ Image source : [joindre]. Modifications demandees : [a preciser precisement, ele
 L'image modifiee (ou le brief detaille si la retouche doit etre faite ailleurs), suivie de la liste des limites rencontrees.
 </output_format>`,
     uneSeuleFois:
-      "La retouche d'image fine reste une limite connue de Claude : privilegiez Gemini pour ce cas precis, Claude pouvant rediger le brief de retouche et piloter Canva/Adobe pour les modifications simples.",
+      "La retouche d'image fine reste une limite connue de Claude : privilégiez Gemini pour ce cas précis, Claude pouvant rédiger le brief de retouche et piloter Canva/Adobe pour les modifications simples.",
   },
   F35: {
     outils: [
@@ -1190,7 +1190,7 @@ Visuel source : [joindre]. Palettes de couleurs souhaitees : [liste des variante
 Une variante par palette demandee, avec une note de fidelite pour chacune.
 </output_format>`,
     uneSeuleFois:
-      "Meme limite que la retouche d'image : Gemini est recommande pour un rendu fiable sur des variantes colorimetriques complexes.",
+      "Même limite que la retouche d'image : Gemini est recommandé pour un rendu fiable sur des variantes colorimétriques complexes.",
   },
   F36: {
     outils: [
@@ -1221,7 +1221,7 @@ Un tableau : Rush | Timecode | Description du plan | Pertinence.
   F37: {
     outils: [
       {
-        nom: "MCP officiel Descript (meme mise en place que F36)",
+        nom: "MCP officiel Descript (même mise en place que F36)",
         lien: "https://help.descript.com/api-and-mcp/mcp",
         type: "officiel",
       },
@@ -1247,7 +1247,7 @@ La liste ordonnee des passages retenus avec timecodes, suivie de la confirmation
   F38: {
     outils: [
       {
-        nom: "MCP officiel Descript (utile si le fichier video est deja dans ce projet)",
+        nom: "MCP officiel Descript (utile si le fichier vidéo est déjà dans ce projet)",
         lien: "https://help.descript.com/api-and-mcp/mcp",
         type: "officiel",
       },
@@ -1270,7 +1270,7 @@ Transcription avec timecodes : [joindre/connecter]. Langue(s) cible(s) des sous-
 Un fichier de sous-titres au format SRT (numero, timecode, texte) pour chaque langue demandee.
 </output_format>`,
     uneSeuleFois:
-      "Aucune activation necessaire au-dela de la transcription (voir F04).",
+      "Aucune activation nécessaire au-delà de la transcription (voir F04).",
   },
   F39: {
     outils: [
@@ -1306,7 +1306,7 @@ Le fichier audio nettoye, suivi de la liste des traitements appliques.
         type: "officiel",
       },
       {
-        nom: "MCP Descript (si le montage est deja dans ce projet)",
+        nom: "MCP Descript (si le montage est déjà dans ce projet)",
         lien: "https://help.descript.com/api-and-mcp/mcp",
         type: "officiel",
       },
@@ -1332,7 +1332,7 @@ Un export video par format demande, avec une note pour chaque format sur la qual
   F41: {
     outils: [
       {
-        nom: "MCP officiel ElevenLabs (meme mise en place que F39)",
+        nom: "MCP officiel ElevenLabs (même mise en place que F39)",
         lien: "https://github.com/elevenlabs/elevenlabs-mcp",
         type: "officiel",
       },
@@ -1355,7 +1355,7 @@ Script original : [joindre/coller]. Langue cible : [a preciser]. Contraintes de 
 Un tableau : Timecode | Texte original | Texte adapte pour le doublage.
 </output_format>`,
     uneSeuleFois:
-      "Limite connue de Claude sur la generation vocale native : ElevenLabs (via le MCP) ou Gemini restent les solutions fiables, Claude servant a preparer et structurer le texte a doubler.",
+      "Limite connue de Claude sur la génération vocale native : ElevenLabs (via le MCP) ou Gemini restent les solutions fiables, Claude servant à préparer et structurer le texte à doubler.",
   },
   F42: {
     outils: [],
@@ -1377,6 +1377,6 @@ Objectif de la sequence : [a preciser]. Duree visee : [a preciser]. Style visuel
 Le brief plan par plan, suivi du prompt final pret a copier dans Gemini.
 </output_format>`,
     uneSeuleFois:
-      "Aucun outil natif Claude pour la generation video. Gemini (Veo) est la solution recommandee ; Claude peut en revanche rediger le brief/scenario detaille a fournir a Gemini.",
+      "Aucun outil natif Claude pour la génération vidéo. Gemini (Veo) est la solution recommandée ; Claude peut en revanche rédiger le brief/scénario détaillé à fournir à Gemini.",
   },
 };

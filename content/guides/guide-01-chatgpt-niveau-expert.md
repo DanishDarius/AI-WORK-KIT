@@ -1,10 +1,10 @@
 ---
 Guide original : "UPGRADE : les 5 réglages qui font passer ChatGPT de 10 % à 100 %"
 Source : saadiakaram.ai/guides/5-reglages-chatgpt-setup
-Statut : reformulé (texte) — voir ressources-visuelles.md, réf. #4, pour les icônes décoratives d'origine (à consulter sur la page source, non copiées ici)
+Statut : reformulé (texte) - voir ressources-visuelles.md, réf. #4, pour les icônes décoratives d'origine (à consulter sur la page source, non copiées ici)
 ---
 
-[IMAGE — réf. #4 — icônes décoratives d'interface, dispersées dans les sections 01 à 06 de la page source : voir ressources-visuelles.md]
+[IMAGE - réf. #4 - icônes décoratives d'interface, dispersées dans les sections 01 à 06 de la page source : voir ressources-visuelles.md]
 
 # ChatGPT niveau expert : les 5 réglages qui changent vraiment la donne
 
@@ -26,17 +26,17 @@ Chaque réglage est traité en une section autonome : à quoi il sert concrètem
 
 **Tu débutes avec ChatGPT ?** Commence par le cadre ci-dessous, parcours les réglages 1 et 2, puis termine par l'exercice de mise en pratique. Les réglages 3 à 5 sont optionnels : tu n'as besoin ni de brancher ta boîte mail, ni de payer un abonnement, ni de programmer quoi que ce soit pour compléter ce parcours avec succès.
 
-Compte environ 30 minutes pour la version débutant. Connecte-toi à ChatGPT depuis ton navigateur, avec un compte perso ou pro autorisé — sache que les noms de fonctionnalités et leur disponibilité varient selon le type de compte et l'appareil utilisé.
+Compte environ 30 minutes pour la version débutant. Connecte-toi à ChatGPT depuis ton navigateur, avec un compte perso ou pro autorisé - sache que les noms de fonctionnalités et leur disponibilité varient selon le type de compte et l'appareil utilisé.
 
 *Avant de te lancer, pense à vérifier tes réglages de confidentialité et tes préférences.*
 
 ---
 
-## 01 — L'application de bureau : ton outil toujours accessible
+## 01 - L'application de bureau : ton outil toujours accessible
 
-L'application desktop n'est qu'une porte d'entrée alternative vers ChatGPT — elle n'est pas obligatoire pour suivre ce guide, le navigateur fait très bien l'affaire. Si tu choisis de l'installer, télécharge-la uniquement depuis le site officiel et vérifie la compatibilité avec ton système avant de lancer l'installation.
+L'application desktop n'est qu'une porte d'entrée alternative vers ChatGPT - elle n'est pas obligatoire pour suivre ce guide, le navigateur fait très bien l'affaire. Si tu choisis de l'installer, télécharge-la uniquement depuis le site officiel et vérifie la compatibilité avec ton système avant de lancer l'installation.
 
-Sur Mac, la fonction *Work with Apps* permet à ChatGPT de lire le contenu d'applications compatibles directement dans tes échanges, sous réserve des autorisations que tu accordes. Un bandeau t'indique toujours quelle application et quel contenu sont utilisés — cette fonction ne donne jamais un accès automatique à tout ce qui est affiché à l'écran.
+Sur Mac, la fonction *Work with Apps* permet à ChatGPT de lire le contenu d'applications compatibles directement dans tes échanges, sous réserve des autorisations que tu accordes. Un bandeau t'indique toujours quelle application et quel contenu sont utilisés - cette fonction ne donne jamais un accès automatique à tout ce qui est affiché à l'écran.
 
 **À tester (navigateur ou app) :**
 > Voici un texte fictif à résumer :
@@ -44,13 +44,13 @@ Sur Mac, la fonction *Work with Apps* permet à ChatGPT de lire le contenu d'app
 > Résume uniquement ce texte en 3 puces. N'ajoute aucune information.
 > Si tu ne peux pas lire le contenu fourni, dis-le.
 
-*Vérification : retrouve dans le texte original ce qui justifie chaque puce du résumé. Pour ce premier essai, un extrait fictif collé directement suffit largement — pas besoin d'ouvrir l'accès à d'autres applications.*
+*Vérification : retrouve dans le texte original ce qui justifie chaque puce du résumé. Pour ce premier essai, un extrait fictif collé directement suffit largement - pas besoin d'ouvrir l'accès à d'autres applications.*
 
 ---
 
-## 02 — L'espace Projet : un dossier pour garder ton contexte
+## 02 - L'espace Projet : un dossier pour garder ton contexte
 
-Un Projet regroupe conversations, fichiers et instructions dans un même espace. Disponible aussi bien en gratuit qu'en payant (avec des limites différentes selon le plan), il aide à garder le fil d'une tâche dans le temps — sans pour autant garantir que chaque ancienne information sera toujours retrouvée ou bien interprétée.
+Un Projet regroupe conversations, fichiers et instructions dans un même espace. Disponible aussi bien en gratuit qu'en payant (avec des limites différentes selon le plan), il aide à garder le fil d'une tâche dans le temps - sans pour autant garantir que chaque ancienne information sera toujours retrouvée ou bien interprétée.
 
 **Comment faire :**
 1. Dans la barre latérale, clique sur *Nouveau projet*.
@@ -70,11 +70,11 @@ Un Projet regroupe conversations, fichiers et instructions dans un même espace.
 
 ---
 
-## 03 — Les connecteurs : n'ouvre que l'accès dont tu as besoin
+## 03 - Les connecteurs : n'ouvre que l'accès dont tu as besoin
 
-*Optionnel — à voir une fois les bases acquises.*
+*Optionnel - à voir une fois les bases acquises.*
 
-Les applications connectées donnent à ChatGPT accès à certains services (fichiers, messages...), et selon le service, peuvent aussi lui permettre d'agir à ta place. Ce menu peut aussi s'appeler « Plugins » selon les cas ; sa disponibilité dépend de l'app, du plan, de la région, de ton rôle et de ton espace de travail — il n'y a pas de règle simple du type « payant et hors Europe » qui s'applique partout.
+Les applications connectées donnent à ChatGPT accès à certains services (fichiers, messages...), et selon le service, peuvent aussi lui permettre d'agir à ta place. Ce menu peut aussi s'appeler « Plugins » selon les cas ; sa disponibilité dépend de l'app, du plan, de la région, de ton rôle et de ton espace de travail - il n'y a pas de règle simple du type « payant et hors Europe » qui s'applique partout.
 
 **Avant de connecter quoi que ce soit :**
 1. Clarifie la tâche : un simple extrait collé manuellement suffit-il ?
@@ -86,11 +86,11 @@ Les applications connectées donnent à ChatGPT accès à certains services (fic
 
 ---
 
-## 04 — Le GPT sur mesure : capitalise sur une méthode qui marche
+## 04 - Le GPT sur mesure : capitalise sur une méthode qui marche
 
-*Optionnel — vérifie d'abord que la création est accessible sur ton compte.*
+*Optionnel - vérifie d'abord que la création est accessible sur ton compte.*
 
-Un GPT personnalisé combine des instructions fixes avec, si besoin, des connaissances ou des outils supplémentaires, pour une tâche que tu répètes souvent. Sa création dépend de ton abonnement et des droits de ton espace de travail — vérifie que l'éditeur est bien accessible avant de t'engager dans cette étape.
+Un GPT personnalisé combine des instructions fixes avec, si besoin, des connaissances ou des outils supplémentaires, pour une tâche que tu répètes souvent. Sa création dépend de ton abonnement et des droits de ton espace de travail - vérifie que l'éditeur est bien accessible avant de t'engager dans cette étape.
 
 **Comment faire :**
 1. Ouvre la section GPT et son éditeur, si ton compte y donne accès.
@@ -106,13 +106,13 @@ Un GPT personnalisé combine des instructions fixes avec, si besoin, des connais
 > Si les faits se contredisent, signale le conflit et demande une clarification.
 > Ne publie et n'envoie rien.
 
-*Pas d'accès à l'éditeur ? Garde ces instructions dans un document et colle-les en début de conversation. Formaliser une méthode ne la rend pas automatiquement plus fiable — les mêmes vérifications restent nécessaires.*
+*Pas d'accès à l'éditeur ? Garde ces instructions dans un document et colle-les en début de conversation. Formaliser une méthode ne la rend pas automatiquement plus fiable - les mêmes vérifications restent nécessaires.*
 
 ---
 
-## 05 — L'automatisation planifiée : programme une tâche bien cadrée
+## 05 - L'automatisation planifiée : programme une tâche bien cadrée
 
-*Optionnel — disponibilité selon ton compte.*
+*Optionnel - disponibilité selon ton compte.*
 
 Une tâche planifiée peut s'exécuter plus tard, ou de façon récurrente. Quotas, horaires et outils compatibles dépendent de ton compte. Pour t'entraîner, un simple rappel dans ton agenda fait tout aussi bien l'affaire.
 
@@ -134,7 +134,7 @@ Une tâche planifiée peut s'exécuter plus tard, ou de façon récurrente. Quot
 
 **Ton livrable : une invitation, relue et validée par toi.**
 
-Dans ton Projet ou une conversation neuve, utilise le brief ci-dessous. Relis attentivement le résultat, corrige si besoin, et garde le brouillon de côté — n'envoie rien, il s'agit d'un événement fictif.
+Dans ton Projet ou une conversation neuve, utilise le brief ci-dessous. Relis attentivement le résultat, corrige si besoin, et garde le brouillon de côté - n'envoie rien, il s'agit d'un événement fictif.
 
 **Checklist d'auto-contrôle :**
 - [ ] J'ai choisi un assistant pour rédiger un brouillon, sans lui confier l'envoi.
@@ -143,7 +143,7 @@ Dans ton Projet ou une conversation neuve, utilise le brief ci-dessous. Relis at
 - [ ] J'ai corrigé les écarts et mis à part les informations manquantes.
 - [ ] J'ai conservé le résultat et je sais ce qu'il reste à confirmer avant diffusion.
 
-*Auto-évaluation informelle, réinitialisée à chaque actualisation — ni un examen certifiant, ni une validation automatique de ta réponse.*
+*Auto-évaluation informelle, réinitialisée à chaque actualisation - ni un examen certifiant, ni une validation automatique de ta réponse.*
 
 **Le brief à utiliser :**
 > **Tâche :** Rédige une invitation à un atelier de réparation pour les habitants du quartier.
@@ -154,7 +154,7 @@ Dans ton Projet ou une conversation neuve, utilise le brief ci-dessous. Relis at
 >
 > **Limites :** N'ajoute aucun fait, aucune garantie de réparation, aucun lien. Après le brouillon, liste séparément ce qui reste à confirmer avant envoi. Ne publie et n'envoie rien.
 
-*Petit exercice de réflexion : ton invitation est agréable à lire, mais elle contient un lien d'inscription qui n'existe pas dans le dossier de départ. Le parcours est-il réussi pour autant ? Non — il faut retirer ce lien inventé et faire confirmer le vrai moyen d'inscription avant toute diffusion.*
+*Petit exercice de réflexion : ton invitation est agréable à lire, mais elle contient un lien d'inscription qui n'existe pas dans le dossier de départ. Le parcours est-il réussi pour autant ? Non - il faut retirer ce lien inventé et faire confirmer le vrai moyen d'inscription avant toute diffusion.*
 
 **Pour aller plus loin :** une fois cette méthode assimilée, applique-la à une tâche simple de ta vie réelle. Définis le résultat attendu, les données autorisées, le brief et les critères de vérification. Évite de commencer directement par un contrat, un dossier médical, ou une décision qui concerne quelqu'un d'autre.
 
@@ -172,8 +172,8 @@ Tu maîtrises les bases quand tu sais choisir l'aide adaptée, fournir le bon co
 
 *Sources officielles consultées le 11 septembre 2026. Les exemples de ce guide sont fictifs ; les fonctionnalités des produits évoluent régulièrement.*
 
-- OpenAI — Work with Apps sur macOS
-- OpenAI — Les Projets et leurs limites
-- OpenAI — Apps, plugins et permissions
-- OpenAI — Créer et modifier un GPT
-- OpenAI — Les tâches planifiées
+- OpenAI - Work with Apps sur macOS
+- OpenAI - Les Projets et leurs limites
+- OpenAI - Apps, plugins et permissions
+- OpenAI - Créer et modifier un GPT
+- OpenAI - Les tâches planifiées

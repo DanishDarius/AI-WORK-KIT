@@ -17,7 +17,7 @@ Un prompt ne devrait jamais rester figé. Il devrait évoluer avec l'usage qu'on
 
 ## Le bloc à coller en fin de prompt
 
-> **Prompt — auto-révision**
+> **Prompt - auto-révision**
 >
 > ---
 > # REVIEW

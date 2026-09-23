@@ -27,37 +27,37 @@ export function TransformationBrief() {
         <form onSubmit={(event) => event.preventDefault()}>
           <div className="aw-brief-step" hidden={step !== 0}>
             <p className="aw-systems-kicker">Votre projet</p>
-            <h3>Par quoi voulez-vous commencer&nbsp;?</h3>
+            <h3>Par quoi voulez-vous commencer ?</h3>
             <label>
-              <span>Quelle activité souhaitez-vous améliorer&nbsp;?</span>
+              <span>Quelle activité souhaitez-vous améliorer ?</span>
               <textarea rows={4} placeholder="Une tâche récurrente, un processus trop lent, un projet à lancer…" required />
             </label>
             <label>
-              <span>Quel résultat aimeriez-vous obtenir&nbsp;?</span>
+              <span>Quel résultat aimeriez-vous obtenir ?</span>
               <textarea rows={3} placeholder="Un gain de temps, une meilleure qualité, un délai plus court…" />
             </label>
           </div>
           <div className="aw-brief-step" hidden={step !== 1}>
             <p className="aw-systems-kicker">Le cadre</p>
-            <h3>Dans quel environnement travaillons-nous&nbsp;?</h3>
+            <h3>Dans quel environnement travaillons-nous ?</h3>
             <label>
-              <span>Quels outils et quelles données sont concernés&nbsp;?</span>
+              <span>Quels outils et quelles données sont concernés ?</span>
               <textarea rows={4} placeholder="CRM, messagerie, documents, base clients, outils internes…" />
             </label>
             <label>
-              <span>Quelles contraintes devons-nous respecter&nbsp;?</span>
+              <span>Quelles contraintes devons-nous respecter ?</span>
               <textarea rows={3} placeholder="Confidentialité, validation, sécurité, délais…" />
             </label>
           </div>
           <div className="aw-brief-step" hidden={step !== 2}>
             <p className="aw-systems-kicker">Votre équipe</p>
-            <h3>Qui utilisera la solution&nbsp;?</h3>
+            <h3>Qui utilisera la solution ?</h3>
             <div className="aw-brief-fields">
               <label><span>Nombre de personnes</span><input placeholder="Ex. 8" /></label>
               <label><span>Équipe concernée</span><input placeholder="Ex. Service commercial" /></label>
             </div>
             <label>
-              <span>Comment l’équipe utilise-t-elle déjà l’IA&nbsp;?</span>
+              <span>Comment l’équipe utilise-t-elle déjà l’IA ?</span>
               <textarea rows={4} placeholder="Outils testés, usages actuels, niveau d’autonomie…" />
             </label>
           </div>
@@ -88,7 +88,7 @@ export function TransformationBrief() {
       ) : (
         <div className="aw-brief-ready" role="status">
           <span><Icon name="sparkles" size={26} /></span>
-          <h3>Votre brief est structuré.</h3>
+          <h3>Votre brief est prêt.</h3>
           <p>Les informations essentielles sont prêtes pour cadrer votre premier échange.</p>
           <button type="button" onClick={() => { setReady(false); setStep(0); }}>Modifier mes réponses</button>
         </div>

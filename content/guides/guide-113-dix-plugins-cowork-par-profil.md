@@ -13,29 +13,29 @@ La marketplace de plugins compte plus d'une trentaine de références. La plupar
 
 ## Pour les indépendants et créateurs
 
-**Content Studio** — calendrier éditorial, déclinaisons multi-formats.
+**Content Studio** - calendrier éditorial, déclinaisons multi-formats.
 
-**Inbox Triage** — tri de boîte mail et réponses prêtes à envoyer.
+**Inbox Triage** - tri de boîte mail et réponses prêtes à envoyer.
 
-**Research Companion** — synthèse de sources avec citations.
+**Research Companion** - synthèse de sources avec citations.
 
 ## Pour les petites équipes
 
-**Small Business** — le pack opérationnel complet (voir le guide dédié).
+**Small Business** - le pack opérationnel complet (voir le guide dédié).
 
-**Meeting Notes** — ordre du jour, notes, actions et relances.
+**Meeting Notes** - ordre du jour, notes, actions et relances.
 
-**Pipeline Sync** — relances CRM en pilotage automatique.
+**Pipeline Sync** - relances CRM en pilotage automatique.
 
-**Hiring Helper** — tri de CV et grille d'entretien sur mesure.
+**Hiring Helper** - tri de CV et grille d'entretien sur mesure.
 
 ## Pour les profils techniques et data
 
-**Code Reviewer** — revue de pull request et suggestions.
+**Code Reviewer** - revue de pull request et suggestions.
 
-**Data Whisperer** — questions posées en langage naturel sur ses tableaux de données.
+**Data Whisperer** - questions posées en langage naturel sur ses tableaux de données.
 
-**API Doctor** — diagnostic des erreurs d'intégration.
+**API Doctor** - diagnostic des erreurs d'intégration.
 
 ## La règle d'or
 

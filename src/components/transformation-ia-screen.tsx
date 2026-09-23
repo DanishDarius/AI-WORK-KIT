@@ -28,8 +28,8 @@ export function TransformationIaScreen() {
       <section className="aw-strategy-hero" aria-labelledby="strategy-title">
         <div className="aw-strategy-hero-copy">
           <p className="aw-systems-kicker">Stratégie et transformation IA</p>
-          <h1 id="strategy-title">L’IA, de l’intention<br /><span>à l’impact.</span></h1>
-          <p>Un cap clair, un premier projet utile et un accompagnement jusqu’à son adoption par vos équipes.</p>
+          <h1 id="strategy-title">Un plan IA clair.<br /><span>Des équipes qui l’utilisent.</span></h1>
+          <p>On choisit avec vous le premier projet IA qui rapporte, on le construit, et on forme vos équipes jusqu’à ce qu’elles l’utilisent seules.</p>
           <div className="aw-systems-actions">
             <a className="aw-systems-primary" href="#brief">Parler de votre projet <Icon name="arrow" /></a>
             <a className="aw-systems-secondary" href="#methode">Explorer la méthode <Icon name="down" /></a>
@@ -43,7 +43,7 @@ export function TransformationIaScreen() {
       </section>
 
       <section className="aw-strategy-ecosystem" aria-label="Écosystème technologique">
-        <p>Un écosystème adapté à vos outils</p>
+        <p>On travaille avec les outils que vous avez déjà</p>
         <div>{["ChatGPT", "Claude", "Gemini", "Microsoft 365", "Google Workspace", "Notion", "Make", "Zapier"].map((tool) => <span key={tool}>{tool}</span>)}</div>
       </section>
 
@@ -76,7 +76,7 @@ export function TransformationIaScreen() {
         <div className="aw-strategy-section-heading">
           <p className="aw-systems-kicker">02 / À vous de jouer</p>
           <h2 id="brief-title">Votre premier projet<br /><span>commence ici.</span></h2>
-          <p>Décrivez votre idée. Ce premier cadrage permet d’identifier ce qui compte pour votre équipe et de préparer l’échange.</p>
+          <p>Décrivez votre idée en 4 étapes. On arrive au premier échange en sachant déjà ce qui compte pour vous.</p>
         </div>
         <TransformationBrief />
       </section>
@@ -107,7 +107,7 @@ export function TransformationIaScreen() {
       <section className="aw-strategy-faq" aria-labelledby="faq-title">
         <div className="aw-strategy-section-heading">
           <p className="aw-systems-kicker">04 / Questions pratiques</p>
-          <h2 id="faq-title">Les idées claires,<br /><span>avant de commencer.</span></h2>
+          <h2 id="faq-title">Vos questions,<br /><span>nos réponses.</span></h2>
         </div>
         <div>{faq.map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
       </section>
@@ -115,7 +115,7 @@ export function TransformationIaScreen() {
       <section className="aw-strategy-final">
         <p className="aw-systems-kicker">La prochaine étape</p>
         <h2>Donnons une forme<br /><span>à votre projet.</span></h2>
-        <p>Présentez-nous le premier sujet que vous souhaitez transformer.</p>
+        <p>Dites-nous par quoi vous voulez commencer.</p>
         <a href="#brief">Décrire mon projet <Icon name="arrow" /></a>
       </section>
     </div>

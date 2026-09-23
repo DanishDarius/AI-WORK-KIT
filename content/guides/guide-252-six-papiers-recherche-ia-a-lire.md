@@ -14,19 +14,19 @@ Plutôt que de passer quarante-cinq minutes par jour à faire défiler du conten
 ## Les six papiers à lire
 
 1. **« Sparks of AGI » (Microsoft Research, 2023).** Le papier qui a lancé le débat public sur le sujet. À lire en entier, même s'il reste controversé.
-2. **« Constitutional AI » (Anthropic).** Explique comment Claude apprend ses garde-fous — indispensable pour comprendre le fonctionnement du modèle.
+2. **« Constitutional AI » (Anthropic).** Explique comment Claude apprend ses garde-fous - indispensable pour comprendre le fonctionnement du modèle.
 3. **« Chain of Thought Prompting » (Google).** Le papier qui a fait évoluer le prompt engineering. Onze pages, accessible.
 4. **« Scaling Laws for Neural Language Models » (OpenAI).** Explique pourquoi l'idée « plus grand modèle égale meilleur résultat » s'est imposée. La lecture de l'introduction suffit, le reste peut être survolé.
-5. **« Sycophancy in Language Models » (Anthropic, 2023 et suivants).** Explique pourquoi les modèles de langage ont tendance à donner raison à l'utilisateur — change durablement le rapport à des outils comme Claude ou ChatGPT.
+5. **« Sycophancy in Language Models » (Anthropic, 2023 et suivants).** Explique pourquoi les modèles de langage ont tendance à donner raison à l'utilisateur - change durablement le rapport à des outils comme Claude ou ChatGPT.
 6. **« AI 2027 » (papier de prospective de l'AI Futures Project).** Le scénario le plus discuté sur la trajectoire de l'IA. Utile pour cadrer son propre horizon de réflexion.
 
 ## Comment lire un papier sans s'épuiser
 
-Résumé (abstract), puis conclusion, puis figures, puis introduction. Si l'ennui s'installe après vingt minutes, mieux vaut fermer le document — tous les papiers ne méritent pas le même investissement de temps.
+Résumé (abstract), puis conclusion, puis figures, puis introduction. Si l'ennui s'installe après vingt minutes, mieux vaut fermer le document - tous les papiers ne méritent pas le même investissement de temps.
 
 ## Le prompt de résumé exploitable
 
-> **Prompt — résumé exploitable**
+> **Prompt - résumé exploitable**
 >
 > Voici un papier IA :
 > [colle le titre + abstract, ou le PDF]

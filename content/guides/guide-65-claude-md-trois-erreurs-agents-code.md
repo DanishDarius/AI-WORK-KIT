@@ -17,7 +17,7 @@ Trois erreurs reviennent en boucle chez les agents de code : ils inventent des f
 
 ## Le fichier à poser
 
-> **Gabarit — CLAUDE.md**
+> **Gabarit - CLAUDE.md**
 >
 > # Règles du projet pour l'agent de code
 >
@@ -48,4 +48,4 @@ Trois erreurs reviennent en boucle chez les agents de code : ils inventent des f
 
 ## À retenir
 
-Un CLAUDE.md fonctionne comme un onboarding pour un développeur junior — sauf qu'il est relu à chaque nouvelle tâche. Une fois posé, mesurer le nombre d'allers-retours nécessaires sur une semaine permet de voir la différence avant même la fin de la semaine.
+Un CLAUDE.md fonctionne comme un onboarding pour un développeur junior - sauf qu'il est relu à chaque nouvelle tâche. Une fois posé, mesurer le nombre d'allers-retours nécessaires sur une semaine permet de voir la différence avant même la fin de la semaine.

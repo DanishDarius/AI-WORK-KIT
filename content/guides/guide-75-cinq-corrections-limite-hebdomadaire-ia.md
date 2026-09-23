@@ -25,7 +25,7 @@ Atteindre systématiquement son plafond hebdomadaire d'usage IA au milieu de la 
 
 ## Le prompt à copier
 
-> **Prompt — récap pour nouveau chat**
+> **Prompt - récap pour nouveau chat**
 >
 > Résume cette conversation en : 1) objectif initial, 2) décisions prises, 3) état actuel, 4) prochaine action attendue. Format markdown, max 200 mots. Je vais coller ce résumé dans un nouveau chat pour continuer ailleurs.
 

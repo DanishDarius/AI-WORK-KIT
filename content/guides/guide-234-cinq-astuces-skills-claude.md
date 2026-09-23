@@ -17,14 +17,14 @@ Les Skills de Claude font beaucoup parler d'elles, mais peu d'explications concr
 2. **Lister les anti-patterns.** « Ne fais jamais X. Ne dis jamais Y. » Cette formulation négative s'avère souvent plus efficace que des instructions purement positives.
 3. **Ajouter un test de validation à la fin.** « Avant de me rendre la sortie, vérifie ces 4 points. Si l'un échoue, recommence. »
 4. **Indiquer le format final en premier.** Le Skill commence par le squelette de sortie attendu ; Claude le remplit ensuite.
-5. **Dater et versionner chaque Skill.** Une mention du type « v2.3 — janvier 2026 » permet de savoir précisément quoi mettre à jour plusieurs mois plus tard.
+5. **Dater et versionner chaque Skill.** Une mention du type « v2.3 - janvier 2026 » permet de savoir précisément quoi mettre à jour plusieurs mois plus tard.
 
 ## Le gabarit anti-flou
 
-> **Prompt — Skill, template anti-bouillie**
+> **Prompt - Skill, template anti-bouillie**
 >
 > \# Skill: [Nom]
-> v1.0 — [date]
+> v1.0 - [date]
 >
 > ## Quand l'utiliser
 > [1 phrase, déclencheur précis]

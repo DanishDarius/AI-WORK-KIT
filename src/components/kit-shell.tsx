@@ -8,13 +8,13 @@ import { createClient } from "@/lib/supabase/client";
 import { Icon } from "./kit-icons";
 
 const exploreLinks = [
-  { href: "/taches", label: "Tâches", description: "Partez d’un besoin concret", icon: "tasks" },
-  { href: "/metiers", label: "Métiers", description: "Explorez votre quotidien professionnel", icon: "jobs" },
-  { href: "/comprendre-les-ia", label: "Comprendre les IA", description: "Choisissez le bon outil pour votre travail", icon: "sparkles" },
-  { href: "/bibliotheque", label: "Bibliothèque", description: "Consultez tous les guides pratiques", icon: "writing" },
-  { href: "/systemes-ia", label: "Systèmes IA", description: "Demandez un parcours adapté à votre travail", icon: "layers" },
-  { href: "/transformation-ia", label: "Transformation IA", description: "Définissez votre stratégie d’intégration", icon: "analysis" },
-  { href: "/mises-a-jour-ia", label: "Mises à jour IA", description: "Suivez les nouveautés qui comptent", icon: "analysis" },
+  { href: "/taches", label: "Tâches", description: "Le prompt prêt pour une tâche précise", icon: "tasks" },
+  { href: "/metiers", label: "Métiers", description: "Tout ce que l’IA fait dans votre métier", icon: "jobs" },
+  { href: "/comprendre-les-ia", label: "Comprendre les IA", description: "ChatGPT, Claude, Gemini : lequel pour quoi", icon: "sparkles" },
+  { href: "/bibliotheque", label: "Bibliothèque", description: "Des guides courts, à appliquer tout de suite", icon: "writing" },
+  { href: "/systemes-ia", label: "Systèmes IA", description: "Nous automatisons vos tâches pour vous", icon: "layers" },
+  { href: "/transformation-ia", label: "Transformation IA", description: "Un plan IA pour toute votre entreprise", icon: "analysis" },
+  { href: "/mises-a-jour-ia", label: "Mises à jour IA", description: "Ce qui change chez les IA, chaque semaine", icon: "analysis" },
 ];
 
 // Pages publiques d'authentification : tant que la personne n'est pas
@@ -77,7 +77,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <a className="skip-link" href="#contenu">Aller au contenu</a>
         <header className="aw-top aw-top-auth">
           <div className="aw-header-inner">
-            <Link href="/" className="aw-brand" aria-label="AI WORK KIT — Accueil">
+            <Link href="/" className="aw-brand" aria-label="AI WORK KIT - Accueil">
               <Image className="aw-brand-symbol" src="/icon.svg" width={38} height={38} alt="" priority />
               <span>AI WORK <em>KIT</em></span>
             </Link>
@@ -93,7 +93,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <a className="skip-link" href="#contenu">Aller au contenu</a>
       <header className="aw-top">
         <div className="aw-header-inner">
-          <Link href="/" className="aw-brand" aria-label="AI WORK KIT — Accueil" onClick={closeMenus}>
+          <Link href="/" className="aw-brand" aria-label="AI WORK KIT - Accueil" onClick={closeMenus}>
             <Image className="aw-brand-symbol" src="/icon.svg" width={38} height={38} alt="" priority />
             <span>AI WORK <em>KIT</em></span>
           </Link>
@@ -127,7 +127,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </div>
 
         <div className="aw-mobile-panel" id="navigation-mobile" data-open={menuOpen ? "true" : "false"}>
-          <p className="aw-menu-heading">Explorer AI WORK KIT <span aria-hidden="true">↗</span></p>
+          <p className="aw-menu-heading">Où voulez-vous aller ?</p>
           <nav aria-label="Menu mobile">
             {exploreLinks.map((item) => (
               <Link key={item.href} href={item.href} onClick={closeMenus} aria-current={isCurrent(item.href) ? "page" : undefined}>
@@ -148,11 +148,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <footer className="aw-site-footer">
         <div className="aw-footer-main">
           <div className="aw-footer-brand">
-            <Link href="/" className="aw-footer-logo" aria-label="AI WORK KIT — Accueil">
+            <Link href="/" className="aw-footer-logo" aria-label="AI WORK KIT - Accueil">
               <Image src="/icon.svg" width={48} height={48} alt="" />
               <span>AI WORK <em>KIT</em></span>
             </Link>
-            <p>L’intelligence artificielle appliquée à votre travail, concrètement.</p>
+            <p>L’IA appliquée à votre travail. Concrètement, dès aujourd’hui.</p>
           </div>
 
           <div className="aw-footer-links">
@@ -179,7 +179,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
         <div className="aw-bottom">
           <span>© 2026 AI WORK KIT · Tous droits réservés</span>
-          <Link href="/comprendre-les-ia">Comprendre les termes de l’IA ↗</Link>
+          <Link href="/comprendre-les-ia">Les mots de l’IA, expliqués simplement ↗</Link>
         </div>
       </footer>
     </div>

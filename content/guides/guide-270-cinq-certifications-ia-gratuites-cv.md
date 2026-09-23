@@ -13,11 +13,11 @@ Un CV a souvent besoin d'un signal crédible sur l'IA, sans nécessairement disp
 
 ## Les cinq certifications, dans l'ordre à suivre
 
-1. **Google AI Essentials** — fondamentaux, vocabulaire, cas d'usage. La base à mettre en avant sur le CV.
-2. **Microsoft AI Fundamentals (AI-900)** — perspective entreprise, écosystème Azure. Un signal fort pour les environnements B2B.
-3. **Anthropic Claude Builder** — conception de prompts et d'agents. La plus pratique pour des rôles produit ou opérations.
-4. **DeepLearning.AI — ChatGPT Prompt Engineering for Developers** — courte, dense, largement recommandée.
-5. **Hugging Face Agents Course** — plutôt destinée aux profils techniques, gratuite et régulièrement mise à jour.
+1. **Google AI Essentials** - fondamentaux, vocabulaire, cas d'usage. La base à mettre en avant sur le CV.
+2. **Microsoft AI Fundamentals (AI-900)** - perspective entreprise, écosystème Azure. Un signal fort pour les environnements B2B.
+3. **Anthropic Claude Builder** - conception de prompts et d'agents. La plus pratique pour des rôles produit ou opérations.
+4. **DeepLearning.AI - ChatGPT Prompt Engineering for Developers** - courte, dense, largement recommandée.
+5. **Hugging Face Agents Course** - plutôt destinée aux profils techniques, gratuite et régulièrement mise à jour.
 
 ## Comment les valider en 30 jours en parallèle d'un emploi
 
@@ -25,7 +25,7 @@ Une heure chaque matin et deux heures le samedi suffisent généralement pour co
 
 ## Le prompt de plan de révision
 
-> **Prompt — certif tracker**
+> **Prompt - certif tracker**
 >
 > Tu es mon coach apprentissage. J'attaque les 5 certifs IA gratuites suivantes : [liste].
 >

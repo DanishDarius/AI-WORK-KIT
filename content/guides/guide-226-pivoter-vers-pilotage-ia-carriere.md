@@ -2,7 +2,7 @@
 Guide original : Ne te fais pas remplacer. Pilote l'IA
 Source : https://www.saadiakaram.ai/guides/ai-job-pivot
 Position réelle dans la bibliothèque au moment du traitement : 225/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Distinct des guides 162, 177 et 179 (autres contenus carrière/IA) — méthode en 3 étapes avec 3 prompts dédiés au repositionnement vers un rôle de pilotage de l'IA, vérifié et confirmé distinct. Noms réels conservés (Claude, ChatGPT, Notion).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Distinct des guides 162, 177 et 179 (autres contenus carrière/IA) - méthode en 3 étapes avec 3 prompts dédiés au repositionnement vers un rôle de pilotage de l'IA, vérifié et confirmé distinct. Noms réels conservés (Claude, ChatGPT, Notion).
 ---
 
 # Devenir la personne qui pilote l'IA plutôt que celle qu'elle remplace
@@ -15,13 +15,13 @@ L'IA ne remplace pas « les métiers » dans leur ensemble, mais surtout l'exéc
 
 Chaque métier comporte deux couches : l'exécution et le jugement. L'exécution est rapidement grignotée par l'IA. Le jugement, lui, reste difficile à reproduire sans une vraie expérience du terrain.
 
-Une personne extérieure à un métier donné ne saura pas bien diriger l'IA sur ce terrain précis — elle ne sait même pas à quoi ressemble un bon livrable dans ce contexte. C'est précisément là que la valeur se déplace : non plus dans l'exécution manuelle de chaque tâche, mais dans la direction du système qui les produit.
+Une personne extérieure à un métier donné ne saura pas bien diriger l'IA sur ce terrain précis - elle ne sait même pas à quoi ressemble un bon livrable dans ce contexte. C'est précisément là que la valeur se déplace : non plus dans l'exécution manuelle de chaque tâche, mais dans la direction du système qui les produit.
 
-## Étape 1 — Séparer son poste en deux blocs
+## Étape 1 - Séparer son poste en deux blocs
 
 Tant que tout reste mélangé, l'inquiétude prend le dessus sans raison claire. Il s'agit de découper son travail comme le ferait une machine : ce qu'elle peut exécuter, et ce qui dépend encore d'un jugement humain.
 
-> **Prompt — cartographie du poste**
+> **Prompt - cartographie du poste**
 >
 > Je veux sécuriser ma carrière face à l'IA en devenant la personne qui la dirige au lieu d'entrer en compétition avec elle.
 >
@@ -35,11 +35,11 @@ Tant que tout reste mélangé, l'inquiétude prend le dessus sans raison claire.
 >
 > Sois spécifique à mon rôle. Pas de conseils génériques.
 
-## Étape 2 — Devenir l'opérateur, pas la production elle-même
+## Étape 2 - Devenir l'opérateur, pas la production elle-même
 
 Le schéma se répète d'un métier à l'autre : un acheteur média pilote l'IA qui optimise ses campagnes ; un rédacteur fait tenir la voix de marque à travers le système ; un analyste financier laisse l'IA extraire les chiffres mais garde l'interprétation. L'objectif n'est pas de produire moins, mais de posséder le workflow dans son ensemble.
 
-> **Prompt — workflow IA pour ton rôle**
+> **Prompt - workflow IA pour ton rôle**
 >
 > Aide-moi à concevoir le workflow IA que je pourrais piloter dans mon rôle, pour devenir l'opérateur plutôt que le producteur.
 >
@@ -55,11 +55,11 @@ Le schéma se répète d'un métier à l'autre : un acheteur média pilote l'IA 
 >
 > Fais-en quelque chose que je peux commencer à utiliser cette semaine.
 
-## Étape 3 — Devenir vraiment compétent sur ce terrain
+## Étape 3 - Devenir vraiment compétent sur ce terrain
 
 Tester l'IA occasionnellement ne suffit pas. Un vrai progrès demande de la répétition : prendre un workflow réel, le faire tourner sur de vrais cas, noter chaque sortie faible ou fausse, resserrer les instructions, ajouter des contrôles qualité, et recommencer jusqu'à obtenir un niveau fiable. Devenir le pont entre l'IA et un résultat digne de confiance rend difficile à remplacer.
 
-> **Prompt — plan de 30 jours**
+> **Prompt - plan de 30 jours**
 >
 > Construis-moi un plan de 30 jours pour devenir la personne de référence qui pilote l'IA dans mon rôle.
 >
@@ -89,4 +89,4 @@ Claude ou ChatGPT, en complément de l'outil déjà présent dans le métier con
 
 **Faire ce pivot dès maintenant.**
 
-Peu de personnes réalisent encore ce repositionnement de façon structurée. Séparer exécution et jugement dans son poste actuel, construire un workflow IA, puis démontrer sa capacité à le diriger mieux que les autres. Documenter l'ensemble — tâches, prompts, contrôles qualité, résultats — dans un espace comme Notion. Le jour où il faut se vendre en interne ou en freelance, l'argument ne sera plus « j'utilise l'IA », mais « je pilote un système ».
+Peu de personnes réalisent encore ce repositionnement de façon structurée. Séparer exécution et jugement dans son poste actuel, construire un workflow IA, puis démontrer sa capacité à le diriger mieux que les autres. Documenter l'ensemble - tâches, prompts, contrôles qualité, résultats - dans un espace comme Notion. Le jour où il faut se vendre en interne ou en freelance, l'argument ne sera plus « j'utilise l'IA », mais « je pilote un système ».

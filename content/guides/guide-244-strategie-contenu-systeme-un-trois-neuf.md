@@ -17,17 +17,17 @@ Avant même d'ouvrir Claude, il vaut mieux écrire cinq phrases qui résument un
 
 ## Le système 1-3-9
 
-- **1 idée mère par semaine** — un essai long, une analyse, une prise de position.
-- **3 déclinaisons** — un post LinkedIn, un thread X, une newsletter.
-- **9 micro-formats** — citations, carrousels, stories, réponses dans les commentaires.
+- **1 idée mère par semaine** - un essai long, une analyse, une prise de position.
+- **3 déclinaisons** - un post LinkedIn, un thread X, une newsletter.
+- **9 micro-formats** - citations, carrousels, stories, réponses dans les commentaires.
 
 ## Le rôle de Claude dans ce système
 
-Claude ne sert pas à générer le pilier central — cela reste un travail humain. Son rôle est de décliner les douze dérivés à partir du brouillon initial. Le ratio idéal se situe autour de 20 % d'écriture humaine pour 80 % de déclinaison assistée.
+Claude ne sert pas à générer le pilier central - cela reste un travail humain. Son rôle est de décliner les douze dérivés à partir du brouillon initial. Le ratio idéal se situe autour de 20 % d'écriture humaine pour 80 % de déclinaison assistée.
 
 ## Le prompt de déclinaison
 
-> **Prompt — décliner 1 idée en 12**
+> **Prompt - décliner 1 idée en 12**
 >
 > Voici mon essai mère : [colle].
 >

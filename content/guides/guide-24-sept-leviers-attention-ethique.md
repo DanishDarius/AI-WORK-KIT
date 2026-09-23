@@ -1,7 +1,7 @@
 ---
 Guide original : "Les 7 leviers d'attention"
 Source : saadiakaram.ai/guides/7-leviers-attention
-Statut : reformulé (texte) — aucun visuel/tableau HTML détecté sur cette page
+Statut : reformulé (texte) - aucun visuel/tableau HTML détecté sur cette page
 ---
 
 # Les 7 leviers d'attention de la Silicon Valley, détournés au profit de ton audience
@@ -11,13 +11,13 @@ Statut : reformulé (texte) — aucun visuel/tableau HTML détecté sur cette pa
 ## Sommaire
 
 - Introduction
-- Levier 1 — La boucle ouverte
-- Levier 2 — La récompense variable
-- Levier 3 — Le retrait des points d'arrêt
-- Levier 4 — L'ancrage
-- Levier 5 — La preuve sociale
-- Levier 6 — La progression visible
-- Levier 7 — Le déclencheur contextuel
+- Levier 1 - La boucle ouverte
+- Levier 2 - La récompense variable
+- Levier 3 - Le retrait des points d'arrêt
+- Levier 4 - L'ancrage
+- Levier 5 - La preuve sociale
+- Levier 6 - La progression visible
+- Levier 7 - Le déclencheur contextuel
 - Le test des 60 secondes
 
 ## Introduction
@@ -28,13 +28,13 @@ Ces leviers ne sont ni bons ni mauvais en eux-mêmes : une machine à sous les u
 
 Pourquoi ça compte maintenant : selon le rapport Adobe *Creators' Toolkit 2026* (plus de 16 000 créateurs interrogés dans 8 pays), 87 % des créateurs déclarent que l'IA créative a accéléré la croissance de leur activité ou de leur audience, et 40 % constatent que leur contenu assisté par IA performe mieux de façon constante. Structurer l'attention paie. Mais comme 75 % des créateurs décrivent l'IA comme désormais intégrée à leur travail quotidien, tout le monde produit du contenu de facture assez proche. Ce qui distingue vraiment un créateur, ce ne sont pas les outils utilisés, c'est l'architecture d'attention posée par-dessus.
 
-Comment utiliser ce guide : chaque levier suit la même structure — comment il est exploité côté casino/plateforme, sa version éthique appliquée au contenu, un prompt à copier-coller dans ton IA, et l'outil recommandé. Travaille un levier par jour pendant 7 jours, sur un seul contenu réel.
+Comment utiliser ce guide : chaque levier suit la même structure - comment il est exploité côté casino/plateforme, sa version éthique appliquée au contenu, un prompt à copier-coller dans ton IA, et l'outil recommandé. Travaille un levier par jour pendant 7 jours, sur un seul contenu réel.
 
 ---
 
-## 01 — Levier 1 : la boucle ouverte
+## 01 - Levier 1 : la boucle ouverte
 
-**Côté casino :** une partie qui ne se termine jamais vraiment — un résultat presque gagné, une suite floue. Le cerveau supporte mal l'inachevé (effet Zeigarnik) et reste accroché pour fermer la boucle.
+**Côté casino :** une partie qui ne se termine jamais vraiment - un résultat presque gagné, une suite floue. Le cerveau supporte mal l'inachevé (effet Zeigarnik) et reste accroché pour fermer la boucle.
 
 **Version éthique :** ta première phrase ouvre une question dont la réponse est la valeur réelle de ton contenu. Pas de mystère creux inventé : tu promets une réponse que tu vas réellement donner avant la fin. La boucle se referme DANS ton contenu, jamais dans le suivant.
 
@@ -53,9 +53,9 @@ Outil : ChatGPT ou Claude.
 
 ---
 
-## 02 — Levier 2 : la récompense variable
+## 02 - Levier 2 : la récompense variable
 
-**Côté casino :** on ne sait jamais quand tombe le gain. Cette imprévisibilité (la même mécanique que la machine à sous) crée plus d'engagement qu'une récompense fixe — c'est le cœur du modèle Hook théorisé par Nir Eyal.
+**Côté casino :** on ne sait jamais quand tombe le gain. Cette imprévisibilité (la même mécanique que la machine à sous) crée plus d'engagement qu'une récompense fixe - c'est le cœur du modèle Hook théorisé par Nir Eyal.
 
 **Version éthique :** rends imprévisible le FORMAT de ta valeur, jamais le fait de la livrer. Ton audience sait qu'elle apprend toujours quelque chose, mais ne sait pas sous quelle forme : un chiffre, une histoire, un raccourci, un contre-exemple. La surprise est dans l'emballage, la valeur reste garantie.
 
@@ -70,7 +70,7 @@ Outil : ChatGPT ou Claude.
 
 ---
 
-## 03 — Levier 3 : le retrait des points d'arrêt
+## 03 - Levier 3 : le retrait des points d'arrêt
 
 **Côté casino :** aucun signal de fin. Pas d'horloge, pas de dernière page, l'autoplay enchaîne automatiquement. En supprimant tout moment naturel pour s'arrêter, on supprime aussi la décision de partir.
 
@@ -87,7 +87,7 @@ Outil : ChatGPT ou Claude. Pour repérer les décrochages à l'oral, relis le sc
 
 ---
 
-## 04 — Levier 4 : l'ancrage
+## 04 - Levier 4 : l'ancrage
 
 **Côté casino :** le premier chiffre que tu vois (la grosse mise affichée, le montant du jackpot) devient ta référence et déforme tout ce qui suit. Le premier stimulus fixe l'échelle de jugement.
 
@@ -102,15 +102,15 @@ Outil : ChatGPT ou Claude. Pour repérer les décrochages à l'oral, relis le sc
 >
 > Interdit : chiffre inventé ou non sourçable. Si tu n'es pas sûr d'un chiffre, signale-le.
 
-Outil : ChatGPT ou Claude. Vérifie tout chiffre à la source avant publication — un ancrage faux détruit la crédibilité.
+Outil : ChatGPT ou Claude. Vérifie tout chiffre à la source avant publication - un ancrage faux détruit la crédibilité.
 
 ---
 
-## 05 — Levier 5 : la preuve sociale
+## 05 - Levier 5 : la preuve sociale
 
 **Côté casino :** les lumières, les cloches, le son des pièces qui tombent : tout signale que d'autres gagnent, donc on reste. On montre une foule qui joue pour que jouer paraisse normal.
 
-**Version éthique :** rends visible la preuve RÉELLE que ta méthode fonctionne — un résultat client, un retour authentique, un avant/après honnête. Pas de faux chiffres, pas de bots. La preuve sociale éthique montre des personnes réelles ayant obtenu un résultat réel.
+**Version éthique :** rends visible la preuve RÉELLE que ta méthode fonctionne - un résultat client, un retour authentique, un avant/après honnête. Pas de faux chiffres, pas de bots. La preuve sociale éthique montre des personnes réelles ayant obtenu un résultat réel.
 
 **Prompt à copier :**
 > Voici une preuve réelle que je possède (résultat, témoignage, retour) : [COLLE LA PREUVE BRUTE].
@@ -123,9 +123,9 @@ Outil : ChatGPT ou Claude. Garde une trace écrite de chaque preuve (capture, me
 
 ---
 
-## 06 — Levier 6 : la progression visible
+## 06 - Levier 6 : la progression visible
 
-**Côté casino :** barres qui se remplissent, niveaux, « presque gagné ». Plus on se sent proche du but, plus on accélère (effet de gradient vers l'objectif) — la progression affichée fait ressembler l'arrêt à un abandon.
+**Côté casino :** barres qui se remplissent, niveaux, « presque gagné ». Plus on se sent proche du but, plus on accélère (effet de gradient vers l'objectif) - la progression affichée fait ressembler l'arrêt à un abandon.
 
 **Version éthique :** montre à ton audience le chemin parcouru et où elle en est. Dans un guide, une série, un carrousel : numérote, situe (« étape 3 sur 7 »), rends le progrès tangible. Le but n'est pas qu'elle reste accrochée à toi, mais qu'elle voie qu'elle avance vers SA propre compétence.
 
@@ -140,7 +140,7 @@ Outil : ChatGPT ou Claude pour la structure ; Canva pour rendre la barre de prog
 
 ---
 
-## 07 — Levier 7 : le déclencheur contextuel
+## 07 - Levier 7 : le déclencheur contextuel
 
 **Côté casino :** notifications, vibrations, l'app qui s'accroche à un moment précis de la journée (l'ennui, l'attente). Le déclencheur externe devient interne : on ouvre l'app sans même y penser.
 
@@ -159,7 +159,7 @@ Outil : ChatGPT ou Claude.
 
 ## Le test des 60 secondes
 
-À faire avant chaque publication. Passe ton contenu à cette grille : si tu réponds non à une seule ligne, ce levier devient manipulatoire plutôt qu'éthique — réécris.
+À faire avant chaque publication. Passe ton contenu à cette grille : si tu réponds non à une seule ligne, ce levier devient manipulatoire plutôt qu'éthique - réécris.
 
 La boucle que j'ouvre, est-ce que je la referme DANS ce contenu ?
 

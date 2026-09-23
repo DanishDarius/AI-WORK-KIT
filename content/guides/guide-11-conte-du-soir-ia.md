@@ -1,7 +1,7 @@
 ---
 Guide original : "Le conte du soir : fais de ton enfant le héros de son histoire avec l'IA"
 Source : saadiakaram.ai/guides/le-conte-du-soir
-Statut : reformulé (texte) — aucun visuel/tableau HTML détecté sur cette page
+Statut : reformulé (texte) - aucun visuel/tableau HTML détecté sur cette page
 ---
 
 

@@ -17,7 +17,7 @@ En s'appuyant sur plusieurs mois d'e-mails, d'agenda, de messages et de notes, i
 
 ## Le prompt du dossier d'augmentation
 
-> **Prompt — dossier d'augmentation**
+> **Prompt - dossier d'augmentation**
 >
 > Voici l'historique de mes 6 derniers mois de travail :
 >

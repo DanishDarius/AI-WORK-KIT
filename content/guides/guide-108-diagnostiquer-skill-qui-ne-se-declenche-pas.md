@@ -25,7 +25,7 @@ Quand un Skill ne se déclenche pas, le contenu du Skill lui-même est correct n
 
 ## Le prompt à copier
 
-> **Prompt — diagnostic de Skill**
+> **Prompt - diagnostic de Skill**
 >
 > Voici mon Skill : [colle SKILL.md].
 >
@@ -39,4 +39,4 @@ Quand un Skill ne se déclenche pas, le contenu du Skill lui-même est correct n
 
 ## À retenir
 
-Un Skill, un déclencheur clair. Plus le déclencheur est précis, plus le Skill devient fiable — jamais l'inverse.
+Un Skill, un déclencheur clair. Plus le déclencheur est précis, plus le Skill devient fiable - jamais l'inverse.

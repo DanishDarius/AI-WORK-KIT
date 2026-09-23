@@ -17,13 +17,13 @@ Un prompt qui dit « écris-moi un plan de lancement » donne un plan de lanceme
 
 ## Les sept modes
 
-- **Équipe rouge** — cherche systématiquement ce qui casse dans une idée ou un plan.
-- **Opérateur** — demande ce que ça coûte réellement à faire tourner au quotidien.
-- **Éditeur** — coupe sans pitié ce qui est superflu.
-- **Professeur** — explique son raisonnement pas à pas, sans le laisser implicite.
-- **Stratège** — prend de la hauteur sur la situation d'ensemble.
-- **Analyste** — veut des chiffres précis plutôt que des impressions.
-- **Débutant** — impose un langage simple, sans jargon inutile.
+- **Équipe rouge** - cherche systématiquement ce qui casse dans une idée ou un plan.
+- **Opérateur** - demande ce que ça coûte réellement à faire tourner au quotidien.
+- **Éditeur** - coupe sans pitié ce qui est superflu.
+- **Professeur** - explique son raisonnement pas à pas, sans le laisser implicite.
+- **Stratège** - prend de la hauteur sur la situation d'ensemble.
+- **Analyste** - veut des chiffres précis plutôt que des impressions.
+- **Débutant** - impose un langage simple, sans jargon inutile.
 
 Chacun de ces modes tient en un court paragraphe, collé avant ta vraie demande, pour orienter la façon dont l'IA va raisonner sur le sujet.
 

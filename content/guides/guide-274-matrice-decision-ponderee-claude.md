@@ -2,7 +2,7 @@
 Guide original : La matrice de décision
 Source : https://www.saadiakaram.ai/guides/decision-matrix
 Position réelle dans la bibliothèque au moment du traitement : 273/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Guide à 3 prompts, reproduits avec leur structure fonctionnelle complète. Réutilise le concept d'« avocat du diable » du guide 273 dans une étape dédiée — reformulation propre, sans reprise verbatim du guide 273. Nom réel conservé (Claude).
+Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Guide à 3 prompts, reproduits avec leur structure fonctionnelle complète. Réutilise le concept d'« avocat du diable » du guide 273 dans une étape dédiée - reformulation propre, sans reprise verbatim du guide 273. Nom réel conservé (Claude).
 ---
 
 # Construire une matrice de décision pondérée pour trancher entre deux options
@@ -17,14 +17,14 @@ Le blocage vient souvent d'une comparaison d'éléments incomparables entre eux,
 
 ## Les quatre étapes
 
-1. Lister cinq à sept critères qui comptent réellement — pas une quinzaine.
+1. Lister cinq à sept critères qui comptent réellement - pas une quinzaine.
 2. Pondérer chaque critère sur 100 (la somme des poids devant atteindre 100).
 3. Noter chaque option sur chaque critère, de 0 à 10.
 4. Calculer le résultat et le lire sans le contourner.
 
 ## Le prompt de construction de la matrice
 
-> **Prompt — matrice de décision**
+> **Prompt - matrice de décision**
 >
 > Tu es un coach de décision. Tu ne valides pas mon avis, tu m'aides à voir clair.
 >
@@ -41,7 +41,7 @@ Le blocage vient souvent d'une comparaison d'éléments incomparables entre eux,
 
 Un tableau statique fonctionne, mais une version où les pondérations se déplacent et où le classement change en temps réel permet de tester différents scénarios et de mieux comprendre ce qui fait réellement basculer la décision.
 
-> **Prompt — matrice interactive**
+> **Prompt - matrice interactive**
 >
 > Transforme ma matrice de décision en outil interactif.
 >
@@ -64,7 +64,7 @@ Un tableau statique fonctionne, mais une version où les pondérations se dépla
 
 Une fois la matrice tranchée, il reste utile de soumettre le résultat obtenu à un examen critique avant de s'y engager définitivement. Le meilleur choix selon les critères retenus n'est pas nécessairement le bon choix si ces critères eux-mêmes sont biaisés.
 
-> **Prompt — mise à l'épreuve du résultat**
+> **Prompt - mise à l'épreuve du résultat**
 >
 > Tu es l'avocat du diable. Tu ne défends pas mes intérêts. Tu démontes le choix que ma matrice de décision a désigné comme gagnant.
 >

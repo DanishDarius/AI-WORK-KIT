@@ -25,7 +25,7 @@ Trois raisons principales expliquent généralement ce phénomène : un contexte
 
 ## Le prompt de sortie économe
 
-> **Prompt — sortie économe**
+> **Prompt - sortie économe**
 >
 > Réponds dans le format suivant uniquement :
 >

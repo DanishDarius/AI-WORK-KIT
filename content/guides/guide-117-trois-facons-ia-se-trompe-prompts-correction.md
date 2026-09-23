@@ -19,7 +19,7 @@ Une IA ne « ment » pas au sens humain du terme. Mais elle se trompe de trois m
 
 Le modèle invente une donnée, une citation, une étude. Cause : il prédit le mot suivant le plus probable, pas la vérité.
 
-> **Prompt — anti-hallucination**
+> **Prompt - anti-hallucination**
 >
 > Avant de répondre, sépare ce que tu sais avec certitude (sources vérifiables) de ce que tu déduis ou supposes. Si une information n'a pas de source que tu peux nommer, dis « je ne sais pas » plutôt que de la formuler.
 
@@ -27,7 +27,7 @@ Le modèle invente une donnée, une citation, une étude. Cause : il prédit le 
 
 Le modèle donne raison à l'utilisateur parce qu'il est entraîné à plaire. C'est le biais le plus dangereux sur les décisions importantes.
 
-> **Prompt — anti-flatterie**
+> **Prompt - anti-flatterie**
 >
 > Réponds comme un contradicteur qui n'a aucune envie d'être sympa. Trouve le meilleur argument CONTRE ma position. Ne valide rien sans l'avoir d'abord attaqué.
 
@@ -35,7 +35,7 @@ Le modèle donne raison à l'utilisateur parce qu'il est entraîné à plaire. C
 
 Le modèle hérite des biais de ses données d'entraînement (occidental, anglophone, certaines opinions surreprésentées). Le résultat obtenu est un consensus, pas nécessairement la réalité.
 
-> **Prompt — anti-biais**
+> **Prompt - anti-biais**
 >
 > Donne 3 angles de réponse depuis 3 contextes culturels différents. Indique pour chacun la perspective dominante et celle qui reste rare dans les sources occidentales.
 
@@ -43,4 +43,4 @@ Le modèle hérite des biais de ses données d'entraînement (occidental, anglop
 
 **Douter juste assez.**
 
-Une IA n'est ni un oracle ni un menteur. C'est un brouillon brillant qui mérite l'esprit critique de son utilisateur — surtout dans les moments où on a le moins envie de l'exercer.
+Une IA n'est ni un oracle ni un menteur. C'est un brouillon brillant qui mérite l'esprit critique de son utilisateur - surtout dans les moments où on a le moins envie de l'exercer.

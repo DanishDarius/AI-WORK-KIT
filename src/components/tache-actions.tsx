@@ -82,7 +82,7 @@ export function useTacheActions({
         [field]:
           error instanceof Error
             ? error.message
-            : "Enregistrement impossible. Réessayez.",
+            : "L’enregistrement a échoué. Réessayez.",
       }));
     } finally {
       lock.current[field] = false;

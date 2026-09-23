@@ -21,7 +21,7 @@ Formuler un problème avec précision. Évaluer un résultat dans un domaine qu'
 
 ## À simplement connaître
 
-Le nom de chaque produit qui sort. En apprendre un seul à fond, puis faire confiance au transfert des concepts d'un outil à l'autre — ce transfert fonctionne presque toujours.
+Le nom de chaque produit qui sort. En apprendre un seul à fond, puis faire confiance au transfert des concepts d'un outil à l'autre - ce transfert fonctionne presque toujours.
 
 ## Ce qui fait vraiment la différence
 

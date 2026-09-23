@@ -17,11 +17,11 @@ Un connecteur relie l'assistant à un outil externe (Gmail, Notion). Un plugin o
 
 ## Cinq plugins à garder activés en permanence
 
-1. La recherche web — pour les recherches récentes
-2. L'analyse de fichiers — PDF, Excel, images
-3. Les artifacts — pour générer des livrables visuels
-4. L'interpréteur de code — pour traiter de la donnée
-5. Cowork — pour les tâches longues
+1. La recherche web - pour les recherches récentes
+2. L'analyse de fichiers - PDF, Excel, images
+3. Les artifacts - pour générer des livrables visuels
+4. L'interpréteur de code - pour traiter de la donnée
+5. Cowork - pour les tâches longues
 
 ## Quand désactiver un plugin
 
@@ -29,7 +29,7 @@ Sur une tâche sensible (confidentialité, sujet légal), désactiver la recherc
 
 ## Le prompt d'audit des plugins
 
-> **Prompt — audit plugins**
+> **Prompt - audit plugins**
 >
 > Liste les plugins/apps actifs sur mon compte.
 > Pour chacun :

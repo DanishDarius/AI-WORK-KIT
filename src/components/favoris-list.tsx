@@ -36,7 +36,7 @@ export function FavorisList({ preview = false }: { preview?: boolean }) {
       });
       setFailed(true);
       setMessage(
-        `${error instanceof Error ? error.message : "Retrait impossible."} Le favori a été rétabli.`,
+        `${error instanceof Error ? error.message : "Le retrait a échoué."} Le favori a été rétabli.`,
       );
     } finally {
       pending.current.delete(item.tache_id);
@@ -87,12 +87,12 @@ export function FavorisList({ preview = false }: { preview?: boolean }) {
         </ul>
       ) : (
         <div className="panel">
-          <h3>Gardez vos tâches utiles à portée de main</h3>
+          <h3>Aucun favori pour l’instant.</h3>
           <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-            Touchez l’étoile d’une tâche pour la retrouver ici.
+            Cliquez sur l’étoile d’une tâche : elle apparaîtra ici.
           </p>
           <Link href="/metiers" className="text-link mt-4 inline-block">
-            Explorer mes métiers <span aria-hidden="true">→</span>
+            Parcourir mes métiers <span aria-hidden="true">→</span>
           </Link>
         </div>
       )}

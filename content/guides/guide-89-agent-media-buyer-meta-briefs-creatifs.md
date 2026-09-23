@@ -21,7 +21,7 @@ Surveille le compte : coût par acquisition par campagne, plafond de fréquence,
 
 ## Le prompt à copier
 
-> **Prompt — brief agent Meta**
+> **Prompt - brief agent Meta**
 >
 > Tu es mon media buyer Meta, focus créa.
 >

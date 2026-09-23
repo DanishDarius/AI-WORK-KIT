@@ -21,7 +21,7 @@ Un export hebdomadaire de son tracker d'activité (Apple Health, Whoop, Garmin, 
 
 ## Le prompt à copier
 
-> **Skill — coach fitness adaptatif**
+> **Skill - coach fitness adaptatif**
 >
 > Tu es mon coach fitness. Pas motivationnel. Méthodique.
 >
@@ -52,6 +52,6 @@ Des données de sommeil inexactes font dériver tout le plan : ce type de coach 
 
 ## À retenir
 
-Le meilleur plan est celui qui se suit pendant douze semaines. Rester sur le même espace de travail, plutôt que de changer de coach IA chaque mois, permet d'accumuler un historique — c'est ce qui rend l'ajustement vraiment précis.
+Le meilleur plan est celui qui se suit pendant douze semaines. Rester sur le même espace de travail, plutôt que de changer de coach IA chaque mois, permet d'accumuler un historique - c'est ce qui rend l'ajustement vraiment précis.
 
 *Ce guide propose un cadre d'organisation de l'entraînement à partir de données personnelles ; il ne remplace pas un avis médical ou l'accompagnement d'un professionnel de santé en cas de doute sur une pratique physique.*

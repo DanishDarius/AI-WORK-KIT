@@ -4,7 +4,7 @@ import { getGuideCategories, getGuideSummaries } from "@/lib/guides";
 
 export const metadata: Metadata = {
   title: "Bibliothèque de guides IA | AI WORK KIT",
-  description: "Une bibliothèque de guides pratiques pour utiliser l’intelligence artificielle dans votre travail et vos projets.",
+  description: "Des guides IA courts et concrets : lus en quelques minutes, appliqués le jour même.",
 };
 
 export default function BibliothequePage() {

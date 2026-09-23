@@ -17,17 +17,17 @@ En 48 heures, du samedi matin au dimanche soir, dix automatisations peuvent êtr
 
 ## La liste, dans l'ordre
 
-**Samedi matin** — 1. Briefing matinal (agenda, e-mails, priorités). 2. Tri automatique de la boîte mail. 3. Résumé des échanges de la veille. 4. Veille marché de 30 minutes.
+**Samedi matin** - 1. Briefing matinal (agenda, e-mails, priorités). 2. Tri automatique de la boîte mail. 3. Résumé des échanges de la veille. 4. Veille marché de 30 minutes.
 
-**Samedi après-midi** — 5. Brouillons de réponses aux e-mails récurrents. 6. Préparation des réunions de la semaine.
+**Samedi après-midi** - 5. Brouillons de réponses aux e-mails récurrents. 6. Préparation des réunions de la semaine.
 
-**Dimanche matin** — 7. Génération de contenu social pour la semaine. 8. Suivi des clients en sommeil.
+**Dimanche matin** - 7. Génération de contenu social pour la semaine. 8. Suivi des clients en sommeil.
 
-**Dimanche soir** — 9. Bilan hebdomadaire personnel (ce qui a marché, ce qui a échoué). 10. Plan de la semaine à venir.
+**Dimanche soir** - 9. Bilan hebdomadaire personnel (ce qui a marché, ce qui a échoué). 10. Plan de la semaine à venir.
 
 ## Le prompt de planification
 
-> **Prompt — tâche planifiée**
+> **Prompt - tâche planifiée**
 >
 > Planifie chaque [jour] à [heure]
 >

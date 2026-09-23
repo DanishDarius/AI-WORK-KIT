@@ -17,13 +17,13 @@ Les entreprises fortement orientées IA ne recrutent plus uniquement sur le CV. 
 
 ## Ce qui est réellement mesuré
 
-**Curiosité opérationnelle** — le nombre d'outils testés dans le mois.
+**Curiosité opérationnelle** - le nombre d'outils testés dans le mois.
 
-**Initiative** — ce qui est lancé sans qu'on l'ait demandé.
+**Initiative** - ce qui est lancé sans qu'on l'ait demandé.
 
-**Énergie** — la vitesse pour passer d'une idée à un prototype.
+**Énergie** - la vitesse pour passer d'une idée à un prototype.
 
-**Capacité à documenter** — ce qui peut être montré concrètement (notes, side-projects, démonstrations).
+**Capacité à documenter** - ce qui peut être montré concrètement (notes, side-projects, démonstrations).
 
 ## Comment développer ça
 
@@ -31,7 +31,7 @@ Tenir un journal public (Notion, blog, LinkedIn) de ce qui est testé. Lancer un
 
 ## Le prompt à copier
 
-> **Prompt — préparation d'entretien AI-first**
+> **Prompt - préparation d'entretien AI-first**
 >
 > Tu prépares mon entretien pour un poste de [poste] dans une entreprise fortement orientée IA.
 >
@@ -46,4 +46,4 @@ Tenir un journal public (Notion, blog, LinkedIn) de ce qui est testé. Lancer un
 
 ## À retenir
 
-Un CV ne montre pas la curiosité — la preuve, elle, le fait. Écrire une note publique sur son dernier test IA permet, un an plus tard, d'en avoir accumulé des dizaines : c'est ça, le vrai CV.
+Un CV ne montre pas la curiosité - la preuve, elle, le fait. Écrire une note publique sur son dernier test IA permet, un an plus tard, d'en avoir accumulé des dizaines : c'est ça, le vrai CV.

@@ -163,7 +163,7 @@ Tu es gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier ton 
 Colle ici les données du cas pratique ci-dessus (les notes en vrac de Léna).
 
 # Instructions
-1. Construis un calendrier de publication sur 14 jours (jour, format — post/story/reel, thème, accroche courte).
+1. Construis un calendrier de publication sur 14 jours (jour, format - post/story/reel, thème, accroche courte).
 2. Organise les idées de façon cohérente en respectant les échéances mentionnées (lancement le 15, anniversaire le 22).
 3. Respecte un rythme réaliste pour une seule personne qui gère aussi l'institut au quotidien (pas plus d'un post élaboré par jour).
 - Ton souhaité : chaleureux et engageant, adapté à Instagram.
@@ -210,7 +210,7 @@ Colle ici les données du cas pratique ci-dessus (les notes en vrac de Léna).
 </context>
 
 <instructions>
-1. Construis un calendrier de publication sur 14 jours (jour, format — post/story/reel, thème, accroche courte).
+1. Construis un calendrier de publication sur 14 jours (jour, format - post/story/reel, thème, accroche courte).
 2. Organise les idées de façon cohérente en respectant les échéances mentionnées (lancement le 15, anniversaire le 22).
 3. Respecte un rythme réaliste pour une seule personne qui gère aussi l'institut au quotidien (pas plus d'un post élaboré par jour).
 </instructions>
@@ -296,7 +296,7 @@ Un tableau à 4 colonnes (date recommandée, format, angle éditorial, élément
 </output_format>
 
 <special_considerations>
-Adopte un ton professionnel, factuel et orienté crédibilité B2B — pas un ton grand public. Ne rien inventer au-delà des 5 éléments fournis.
+Adopte un ton professionnel, factuel et orienté crédibilité B2B - pas un ton grand public. Ne rien inventer au-delà des 5 éléments fournis.
 </special_considerations>
 
 <query>
@@ -3573,7 +3573,7 @@ Colle ici les données du cas pratique ci-dessus (les rendez-vous à planifier e
 # Instructions
 1. Construis le planning de la journée en respectant la contrainte horaire fixe du client B (8h-9h30).
 2. Regroupe les interventions par zone géographique quand c'est possible pour limiter les trajets.
-3. Vérifie si les 5 interventions peuvent tenir dans la journée avec les temps de trajet indiqués — si ce n'est pas le cas, indique laquelle il faudrait reporter et pourquoi.
+3. Vérifie si les 5 interventions peuvent tenir dans la journée avec les temps de trajet indiqués - si ce n'est pas le cas, indique laquelle il faudrait reporter et pourquoi.
 - Ton souhaité : factuel, précis sur les horaires.
 
 # Format de sortie attendu
@@ -3620,7 +3620,7 @@ Colle ici les données du cas pratique ci-dessus (les rendez-vous à planifier e
 <instructions>
 1. Construis le planning de la journée en respectant la contrainte horaire fixe du client B (8h-9h30).
 2. Regroupe les interventions par zone géographique quand c'est possible pour limiter les trajets.
-3. Vérifie si les 5 interventions peuvent tenir dans la journée avec les temps de trajet indiqués — si ce n'est pas le cas, indique laquelle il faudrait reporter et pourquoi.
+3. Vérifie si les 5 interventions peuvent tenir dans la journée avec les temps de trajet indiqués - si ce n'est pas le cas, indique laquelle il faudrait reporter et pourquoi.
 </instructions>
 
 <output_format>

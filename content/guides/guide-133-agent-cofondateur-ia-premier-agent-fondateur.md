@@ -25,7 +25,7 @@ Il lit les résumés produits par les autres agents chaque matin. Il prépare un
 
 ## Le prompt à copier
 
-> **Prompt — fiche du cofondateur IA**
+> **Prompt - fiche du cofondateur IA**
 >
 > Tu es mon cofondateur IA. Tu as accès à mes objectifs, mes chiffres et mon équipe.
 >

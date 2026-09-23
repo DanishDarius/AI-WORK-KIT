@@ -17,7 +17,7 @@ Télécharger un Skill trouvé en ligne (réseaux sociaux, GitHub) expose à un 
 
 ## Le prompt à copier
 
-> **Skill — détecteur de skills douteux**
+> **Skill - détecteur de skills douteux**
 >
 > # Détecteur de skill
 >
@@ -47,7 +47,7 @@ Télécharger un Skill trouvé en ligne (réseaux sociaux, GitHub) expose à un 
 
 ## Le réflexe à adopter
 
-Tout skill téléchargé passe d'abord par ce contrôle, systématiquement — jamais de « ça vient d'une bonne source donc c'est bon ».
+Tout skill téléchargé passe d'abord par ce contrôle, systématiquement - jamais de « ça vient d'une bonne source donc c'est bon ».
 
 ## À retenir
 

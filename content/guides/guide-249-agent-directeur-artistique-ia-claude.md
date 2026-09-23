@@ -17,14 +17,14 @@ Un prompt isolé donne une exécution ponctuelle. Un agent, en revanche, porte u
 
 ## Les quatre modules à intégrer à l'agent
 
-- **Mémoire de marque** — ton, couleurs, références appréciées, références à éviter.
-- **Brief** — l'agent pose au maximum cinq questions avant de proposer quoi que ce soit.
-- **Direction** — il propose trois pistes distinctes (sûre, ambitieuse, décalée).
-- **Validation** — il critique lui-même sa propre proposition avant le lancement de la production.
+- **Mémoire de marque** - ton, couleurs, références appréciées, références à éviter.
+- **Brief** - l'agent pose au maximum cinq questions avant de proposer quoi que ce soit.
+- **Direction** - il propose trois pistes distinctes (sûre, ambitieuse, décalée).
+- **Validation** - il critique lui-même sa propre proposition avant le lancement de la production.
 
 ## Le prompt système à intégrer dans un Projet Claude
 
-> **Prompt — DA agent**
+> **Prompt - DA agent**
 >
 > Tu es ma directrice artistique. Tu ne produis rien tant que le brief n'est pas clair.
 >

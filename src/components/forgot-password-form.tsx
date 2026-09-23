@@ -23,7 +23,7 @@ export function ForgotPasswordForm() {
 
     setSending(false);
     if (resetError) {
-      setError("L’envoi est momentanément impossible. Veuillez réessayer.");
+      setError("L’envoi a échoué. Réessayez dans un instant.");
       return;
     }
     setSent(true);
@@ -38,8 +38,8 @@ export function ForgotPasswordForm() {
         <div>
           <h2>Vérifiez votre boîte mail</h2>
           <p>
-            Si un compte correspond à cette adresse, vous recevrez un lien pour
-            choisir un nouveau mot de passe.
+            Si cette adresse a un compte, le lien vous attend. Pensez à
+            regarder dans les spams.
           </p>
           <Link className="text-link mt-4 inline-block" href="/connexion">
             Retour à la connexion
@@ -69,7 +69,7 @@ export function ForgotPasswordForm() {
         </p>
       )}
       <button className="button" type="submit" disabled={sending}>
-        {sending ? "Envoi en cours…" : "Recevoir le lien de récupération"}
+        {sending ? "Envoi en cours…" : "Recevoir le lien"}
       </button>
       <Link className="text-link justify-self-center" href="/connexion">
         Retour à la connexion

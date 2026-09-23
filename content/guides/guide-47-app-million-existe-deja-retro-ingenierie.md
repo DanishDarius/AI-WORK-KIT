@@ -28,11 +28,11 @@ La méthode complète : trouve le leader de ta niche sur un store d'applications
 
 Beaucoup ouvrent un assistant IA et demandent simplement « donne-moi une idée d'app qui rapporte ». Ils récupèrent une idée générique, non validée, que des milliers d'autres personnes ont déjà reçue avant eux. C'est l'inverse qu'il faut faire. La demande est déjà là, publiée, classée, notée, commentée. L'app en tête de ta catégorie a un produit qui fonctionne, des milliers d'avis, et surtout des avis négatifs qui listent noir sur blanc ce qui manque. Ces avis à une, deux ou trois étoiles sont une vraie mine d'or : c'est la douleur du client, écrite par le client lui-même.
 
-Ton avantage n'est pas de refaire la même app à l'identique. C'est de prendre le même client, sa douleur déjà documentée, et d'y glisser l'IA là où le leader ne l'a pas fait — souvent parce qu'il a été conçu avant l'arrivée de ces technologies, ou pour un marché anglophone, ou trop large pour ta niche précise. Une IA générative sait faire cette lecture stratégique. Il faut simplement la cadrer pour qu'elle raisonne comme une analyste, pas comme un simple générateur d'idées vagues.
+Ton avantage n'est pas de refaire la même app à l'identique. C'est de prendre le même client, sa douleur déjà documentée, et d'y glisser l'IA là où le leader ne l'a pas fait - souvent parce qu'il a été conçu avant l'arrivée de ces technologies, ou pour un marché anglophone, ou trop large pour ta niche précise. Une IA générative sait faire cette lecture stratégique. Il faut simplement la cadrer pour qu'elle raisonne comme une analyste, pas comme un simple générateur d'idées vagues.
 
 ## La méthode : rétro-ingénierie de la demande prouvée
 
-Cinq étapes au total. Les trois premières prennent à peine une minute. Les deux dernières sont le vrai travail — et c'est tant mieux ainsi.
+Cinq étapes au total. Les trois premières prennent à peine une minute. Les deux dernières sont le vrai travail - et c'est tant mieux ainsi.
 
 1. **Trouve le leader de ta niche.** Ouvre un store d'applications (mobile ou autre), va dans la catégorie qui touche ton terrain, ton métier, ton audience. Repère l'app la plus populaire : celle en haut du classement, avec le plus grand nombre d'avis. Le nombre d'avis compte plus que la note moyenne : il prouve le volume réel de la demande.
 2. **Capture la preuve.** Fais des captures d'écran de trois choses : l'écran principal de l'app (ce qu'elle fait concrètement), sa fiche (positionnement et prix), et surtout ses avis, en priorité ceux à une, deux ou trois étoiles. Les gens y écrivent exactement ce qui les frustre. C'est ta matière première de travail.
@@ -44,7 +44,7 @@ Cinq étapes au total. Les trois premières prennent à peine une minute. Les de
 
 Ouvre une conversation avec ton assistant IA, joins tes captures d'écran, et colle ce prompt tel quel. Remplis les crochets avec tes propres informations.
 
-> **Prompt — rétro-ingénierie de l'app leader**
+> **Prompt - rétro-ingénierie de l'app leader**
 >
 > Tu es un stratège produit sobre et lucide, spécialiste de la rétro-ingénierie de marchés. Je te fournis des captures d'écran de l'application la plus populaire d'une catégorie d'un store d'applications : son écran principal, sa fiche, et ses avis utilisateurs (surtout les avis négatifs). Ton rôle n'est PAS de me flatter ni de me vendre du rêve. C'est de lire la preuve et de trouver la faille exploitable.
 >
@@ -69,7 +69,7 @@ Ouvre une conversation avec ton assistant IA, joins tes captures d'écran, et co
 
 Une fois la carte validée, tu ne construis pas au hasard. Tu demandes à l'IA de transformer son analyse en brief technique complet, puis tu déposes ce brief dans un agent de code capable de lire, écrire et lancer du code pour bâtir ton MVP. Colle ce prompt à la suite du premier échange.
 
-> **Prompt — cahier des charges pour un agent de code**
+> **Prompt - cahier des charges pour un agent de code**
 >
 > À partir de ton analyse ci-dessus, rédige un cahier des charges COMPLET et prêt à coller dans un agent de code pour construire un MVP. Ne code pas ici : produis le brief que l'agent exécutera. Structure-le ainsi :
 >
@@ -88,7 +88,7 @@ Une fois la carte validée, tu ne construis pas au hasard. Tu demandes à l'IA d
 
 Tu ne vas pas refaire cette analyse à la main à chaque nouvelle niche. Tu la figes une fois pour toutes sous forme de compétence réutilisable. Une telle compétence est un dossier d'instructions que l'IA charge automatiquement quand la tâche s'y prête, réutilisable dans une application de chat, dans un agent de code, et via une interface de programmation. Colle ceci pour que l'IA t'écrive ta propre compétence de rétro-ingénierie.
 
-> **Prompt — ta compétence de rétro-ingénierie**
+> **Prompt - ta compétence de rétro-ingénierie**
 >
 > Écris-moi une compétence d'agent réutilisable qui exécute ma méthode de rétro-ingénierie d'app. Donne-moi le contenu du fichier d'instructions :
 >
@@ -113,10 +113,10 @@ Le workflow complet, dans l'ordre : store d'applications → captures → assist
 
 ## L'astuce de pro
 
-Le piège numéro un n'est pas de mal analyser, c'est de construire avant d'avoir vérifié la demande sur le terrain. Les avis d'un store d'applications te disent que le problème existe. Ils ne te disent pas que TON client à toi paiera pour TA version. Avant d'ouvrir un agent de code, aie cinq vraies conversations avec des personnes qui vivent la douleur numéro un que l'IA a identifiée. Montre-leur ta promesse en une phrase, demande comment elles font aujourd'hui, ce que ça leur coûte, si elles basculeraient vers ta solution. Si tu ne trouves pas cinq personnes que ça intéresse, ce n'est pas un créneau, c'est un mirage — et tu viens d'économiser des semaines entières de travail. La demande se valide en parlant à de vraies personnes, pas en codant seul dans son coin.
+Le piège numéro un n'est pas de mal analyser, c'est de construire avant d'avoir vérifié la demande sur le terrain. Les avis d'un store d'applications te disent que le problème existe. Ils ne te disent pas que TON client à toi paiera pour TA version. Avant d'ouvrir un agent de code, aie cinq vraies conversations avec des personnes qui vivent la douleur numéro un que l'IA a identifiée. Montre-leur ta promesse en une phrase, demande comment elles font aujourd'hui, ce que ça leur coûte, si elles basculeraient vers ta solution. Si tu ne trouves pas cinq personnes que ça intéresse, ce n'est pas un créneau, c'est un mirage - et tu viens d'économiser des semaines entières de travail. La demande se valide en parlant à de vraies personnes, pas en codant seul dans son coin.
 
 ## Quand t'en servir, et les limites à connaître
 
 Cette méthode est excellente pour trouver un angle réel sur un marché déjà chaud, et pour sortir un premier produit rapidement. Elle ne fabrique pas un million tout seule, elle te donne une direction crédible et un MVP fonctionnel. Le reste, c'est le travail que l'IA n'enlève pas : parler aux clients, distribuer le produit, gagner la confiance, tenir dans la durée.
 
-Reste lucide aussi sur les limites à respecter : ne copie jamais le nom, la marque ou les visuels du leader — inspire-toi de la demande constatée, pas de la propriété d'autrui. Ne mets aucun identifiant sensible en clair dans un prompt. Et garde toujours l'humain avant toute action qui envoie ou dépense de l'argent réel. Un titre accrocheur vend les 60 secondes ; la méthode complète, elle, apporte la nuance — c'est elle qui fait toute la différence entre un rêve et un vrai produit.
+Reste lucide aussi sur les limites à respecter : ne copie jamais le nom, la marque ou les visuels du leader - inspire-toi de la demande constatée, pas de la propriété d'autrui. Ne mets aucun identifiant sensible en clair dans un prompt. Et garde toujours l'humain avant toute action qui envoie ou dépense de l'argent réel. Un titre accrocheur vend les 60 secondes ; la méthode complète, elle, apporte la nuance - c'est elle qui fait toute la différence entre un rêve et un vrai produit.

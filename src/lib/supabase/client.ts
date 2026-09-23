@@ -1,5 +1,5 @@
 // Client Supabase pour le navigateur (composants "use client").
-// Utilise uniquement la clé publique (NEXT_PUBLIC_*) — jamais la clé service_role ici.
+// Utilise uniquement la clé publique (NEXT_PUBLIC_*) - jamais la clé service_role ici.
 import { createBrowserClient } from "@supabase/ssr";
 
 export function createClient() {

@@ -6,7 +6,7 @@ export default function Favoris() {
     <>
       <Back />
       <Intro eyebrow="Votre espace personnel" title="Mes favoris">
-        Vos tâches utiles, réunies au même endroit pour y revenir facilement.
+        Les tâches que vous utilisez souvent, à un clic.
       </Intro>
       <div className="aw-personal">
         <FavorisList />

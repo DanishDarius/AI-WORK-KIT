@@ -17,23 +17,23 @@ Ce prompt n'est pas un conseil d'investissement. C'est un outil de lecture froid
 
 ## Le prompt à copier
 
-> **Prompt — perception vs réalité**
+> **Prompt - perception vs réalité**
 >
 > Tu es analyste actions buy-side. Pas d'opinion d'investissement, juste de la lecture froide.
 >
 > Action : [TICKER]
 >
-> Étape 1 — RÉALITÉ FONDAMENTALE
+> Étape 1 - RÉALITÉ FONDAMENTALE
 > - Derniers résultats trimestriels : chiffre d'affaires, marge, guidance
 > - Tendance sur 4 trimestres : amélioration, plateau ou dégradation ?
 > - Bilan : trésorerie nette, dette, flux de trésorerie disponible
 >
-> Étape 2 — PERCEPTION DU MARCHÉ
+> Étape 2 - PERCEPTION DU MARCHÉ
 > - Performance du cours sur 90 jours comparée au secteur
 > - Top 5 des sujets d'actualité du dernier mois (ton : positif / neutre / négatif)
 > - Notes d'analystes récentes : sens et ampleur
 >
-> Étape 3 — VERDICT
+> Étape 3 - VERDICT
 > - La baisse (ou la hausse) reflète-t-elle les fondamentaux ?
 > - 3 signaux qui invalideraient cette lecture
 > - Ce qu'il faut surveiller dans les 60 prochains jours
@@ -48,4 +48,4 @@ Sans accès à une recherche web ou à une source de données en direct, l'assis
 
 **Un prompt n'est pas un courtier.**
 
-Ce cadre sert à structurer une réflexion, jamais à décider à la place de l'utilisateur. La décision finale revient à l'utilisateur — et aucune analyse produite par l'IA ne remplace la responsabilité d'un conseiller financier ou d'un courtier agréé.
+Ce cadre sert à structurer une réflexion, jamais à décider à la place de l'utilisateur. La décision finale revient à l'utilisateur - et aucune analyse produite par l'IA ne remplace la responsabilité d'un conseiller financier ou d'un courtier agréé.

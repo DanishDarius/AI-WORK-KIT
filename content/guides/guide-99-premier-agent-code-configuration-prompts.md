@@ -21,7 +21,7 @@ Installer l'agent de code en ligne de commande sur l'ordinateur. Autoriser les p
 
 ## Les trois premiers prompts à essayer
 
-> **Prompt 1 — premier diagnostic**
+> **Prompt 1 - premier diagnostic**
 >
 > Tu es mon agent de code. Voici le dossier : [chemin].
 >
@@ -31,7 +31,7 @@ Installer l'agent de code en ligne de commande sur l'ordinateur. Autoriser les p
 > 3. Sors un résumé de 5 lignes : à quoi sert ce projet, comment il tourne, ce qui semble cassé.
 > 4. Pose-moi 3 questions avant toute modification.
 
-> **Prompt 2 — premier correctif**
+> **Prompt 2 - premier correctif**
 >
 > Voici le bug : [description précise + message d'erreur + reproduction].
 >
@@ -41,7 +41,7 @@ Installer l'agent de code en ligne de commande sur l'ordinateur. Autoriser les p
 > - Tu n'écris pas de commentaires « TODO ».
 > - Tu lances le test avant de me dire « c'est fait ».
 
-> **Prompt 3 — tâche en arrière-plan**
+> **Prompt 3 - tâche en arrière-plan**
 >
 > Tu vas tourner pendant 30 minutes en arrière-plan.
 >

@@ -13,11 +13,11 @@ Utiliser l'IA en permanence pour les mêmes tâches mène généralement à un p
 
 ## Le cadre
 
-**60 % — exécution accélérée.** L'IA effectue ce qui est déjà maîtrisé, simplement plusieurs fois plus vite. C'est le gros volume du quotidien : rédaction, tri, mise en forme, résumés. Un risque faible pour un gain de temps important.
+**60 % - exécution accélérée.** L'IA effectue ce qui est déjà maîtrisé, simplement plusieurs fois plus vite. C'est le gros volume du quotidien : rédaction, tri, mise en forme, résumés. Un risque faible pour un gain de temps important.
 
-**30 % — augmentation.** L'IA vient en soutien sur ce qui serait fait moins bien seul : relecture stratégique, recherche, analyse de données, brainstorm structuré. La décision et le contrôle restent humains.
+**30 % - augmentation.** L'IA vient en soutien sur ce qui serait fait moins bien seul : relecture stratégique, recherche, analyse de données, brainstorm structuré. La décision et le contrôle restent humains.
 
-**10 % — exploration.** Il s'agit de tester de nouvelles pistes : agents, automatisations, outils encore inconnus. Cette part fonctionne comme une forme de recherche et développement personnelle — son absence prolongée mène à un retard progressif sur les nouvelles pratiques.
+**10 % - exploration.** Il s'agit de tester de nouvelles pistes : agents, automatisations, outils encore inconnus. Cette part fonctionne comme une forme de recherche et développement personnelle - son absence prolongée mène à un retard progressif sur les nouvelles pratiques.
 
 ### Le déséquilibre le plus fréquent
 
@@ -29,7 +29,7 @@ Sur une semaine, il suffit de noter chaque session d'usage de l'IA. Le vendredi,
 
 ## Le prompt d'audit 60/30/10
 
-> **Prompt — audit 60/30/10**
+> **Prompt - audit 60/30/10**
 >
 > Je te liste mes 15 dernières sessions IA de la semaine :
 > [type de tâche + temps passé]

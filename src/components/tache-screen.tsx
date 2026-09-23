@@ -22,7 +22,7 @@ const aiLinks = {
 };
 const strip = (s: string | null) =>
   (s || "").replace(/^(Contexte|Travail à faire)\s*:\s*/, "");
-const caseTitle = (s: string) => s.replace(/^Cas fictif \d+\s*[—–-]\s*/, "");
+const caseTitle = (s: string) => s.replace(/^Cas fictif \d+\s*[---]\s*/, "");
 
 function CaseWorkspace({
   exercice,
@@ -45,13 +45,13 @@ function CaseWorkspace({
     try {
       await navigator.clipboard.writeText(content);
       setCopied(
-        `Le prompt et les données sont copiés. Collez-les dans ${iaLabels[active]}.`,
+        `Copié. Collez-le dans ${iaLabels[active]}.`,
       );
     } catch {
       setManualCopy(true);
       setExpanded(true);
       setCopied(
-        "La copie automatique n’est pas disponible. Sélectionnez le contenu complet ci-dessous pour le copier.",
+        "La copie automatique est bloquée par votre navigateur. Sélectionnez le texte ci-dessous et copiez-le.",
       );
     }
   }
@@ -73,18 +73,18 @@ function CaseWorkspace({
     <div className="aw-workspace">
       <section className="aw-panel">
         <h2>
-          <span className="aw-number">01</span> Prenez connaissance du cas
+          <span className="aw-number">01</span> La situation
         </h2>
         <p className="aw-bodytext">{strip(exercice.contexte)}</p>
         {exercice.donnees && (
           <details>
-            <summary>Voir les données du cas</summary>
+            <summary>Voir les données fournies</summary>
             <pre>{exercice.donnees}</pre>
           </details>
         )}
         <div className="aw-workblock">
           <h2>
-            <span className="aw-number">02</span> Votre mission
+            <span className="aw-number">02</span> Ce que vous devez obtenir
           </h2>
           <div className="aw-taskwork aw-bodytext">
             {strip(exercice.travail_a_faire)}
@@ -93,10 +93,10 @@ function CaseWorkspace({
       </section>
       <section className="aw-panel">
         <h2>
-          <span className="aw-number">03</span> Passez à la pratique
+          <span className="aw-number">03</span> Le prompt à copier
         </h2>
         <p className="aw-muted text-xs">
-          Votre prompt, préparé pour l’IA de votre choix.
+          Choisissez votre IA : le prompt s’adapte.
         </p>
         <div className="aw-ai" role="tablist" aria-label="Choisir votre IA">
           {chemins.map((ia, i) => (
@@ -149,7 +149,7 @@ function CaseWorkspace({
                   ? expanded || prompt.length <= 570
                     ? prompt
                     : `${prompt.slice(0, 570)}…`
-                  : "Ce prompt n’est pas disponible pour cette IA."}
+                  : "Pas de prompt pour cette IA sur ce cas. Essayez un autre onglet."}
             </pre>
             {prompt && prompt.length > 570 && !manualCopy && (
               <button
@@ -157,7 +157,7 @@ function CaseWorkspace({
                 onClick={() => setExpanded((v) => !v)}
                 aria-expanded={expanded}
               >
-                {expanded ? "Réduire le prompt" : "Lire le prompt complet"}
+                {expanded ? "Réduire" : "Voir le prompt en entier"}
                 <Icon name="down" />
               </button>
             )}
@@ -168,14 +168,14 @@ function CaseWorkspace({
             onClick={copy}
           >
             <Icon name="copy" />
-            Copier le prompt + les données
+            Copier le prompt
           </button>
           <p className="aw-caption">
-            Le contenu complet est copié, même si l’aperçu est réduit.
+            Le prompt et les données sont copiés en entier, même si l’aperçu est coupé.
           </p>
           {manualCopy && (
             <button className="aw-btn mt-3" onClick={selectAll}>
-              Sélectionner le contenu complet
+              Tout sélectionner
             </button>
           )}
           <p role="status" className="aw-muted text-xs mt-3">
@@ -184,8 +184,8 @@ function CaseWorkspace({
           <div className="aw-next">
             <strong>Et maintenant ?</strong>
             <p>
-              Ouvrez {iaLabels[active]}, collez le contenu dans une nouvelle
-              conversation et comparez la réponse à votre mission.
+              Ouvrez {iaLabels[active]}, collez dans une nouvelle conversation,
+              puis vérifiez que la réponse correspond à l’objectif (étape 02).
             </p>
             <a
               className="aw-btn"
@@ -256,7 +256,7 @@ function LoadedTask({
             <span>
               <Icon name="sparkles" />3 versions de prompt
             </span>
-            <span>Données fictives du kit</span>
+            <span>Données d’exemple, prêtes à l’emploi</span>
           </div>
         </section>
         <FavoriButton
@@ -273,12 +273,12 @@ function LoadedTask({
       )}
       {data.tache.limite_connue && (
         <aside className="exception mb-6">
-          <h2>Point de vigilance : limite connue</h2>
+          <h2>À savoir avant de commencer</h2>
           <p>
-            Cette tâche comporte une limite connue.{" "}
+            L’IA a une limite connue sur cette tâche.{" "}
             {data.tache.ia_alternative_conseillee
-              ? `L’IA alternative conseillée est ${iaLabels[data.tache.ia_alternative_conseillee]}. Son prompt est disponible dans les onglets ci-dessous.`
-              : "Vérifiez attentivement le résultat obtenu."}
+              ? `${iaLabels[data.tache.ia_alternative_conseillee]} s’en sort mieux : son prompt est dans les onglets ci-dessous.`
+              : "Relisez le résultat avant de l’utiliser."}
           </p>
         </aside>
       )}
@@ -343,7 +343,7 @@ function LoadedTask({
           </>
         ) : (
           <p className="aw-empty">
-            Aucun cas pratique disponible pour cette tâche.
+            Les cas pratiques de cette tâche arrivent bientôt.
           </p>
         )}
       </div>
@@ -364,7 +364,7 @@ function LoadedTask({
           onChange={() => actions.toggle("fait")}
         />
         <p className="aw-muted text-xs mt-2">
-          Vous pouvez revenir sur cette tâche à tout moment.
+          Vous pourrez y revenir à tout moment.
         </p>
         {actions.messages.fait && (
           <p className="action-error" role="alert">
@@ -386,7 +386,7 @@ function LoadedTask({
             onClick={() => setExercise((i) => (i + 1) % data.exercices.length)}
           >
             {exercise < data.exercices.length - 1
-              ? "Passer au cas suivant"
+              ? "Cas suivant"
               : "Revoir le premier cas"}
             <Icon name="right" />
           </button>
@@ -417,9 +417,9 @@ export function TacheScreen({ id, metier }: { id: string; metier: string }) {
         <Back />
         <Intro
           eyebrow="Métier requis"
-          title="Ouvrez cette tâche depuis un métier."
+          title="Ouvrez cette tâche depuis votre métier."
         >
-          Le métier permet de retrouver votre chemin IA et les prompts associés.
+          C’est lui qui indique votre IA et les bons prompts.
         </Intro>
       </>
     );

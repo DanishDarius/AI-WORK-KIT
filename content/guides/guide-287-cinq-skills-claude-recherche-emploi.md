@@ -13,15 +13,15 @@ Chercher un emploi sans s'appuyer sur l'IA revient, selon la source, à partir m
 
 ## Les cinq Skills
 
-1. **Audit de correspondance au poste** — l'offre est analysée pour identifier les points de correspondance clairs et les points nécessitant une argumentation.
-2. **Refonte du CV selon l'offre** — un CV ciblé, plutôt que générique, en dix minutes.
-3. **Préparation d'entretien** — les quinze questions les plus probables, avec une critique des réponses envisagées.
-4. **Négociation salariale** — une fourchette argumentée accompagnée de scripts de réponse.
-5. **Emails de suivi** — un contenu ajusté, ni trop insistant ni trop discret.
+1. **Audit de correspondance au poste** - l'offre est analysée pour identifier les points de correspondance clairs et les points nécessitant une argumentation.
+2. **Refonte du CV selon l'offre** - un CV ciblé, plutôt que générique, en dix minutes.
+3. **Préparation d'entretien** - les quinze questions les plus probables, avec une critique des réponses envisagées.
+4. **Négociation salariale** - une fourchette argumentée accompagnée de scripts de réponse.
+5. **Emails de suivi** - un contenu ajusté, ni trop insistant ni trop discret.
 
 ## Le prompt d'audit de correspondance
 
-> **Prompt — Skill audit de fit**
+> **Prompt - Skill audit de fit**
 >
 > Voici une offre d'emploi. Voici mon CV. Voici mon contexte (envie, contraintes, attentes salariales).
 >
@@ -38,7 +38,7 @@ Chercher un emploi sans s'appuyer sur l'IA revient, selon la source, à partir m
 
 ## Le prompt de négociation salariale
 
-> **Prompt — Skill négo salariale**
+> **Prompt - Skill négo salariale**
 >
 > Voici l'offre proposée : [montant + package].
 >

@@ -31,7 +31,7 @@ Avant de connecter une IA à une boîte mail, un agenda, ou pire un compte banca
 
 ## Le prompt à copier
 
-> **Prompt — audit du connecteur**
+> **Prompt - audit du connecteur**
 >
 > Je m'apprête à connecter l'outil [nom] à mon compte [type de compte].
 >

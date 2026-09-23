@@ -17,7 +17,7 @@ Pas un débat équilibré, ni un « peut-être que ». Il s'agit d'un rôle de d
 
 ## Le prompt à utiliser systématiquement
 
-> **Prompt — devil's advocate**
+> **Prompt - devil's advocate**
 >
 > Tu vas jouer l'avocat du diable. Aucune complaisance. Aucun équilibrage.
 >

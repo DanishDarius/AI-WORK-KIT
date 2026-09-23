@@ -13,7 +13,7 @@ Une tâche planifiée chaque semaine pousse l'assistant à revoir sa propre conf
 
 ## Le constat
 
-La plupart des gens configurent leur assistant IA une fois et n'y reviennent jamais. Résultat : la configuration vieillit pendant que les usages évoluent. Une simple tâche hebdomadaire planifiée règle ce problème — l'IA audite sa propre configuration et propose des améliorations.
+La plupart des gens configurent leur assistant IA une fois et n'y reviennent jamais. Résultat : la configuration vieillit pendant que les usages évoluent. Une simple tâche hebdomadaire planifiée règle ce problème - l'IA audite sa propre configuration et propose des améliorations.
 
 ## Le rituel hebdomadaire
 
@@ -21,7 +21,7 @@ Une tâche planifiée chaque semaine, à heure fixe. L'assistant relit les espac
 
 ## Le prompt à copier
 
-> **Prompt — audit config hebdomadaire**
+> **Prompt - audit config hebdomadaire**
 >
 > Tu es mon coach de config IA. Chaque semaine, audite mon utilisation sur les 7 derniers jours.
 >
@@ -34,4 +34,4 @@ Une tâche planifiée chaque semaine, à heure fixe. L'assistant relit les espac
 
 ## À retenir
 
-Une configuration qui ne s'audite jamais finit par s'enkyster. Quinze minutes par semaine suffisent pour rester au niveau de son propre outil — un investissement trop rentable pour être ignoré.
+Une configuration qui ne s'audite jamais finit par s'enkyster. Quinze minutes par semaine suffisent pour rester au niveau de son propre outil - un investissement trop rentable pour être ignoré.

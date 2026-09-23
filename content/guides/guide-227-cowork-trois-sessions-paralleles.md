@@ -17,17 +17,17 @@ Pas plus de trois sessions en parallèle. Au-delà, il devient difficile d'arbit
 
 ## Comment répartir ces trois voies
 
-Voie 1 — Profond : une tâche longue et stratégique (analyse, rédaction lourde).
+Voie 1 - Profond : une tâche longue et stratégique (analyse, rédaction lourde).
 
-Voie 2 — Production : du volume répétitif (résumés, brouillons, tris).
+Voie 2 - Production : du volume répétitif (résumés, brouillons, tris).
 
-Voie 3 — Veille : recherche, surveillance, balayage d'information.
+Voie 3 - Veille : recherche, surveillance, balayage d'information.
 
 ## Le rituel de récolte
 
 Fixer un créneau quotidien fixe (par exemple 17h) pour récolter le résultat des trois voies : lire, décider, archiver. Récolter au fil de l'eau fait perdre le bénéfice du travail en parallèle.
 
-> **Prompt — lancement trois voies**
+> **Prompt - lancement trois voies**
 >
 > Voici les 3 tâches du jour :
 > 1. Profond : [brief]

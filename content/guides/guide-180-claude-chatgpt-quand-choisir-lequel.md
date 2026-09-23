@@ -36,7 +36,7 @@ Claude pour le travail de fond (écriture, agents, tableaux de bord). ChatGPT po
 
 ## Le prompt pour décider en cinq questions
 
-> **Prompt — décider en 5 questions**
+> **Prompt - décider en 5 questions**
 >
 > Pose-moi 5 questions sur mon usage (volume, types de tâches, secteur, contraintes, budget).
 > Ensuite recommande : Claude seul, ChatGPT seul, ou les deux.

@@ -17,15 +17,15 @@ Une intégration mérite d'être adoptée si elle remplace une tâche effectuée
 
 ## Les cinq intégrations qui passent ce filtre
 
-- **Triage de boîte mail** — chaque matin, coller le contenu de la boîte de réception pour identifier ce qui attend réellement une réponse.
-- **Compte rendu de réunion** — enregistrer la réunion, la transcrire (via Whisper ou Otter), puis faire ressortir décisions et responsables.
-- **Préparation de document** — fournir trois sources et laisser l'outil produire la structure, avant de rédiger soi-même les 30 % qui comptent réellement.
-- **Réponses commerciales types** — une bibliothèque de dix réponses adaptées, complétée par un prompt de personnalisation.
-- **Veille hebdomadaire** — une liste de vingt sources, à partir de laquelle l'outil extrait cinq signaux et trois actions concrètes.
+- **Triage de boîte mail** - chaque matin, coller le contenu de la boîte de réception pour identifier ce qui attend réellement une réponse.
+- **Compte rendu de réunion** - enregistrer la réunion, la transcrire (via Whisper ou Otter), puis faire ressortir décisions et responsables.
+- **Préparation de document** - fournir trois sources et laisser l'outil produire la structure, avant de rédiger soi-même les 30 % qui comptent réellement.
+- **Réponses commerciales types** - une bibliothèque de dix réponses adaptées, complétée par un prompt de personnalisation.
+- **Veille hebdomadaire** - une liste de vingt sources, à partir de laquelle l'outil extrait cinq signaux et trois actions concrètes.
 
 ## Le prompt de triage de boîte mail
 
-> **Prompt — triage inbox**
+> **Prompt - triage inbox**
 >
 > Voici les emails reçus depuis hier 18h. Pour chacun, classe :
 >
@@ -39,7 +39,7 @@ Une intégration mérite d'être adoptée si elle remplace une tâche effectuée
 
 ## Le garde-fou
 
-Mieux vaut ne pas ajouter une nouvelle intégration avant que la précédente soit devenue un automatisme, généralement au bout de trois semaines — sans quoi le désordre s'accumule.
+Mieux vaut ne pas ajouter une nouvelle intégration avant que la précédente soit devenue un automatisme, généralement au bout de trois semaines - sans quoi le désordre s'accumule.
 
 ## Questions fréquentes
 

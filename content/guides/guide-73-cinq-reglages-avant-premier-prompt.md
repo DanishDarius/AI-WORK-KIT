@@ -17,11 +17,11 @@ Les utilisateurs les plus efficaces ne tapent pas de meilleurs prompts par insti
 
 ## Les cinq réglages
 
-Un espace de travail dédié par activité (personnel / travail / projet précis). Un fichier « about-me.md » chargé en permanence. Le bon modèle pour la bonne tâche — un modèle rapide pour la vitesse, un modèle plus avancé pour la nuance. Un style personnalisé par usage (rédaction professionnelle, brainstorm, code). Des instructions fixes au niveau du Projet, plutôt que répétées dans chaque conversation.
+Un espace de travail dédié par activité (personnel / travail / projet précis). Un fichier « about-me.md » chargé en permanence. Le bon modèle pour la bonne tâche - un modèle rapide pour la vitesse, un modèle plus avancé pour la nuance. Un style personnalisé par usage (rédaction professionnelle, brainstorm, code). Des instructions fixes au niveau du Projet, plutôt que répétées dans chaque conversation.
 
 ## Le gabarit à copier
 
-> **Prompt — instructions de Projet**
+> **Prompt - instructions de Projet**
 >
 > Tu es mon assistant sur le projet [nom].
 >
@@ -40,7 +40,7 @@ Un espace de travail dédié par activité (personnel / travail / projet précis
 
 ## Ce qui fait la différence
 
-L'utilisateur moyen relance l'IA plusieurs fois sur la même conversation pour affiner sa demande. Les usages les plus avancés relancent bien moins souvent — la différence se joue entièrement au niveau des instructions fixes posées en amont.
+L'utilisateur moyen relance l'IA plusieurs fois sur la même conversation pour affiner sa demande. Les usages les plus avancés relancent bien moins souvent - la différence se joue entièrement au niveau des instructions fixes posées en amont.
 
 ## À retenir
 

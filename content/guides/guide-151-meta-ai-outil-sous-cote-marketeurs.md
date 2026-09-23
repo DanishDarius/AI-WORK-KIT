@@ -13,19 +13,19 @@ Entraîné sur du vrai contenu social, pas seulement sur le web ouvert. Résulta
 
 ## Le constat
 
-Meta AI est entraîné sur des données issues d'Instagram, Facebook et WhatsApp — du contenu social brut, pas du web filtré. Résultat : sur trois tâches marketing précises, il surpasse largement les outils généralistes.
+Meta AI est entraîné sur des données issues d'Instagram, Facebook et WhatsApp - du contenu social brut, pas du web filtré. Résultat : sur trois tâches marketing précises, il surpasse largement les outils généralistes.
 
 ## Les trois tâches où il excelle
 
-**1. Détecter une tendance avant qu'elle explose** — il capte ce qui circule réellement, pas seulement ce qui est publié.
+**1. Détecter une tendance avant qu'elle explose** - il capte ce qui circule réellement, pas seulement ce qui est publié.
 
-**2. Réécrire pour un ton social natif** — sans formules du type « découvrez » ou « n'hésitez pas », dans un langage parlé.
+**2. Réécrire pour un ton social natif** - sans formules du type « découvrez » ou « n'hésitez pas », dans un langage parlé.
 
-**3. Auditer un compte concurrent** — il décode les motifs visuels et les accroches à partir de quelques publications.
+**3. Auditer un compte concurrent** - il décode les motifs visuels et les accroches à partir de quelques publications.
 
 ## Le prompt de tendance
 
-> **Prompt — détection de tendance**
+> **Prompt - détection de tendance**
 >
 > Tu es mon analyste tendances Meta AI.
 >

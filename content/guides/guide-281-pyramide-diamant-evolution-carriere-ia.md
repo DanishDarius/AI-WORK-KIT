@@ -13,17 +13,17 @@ Selon la source, la pyramide hiérarchique classique des entreprises serait en t
 
 ## Ce qui se passerait réellement
 
-L'IA absorberait avant tout les tâches d'exécution pure, ce qui réduirait le nombre de postes juniors centrés sur ce type de travail. Le niveau intermédiaire — celui qui orchestre, juge et décide — se renforcerait en proportion. Le sommet stratégique resterait globalement stable. La forme pyramidale laisserait ainsi place à un diamant.
+L'IA absorberait avant tout les tâches d'exécution pure, ce qui réduirait le nombre de postes juniors centrés sur ce type de travail. Le niveau intermédiaire - celui qui orchestre, juge et décide - se renforcerait en proportion. Le sommet stratégique resterait globalement stable. La forme pyramidale laisserait ainsi place à un diamant.
 
 ## Les trois mouvements possibles
 
-1. **Monter vers le centre du diamant** — devenir orchestrateur d'agents et d'équipes, la zone qui recruterait le plus selon la source.
-2. **Se spécialiser vers le sommet** — développer une expertise pointue que l'IA ne pourrait pas encore remplacer.
-3. **Sortir vers l'indépendance** — travailler seul avec l'appui de l'IA pour accomplir le travail habituellement réparti sur plusieurs personnes, sur un marché jugé important.
+1. **Monter vers le centre du diamant** - devenir orchestrateur d'agents et d'équipes, la zone qui recruterait le plus selon la source.
+2. **Se spécialiser vers le sommet** - développer une expertise pointue que l'IA ne pourrait pas encore remplacer.
+3. **Sortir vers l'indépendance** - travailler seul avec l'appui de l'IA pour accomplir le travail habituellement réparti sur plusieurs personnes, sur un marché jugé important.
 
 ## Le prompt de diagnostic de carrière
 
-> **Prompt — diagnostic carrière**
+> **Prompt - diagnostic carrière**
 >
 > Tu es coach exécutif. Tu connais bien le marché 2026.
 >

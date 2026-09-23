@@ -13,7 +13,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 ## Le prompt d'analyse de risque
 
-> **Prompt — score d'exposition IA**
+> **Prompt - score d'exposition IA**
 >
 > Tu es mon analyste exposition IA.
 >
@@ -37,7 +37,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 ## Ce que ce prompt n'est pas
 
-Un oracle. C'est une boussole — la carte des risques, pas une prédiction de l'avenir. Chacun décide ensuite quoi en faire.
+Un oracle. C'est une boussole - la carte des risques, pas une prédiction de l'avenir. Chacun décide ensuite quoi en faire.
 
 ## À retenir
 

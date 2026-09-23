@@ -13,11 +13,11 @@ Un meta-skill qui pousse l'IA à capturer un workflow correctement : il lit la c
 
 ## Le problème résolu
 
-Créer un Skill soi-même pose souvent problème : la structure reste incertaine, les vérifications s'oublient, le résultat final est bancal. Le meta-skill règle ça directement — il suffit de décrire ce qu'on fait, et il produit un SKILL.md propre.
+Créer un Skill soi-même pose souvent problème : la structure reste incertaine, les vérifications s'oublient, le résultat final est bancal. Le meta-skill règle ça directement - il suffit de décrire ce qu'on fait, et il produit un SKILL.md propre.
 
 ## Le prompt à copier
 
-> **Prompt — meta-skill, le créateur de Skills**
+> **Prompt - meta-skill, le créateur de Skills**
 >
 > Tu es mon générateur de Skills. Ton job : transformer un workflow que je décris en un fichier SKILL.md propre, testable et figé.
 >
@@ -36,4 +36,4 @@ Lancer ce prompt juste après une conversation qui a bien fonctionné : le workf
 
 ## À retenir
 
-Un bon skill est celui qui peut être transmis à quelqu'un qui ne connaît pas le sujet. Si l'auto-test produit un résultat moyen, c'est que le skill lui-même est encore moyen — itérer jusqu'à ce que le test soit propre.
+Un bon skill est celui qui peut être transmis à quelqu'un qui ne connaît pas le sujet. Si l'auto-test produit un résultat moyen, c'est que le skill lui-même est encore moyen - itérer jusqu'à ce que le test soit propre.

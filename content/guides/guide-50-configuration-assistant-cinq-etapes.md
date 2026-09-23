@@ -17,15 +17,15 @@ Presque tout le monde exploite le même outil à dix pour cent de ses capacités
 
 ## Les cinq étapes
 
-**Étape 1 — l'application de bureau.** Pour qu'il soit à côté de ton travail au quotidien, et non perdu dans un onglet de navigateur oublié.
+**Étape 1 - l'application de bureau.** Pour qu'il soit à côté de ton travail au quotidien, et non perdu dans un onglet de navigateur oublié.
 
-**Étape 2 — les projets.** Pour que le contexte cesse de fuir entre des tâches sans rapport les unes avec les autres.
+**Étape 2 - les projets.** Pour que le contexte cesse de fuir entre des tâches sans rapport les unes avec les autres.
 
-**Étape 3 — connecter ton agenda, tes fichiers et tes e-mails.** Pour qu'il réponde à partir de ta vraie vie quotidienne, pas d'informations génériques.
+**Étape 3 - connecter ton agenda, tes fichiers et tes e-mails.** Pour qu'il réponde à partir de ta vraie vie quotidienne, pas d'informations génériques.
 
-**Étape 4 — une compétence sur mesure.** Pour la tâche que tu répètes le plus souvent dans ton activité.
+**Étape 4 - une compétence sur mesure.** Pour la tâche que tu répètes le plus souvent dans ton activité.
 
-**Étape 5 — une tâche récurrente qui s'exécute sans que tu la demandes.** C'est cette dernière étape que presque tout le monde saute, et c'est pourtant elle qui change réellement la relation à l'outil.
+**Étape 5 - une tâche récurrente qui s'exécute sans que tu la demandes.** C'est cette dernière étape que presque tout le monde saute, et c'est pourtant elle qui change réellement la relation à l'outil.
 
 ## Pourquoi la dernière étape change tout
 

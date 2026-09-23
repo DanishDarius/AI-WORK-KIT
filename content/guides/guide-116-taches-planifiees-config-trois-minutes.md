@@ -9,7 +9,7 @@ Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Auc
 
 *Claude · 5 min de lecture*
 
-Le mode « tâches planifiées » permet de décrire ce qu'on veut voir exécuté, à quelle fréquence, puis de laisser l'assistant tourner seul — y compris pendant la nuit.
+Le mode « tâches planifiées » permet de décrire ce qu'on veut voir exécuté, à quelle fréquence, puis de laisser l'assistant tourner seul - y compris pendant la nuit.
 
 ## Configuration en trois minutes
 
@@ -25,12 +25,12 @@ Premier du mois : revue des objectifs trimestriels et état d'avancement.
 
 ## Le prompt à copier
 
-> **Prompt — brief automatisé du lundi**
+> **Prompt - brief automatisé du lundi**
 >
 > Chaque lundi à 7h.
 >
 > Sortie sur une page, ton télégraphique :
-> 1. Rendez-vous de la semaine — heure, sujet, action attendue
+> 1. Rendez-vous de la semaine - heure, sujet, action attendue
 > 2. Top 5 des e-mails non lus à traiter avant midi (expéditeur, sujet, action en un verbe)
 > 3. Échéances à 7 jours
 > 4. La seule priorité de la semaine
