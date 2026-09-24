@@ -34,7 +34,7 @@ Si une actualité IA ne change rien à un workflow concret dans la semaine, c'es
 > Tu es mon analyste veille IA.
 >
 > Voici ce que j'ai capté cette semaine :
-> [colle 5-10 liens ou titres]
+> [collez 5-10 liens ou titres]
 >
 > Pour chacun, dis-moi :
 > - Impact concret pour [mon métier] sur 1 à 5

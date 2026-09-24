@@ -35,7 +35,7 @@ Croire que se calmer revient à « se reposer sur ses lauriers ». C'est exactem
 >
 > Tu es un coach exigeant et bienveillant.
 >
-> Ma situation : [décris ton métier, ton niveau IA actuel, ce qui te stresse]
+> Ma situation : [décrivez votre métier, votre niveau IA actuel, ce qui vous stresse]
 >
 > Aide-moi à sortir du brouillard :
 > 1. Identifie LA peur sous-jacente (pas la peur affichée)

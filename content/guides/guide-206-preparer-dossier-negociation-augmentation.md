@@ -21,7 +21,7 @@ En s'appuyant sur plusieurs mois d'e-mails, d'agenda, de messages et de notes, i
 >
 > Voici l'historique de mes 6 derniers mois de travail :
 >
-> [Colle : exports de mails, messages, notes de réunions, rapports, tout ce que tu as]
+> [Collez : exports de mails, messages, notes de réunions, rapports, tout ce que vous avez]
 >
 > 1. Liste mes 5 accomplissements les plus mesurables.
 > 2. Identifie les 3 responsabilités que j'ai prises sans que mon poste ne le reflète.

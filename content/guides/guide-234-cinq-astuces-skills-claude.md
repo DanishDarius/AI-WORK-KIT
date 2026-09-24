@@ -30,7 +30,7 @@ Les Skills de Claude font beaucoup parler d'elles, mais peu d'explications concr
 > [1 phrase, déclencheur précis]
 >
 > ## Sortie attendue (squelette)
-> [Mets ici exactement la structure finale]
+> [Mettez ici exactement la structure finale]
 >
 > ## Exemple complet
 > ### Entrée

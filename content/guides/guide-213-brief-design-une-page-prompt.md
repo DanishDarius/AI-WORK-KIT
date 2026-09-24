@@ -22,7 +22,7 @@ La grande majorité des allers-retours en phase de design viennent d'un brief tr
 > Tu es directrice de création. Transforme mes notes en brief structuré.
 >
 > MES NOTES BRUTES :
-> [colle tout, en vrac, c'est ok]
+> [collez tout, en vrac, c'est ok]
 >
 > RENDS EN 1 PAGE :
 > 1. Objectif business (1 phrase)

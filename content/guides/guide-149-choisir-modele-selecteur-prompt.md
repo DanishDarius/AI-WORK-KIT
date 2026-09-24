@@ -32,7 +32,7 @@ Toujours démarrer avec Sonnet. Ne passer à Opus que si Sonnet donne un résult
 > **Prompt : sélecteur de modèle**
 >
 > Voici ma tâche :
-> [décris en 2 lignes ce que tu veux faire]
+> [décrivez en 2 lignes ce que vous voulez faire]
 >
 > Réponds uniquement :
 > - Modèle recommandé (Haiku, Sonnet ou Opus)

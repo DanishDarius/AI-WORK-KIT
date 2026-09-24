@@ -39,7 +39,7 @@ D'abord, une interview de cadrage (une vingtaine de questions). Ensuite, le char
 > **Prompt : reco du week-end**
 >
 > Voici mon profil de goût :
-> [colle le paragraphe]
+> [collez le paragraphe]
 >
 > Recommande-moi pour ce week-end :
 > - 1 film à voir samedi soir (et pourquoi ça matche)

@@ -4,7 +4,7 @@ Source : saadiakaram.ai/guides/geo-google-guide-setup-visibilite-ia
 Statut : reformulé (texte) : aucune image ni tableau HTML détecté sur cette page
 ---
 
-# GEO : ce que Google dit vraiment sur la visibilité dans la recherche IA, et comment auditer ton site
+# GEO : ce que Google dit vraiment sur la visibilité dans la recherche IA, et comment auditer votre site
 
 *Multi-outils · 18 min de lecture*
 
@@ -12,13 +12,13 @@ Statut : reformulé (texte) : aucune image ni tableau HTML détecté sur cette p
 
 - Introduction
 - La source : les recommandations officielles de Google
-- 01. Lis les faits, écarte les mythes
-- 02. Sépare les moteurs, vérifie les bons accès
-- 03. Ouvre Search Console, relève les preuves
-- 04. Une page à la fois : monte ton dossier (les 8 contrôles)
-- 05. Réponds au client : appuie chaque fait
-- 06. Corrige avec méthode, vérifie après publication
-- 07. Observe les résultats, garde les limites
+- 01. Lisez les faits, écartez les mythes
+- 02. Séparez les moteurs, vérifiez les bons accès
+- 03. Ouvrez Search Console, relevez les preuves
+- 04. Une page à la fois : montez votre dossier (les 8 contrôles)
+- 05. Répondez au client : appuyez chaque fait
+- 06. Corrigez avec méthode, vérifiez après publication
+- 07. Observez les résultats, gardez les limites
 - 08. Les liens à garder
 
 ## Introduction
@@ -37,7 +37,7 @@ Google y présente le GEO (Generative Engine Optimization) et l'AEO (Answer Engi
 
 ---
 
-## 01. Lis les faits, écarte les mythes
+## 01. Lisez les faits, écartez les mythes
 
 **Mythe 1 : « Un fichier spécial va me faire citer. »** Faux : Google Search n'utilise pas de fichier llms.txt ni de balisage IA spécial. Leur présence ne donne aucun avantage de classement dans Google.
 
@@ -51,7 +51,7 @@ Google y présente le GEO (Generative Engine Optimization) et l'AEO (Answer Engi
 
 ---
 
-## 02. Sépare les moteurs, vérifie les bons accès
+## 02. Séparez les moteurs, vérifiez les bons accès
 
 **Google Search : la recherche et ses réponses IA.** Ce guide concerne notamment AI Overviews et AI Mode ; l'application Gemini est un produit distinct, à ne pas confondre. Il faut contrôler l'état de sa page dans Search Console, sa lecture par les robots, et les réglages applicables : les règles d'extrait peuvent limiter ce qui est présenté à l'utilisateur.
 
@@ -62,41 +62,41 @@ Google y présente le GEO (Generative Engine Optimization) et l'AEO (Answer Engi
 - **GPTBot** : le robot lié à l'entraînement des modèles. Le choix le concernant est totalement distinct de celui concernant la recherche.
 - **ChatGPT-User** : des visites déclenchées directement par un utilisateur. Ce n'est pas le robot automatique de recherche ; les règles habituelles de robots.txt peuvent ne pas s'appliquer à ces visites.
 
-Fais vérifier les règles existantes et les protections réseau avant toute correction. Un fichier robots.txt gère l'exploration des robots ; il ne protège en rien une zone privée, et une URL bloquée peut malgré tout apparaître dans les résultats Google. Préserve toujours les restrictions déjà en place sur les espaces réservés aux clients.
+Faites vérifier les règles existantes et les protections réseau avant toute correction. Un fichier robots.txt gère l'exploration des robots ; il ne protège en rien une zone privée, et une URL bloquée peut malgré tout apparaître dans les résultats Google. Préservez toujours les restrictions déjà en place sur les espaces réservés aux clients.
 
 ---
 
-## 03. Ouvre Search Console, relève les preuves
+## 03. Ouvrez Search Console, relevez les preuves
 
-**Inspecte ta page.** Ouvre la bonne propriété Search Console, colle l'URL complète dans la barre d'inspection, et note l'état indexé, la date de dernière exploration, et l'URL canonique choisie par Google. Si la page a changé depuis, lance le test de l'URL en ligne et examine le texte réellement rendu. Ce test n'établit pas pour autant que la nouvelle version est déjà indexée. Après correction, une demande d'indexation peut être envoyée ; elle ne garantit en rien sa prise en compte effective.
+**Inspectez votre page.** Ouvrez la bonne propriété Search Console, collez l'URL complète dans la barre d'inspection, et notez l'état indexé, la date de dernière exploration, et l'URL canonique choisie par Google. Si la page a changé depuis, lancez le test de l'URL en ligne et examinez le texte réellement rendu. Ce test n'établit pas pour autant que la nouvelle version est déjà indexée. Après correction, une demande d'indexation peut être envoyée ; elle ne garantit en rien sa prise en compte effective.
 
-**Lis le réglage d'inclusion IA.** Dans les paramètres, sous « Search generative AI », relève le choix effectif : Include, Exclude ou Inherit. L'inclusion est le choix par défaut lorsqu'il n'y a pas d'héritage d'un réglage parent. Si la propriété hérite d'un parent, vérifie ce parent directement. L'exclusion concerne uniquement les fonctionnalités de recherche IA applicables ; ce réglage ne décide en rien de l'entraînement des modèles. Les libellés peuvent varier selon la langue de l'interface.
+**Lisez le réglage d'inclusion IA.** Dans les paramètres, sous « Search generative AI », relevez le choix effectif : Include, Exclude ou Inherit. L'inclusion est le choix par défaut lorsqu'il n'y a pas d'héritage d'un réglage parent. Si la propriété hérite d'un parent, vérifiez ce parent directement. L'exclusion concerne uniquement les fonctionnalités de recherche IA applicables ; ce réglage ne décide en rien de l'entraînement des modèles. Les libellés peuvent varier selon la langue de l'interface.
 
-**Cherche le rapport de performances IA.** Le rapport « Generative AI performance » de Search Console présente des impressions pour AI Overviews et AI Mode, avec des vues détaillées par page, pays, date et type d'appareil. Il ne fournit en aucun cas un compte de prospects réels. S'il n'apparaît pas dans ton compte, vérifie l'accès, la disponibilité de la fonctionnalité, et le volume d'impressions dans l'aide officielle. N'en déduis surtout pas une visibilité nulle par défaut.
+**Cherchez le rapport de performances IA.** Le rapport « Generative AI performance » de Search Console présente des impressions pour AI Overviews et AI Mode, avec des vues détaillées par page, pays, date et type d'appareil. Il ne fournit en aucun cas un compte de prospects réels. S'il n'apparaît pas dans votre compte, vérifiez l'accès, la disponibilité de la fonctionnalité, et le volume d'impressions dans l'aide officielle. N'en déduisez surtout pas une visibilité nulle par défaut.
 
-**Sans accès à Search Console ?** Demande au propriétaire du site de réaliser ces contrôles, ou de te donner un accès adapté. En attendant, avance sur le texte de la page et les vraies questions clients. Laisse les états techniques sur « à vérifier » : une IA qui lit une URL publique ne voit jamais automatiquement les rapports privés d'un compte Search Console.
+**Sans accès à Search Console ?** Demandez au propriétaire du site de réaliser ces contrôles, ou de vous donner un accès adapté. En attendant, avancez sur le texte de la page et les vraies questions clients. Laissez les états techniques sur « à vérifier » : une IA qui lit une URL publique ne voit jamais automatiquement les rapports privés d'un compte Search Console.
 
 ---
 
-## 04. Une page à la fois : monte ton dossier (les 8 contrôles)
+## 04. Une page à la fois : montez votre dossier (les 8 contrôles)
 
-Commence par une seule page qui sert déjà concrètement ton activité : une offre, un service local, ou une fiche produit. Pour chaque point, conserve un constat daté et l'emplacement précis de la preuve. Dans une petite entreprise, les responsables suggérés ci-dessous peuvent tous être une seule et même personne.
+Commencez par une seule page qui sert déjà concrètement votre activité : une offre, un service local, ou une fiche produit. Pour chaque point, conservez un constat daté et l'emplacement précis de la preuve. Dans une petite entreprise, les responsables suggérés ci-dessous peuvent tous être une seule et même personne.
 
-**1. La page à travailler est définie** *(responsable suggéré : toi-même)*. Choisis une seule page commerciale utile. Note à qui elle répond et ce que cette personne doit pouvoir décider après l'avoir lue. Preuve à garder : URL publique, question client identifiée, et action attendue.
+**1. La page à travailler est définie** *(responsable suggéré : vous-même)*. Choisissez une seule page commerciale utile. Notez à qui elle répond et ce que cette personne doit pouvoir décider après l'avoir lue. Preuve à garder : URL publique, question client identifiée, et action attendue.
 
-**2. Son état dans Google est connu** *(référent SEO)*. Dans ta propriété Search Console, inspecte l'URL complète. Lis l'état indexé, puis teste la version en ligne si elle a changé depuis. Garde les deux résultats séparés l'un de l'autre. Preuve à garder : inspection datée, état de l'index et URL canonique retenue.
+**2. Son état dans Google est connu** *(référent SEO)*. Dans votre propriété Search Console, inspectez l'URL complète. Lisez l'état indexé, puis testez la version en ligne si elle a changé depuis. Gardez les deux résultats séparés l'un de l'autre. Preuve à garder : inspection datée, état de l'index et URL canonique retenue.
 
-**3. Le contenu peut être lu et présenté** *(webmaster)*. Fais contrôler le fichier robots.txt, les protections du site, les balises et en-têtes noindex/nosnippet, ainsi que le texte réellement rendu par la page. Une page qui s'ouvre normalement dans ton propre navigateur ne prouve en rien l'accès effectif des robots d'exploration. Preuve à garder : texte rendu, accès de Googlebot et règles d'extrait examinés.
+**3. Le contenu peut être lu et présenté** *(webmaster)*. Faites contrôler le fichier robots.txt, les protections du site, les balises et en-têtes noindex/nosnippet, ainsi que le texte réellement rendu par la page. Une page qui s'ouvre normalement dans votre propre navigateur ne prouve en rien l'accès effectif des robots d'exploration. Preuve à garder : texte rendu, accès de Googlebot et règles d'extrait examinés.
 
-**4. L'inclusion IA de Google est vérifiée** *(propriétaire Search Console)*. Dans Paramètres > Search generative AI, relève le réglage effectif (Include, Exclude ou Inherit) et le réglage parent si nécessaire. Vérifie que ce résultat correspond bien à ton intention réelle de visibilité. Preuve à garder : réglage effectif, propriété concernée, et éventuel héritage.
+**4. L'inclusion IA de Google est vérifiée** *(propriétaire Search Console)*. Dans Paramètres > Search generative AI, relevez le réglage effectif (Include, Exclude ou Inherit) et le réglage parent si nécessaire. Vérifiez que ce résultat correspond bien à votre intention réelle de visibilité. Preuve à garder : réglage effectif, propriété concernée, et éventuel héritage.
 
-**5. Le choix pour ChatGPT Search est explicite** *(webmaster)*. Si tu souhaites apparaître dans ChatGPT Search, fais vérifier l'accès d'OAI-SearchBot selon la documentation officielle d'OpenAI. Traite séparément la décision concernant GPTBot et l'entraînement des modèles. Preuve à garder : règles OAI-SearchBot et accès réseau contrôlés.
+**5. Le choix pour ChatGPT Search est explicite** *(webmaster)*. Si vous souhaitez apparaître dans ChatGPT Search, faites vérifier l'accès d'OAI-SearchBot selon la documentation officielle d'OpenAI. Traitez séparément la décision concernant GPTBot et l'entraînement des modèles. Preuve à garder : règles OAI-SearchBot et accès réseau contrôlés.
 
-**6. La page aide vraiment à prendre une décision** *(responsable de l'offre)*. Relis la page en te mettant à la place d'une vraie question client. Remplace les promesses vagues par des faits vérifiables, ajoute les limites utiles, et vérifie la date des informations affichées. Preuve à garder : faits approuvés, conditions, auteur ou entreprise clairement identifiables.
+**6. La page aide vraiment à prendre une décision** *(responsable de l'offre)*. Relisez la page en vous mettant à la place d'une vraie question client. Remplacez les promesses vagues par des faits vérifiables, ajoutez les limites utiles, et vérifiez la date des informations affichées. Preuve à garder : faits approuvés, conditions, auteur ou entreprise clairement identifiables.
 
-**7. On trouve la page depuis le site** *(équipe contenu)*. Ajoute si nécessaire un lien descriptif depuis une page pertinente du site. Sur mobile, vérifie le texte, le contact ou la demande de devis, sans jamais envoyer de faux prospect au passage. Preuve à garder : lien interne testé et prochaine action fonctionnelle.
+**7. On trouve la page depuis le site** *(équipe contenu)*. Ajoutez si nécessaire un lien descriptif depuis une page pertinente du site. Sur mobile, vérifiez le texte, le contact ou la demande de devis, sans jamais envoyer de faux prospect au passage. Preuve à garder : lien interne testé et prochaine action fonctionnelle.
 
-**8. Un point de départ est consigné** *(responsable marketing)*. Note les impressions IA disponibles, les visites attribuables et les demandes qualifiées, en les gardant bien séparées les unes des autres. Observe cinq questions fixes et garde les sources réellement affichées en réponse. Preuve à garder : période observée, métriques disponibles, et cinq recherches datées.
+**8. Un point de départ est consigné** *(responsable marketing)*. Notez les impressions IA disponibles, les visites attribuables et les demandes qualifiées, en les gardant bien séparées les unes des autres. Observez cinq questions fixes et gardez les sources réellement affichées en réponse. Preuve à garder : période observée, métriques disponibles, et cinq recherches datées.
 
 **Prompt à copier (Préparer un diagnostic sans inventer l'accès) :**
 > Aide-moi à préparer un diagnostic de visibilité dans Google Search et ChatGPT Search.
@@ -109,15 +109,15 @@ Commence par une seule page qui sert déjà concrètement ton activité : une of
 
 ---
 
-## 05. Réponds au client : appuie chaque fait
+## 05. Répondez au client : appuyez chaque fait
 
-Pour cet exercice, prends une question réellement entendue en rendez-vous ou reçue par message client. Relis la page sans t'appuyer sur tes connaissances internes non écrites. La personne doit comprendre l'offre, ses conditions, et la prochaine étape à suivre. Ajoute les informations manquantes ; garde ce qui répond déjà bien à la question.
+Pour cet exercice, prenez une question réellement entendue en rendez-vous ou reçue par message client. Relisez la page sans vous appuyer sur vos connaissances internes non écrites. La personne doit comprendre l'offre, ses conditions, et la prochaine étape à suivre. Ajoutez les informations manquantes ; gardez ce qui répond déjà bien à la question.
 
 **Exemple fictif : un cabinet de formation.** Avant : « Nos solutions innovantes propulsent votre entreprise grâce à une expertise unique. » Après, avec des faits à faire approuver avant publication : « Nous formons les équipes de service client à préparer des réponses avec l'IA. L'atelier utilise des demandes anonymisées fournies par votre équipe. Une personne relit chaque réponse avant envoi. Le programme et le devis sont établis après un entretien de cadrage. » Le lecteur sait alors qui est concerné, ce qui sera travaillé, et comment démarrer concrètement. Ces détails sont inventés pour l'exercice ; ils ne décrivent aucune offre ni entreprise réelle.
 
-Pour un service local : précise la zone réellement desservie, les prestations exactes et les conditions de déplacement. Pour du conseil ou de la formation : décris le public visé, le déroulement, les livrables, et ce qui reste à la charge du client. Pour un produit : vérifie les caractéristiques, la disponibilité, le prix affiché, et les conditions de livraison ou de retour.
+Pour un service local : précisez la zone réellement desservie, les prestations exactes et les conditions de déplacement. Pour du conseil ou de la formation : décrivez le public visé, le déroulement, les livrables, et ce qui reste à la charge du client. Pour un produit : vérifiez les caractéristiques, la disponibilité, le prix affiché, et les conditions de livraison ou de retour.
 
-Rattache chaque preuve à son contexte précis : exemple autorisé, méthode décrite, document public, ou retour client authentique. Ne remplace jamais une absence de preuve par une promesse plus forte.
+Rattachez chaque preuve à son contexte précis : exemple autorisé, méthode décrite, document public, ou retour client authentique. Ne remplacez jamais une absence de preuve par une promesse plus forte.
 
 **Prompt à copier (Revoir une page avec les faits disponibles) :**
 > Aide-moi à améliorer UNE page pour ses lecteurs.
@@ -127,11 +127,11 @@ Rattache chaque preuve à son contexte précis : exemple autorisé, méthode dé
 > Rends : 1) brouillon ; 2) liste des changements reliés aux besoins des lecteurs ; 3) tableau affirmation | preuve fournie | information à confirmer ; 4) trois vérifications avant publication.
 > Aucune longueur ni mise en forme ne garantit une mention dans une IA. Ne publie rien.
 
-Relis ensuite chaque affirmation avec la personne responsable de l'offre. Fais essayer la page à un collègue : demande-lui ce qu'il a compris et quelle action il entreprendrait. S'il doit te demander une information essentielle qui manque, ajoute-la, ou explique pourquoi un échange direct reste nécessaire dans ce cas.
+Relisez ensuite chaque affirmation avec la personne responsable de l'offre. Faites essayer la page à un collègue : demandez-lui ce qu'il a compris et quelle action il entreprendrait. S'il doit vous demander une information essentielle qui manque, ajoutez-la, ou expliquez pourquoi un échange direct reste nécessaire dans ce cas.
 
 ---
 
-## 06. Corrige avec méthode, vérifie après publication
+## 06. Corrigez avec méthode, vérifiez après publication
 
 **Prompt à copier (Préparer le brief du webmaster) :**
 > Prépare un brief de correction pour la personne qui gère mon site, sans exécuter de changement.
@@ -143,24 +143,24 @@ Relis ensuite chaque affirmation avec la personne responsable de l'offre. Fais e
 > Le succès est un contrôle technique documenté, jamais une citation garantie.
 
 **Un calendrier de correction sur une semaine :**
-- **Jour 1** : Choisis la page et relève le point de départ. Rassemble tes faits, les accès disponibles et les observations. Termine avec la liste des inconnues et un responsable désigné pour chacune.
-- **Jours 2-3** : Examine les accès et prépare la correction. Le webmaster vérifie les points techniques pendant que tu prépares la page avec les faits approuvés. Une anomalie confirmée donne lieu à une correction précise et à son test.
-- **Jours 4-5** : Relis, approuve et mets en ligne. Vérifie l'aperçu, les conditions de l'offre, les liens et l'affichage mobile. Conserve la version précédente en cas de besoin de retour arrière. Après publication autorisée, relis l'URL publique et refais les contrôles concernés.
-- **Jour 7** : Fais le bilan du setup. Clôture les corrections prouvées, garde les attentes d'indexation ouvertes, et fixe le prochain relevé. Ce calendrier organise le travail ; il ne promet aucun délai de visibilité garanti.
+- **Jour 1** : Choisissez la page et relevez le point de départ. Rassemblez vos faits, les accès disponibles et les observations. Terminez avec la liste des inconnues et un responsable désigné pour chacune.
+- **Jours 2-3** : Examinez les accès et préparez la correction. Le webmaster vérifie les points techniques pendant que vous préparez la page avec les faits approuvés. Une anomalie confirmée donne lieu à une correction précise et à son test.
+- **Jours 4-5** : Relisez, approuvez et mettez en ligne. Vérifiez l'aperçu, les conditions de l'offre, les liens et l'affichage mobile. Conservez la version précédente en cas de besoin de retour arrière. Après publication autorisée, relisez l'URL publique et refaites les contrôles concernés.
+- **Jour 7** : Faites le bilan du setup. Clôturez les corrections prouvées, gardez les attentes d'indexation ouvertes, et fixez le prochain relevé. Ce calendrier organise le travail ; il ne promet aucun délai de visibilité garanti.
 
-Si un contrôle échoue, note précisément ce qui diffère de l'attendu avant de modifier quoi que ce soit d'autre. Exemple type : le texte public est correct, mais la version indexée reste ancienne. Vérifie la date d'exploration et le test en ligne avant de réécrire encore la page.
+Si un contrôle échoue, notez précisément ce qui diffère de l'attendu avant de modifier quoi que ce soit d'autre. Exemple type : le texte public est correct, mais la version indexée reste ancienne. Vérifiez la date d'exploration et le test en ligne avant de réécrire encore la page.
 
 ---
 
-## 07. Observe les résultats, garde les limites
+## 07. Observez les résultats, gardez les limites
 
-Choisis cinq questions types : comprendre le service, savoir s'il convient, connaître une condition précise, comparer deux approches, et choisir un prestataire dans sa zone géographique. Note les formulations exactes avant le premier relevé. Ce petit panel sert à observer des cas précis ; il ne représente en rien l'ensemble des recherches réelles de tous les clients.
+Choisissez cinq questions types : comprendre le service, savoir s'il convient, connaître une condition précise, comparer deux approches, et choisir un prestataire dans sa zone géographique. Notez les formulations exactes avant le premier relevé. Ce petit panel sert à observer des cas précis ; il ne représente en rien l'ensemble des recherches réelles de tous les clients.
 
-Trois métriques à bien distinguer : les **impressions** (le contenu a été présenté dans le périmètre du rapport, ce n'est pas une visite) ; les **visites attribuables** (ton outil d'analyse identifie une provenance précise ; les visites non attribuées restent séparées) ; les **demandes qualifiées** (ton équipe confirme un besoin correspondant réellement à l'offre, une citation seule n'établit jamais une vente).
+Trois métriques à bien distinguer : les **impressions** (le contenu a été présenté dans le périmètre du rapport, ce n'est pas une visite) ; les **visites attribuables** (votre outil d'analyse identifie une provenance précise ; les visites non attribuées restent séparées) ; les **demandes qualifiées** (votre équipe confirme un besoin correspondant réellement à l'offre, une citation seule n'établit jamais une vente).
 
-Pour chaque recherche manuelle effectuée, conserve la date, l'outil utilisé, le mode, la question exacte posée, la langue, le pays, et les URL vraiment citées en réponse. Dans ChatGPT, sélectionne explicitement l'outil Recherche et ouvre les sources citées. Dans Google, note aussi l'absence éventuelle de réponse IA. Répète les mêmes questions au prochain relevé et consigne les différences de conditions observées.
+Pour chaque recherche manuelle effectuée, conservez la date, l'outil utilisé, le mode, la question exacte posée, la langue, le pays, et les URL vraiment citées en réponse. Dans ChatGPT, sélectionnez explicitement l'outil Recherche et ouvrez les sources citées. Dans Google, notez aussi l'absence éventuelle de réponse IA. Répétez les mêmes questions au prochain relevé et consignez les différences de conditions observées.
 
-Compare toujours des périodes de même durée, et note les autres changements survenus sur le site ou dans les campagnes en cours. Les impressions du rapport IA figurent aussi dans les données Web classiques : ne les additionne surtout pas. Dans certains exports, une valeur indisponible affichée comme « ~ » ou « - » peut apparaître comme 0 dans un tableau. Conserve bien son statut réel d'indisponibilité.
+Comparez toujours des périodes de même durée, et notez les autres changements survenus sur le site ou dans les campagnes en cours. Les impressions du rapport IA figurent aussi dans les données Web classiques : ne les additionnez surtout pas. Dans certains exports, une valeur indisponible affichée comme « ~ » ou « - » peut apparaître comme 0 dans un tableau. Conservez bien son statut réel d'indisponibilité.
 
 **Prompt à copier (Lire le suivi sans fabriquer de causalité) :**
 > Analyse mon suivi de visibilité sans inventer de résultat.
@@ -179,6 +179,6 @@ Sources citées dans le guide original (consultées le 13 septembre 2026, suscep
 
 ## À retenir
 
-**Commence par une preuve concrète, pas par une intuition.**
+**Commencez par une preuve concrète, pas par une intuition.**
 
-Choisis une page dès aujourd'hui, relève un premier constat daté, et attribue la prochaine vérification à quelqu'un de précis. Au prochain point d'équipe, montre ce qui a été réellement contrôlé et ce qu'il reste encore à vérifier : aucun setup technique, aussi soigné soit-il, ne garantit une citation dans une réponse d'IA.
+Choisissez une page dès aujourd'hui, relevez un premier constat daté, et attribuez la prochaine vérification à quelqu'un de précis. Au prochain point d'équipe, montrez ce qui a été réellement contrôlé et ce qu'il reste encore à vérifier : aucun setup technique, aussi soigné soit-il, ne garantit une citation dans une réponse d'IA.

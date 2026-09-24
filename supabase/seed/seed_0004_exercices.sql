@@ -1,7 +1,7 @@
 -- Seed data for exercices table (generated from exercices-42-taches-v2-tu.md)
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Assistante de direction, cabinet d'architecture Méridia$tt$, $tt$Contexte : Tu es assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Tu reviens de deux jours de congé et trouves 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".$tt$, $tt$Boîte de réception à traiter (copier-coller tel quel) :
+select t.id, 1, $tt$Cas fictif 1 : Assistante de direction, cabinet d'architecture Méridia$tt$, $tt$Contexte : Vous êtes assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Vous revenez de deux jours de congé et trouvez 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".$tt$, $tt$Boîte de réception à traiter (copier-coller tel quel) :
 ```
 1. De: j.martel@clientprive.fr, "Relance devis extension maison", reçu il y a 4 jours
    "Bonjour, je n'ai pas eu de nouvelles concernant le devis pour l'extension de notre maison à Tassin. Pouvez-vous me dire où ça en est ? Merci."
@@ -31,11 +31,11 @@ select t.id, 1, $tt$Cas fictif 1 : Assistante de direction, cabinet d'architectu
 
 11. De: c.moreau@meridia-archi.fr (interne, associé), "Point facturation clients de mai", reçu il y a 4 jours
     "Peux-tu me sortir la liste des factures clients émises en mai et leur statut de paiement avant jeudi ?"
-```$tt$, $tt$Travail à faire : Trie ces 11 emails en 4 catégories (urgent à traiter aujourd'hui / à répondre cette semaine / à déléguer et à qui / à archiver ou supprimer), justifie chaque classement en une phrase, et rédige la réponse complète au message le plus urgent.$tt$
+```$tt$, $tt$Travail à faire : Triez ces 11 emails en 4 catégories (urgent à traiter aujourd'hui / à répondre cette semaine / à déléguer et à qui / à archiver ou supprimer), justifiez chaque classement en une phrase, et rédigez la réponse complète au message le plus urgent.$tt$
 from taches t where t.code = 'F01';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Gérant d'un salon de coiffure indépendant$tt$, $tt$Contexte : Tu gères seul(e) "Studio K", un salon de coiffure à Lille. Tu consultes ta boîte mail le lundi matin après un week-end sans connexion.$tt$, $tt$Boîte de réception à traiter :
+select t.id, 2, $tt$Cas fictif 2 : Gérant d'un salon de coiffure indépendant$tt$, $tt$Contexte : Vous gérez seul(e) "Studio K", un salon de coiffure à Lille. Vous consultez votre boîte mail le lundi matin après un week-end sans connexion.$tt$, $tt$Boîte de réception à traiter :
 ```
 1. De: booking@planity.com, "3 nouvelles réservations ce week-end", reçu vendredi
    "Vous avez reçu 3 nouvelles réservations via Planity pour la semaine du 8 septembre."
@@ -58,11 +58,11 @@ select t.id, 2, $tt$Cas fictif 2 : Gérant d'un salon de coiffure indépendant$t
 7. De: assistante@franchise-coiffure-nationale.fr, "Offre de rachat / intégration réseau", reçu il y a 8 jours
 
 8. De: newsletter@lecoiffeur-magazine.fr, "Les coupes tendance de la rentrée", reçu mercredi
-```$tt$, $tt$Travail à faire : Identifie les emails qui nécessitent une réponse aujourd'hui, ceux qui peuvent attendre, et rédige la réponse au client mécontent (email n°5) en respectant un ton professionnel et apaisant.$tt$
+```$tt$, $tt$Travail à faire : Identifiez les emails qui nécessitent une réponse aujourd'hui, ceux qui peuvent attendre, et rédigez la réponse au client mécontent (email n°5) en respectant un ton professionnel et apaisant.$tt$
 from taches t where t.code = 'F01';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Cabinet comptable Lefebvre & Associés$tt$, $tt$Contexte : Tu travailles au cabinet et dois envoyer une lettre de mission à un nouveau client. Tu as rédigé, en tant que collaborateur (collaboratrice) junior, un premier jet rapide, à corriger avant envoi.$tt$, $tt$Document à corriger (tel quel, avec ses fautes) :
+select t.id, 1, $tt$Cas fictif 1 : Cabinet comptable Lefebvre & Associés$tt$, $tt$Contexte : Vous travaillez au cabinet et devez envoyer une lettre de mission à un nouveau client. Vous avez rédigé, en tant que collaborateur (collaboratrice) junior, un premier jet rapide, à corriger avant envoi.$tt$, $tt$Document à corriger (tel quel, avec ses fautes) :
 ```
 Objet : Lettre de mission comptable
 
@@ -88,11 +88,11 @@ d'agréer, Madame, Monsieur, l'expression de nos salutations distingué.
 
 Jean-Marc Lefebvre
 Expert Comptable
-```$tt$, $tt$Travail à faire : Corrige toutes les fautes d'orthographe, de grammaire et de ponctuation, vérifie la cohérence des accords, et signale si des informations semblent manquantes ou ambiguës pour une lettre de mission (par exemple des mentions légales obligatoires) sans les inventer.$tt$
+```$tt$, $tt$Travail à faire : Corrigez toutes les fautes d'orthographe, de grammaire et de ponctuation, vérifiez la cohérence des accords, et signalez si des informations semblent manquantes ou ambiguës pour une lettre de mission (par exemple des mentions légales obligatoires) sans les inventer.$tt$
 from taches t where t.code = 'F03';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Association sportive locale$tt$, $tt$Contexte : Tu es président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à tes 60 adhérents. Le secrétaire a rédigé un brouillon que tu dois corriger.$tt$, $tt$Document à corriger :
+select t.id, 2, $tt$Cas fictif 2 : Association sportive locale$tt$, $tt$Contexte : Vous êtes président(e) du club "Handball Club Vertois" et devez envoyer un compte-rendu d'assemblée générale à vos 60 adhérents. Le secrétaire a rédigé un brouillon que vous devez corriger.$tt$, $tt$Document à corriger :
 ```
 Compte rendu de l'assemblé générale du 28 août 2026
 
@@ -117,11 +117,11 @@ Plusieurs adhérent on évoqué la nécessité de rénover les vestiaire, le suj
 sera abordé lors du prochain conseil municipal.
 
 Fin de séance a 21h30.
-```$tt$, $tt$Travail à faire : Corrige les fautes d'accord (participes passés, pluriels) et d'orthographe, harmonise les temps verbaux, et reformule les phrases mal construites tout en conservant le sens exact du texte original.$tt$
+```$tt$, $tt$Travail à faire : Corrigez les fautes d'accord (participes passés, pluriels) et d'orthographe, harmonisez les temps verbaux, et reformulez les phrases mal construites tout en conservant le sens exact du texte original.$tt$
 from taches t where t.code = 'F03';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Réunion d'équipe, agence de communication$tt$, $tt$Contexte : Tu travailles à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. Voici un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).$tt$, $tt$Transcription brute à traiter :
+select t.id, 1, $tt$Cas fictif 1 : Réunion d'équipe, agence de communication$tt$, $tt$Contexte : Vous travaillez à l'agence "Pixel & Sens" (6 salariés) et devez traiter la transcription de la réunion hebdomadaire. Voici un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).$tt$, $tt$Transcription brute à traiter :
 ```
 [10:02] Amandine : bon du coup on démarre, alors pour le client Voltéa on est censé 
 livrer les maquettes vendredi c'est bien ça
@@ -146,11 +146,11 @@ parce que leurs tarifs ont augmenté de 12%
 [10:09] Amandine : ah bon c'est beaucoup, on regarde ça ensemble jeudi avec les chiffres, 
 Karim tu peux préparer un comparatif avec deux autres imprimeurs d'ici jeudi
 [10:09] Karim : ok pas de souci
-```$tt$, $tt$Travail à faire : Rédige un compte-rendu structuré de cette réunion avec trois sections claires (points abordés, décisions prises, actions à faire avec responsable et échéance), en nettoyant le langage oral et en corrigeant les incohérences de la transcription.$tt$
+```$tt$, $tt$Travail à faire : Rédigez un compte-rendu structuré de cette réunion avec trois sections claires (points abordés, décisions prises, actions à faire avec responsable et échéance), en nettoyant le langage oral et en corrigeant les incohérences de la transcription.$tt$
 from taches t where t.code = 'F04';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Interview d'un artisan pour un article de blog$tt$, $tt$Contexte : Tu es chargé(e) de communication et tu interviewes un boulanger pour un article "portrait" destiné au site web de la ville. Transcription brute de l'enregistrement :$tt$, $tt$```
+select t.id, 2, $tt$Cas fictif 2 : Interview d'un artisan pour un article de blog$tt$, $tt$Contexte : Vous êtes chargé(e) de communication et vous interviewez un boulanger pour un article "portrait" destiné au site web de la ville. Transcription brute de l'enregistrement :$tt$, $tt$```
 alors moi j'ai repris la boulangerie de mon père y a maintenant 8 ans, avant ça je 
 travaillais dans un restaurant à Lyon comme commis mais bon j'ai toujours voulu faire 
 du pain, c'est vraiment une passion depuis que je suis gamin je trainais déjà dans le 
@@ -173,11 +173,11 @@ pour l'avenir j'aimerais bien ouvrir un deuxième point de vente, peut être dan
 centre-ville, mais c'est un projet à plus long terme, faut d'abord que je trouve 
 quelqu'un de confiance pour gérer ce magasin la parce que je peux pas être aux deux 
 en même temps
-```$tt$, $tt$Travail à faire : Rédige un résumé structuré de cette interview en 4 à 6 phrases utilisables pour un article web (reprise de l'activité, identité du métier, défis rencontrés, projets futurs), en conservant fidèlement le sens des propos sans en inventer.$tt$
+```$tt$, $tt$Travail à faire : Rédigez un résumé structuré de cette interview en 4 à 6 phrases utilisables pour un article web (reprise de l'activité, identité du métier, défis rencontrés, projets futurs), en conservant fidèlement le sens des propos sans en inventer.$tt$
 from taches t where t.code = 'F04';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Cabinet dentaire$tt$, $tt$Contexte : Tu es secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.$tt$, $tt$Agenda actuel (déjà rempli) :
+select t.id, 1, $tt$Cas fictif 1 : Cabinet dentaire$tt$, $tt$Contexte : Vous êtes secrétaire médicale du cabinet du Dr Aïcha Benali et devez organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.$tt$, $tt$Agenda actuel (déjà rempli) :
 ```
 Lundi 14/09 : 9h-12h consultations (complet), 14h-15h réunion cabinet, 
               15h-18h consultations (complet)
@@ -188,22 +188,22 @@ Jeudi 17/09 : 9h-12h consultations (1 créneau libre à 11h),
               14h-18h consultations (complet)
 Vendredi 18/09 : 9h-12h consultations (complet), après-midi libre 
                  (formation continue prévue de 14h à 17h, non annulable)
-```$tt$, $tt$Travail à faire : Propose un planning révisé de la semaine intégrant ces 4 demandes en respectant les contraintes existantes, en priorisant les cas selon leur urgence réelle, et rédige le message de confirmation à envoyer à Mme Torres.$tt$
+```$tt$, $tt$Travail à faire : Proposez un planning révisé de la semaine intégrant ces 4 demandes en respectant les contraintes existantes, en priorisant les cas selon leur urgence réelle, et rédigez le message de confirmation à envoyer à Mme Torres.$tt$
 from taches t where t.code = 'F05';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Consultant indépendant en informatique$tt$, $tt$Contexte : Tu es consultant IT indépendant. Tu dois organiser tes rendez-vous clients de la semaine tout en gardant du temps pour tes missions en cours.$tt$, $tt$Contraintes connues :
+select t.id, 2, $tt$Cas fictif 2 : Consultant indépendant en informatique$tt$, $tt$Contexte : Vous êtes consultant IT indépendant. Vous devez organiser vos rendez-vous clients de la semaine tout en gardant du temps pour vos missions en cours.$tt$, $tt$Contraintes connues :
 ```
 - Mission facturée en cours chez le client "GroupeMoteva" : nécessite au moins 
   4h de travail concentré par jour du lundi au jeudi, idéalement le matin.
 - Vendredi après-midi : bloqué pour la comptabilité mensuelle (fixe, ne bouge jamais).
 - Temps de trajet estimé pour un rendez-vous en présentiel à Paris intra-muros 
   depuis son bureau en banlieue : 45 minutes aller, 45 minutes retour.
-```$tt$, $tt$Travail à faire : Construis un planning de la semaine (lundi à vendredi) qui respecte les contraintes de la mission en cours, et indique lequel des deux créneaux proposés par la Librairie du Marais tu recommandes de choisir, avec la justification.$tt$
+```$tt$, $tt$Travail à faire : Construisez un planning de la semaine (lundi à vendredi) qui respecte les contraintes de la mission en cours, et indiquez lequel des deux créneaux proposés par la Librairie du Marais vous recommandez de choisir, avec la justification.$tt$
 from taches t where t.code = 'F05';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Responsable marketing, marque de cosmétique bio$tt$, $tt$Contexte : Tu es responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ta direction te demande une note de veille mensuelle sur 3 concurrents directs.$tt$, $tt$Notes brutes collectées pendant le mois (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Responsable marketing, marque de cosmétique bio$tt$, $tt$Contexte : Vous êtes responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Votre direction vous demande une note de veille mensuelle sur 3 concurrents directs.$tt$, $tt$Notes brutes collectées pendant le mois (à traiter) :
 ```
 Concurrent A "Verdance" : a lancé une gamme "peaux sensibles" en juin, prix 
   positionné 15% en dessous de nos produits équivalents. Vu passer une pub 
@@ -224,11 +224,11 @@ Contexte marché général noté par Léa : hausse de la demande pour les format
   "solides" (shampoings et savons solides) selon les retours de deux 
   distributeurs partenaires. Une tendance déjà repérée en janvier mais qui 
   semble s'accélérer.
-```$tt$, $tt$Travail à faire : Rédige une note de veille synthétique (une demi-page maximum) organisée par concurrent, qui identifie les signaux à surveiller de près et propose une recommandation d'action pour Botanika basée uniquement sur les informations fournies, sans inventer de données supplémentaires.$tt$
+```$tt$, $tt$Travail à faire : Rédigez une note de veille synthétique (une demi-page maximum) organisée par concurrent, qui identifie les signaux à surveiller de près et propose une recommandation d'action pour Botanika basée uniquement sur les informations fournies, sans inventer de données supplémentaires.$tt$
 from taches t where t.code = 'F07';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Artisan menuisier souhaitant se positionner sur un nouveau marché$tt$, $tt$Contexte : Tu es menuisier ébéniste indépendant (Nantes) et envisages de te lancer dans l'agencement de cuisines sur-mesure en complément de ton activité meubles. Tu as demandé à ton neveu, étudiant en marketing, de rassembler des informations avant de te décider.$tt$, $tt$Informations collectées par le neveu (à traiter) :
+select t.id, 2, $tt$Cas fictif 2 : Artisan menuisier souhaitant se positionner sur un nouveau marché$tt$, $tt$Contexte : Vous êtes menuisier ébéniste indépendant (Nantes) et envisagez de vous lancer dans l'agencement de cuisines sur-mesure en complément de votre activité meubles. Vous avez demandé à votre neveu, étudiant en marketing, de rassembler des informations avant de vous décider.$tt$, $tt$Informations collectées par le neveu (à traiter) :
 ```
 - 4 entreprises d'agencement de cuisine sur-mesure repérées dans un rayon de 
   30 km autour de Nantes : deux sont des franchises nationales (avec showroom), 
@@ -249,11 +249,11 @@ select t.id, 2, $tt$Cas fictif 2 : Artisan menuisier souhaitant se positionner s
 
 - Le neveu n'a pas réussi à trouver d'information fiable sur les tarifs 
   pratiqués par les artisans indépendants du secteur.
-```$tt$, $tt$Travail à faire : Rédige une synthèse pour toi-même qui distingue clairement ce qui est une information vérifiée de ce qui reste une hypothèse ou une donnée manquante, et propose 2 questions précises que tu devrais chercher à faire vérifier avant de te lancer.$tt$
+```$tt$, $tt$Travail à faire : Rédigez une synthèse pour vous-même qui distingue clairement ce qui est une information vérifiée de ce qui reste une hypothèse ou une donnée manquante, et proposez 2 questions précises que vous devriez chercher à faire vérifier avant de vous lancer.$tt$
 from taches t where t.code = 'F07';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Gérante d'une boutique de vêtements$tt$, $tt$Contexte : Tu gères une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Tu veux comprendre pourquoi ton chiffre d'affaires a baissé au 2e trimestre.$tt$, $tt$Données brutes fournies (export caisse simplifié, par mois) :
+select t.id, 1, $tt$Cas fictif 1 : Gérante d'une boutique de vêtements$tt$, $tt$Contexte : Vous gérez une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Vous voulez comprendre pourquoi votre chiffre d'affaires a baissé au 2e trimestre.$tt$, $tt$Données brutes fournies (export caisse simplifié, par mois) :
 ```
 Janvier  : CA 18 400€ | Nb tickets 612 | Panier moyen 30,07€
 Février  : CA 16 900€ | Nb tickets 590 | Panier moyen 28,64€
@@ -262,15 +262,15 @@ Avril    : CA 14 200€ | Nb tickets 510 | Panier moyen 27,84€
 Mai      : CA 12 800€ | Nb tickets 470 | Panier moyen 27,23€
 Juin     : CA 13 100€ | Nb tickets 455 | Panier moyen 28,79€
 
-Ta note complémentaire : "Un concurrent (grande enseigne) a ouvert à 
+Votre note complémentaire : "Un concurrent (grande enseigne) a ouvert à 
 100 mètres de ma boutique fin mars. Aussi, j'ai réduit mes horaires 
 d'ouverture le samedi matin depuis avril (ouverture à 10h30 au lieu de 9h30) 
 faute de personnel disponible."
-```$tt$, $tt$Travail à faire : Analyse ces données pour identifier la tendance sur le trimestre avril-juin comparée au trimestre janvier-mars, formule 2 hypothèses explicatives basées uniquement sur les faits fournis (pas d'invention), et rédige un mini-rapport d'une page avec une recommandation.$tt$
+```$tt$, $tt$Travail à faire : Analysez ces données pour identifier la tendance sur le trimestre avril-juin comparée au trimestre janvier-mars, formulez 2 hypothèses explicatives basées uniquement sur les faits fournis (pas d'invention), et rédigez un mini-rapport d'une page avec une recommandation.$tt$
 from taches t where t.code = 'F08';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Responsable RH d'une PME industrielle$tt$, $tt$Contexte : Tu travailles au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.$tt$, $tt$Données brutes (par service, T2 2026) :
+select t.id, 2, $tt$Cas fictif 2 : Responsable RH d'une PME industrielle$tt$, $tt$Contexte : Vous travaillez au service RH de "Mécatech Industries" (140 salariés) et devez préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.$tt$, $tt$Données brutes (par service, T2 2026) :
 ```
 Service Production (85 salariés) : 412 jours d'absence cumulés au T2, 
   dont 180 jours pour arrêts maladie courts (1 à 3 jours), 150 jours pour 
@@ -287,11 +287,11 @@ Service Commercial (10 salariés) : 12 jours d'absence cumulés.
 
 Comparaison T1 2026 (même périmètre) : Production 290 jours, Logistique 
   70 jours, Administratif 40 jours, Commercial 15 jours.
-```$tt$, $tt$Travail à faire : Calcule le taux d'absentéisme par service (jours d'absence / (nb salariés × jours ouvrés du trimestre, à estimer à 63 jours ouvrés pour le T2), exprimé en %), identifie le service qui se dégrade le plus entre T1 et T2, et rédige la synthèse à présenter au comité de direction avec un point d'alerte si nécessaire.$tt$
+```$tt$, $tt$Travail à faire : Calculez le taux d'absentéisme par service (jours d'absence / (nb salariés × jours ouvrés du trimestre, à estimer à 63 jours ouvrés pour le T2), exprimé en %), identifiez le service qui se dégrade le plus entre T1 et T2, et rédigez la synthèse à présenter au comité de direction avec un point d'alerte si nécessaire.$tt$
 from taches t where t.code = 'F08';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Garage automobile$tt$, $tt$Contexte : Tu gères le garage "Auto Services Moreau". Tu reçois tes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans ton logiciel de comptabilité.$tt$, $tt$Contenu retranscrit d'une facture reçue (telle qu'elle apparaît, avec quelques éléments difficiles à lire) :
+select t.id, 1, $tt$Cas fictif 1 : Garage automobile$tt$, $tt$Contexte : Vous gérez le garage "Auto Services Moreau". Vous recevez vos factures fournisseurs par email en pièce jointe PDF et devez préparer leur saisie dans votre logiciel de comptabilité.$tt$, $tt$Contenu retranscrit d'une facture reçue (telle qu'elle apparaît, avec quelques éléments difficiles à lire) :
 ```
 PIECES AUTO DISTRIBUTION SUD
 12 rue de l'Industrie, 31200 Toulouse
@@ -314,11 +314,11 @@ TVA 20% : 100,64€
 Total TTC : 603,84€
 
 Conditions : paiement à 30 jours fin de mois
-```$tt$, $tt$Travail à faire : Prépare un tableau de saisie comptable avec les champs (fournisseur, n° facture, date, montant HT, TVA, montant TTC, échéance de paiement), et signale explicitement les deux informations illisibles ou incertaines sur la facture plutôt que de les deviner.$tt$
+```$tt$, $tt$Travail à faire : Préparez un tableau de saisie comptable avec les champs (fournisseur, n° facture, date, montant HT, TVA, montant TTC, échéance de paiement), et signalez explicitement les deux informations illisibles ou incertaines sur la facture plutôt que de les deviner.$tt$
 from taches t where t.code = 'F11';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Association culturelle gérant des adhésions$tt$, $tt$Contexte : Tu es trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.$tt$, $tt$Bulletins reçus (retranscription du contenu manuscrit tel que rempli par les adhérents) :
+select t.id, 2, $tt$Cas fictif 2 : Association culturelle gérant des adhésions$tt$, $tt$Contexte : Vous êtes trésorière bénévole de l'association "Les Amis du Théâtre" et devez saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.$tt$, $tt$Bulletins reçus (retranscription du contenu manuscrit tel que rempli par les adhérents) :
 ```
 Bulletin 1 : Nom "DUBOIS Marie", né(e) le 14/03/1978, adresse "8 rue des 
   Lilas, 44000 Nantes", email "m.dubois78[le reste de l'adresse email est 
@@ -337,11 +337,11 @@ Bulletin 3 : Nom "N'GUESSAN Aya", date de naissance non renseignée (case
   "07 55 XX XX 21" (illisible sur 4 chiffres), deux cases cochées par 
   erreur pour le type d'adhésion (individuelle ET famille), moyen de 
   paiement : espèces, 25€ joint dans une enveloppe.
-```$tt$, $tt$Travail à faire : Prépare le tableau de saisie des 3 adhésions avec toutes les colonnes utiles, et rédige la liste des points à clarifier avec les adhérents concernés avant de valider définitivement leur dossier (sans inventer les informations manquantes ou illisibles).$tt$
+```$tt$, $tt$Travail à faire : Préparez le tableau de saisie des 3 adhésions avec toutes les colonnes utiles, et rédigez la liste des points à clarifier avec les adhérents concernés avant de valider définitivement leur dossier (sans inventer les informations manquantes ou illisibles).$tt$
 from taches t where t.code = 'F11';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Cabinet d'avocat, dossier client$tt$, $tt$Contexte : Tu es assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.$tt$, $tt$Liste des fichiers actuels dans le dossier (noms d'origine, en vrac) :
+select t.id, 1, $tt$Cas fictif 1 : Cabinet d'avocat, dossier client$tt$, $tt$Contexte : Vous êtes assistant(e) juridique du cabinet "Vasseur & Partners" et devez remettre de l'ordre dans le dossier numérique d'un client avant une audience.$tt$, $tt$Liste des fichiers actuels dans le dossier (noms d'origine, en vrac) :
 ```
 - contrat final v2 (1).pdf
 - Scan_20260615_142233.pdf
@@ -355,11 +355,11 @@ select t.id, 1, $tt$Cas fictif 1 : Cabinet d'avocat, dossier client$tt$, $tt$Con
 - contrat_signé_DEFINITIF_DEFINITIF.pdf
 - preuve envoi recommandé.pdf
 - Copie de courrier adverse.docx
-```$tt$, $tt$Travail à faire : Propose une convention de nommage cohérente pour ce dossier (avec un exemple de format type), renomme chaque fichier identifiable selon cette convention, et signale les 2 fichiers qui nécessitent une vérification humaine avant classement définitif (doublons potentiels ou fichier non identifié).$tt$
+```$tt$, $tt$Travail à faire : Proposez une convention de nommage cohérente pour ce dossier (avec un exemple de format type), renommez chaque fichier identifiable selon cette convention, et signalez les 2 fichiers qui nécessitent une vérification humaine avant classement définitif (doublons potentiels ou fichier non identifié).$tt$
 from taches t where t.code = 'F12';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Auto-entrepreneur, classement des justificatifs pour la déclaration fiscale$tt$, $tt$Contexte : Tu es graphiste indépendante et dois classer tes justificatifs de dépenses professionnelles de l'année pour ta déclaration fiscale annuelle. Tes fichiers sont actuellement dans un seul dossier "Factures divers".$tt$, $tt$Liste des fichiers présents :
+select t.id, 2, $tt$Cas fictif 2 : Auto-entrepreneur, classement des justificatifs pour la déclaration fiscale$tt$, $tt$Contexte : Vous êtes graphiste indépendante et devez classer vos justificatifs de dépenses professionnelles de l'année pour votre déclaration fiscale annuelle. Vos fichiers sont actuellement dans un seul dossier "Factures divers".$tt$, $tt$Liste des fichiers présents :
 ```
 - reçu adobe janvier.pdf
 - reçu adobe fevrier.pdf
@@ -373,11 +373,11 @@ select t.id, 2, $tt$Cas fictif 2 : Auto-entrepreneur, classement des justificati
 - reçu adobe (encore un autre, avril).pdf
 - facture imprimante.pdf
 - péage autoroute avril.jpg
-```$tt$, $tt$Travail à faire : Propose une arborescence de classement par catégorie de dépense (abonnements logiciels, matériel, formation, frais de déplacement/repas, assurances), avec une convention de nommage uniforme incluant la date, et indique dans quelle catégorie ranger chacun des 12 fichiers listés.$tt$
+```$tt$, $tt$Travail à faire : Proposez une arborescence de classement par catégorie de dépense (abonnements logiciels, matériel, formation, frais de déplacement/repas, assurances), avec une convention de nommage uniforme incluant la date, et indiquez dans quelle catégorie ranger chacun des 12 fichiers listés.$tt$
 from taches t where t.code = 'F12';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Gérant de restaurant, comparaison de deux devis fournisseurs$tt$, $tt$Contexte : Tu gères le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de ton fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).$tt$, $tt$Devis A (Fournisseur "Linéa Pro") :
+select t.id, 1, $tt$Cas fictif 1 : Gérant de restaurant, comparaison de deux devis fournisseurs$tt$, $tt$Contexte : Vous gérez le restaurant "Le Comptoir Basque" et devez choisir entre deux devis reçus pour le renouvellement du contrat de votre fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).$tt$, $tt$Devis A (Fournisseur "Linéa Pro") :
 ```
 Forfait mensuel : 340€ HT
 Fréquence de livraison/collecte : 2 fois par semaine (mardi et vendredi)
@@ -385,11 +385,11 @@ Inclus : 80 nappes, 200 serviettes, 15 tenues de cuisine
 Durée d'engagement : 24 mois
 Pénalité de résiliation anticipée : 3 mois de forfait restant dû
 Délai de remplacement en cas d'article défectueux : 5 jours ouvrés
-```$tt$, $tt$Travail à faire : Construis un tableau comparatif clause par clause des deux devis, identifie les 3 différences qui ont le plus d'impact financier ou opérationnel pour un restaurant, et formule une recommandation argumentée sans ajouter de critères non mentionnés dans les devis.$tt$
+```$tt$, $tt$Travail à faire : Construisez un tableau comparatif clause par clause des deux devis, identifiez les 3 différences qui ont le plus d'impact financier ou opérationnel pour un restaurant, et formulez une recommandation argumentée sans ajouter de critères non mentionnés dans les devis.$tt$
 from taches t where t.code = 'F13';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Responsable RH, comparaison de deux versions d'un règlement intérieur$tt$, $tt$Contexte : Tu travailles au service RH de "Mécatech Industries" et as reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.$tt$, $tt$Version actuelle (extrait, article 8) :
+select t.id, 2, $tt$Cas fictif 2 : Responsable RH, comparaison de deux versions d'un règlement intérieur$tt$, $tt$Contexte : Vous travaillez au service RH de "Mécatech Industries" et avez reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.$tt$, $tt$Version actuelle (extrait, article 8) :
 ```
 Article 8 : Télétravail
 Le télétravail est autorisé jusqu'à 2 jours par semaine sur accord du 
@@ -397,11 +397,11 @@ manager, pour les postes éligibles. La demande doit être formulée avec un
 préavis de 15 jours. Le matériel informatique nécessaire est fourni par 
 l'entreprise. Aucune indemnité de télétravail n'est prévue par le présent 
 règlement.
-```$tt$, $tt$Travail à faire : Liste précisément chaque changement entre les deux versions (ce qui est ajouté, supprimé ou modifié), classe-les en "favorable au salarié" / "défavorable au salarié" / "neutre", et rédige les 2 points que tu recommanderais de mettre en avant lors de la présentation au CSE.$tt$
+```$tt$, $tt$Travail à faire : Listez précisément chaque changement entre les deux versions (ce qui est ajouté, supprimé ou modifié), classez-les en "favorable au salarié" / "défavorable au salarié" / "neutre", et rédigez les 2 points que vous recommanderiez de mettre en avant lors de la présentation au CSE.$tt$
 from taches t where t.code = 'F13';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : PME exportatrice, traduction d'une fiche produit$tt$, $tt$Contexte : Tu travailles chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Tu dois traduire la fiche produit en anglais pour votre distributeur britannique.$tt$, $tt$Texte source (français) :
+select t.id, 1, $tt$Cas fictif 1 : PME exportatrice, traduction d'une fiche produit$tt$, $tt$Contexte : Vous travaillez chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Vous devez traduire la fiche produit en anglais pour votre distributeur britannique.$tt$, $tt$Texte source (français) :
 ```
 Tomme des Alpages AOP
 
@@ -415,11 +415,11 @@ Allergènes : lait. Convient aux régimes sans gluten.
 
 Conditionnement : carton de 6 meules, poids total carton environ 10,8 kg.
 Prix départ ferme : 14,50€/kg HT.
-```$tt$, $tt$Travail à faire : Traduis cette fiche produit en anglais britannique professionnel adapté à un usage commercial (unités converties si pertinent pour le marché UK, ou conservées avec équivalence indiquée), et signale les termes techniques (comme "AOP") qui n'ont pas d'équivalent direct en anglais et nécessitent une explication plutôt qu'une traduction littérale.$tt$
+```$tt$, $tt$Travail à faire : Traduisez cette fiche produit en anglais britannique professionnel adapté à un usage commercial (unités converties si pertinent pour le marché UK, ou conservées avec équivalence indiquée), et signalez les termes techniques (comme "AOP") qui n'ont pas d'équivalent direct en anglais et nécessitent une explication plutôt qu'une traduction littérale.$tt$
 from taches t where t.code = 'F14';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Cabinet de conseil, adaptation d'un email client pour un correspondant international$tt$, $tt$Contexte : Tu es consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.$tt$, $tt$Email original en français :
+select t.id, 2, $tt$Cas fictif 2 : Cabinet de conseil, adaptation d'un email client pour un correspondant international$tt$, $tt$Contexte : Vous êtes consultant(e) au cabinet "Stratégia Conseil" et devez adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.$tt$, $tt$Email original en français :
 ```
 Bonjour Klaus,
 
@@ -435,11 +435,11 @@ N'hésitez pas si vous avez des questions d'ici notre échange !
 
 Bien à vous,
 Antoine
-```$tt$, $tt$Travail à faire : Adapte cet email en allemand professionnel (registre plus formel, structure plus directe, sans les tournures de politesse informelles typiquement françaises), en conservant fidèlement toutes les informations factuelles (l'avancement, le retard d'une semaine sur le volet RH). Si tu ne maîtrises pas suffisamment l'allemand pour garantir un résultat fiable, indique clairement les points de vigilance à faire vérifier par un locuteur natif plutôt que de livrer une traduction non certaine.$tt$
+```$tt$, $tt$Travail à faire : Adaptez cet email en allemand professionnel (registre plus formel, structure plus directe, sans les tournures de politesse informelles typiquement françaises), en conservant fidèlement toutes les informations factuelles (l'avancement, le retard d'une semaine sur le volet RH). Si vous ne maîtrisez pas suffisamment l'allemand pour garantir un résultat fiable, indiquez clairement les points de vigilance à faire vérifier par un locuteur natif plutôt que de livrer une traduction non certaine.$tt$
 from taches t where t.code = 'F14';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Directeur commercial, présentation des résultats trimestriels$tt$, $tt$Contexte : Tu es directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.$tt$, $tt$Brief et données fournies :
+select t.id, 1, $tt$Cas fictif 1 : Directeur commercial, présentation des résultats trimestriels$tt$, $tt$Contexte : Vous êtes directeur (directrice) commercial(e) de "Mécatech Industries" et devez présenter les résultats du T2 au comité de direction en 6 slides maximum.$tt$, $tt$Brief et données fournies :
 ```
 Objectif : convaincre la direction d'investir dans un 4e commercial pour 
 la région Sud-Est.
@@ -453,11 +453,11 @@ Données T2 2026 :
   région Sud-Est : 34 (estimation du commercial en poste)
 - Coût annuel chargé d'un commercial junior : environ 48 000€
 - Panier moyen d'un client région Sud-Est : 12 500€/an
-```$tt$, $tt$Travail à faire : Construis le plan détaillé des 6 slides (titre de chaque slide + contenu clé, sans mise en forme graphique), en structurant l'argumentaire autour de l'objectif de convaincre d'investir dans un commercial supplémentaire, et calcule le seuil de rentabilité de ce recrutement à partir des données fournies.$tt$
+```$tt$, $tt$Travail à faire : Construisez le plan détaillé des 6 slides (titre de chaque slide + contenu clé, sans mise en forme graphique), en structurant l'argumentaire autour de l'objectif de convaincre d'investir dans un commercial supplémentaire, et calculez le seuil de rentabilité de ce recrutement à partir des données fournies.$tt$
 from taches t where t.code = 'F15';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Responsable formation, présentation d'un nouveau parcours d'intégration$tt$, $tt$Contexte : Tu es responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.$tt$, $tt$Brief fourni :
+select t.id, 2, $tt$Cas fictif 2 : Responsable formation, présentation d'un nouveau parcours d'intégration$tt$, $tt$Contexte : Vous êtes responsable formation de l'entreprise "Solaris Énergie" et devez présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.$tt$, $tt$Brief fourni :
 ```
 Objectif de la présentation : présenter le nouveau parcours en 5 slides 
 maximum devant les managers, pour qu'ils comprennent leur rôle dans le 
@@ -477,11 +477,11 @@ Jour 90 : entretien de fin de période d'essai.
 Problème actuel identifié à mentionner : 40% des nouveaux salariés interrogés 
 en sortie de période d'essai (sur les 12 derniers mois) déclarent ne pas avoir 
 eu de rencontre formalisée avec leur manager avant le 30e jour.
-```$tt$, $tt$Travail à faire : Construis le plan détaillé des 5 slides avec le contenu de chacune, en mettant en avant clairement ce qui change par rapport à la situation actuelle (le problème des 40%) et le rôle concret attendu du manager à chaque étape.$tt$
+```$tt$, $tt$Travail à faire : Construisez le plan détaillé des 5 slides avec le contenu de chacune, en mettant en avant clairement ce qui change par rapport à la situation actuelle (le problème des 40%) et le rôle concret attendu du manager à chaque étape.$tt$
 from taches t where t.code = 'F15';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Chef de projet événementiel$tt$, $tt$Contexte : Tu es chef de projet à l'agence "Événements Réunis" et organises un salon professionnel pour un client dans 6 semaines. Voici les notes de suivi prises en réunion de lancement.$tt$, $tt$Notes brutes de réunion (à structurer) :
+select t.id, 1, $tt$Cas fictif 1 : Chef de projet événementiel$tt$, $tt$Contexte : Vous êtes chef de projet à l'agence "Événements Réunis" et organisez un salon professionnel pour un client dans 6 semaines. Voici les notes de suivi prises en réunion de lancement.$tt$, $tt$Notes brutes de réunion (à structurer) :
 ```
 Il faut réserver le lieu (le client a une préférence pour le Palais des 
 Congrès mais il faut vérifier la dispo et le budget, c'est Sophie qui gère 
@@ -497,11 +497,11 @@ prestataire habituel, Marc s'en charge, mais il faut d'abord confirmer le
 nombre de salles définitif qui dépend du lieu choisi. Le budget global 
 doit être validé par le client avant le 15, actuellement en attente de 
 retour de sa part.
-```$tt$, $tt$Travail à faire : Structure ces notes en un tableau de suivi d'actions avec colonnes (action, responsable, échéance, statut, ce qui bloque éventuellement l'action), identifie les 2 dépendances critiques qui pourraient retarder le projet si elles ne sont pas résolues rapidement, et propose l'ordre de priorité des actions pour la semaine à venir.$tt$
+```$tt$, $tt$Travail à faire : Structurez ces notes en un tableau de suivi d'actions avec colonnes (action, responsable, échéance, statut, ce qui bloque éventuellement l'action), identifiez les 2 dépendances critiques qui pourraient retarder le projet si elles ne sont pas résolues rapidement, et proposez l'ordre de priorité des actions pour la semaine à venir.$tt$
 from taches t where t.code = 'F16';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Responsable travaux, rénovation d'un local commercial$tt$, $tt$Contexte : Tu es gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de ton local avant ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.$tt$, $tt$Informations éparses collectées (par SMS, appels, emails) :
+select t.id, 2, $tt$Cas fictif 2 : Responsable travaux, rénovation d'un local commercial$tt$, $tt$Contexte : Vous êtes gérant(e) d'une future boutique et devez suivre l'avancement des travaux de rénovation de votre local avant ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.$tt$, $tt$Informations éparses collectées (par SMS, appels, emails) :
 ```
 - L'électricien a dit qu'il pouvait commencer dans 10 jours, pour une 
   durée de travaux estimée à 5 jours.
@@ -513,13 +513,13 @@ select t.id, 2, $tt$Cas fictif 2 : Responsable travaux, rénovation d'un local c
 - Le fournisseur de mobilier de vente (comptoir, étagères) a confirmé une 
   livraison sous 4 semaines à compter de la commande, qui n'a pas encore 
   été passée car le plan définitif du magasin n'est pas figé.
-- Tu dois toi-même t'occuper de la demande d'enseigne auprès de la 
+- Vous devez vous-même vous occuper de la demande d'enseigne auprès de la 
   mairie, délai d'instruction annoncé de 4 à 6 semaines.
-```$tt$, $tt$Travail à faire : Construis un tableau de suivi avec les dépendances entre les différentes tâches (qui doit être fini avant que l'autre commence), identifie le chemin critique (la suite d'actions qui, si elle prend du retard, retarde directement l'ouverture), et signale si l'ouverture dans 8 semaines te semble réaliste au vu des informations données, en justifiant.$tt$
+```$tt$, $tt$Travail à faire : Construisez un tableau de suivi avec les dépendances entre les différentes tâches (qui doit être fini avant que l'autre commence), identifiez le chemin critique (la suite d'actions qui, si elle prend du retard, retarde directement l'ouverture), et signalez si l'ouverture dans 8 semaines vous semble réaliste au vu des informations données, en justifiant.$tt$
 from taches t where t.code = 'F16';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Institut de beauté indépendant$tt$, $tt$Contexte : Tu es gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier ton contenu Instagram pour les 2 prochaines semaines. Tu as listé en vrac ce que tu veux communiquer.$tt$, $tt$Tes notes en vrac (à structurer) :
+select t.id, 1, $tt$Cas fictif 1 : Institut de beauté indépendant$tt$, $tt$Contexte : Vous êtes gérant(e) de l'institut "Belle Écorce" (Toulouse) et voulez planifier votre contenu Instagram pour les 2 prochaines semaines. Vous avez listé en vrac ce que vous voulez communiquer.$tt$, $tt$Vos notes en vrac (à structurer) :
 ```
 - Nouvelle prestation "soin visage éclat" lancée le 15, il faudrait en parler 
   avant et le jour J
@@ -531,11 +531,11 @@ select t.id, 1, $tt$Cas fictif 1 : Institut de beauté indépendant$tt$, $tt$Con
 - Il y a la fête des mères qui approche (dans 3 semaines), je vends des 
   coffrets cadeaux
 - Je n'ai jamais présenté mon équipe (on est 3 avec moi)
-```$tt$, $tt$Travail à faire : Construis un calendrier de publication sur 14 jours (jour, format (post/story/reel), thème, accroche courte) qui organise ces idées de façon cohérente, en respectant un rythme réaliste pour une seule personne qui gère aussi l'institut au quotidien (pas plus d'un post élaboré par jour).$tt$
+```$tt$, $tt$Travail à faire : Construisez un calendrier de publication sur 14 jours (jour, format (post/story/reel), thème, accroche courte) qui organise ces idées de façon cohérente, en respectant un rythme réaliste pour une seule personne qui gère aussi l'institut au quotidien (pas plus d'un post élaboré par jour).$tt$
 from taches t where t.code = 'F02';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Entreprise B2B de menuiserie industrielle$tt$, $tt$Contexte : Tu es responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.$tt$, $tt$Éléments disponibles :
+select t.id, 2, $tt$Cas fictif 2 : Entreprise B2B de menuiserie industrielle$tt$, $tt$Contexte : Vous êtes responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et devez préparer le contenu LinkedIn du mois, un canal très différent du grand public.$tt$, $tt$Éléments disponibles :
 ```
 - Un chantier récemment terminé : charpente d'un hangar agricole de 2000m², 
   délai de livraison tenu malgré une pénurie de bois annoncée en amont.
@@ -546,11 +546,11 @@ select t.id, 2, $tt$Cas fictif 2 : Entreprise B2B de menuiserie industrielle$tt$
   pas encore communiquée.
 - Le dirigeant a été interviewé par un journal économique régional, 
   l'article sort dans 10 jours.
-```$tt$, $tt$Travail à faire : Propose un calendrier de 6 publications LinkedIn sur le mois avec pour chacune le format, l'angle éditorial adapté à une audience B2B professionnelle (pas le même ton que pour du grand public), et la date de publication recommandée en tenant compte des échéances mentionnées (salon, sortie de l'article).$tt$
+```$tt$, $tt$Travail à faire : Proposez un calendrier de 6 publications LinkedIn sur le mois avec pour chacune le format, l'angle éditorial adapté à une audience B2B professionnelle (pas le même ton que pour du grand public), et la date de publication recommandée en tenant compte des échéances mentionnées (salon, sortie de l'article).$tt$
 from taches t where t.code = 'F02';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Boutique en ligne de vêtements pour enfants$tt$, $tt$Contexte : Tu gères "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Tu souhaites créer une FAQ pour désengorger le support.$tt$, $tt$Historique des 10 derniers emails reçus (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Boutique en ligne de vêtements pour enfants$tt$, $tt$Contexte : Vous gérez "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Vous souhaitez créer une FAQ pour désengorger le support.$tt$, $tt$Historique des 10 derniers emails reçus (à traiter) :
 ```
 1. "Combien de temps pour être livré si je commande aujourd'hui ?"
 2. "Je fais quelle taille pour mon fils de 4 ans, il est plutôt grand pour son âge ?"
@@ -562,11 +562,11 @@ select t.id, 1, $tt$Cas fictif 1 : Boutique en ligne de vêtements pour enfants$
 8. "Comment j'annule ma commande, je viens de me tromper de taille"
 9. "Vous faites des réductions pour les naissances multiples (jumeaux) ?"
 10. "Le paiement a été refusé mais l'argent a été débité de mon compte"
-```$tt$, $tt$Travail à faire : Classe ces 10 questions en "peut être répondu par une FAQ automatique" vs "nécessite une intervention humaine au cas par cas" (comme le n°3 défectueux ou le n°10 paiement débité par erreur), et rédige les réponses FAQ pour les questions qui peuvent l'être, sans inventer d'information non fournie (par exemple ne pas inventer une date de réapprovisionnement).$tt$
+```$tt$, $tt$Travail à faire : Classez ces 10 questions en "peut être répondu par une FAQ automatique" vs "nécessite une intervention humaine au cas par cas" (comme le n°3 défectueux ou le n°10 paiement débité par erreur), et rédigez les réponses FAQ pour les questions qui peuvent l'être, sans inventer d'information non fournie (par exemple ne pas inventer une date de réapprovisionnement).$tt$
 from taches t where t.code = 'F06';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Salle de sport indépendante$tt$, $tt$Contexte : Tu gères "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.$tt$, $tt$Questions notées par l'équipe d'accueil sur une semaine :
+select t.id, 2, $tt$Cas fictif 2 : Salle de sport indépendante$tt$, $tt$Contexte : Vous gérez "Fit Zone", une salle de sport de quartier, et voulez créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.$tt$, $tt$Questions notées par l'équipe d'accueil sur une semaine :
 ```
 1. "Je peux venir tester une séance avant de m'engager ?"
 2. "C'est combien l'abonnement, il y a plusieurs formules ?"
@@ -578,11 +578,11 @@ select t.id, 2, $tt$Cas fictif 2 : Salle de sport indépendante$tt$, $tt$Context
 8. "Vous avez des vestiaires avec douches ?"
 9. "Je peux amener un ami gratuitement une fois ?"
 10. "Quel est l'âge minimum pour s'inscrire seul ?"
-```$tt$, $tt$Travail à faire : Rédige la FAQ complète (question reformulée si besoin + réponse) pour ce qui peut être répondu avec les informations disponibles, et signale les questions pour lesquelles il manque une information officielle de l'entreprise pour répondre correctement (sans l'inventer).$tt$
+```$tt$, $tt$Travail à faire : Rédigez la FAQ complète (question reformulée si besoin + réponse) pour ce qui peut être répondu avec les informations disponibles, et signalez les questions pour lesquelles il manque une information officielle de l'entreprise pour répondre correctement (sans l'inventer).$tt$
 from taches t where t.code = 'F06';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Agence immobilière$tt$, $tt$Contexte : Tu es assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Tu dois les répartir chaque matin entre les 3 agents.$tt$, $tt$Demandes reçues ce matin :
+select t.id, 1, $tt$Cas fictif 1 : Agence immobilière$tt$, $tt$Contexte : Vous êtes assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Vous devez les répartir chaque matin entre les 3 agents.$tt$, $tt$Demandes reçues ce matin :
 ```
 1. "Bonjour, je suis locataire d'un appartement géré par votre agence 
    (référence LOC-4482), le chauffe-eau ne fonctionne plus depuis hier 
@@ -601,11 +601,11 @@ select t.id, 1, $tt$Cas fictif 1 : Agence immobilière$tt$, $tt$Contexte : Tu es
 
 6. "Je cherche un 3 pièces à louer, budget max 850€, dans le centre-ville, 
    pouvez-vous me faire visiter quelque chose cette semaine ?"
-```$tt$, $tt$Travail à faire : Classe chacune des 6 demandes par ordre de priorité de traitement (avec justification courte), assigne chacune à l'agent compétent, et identifie la demande qui nécessite une réponse dans l'heure.$tt$
+```$tt$, $tt$Travail à faire : Classez chacune des 6 demandes par ordre de priorité de traitement (avec justification courte), assignez chacune à l'agent compétent, et identifiez la demande qui nécessite une réponse dans l'heure.$tt$
 from taches t where t.code = 'F25';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Éditeur de logiciel SaaS pour artisans$tt$, $tt$Contexte : Tu es responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Tu dois répartir les tickets du matin entre ton équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).$tt$, $tt$Tickets reçus :
+select t.id, 2, $tt$Cas fictif 2 : Éditeur de logiciel SaaS pour artisans$tt$, $tt$Contexte : Vous êtes responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Vous devez répartir les tickets du matin entre votre équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).$tt$, $tt$Tickets reçus :
 ```
 1. "Impossible de me connecter depuis ce matin, message 'erreur serveur 
    500', j'ai un rendez-vous client dans 1h et j'ai besoin d'éditer un 
@@ -625,11 +625,11 @@ select t.id, 2, $tt$Cas fictif 2 : Éditeur de logiciel SaaS pour artisans$tt$, 
 
 6. "Je n'arrive plus à me connecter, mais quand je regarde bien c'est 
    parce que j'ai oublié mon mot de passe je pense."
-```$tt$, $tt$Travail à faire : Classe ces 6 tickets par urgence et par type (bug bloquant / question de facturation / question fonctionnelle / suggestion produit), assigne chacun à la bonne personne de l'équipe, et rédige la réponse immédiate à envoyer pour le ticket n°1 (accusé de réception avec le niveau d'urgence pris en compte).$tt$
+```$tt$, $tt$Travail à faire : Classez ces 6 tickets par urgence et par type (bug bloquant / question de facturation / question fonctionnelle / suggestion produit), assignez chacun à la bonne personne de l'équipe, et rédigez la réponse immédiate à envoyer pour le ticket n°1 (accusé de réception avec le niveau d'urgence pris en compte).$tt$
 from taches t where t.code = 'F25';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Restaurant gastronomique$tt$, $tt$Contexte : Tu gères le restaurant "L'Écrin". Tu as reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour ton équipe.$tt$, $tt$Avis reçus (texte + note sur 5, tels quels) :
+select t.id, 1, $tt$Cas fictif 1 : Restaurant gastronomique$tt$, $tt$Contexte : Vous gérez le restaurant "L'Écrin". Vous avez reçu 8 avis Google récents et voulez en tirer une synthèse actionnable pour votre équipe.$tt$, $tt$Avis reçus (texte + note sur 5, tels quels) :
 ```
 1. ★★★★★ "Un service impeccable et une cuisine raffinée, le menu 
    dégustation vaut le détour."
@@ -646,11 +646,11 @@ select t.id, 1, $tt$Cas fictif 1 : Restaurant gastronomique$tt$, $tt$Contexte : 
 7. ★★★★★ "Meilleur restaurant de la ville, tout simplement parfait."
 8. ★★☆☆☆ "Le service est lent, on a dû demander l'addition deux fois 
    avant qu'on nous l'apporte."
-```$tt$, $tt$Travail à faire : Calcule la note moyenne, identifie le thème qui revient le plus souvent parmi les avis négatifs (attention à ne pas confondre plusieurs problèmes différents qui se ressemblent), et rédige une synthèse d'une demi-page pour l'équipe avec une recommandation d'action concrète et priorisée.$tt$
+```$tt$, $tt$Travail à faire : Calculez la note moyenne, identifiez le thème qui revient le plus souvent parmi les avis négatifs (attention à ne pas confondre plusieurs problèmes différents qui se ressemblent), et rédigez une synthèse d'une demi-page pour l'équipe avec une recommandation d'action concrète et priorisée.$tt$
 from taches t where t.code = 'F26';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Entreprise de déménagement$tt$, $tt$Contexte : Tu travailles chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. Voici les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.$tt$, $tt$Réponses reçues :
+select t.id, 2, $tt$Cas fictif 2 : Entreprise de déménagement$tt$, $tt$Contexte : Vous travaillez chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. Voici les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.$tt$, $tt$Réponses reçues :
 ```
 Client 1 : Note 9, "Équipe très professionnelle et ponctuelle."
 Client 2 : Note 4, "Un meuble a été abîmé pendant le transport, toujours 
@@ -667,11 +667,11 @@ Client 8 : Note 2, "Un carton entier de vaisselle cassé, aucune excuse
 Client 9 : Note 10, "Parfait du début à la fin."
 Client 10 : Note 5, "Correct mais communication difficile pour fixer 
   la date finale."
-```$tt$, $tt$Travail à faire : Calcule le score NPS (% promoteurs [note 9-10] moins % détracteurs [note 0-6], les notes 7-8 étant neutres), identifie les 2 causes de mécontentement qui reviennent le plus souvent chez les détracteurs, et propose une action corrective distincte pour chacune.$tt$
+```$tt$, $tt$Travail à faire : Calculez le score NPS (% promoteurs [note 9-10] moins % détracteurs [note 0-6], les notes 7-8 étant neutres), identifiez les 2 causes de mécontentement qui reviennent le plus souvent chez les détracteurs, et proposez une action corrective distincte pour chacune.$tt$
 from taches t where t.code = 'F26';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Boutique de vin en ligne$tt$, $tt$Contexte : Tu gères "Cave Numérique" et veux segmenter ta base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.$tt$, $tt$Données clients (extrait CRM) :
+select t.id, 1, $tt$Cas fictif 1 : Boutique de vin en ligne$tt$, $tt$Contexte : Vous gérez "Cave Numérique" et voulez segmenter votre base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.$tt$, $tt$Données clients (extrait CRM) :
 ```
 Client 1 : Dernier achat il y a 5 jours | 8 achats sur 12 mois | Total dépensé 890€
 Client 2 : Dernier achat il y a 210 jours | 1 achat sur 12 mois | Total dépensé 45€
@@ -685,11 +685,11 @@ Client 9 : Dernier achat il y a 400 jours | 1 achat sur 12 mois | Total dépens�
 Client 10 : Dernier achat il y a 25 jours | 5 achats sur 12 mois | Total dépensé 380€
 Client 11 : Dernier achat il y a 90 jours | 2 achats sur 12 mois | Total dépensé 150€
 Client 12 : Dernier achat il y a 15 jours | 7 achats sur 12 mois | Total dépensé 980€
-```$tt$, $tt$Travail à faire : Classe ces 12 clients en au moins 4 segments cohérents (par exemple clients fidèles à forte valeur, clients à réactiver, gros acheteurs occasionnels, petits clients inactifs), en expliquant le critère utilisé pour chaque segment, et propose un message ou une offre adaptée à chacun des segments identifiés.$tt$
+```$tt$, $tt$Travail à faire : Classez ces 12 clients en au moins 4 segments cohérents (par exemple clients fidèles à forte valeur, clients à réactiver, gros acheteurs occasionnels, petits clients inactifs), en expliquant le critère utilisé pour chaque segment, et proposez un message ou une offre adaptée à chacun des segments identifiés.$tt$
 from taches t where t.code = 'F27';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Salle d'escalade avec abonnements$tt$, $tt$Contexte : Tu gères "Vertical Club" et veux identifier les profils d'adhérents pour adapter ta communication avant le renouvellement des abonnements annuels.$tt$, $tt$Données adhérents (extrait) :
+select t.id, 2, $tt$Cas fictif 2 : Salle d'escalade avec abonnements$tt$, $tt$Contexte : Vous gérez "Vertical Club" et voulez identifier les profils d'adhérents pour adapter votre communication avant le renouvellement des abonnements annuels.$tt$, $tt$Données adhérents (extrait) :
 ```
 Adhérent A : inscrit depuis 3 ans | 4 passages/mois en moyenne | 
   abonnement Premium (accès illimité + casiers)
@@ -703,11 +703,11 @@ Adhérent E : inscrit depuis 5 mois | 1 passage/mois en moyenne |
   abonnement Standard
 Adhérent F : inscrit depuis 6 ans | 6 passages/mois | abonnement Premium, 
   participe à toutes les sorties du club
-```$tt$, $tt$Travail à faire : Identifie parmi ces 6 profils celui qui présente le plus grand risque de ne pas renouveler son abonnement (et pourquoi), celui qui pourrait être approché pour devenir "ambassadeur" du club, et propose une action de communication différenciée pour au moins 3 profils distincts.$tt$
+```$tt$, $tt$Travail à faire : Identifiez parmi ces 6 profils celui qui présente le plus grand risque de ne pas renouveler son abonnement (et pourquoi), celui qui pourrait être approché pour devenir "ambassadeur" du club, et proposez une action de communication différenciée pour au moins 3 profils distincts.$tt$
 from taches t where t.code = 'F27';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Institut de beauté (suite du cas F02)$tt$, $tt$Contexte : Tu es Léna ("Belle Écorce") et as lancé ta première campagne publicitaire Meta il y a 2 semaines pour promouvoir ton nouveau soin visage. Tu constates des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.$tt$, $tt$Données de la campagne actuelle :
+select t.id, 1, $tt$Cas fictif 1 : Institut de beauté (suite du cas F02)$tt$, $tt$Contexte : Vous êtes Léna ("Belle Écorce") et avez lancé votre première campagne publicitaire Meta il y a 2 semaines pour promouvoir votre nouveau soin visage. Vous constatez des résultats décevants et voulez comprendre pourquoi avant de continuer à dépenser.$tt$, $tt$Données de la campagne actuelle :
 ```
 Structure actuelle : 1 campagne, 5 ensembles de publicités différents 
   (un par quartier ciblé de la ville), chacun avec un budget quotidien 
@@ -722,11 +722,11 @@ Résultats après 14 jours :
 - Note : le compte publicitaire affiche toujours le statut "Apprentissage" 
   sur 4 des 5 ensembles de publicités, même après 14 jours.
 - Le soin visage vendu coûte 65€, marge estimée à 40€ par soin.
-```$tt$, $tt$Travail à faire : Identifie le problème structurel principal de cette campagne à partir des données fournies (nombre d'ensembles de publicités vs budget disponible), calcule si la campagne est rentable en l'état, et propose une restructuration de la campagne (nombre d'ensembles de publicités et répartition du budget) pour sortir de la phase d'apprentissage plus rapidement.$tt$
+```$tt$, $tt$Travail à faire : Identifiez le problème structurel principal de cette campagne à partir des données fournies (nombre d'ensembles de publicités vs budget disponible), calculez si la campagne est rentable en l'état, et proposez une restructuration de la campagne (nombre d'ensembles de publicités et répartition du budget) pour sortir de la phase d'apprentissage plus rapidement.$tt$
 from taches t where t.code = 'F28';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Boutique en ligne de vêtements pour enfants (suite du cas F06)$tt$, $tt$Contexte : Tu es le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Tu veux savoir laquelle continuer à financer.$tt$, $tt$Données des 2 campagnes (30 derniers jours) :
+select t.id, 2, $tt$Cas fictif 2 : Boutique en ligne de vêtements pour enfants (suite du cas F06)$tt$, $tt$Contexte : Vous êtes le fondateur (la fondatrice) de "Petits Marmots" et faites tourner deux campagnes publicitaires en parallèle. Vous voulez savoir laquelle continuer à financer.$tt$, $tt$Données des 2 campagnes (30 derniers jours) :
 ```
 Campagne A "Nouveaux visiteurs", ciblage large, personnes n'ayant jamais 
   acheté :
@@ -737,11 +737,11 @@ Campagne B "Reciblage", ciblage des visiteurs ayant déjà consulté le
   site sans acheter :
   Budget dépensé : 180€ | Impressions : 22 000 | Clics : 610 | 
   Achats générés : 22 | Panier moyen : 42€ | CA généré : 924€
-```$tt$, $tt$Travail à faire : Calcule le retour sur investissement publicitaire (ROAS = CA généré / budget dépensé) de chaque campagne, détermine laquelle est la plus performante et pourquoi selon toi (au vu de la nature du ciblage), et propose une nouvelle répartition du budget total (800€) entre les deux campagnes pour le mois prochain, en justifiant.$tt$
+```$tt$, $tt$Travail à faire : Calculez le retour sur investissement publicitaire (ROAS = CA généré / budget dépensé) de chaque campagne, déterminez laquelle est la plus performante et pourquoi selon vous (au vu de la nature du ciblage), et proposez une nouvelle répartition du budget total (800€) entre les deux campagnes pour le mois prochain, en justifiant.$tt$
 from taches t where t.code = 'F28';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Cabinet de courtage en assurance$tt$, $tt$Contexte : Tu travailles au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Tu dois nettoyer la base avant import dans le CRM.$tt$, $tt$Extrait de la base fusionnée (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Cabinet de courtage en assurance$tt$, $tt$Contexte : Vous travaillez au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Vous devez nettoyer la base avant import dans le CRM.$tt$, $tt$Extrait de la base fusionnée (à traiter) :
 ```
 1. DUPONT Jean | jean.dupont@email.fr | 06 12 34 56 78 | dernier contact 
    03/2026
@@ -758,11 +758,11 @@ select t.id, 1, $tt$Cas fictif 1 : Cabinet de courtage en assurance$tt$, $tt$Con
    06/2026
 8. TRAN Linh | linh.tran@email.fr | 06 40 50 60 70 | dernier contact 
    05/2026, mention "client parti à la concurrence en 2025" en note libre
-```$tt$, $tt$Travail à faire : Identifie les doublons probables (justifie ton raisonnement pour chaque cas ambigu, notamment les lignes 3 et 5), propose la fiche fusionnée à conserver pour chaque doublon identifié, signale les fiches incomplètes nécessitant un enrichissement, et indique si la fiche n°8 doit rester dans la base active de prospection ou être déplacée dans une liste "clients perdus".$tt$
+```$tt$, $tt$Travail à faire : Identifiez les doublons probables (justifiez votre raisonnement pour chaque cas ambigu, notamment les lignes 3 et 5), proposez la fiche fusionnée à conserver pour chaque doublon identifié, signalez les fiches incomplètes nécessitant un enrichissement, et indiquez si la fiche n°8 doit rester dans la base active de prospection ou être déplacée dans une liste "clients perdus".$tt$
 from taches t where t.code = 'F10';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Organisme de formation professionnelle$tt$, $tt$Contexte : Tu travailles chez "FormaPlus" et veux qualifier ta base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.$tt$, $tt$Extrait de la base (à qualifier) :
+select t.id, 2, $tt$Cas fictif 2 : Organisme de formation professionnelle$tt$, $tt$Contexte : Vous travaillez chez "FormaPlus" et voulez qualifier votre base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.$tt$, $tt$Extrait de la base (à qualifier) :
 ```
 1. Contact inscrit à une newsletter il y a 18 mois, jamais ouvert un seul 
    email depuis, aucune autre interaction connue.
@@ -776,11 +776,11 @@ select t.id, 2, $tt$Cas fictif 2 : Organisme de formation professionnelle$tt$, $
    lors du dernier envoi.
 6. Contact ayant assisté à un webinar gratuit il y a 1 semaine et posé 
    une question en fin de session sur les tarifs.
-```$tt$, $tt$Travail à faire : Classe ces 6 contacts en 3 catégories (prospect chaud à contacter en priorité / à nourrir avec du contenu avant contact commercial / à retirer ou vérifier avant toute campagne), en justifiant chaque classement à partir des signaux d'engagement fournis.$tt$
+```$tt$, $tt$Travail à faire : Classez ces 6 contacts en 3 catégories (prospect chaud à contacter en priorité / à nourrir avec du contenu avant contact commercial / à retirer ou vérifier avant toute campagne), en justifiant chaque classement à partir des signaux d'engagement fournis.$tt$
 from taches t where t.code = 'F10';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Éditeur de logiciel de gestion pour restaurants$tt$, $tt$Contexte : Tu es commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.$tt$, $tt$Informations disponibles sur chaque prospect :
+select t.id, 1, $tt$Cas fictif 1 : Éditeur de logiciel de gestion pour restaurants$tt$, $tt$Contexte : Vous êtes commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et devez prospecter 3 restaurants repérés comme prospects potentiels.$tt$, $tt$Informations disponibles sur chaque prospect :
 ```
 Prospect 1 : "Le Bistrot du Coin", restaurant traditionnel, a ouvert un 
   deuxième établissement il y a 2 mois (information trouvée sur leur page 
@@ -794,14 +794,14 @@ Prospect 2 : "Sushi Time", chaîne de 4 restaurants, a publié une offre
 Prospect 3 : "La Table Verte", restaurant végétarien, a laissé un avis 
   négatif client visible publiquement mentionnant "l'attente à la caisse 
   est trop longue aux heures de pointe".
-```$tt$, $tt$Travail à faire : Rédige 3 messages de prospection courts (email ou LinkedIn, à préciser), chacun personnalisé à partir de l'information spécifique disponible sur le prospect concerné, avec un appel à l'action clair et différent selon le contexte de chaque prospect.$tt$
+```$tt$, $tt$Travail à faire : Rédigez 3 messages de prospection courts (email ou LinkedIn, à préciser), chacun personnalisé à partir de l'information spécifique disponible sur le prospect concerné, avec un appel à l'action clair et différent selon le contexte de chaque prospect.$tt$
 from taches t where t.code = 'F17';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Consultant en optimisation énergétique pour entreprises$tt$, $tt$Contexte : Tu es consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.$tt$, $tt$Historique disponible :
+select t.id, 2, $tt$Cas fictif 2 : Consultant en optimisation énergétique pour entreprises$tt$, $tt$Contexte : Vous êtes consultant(e) indépendant(e) et devez relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.$tt$, $tt$Historique disponible :
 ```
 Prospect A "Menuiserie Vasseur" : a téléchargé un guide gratuit sur les 
-  aides à la rénovation énergétique il y a 3 semaines via ton site web, 
+  aides à la rénovation énergétique il y a 3 semaines via votre site web, 
   aucune réponse depuis un premier email de suivi envoyé il 
   y a 10 jours.
 
@@ -809,11 +809,11 @@ Prospect B "Cabinet dentaire Dr. Renoux" : a eu un appel téléphonique de
   15 minutes il y a 2 semaines où le dirigeant a mentionné vouloir 
   "réduire la facture d'électricité qui a augmenté de 30% cette année" 
   mais devait "en discuter avec son associée" avant de donner suite.
-```$tt$, $tt$Travail à faire : Rédige les 2 messages de relance, adaptés à chaque situation (l'un n'a eu aucun échange humain direct, l'autre a eu une conversation avec une information précise à reprendre), sans être insistant ni inventer d'argument commercial non vérifié sur les économies réalisables.$tt$
+```$tt$, $tt$Travail à faire : Rédigez les 2 messages de relance, adaptés à chaque situation (l'un n'a eu aucun échange humain direct, l'autre a eu une conversation avec une information précise à reprendre), sans être insistant ni inventer d'argument commercial non vérifié sur les économies réalisables.$tt$
 from taches t where t.code = 'F17';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Entreprise de nettoyage professionnel$tt$, $tt$Contexte : Tu travailles chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.$tt$, $tt$Notes prises lors de la visite (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Entreprise de nettoyage professionnel$tt$, $tt$Contexte : Vous travaillez chez "NetPro Services" et devez préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.$tt$, $tt$Notes prises lors de la visite (à traiter) :
 ```
 - Surface totale : 400m², répartis en 350m² de bureaux/open space et 
   50m² de sanitaires/cuisine
@@ -829,11 +829,11 @@ select t.id, 1, $tt$Cas fictif 1 : Entreprise de nettoyage professionnel$tt$, $t
   engagement ferme sur ce chiffre
 - Produits écologiques demandés explicitement par le client (surcoût 
   habituel de l'entreprise : +8% sur le tarif de base)
-```$tt$, $tt$Travail à faire : Calcule le montant mensuel du devis à partir des tarifs et de la fréquence indiqués, présente une proposition commerciale structurée (contexte du besoin, détail des prestations, prix par poste, prix total, conditions), et indique si le budget mentionné par le client (900€) est cohérent avec le calcul ou s'il faut le signaler comme un écart à discuter.$tt$
+```$tt$, $tt$Travail à faire : Calculez le montant mensuel du devis à partir des tarifs et de la fréquence indiqués, présentez une proposition commerciale structurée (contexte du besoin, détail des prestations, prix par poste, prix total, conditions), et indiquez si le budget mentionné par le client (900€) est cohérent avec le calcul ou s'il faut le signaler comme un écart à discuter.$tt$
 from taches t where t.code = 'F18';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Graphiste indépendante$tt$, $tt$Contexte : Tu es graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.$tt$, $tt$Brief reçu du client (à traiter) :
+select t.id, 2, $tt$Cas fictif 2 : Graphiste indépendante$tt$, $tt$Contexte : Vous êtes graphiste freelance et devez chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.$tt$, $tt$Brief reçu du client (à traiter) :
 ```
 Le client souhaite : un logo (avec 2 propositions de piste avant choix 
 final), une charte graphique (couleurs, typographies, déclinaisons), 
@@ -842,17 +842,17 @@ réseaux sociaux (5 visuels type). Le client demande une livraison sous
 3 semaines. Aucun budget n'a été communiqué par le client, qui demande 
 "un devis pour voir".
 
-Tes tarifs habituels :
+Vos tarifs habituels :
 - Logo avec 2 pistes + 2 séries de retouches incluses : 650€
 - Charte graphique complète : 450€
 - Packaging (par format) : 180€/format
 - Templates réseaux sociaux (par visuel) : 45€/visuel
 - Majoration délai serré (moins de 4 semaines) : +15% sur le total
-```$tt$, $tt$Travail à faire : Calcule le montant total du devis à partir des tarifs fournis et du brief, présente-le sous forme de proposition détaillée poste par poste avec le délai annoncé, et rédige une clause claire sur ce qui est inclus ou non dans les "retouches" pour éviter tout malentendu ultérieur avec le client.$tt$
+```$tt$, $tt$Travail à faire : Calculez le montant total du devis à partir des tarifs fournis et du brief, présentez-le sous forme de proposition détaillée poste par poste avec le délai annoncé, et rédigez une clause claire sur ce qui est inclus ou non dans les "retouches" pour éviter tout malentendu ultérieur avec le client.$tt$
 from taches t where t.code = 'F18';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Auto-entrepreneur, activité de coaching sportif$tt$, $tt$Contexte : Tu es coach sportif indépendant et dois catégoriser tes relevés bancaires du mois pour ta comptabilité.$tt$, $tt$Relevé bancaire du mois (libellés bruts, à catégoriser) :
+select t.id, 1, $tt$Cas fictif 1 : Auto-entrepreneur, activité de coaching sportif$tt$, $tt$Contexte : Vous êtes coach sportif indépendant et devez catégoriser vos relevés bancaires du mois pour votre comptabilité.$tt$, $tt$Relevé bancaire du mois (libellés bruts, à catégoriser) :
 ```
 1. VIR SEPA DECATHLON PRO - 340,00€
 2. PRLV ASSURANCE RC PRO MAAF - 42,00€
@@ -864,11 +864,11 @@ select t.id, 1, $tt$Cas fictif 1 : Auto-entrepreneur, activité de coaching spor
 8. PRLV URSSAF COTISATIONS - 380,00€
 9. CB REPAS RESTAURANT AVEC PROSPECT - 48,00€
 10. VIR SEPA SALLE DE SPORT LOCATION CRENEAU - 200,00€
-```$tt$, $tt$Travail à faire : Catégorise chaque ligne dans l'une des catégories suivantes (Recette prestation, Achat de petit matériel, Charge d'immobilisation si le montant unitaire dépasse 500€ pièce, Charge d'assurance, Frais de déplacement, Abonnement/logiciel, Charge sociale, Frais de représentation/repas professionnel, Location), en signalant explicitement les lignes ambiguës qui nécessiteraient une confirmation (par exemple si l'achat de tapis de yoga à l'unité dépasse ou non le seuil d'immobilisation selon le prix unitaire réel, ici non précisé).$tt$
+```$tt$, $tt$Travail à faire : Catégorisez chaque ligne dans l'une des catégories suivantes (Recette prestation, Achat de petit matériel, Charge d'immobilisation si le montant unitaire dépasse 500€ pièce, Charge d'assurance, Frais de déplacement, Abonnement/logiciel, Charge sociale, Frais de représentation/repas professionnel, Location), en signalant explicitement les lignes ambiguës qui nécessiteraient une confirmation (par exemple si l'achat de tapis de yoga à l'unité dépasse ou non le seuil d'immobilisation selon le prix unitaire réel, ici non précisé).$tt$
 from taches t where t.code = 'F19';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Petite entreprise de paysagisme$tt$, $tt$Contexte : Tu gères "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à ton comptable.$tt$, $tt$Relevé bancaire du mois :
+select t.id, 2, $tt$Cas fictif 2 : Petite entreprise de paysagisme$tt$, $tt$Contexte : Vous gérez "Jardins & Sens" et devez catégoriser les transactions du mois avant transmission à votre comptable.$tt$, $tt$Relevé bancaire du mois :
 ```
 1. CB ACHAT TRONCONNEUSE STIHL - 620,00€
 2. VIR RECU CLIENT CHANTIER TAILLE HAIES - +1 200,00€
@@ -880,11 +880,11 @@ select t.id, 2, $tt$Cas fictif 2 : Petite entreprise de paysagisme$tt$, $tt$Cont
 8. CB REPARATION TONDEUSE AUTO-PORTEE - 280,00€
 9. PRLV ASSURANCE VEHICULE UTILITAIRE - 95,00€
 10. CB ACHAT GANTS ET EQUIPEMENT SECURITE - 75,00€
-```$tt$, $tt$Travail à faire : Catégorise chaque ligne dans un plan comptable adapté à cette activité (Recette chantier, Recette contrat récurrent, Achat matières/fournitures, Achat matériel/immobilisation, Charge de personnel, Charge sociale, Entretien/réparation matériel, Assurance, Équipement de sécurité), et identifie la seule ligne pour laquelle il manque une information pour trancher entre "achat de petit matériel" et "immobilisation à amortir".$tt$
+```$tt$, $tt$Travail à faire : Catégorisez chaque ligne dans un plan comptable adapté à cette activité (Recette chantier, Recette contrat récurrent, Achat matières/fournitures, Achat matériel/immobilisation, Charge de personnel, Charge sociale, Entretien/réparation matériel, Assurance, Équipement de sécurité), et identifiez la seule ligne pour laquelle il manque une information pour trancher entre "achat de petit matériel" et "immobilisation à amortir".$tt$
 from taches t where t.code = 'F19';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Association de quartier$tt$, $tt$Contexte : Tu es trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.$tt$, $tt$Relevé bancaire (banque) :
+select t.id, 1, $tt$Cas fictif 1 : Association de quartier$tt$, $tt$Contexte : Vous êtes trésorier bénévole de l'association "Vivre à Bellevue" et devez rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.$tt$, $tt$Relevé bancaire (banque) :
 ```
 03/09 : Virement reçu cotisation adhérents +85,00€
 05/09 : Prélèvement assurance responsabilité civile -120,00€
@@ -893,11 +893,11 @@ select t.id, 1, $tt$Cas fictif 1 : Association de quartier$tt$, $tt$Contexte : T
 15/09 : Chèque n°0234 débité -150,00€
 22/09 : Virement reçu cotisation adhérents +40,00€
 Solde bancaire au 30/09 : 1 346,50€
-```$tt$, $tt$Travail à faire : Identifie précisément les écarts entre le relevé bancaire et le livre de comptes (élément présent d'un côté mais pas de l'autre), explique la cause probable de chaque écart, et détermine le solde réel exact de l'association après rapprochement complet.$tt$
+```$tt$, $tt$Travail à faire : Identifiez précisément les écarts entre le relevé bancaire et le livre de comptes (élément présent d'un côté mais pas de l'autre), expliquez la cause probable de chaque écart, et déterminez le solde réel exact de l'association après rapprochement complet.$tt$
 from taches t where t.code = 'F20';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Cabinet de kinésithérapie$tt$, $tt$Contexte : Tu es secrétaire du cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.$tt$, $tt$Relevé bancaire :
+select t.id, 2, $tt$Cas fictif 2 : Cabinet de kinésithérapie$tt$, $tt$Contexte : Vous êtes secrétaire du cabinet de kinésithérapie et devez rapprocher le compte professionnel avant la clôture mensuelle.$tt$, $tt$Relevé bancaire :
 ```
 02/09 : Virement CPAM remboursements +2 840,00€
 04/09 : Prélèvement loyer local professionnel -900,00€
@@ -907,11 +907,11 @@ select t.id, 2, $tt$Cas fictif 2 : Cabinet de kinésithérapie$tt$, $tt$Contexte
 20/09 : Virement reçu, libellé "VIR SEPA REF INCONNUE" +310,00€
 28/09 : Prélèvement électricité local -85,00€
 Solde bancaire fin de mois : 3 423,00€
-```$tt$, $tt$Travail à faire : Identifie les 2 écarts entre les deux documents, explique ce que chacun représente probablement, et signale lequel des deux écarts nécessite une action de vérification urgente avant de pouvoir clôturer le mois (indice : un virement reçu ne peut pas être enregistré tant que son origine n'est pas identifiée avec certitude).$tt$
+```$tt$, $tt$Travail à faire : Identifiez les 2 écarts entre les deux documents, expliquez ce que chacun représente probablement, et signalez lequel des deux écarts nécessite une action de vérification urgente avant de pouvoir clôturer le mois (indice : un virement reçu ne peut pas être enregistré tant que son origine n'est pas identifiée avec certitude).$tt$
 from taches t where t.code = 'F20';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Agence de communication$tt$, $tt$Contexte : Tu travailles à l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1) et dois relancer plusieurs clients pour des factures impayées.$tt$, $tt$Liste des factures en retard :
+select t.id, 1, $tt$Cas fictif 1 : Agence de communication$tt$, $tt$Contexte : Vous travaillez à l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1) et devez relancer plusieurs clients pour des factures impayées.$tt$, $tt$Liste des factures en retard :
 ```
 1. Client "Boulangerie Ferrand" : Facture n°2026-0341, montant 850€, 
    échéance dépassée de 5 jours, aucun retard habituel de ce client par 
@@ -928,11 +928,11 @@ select t.id, 1, $tt$Cas fictif 1 : Agence de communication$tt$, $tt$Contexte : T
    échéance dépassée de 60 jours, deux relances précédentes envoyées 
    sans réponse, le client ne répond plus du tout aux emails ni appels 
    depuis 3 semaines.
-```$tt$, $tt$Travail à faire : Détermine le niveau de relance approprié pour chacun des 4 clients (rappel amical / relance ferme / mise en demeure / autre action à envisager), et rédige les messages de relance pour les clients n°1 et n°4, en adaptant le ton à la gravité de chaque situation.$tt$
+```$tt$, $tt$Travail à faire : Déterminez le niveau de relance approprié pour chacun des 4 clients (rappel amical / relance ferme / mise en demeure / autre action à envisager), et rédigez les messages de relance pour les clients n°1 et n°4, en adaptant le ton à la gravité de chaque situation.$tt$
 from taches t where t.code = 'F21';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Entreprise de fournitures de bureau (B2B)$tt$, $tt$Contexte : Tu travailles chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Tu gères un volume important de factures à surveiller.$tt$, $tt$Extrait du tableau de suivi des impayés :
+select t.id, 2, $tt$Cas fictif 2 : Entreprise de fournitures de bureau (B2B)$tt$, $tt$Contexte : Vous travaillez chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Vous gérez un volume important de factures à surveiller.$tt$, $tt$Extrait du tableau de suivi des impayés :
 ```
 1. Client "Cabinet Notarial Reyes", 2 factures en cours : l'une de 
    180€ payée avec 3 jours de retard (payée depuis), l'autre de 220€ 
@@ -951,11 +951,11 @@ select t.id, 2, $tt$Cas fictif 2 : Entreprise de fournitures de bureau (B2B)$tt$
 
 4. Client "Cabinet Médical Ost" : facture de 95€ en retard de 4 jours, 
    très faible montant.
-```$tt$, $tt$Travail à faire : Priorise ces 4 situations par niveau de risque réel (pas seulement par ancienneté du retard), en tenant compte du contexte connu sur chaque client (comme l'historique de paiement de l'École Saint-Marc), et détermine lequel des 4 cas justifierait d'envisager une action plus formelle (mise en demeure ou recouvrement) plutôt qu'une simple relance.$tt$
+```$tt$, $tt$Travail à faire : Priorisez ces 4 situations par niveau de risque réel (pas seulement par ancienneté du retard), en tenant compte du contexte connu sur chaque client (comme l'historique de paiement de l'École Saint-Marc), et déterminez lequel des 4 cas justifierait d'envisager une action plus formelle (mise en demeure ou recouvrement) plutôt qu'une simple relance.$tt$
 from taches t where t.code = 'F21';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Atelier de menuiserie$tt$, $tt$Contexte : Tu gères l'atelier "Bois & Matières" et dois faire le point sur tes commandes fournisseurs en cours avant de lancer la production de la semaine.$tt$, $tt$Tableau de suivi (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Atelier de menuiserie$tt$, $tt$Contexte : Vous gérez l'atelier "Bois & Matières" et devez faire le point sur vos commandes fournisseurs en cours avant de lancer la production de la semaine.$tt$, $tt$Tableau de suivi (à traiter) :
 ```
 1. Commande CMD-118 chez "Panneaux du Nord" : 40 panneaux de contreplaqué 
    18mm commandés le 20/08, confirmation fournisseur reçue pour 40 
@@ -975,11 +975,11 @@ select t.id, 1, $tt$Cas fictif 1 : Atelier de menuiserie$tt$, $tt$Contexte : Tu 
 4. Commande CMD-121 chez "Panneaux du Nord" (même fournisseur que CMD-118) : 
    20 panneaux MDF commandés le 02/09, confirmation reçue le jour même 
    pour livraison le 10/09, rien à signaler.
-```$tt$, $tt$Travail à faire : Identifie pour chaque commande le statut réel (conforme / en attente / à relancer / anomalie à résoudre), rédige les messages à envoyer aux fournisseurs concernés pour les commandes 1, 2 et 3, et signale s'il y a un risque que la production de la semaine soit bloquée par l'une de ces commandes.$tt$
+```$tt$, $tt$Travail à faire : Identifiez pour chaque commande le statut réel (conforme / en attente / à relancer / anomalie à résoudre), rédigez les messages à envoyer aux fournisseurs concernés pour les commandes 1, 2 et 3, et signalez s'il y a un risque que la production de la semaine soit bloquée par l'une de ces commandes.$tt$
 from taches t where t.code = 'F22';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Restaurant, gestion des commandes fournisseurs alimentaires$tt$, $tt$Contexte : Tu es chef du restaurant "La Table Verte" et dois vérifier tes commandes de la semaine avant le service du week-end, moment de forte affluence.$tt$, $tt$Suivi des commandes :
+select t.id, 2, $tt$Cas fictif 2 : Restaurant, gestion des commandes fournisseurs alimentaires$tt$, $tt$Contexte : Vous êtes chef du restaurant "La Table Verte" et devez vérifier vos commandes de la semaine avant le service du week-end, moment de forte affluence.$tt$, $tt$Suivi des commandes :
 ```
 1. Fournisseur "Primeurs du Marché" : commande de légumes de saison passée 
    le 03/09 pour livraison le 05/09 (avant le service du week-end), 
@@ -988,7 +988,7 @@ select t.id, 2, $tt$Cas fictif 2 : Restaurant, gestion des commandes fournisseur
 
 2. Fournisseur "Boucherie Grossiste Sud" : commande de 25kg de viande 
    passée le 02/09, confirmation écrite reçue pour livraison le 04/09, 
-   tu n'as reçu aucune nouvelle depuis et le fournisseur ne répond 
+   vous n'avez reçu aucune nouvelle depuis et le fournisseur ne répond 
    pas au téléphone depuis ce matin.
 
 3. Fournisseur habituel de pain "Boulangerie Servant" : commande 
@@ -999,11 +999,11 @@ select t.id, 2, $tt$Cas fictif 2 : Restaurant, gestion des commandes fournisseur
    première fois : commande passée le 01/09, livraison reçue le 04/09 
    mais 2 des 6 références commandées manquaient, sans explication 
    du livreur.
-```$tt$, $tt$Travail à faire : Détermine quelle commande représente le risque le plus urgent pour le service du week-end (justifie ton choix), rédige le message de relance à envoyer en priorité, et propose une action pour sécuriser les commandes à l'avenir sans bon de commande écrit formalisé (cas n°1).$tt$
+```$tt$, $tt$Travail à faire : Déterminez quelle commande représente le risque le plus urgent pour le service du week-end (justifiez votre choix), rédigez le message de relance à envoyer en priorité, et proposez une action pour sécuriser les commandes à l'avenir sans bon de commande écrit formalisé (cas n°1).$tt$
 from taches t where t.code = 'F22';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Glacier artisanal saisonnier$tt$, $tt$Contexte : Tu gères "Glace & Gourmandise" et dois préparer tes commandes de matières premières pour le mois de juillet à venir.$tt$, $tt$Historique de ventes disponible (en litres de mélange à glace utilisés par mois) :
+select t.id, 1, $tt$Cas fictif 1 : Glacier artisanal saisonnier$tt$, $tt$Contexte : Vous gérez "Glace & Gourmandise" et devez préparer vos commandes de matières premières pour le mois de juillet à venir.$tt$, $tt$Historique de ventes disponible (en litres de mélange à glace utilisés par mois) :
 ```
 Juillet année précédente : 480 litres
 Juin de cette année (mois dernier) : 210 litres
@@ -1015,14 +1015,14 @@ Août année précédente : 460 litres
   année (n'existait pas les années précédentes), attirant environ 8000 
   visiteurs sur 3 jours selon les organisateurs.
 - La météo de juillet l'an dernier avait été particulièrement pluvieuse 
-  selon ton souvenir (souvenir personnel, non chiffré).
-- Tu as ouvert un stand supplémentaire sur la plage cette année, 
+  selon votre souvenir (souvenir personnel, non chiffré).
+- Vous avez ouvert un stand supplémentaire sur la plage cette année, 
   qui n'existait pas l'an dernier.
-```$tt$, $tt$Travail à faire : Propose une estimation de la quantité de mélange à glace à commander pour juillet à partir de ces données, en expliquant chaque ajustement que tu appliques par rapport à l'historique brut (festival, nouveau stand, incertitude météo), et indique clairement quelle part de ton estimation relève d'un calcul basé sur des données et quelle part relève d'une hypothèse.$tt$
+```$tt$, $tt$Travail à faire : Proposez une estimation de la quantité de mélange à glace à commander pour juillet à partir de ces données, en expliquant chaque ajustement que vous appliquez par rapport à l'historique brut (festival, nouveau stand, incertitude météo), et indiquez clairement quelle part de votre estimation relève d'un calcul basé sur des données et quelle part relève d'une hypothèse.$tt$
 from taches t where t.code = 'F23';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Fournitures scolaires, librairie-papeterie$tt$, $tt$Contexte : Tu gères la librairie-papeterie "Le Cartable" et dois préparer ta commande pour la rentrée scolaire de septembre.$tt$, $tt$Historique de ventes (nombre de cartables vendus, période rentrée = 15 août au 15 septembre) :
+select t.id, 2, $tt$Cas fictif 2 : Fournitures scolaires, librairie-papeterie$tt$, $tt$Contexte : Vous gérez la librairie-papeterie "Le Cartable" et devez préparer votre commande pour la rentrée scolaire de septembre.$tt$, $tt$Historique de ventes (nombre de cartables vendus, période rentrée = 15 août au 15 septembre) :
 ```
 Rentrée année précédente : 145 cartables vendus
 Rentrée il y a 2 ans : 128 cartables vendus
@@ -1036,11 +1036,11 @@ Rentrée il y a 3 ans : 135 cartables vendus
   (information confirmée par un article de presse locale).
 - Stock actuel en réserve : 20 cartables de l'année précédente non 
   vendus, toujours en bon état.
-```$tt$, $tt$Travail à faire : Calcule une estimation du nombre de cartables à commander pour la rentrée à venir, en tenant compte du stock déjà disponible, de la tendance historique et des deux éléments de contexte, et explique le raisonnement complet (pas seulement le chiffre final).$tt$
+```$tt$, $tt$Travail à faire : Calculez une estimation du nombre de cartables à commander pour la rentrée à venir, en tenant compte du stock déjà disponible, de la tendance historique et des deux éléments de contexte, et expliquez le raisonnement complet (pas seulement le chiffre final).$tt$
 from taches t where t.code = 'F23';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Traiteur événementiel$tt$, $tt$Contexte : Tu es traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ta tournée.$tt$, $tt$Informations sur les livraisons :
+select t.id, 1, $tt$Cas fictif 1 : Traiteur événementiel$tt$, $tt$Contexte : Vous êtes traiteur événementiel chez "Saveurs & Événements" et devez livrer 4 commandes le même jour et planifier votre tournée.$tt$, $tt$Informations sur les livraisons :
 ```
 1. Livraison "Mariage Petit", 45 min de préparation sur place requise 
    avant l'heure de service (buffet à dresser), service prévu à 12h30, 
@@ -1057,13 +1057,13 @@ select t.id, 1, $tt$Cas fictif 1 : Traiteur événementiel$tt$, $tt$Contexte : T
 4. Livraison "Cocktail Cabinet Notarial", service prévu à 18h30, 
    30 minutes de mise en place requise, trajet estimé : 25 minutes.
 
-Contrainte supplémentaire : ton laboratoire dispose d'un seul 
+Contrainte supplémentaire : votre laboratoire dispose d'un seul 
 véhicule et d'une seule équipe de livraison ce jour-là.
-```$tt$, $tt$Travail à faire : Construis l'ordre de tournée optimal pour la journée en tenant compte des contraintes horaires fixes, du temps de trajet, du temps de mise en place nécessaire, et d'une marge de sécurité de 15 minutes par trajet pour les aléas, en vérifiant qu'aucune contrainte horaire fixe n'est violée.$tt$
+```$tt$, $tt$Travail à faire : Construisez l'ordre de tournée optimal pour la journée en tenant compte des contraintes horaires fixes, du temps de trajet, du temps de mise en place nécessaire, et d'une marge de sécurité de 15 minutes par trajet pour les aléas, en vérifiant qu'aucune contrainte horaire fixe n'est violée.$tt$
 from taches t where t.code = 'F24';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Technicien de maintenance itinérant$tt$, $tt$Contexte : Tu es technicien indépendant en maintenance de chaudières et dois planifier tes interventions de la journée chez 5 clients.$tt$, $tt$Rendez-vous à planifier :
+select t.id, 2, $tt$Cas fictif 2 : Technicien de maintenance itinérant$tt$, $tt$Contexte : Vous êtes technicien indépendant en maintenance de chaudières et devez planifier vos interventions de la journée chez 5 clients.$tt$, $tt$Rendez-vous à planifier :
 ```
 1. Client A (zone nord) : intervention estimée 1h, disponible toute la 
    matinée.
@@ -1077,13 +1077,13 @@ select t.id, 2, $tt$Cas fictif 2 : Technicien de maintenance itinérant$tt$, $tt
    demande explicitement un rendez-vous en fin de journée (après 17h).
 
 Temps de trajet estimés entre zones : nord-sud 40 minutes, nord-centre 
-20 minutes, sud-centre 25 minutes. Tu commences ta journée à 
+20 minutes, sud-centre 25 minutes. Vous commencez votre journée à 
 8h et dois finir au plus tard à 18h.
-```$tt$, $tt$Travail à faire : Construis le planning de la journée en respectant la contrainte horaire fixe du client B (8h-9h30), en regroupant les interventions par zone géographique quand c'est possible pour limiter les trajets, et vérifie si les 5 interventions peuvent tenir dans la journée avec les temps de trajet indiqués. Si ce n'est pas le cas, indique laquelle il faudrait reporter et pourquoi.$tt$
+```$tt$, $tt$Travail à faire : Construisez le planning de la journée en respectant la contrainte horaire fixe du client B (8h-9h30), en regroupant les interventions par zone géographique quand c'est possible pour limiter les trajets, et vérifiez si les 5 interventions peuvent tenir dans la journée avec les temps de trajet indiqués. Si ce n'est pas le cas, indiquez laquelle il faudrait reporter et pourquoi.$tt$
 from taches t where t.code = 'F24';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Électricien, chiffrage d'une rénovation$tt$, $tt$Contexte : Tu es électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).$tt$, $tt$Description du logement fournie par le client (à traiter comme un plan à compter) :
+select t.id, 1, $tt$Cas fictif 1 : Électricien, chiffrage d'une rénovation$tt$, $tt$Contexte : Vous êtes électricien indépendant et devez chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).$tt$, $tt$Description du logement fournie par le client (à traiter comme un plan à compter) :
 ```
 Appartement de 65m², composé de :
 - Un salon-séjour de 28m² : le client souhaite 6 points lumineux 
@@ -1098,11 +1098,11 @@ Appartement de 65m², composé de :
 - Un couloir/entrée de 6m² : 2 points lumineux, 1 prise.
 - Le client mentionne aussi vouloir un interrupteur va-et-vient entre 
   le couloir et le salon (comptabilisé dans les points du salon).
-```$tt$, $tt$Travail à faire : Établis le décompte total par catégorie (nombre total de points lumineux, nombre total de prises standard, nombre de prises spécifiques/spécialisées) pièce par pièce puis pour l'ensemble du logement, en présentant le résultat sous forme de tableau récapitulatif clair et vérifiable pièce par pièce.$tt$
+```$tt$, $tt$Travail à faire : Établissez le décompte total par catégorie (nombre total de points lumineux, nombre total de prises standard, nombre de prises spécifiques/spécialisées) pièce par pièce puis pour l'ensemble du logement, en présentant le résultat sous forme de tableau récapitulatif clair et vérifiable pièce par pièce.$tt$
 from taches t where t.code = 'F31';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Peintre en bâtiment, chiffrage de surfaces$tt$, $tt$Contexte : Tu es peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.$tt$, $tt$Mesures prises (à traiter) :
+select t.id, 2, $tt$Cas fictif 2 : Peintre en bâtiment, chiffrage de surfaces$tt$, $tt$Contexte : Vous êtes peintre en bâtiment et devez chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.$tt$, $tt$Mesures prises (à traiter) :
 ```
 Local commercial rectangulaire : 12m de longueur x 8m de largeur, 
 hauteur sous plafond 2,80m.
@@ -1115,13 +1115,13 @@ Ouvertures à déduire du calcul de surface murale :
 Le client souhaite : peinture des murs (2 couches), peinture du plafond 
 (1 couche, plafond déjà en bon état), le sol n'est pas concerné.
 
-Ton rendement : 10m² par litre de peinture murs (par couche), 
+Votre rendement : 10m² par litre de peinture murs (par couche), 
 12m² par litre pour le plafond.
-```$tt$, $tt$Travail à faire : Calcule le périmètre du local, la surface murale totale, la surface des ouvertures à déduire, la surface nette à peindre (murs, avec les 2 couches comptées séparément) et la surface de plafond, puis calcule la quantité de peinture nécessaire (en litres) pour chaque surface à partir des rendements indiqués.$tt$
+```$tt$, $tt$Travail à faire : Calculez le périmètre du local, la surface murale totale, la surface des ouvertures à déduire, la surface nette à peindre (murs, avec les 2 couches comptées séparément) et la surface de plafond, puis calculez la quantité de peinture nécessaire (en litres) pour chaque surface à partir des rendements indiqués.$tt$
 from taches t where t.code = 'F31';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Rénovation d'une maison individuelle$tt$, $tt$Contexte : Tu es maître d'œuvre et tu suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.$tt$, $tt$Notes prises lors de la visite hebdomadaire de chantier (à structurer) :
+select t.id, 1, $tt$Cas fictif 1 : Rénovation d'une maison individuelle$tt$, $tt$Contexte : Vous êtes maître d'œuvre et vous suivez l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.$tt$, $tt$Notes prises lors de la visite hebdomadaire de chantier (à structurer) :
 ```
 Semaine 1 (référence planning) : démolition cloisons prévue terminée, 
 évacuation gravats prévue terminée.
@@ -1140,11 +1140,11 @@ rez-de-chaussée, plomberie posée à environ 60% (le plombier a signalé
 un délai supplémentaire de 3 jours à cause d'une pièce en rupture chez 
 son fournisseur), démolition de la cloison de l'étage enfin réalisée 
 cette semaine (avec 1 semaine de retard sur planning initial).
-```$tt$, $tt$Travail à faire : Rédige le compte-rendu hebdomadaire à envoyer au client pour la semaine 2, avec un tableau comparant "prévu" vs "réalisé" pour chaque lot de travaux, un statut clair (dans les temps / en retard / terminé), et une estimation de l'impact du retard cumulé sur la date de fin de chantier si rien ne change.$tt$
+```$tt$, $tt$Travail à faire : Rédigez le compte-rendu hebdomadaire à envoyer au client pour la semaine 2, avec un tableau comparant "prévu" vs "réalisé" pour chaque lot de travaux, un statut clair (dans les temps / en retard / terminé), et une estimation de l'impact du retard cumulé sur la date de fin de chantier si rien ne change.$tt$
 from taches t where t.code = 'F32';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Construction d'une extension de garage$tt$, $tt$Contexte : Tu es le client (la cliente) et tu suis toi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.$tt$, $tt$Notes du chef de chantier sur 3 semaines :
+select t.id, 2, $tt$Cas fictif 2 : Construction d'une extension de garage$tt$, $tt$Contexte : Vous êtes le client (la cliente) et vous suivez vous-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.$tt$, $tt$Notes du chef de chantier sur 3 semaines :
 ```
 Vendredi semaine 1 : "Fondations coulées, on attend le séchage avant de 
 monter les murs, ça prend normalement 5 à 7 jours selon la météo."
@@ -1156,11 +1156,11 @@ Vendredi semaine 3 : "La charpente a pris du retard, le charpentier a eu
 un empêchement sur un autre chantier, nouvelle date annoncée : dans 
 10 jours. La couverture (toiture) ne pourra donc pas commencer comme 
 prévu la semaine prochaine."
-```$tt$, $tt$Travail à faire : Construis un tableau de suivi synthétique sur les 3 semaines (lot de travaux, statut, écart par rapport au planning initial), identifie le point de blocage actuel du chantier, et rédige les 2 questions précises que tu devrais poser à l'entreprise de construction pour évaluer l'impact réel de ce nouveau retard sur la date de livraison finale.$tt$
+```$tt$, $tt$Travail à faire : Construisez un tableau de suivi synthétique sur les 3 semaines (lot de travaux, statut, écart par rapport au planning initial), identifiez le point de blocage actuel du chantier, et rédigez les 2 questions précises que vous devriez poser à l'entreprise de construction pour évaluer l'impact réel de ce nouveau retard sur la date de livraison finale.$tt$
 from taches t where t.code = 'F32';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Chantier de rénovation de toiture$tt$, $tt$Contexte : Tu es chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.$tt$, $tt$Points de risque identifiés lors de la visite préparatoire (à hiérarchiser) :
+select t.id, 1, $tt$Cas fictif 1 : Chantier de rénovation de toiture$tt$, $tt$Contexte : Vous êtes chef de chantier d'une entreprise de couverture et devez établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.$tt$, $tt$Points de risque identifiés lors de la visite préparatoire (à hiérarchiser) :
 ```
 1. Présence d'amiante suspectée dans les anciennes plaques de sous-toiture 
    (non confirmée, diagnostic à faire), immeuble construit avant 1997.
@@ -1180,11 +1180,11 @@ select t.id, 1, $tt$Cas fictif 1 : Chantier de rénovation de toiture$tt$, $tt$C
 6. Un des ouvriers de l'équipe prévue est en formation la première 
    semaine du chantier, remplacé par un intérimaire moins expérimenté 
    sur ce type de toiture.
-```$tt$, $tt$Travail à faire : Évalue chacun des 6 points sur une échelle de probabilité (1 à 5) et de gravité (1 à 5) en justifiant brièvement chaque score, calcule le niveau de risque (probabilité × gravité), classe les 6 points du plus critique au moins critique, et indique lequel doit être traité avant même le démarrage du chantier plutôt que pendant.$tt$
+```$tt$, $tt$Travail à faire : Évaluez chacun des 6 points sur une échelle de probabilité (1 à 5) et de gravité (1 à 5) en justifiant brièvement chaque score, calculez le niveau de risque (probabilité × gravité), classez les 6 points du plus critique au moins critique, et indiquez lequel doit être traité avant même le démarrage du chantier plutôt que pendant.$tt$
 from taches t where t.code = 'F33';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Chantier de terrassement pour une extension$tt$, $tt$Contexte : Tu es conducteur (conductrice) de travaux d'une entreprise de terrassement et prépares la réunion de lancement d'un chantier d'extension de maison avec sous-sol.$tt$, $tt$Éléments identifiés à partir de l'étude de sol et de la visite terrain :
+select t.id, 2, $tt$Cas fictif 2 : Chantier de terrassement pour une extension$tt$, $tt$Contexte : Vous êtes conducteur (conductrice) de travaux d'une entreprise de terrassement et préparez la réunion de lancement d'un chantier d'extension de maison avec sous-sol.$tt$, $tt$Éléments identifiés à partir de l'étude de sol et de la visite terrain :
 ```
 1. Présence d'une canalisation de gaz enterrée à proximité de la zone de 
    fouille, exacte localisation non confirmée par le plan des réseaux 
@@ -1205,22 +1205,22 @@ select t.id, 2, $tt$Cas fictif 2 : Chantier de terrassement pour une extension$t
 6. Période de nidification d'oiseaux protégés susceptible de concerner 
    un arbre proche de la zone de travaux (à vérifier avec la 
    réglementation locale).
-```$tt$, $tt$Travail à faire : Évalue chacun des 6 points sur une échelle de probabilité et de gravité, identifie lequel constitue un risque qui doit être levé avant tout démarrage des travaux (et non pendant), et rédige la liste des 3 vérifications ou démarches administratives à effectuer en priorité avant le premier coup de pelle.$tt$
+```$tt$, $tt$Travail à faire : Évaluez chacun des 6 points sur une échelle de probabilité et de gravité, identifiez lequel constitue un risque qui doit être levé avant tout démarrage des travaux (et non pendant), et rédigez la liste des 3 vérifications ou démarches administratives à effectuer en priorité avant le premier coup de pelle.$tt$
 from taches t where t.code = 'F33';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Recrutement d'un(e) assistant(e) comptable, cabinet Lefebvre & Associés$tt$, $tt$Contexte : Tu travailles au cabinet comptable (déjà rencontré en catégorie 1), qui recrute un(e) assistant(e) comptable. Tu as reçu 5 candidatures à présélectionner.$tt$, $tt$Critères du poste définis par le cabinet :
+select t.id, 1, $tt$Cas fictif 1 : Recrutement d'un(e) assistant(e) comptable, cabinet Lefebvre & Associés$tt$, $tt$Contexte : Vous travaillez au cabinet comptable (déjà rencontré en catégorie 1), qui recrute un(e) assistant(e) comptable. Vous avez reçu 5 candidatures à présélectionner.$tt$, $tt$Critères du poste définis par le cabinet :
 ```
 Obligatoires : BTS Comptabilité ou équivalent minimum, maîtrise d'un 
 logiciel de comptabilité (Sage, Cegid ou équivalent), disponibilité 
 immédiate ou sous 1 mois maximum.
 Souhaités (non éliminatoires) : expérience en cabinet comptable 
 (vs. entreprise), connaissance du secteur associatif ou artisanal.
-```$tt$, $tt$Travail à faire : Applique la grille de critères du poste à chacun des 5 candidats, élimine ceux qui ne remplissent pas les critères obligatoires en justifiant pourquoi, classe les candidats restants par ordre de pertinence, et rédige le message de refus à envoyer au candidat C (dont le profil est intéressant mais pas immédiatement disponible).$tt$
+```$tt$, $tt$Travail à faire : Appliquez la grille de critères du poste à chacun des 5 candidats, éliminez ceux qui ne remplissent pas les critères obligatoires en justifiant pourquoi, classez les candidats restants par ordre de pertinence, et rédigez le message de refus à envoyer au candidat C (dont le profil est intéressant mais pas immédiatement disponible).$tt$
 from taches t where t.code = 'F29';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Recrutement d'un livreur/chauffeur, entreprise de traiteur événementiel$tt$, $tt$Contexte : Tu travailles chez le traiteur "Saveurs & Événements" (déjà rencontré en catégorie 4), qui recrute un chauffeur-livreur en CDI. Tu as reçu 4 candidatures.$tt$, $tt$Critères du poste :
+select t.id, 2, $tt$Cas fictif 2 : Recrutement d'un livreur/chauffeur, entreprise de traiteur événementiel$tt$, $tt$Contexte : Vous travaillez chez le traiteur "Saveurs & Événements" (déjà rencontré en catégorie 4), qui recrute un chauffeur-livreur en CDI. Vous avez reçu 4 candidatures.$tt$, $tt$Critères du poste :
 ```
 Obligatoires : permis B depuis au moins 2 ans (assurance véhicule 
 professionnel l'exige), disponibilité les week-ends (activité 
@@ -1228,11 +1228,11 @@ professionnel l'exige), disponibilité les week-ends (activité
 l'annonce).
 Souhaités : expérience en livraison ou logistique, permis remorque (non 
 obligatoire mais un plus pour certains événements).
-```$tt$, $tt$Travail à faire : Élimine les candidats qui ne remplissent pas les critères obligatoires du poste (justifie chaque élimination), classe les candidats restants en tenant compte des critères souhaités, et identifie le point qui nécessiterait une clarification avant tout entretien pour le candidat 3 (disponibilité les week-ends étant un critère obligatoire du poste).$tt$
+```$tt$, $tt$Travail à faire : Éliminez les candidats qui ne remplissent pas les critères obligatoires du poste (justifiez chaque élimination), classez les candidats restants en tenant compte des critères souhaités, et identifiez le point qui nécessiterait une clarification avant tout entretien pour le candidat 3 (disponibilité les week-ends étant un critère obligatoire du poste).$tt$
 from taches t where t.code = 'F29';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Évolution interne, PME industrielle$tt$, $tt$Contexte : Tu travailles au service RH de "Mécatech Industries" (déjà rencontrée en catégorie 1) et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.$tt$, $tt$Diagnostic disponible (entretien annuel + évaluation manager) :
+select t.id, 1, $tt$Cas fictif 1 : Évolution interne, PME industrielle$tt$, $tt$Contexte : Vous travaillez au service RH de "Mécatech Industries" (déjà rencontrée en catégorie 1) et devez construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.$tt$, $tt$Diagnostic disponible (entretien annuel + évaluation manager) :
 ```
 Points forts identifiés : excellente maîtrise technique des machines de 
   production, très bonne connaissance des procédures qualité, apprécié 
@@ -1248,11 +1248,11 @@ Contraintes : le salarié ne peut pas s'absenter plus de 2 jours
   consécutifs (poste de production à couvrir), budget formation alloué 
   par les RH pour ce salarié : 1500€ pour l'année, souhait du salarié 
   de prendre le poste de chef d'équipe "d'ici 12 à 18 mois".
-```$tt$, $tt$Travail à faire : Construis un parcours de formation sur 12 mois qui répond aux axes de progression identifiés (management, prise de parole, Excel), en respectant la contrainte de disponibilité (pas plus de 2 jours consécutifs) et le budget indiqué, avec au moins un point d'évaluation intermédiaire à mi-parcours pour vérifier la progression.$tt$
+```$tt$, $tt$Travail à faire : Construisez un parcours de formation sur 12 mois qui répond aux axes de progression identifiés (management, prise de parole, Excel), en respectant la contrainte de disponibilité (pas plus de 2 jours consécutifs) et le budget indiqué, avec au moins un point d'évaluation intermédiaire à mi-parcours pour vérifier la progression.$tt$
 from taches t where t.code = 'F30';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Montée en compétence, petite agence de communication$tt$, $tt$Contexte : Tu es responsable de l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1 et 2) et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.$tt$, $tt$Ton diagnostic informel (à structurer) :
+select t.id, 2, $tt$Cas fictif 2 : Montée en compétence, petite agence de communication$tt$, $tt$Contexte : Vous êtes responsable de l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1 et 2) et voulez faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.$tt$, $tt$Votre diagnostic informel (à structurer) :
 ```
 "Karim est très bon techniquement sur les logiciels de design, il 
 produit un travail de qualité. Par contre il a du mal à cadrer un 
@@ -1265,11 +1265,11 @@ en plus de demandes de ce type. On est une petite agence donc pas de gros
 budget formation, mais je peux le libérer une demi-journée par semaine 
 pour de la montée en compétence, et j'ai moi-même de l'expérience en 
 relation client que je peux lui transmettre en interne."
-```$tt$, $tt$Travail à faire : Structure ce diagnostic informel en axes de progression clairs, propose un parcours de montée en compétence sur 6 mois combinant formation externe légère (vu le budget limité) et transmission interne assurée par toi-même, avec une demi-journée par semaine disponible, et un objectif observable à la fin des 6 mois qui permette de vérifier si l'autonomie visée est atteinte.$tt$
+```$tt$, $tt$Travail à faire : Structurez ce diagnostic informel en axes de progression clairs, proposez un parcours de montée en compétence sur 6 mois combinant formation externe légère (vu le budget limité) et transmission interne assurée par vous-même, avec une demi-journée par semaine disponible, et un objectif observable à la fin des 6 mois qui permette de vérifier si l'autonomie visée est atteinte.$tt$
 from taches t where t.code = 'F30';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Marque de thé artisanal$tt$, $tt$Contexte : Tu es le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Tu lances une nouvelle gamme "Infusions d'Automne" et as besoin de visuels pour tes réseaux sociaux, sans budget photographe.$tt$, $tt$Ton brief (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Marque de thé artisanal$tt$, $tt$Contexte : Vous êtes le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Vous lancez une nouvelle gamme "Infusions d'Automne" et avez besoin de visuels pour vos réseaux sociaux, sans budget photographe.$tt$, $tt$Votre brief (à traiter) :
 ```
 "On veut un visuel chaleureux pour Instagram qui donne envie de boire 
 notre thé cannelle-orange en automne. Ambiance cosy, plutôt le matin, 
@@ -1277,11 +1277,11 @@ avec une tasse fumante. Nos couleurs de marque sont l'orange brûlé et le
 marron terracotta. Format carré pour Instagram. On veut pas un truc trop 
 lisse et parfait genre pub, plutôt naturel, comme une photo qu'on aurait 
 prise nous-mêmes chez nous."
-```$tt$, $tt$Travail à faire : Rédige un prompt détaillé et structuré pour un générateur d'images IA à partir de ce brief (sujet précis, style, ambiance/éclairage, palette de couleurs, cadrage, format), en traduisant les éléments flous du brief ("chaleureux", "pas trop lisse") en indications visuelles concrètes et exploitables par l'IA.$tt$
+```$tt$, $tt$Travail à faire : Rédigez un prompt détaillé et structuré pour un générateur d'images IA à partir de ce brief (sujet précis, style, ambiance/éclairage, palette de couleurs, cadrage, format), en traduisant les éléments flous du brief ("chaleureux", "pas trop lisse") en indications visuelles concrètes et exploitables par l'IA.$tt$
 from taches t where t.code = 'F09';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Application mobile de méditation$tt$, $tt$Contexte : Tu es responsable marketing de la jeune pousse "Calmly" et as besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.$tt$, $tt$Ton brief :
+select t.id, 2, $tt$Cas fictif 2 : Application mobile de méditation$tt$, $tt$Contexte : Vous êtes responsable marketing de la jeune pousse "Calmly" et avez besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.$tt$, $tt$Votre brief :
 ```
 "L'illustration doit parler à des cadres stressés en open space, on veut 
 pas d'image cliché de personne assise en tailleur sur un rocher au bord 
@@ -1291,11 +1291,11 @@ qu'on peut méditer même dans un contexte professionnel. Palette de
 couleurs de la marque : bleu profond et vert sauge. Style plutôt 
 illustration/flat design, pas de photo réaliste. Format paysage pour le 
 header du blog."
-```$tt$, $tt$Travail à faire : Rédige le prompt détaillé pour l'IA en traduisant le contre-exemple donné ("pas de personne en tailleur sur un rocher") en direction positive précise, en intégrant la palette de couleurs, le style graphique demandé et le format, et propose une variante de prompt alternative si le premier résultat ne correspondait pas.$tt$
+```$tt$, $tt$Travail à faire : Rédigez le prompt détaillé pour l'IA en traduisant le contre-exemple donné ("pas de personne en tailleur sur un rocher") en direction positive précise, en intégrant la palette de couleurs, le style graphique demandé et le format, et proposez une variante de prompt alternative si le premier résultat ne correspondait pas.$tt$
 from taches t where t.code = 'F09';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Boutique de vêtements en ligne$tt$, $tt$Contexte : Tu gères "Alto Mode" (déjà rencontrée en catégorie 1) et as pris des photos de ta nouvelle collection avec ton téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.$tt$, $tt$Description des défauts constatés sur les photos (à traiter, pas d'image réelle disponible, description textuelle des retouches nécessaires) :
+select t.id, 1, $tt$Cas fictif 1 : Boutique de vêtements en ligne$tt$, $tt$Contexte : Vous gérez "Alto Mode" (déjà rencontrée en catégorie 1) et avez pris des photos de votre nouvelle collection avec votre téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.$tt$, $tt$Description des défauts constatés sur les photos (à traiter, pas d'image réelle disponible, description textuelle des retouches nécessaires) :
 ```
 Photo 1 (robe bleue) : fond de la boutique visible en arrière-plan 
   (étagères, autres vêtements), éclairage jaunâtre dû à la lumière 
@@ -1310,11 +1310,11 @@ Photo 2 (pull en laine) : léger pli visible sur le devant du pull qui
 Photo 3 (pantalon) : photo légèrement floue en bas de l'image (mise au 
   point sur le haut du pantalon uniquement), bonne luminosité et 
   couleurs fidèles.
-```$tt$, $tt$Travail à faire : Pour chacune des 3 photos, liste précisément les retouches nécessaires et leur ordre de priorité, en distinguant les retouches "obligatoires avant mise en ligne" (comme une couleur non fidèle qui induirait le client en erreur) des retouches "souhaitables mais non bloquantes", et indique laquelle des 3 photos ne devrait pas être mise en ligne sans retouche.$tt$
+```$tt$, $tt$Travail à faire : Pour chacune des 3 photos, listez précisément les retouches nécessaires et leur ordre de priorité, en distinguant les retouches "obligatoires avant mise en ligne" (comme une couleur non fidèle qui induirait le client en erreur) des retouches "souhaitables mais non bloquantes", et indiquez laquelle des 3 photos ne devrait pas être mise en ligne sans retouche.$tt$
 from taches t where t.code = 'F34';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Agence immobilière$tt$, $tt$Contexte : Tu travailles à l'agence "Clé en Main Immobilier" (déjà rencontrée en catégorie 2) et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.$tt$, $tt$Description des photos prises lors de la visite (à traiter) :
+select t.id, 2, $tt$Cas fictif 2 : Agence immobilière$tt$, $tt$Contexte : Vous travaillez à l'agence "Clé en Main Immobilier" (déjà rencontrée en catégorie 2) et devez préparer les photos d'un appartement à louer pour l'annonce en ligne.$tt$, $tt$Description des photos prises lors de la visite (à traiter) :
 ```
 Photo 1 (salon) : bonne luminosité générale, mais un carton de 
   déménagement du précédent locataire est resté visible dans un coin de 
@@ -1326,11 +1326,11 @@ Photo 2 (cuisine) : photo prise avec le ciel très surexposé (blanc)
 
 Photo 3 (chambre) : photo légèrement penchée (l'appareil n'était pas 
   droit), les murs ne sont pas verticaux sur l'image.
-```$tt$, $tt$Travail à faire : Pour chacune des 3 photos, identifie la retouche nécessaire et précise dans quelle mesure elle relève d'une simple correction technique légitime (comme redresser une photo penchée) ou d'une modification qui devrait rester dans les limites d'une représentation honnête du bien pour ne pas induire en erreur un futur locataire, sujet sensible dans l'immobilier.$tt$
+```$tt$, $tt$Travail à faire : Pour chacune des 3 photos, identifiez la retouche nécessaire et précisez dans quelle mesure elle relève d'une simple correction technique légitime (comme redresser une photo penchée) ou d'une modification qui devrait rester dans les limites d'une représentation honnête du bien pour ne pas induire en erreur un futur locataire, sujet sensible dans l'immobilier.$tt$
 from taches t where t.code = 'F34';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Marque de cosmétique bio$tt$, $tt$Contexte : Tu travailles chez "Botanika" (déjà rencontrée en catégorie 1). Tu as validé un visuel produit pour la crème visage et souhaites le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.$tt$, $tt$Charte couleur de la marque (à respecter strictement) :
+select t.id, 1, $tt$Cas fictif 1 : Marque de cosmétique bio$tt$, $tt$Contexte : Vous travaillez chez "Botanika" (déjà rencontrée en catégorie 1). Vous avez validé un visuel produit pour la crème visage et souhaitez le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.$tt$, $tt$Charte couleur de la marque (à respecter strictement) :
 ```
 Crème visage "Éclat" : vert sauge (code #87A96B)
 Huile corps "Douceur" : terracotta (code #C97B4A)
@@ -1340,11 +1340,11 @@ Sérum "Intense" : bleu nuit (code #2C3E50)
 Le visuel original (crème visage) utilise le vert sauge en couleur 
 dominante du packaging illustré et en fond de l'image, avec un texte en 
 blanc et un léger dégradé du vert sauge vers un ton plus clair.
-```$tt$, $tt$Travail à faire : Décris précisément, pour chacun des 3 autres produits, comment adapter le visuel original (quelle couleur remplace quelle couleur, en respectant les codes exacts fournis), en signalant si le texte blanc reste suffisamment lisible sur chacune des nouvelles couleurs de fond ou s'il faut l'ajuster pour rester lisible (contraste).$tt$
+```$tt$, $tt$Travail à faire : Décrivez précisément, pour chacun des 3 autres produits, comment adapter le visuel original (quelle couleur remplace quelle couleur, en respectant les codes exacts fournis), en signalant si le texte blanc reste suffisamment lisible sur chacune des nouvelles couleurs de fond ou s'il faut l'ajuster pour rester lisible (contraste).$tt$
 from taches t where t.code = 'F35';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Restaurant proposant plusieurs formules de menu$tt$, $tt$Contexte : Tu gères "Le Comptoir Basque" (déjà rencontré en catégorie 1) et veux décliner ton visuel de menu du jour en 3 versions correspondant à tes 3 formules, pour un affichage différencié en vitrine.$tt$, $tt$Contexte fourni :
+select t.id, 2, $tt$Cas fictif 2 : Restaurant proposant plusieurs formules de menu$tt$, $tt$Contexte : Vous gérez "Le Comptoir Basque" (déjà rencontré en catégorie 1) et voulez décliner votre visuel de menu du jour en 3 versions correspondant à vos 3 formules, pour un affichage différencié en vitrine.$tt$, $tt$Contexte fourni :
 ```
 Le visuel de base pour la formule "Entrée + Plat" utilise la couleur 
 rouge basque (code #C41E3A) en bandeau de titre.
@@ -1355,11 +1355,11 @@ visuelle basque du restaurant (rouge, blanc, vert basque sont les 3
 couleurs de la charte), et "Formule complète" (entrée + plat + dessert), 
 la formule la plus chère, doit se distinguer visuellement comme "premium" 
 par rapport aux deux autres.
-```$tt$, $tt$Travail à faire : Propose les couleurs à utiliser pour les 2 formules manquantes en justifiant le choix par rapport à la charte des 3 couleurs basques disponibles et à la hiérarchie voulue (la formule complète doit visuellement se distinguer comme "supérieure"), et explique comment garder une cohérence graphique entre les 3 visuels malgré leurs couleurs différentes.$tt$
+```$tt$, $tt$Travail à faire : Proposez les couleurs à utiliser pour les 2 formules manquantes en justifiant le choix par rapport à la charte des 3 couleurs basques disponibles et à la hiérarchie voulue (la formule complète doit visuellement se distinguer comme "supérieure"), et expliquez comment garder une cohérence graphique entre les 3 visuels malgré leurs couleurs différentes.$tt$
 from taches t where t.code = 'F35';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Vidéo témoignage client pour une entreprise de coaching$tt$, $tt$Contexte : Tu es monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.$tt$, $tt$Notes de dérushage prises pendant le visionnage (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Vidéo témoignage client pour une entreprise de coaching$tt$, $tt$Contexte : Vous êtes monteur (monteuse) dans une agence vidéo et devez retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.$tt$, $tt$Notes de dérushage prises pendant le visionnage (à traiter) :
 ```
 00:00-02:30 : présentation générale, la cliente est hésitante, plusieurs 
   hésitations et "euh", pas exploitable tel quel.
@@ -1376,11 +1376,11 @@ select t.id, 1, $tt$Cas fictif 1 : Vidéo témoignage client pour une entreprise
   précis mentionnés vers 17:40 ("j'ai été augmentée 6 mois après").
 19:31-25:00 : conclusion et recommandation, phrase de clôture forte 
   vers 24:10 : "si j'avais su, j'aurais commencé bien plus tôt."
-```$tt$, $tt$Travail à faire : Sélectionne les 4 extraits les plus forts pour construire une vidéo de 90 secondes maximum (indique les timecodes précis retenus), justifie chaque choix, et propose l'ordre de montage le plus cohérent narrativement (pas nécessairement l'ordre chronologique de l'interview).$tt$
+```$tt$, $tt$Travail à faire : Sélectionnez les 4 extraits les plus forts pour construire une vidéo de 90 secondes maximum (indiquez les timecodes précis retenus), justifiez chaque choix, et proposez l'ordre de montage le plus cohérent narrativement (pas nécessairement l'ordre chronologique de l'interview).$tt$
 from taches t where t.code = 'F36';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Vidéo promotionnelle pour un festival local$tt$, $tt$Contexte : Tu es vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.$tt$, $tt$Journal de dérushage simplifié (à traiter) :
+select t.id, 2, $tt$Cas fictif 2 : Vidéo promotionnelle pour un festival local$tt$, $tt$Contexte : Vous êtes vidéaste et devez sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.$tt$, $tt$Journal de dérushage simplifié (à traiter) :
 ```
 Jour 1, matin : plans d'installation du site, peu dynamiques, à écarter.
 Jour 1, après-midi : plan large de la foule au premier concert, bonne 
@@ -1396,11 +1396,11 @@ Jour 2, après-midi : plan aérien (drone) de l'ensemble du site, très
   large, 15 secondes, léger tremblement sur les 2 dernières secondes.
 Jour 2, soir : plan de la foule qui danse au concert de clôture, très 
   bonne énergie, 10 secondes exploitables.
-```$tt$, $tt$Travail à faire : Sélectionne les plans à retenir pour un teaser de 45 secondes maximum en indiquant la durée exacte de chaque plan retenu (le total ne doit pas dépasser 45 secondes), propose un ordre de montage qui alterne les ambiances (large/serré, jour/soir) pour un rythme dynamique, et signale les plans à éviter ou à couper malgré leur intérêt à cause d'un défaut technique (flou, tremblement).$tt$
+```$tt$, $tt$Travail à faire : Sélectionnez les plans à retenir pour un teaser de 45 secondes maximum en indiquant la durée exacte de chaque plan retenu (le total ne doit pas dépasser 45 secondes), proposez un ordre de montage qui alterne les ambiances (large/serré, jour/soir) pour un rythme dynamique, et signalez les plans à éviter ou à couper malgré leur intérêt à cause d'un défaut technique (flou, tremblement).$tt$
 from taches t where t.code = 'F36';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Podcast vidéo d'entreprise$tt$, $tt$Contexte : Une entreprise de conseil enregistre un podcast vidéo mensuel. Tu es le monteur (la monteuse) : tu reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.$tt$, $tt$Extrait de la transcription brute (segment à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Podcast vidéo d'entreprise$tt$, $tt$Contexte : Une entreprise de conseil enregistre un podcast vidéo mensuel. Vous êtes le monteur (la monteuse) : vous recevez la transcription brute d'un épisode de 40 minutes et devez produire un premier montage de 15 minutes maximum.$tt$, $tt$Extrait de la transcription brute (segment à traiter) :
 ```
 [12:30] Animateur : Alors, du coup, aujourd'hui on va parler de, enfin, 
 je voudrais qu'on parle de la question de l'IA dans les cabinets de 
@@ -1425,11 +1425,11 @@ différence, plus que l'outil lui-même
 [14:35] Animateur : et euh, du coup, pardon je vous coupe, mais est-ce 
 que vous pensez que, enfin, est-ce que ça marche pour tous les métiers 
 ou il y a des limites
-```$tt$, $tt$Travail à faire : Édite ce passage de la transcription en supprimant les hésitations, répétitions et éléments non pertinents (comme le fait d'annoncer le sujet), pour ne garder que le contenu à forte valeur qui serait conservé dans le montage vidéo final, en indiquant les timecodes de début et fin de chaque portion conservée.$tt$
+```$tt$, $tt$Travail à faire : Éditez ce passage de la transcription en supprimant les hésitations, répétitions et éléments non pertinents (comme le fait d'annoncer le sujet), pour ne garder que le contenu à forte valeur qui serait conservé dans le montage vidéo final, en indiquant les timecodes de début et fin de chaque portion conservée.$tt$
 from taches t where t.code = 'F37';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Vidéo de formation interne$tt$, $tt$Contexte : Tu travailles au service formation de "Mécatech Industries" (déjà rencontrée plusieurs fois). Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et tu dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.$tt$, $tt$Extrait de transcription à traiter :
+select t.id, 2, $tt$Cas fictif 2 : Vidéo de formation interne$tt$, $tt$Contexte : Vous travaillez au service formation de "Mécatech Industries" (déjà rencontrée plusieurs fois). Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et vous devez en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.$tt$, $tt$Extrait de transcription à traiter :
 ```
 [03:10] Expert : Alors la nouvelle procédure, enfin ce qui change 
 vraiment par rapport à avant, c'est qu'on ne valide plus le contrôle 
@@ -1449,22 +1449,22 @@ pièce, et pas seulement un échantillon comme avant
 [05:15] Expert : et en cas de défaut détecté, l'alerte doit remonter 
 immédiatement au chef d'équipe, on n'attend plus la fin de journée pour 
 regrouper les remontées
-```$tt$, $tt$Travail à faire : Édite cette transcription pour ne garder que l'essentiel exploitable dans une vidéo de formation courte (le changement, sa justification chiffrée, les 2 actions concrètes attendues des opérateurs), en éliminant les hésitations orales et en indiquant les timecodes conservés.$tt$
+```$tt$, $tt$Travail à faire : Éditez cette transcription pour ne garder que l'essentiel exploitable dans une vidéo de formation courte (le changement, sa justification chiffrée, les 2 actions concrètes attendues des opérateurs), en éliminant les hésitations orales et en indiquant les timecodes conservés.$tt$
 from taches t where t.code = 'F37';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Vidéo tutoriel pour une marque de bricolage$tt$, $tt$Contexte : Tu travailles chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Tu dois créer les sous-titres en français à partir de la transcription de la voix off.$tt$, $tt$Extrait de transcription brute (à sous-titrer) :
+select t.id, 1, $tt$Cas fictif 1 : Vidéo tutoriel pour une marque de bricolage$tt$, $tt$Contexte : Vous travaillez chez "OutilPro" et produisez une vidéo tutoriel "comment poser une étagère murale". Vous devez créer les sous-titres en français à partir de la transcription de la voix off.$tt$, $tt$Extrait de transcription brute (à sous-titrer) :
 ```
 "Alors avant de commencer, il est très important de repérer où se 
 trouvent les montants de votre cloison, parce que si vous fixez 
 directement dans le placo sans tomber sur un montant, votre étagère 
 risque de ne pas tenir le poids une fois chargée avec vos objets, 
 surtout si vous comptez y poser des livres ou des objets lourds."
-```$tt$, $tt$Travail à faire : Découpe cette phrase en sous-titres respectant la limite de 42 caractères par ligne et maximum 2 lignes par sous-titre, en veillant à ce que chaque sous-titre se termine sur une coupure logique du sens (pas au milieu d'un groupe de mots qui doit rester ensemble), et indique le nombre total de sous-titres nécessaires pour cette phrase.$tt$
+```$tt$, $tt$Travail à faire : Découpez cette phrase en sous-titres respectant la limite de 42 caractères par ligne et maximum 2 lignes par sous-titre, en veillant à ce que chaque sous-titre se termine sur une coupure logique du sens (pas au milieu d'un groupe de mots qui doit rester ensemble), et indiquez le nombre total de sous-titres nécessaires pour cette phrase.$tt$
 from taches t where t.code = 'F38';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Traduction de sous-titres pour une vidéo d'entreprise internationale$tt$, $tt$Contexte : Tu travailles chez "Fromagerie des Alpages" (déjà rencontrée en catégorie 1). Vous avez réalisé une vidéo de présentation de votre savoir-faire à destination de votre distributeur britannique, à sous-titrer en anglais.$tt$, $tt$Sous-titres originaux en français (à traduire, en respectant les mêmes contraintes de longueur) :
+select t.id, 2, $tt$Cas fictif 2 : Traduction de sous-titres pour une vidéo d'entreprise internationale$tt$, $tt$Contexte : Vous travaillez chez "Fromagerie des Alpages" (déjà rencontrée en catégorie 1). Vous avez réalisé une vidéo de présentation de votre savoir-faire à destination de votre distributeur britannique, à sous-titrer en anglais.$tt$, $tt$Sous-titres originaux en français (à traduire, en respectant les mêmes contraintes de longueur) :
 ```
 Sous-titre 1 (durée 3 secondes) : "Depuis trois générations, notre 
 famille affine ce fromage dans les mêmes caves naturelles."
@@ -1472,11 +1472,11 @@ Sous-titre 2 (durée 2,5 secondes) : "La température et l'humidité y
 sont parfaitement stables toute l'année."
 Sous-titre 3 (durée 2 secondes) : "C'est ce secret qui donne à notre 
 tomme son goût si particulier."
-```$tt$, $tt$Travail à faire : Traduis ces 3 sous-titres en anglais en respectant la limite de 42 caractères par ligne (en adaptant la formulation si la traduction littérale dépasse la limite, ce qui est fréquent de français vers anglais), et vérifie que le temps d'affichage indiqué (en secondes) reste suffisant pour une lecture confortable du texte traduit.$tt$
+```$tt$, $tt$Travail à faire : Traduisez ces 3 sous-titres en anglais en respectant la limite de 42 caractères par ligne (en adaptant la formulation si la traduction littérale dépasse la limite, ce qui est fréquent de français vers anglais), et vérifiez que le temps d'affichage indiqué (en secondes) reste suffisant pour une lecture confortable du texte traduit.$tt$
 from taches t where t.code = 'F38';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Podcast enregistré dans des conditions imparfaites$tt$, $tt$Contexte : Tu es podcasteur indépendant et as enregistré un épisode dans ton salon, sans studio. Tu dois préparer le fichier avant publication.$tt$, $tt$Diagnostic des défauts constatés sur l'enregistrement (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Podcast enregistré dans des conditions imparfaites$tt$, $tt$Contexte : Vous êtes podcasteur indépendant et avez enregistré un épisode dans votre salon, sans studio. Vous devez préparer le fichier avant publication.$tt$, $tt$Diagnostic des défauts constatés sur l'enregistrement (à traiter) :
 ```
 1. Bruit de fond constant et régulier tout au long de l'enregistrement, 
    identifié comme provenant du réfrigérateur de la cuisine adjacente.
@@ -1492,11 +1492,11 @@ select t.id, 1, $tt$Cas fictif 1 : Podcast enregistré dans des conditions impar
 
 4. La voix manque légèrement de présence/clarté par rapport à un 
    enregistrement professionnel, un peu "sourde".
-```$tt$, $tt$Travail à faire : Établis l'ordre des étapes de traitement à appliquer à cet enregistrement pour corriger ces 4 défauts, en justifiant pourquoi cet ordre est important (par exemple pourquoi il ne faut pas égaliser avant d'avoir retiré le bruit de fond constant), et précise laquelle des 4 opérations ne peut pas être totalement automatisée sans un minimum de vérification humaine (le bruit ponctuel de clic, qui nécessite d'être localisé précisément pour ne pas couper un morceau de parole).$tt$
+```$tt$, $tt$Travail à faire : Établissez l'ordre des étapes de traitement à appliquer à cet enregistrement pour corriger ces 4 défauts, en justifiant pourquoi cet ordre est important (par exemple pourquoi il ne faut pas égaliser avant d'avoir retiré le bruit de fond constant), et précisez laquelle des 4 opérations ne peut pas être totalement automatisée sans un minimum de vérification humaine (le bruit ponctuel de clic, qui nécessite d'être localisé précisément pour ne pas couper un morceau de parole).$tt$
 from taches t where t.code = 'F39';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Message vocal client à intégrer dans une vidéo témoignage$tt$, $tt$Contexte : Tu travailles dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Tu souhaites l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.$tt$, $tt$Diagnostic du message vocal (à traiter) :
+select t.id, 2, $tt$Cas fictif 2 : Message vocal client à intégrer dans une vidéo témoignage$tt$, $tt$Contexte : Vous travaillez dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Vous souhaitez l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.$tt$, $tt$Diagnostic du message vocal (à traiter) :
 ```
 1. Message enregistré dans une voiture, bruit de fond de moteur/route 
    constant en arrière-plan.
@@ -1510,11 +1510,11 @@ select t.id, 2, $tt$Cas fictif 2 : Message vocal client à intégrer dans une vi
 4. Le message contient une hésitation ("euh... comment dire") suivie 
    d'un silence de 2 secondes avant que le client reprenne son 
    témoignage, qui pourrait être raccourci pour la vidéo finale.
-```$tt$, $tt$Travail à faire : Détermine si les défauts listés sont tous corrigibles par un nettoyage audio classique ou si l'un d'entre eux nécessite une solution différente (par exemple, la portion déformée par la mauvaise réception ne peut pas être "réparée" par un simple nettoyage, contrairement au bruit de fond constant), et propose le traitement approprié pour chacun des 4 points.$tt$
+```$tt$, $tt$Travail à faire : Déterminez si les défauts listés sont tous corrigibles par un nettoyage audio classique ou si l'un d'entre eux nécessite une solution différente (par exemple, la portion déformée par la mauvaise réception ne peut pas être "réparée" par un simple nettoyage, contrairement au bruit de fond constant), et proposez le traitement approprié pour chacun des 4 points.$tt$
 from taches t where t.code = 'F39';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Interview filmée en format horizontal à décliner en vertical$tt$, $tt$Contexte : Tu dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.$tt$, $tt$Description du plan original (à traiter, pas d'image réelle disponible) :
+select t.id, 1, $tt$Cas fictif 1 : Interview filmée en format horizontal à décliner en vertical$tt$, $tt$Contexte : Vous devez décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.$tt$, $tt$Description du plan original (à traiter, pas d'image réelle disponible) :
 ```
 Plan large 16:9 : l'interviewé (sujet principal parlant à la caméra) 
 occupe environ le tiers gauche du cadre, l'intervieweur (de dos, hors 
@@ -1524,11 +1524,11 @@ tiers droit, un tiers central vide avec une bibliothèque en arrière-plan.
 Le format vertical 9:16 ne peut conserver qu'une portion étroite du 
 cadre horizontal original (le recadrage vertical "mange" une grande 
 partie de la largeur de l'image).
-```$tt$, $tt$Travail à faire : Détermine quelle portion du cadre horizontal doit être conservée dans le recadrage vertical pour ne pas perdre l'élément essentiel (le visage de l'interviewé qui parle), explique pourquoi un recadrage centré automatique (qui garderait le tiers central de l'image) serait ici une erreur, et propose une solution si un moment du plan montre les deux personnes interagissant (ce qui ne rentrerait dans aucun recadrage fixe en vertical).$tt$
+```$tt$, $tt$Travail à faire : Déterminez quelle portion du cadre horizontal doit être conservée dans le recadrage vertical pour ne pas perdre l'élément essentiel (le visage de l'interviewé qui parle), expliquez pourquoi un recadrage centré automatique (qui garderait le tiers central de l'image) serait ici une erreur, et proposez une solution si un moment du plan montre les deux personnes interagissant (ce qui ne rentrerait dans aucun recadrage fixe en vertical).$tt$
 from taches t where t.code = 'F40';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Vidéo de démonstration produit avec texte à l'écran$tt$, $tt$Contexte : Tu dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.$tt$, $tt$Description du plan original :
+select t.id, 2, $tt$Cas fictif 2 : Vidéo de démonstration produit avec texte à l'écran$tt$, $tt$Contexte : Vous devez décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.$tt$, $tt$Description du plan original :
 ```
 Plan 16:9 : le mixeur et les mains de la démonstratrice occupent le 
 centre et le bas du cadre, du texte explicatif ("Étape 1 : ajoutez les 
@@ -1538,11 +1538,11 @@ cadre horizontal, dans les derniers 15% de hauteur de l'image.
 Le recadrage carré 1:1 réduira la largeur totale visible tout en gardant 
 la même hauteur proportionnellement plus importante que le recadrage 
 vertical.
-```$tt$, $tt$Travail à faire : Identifie le risque principal que pose ce recadrage pour le texte incrusté en bas de l'image (largeur du texte par rapport à la nouvelle largeur du cadre carré), et propose 2 solutions possibles pour ce problème (l'une technique sur le recadrage lui-même, l'une alternative qui consisterait à refaire l'incrustation du texte spécifiquement pour le format carré plutôt que de recadrer l'incrustation existante).$tt$
+```$tt$, $tt$Travail à faire : Identifiez le risque principal que pose ce recadrage pour le texte incrusté en bas de l'image (largeur du texte par rapport à la nouvelle largeur du cadre carré), et proposez 2 solutions possibles pour ce problème (l'une technique sur le recadrage lui-même, l'une alternative qui consisterait à refaire l'incrustation du texte spécifiquement pour le format carré plutôt que de recadrer l'incrustation existante).$tt$
 from taches t where t.code = 'F40';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Vidéo de présentation d'entreprise à doubler en anglais$tt$, $tt$Contexte : Tu travailles chez "Structa Bois" (déjà rencontrée en catégorie 2) et as fait doubler votre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.$tt$, $tt$Texte original en français avec son timing (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Vidéo de présentation d'entreprise à doubler en anglais$tt$, $tt$Contexte : Vous travaillez chez "Structa Bois" (déjà rencontrée en catégorie 2) et avez fait doubler votre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.$tt$, $tt$Texte original en français avec son timing (à traiter) :
 ```
 Segment vidéo de 4 secondes exactement (plan fixe sur le bâtiment de 
 l'entreprise) :
@@ -1555,21 +1555,21 @@ Première traduction anglaise proposée (trop longue pour le même segment) :
 industrial timber frame structures for construction projects throughout 
 France." (durée de lecture estimée : environ 6 secondes, ne rentre pas 
 dans le segment de 4 secondes)
-```$tt$, $tt$Travail à faire : Reformule la traduction anglaise pour qu'elle tienne dans une durée de lecture d'environ 4 secondes (le même timing que l'original), en conservant les informations essentielles (date de création, activité, zone géographique) mais en acceptant de sacrifier des détails secondaires si nécessaire, et explique quel(s) élément(s) tu as choisi de raccourcir ou supprimer et pourquoi.$tt$
+```$tt$, $tt$Travail à faire : Reformulez la traduction anglaise pour qu'elle tienne dans une durée de lecture d'environ 4 secondes (le même timing que l'original), en conservant les informations essentielles (date de création, activité, zone géographique) mais en acceptant de sacrifier des détails secondaires si nécessaire, et expliquez quel(s) élément(s) vous avez choisi de raccourcir ou supprimer et pourquoi.$tt$
 from taches t where t.code = 'F41';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Voix off d'un tutoriel à adapter en espagnol$tt$, $tt$Contexte : Tu travailles chez "OutilPro" (déjà rencontrée en tâche F38) et veux adapter en espagnol la voix off de votre tutoriel "comment poser une étagère murale" pour le marché espagnol.$tt$, $tt$Texte original avec contrainte de timing :
+select t.id, 2, $tt$Cas fictif 2 : Voix off d'un tutoriel à adapter en espagnol$tt$, $tt$Contexte : Vous travaillez chez "OutilPro" (déjà rencontrée en tâche F38) et voulez adapter en espagnol la voix off de votre tutoriel "comment poser une étagère murale" pour le marché espagnol.$tt$, $tt$Texte original avec contrainte de timing :
 ```
 Segment de 5 secondes (plan montrant l'action de percer le mur) :
 Texte français original : "Percez à l'endroit exact que vous avez repéré, 
 en tenant la perceuse bien perpendiculaire au mur." (débit de lecture 
 naturel : environ 5 secondes)
-```$tt$, $tt$Travail à faire : Propose une traduction en espagnol qui tienne dans un timing équivalent (environ 5 secondes de lecture), en gardant à l'esprit que l'espagnol est généralement 15 à 20% plus long que le français à contenu équivalent, ce qui nécessite d'être particulièrement concis dans le choix des mots, et indique si tu maîtrises suffisamment l'espagnol pour garantir la fluidité naturelle du résultat ou si une vérification par un locuteur natif serait recommandée.$tt$
+```$tt$, $tt$Travail à faire : Proposez une traduction en espagnol qui tienne dans un timing équivalent (environ 5 secondes de lecture), en gardant à l'esprit que l'espagnol est généralement 15 à 20% plus long que le français à contenu équivalent, ce qui nécessite d'être particulièrement concis dans le choix des mots, et indiquez si vous maîtrisez suffisamment l'espagnol pour garantir la fluidité naturelle du résultat ou si une vérification par un locuteur natif serait recommandée.$tt$
 from taches t where t.code = 'F41';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 1, $tt$Cas fictif 1 : Vidéo explicative sur la gestion du stress au travail$tt$, $tt$Contexte : Tu travailles chez "Calmly" (déjà rencontrée en tâche F09) et prépares une vidéo explicative. Tu as besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.$tt$, $tt$Passages de la voix off à illustrer (à traiter) :
+select t.id, 1, $tt$Cas fictif 1 : Vidéo explicative sur la gestion du stress au travail$tt$, $tt$Contexte : Vous travaillez chez "Calmly" (déjà rencontrée en tâche F09) et préparez une vidéo explicative. Vous avez besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.$tt$, $tt$Passages de la voix off à illustrer (à traiter) :
 ```
 Passage 1 : "Le matin, avant même d'arriver au bureau, notre esprit est 
 déjà submergé de notifications." (durée du passage : 4 secondes)
@@ -1579,11 +1579,11 @@ retrouver son calme." (durée du passage : 5 secondes)
 
 Passage 3 : "Une équipe apaisée communique mieux et prend de meilleures 
 décisions ensemble." (durée du passage : 4 secondes)
-```$tt$, $tt$Travail à faire : Rédige un prompt de génération vidéo pour chacun des 3 passages, en respectant la bonne pratique d'une action simple et brève par séquence (par exemple pour le passage 1, éviter de vouloir montrer "une personne qui se réveille, prend son téléphone, voit plein de notifications, panique, part au travail" en une seule séquence de 4 secondes : trop d'éléments pour un plan aussi court), et identifie lequel des 3 passages sera probablement le plus difficile à illustrer fidèlement avec les outils actuels de génération vidéo par IA.$tt$
+```$tt$, $tt$Travail à faire : Rédigez un prompt de génération vidéo pour chacun des 3 passages, en respectant la bonne pratique d'une action simple et brève par séquence (par exemple pour le passage 1, éviter de vouloir montrer "une personne qui se réveille, prend son téléphone, voit plein de notifications, panique, part au travail" en une seule séquence de 4 secondes : trop d'éléments pour un plan aussi court), et identifiez lequel des 3 passages sera probablement le plus difficile à illustrer fidèlement avec les outils actuels de génération vidéo par IA.$tt$
 from taches t where t.code = 'F42';
 
 insert into exercices (tache_id, numero, titre, contexte, donnees, travail_a_faire)
-select t.id, 2, $tt$Cas fictif 2 : Publicité pour une application de recettes de cuisine$tt$, $tt$Contexte : Tu travailles pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.$tt$, $tt$Script de la publicité (à traiter) :
+select t.id, 2, $tt$Cas fictif 2 : Publicité pour une application de recettes de cuisine$tt$, $tt$Contexte : Vous travaillez pour l'application "CuisineFacile" et voulez une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.$tt$, $tt$Script de la publicité (à traiter) :
 ```
 Séquence 1 (3 secondes) : ingrédients bruts posés sur un plan de travail 
   (légumes colorés, épices).
@@ -1595,5 +1595,5 @@ Séquence 4 (3 secondes) : une personne souriante qui goûte le plat avec
   plaisir visible sur son visage.
 Séquence 5 (3 secondes) : le logo de l'application qui apparaît sur fond 
   neutre.
-```$tt$, $tt$Travail à faire : Rédige les prompts de génération vidéo pour chacune des 5 séquences, en étant particulièrement précis sur la séquence 4 (expression faciale et émotion), qui est généralement la plus difficile à obtenir de façon convaincante avec les outils de génération vidéo par IA actuels, et propose une solution de repli si la séquence 4 générée par IA ne semblait pas assez naturelle après plusieurs tentatives (par exemple recourir à un vrai tournage uniquement pour ce plan).$tt$
+```$tt$, $tt$Travail à faire : Rédigez les prompts de génération vidéo pour chacune des 5 séquences, en étant particulièrement précis sur la séquence 4 (expression faciale et émotion), qui est généralement la plus difficile à obtenir de façon convaincante avec les outils de génération vidéo par IA actuels, et proposez une solution de repli si la séquence 4 générée par IA ne semblait pas assez naturelle après plusieurs tentatives (par exemple recourir à un vrai tournage uniquement pour ce plan).$tt$
 from taches t where t.code = 'F42';

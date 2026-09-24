@@ -21,7 +21,7 @@ La plupart des créateurs cherchent « ce qui marche » dans leur niche, s'en in
 >
 > Tu es analyste contenu senior.
 >
-> Ma niche : [décris en 2 lignes]
+> Ma niche : [décrivez en 2 lignes]
 > Mon angle : [ce qui me différencie]
 > Mes concurrents principaux : [3-5 noms ou comptes]
 >

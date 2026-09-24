@@ -34,8 +34,8 @@ Un connecteur MCP permet désormais à Claude de gérer des campagnes publicitai
 >
 > Je veux lancer une campagne [conversion / trafic / notoriété] pour [produit] avec un budget de [montant]/jour.
 >
-> Public cible : [décris]
-> Créa principale : [décris ou colle un lien]
+> Public cible : [décrivez]
+> Créa principale : [décrivez ou collez un lien]
 > Objectif : [chiffre clé]
 >
 > Rédige le brief complet : nom de campagne, structure ad set, textes, CTA, budget alloué.

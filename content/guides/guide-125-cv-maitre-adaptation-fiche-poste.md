@@ -24,10 +24,10 @@ Un seul fichier qui rassemble tout : toutes les missions, tous les chiffres, tou
 > **Prompt : tailleur de CV**
 >
 > Voici mon CV maître :
-> [colle]
+> [collez]
 >
 > Voici la fiche de poste :
-> [colle]
+> [collez]
 >
 > Ta mission :
 > 1. Identifie les 5 mots-clés prioritaires dans la fiche de poste.

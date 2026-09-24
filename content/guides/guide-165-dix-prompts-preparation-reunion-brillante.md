@@ -41,7 +41,7 @@ Paraître brillant en réunion ne tient pas à l'intelligence, mais à la prépa
 > Réunion : [sujet]
 > Participants : [noms + rôles]
 > Mon objectif : [ce que je veux obtenir]
-> Documents liés : [colle ou résume]
+> Documents liés : [collez ou résumez]
 >
 > Sors :
 > 1. 3 angles que les autres vont défendre (devine selon leur rôle)

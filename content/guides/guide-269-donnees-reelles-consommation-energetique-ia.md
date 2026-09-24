@@ -29,10 +29,10 @@ Choisir Sonnet plutôt qu'Opus lorsque Sonnet suffit, éviter les relances rép�
 
 ## Le prompt d'audit de source
 
-> **Prompt : auditer tes sources**
+> **Prompt : auditer vos sources**
 >
 > Voici une affirmation circulant sur l'IA et l'énergie :
-> "[colle la phrase]"
+> "[collez la phrase]"
 >
 > Fais ce travail :
 > 1. Cherche la source primaire (étude, papier, rapport)

@@ -24,7 +24,7 @@ Un email rapide ou un résumé court relève de Haiku. Un vrai dossier ou une r�
 
 ## Le prompt d'audit des usages
 
-> **Prompt : audit de tes usages**
+> **Prompt : audit de vos usages**
 >
 > Je te liste mes 10 dernières utilisations de Claude :
 > [1. type de tâche + résultat attendu]

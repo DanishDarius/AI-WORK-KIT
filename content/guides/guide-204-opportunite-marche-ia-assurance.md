@@ -33,7 +33,7 @@ Quand les premiers gros contentieux tomberont, en 2026-2027 selon les projection
 
 ## Le prompt pour trouver son propre angle
 
-> **Prompt : trouver ton angle**
+> **Prompt : trouver votre angle**
 >
 > Tu es un analyste marché IA + assurance.
 >

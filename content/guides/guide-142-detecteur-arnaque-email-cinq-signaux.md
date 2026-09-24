@@ -32,7 +32,7 @@ Face à un e-mail douteux, plutôt que de stresser ou de l'ignorer, il suffit de
 > **Prompt : détecteur d'arnaque**
 >
 > Voici un e-mail que je viens de recevoir :
-> [colle l'e-mail complet, en-têtes inclus si possible]
+> [collez l'e-mail complet, en-têtes inclus si possible]
 >
 > Analyse-le comme un expert en cybersécurité s'adressant à un non-initié :
 > 1. Verdict : Légitime / Suspect / Arnaque probable

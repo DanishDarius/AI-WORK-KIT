@@ -39,7 +39,7 @@ Plutôt que de deviner ce que cherchent les recruteurs, autant lire directement 
 > 4. La section « Compétences » priorisée pour matcher l'algo
 >
 > Voici mon profil actuel :
-> [colle ton résumé, expériences, compétences]
+> [collez votre résumé, expériences, compétences]
 >
 > Format final : prêt à coller dans LinkedIn.
 

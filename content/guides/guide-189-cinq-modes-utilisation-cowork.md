@@ -30,7 +30,7 @@ La plupart des utilisateurs se servent de Cowork comme d'un chat amélioré. C'e
 > Tu es mon partenaire de réflexion, pas mon exécutant.
 >
 > Sujet : [le problème ou la décision]
-> Ce que j'ai en tête : [explique en vrac]
+> Ce que j'ai en tête : [expliquez en vrac]
 >
 > Ta seule mission : me poser les questions que je n'ai pas pensé à me poser.
 > Pas de solution, pas de « voilà ce que je ferais ».

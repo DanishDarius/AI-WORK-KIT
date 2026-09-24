@@ -35,7 +35,7 @@ Une intégration mérite d'être adoptée si elle remplace une tâche effectuée
 >
 > Sors un tableau de 3 colonnes : expéditeur, classement, action en 1 phrase.
 >
-> [Colle tes emails ici]
+> [Collez vos emails ici]
 
 ## Le garde-fou
 

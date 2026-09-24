@@ -46,7 +46,7 @@ Activer le mode lecture seule. Vérifier qu'aucune action ne peut être déclenc
 >
 > Plan de remboursement.
 >
-> Mes dettes : [colle ou laisse l'IA lire]
+> Mes dettes : [collez ou laissez l'IA lire]
 >
 > Sors un plan « avalanche » (taux décroissant) et un plan « boule de neige » (montant croissant). Indique combien je gagne en intérêts avec chaque méthode et lequel est le mieux pour MA situation.
 

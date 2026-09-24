@@ -32,7 +32,7 @@ Avant de générer quoi que ce soit : réunir cinq offres, un dossier d'inspirat
 > 4. [...]
 > 5. [...]
 >
-> Style de référence : [colle 3 URLs]
+> Style de référence : [collez 3 URLs]
 > Charte : couleur principale [#hex], secondaire [#hex], typographie des titres [X], typographie du corps [Y].
 >
 > Pour chacune, génère :

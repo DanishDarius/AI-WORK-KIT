@@ -33,7 +33,7 @@ Créer un espace dédié contenant : une présentation personnelle, un calendrie
 >
 > Bonjour. Voici ma journée :
 > - Calendar : [export]
-> - Mails non lus : [résume top 10]
+> - Mails non lus : [résumez top 10]
 >
 > Livre :
 > 1. 3 priorités du jour (les vraies, pas la to-do)

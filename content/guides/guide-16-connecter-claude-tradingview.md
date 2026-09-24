@@ -5,69 +5,69 @@ Statut : reformulé (texte). Aucun visuel/tableau HTML détecté sur cette page
 Note importante : contenu à caractère éducatif sur un outil d'analyse technique, explicitement PAS un conseil financier dans l'original. Cette précision est conservée intégralement dans la version reformulée, y compris tous les garde-fous (lecture seule, confirmation humaine, aucun ordre automatique)
 ---
 
-# Connecter Claude à TradingView : construis ton propre assistant d'analyse technique
+# Connecter Claude à TradingView : construisez votre propre assistant d'analyse technique
 
 *Claude · 9 min de lecture*
 
 ## Sommaire
 
 - Introduction
-- Ce que tu vas obtenir
-- Ce dont tu as besoin
-- 1. Prépare TradingView Desktop
-- 2. Installe le pont MCP, en sécurité
-- 3. Connecte le pont à Claude Code
-- 4. Vérifie la connexion sans toucher au graphique
-- 5. Définis ta stratégie avant de scanner
-- Fais-en ton assistant d'analyse personnalisé
-- Les 5 prompts (les outils de ton assistant)
-- Checklist avant de t'y fier
+- Ce que vous allez obtenir
+- Ce dont vous avez besoin
+- 1. Préparez TradingView Desktop
+- 2. Installez le pont MCP, en sécurité
+- 3. Connectez le pont à Claude Code
+- 4. Vérifiez la connexion sans toucher au graphique
+- 5. Définissez votre stratégie avant de scanner
+- Faites-en votre assistant d'analyse personnalisé
+- Les 5 prompts (les outils de votre assistant)
+- Checklist avant de vous y fier
 - Le fichier complet
 - Pour aller plus loin
 
 ## Introduction
 
-Le workflow complet : connecter TradingView à Claude via un pont MCP, puis encoder TA stratégie une seule fois pour en faire un véritable assistant personnalisé qui scanne, classe et prépare tes alertes. Le cœur du système, plus 5 prompts prêts à l'emploi. **Contenu éducatif, et non un conseil financier : la décision finale reste entièrement la tienne.**
+Le workflow complet : connecter TradingView à Claude via un pont MCP, puis encoder VOTRE stratégie une seule fois pour en faire un véritable assistant personnalisé qui scanne, classe et prépare vos alertes. Le cœur du système, plus 5 prompts prêts à l'emploi. **Contenu éducatif, et non un conseil financier : la décision finale reste entièrement la vôtre.**
 
 ---
 
-## 01. Comprendre : ce que tu vas obtenir
+## 01. Comprendre : ce que vous allez obtenir
 
-Tu connectes TradingView Desktop à Claude Code via un pont MCP, tu vérifies la connexion, et tu transformes Claude en assistant d'analyse personnalisé : il inspecte tes graphiques, repère les supports et résistances, scanne ta watchlist, classe tes setups potentiels et prépare tes alertes, selon TES propres règles, de façon identique à chaque fois. La connexion prend environ 15 minutes. Cet assistant, c'est ta stratégie encodée une bonne fois pour toutes.
+Vous connectez TradingView Desktop à Claude Code via un pont MCP, vous vérifiez la connexion, et vous transformez Claude en assistant d'analyse personnalisé : il inspecte vos graphiques, repère les supports et résistances, scanne votre watchlist, classe vos setups potentiels et prépare vos alertes, selon VOS propres règles, de façon identique à chaque fois. La connexion prend environ 15 minutes. Cet assistant, c'est votre stratégie encodée une bonne fois pour toutes.
 
-*Un point de cadrage essentiel : cet outil n'est pas un bouton magique qui trade seul à ta place et te rend riche. C'est ton analyste personnel, connecté à tes données en direct, qui applique ta grille d'analyse sans jamais se fatiguer. Claude analyse et prépare ; la décision, et le passage d'ordre, restent entièrement de ton ressort. Ce guide est purement éducatif, ce n'est en aucun cas un conseil financier.*
+*Un point de cadrage essentiel : cet outil n'est pas un bouton magique qui trade seul à votre place et vous rend riche. C'est votre analyste personnel, connecté à vos données en direct, qui applique votre grille d'analyse sans jamais se fatiguer. Claude analyse et prépare ; la décision, et le passage d'ordre, restent entièrement de votre ressort. Ce guide est purement éducatif, ce n'est en aucun cas un conseil financier.*
 
 *Sources techniques : le Model Context Protocol (standard ouvert d'Anthropic, novembre 2024) et une méthode de connexion inspirée d'une ressource gratuite de Miles Deutscher.*
 
 ---
 
-## 02. Ce dont tu as besoin
+## 02. Ce dont vous avez besoin
 
 - L'application TradingView Desktop.
 - Claude Code installé et fonctionnel.
 - Un pont MCP qui prend explicitement en charge TradingView.
 - Les instructions d'installation ou la configuration de ce pont.
-- Un graphique et une watchlist TradingView pour effectuer tes tests.
+- Un graphique et une watchlist TradingView pour effectuer vos tests.
 
-*Pour le pont, réunis si possible : son nom exact (package ou application), la méthode d'installation, la commande de lancement, les arguments requis, les variables d'environnement (tokens, chemins, ports), et les outils qu'il prend en charge (lecture de graphique, tracés, watchlists, alertes).*
+*Pour le pont, réunissez si possible : son nom exact (package ou application), la méthode d'installation, la commande de lancement, les arguments requis, les variables d'environnement (tokens, chemins, ports), et les outils qu'il prend en charge (lecture de graphique, tracés, watchlists, alertes).*
 
 ---
 
-## 03. Prépare TradingView Desktop
+## 03. Préparez TradingView Desktop
 
-1. Connecte-toi à ton compte TradingView.
-2. Ouvre un graphique de test.
-3. Choisis le symbole et le timeframe voulus.
-4. Charge la watchlist que Claude devra inspecter.
-5. Laisse TradingView ouvert pendant que tu configures le pont.
+1. Connectez-vous à votre compte TradingView.
+2. Ouvrez un graphique de test.
+3. Choisissez le symbole et le timeframe voulus.
+4. Chargez la watchlist que Claude devra inspecter.
+5. Laissez TradingView ouvert pendant que vous configurez le pont.
 
 *L'application desktop est indispensable : le pont MCP a besoin d'un environnement TradingView local avec lequel communiquer directement.*
 
 ---
 
-## 04. Installe le pont MCP, en toute sécurité
+## 04. Installez le pont MCP, en toute sécurité
 
-Suis scrupuleusement les instructions du pont TradingView que tu as choisi. Ne substitue jamais les commandes d'un pont par celles d'un autre : les noms de package, les commandes, les permissions et les formats de configuration varient d'un outil à l'autre. Pour te faire guider directement par Claude, colle ce prompt :
+Suivez scrupuleusement les instructions du pont TradingView que vous avez choisi. Ne substituez jamais les commandes d'un pont par celles d'un autre : les noms de package, les commandes, les permissions et les formats de configuration varient d'un outil à l'autre. Pour vous faire guider directement par Claude, collez ce prompt :
 
 **Prompt à copier (installation guidée du pont) :**
 > Je veux connecter TradingView Desktop à Claude Code via un pont MCP.
@@ -92,13 +92,13 @@ Suis scrupuleusement les instructions du pont TradingView que tu as choisi. Ne s
 >
 > N'expose ni ne répète jamais une valeur secrète. Réfère-toi à elles par le nom de variable seulement.
 
-*Pendant l'installation, vérifie que : le pont démarre sans erreur ; TradingView Desktop est ouvert ; le pont accède à l'interface locale dont il a besoin ; les identifiants/variables requis sont présents ; aucun secret n'est collé dans un prompt ni commité par mégarde.*
+*Pendant l'installation, vérifiez que : le pont démarre sans erreur ; TradingView Desktop est ouvert ; le pont accède à l'interface locale dont il a besoin ; les identifiants/variables requis sont présents ; aucun secret n'est collé dans un prompt ni commité par mégarde.*
 
 ---
 
-## 05. Connecte le pont à Claude Code
+## 05. Connectez le pont à Claude Code
 
-Ajoute le pont comme serveur MCP dans Claude Code, avec la commande, les arguments et les variables requises. Commence par remplir cette fiche neutre :
+Ajoutez le pont comme serveur MCP dans Claude Code, avec la commande, les arguments et les variables requises. Commencez par remplir cette fiche neutre :
 
 **Prompt à copier (fiche de configuration) :**
 > Nom du serveur MCP :
@@ -109,21 +109,21 @@ Ajoute le pont comme serveur MCP dans Claude Code, avec la commande, les argumen
 > Message de connexion attendu :
 > Prérequis TradingView :
 
-Fais ensuite valider cette configuration par Claude avant de l'appliquer :
+Faites ensuite valider cette configuration par Claude avant de l'appliquer :
 
 **Prompt à copier (valider la configuration) :**
 > Vérifie cette configuration de serveur MCP proposée pour mon pont TradingView.
 >
 > Contrôle que la commande, les arguments, les chemins et les noms de variables d'environnement correspondent aux instructions d'installation que je fournis. N'invente aucune valeur manquante. Signale tout ce qui est incomplet ou incohérent avant de suggérer de la sauvegarder ou de la lancer.
 >
-> Instructions du pont : [COLLE LES INSTRUCTIONS DU PONT]
-> Configuration proposée : [COLLE TA CONFIGURATION]
+> Instructions du pont : [COLLEZ LES INSTRUCTIONS DU PONT]
+> Configuration proposée : [COLLEZ VOTRE CONFIGURATION]
 
 ---
 
-## 06. Vérifie la connexion sans toucher au graphique
+## 06. Vérifiez la connexion sans toucher au graphique
 
-Commence par un contrôle de capacités en lecture seule :
+Commencez par un contrôle de capacités en lecture seule :
 
 **Prompt à copier, lister les outils (lecture seule) :**
 > Liste les outils MCP actuellement disponibles pour TradingView.
@@ -137,7 +137,7 @@ Commence par un contrôle de capacités en lecture seule :
 >
 > Ne modifie pas mon graphique, ne crée aucune alerte, n'exécute aucune action de trading.
 
-Puis teste l'accès au graphique actuellement ouvert :
+Puis testez l'accès au graphique actuellement ouvert :
 
 **Prompt à copier, inspecter le graphique (lecture seule) :**
 > À l'aide des outils TradingView connectés, inspecte le graphique actuellement ouvert.
@@ -146,11 +146,11 @@ Puis teste l'accès au graphique actuellement ouvert :
 
 ---
 
-## 07. Définis ta stratégie avant de scanner
+## 07. Définissez votre stratégie avant de scanner
 
-Un scan n'a de valeur que si tes critères sont explicitement définis. Remplis ce gabarit une seule fois : c'est le cœur de ton assistant personnalisé.
+Un scan n'a de valeur que si vos critères sont explicitement définis. Remplissez ce gabarit une seule fois : c'est le cœur de votre assistant personnalisé.
 
-**Gabarit à copier (ta stratégie) :**
+**Gabarit à copier (votre stratégie) :**
 > Nom du setup :
 > Marchés autorisés :
 > Timeframes préférés :
@@ -165,18 +165,18 @@ Un scan n'a de valeur que si tes critères sont explicitement définis. Remplis 
 
 ---
 
-## 08. Fais-en ton assistant d'analyse personnalisé
+## 08. Faites-en votre assistant d'analyse personnalisé
 
-C'est le cœur de la promesse de ce guide. L'idée n'est pas de reposer tes règles à chaque session : tu veux un assistant qui les connaît déjà par cœur. Encode ta stratégie une seule fois, et Claude devient ton analyste personnalisé connecté à TradingView, identique à chaque session.
+C'est le cœur de la promesse de ce guide. L'idée n'est pas de reposer vos règles à chaque session : vous voulez un assistant qui les connaît déjà par cœur. Encodez votre stratégie une seule fois, et Claude devient votre analyste personnalisé connecté à TradingView, identique à chaque session.
 
-1. Crée un Projet Claude dédié (ou un fichier d'instructions réutilisable) : « Mon assistant TradingView ».
-2. Colle-y les instructions ci-dessous, avec ta stratégie de l'étape 7 à l'emplacement prévu.
-3. Ensuite, à chaque session : dis simplement « lance le scan du jour ». L'assistant applique ta grille, sort ta liste classée, marque les niveaux (après ta confirmation) et prépare tes alertes.
+1. Créez un Projet Claude dédié (ou un fichier d'instructions réutilisable) : « Mon assistant TradingView ».
+2. Collez-y les instructions ci-dessous, avec votre stratégie de l'étape 7 à l'emplacement prévu.
+3. Ensuite, à chaque session : dites simplement « lance le scan du jour ». L'assistant applique votre grille, sort votre liste classée, marque les niveaux (après votre confirmation) et prépare vos alertes.
 
-**Prompt à copier, les instructions de ton assistant (Projet Claude) :**
+**Prompt à copier, les instructions de votre assistant (Projet Claude) :**
 > Tu es mon assistant d'analyse personnalisé, branché sur TradingView via le pont MCP. Tu n'es pas un conseiller : tu es un analyste qui applique MA stratégie, à l'identique, à chaque fois. Tu gardes toujours ces règles.
 >
-> MA STRATÉGIE : [COLLE ICI TON GABARIT DE L'ÉTAPE 7, COMPLÉTÉ]
+> MA STRATÉGIE : [COLLEZ ICI VOTRE GABARIT DE L'ÉTAPE 7, COMPLÉTÉ]
 >
 > CE QUE TU FAIS, DANS L'ORDRE, QUAND JE DIS "lance le scan du jour" :
 > 1. Scanne ma watchlist accessible et évalue chaque symbole contre MA stratégie.
@@ -194,11 +194,11 @@ C'est le cœur de la promesse de ce guide. L'idée n'est pas de reposer tes règ
 >
 > Confirme que tu as bien chargé ma stratégie, puis attends que je dise "lance le scan du jour".
 
-*Honnêteté sur l'exécution : cet assistant analyse, classe et prépare tes alertes. Le passage d'ordre réel se fait chez ton courtier et reste entièrement sous ta validation. Pour de l'automatisation de bout en bout, cela se met en place via une alerte TradingView vers un webhook de ton courtier, que TU configures et dont TU assumes seul(e) la responsabilité. Claude n'engage jamais ton argent de sa propre initiative.*
+*Honnêteté sur l'exécution : cet assistant analyse, classe et prépare vos alertes. Le passage d'ordre réel se fait chez votre courtier et reste entièrement sous votre validation. Pour de l'automatisation de bout en bout, cela se met en place via une alerte TradingView vers un webhook de votre courtier, que VOUS configurez et dont VOUS assumez seul(e) la responsabilité. Claude n'engage jamais votre argent de sa propre initiative.*
 
 ---
 
-## 09. Les 5 prompts (les outils de ton assistant)
+## 09. Les 5 prompts (les outils de votre assistant)
 
 **Prompt 1. Support et résistance :**
 > Analyse le graphique actuellement ouvert dans TradingView et identifie les zones de support et de résistance les plus pertinentes visibles sur le timeframe sélectionné.
@@ -215,7 +215,7 @@ C'est le cœur de la promesse de ce guide. L'idée n'est pas de reposer tes règ
 **Prompt 2. Scanner la watchlist active :**
 > Scanne chaque symbole de ma watchlist TradingView active auquel les outils connectés ont accès.
 >
-> Évalue chaque symbole avec cette définition de setup : [COLLE TON GABARIT DE STRATÉGIE COMPLÉTÉ]
+> Évalue chaque symbole avec cette définition de setup : [COLLEZ VOTRE GABARIT DE STRATÉGIE COMPLÉTÉ]
 >
 > Rends un tableau classé avec : 1. Symbole. 2. Timeframe. 3. Statut du setup : prêt, en formation, ou invalide. 4. Support et résistance pertinents. 5. Déclencheur potentiel. 6. Condition d'invalidation. 7. Raison importante d'éviter le trade.
 >
@@ -224,7 +224,7 @@ C'est le cœur de la promesse de ce guide. L'idée n'est pas de reposer tes règ
 **Prompt 3. Liste ciblée du jour (5 maximum) :**
 > Passe en revue les symboles accessibles de ma watchlist TradingView et sélectionne au maximum cinq setups qui méritent attention.
 >
-> Mes critères de trading sont : [COLLE TES CRITÈRES]
+> Mes critères de trading sont : [COLLEZ VOS CRITÈRES]
 >
 > Pour chaque setup sélectionné, donne : 1. Pourquoi il qualifie. 2. Le niveau ou la zone clé. 3. La condition exacte qui le rendrait actionnable. 4. La condition qui l'invaliderait. 5. S'il est prêt maintenant ou doit rester en surveillance.
 >
@@ -250,42 +250,42 @@ C'est le cœur de la promesse de ce guide. L'idée n'est pas de reposer tes règ
 >
 > Si la création d'alerte est supportée, montre-moi l'alerte complète proposée et demande confirmation avant de la créer. Sinon, donne-moi les champs et valeurs exacts à saisir manuellement dans TradingView.
 
-*Pour recevoir tes alertes directement sur ton téléphone, configure ton compte TradingView et tes notifications mobiles en conséquence. Le pont MCP n'aide à créer une alerte que si cette capacité est explicitement prise en charge.*
+*Pour recevoir vos alertes directement sur votre téléphone, configurez votre compte TradingView et vos notifications mobiles en conséquence. Le pont MCP n'aide à créer une alerte que si cette capacité est explicitement prise en charge.*
 
 ---
 
-## Checklist avant de t'y fier
+## Checklist avant de vous y fier
 
 - [ ] TradingView Desktop est en cours d'exécution.
 - [ ] Le pont MCP est bien connecté à Claude Code.
 - [ ] Claude identifie correctement le graphique ouvert sans inventer de données.
-- [ ] Tes critères de setup sont écrits explicitement (les instructions de ton assistant).
+- [ ] Vos critères de setup sont écrits explicitement (les instructions de votre assistant).
 - [ ] Les scans indiquent clairement quels symboles ont réellement été inspectés.
-- [ ] Toute modification du graphique passe systématiquement par ta confirmation.
+- [ ] Toute modification du graphique passe systématiquement par votre confirmation.
 - [ ] Les alertes sont confirmées directement dans TradingView.
 - [ ] Chaque setup proposé inclut une condition d'invalidation claire.
-- [ ] Tu relis toi-même l'analyse avant toute décision de trading.
+- [ ] Vous relisez vous-même l'analyse avant toute décision de trading.
 
 ---
 
 ## Le fichier complet
 
-*[Emplacement réservé à ton propre mécanisme d'accès au workflow complet : lead magnet, formulaire, ou lien selon ta plateforme.]*
+*[Emplacement réservé à votre propre mécanisme d'accès au workflow complet : lead magnet, formulaire, ou lien selon votre plateforme.]*
 
 ---
 
 ## Pour aller plus loin
 
-*[Section à adapter selon les autres guides de ta bibliothèque déjà publiés.]*
+*[Section à adapter selon les autres guides de votre bibliothèque déjà publiés.]*
 
 ---
 
 ## À retenir
 
-**Un assistant d'analyse, c'est ta stratégie encodée. Pas un pilote automatique qui décide à ta place.**
+**Un assistant d'analyse, c'est votre stratégie encodée. Pas un pilote automatique qui décide à votre place.**
 
-Encode tes règles une seule fois, lance le scan quand tu le souhaites, garde la décision et le passage d'ordre entièrement pour toi. Lecture seule par défaut, confirmation avant toute action, une condition d'invalidation sur chaque setup proposé. C'est ça, un véritable assistant personnalisé, pas un mirage de trading automatique.
+Encodez vos règles une seule fois, lancez le scan quand vous le souhaitez, gardez la décision et le passage d'ordre entièrement pour vous. Lecture seule par défaut, confirmation avant toute action, une condition d'invalidation sur chaque setup proposé. C'est ça, un véritable assistant personnalisé, pas un mirage de trading automatique.
 
 ---
 
-*Ce guide est purement éducatif et ne constitue en aucun cas un conseil en investissement. Vérifie toujours les informations financières auprès de sources fiables et, si besoin, d'un conseiller agréé avant toute décision.*
+*Ce guide est purement éducatif et ne constitue en aucun cas un conseil en investissement. Vérifiez toujours les informations financières auprès de sources fiables et, si besoin, d'un conseiller agréé avant toute décision.*

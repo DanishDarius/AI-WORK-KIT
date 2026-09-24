@@ -23,7 +23,7 @@ Créer un espace de travail dédié à l'entreprise étudiée. Uploader : le der
 
 > **Prompt : analyse cadrée**
 >
-> Tu es mon analyste actions. Voici les documents officiels que je te fournis : [liste les fichiers]
+> Tu es mon analyste actions. Voici les documents officiels que je te fournis : [listez les fichiers]
 >
 > Règles absolues :
 > 1. Tu ne cites AUCUN chiffre absent des documents fournis. Si un chiffre te manque, tu écris « non trouvé dans les sources ».

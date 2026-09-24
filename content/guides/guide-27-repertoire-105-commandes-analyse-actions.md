@@ -11,40 +11,40 @@ Statut : reformulé (texte) ; aucune image ni tableau HTML détecté. Guide trè
 ## Sommaire
 
 - Introduction
-- 01. Un code, une mission : commence par les pièces
+- 01. Un code, une mission : commencez par les pièces
 - 02. Les cinq commandes phares
 - 03. Le répertoire des 100 commandes complémentaires
 - 04. Relier les commandes : construire un dossier
-- 05. Teste ton regard : refuse le raccourci
+- 05. Testez votre regard : refusez le raccourci
 - 06. Garder les références et les limites
 
 ## Introduction
 
-L'objectif de ce répertoire : dépasser la question « que penses-tu de cette action ? » pour examiner une entreprise avec des questions précises et vérifiables. Il contient cinq raccourcis phares, puis cent commandes complémentaires pour lire les sources, comprendre les comptes, et remettre chaque conclusion à l'épreuve. Prévois environ 30 minutes pour t'approprier la méthode et faire un premier parcours ; consulte ensuite les autres commandes selon tes besoins.
+L'objectif de ce répertoire : dépasser la question « que penses-tu de cette action ? » pour examiner une entreprise avec des questions précises et vérifiables. Il contient cinq raccourcis phares, puis cent commandes complémentaires pour lire les sources, comprendre les comptes, et remettre chaque conclusion à l'épreuve. Prévoyez environ 30 minutes pour vous approprier la méthode et faire un premier parcours ; consultez ensuite les autres commandes selon vos besoins.
 
 Précision importante : les noms commençant par une barre oblique (/price, /fundamentals…) sont ici des noms de consignes propres à ce guide, pas des commandes natives d'un produit. Taper /price seul dans Claude ou ChatGPT ne déclenche aucune fonction spéciale ni donnée en direct : il faut copier le prompt complet, remplacer ses champs, et joindre les pièces demandées. Certains plugins tiers possèdent leurs propres commandes, parfois avec un nom identique (le dépôt officiel Anthropic propose notamment un /earnings dans un plugin financier) ; leur comportement dépend alors de leur installation propre. Ce répertoire reste utilisable comme texte pur et n'exige aucun plugin.
 
-Ces prompts servent à préparer une recherche et à en vérifier les pièces ; ils ne recommandent en aucun cas un achat adapté à ta situation personnelle. Une entreprise solide peut rester mal valorisée, un modèle peut se tromper, et un cours peut évoluer autrement que prévu. Le risque de perte reste réel dans tous les cas.
+Ces prompts servent à préparer une recherche et à en vérifier les pièces ; ils ne recommandent en aucun cas un achat adapté à votre situation personnelle. Une entreprise solide peut rester mal valorisée, un modèle peut se tromper, et un cours peut évoluer autrement que prévu. Le risque de perte reste réel dans tous les cas.
 
 ---
 
-## 01. Un code, une mission : commence par les pièces
+## 01. Un code, une mission : commencez par les pièces
 
-**1. Identifie l'entreprise.** Nom légal, ticker, place, devise et catégorie de titres : un même nom commercial peut recouvrir plusieurs instruments financiers distincts.
+**1. Identifiez l'entreprise.** Nom légal, ticker, place, devise et catégorie de titres : un même nom commercial peut recouvrir plusieurs instruments financiers distincts.
 
-**2. Rassemble les sources.** Rapports, annexes et communications officielles, avec leurs dates. Si une donnée vient d'un fournisseur tiers, note ses conditions et son horodatage ; une recherche web ne remplace jamais un flux de marché en temps réel.
+**2. Rassemblez les sources.** Rapports, annexes et communications officielles, avec leurs dates. Si une donnée vient d'un fournisseur tiers, notez ses conditions et son horodatage ; une recherche web ne remplace jamais un flux de marché en temps réel.
 
-**3. Copie une consigne entière.** Complète les champs, joins les documents, lance la mission. Si l'outil ne peut pas ouvrir une pièce, fournis un extrait sourcé ou accepte une réponse partielle plutôt qu'une réponse inventée.
+**3. Copiez une consigne entière.** Complétez les champs, joignez les documents, lancez la mission. Si l'outil ne peut pas ouvrir une pièce, fournissez un extrait sourcé ou acceptez une réponse partielle plutôt qu'une réponse inventée.
 
-**4. Refais le contrôle indiqué.** Ouvre la source, recalcule, vérifie la période couverte. Une seconde réponse générée par une IA ne constitue jamais, à elle seule, un contrôle indépendant.
+**4. Refaites le contrôle indiqué.** Ouvrez la source, recalculez, vérifiez la période couverte. Une seconde réponse générée par une IA ne constitue jamais, à elle seule, un contrôle indépendant.
 
-Tu peux ensuite convenir, dans la même conversation, qu'un nom abrégé renvoie au bloc déjà fourni. Si le contexte a changé, ou si l'outil ne le reconnaît plus, recolle le bloc complet. Un simple « mémorise ces codes » ne garantit aucune mémoire permanente entre les sessions.
+Vous pouvez ensuite convenir, dans la même conversation, qu'un nom abrégé renvoie au bloc déjà fourni. Si le contexte a changé, ou si l'outil ne le reconnaît plus, recollez le bloc complet. Un simple « mémorise ces codes » ne garantit aucune mémoire permanente entre les sessions.
 
 ---
 
 ## 02. Les cinq commandes phares
 
-**/price : Comparer prix et valeur.** *À préparer :* le cours avec sa source, son heure et sa devise ; les comptes récents ; les hypothèses de valorisation retenues. *Mission :* sépare le cours observé de la valeur estimée. Construis une fourchette conditionnelle avec une méthode expliquée, trois scénarios et les hypothèses décisives. Ne compare au cours que s'il est horodaté. Si des données manquent, rends une liste de besoins plutôt qu'un verdict tranché « bon marché » ou « cher ». *Contrôle à refaire :* reprends la valorisation et vérifie qu'un changement d'hypothèse modifie effectivement la conclusion. Aucun écart ne constitue en soi un signal d'achat.
+**/price : Comparer prix et valeur.** *À préparer :* le cours avec sa source, son heure et sa devise ; les comptes récents ; les hypothèses de valorisation retenues. *Mission :* sépare le cours observé de la valeur estimée. Construis une fourchette conditionnelle avec une méthode expliquée, trois scénarios et les hypothèses décisives. Ne compare au cours que s'il est horodaté. Si des données manquent, rends une liste de besoins plutôt qu'un verdict tranché « bon marché » ou « cher ». *Contrôle à refaire :* reprenez la valorisation et vérifiez qu'un changement d'hypothèse modifie effectivement la conclusion. Aucun écart ne constitue en soi un signal d'achat.
 
 **/fundamentals : Examiner la solidité économique.** Analyse l'activité, le résultat, la trésorerie, le financement et l'évolution du capital de l'entreprise, à partir des documents fournis et de sources primaires datées.
 
@@ -66,13 +66,13 @@ Tu peux ensuite convenir, dans la même conversation, qu'un nom abrégé renvoie
 >
 > Règles de travail : utilise uniquement les pièces effectivement lues et, si disponible, une recherche web sur des sources primaires. Indique tout accès manquant. N'invente aucun chiffre, cours ou citation. Termine par le contrôle à refaire toi-même avant de tirer une conclusion.
 
-Pour utiliser n'importe laquelle des 105 commandes du répertoire ci-dessous, reprends ce modèle en remplaçant le nom de la commande, son objet, ses pièces nécessaires et sa mission par les éléments correspondants listés dans le tableau.
+Pour utiliser n'importe laquelle des 105 commandes du répertoire ci-dessous, reprenez ce modèle en remplaçant le nom de la commande, son objet, ses pièces nécessaires et sa mission par les éléments correspondants listés dans le tableau.
 
 ---
 
 ## 03. Le répertoire des 100 commandes complémentaires
 
-Les cent commandes suivantes sont organisées en dix familles de dix commandes chacune. Pour chacune, applique le modèle de prompt ci-dessus en remplaçant le nom et l'objet par ceux indiqués.
+Les cent commandes suivantes sont organisées en dix familles de dix commandes chacune. Pour chacune, appliquez le modèle de prompt ci-dessus en remplaçant le nom et l'objet par ceux indiqués.
 
 **Sources et données** : /identity (confirmer le titre analysé) · /source-map (cartographier les sources) · /filing-diff (comparer deux dépôts) · /period-check (aligner les périodes) · /unit-check (contrôler les unités) · /restatement (lire un retraitement) · /gaap-bridge (comprendre les ajustements comptables) · /citation-audit (vérifier les citations) · /freshness (dater la connaissance mobilisée) · /missing-data (lister les données bloquantes).
 
@@ -100,23 +100,23 @@ Les cent commandes suivantes sont organisées en dix familles de dix commandes c
 
 Ces commandes se combinent en parcours selon l'objectif poursuivi :
 
-**Découvrir une entreprise (les sources avant l'opinion) :** /identity → /source-map → /business-map → /fundamentals → /question-list. Résultat attendu : une description économique de l'entreprise et les questions encore ouvertes. Si l'identité du titre ou les périodes couvertes restent ambiguës, corrige ce point avant d'analyser la solidité financière.
+**Découvrir une entreprise (les sources avant l'opinion) :** /identity → /source-map → /business-map → /fundamentals → /question-list. Résultat attendu : une description économique de l'entreprise et les questions encore ouvertes. Si l'identité du titre ou les périodes couvertes restent ambiguës, corrigez ce point avant d'analyser la solidité financière.
 
-**Relire un trimestre (les variations avant le verdict) :** /period-check → /earnings → /cash-conversion → /guidance-change → /thesis-update. Résultat attendu : une note datée qui explique précisément ce qui a changé. Si une ancienne prévision de la direction manque, marque cette comparaison comme incomplète.
+**Relire un trimestre (les variations avant le verdict) :** /period-check → /earnings → /cash-conversion → /guidance-change → /thesis-update. Résultat attendu : une note datée qui explique précisément ce qui a changé. Si une ancienne prévision de la direction manque, marquez cette comparaison comme incomplète.
 
 **Examiner une valorisation (les hypothèses avant le prix cible) :** /peer-selection → /dcf-inputs → /price → /reverse-dcf → /model-audit. Résultat attendu : une fourchette conditionnelle et ses sensibilités. Un simple ticker ou des comptes incomplets ne suffisent pas à terminer ce parcours.
 
-Ces enchaînements restent des suggestions de travail, sans automatisation active entre les étapes. Garde les sources et les corrections d'une étape à l'autre. Si une commande reprend un résultat erroné d'une commande précédente, corrige l'erreur en amont puis refais les conclusions qui en dépendent.
+Ces enchaînements restent des suggestions de travail, sans automatisation active entre les étapes. Gardez les sources et les corrections d'une étape à l'autre. Si une commande reprend un résultat erroné d'une commande précédente, corrigez l'erreur en amont puis refaites les conclusions qui en dépendent.
 
 ---
 
-## 05. Teste ton regard : refuse le raccourci
+## 05. Testez votre regard : refusez le raccourci
 
 Exemple fictif à évaluer : « Le cours est 50 €, le BPA est 2 €. Le P/E est 25. Donc l'action est bon marché. »
 
 Quel point suffit à lui seul à refuser cette conclusion telle qu'elle est écrite ? Ni un calcul faux (50÷2 donne bien 25), ni l'idée qu'une action à 50 € serait automatiquement chère : la bonne réponse est qu'un multiple isolé, sans comparaison à des pairs pertinents ni contexte de croissance et de risque, ne prouve absolument pas qu'un prix est attractif.
 
-Pour un premier essai réel, choisis /period-check ou /citation-audit sur un dossier public court : le résultat est plus facile à vérifier qu'un jugement global sur une action entière. Garde la sortie obtenue, ta propre correction, et le passage source : tu verras alors précisément si l'outil t'a réellement aidé.
+Pour un premier essai réel, choisissez /period-check ou /citation-audit sur un dossier public court : le résultat est plus facile à vérifier qu'un jugement global sur une action entière. Gardez la sortie obtenue, votre propre correction, et le passage source : vous verrez alors précisément si l'outil vous a réellement aidé.
 
 ---
 
@@ -130,10 +130,10 @@ Ces consignes constituent un répertoire pédagogique original ; elles ne sont v
 
 **Une question précise se vérifie. Une question vague ne se vérifie jamais.**
 
-Commence par une seule commande dont tu peux contrôler toi-même le résultat, plutôt que de viser d'emblée un jugement global sur une action. Élargis ensuite ton dossier progressivement, à partir des preuves que tu retrouves réellement, jamais à partir de la seule confiance affichée par la réponse de l'IA.
+Commencez par une seule commande dont vous pouvez contrôler vous-même le résultat, plutôt que de viser d'emblée un jugement global sur une action. Élargissez ensuite votre dossier progressivement, à partir des preuves que vous retrouvez réellement, jamais à partir de la seule confiance affichée par la réponse de l'IA.
 
 ---
 
 ### Note méthodologique sur ce fichier
 
-La page source contient 105 prompts intégralement rédigés, avec pour chacun ses champs, ses pièces nécessaires et son texte de mission complet, soit environ 250 000 caractères une fois tous développés. Reproduire l'intégralité des 105 prompts mot pour mot représenterait, à lui seul, un fichier plus volumineux que l'ensemble des 26 autres guides de ce lot réunis. Le choix fait ici a été de reformuler intégralement les 5 commandes phares et le modèle de prompt commun aux 105 (qui ne varie, d'une commande à l'autre, que par son nom, son objet, ses pièces nécessaires et sa mission spécifique), puis de lister les 100 commandes complémentaires avec leur nom exact et leur objet reformulé, classées par famille comme sur la page source. Pour reconstituer le prompt complet d'une commande précise parmi les 100, applique le modèle reformulé en section 02 en y insérant le nom et l'objet de la commande souhaitée. Le fichier texte téléchargeable proposé sur la page source (« Télécharger les 105 commandes ») contient les 105 prompts intégraux tels que rédigés par l'autrice originale ; il n'a pas été récupéré ici (voir ressources-visuelles.md).
+La page source contient 105 prompts intégralement rédigés, avec pour chacun ses champs, ses pièces nécessaires et son texte de mission complet, soit environ 250 000 caractères une fois tous développés. Reproduire l'intégralité des 105 prompts mot pour mot représenterait, à lui seul, un fichier plus volumineux que l'ensemble des 26 autres guides de ce lot réunis. Le choix fait ici a été de reformuler intégralement les 5 commandes phares et le modèle de prompt commun aux 105 (qui ne varie, d'une commande à l'autre, que par son nom, son objet, ses pièces nécessaires et sa mission spécifique), puis de lister les 100 commandes complémentaires avec leur nom exact et leur objet reformulé, classées par famille comme sur la page source. Pour reconstituer le prompt complet d'une commande précise parmi les 100, appliquez le modèle reformulé en section 02 en y insérant le nom et l'objet de la commande souhaitée. Le fichier texte téléchargeable proposé sur la page source (« Télécharger les 105 commandes ») contient les 105 prompts intégraux tels que rédigés par l'autrice originale ; il n'a pas été récupéré ici (voir ressources-visuelles.md).

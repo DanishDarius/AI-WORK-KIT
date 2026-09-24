@@ -31,7 +31,7 @@ Rassembler cinq à dix de ses meilleurs textes (publications, e-mails, notes voc
 >
 > Sors un mémo de 1 page que je peux recoller dans n'importe quel chat futur pour que tu écrives comme moi.
 >
-> [Colle tes textes ici]
+> [Collez vos textes ici]
 
 ## Comment réutiliser ce mémo
 

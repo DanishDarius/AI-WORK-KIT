@@ -70,7 +70,7 @@ function parseFile(filename: string): Guide {
     .filter((line) => (
       line.length > 85
       && !line.startsWith("-")
-      && !line.startsWith("Ce que tu vas trouver")
+      && !/^Ce que (tu vas|vous allez) trouver/.test(line)
       && !line.startsWith("Sommaire")
     ));
   const excerptSource = paragraphs[0] ?? "Un guide concret pour intégrer l’intelligence artificielle dans votre quotidien professionnel.";

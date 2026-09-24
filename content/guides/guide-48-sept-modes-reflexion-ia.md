@@ -25,8 +25,8 @@ Un prompt qui dit « écris-moi un plan de lancement » donne un plan de lanceme
 - **Analyste** : veut des chiffres précis plutôt que des impressions.
 - **Débutant** : impose un langage simple, sans jargon inutile.
 
-Chacun de ces modes tient en un court paragraphe, collé avant ta vraie demande, pour orienter la façon dont l'IA va raisonner sur le sujet.
+Chacun de ces modes tient en un court paragraphe, collé avant votre vraie demande, pour orienter la façon dont l'IA va raisonner sur le sujet.
 
 ## Comment s'en servir
 
-Empile deux modes quand la décision compte vraiment. La combinaison stratège puis équipe rouge est particulièrement efficace : elle fait d'abord prendre de la hauteur sur la situation, puis cherche systématiquement ce qui pourrait faire échouer le plan obtenu.
+Empilez deux modes quand la décision compte vraiment. La combinaison stratège puis équipe rouge est particulièrement efficace : elle fait d'abord prendre de la hauteur sur la situation, puis cherche systématiquement ce qui pourrait faire échouer le plan obtenu.

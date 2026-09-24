@@ -15,11 +15,11 @@ Statut : reformulé (texte) ; voir ressources-visuelles.md pour les éléments n
 
 
 - Introduction
-- Ce dont tu as besoin (un seul outil suffit)
+- Ce dont vous avez besoin (un seul outil suffit)
 - Étape 1 : Rassembler la matière première (l'étape que tout le monde saute, et qui change tout)
-- Étape 2 : Le mécanisme qui catégorise ta décision avant de répondre
-- Étape 3 : Faire parler ton comité (le prompt à coller)
+- Étape 2 : Le mécanisme qui catégorise votre décision avant de répondre
+- Étape 3 : Faire parler votre comité (le prompt à coller)
 - Étape 4 : Aller plus loin dans l'échange (les relances qui changent une réunion)
 - Étape 5 : La règle anti-invention (à vérifier à chaque réponse)
-- Étape 6 : Faire vivre ton comité dans le temps
-- Récapitulatif : ta méthode en 6 gestes
+- Étape 6 : Faire vivre votre comité dans le temps
+- Récapitulatif : votre méthode en 6 gestes

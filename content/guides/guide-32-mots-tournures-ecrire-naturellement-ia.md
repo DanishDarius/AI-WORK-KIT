@@ -11,13 +11,13 @@ Statut : reformulé (texte) ; aucune image ni tableau HTML détecté sur cette p
 ## Sommaire
 
 - Introduction
-- 01. Règle le ton, une fois pour commencer
-- 02. Ajoute ce qui compte : le fond doit rester juste
+- 01. Réglez le ton, une fois pour commencer
+- 02. Ajoutez ce qui compte : le fond doit rester juste
 - 03. Le répertoire des 32 repères de relecture
-- 04. Lis les deux versions, vérifie ce qui a changé
-- 05. Passe ton texte à la loupe, puis décide quoi garder
-- 06. Réécris sans broder, garde les faits à portée
-- 07. Fais reconnaître ta voix, avec tes vrais exemples
+- 04. Lisez les deux versions, vérifiez ce qui a changé
+- 05. Passez votre texte à la loupe, puis décidez quoi garder
+- 06. Réécrivez sans broder, gardez les faits à portée
+- 07. Faites reconnaître votre voix, avec vos vrais exemples
 
 ## Introduction
 
@@ -25,11 +25,11 @@ On reconnaît vite les mêmes grandes promesses, les mêmes introductions toutes
 
 Ce guide propose un réglage de style à enregistrer une fois pour toutes, et un répertoire de 32 mots, tournures et tics à surveiller. Pour chaque entrée : une raison précise, une alternative concrète, et un exemple avant/après. Un atelier montre ensuite comment alléger un texte tout en gardant intacts ses faits.
 
-La règle de départ, en une phrase : un mot précis vaut mieux qu'une formule qui remplit l'espace sans rien dire. Garde ton vocabulaire propre, coupe ce qui ne sert qu'à occuper la ligne.
+La règle de départ, en une phrase : un mot précis vaut mieux qu'une formule qui remplit l'espace sans rien dire. Gardez votre vocabulaire propre, coupez ce qui ne sert qu'à occuper la ligne.
 
 ---
 
-## 01. Règle le ton, une fois pour commencer
+## 01. Réglez le ton, une fois pour commencer
 
 Dans ChatGPT comme dans Claude, il est possible d'enregistrer une préférence de rédaction durable. Le chemin diffère selon l'application : dans ChatGPT, il se trouve sous Paramètres → Personnalisation → Instructions personnalisées (activer la personnalisation si nécessaire, puis coller la consigne dans le champ prévu ; sur mobile, l'entrée peut s'appeler « Personnaliser ChatGPT »).
 
@@ -42,7 +42,7 @@ Il vaut mieux garder une règle courte et cohérente. Si des instructions existe
 
 ---
 
-## 02. Ajoute ce qui compte : le fond doit rester juste
+## 02. Ajoutez ce qui compte : le fond doit rester juste
 
 Cette version plus complète ajoute une règle essentielle : la réécriture doit conserver tous les faits et n'inventer aucune expérience personnelle. À choisir à la place de la version courte si elle correspond mieux à l'usage prévu.
 
@@ -63,79 +63,79 @@ Cette liste développe les quatre exemples de départ (« levier », « propulse
 
 ### Famille « Promesses »
 
-**1. Révolutionnaire.** Le superlatif ne décrit aucun changement vérifiable. À la place : nomme la fonction nouvelle. À revoir : « Découvrez notre agenda révolutionnaire. » Proposition : « Cet agenda rassemble les rendez-vous de ton équipe. »
+**1. Révolutionnaire.** Le superlatif ne décrit aucun changement vérifiable. À la place : nommez la fonction nouvelle. À revoir : « Découvrez notre agenda révolutionnaire. » Proposition : « Cet agenda rassemble les rendez-vous de ton équipe. »
 
-**2. Propulser.** La métaphore masque le travail à effectuer. À la place : décris l'action concrète. À revoir : « Propulsez votre contenu grâce à ce calendrier. » Proposition : « Planifiez vos publications avec ce calendrier. »
+**2. Propulser.** La métaphore masque le travail à effectuer. À la place : décrivez l'action concrète. À revoir : « Propulsez votre contenu grâce à ce calendrier. » Proposition : « Planifiez vos publications avec ce calendrier. »
 
-**3. Décupler.** Le mot suggère une multiplication par dix sans preuve. À la place : retire la promesse ou donne une mesure vérifiée. À revoir : « Décuplez votre productivité avec nos modèles. » Proposition : « Utilisez nos modèles pour préparer vos comptes rendus. »
+**3. Décupler.** Le mot suggère une multiplication par dix sans preuve. À la place : retirez la promesse ou donnez une mesure vérifiée. À revoir : « Décuplez votre productivité avec nos modèles. » Proposition : « Utilisez nos modèles pour préparer vos comptes rendus. »
 
-**4. Sans précédent.** La comparaison suppose de connaître tout ce qui existait avant. À la place : dis ce qui change dans cette version précise. À revoir : « Une mise à jour sans précédent : le mode hors ligne arrive. » Proposition : « La mise à jour ajoute un mode hors ligne. »
+**4. Sans précédent.** La comparaison suppose de connaître tout ce qui existait avant. À la place : dites ce qui change dans cette version précise. À revoir : « Une mise à jour sans précédent : le mode hors ligne arrive. » Proposition : « La mise à jour ajoute un mode hors ligne. »
 
-**5. Incontournable.** Le lecteur ne sait toujours pas si cela répond à son besoin réel. À la place : nomme le besoin concerné. À revoir : « Le guide incontournable pour préparer un entretien. » Proposition : « Un guide pour préparer ton entretien. »
+**5. Incontournable.** Le lecteur ne sait toujours pas si cela répond à son besoin réel. À la place : nommez le besoin concerné. À revoir : « Le guide incontournable pour préparer un entretien. » Proposition : « Un guide pour préparer ton entretien. »
 
-**6. Game changer.** L'étiquette remplace l'explication. À la place : montre la différence utile. À revoir : « La recherche dans les factures est un game changer. » Proposition : « Tu peux rechercher une facture. »
+**6. Game changer.** L'étiquette remplace l'explication. À la place : montrez la différence utile. À revoir : « La recherche dans les factures est un game changer. » Proposition : « Tu peux rechercher une facture. »
 
-**7. Transformer radicalement.** L'ampleur annoncée dépasse souvent la modification réelle. À la place : décris ce que l'utilisateur fera autrement. À revoir : « Ce formulaire va transformer radicalement votre prise de brief. » Proposition : « Ce formulaire regroupe les questions de votre brief. »
+**7. Transformer radicalement.** L'ampleur annoncée dépasse souvent la modification réelle. À la place : décrivez ce que l'utilisateur fera autrement. À revoir : « Ce formulaire va transformer radicalement votre prise de brief. » Proposition : « Ce formulaire regroupe les questions de votre brief. »
 
-**8. Une nouvelle ère.** La formule donne une portée historique à une simple nouveauté. À la place : annonce la nouveauté directement. À revoir : « Une nouvelle ère commence : notre atelier ouvre samedi. » Proposition : « Notre atelier ouvre samedi. »
+**8. Une nouvelle ère.** La formule donne une portée historique à une simple nouveauté. À la place : annoncez la nouveauté directement. À revoir : « Une nouvelle ère commence : notre atelier ouvre samedi. » Proposition : « Notre atelier ouvre samedi. »
 
 ### Famille « Jargon »
 
-**9. Levier.** Employé au sens vague, il cache le moyen d'action réel. À la place : précise ce que tu vas faire ; garde le terme s'il est employé au sens mécanique juste. À revoir : « La relance des personnes qui ont demandé un devis est un levier de conversion. » Proposition : « Relance les personnes qui ont demandé un devis. »
+**9. Levier.** Employé au sens vague, il cache le moyen d'action réel. À la place : précisez ce que vous allez faire ; gardez le terme s'il est employé au sens mécanique juste. À revoir : « La relance des personnes qui ont demandé un devis est un levier de conversion. » Proposition : « Relance les personnes qui ont demandé un devis. »
 
-**10. Synergie.** On ne sait pas qui travaille avec qui, ni sur quoi précisément. À la place : nomme la collaboration réelle. À revoir : « Créons une synergie entre la vente et le support. » Proposition : « Demandons à la vente et au support de partager les retours clients. »
+**10. Synergie.** On ne sait pas qui travaille avec qui, ni sur quoi précisément. À la place : nommez la collaboration réelle. À revoir : « Créons une synergie entre la vente et le support. » Proposition : « Demandons à la vente et au support de partager les retours clients. »
 
-**11. Écosystème.** Le terme peut désigner trop de choses à la fois dans un texte commercial. À la place : nomme les outils, partenaires ou acteurs concernés. À revoir : « Notre écosystème réunit un agenda et une messagerie. » Proposition : « Notre offre réunit un agenda et une messagerie. »
+**11. Écosystème.** Le terme peut désigner trop de choses à la fois dans un texte commercial. À la place : nommez les outils, partenaires ou acteurs concernés. À revoir : « Notre écosystème réunit un agenda et une messagerie. » Proposition : « Notre offre réunit un agenda et une messagerie. »
 
-**12. Solutions innovantes.** Deux mots qui ne disent pas ce que l'on achète réellement. À la place : nomme le produit ou le service. À revoir : « Nos solutions innovantes incluent un formulaire de devis. » Proposition : « Nous proposons un formulaire de devis. »
+**12. Solutions innovantes.** Deux mots qui ne disent pas ce que l'on achète réellement. À la place : nommez le produit ou le service. À revoir : « Nos solutions innovantes incluent un formulaire de devis. » Proposition : « Nous proposons un formulaire de devis. »
 
-**13. Optimiser.** Sans objet ni critère précisé, l'amélioration reste abstraite. À la place : explique ce que tu modifies et pourquoi. À revoir : « Optimisez vos réunions avec un ordre du jour. » Proposition : « Préparez un ordre du jour avant chaque réunion. »
+**13. Optimiser.** Sans objet ni critère précisé, l'amélioration reste abstraite. À la place : expliquez ce que vous modifiez et pourquoi. À revoir : « Optimisez vos réunions avec un ordre du jour. » Proposition : « Préparez un ordre du jour avant chaque réunion. »
 
-**14. Valeur ajoutée.** La valeur doit être compréhensible pour le destinataire, pas seulement nommée. À la place : nomme ce que tu apportes concrètement. À revoir : « Notre valeur ajoutée : la relecture de chaque dossier. » Proposition : « Nous relisons chaque dossier avant de vous le remettre. »
+**14. Valeur ajoutée.** La valeur doit être compréhensible pour le destinataire, pas seulement nommée. À la place : nommez ce que vous apportez concrètement. À revoir : « Notre valeur ajoutée : la relecture de chaque dossier. » Proposition : « Nous relisons chaque dossier avant de vous le remettre. »
 
-**15. Disruptif.** Le mot décrit une ambition sans jamais expliquer l'offre. À la place : dis ce que le service permet réellement. À revoir : « Une approche disruptive du suivi des dépenses. » Proposition : « Une méthode pour suivre tes dépenses. »
+**15. Disruptif.** Le mot décrit une ambition sans jamais expliquer l'offre. À la place : dites ce que le service permet réellement. À revoir : « Une approche disruptive du suivi des dépenses. » Proposition : « Une méthode pour suivre tes dépenses. »
 
-**16. Au service de.** La formule allonge souvent un lien qui pourrait rester simple. À la place : essaie « pour », puis précise l'action. À revoir : « Un tableau au service de votre organisation. » Proposition : « Un tableau pour organiser votre travail. »
+**16. Au service de.** La formule allonge souvent un lien qui pourrait rester simple. À la place : essayez « pour », puis précisez l'action. À revoir : « Un tableau au service de votre organisation. » Proposition : « Un tableau pour organiser votre travail. »
 
 ### Famille « Formules »
 
-**17. Dans un monde où.** L'ouverture pourrait introduire presque n'importe quel sujet. À la place : commence directement par la situation du lecteur. À revoir : « Dans un monde où les messages s'accumulent, triez votre boîte mail. » Proposition : « Les messages s'accumulent dans votre boîte mail. Commencez par les trier. »
+**17. Dans un monde où.** L'ouverture pourrait introduire presque n'importe quel sujet. À la place : commencez directement par la situation du lecteur. À revoir : « Dans un monde où les messages s'accumulent, triez votre boîte mail. » Proposition : « Les messages s'accumulent dans votre boîte mail. Commencez par les trier. »
 
-**18. Il est important de noter.** La phrase annonce une information au lieu de la donner directement. À la place : donne directement l'information. À revoir : « Il est important de noter que la livraison est prévue mardi. » Proposition : « La livraison est prévue mardi. »
+**18. Il est important de noter.** La phrase annonce une information au lieu de la donner directement. À la place : donnez directement l'information. À revoir : « Il est important de noter que la livraison est prévue mardi. » Proposition : « La livraison est prévue mardi. »
 
-**19. À l'ère de.** Le contexte trop large retarde inutilement le sujet réel. À la place : entre directement dans la tâche précise. À revoir : « À l'ère de l'IA, apprenez à rédiger un brief. » Proposition : « Apprenez à rédiger un brief pour l'IA. »
+**19. À l'ère de.** Le contexte trop large retarde inutilement le sujet réel. À la place : entrez directement dans la tâche précise. À revoir : « À l'ère de l'IA, apprenez à rédiger un brief. » Proposition : « Apprenez à rédiger un brief pour l'IA. »
 
-**20. Plus que jamais.** La comparaison avec le passé reste généralement sans appui réel. À la place : supprime la formule si elle ne change pas le sens. À revoir : « Plus que jamais, vérifiez vos sources. » Proposition : « Vérifiez vos sources. »
+**20. Plus que jamais.** La comparaison avec le passé reste généralement sans appui réel. À la place : supprimez la formule si elle ne change pas le sens. À revoir : « Plus que jamais, vérifiez vos sources. » Proposition : « Vérifiez vos sources. »
 
-**21. Et ce n'est pas tout.** L'annonce ajoute du suspense là où une simple information suffirait. À la place : ajoute le fait suivant tout simplement. À revoir : « Et ce n'est pas tout : le modèle est modifiable. » Proposition : « Le modèle est aussi modifiable. »
+**21. Et ce n'est pas tout.** L'annonce ajoute du suspense là où une simple information suffirait. À la place : ajoutez le fait suivant tout simplement. À revoir : « Et ce n'est pas tout : le modèle est modifiable. » Proposition : « Le modèle est aussi modifiable. »
 
-**22. En conclusion.** Dans un texte court, le lecteur voit déjà de lui-même que le texte se termine. À la place : finis sur la décision ou l'action (garde ce repère seulement dans un document long où il aide vraiment). À revoir : « En conclusion, envoyez votre retour avant vendredi. » Proposition : « Envoyez votre retour avant vendredi. »
+**22. En conclusion.** Dans un texte court, le lecteur voit déjà de lui-même que le texte se termine. À la place : finissez sur la décision ou l'action (gardez ce repère seulement dans un document long où il aide vraiment). À revoir : « En conclusion, envoyez votre retour avant vendredi. » Proposition : « Envoyez votre retour avant vendredi. »
 
-**23. Force est de constater.** Le détour donne un air solennel à un constat qui reste simple. À la place : énonce le constat et sa preuve si tu l'as. À revoir : « Force est de constater que les réponses manquent. » Proposition : « Il manque encore des réponses. »
+**23. Force est de constater.** Le détour donne un air solennel à un constat qui reste simple. À la place : énoncez le constat et sa preuve si vous l'avez. À revoir : « Force est de constater que les réponses manquent. » Proposition : « Il manque encore des réponses. »
 
-**24. Ne cherchez plus.** Le texte décide à la place du lecteur de ce qu'il cherchait. À la place : décris simplement ce qu'il va trouver. À revoir : « Ne cherchez plus : voici trois modèles de devis. » Proposition : « Voici trois modèles de devis. »
+**24. Ne cherchez plus.** Le texte décide à la place du lecteur de ce qu'il cherchait. À la place : décrivez simplement ce qu'il va trouver. À revoir : « Ne cherchez plus : voici trois modèles de devis. » Proposition : « Voici trois modèles de devis. »
 
 ### Famille « Style »
 
-**25. Ce n'est pas X, c'est Y.** Le contraste automatique peut caricaturer le sujet réel. À la place : dis directement ce que tu proposes. À revoir : « Ce n'est pas un cours, c'est une expérience. » Proposition : « Un cours pour [résultat réellement enseigné]. »
+**25. Ce n'est pas X, c'est Y.** Le contraste automatique peut caricaturer le sujet réel. À la place : dites directement ce que vous proposez. À revoir : « Ce n'est pas un cours, c'est une expérience. » Proposition : « Un cours pour [résultat réellement enseigné]. »
 
 **26. Les tirets cadratins.** Leur répétition alourdit le rythme de lecture ; ici, le choix est de les retirer systématiquement. À la place : un point, une virgule ou des parenthèses, selon le lien logique entre les idées. À revoir : « Le guide est prêt - tu peux le lire. » Proposition : « Le guide est prêt. Tu peux le lire. »
 
-**27. Les points de suspension répétés.** Le suspense à l'écrit peut vite devenir un tic d'écriture. À la place : termine la phrase quand l'idée est complète. À revoir : « Tu ouvres le fichier… tu lis… tu corriges… » Proposition : « Ouvre le fichier, lis-le puis corrige les passages utiles. »
+**27. Les points de suspension répétés.** Le suspense à l'écrit peut vite devenir un tic d'écriture. À la place : terminez la phrase quand l'idée est complète. À revoir : « Tu ouvres le fichier… tu lis… tu corriges… » Proposition : « Ouvre le fichier, lis-le puis corrige les passages utiles. »
 
-**28. Imaginez un instant.** L'invitation remplace parfois un exemple qui pourrait rester direct. À la place : présente le cas sans mise en scène superflue. À revoir : « Imaginez un instant : vos fichiers sont classés par client. » Proposition : « Classez vos fichiers par client. »
+**28. Imaginez un instant.** L'invitation remplace parfois un exemple qui pourrait rester direct. À la place : présentez le cas sans mise en scène superflue. À revoir : « Imaginez un instant : vos fichiers sont classés par client. » Proposition : « Classez vos fichiers par client. »
 
-**29. La puissance de.** L'expression vante l'outil sans jamais décrire son usage réel. À la place : nomme ce qu'il fait concrètement dans ce cas. À revoir : « Exploitez la puissance de l'IA pour résumer ce document. » Proposition : « Demandez à l'IA de résumer ce document. »
+**29. La puissance de.** L'expression vante l'outil sans jamais décrire son usage réel. À la place : nommez ce qu'il fait concrètement dans ce cas. À revoir : « Exploitez la puissance de l'IA pour résumer ce document. » Proposition : « Demandez à l'IA de résumer ce document. »
 
-**30. Plongeons dans.** La métaphore retarde souvent une explication qui pourrait rester courte. À la place : annonce le sujet ou commence directement à l'expliquer. À revoir : « Plongeons dans les réglages de ton compte. » Proposition : « Voici les réglages de ton compte. »
+**30. Plongeons dans.** La métaphore retarde souvent une explication qui pourrait rester courte. À la place : annoncez le sujet ou commencez directement à l'expliquer. À revoir : « Plongeons dans les réglages de ton compte. » Proposition : « Voici les réglages de ton compte. »
 
-**31. Préparez-vous à.** L'annonce peut surjouer une étape en réalité tout à fait ordinaire. À la place : commence directement par l'action. À revoir : « Préparez-vous à découvrir le programme de l'atelier. » Proposition : « Voici le programme de l'atelier. »
+**31. Préparez-vous à.** L'annonce peut surjouer une étape en réalité tout à fait ordinaire. À la place : commencez directement par l'action. À revoir : « Préparez-vous à découvrir le programme de l'atelier. » Proposition : « Voici le programme de l'atelier. »
 
-**32. Tout simplement.** L'expression peut minimiser une difficulté qui reste bien réelle pour le lecteur. À la place : montre l'étape au lieu de la déclarer facile. À revoir : « Il suffit tout simplement de connecter votre compte. » Proposition : « Connectez votre compte, puis vérifiez les accès demandés. »
+**32. Tout simplement.** L'expression peut minimiser une difficulté qui reste bien réelle pour le lecteur. À la place : montrez l'étape au lieu de la déclarer facile. À revoir : « Il suffit tout simplement de connecter votre compte. » Proposition : « Connectez votre compte, puis vérifiez les accès demandés. »
 
 ---
 
-## 04. Lis les deux versions, vérifie ce qui a changé
+## 04. Lisez les deux versions, vérifiez ce qui a changé
 
 Une bonne révision peut être plus courte sans devenir familière pour autant. Dans l'exemple fictif suivant, il faut surtout observer ce qui reste intact : le sujet, les dates, la demande et les réserves formulées.
 
@@ -151,7 +151,7 @@ Le détail vivant doit toujours venir de la personne elle-même. Un lieu, une ob
 
 ---
 
-## 05. Passe ton texte à la loupe, puis décide quoi garder
+## 05. Passez votre texte à la loupe, puis décidez quoi garder
 
 Un bon réflexe consiste à comparer son propre brouillon aux expressions du répertoire ci-dessus, en cherchant aussi quelques variantes proches. Ce repérage local (dans un éditeur de texte, ou simplement à l'œil) ne remplace rien : c'est toujours à l'auteur de juger si l'emploi d'un mot reste utile dans son contexte précis. Un passage cité peut par exemple contenir volontairement un mot à conserver tel quel.
 
@@ -159,7 +159,7 @@ Retirer les mots repérés ne suffit d'ailleurs pas à lui seul. Un texte peut n
 
 ---
 
-## 06. Réécris sans broder, garde les faits à portée
+## 06. Réécrivez sans broder, gardez les faits à portée
 
 Il faut toujours copier sa version d'origine avant de demander une réécriture à l'IA. Indiquer le destinataire, le format, et l'objectif précis. Cela permet ensuite de comparer réellement les deux textes, plutôt que de juger seulement si la nouvelle version « sonne mieux » à l'oreille.
 
@@ -167,7 +167,7 @@ Il faut toujours copier sa version d'origine avant de demander une réécriture 
 > Révise ce texte pour [destinataire], au format [e-mail / publication / page web]. Objectif : [ce que le lecteur doit comprendre ou faire]. Ton souhaité : professionnel et naturel. Tutoiement ou vouvoiement : [choix].
 >
 > TEXTE À RÉVISER
-> [colle le texte]
+> [collez le texte]
 >
 > RÈGLES
 > Repère les promesses vagues, le jargon inutile et les tournures automatiques. Remplace-les par des actions ou des faits déjà présents. Supprime les tirets cadratins. Conserve les termes métier utiles ; ne remplace pas mécaniquement chaque mot de la liste.
@@ -184,7 +184,7 @@ Si la révision rate un point précis, il vaut mieux nommer l'écart exactement 
 
 ---
 
-## 07. Fais reconnaître ta voix, avec tes vrais exemples
+## 07. Faites reconnaître votre voix, avec vos vrais exemples
 
 Les mots à couper donnent un bon point de départ. Mais ses propres textes montrent aussi, en creux, ce que l'on veut vraiment garder. Il suffit de choisir deux extraits que l'on a soi-même écrits, de retirer les informations privées inutiles, et de demander une description de leur style avant de l'appliquer à un nouveau brouillon.
 
@@ -202,8 +202,8 @@ Pour un premier essai concret, prendre un e-mail de 100 à 150 mots. Repérer de
 
 ## À retenir
 
-**La phrase doit toujours t'appartenir.**
+**La phrase doit toujours vous appartenir.**
 
-Tu choisis ce que tu veux dire, tu fournis les détails réels, et tu relis toujours la version finale. Le réglage de style aide seulement ton assistant à mieux te suivre, il ne remplace jamais ce contrôle final.
+Vous choisissez ce que vous voulez dire, vous fournissez les détails réels, et vous relisez toujours la version finale. Le réglage de style aide seulement votre assistant à mieux vous suivre, il ne remplace jamais ce contrôle final.
 
 **Sur la portée de ce guide :** le répertoire et les réécritures proposées ici sont des propositions éditoriales, pas une méthode de détection d'IA. Un tiret ou un mot isolé ne permet en aucun cas d'attribuer un texte à son auteur réel.

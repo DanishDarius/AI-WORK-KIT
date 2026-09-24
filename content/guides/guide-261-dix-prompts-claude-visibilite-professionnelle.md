@@ -34,7 +34,7 @@ Un prompt ne remplace jamais un vrai travail de fond, mais il peut l'accélérer
 >
 > Tu es mon chief of staff. Mon 1:1 avec mon manager est dans 48h. Voici le contexte de mes 2 dernières semaines :
 >
-> [liste les projets, blocages, décisions, tensions]
+> [listez les projets, blocages, décisions, tensions]
 >
 > Construis :
 > 1. Un agenda de 25 minutes en 3 blocs (statut, décisions à prendre, sujets de fond).
@@ -54,7 +54,7 @@ Un prompt ne remplace jamais un vrai travail de fond, mais il peut l'accélérer
 > - Aucun mot inutile.
 > - Un seul ask explicite à la fin.
 >
-> Email : [colle ton email]
+> Email : [collez votre email]
 
 ## Le garde-fou
 

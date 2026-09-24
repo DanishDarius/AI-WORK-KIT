@@ -34,7 +34,7 @@ Dans la section « Licences » : toutes les certifications, dates et liens. Dans
 > Rédige ma section « À propos » en intégrant mes 3 certifications IA et mon projet concret.
 >
 > Mes certifications : [liste]
-> Mon projet : [décris]
+> Mon projet : [décrivez]
 > Mon objectif de recherche : [type de poste]
 >
 > Ton : professionnel, pas corporate. Un seul paragraphe.

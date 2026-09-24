@@ -26,7 +26,7 @@ Tant que tout reste mélangé, l'inquiétude prend le dessus sans raison claire.
 > Je veux sécuriser ma carrière face à l'IA en devenant la personne qui la dirige au lieu d'entrer en compétition avec elle.
 >
 > Voici mon rôle et ce que je fais réellement au quotidien :
-> [décris ton poste, tes tâches principales, et à quoi ressemble un "bon travail" dans ton rôle]
+> [décrivez votre poste, vos tâches principales, et à quoi ressemble un "bon travail" dans votre rôle]
 >
 > Fais trois choses :
 > 1. Sépare mon travail en deux colonnes : TÂCHES QUE L'IA PEUT PROBABLEMENT FAIRE (exécution) et JUGEMENT QUE MOI SEUL J'APPORTE (goût, standards, contexte, relations, décisions).
@@ -39,13 +39,13 @@ Tant que tout reste mélangé, l'inquiétude prend le dessus sans raison claire.
 
 Le schéma se répète d'un métier à l'autre : un acheteur média pilote l'IA qui optimise ses campagnes ; un rédacteur fait tenir la voix de marque à travers le système ; un analyste financier laisse l'IA extraire les chiffres mais garde l'interprétation. L'objectif n'est pas de produire moins, mais de posséder le workflow dans son ensemble.
 
-> **Prompt : workflow IA pour ton rôle**
+> **Prompt : workflow IA pour votre rôle**
 >
 > Aide-moi à concevoir le workflow IA que je pourrais piloter dans mon rôle, pour devenir l'opérateur plutôt que le producteur.
 >
 > Mon rôle : [rôle]
 > Le principal livrable dont je suis responsable : [ex. campagnes publicitaires, copy de marque, modèles financiers]
-> Les outils que j'ai ou que je pourrais obtenir : [Claude, ChatGPT, tes outils métier, etc.]
+> Les outils que j'ai ou que je pourrais obtenir : [Claude, ChatGPT, vos outils métier, etc.]
 >
 > Donne-moi :
 > 1. Un workflow étape par étape où l'IA fait le gros du travail et où moi je dirige + je contrôle la qualité à chaque étape.
@@ -64,7 +64,7 @@ Tester l'IA occasionnellement ne suffit pas. Un vrai progrès demande de la rép
 > Construis-moi un plan de 30 jours pour devenir la personne de référence qui pilote l'IA dans mon rôle.
 >
 > Mon rôle : [rôle]
-> Le workflow IA que je veux maîtriser : [colle la sortie de l'étape précédente, ou décris-le]
+> Le workflow IA que je veux maîtriser : [collez la sortie de l'étape précédente, ou décrivez-le]
 > Le temps que je peux y consacrer par jour : [ex. 30 minutes]
 >
 > Donne-moi un plan semaine par semaine qui fait :

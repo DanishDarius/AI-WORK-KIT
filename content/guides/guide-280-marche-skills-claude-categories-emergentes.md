@@ -28,7 +28,7 @@ Un Skill est un bloc de compétence packagé : un prompt système, des fichiers 
 >
 > Tu vas m'aider à packager un Skill Claude.
 >
-> Métier : [décris en 2 lignes]
+> Métier : [décrivez en 2 lignes]
 > Tâche que je veux automatiser : [une seule, précise]
 > Inputs typiques : [ce que je lui donnerai]
 > Output attendu : [format exact]

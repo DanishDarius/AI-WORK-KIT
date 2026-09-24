@@ -28,16 +28,16 @@ Si les réponses semblent différentes depuis la dernière mise à jour, ce n'es
 > **Prompt : template Claude 4.7**
 >
 > Contexte
-> [Qui tu es, ce que tu fais, l'objectif réel]
+> [Qui vous êtes, ce que vous faites, l'objectif réel]
 >
 > Ta tâche
 > [Une phrase claire, verbe d'action]
 >
 > Exemple de ce qui est bon
-> [colle 1 exemple]
+> [collez 1 exemple]
 >
 > Exemple de ce qui rate
-> [colle 1 contre-exemple]
+> [collez 1 contre-exemple]
 >
 > Contraintes
 > - [Règle 1]

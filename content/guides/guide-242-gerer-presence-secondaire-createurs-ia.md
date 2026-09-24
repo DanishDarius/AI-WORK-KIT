@@ -32,7 +32,7 @@ En prenant deux à trois clients sur cette offre, il devient possible de dégage
 >
 > Sujet : Ton temps vaut plus cher que ça
 >
-> Salut [Prénom], je suis [toi].
+> Salut [Prénom], je suis [vous].
 >
 > J'ai regardé 4 de tes derniers posts. Tu publies bien mais ta programmation, tes DM et tes shorts pompent clairement 15 h/semaine que tu pourrais remettre dans le contenu original.
 >

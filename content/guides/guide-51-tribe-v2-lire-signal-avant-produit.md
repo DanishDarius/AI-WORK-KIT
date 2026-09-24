@@ -13,7 +13,7 @@ Ce que fait réellement TRIBE v2, le parallèle avec le papier de recherche de 2
 
 ## Le problème que les titres ne disent pas
 
-Le titre qui circule, c'est « Meta prédit ton cerveau ». Le fantasme sous-jacent : une IA qui lirait tes pensées ou ciblerait déjà des publicités à partir de ton activité neuronale. Les deux affirmations sont fausses aujourd'hui, et les confondre empêche de voir ce qui compte réellement.
+Le titre qui circule, c'est « Meta prédit ton cerveau ». Le fantasme sous-jacent : une IA qui lirait vos pensées ou ciblerait déjà des publicités à partir de votre activité neuronale. Les deux affirmations sont fausses aujourd'hui, et les confondre empêche de voir ce qui compte réellement.
 
 Ce que TRIBE v2 fait, précisément : à partir d'un contenu (image, vidéo, podcast, texte), il prédit la réponse d'un cerveau telle que mesurée par IRM fonctionnelle. Il ne lit pas une pensée, il ne décode pas une intention. Il modélise la façon dont un cerveau moyen réagit à un stimulus. C'est un outil de recherche en neurosciences, publié à des fins scientifiques, pas un moteur de ciblage publicitaire ; Meta l'a d'ailleurs diffusé sous licence non commerciale, code et poids inclus, en accès public. Cette précision est le point de départ ; sans elle, on tire les mauvaises conclusions.
 
@@ -45,22 +45,22 @@ Le parallèle avec TRIBE v2 tient sur deux niveaux. D'abord, TRIBE v2 tourne lit
 
 ## Les 3 points à retenir et à appliquer
 
-**L'attention est le produit ; traite la tienne comme ton actif le plus rare.** Quand un service est gratuit, ce qui se vend, c'est l'attention de l'utilisateur. TRIBE v2 montre où se situe désormais la frontière technique : on sait modéliser en laboratoire la réaction d'un cerveau à un contenu. Pas besoin d'attendre que ça devienne un produit pour agir dès maintenant. Gère ton attention comme un budget alloué exprès : coupe les notifications par défaut, distingue les plages où tu consommes de celles où tu crées, et pose-toi une question avant chaque scroll : « est-ce moi qui ai décidé d'ouvrir ça ? ». La ressource que tout le monde cherche à optimiser à ta place commence par être pilotée par toi-même.
+**L'attention est le produit ; traitez la vôtre comme votre actif le plus rare.** Quand un service est gratuit, ce qui se vend, c'est l'attention de l'utilisateur. TRIBE v2 montre où se situe désormais la frontière technique : on sait modéliser en laboratoire la réaction d'un cerveau à un contenu. Pas besoin d'attendre que ça devienne un produit pour agir dès maintenant. Gérez votre attention comme un budget alloué exprès : coupez les notifications par défaut, distinguez les plages où vous consommez de celles où vous créez, et posez-vous une question avant chaque scroll : « est-ce moi qui ai décidé d'ouvrir ça ? ». La ressource que tout le monde cherche à optimiser à votre place commence par être pilotée par vous-même.
 
-**Regarde la recherche, pas seulement les produits : c'est ton indicateur d'avance.** La leçon d'*Attention Is All You Need* est précieuse : les publications de recherche constituent un signal avancé de trois à sept ans sur les produits qui en découleront. Le grand public réagit aux lancements ; ceux qui prennent de l'avance lisent les papiers. Prends l'habitude d'aller à la source primaire (le blog de recherche, le papier, la démo) plutôt qu'au résumé sensationnaliste. Tu comprendras la direction avant les autres, un avantage réel quand on crée ou qu'on vend quelque chose. Le prompt ci-dessous fait ce travail de décryptage en deux minutes.
+**Regardez la recherche, pas seulement les produits : c'est votre indicateur d'avance.** La leçon d'*Attention Is All You Need* est précieuse : les publications de recherche constituent un signal avancé de trois à sept ans sur les produits qui en découleront. Le grand public réagit aux lancements ; ceux qui prennent de l'avance lisent les papiers. Prenez l'habitude d'aller à la source primaire (le blog de recherche, le papier, la démo) plutôt qu'au résumé sensationnaliste. Vous comprendrez la direction avant les autres, un avantage réel quand on crée ou qu'on vend quelque chose. Le prompt ci-dessous fait ce travail de décryptage en deux minutes.
 
-**Choisis tes entrées : c'est là que se joue ta marge de manœuvre.** Si la réaction d'un cerveau à un contenu devient modélisable, alors le vrai levier qui reste, c'est de choisir délibérément ce qu'on lui donne à consommer. Sélectionne tes sources comme une rédaction sélectionne sa une : qui tu suis, ce que tu lis, ce que tu regardes en premier le matin. La même science qui modélise une réaction peut servir à fabriquer du contenu conçu pour la capter. La défense ne consiste pas à se couper du monde, mais à rester aux commandes de ce qui entre. Utilise l'IA comme un outil que tu diriges, jamais comme un flux qui te dirige.
+**Choisissez vos entrées : c'est là que se joue votre marge de manœuvre.** Si la réaction d'un cerveau à un contenu devient modélisable, alors le vrai levier qui reste, c'est de choisir délibérément ce qu'on lui donne à consommer. Sélectionnez vos sources comme une rédaction sélectionne sa une : qui vous suivez, ce que vous lisez, ce que vous regardez en premier le matin. La même science qui modélise une réaction peut servir à fabriquer du contenu conçu pour la capter. La défense ne consiste pas à se couper du monde, mais à rester aux commandes de ce qui entre. Utilisez l'IA comme un outil que vous dirigez, jamais comme un flux qui vous dirige.
 
-## Le prompt : ton décrypteur d'actualité IA
+## Le prompt : votre décrypteur d'actualité IA
 
-Voici l'outil qui transforme le deuxième point en réflexe. Colle ce prompt dans Claude, ChatGPT ou Mistral, ajoute le lien ou le texte d'une annonce IA, et obtiens un décryptage lucide en deux minutes, sans emballement ni alarmisme.
+Voici l'outil qui transforme le deuxième point en réflexe. Collez ce prompt dans Claude, ChatGPT ou Mistral, ajoutez le lien ou le texte d'une annonce IA, et obtenez un décryptage lucide en deux minutes, sans emballement ni alarmisme.
 
 > **Prompt : décrypteur d'actu IA**
 >
 > Tu es un analyste IA sobre et rigoureux. Je te donne une annonce, un article ou un papier de recherche sur l'IA. Décrypte-le pour quelqu'un d'intelligent mais non technique, sans hype et sans catastrophisme.
 >
 > **CONTENU À ANALYSER :**
-> [Colle ici le lien, le texte de l'annonce, ou le résumé du papier.]
+> [Collez ici le lien, le texte de l'annonce, ou le résumé du papier.]
 >
 > **MON CONTEXTE :**
 > [En une ligne : mon métier / activité, pour que les implications soient concrètes.]
@@ -74,10 +74,10 @@ Voici l'outil qui transforme le deuxième point en réflexe. Colle ce prompt dan
 >
 > Ton : lucide, précis, jamais alarmiste, jamais vendeur. Si une information n'est pas dans le contenu fourni, réponds « non précisé » plutôt que d'inventer.
 
-**Astuce de pro.** La ligne la plus importante est la dernière : « non précisé plutôt que d'inventer ». Sans elle, un modèle comble les trous avec du plausible, et on ressort avec de la fausse certitude sur un sujet qu'on cherchait justement à comprendre. Ajoute cette consigne à tous tes prompts de veille. C'est la différence entre s'informer et se faire raconter une histoire.
+**Astuce de pro.** La ligne la plus importante est la dernière : « non précisé plutôt que d'inventer ». Sans elle, un modèle comble les trous avec du plausible, et on ressort avec de la fausse certitude sur un sujet qu'on cherchait justement à comprendre. Ajoutez cette consigne à tous vos prompts de veille. C'est la différence entre s'informer et se faire raconter une histoire.
 
-## Quand t'en servir, et l'honnêteté à garder
+## Quand vous en servir, et l'honnêteté à garder
 
-Utilise ce guide et ce prompt pour décrypter n'importe quelle actualité IA qui inquiète ou intrigue, et pour reprendre la main sur son attention. Mais garde le cadre honnête, car c'est ce qui protège du bruit : TRIBE v2 est un modèle de recherche en neurosciences, pas le système publicitaire de Meta. Il ne lit pas les pensées ; il modélise la réponse d'un cerveau à un contenu, en laboratoire, à des fins scientifiques (comprendre le cerveau, appuyer la recherche médicale).
+Utilisez ce guide et ce prompt pour décrypter n'importe quelle actualité IA qui inquiète ou intrigue, et pour reprendre la main sur son attention. Mais gardez le cadre honnête, car c'est ce qui protège du bruit : TRIBE v2 est un modèle de recherche en neurosciences, pas le système publicitaire de Meta. Il ne lit pas les pensées ; il modélise la réponse d'un cerveau à un contenu, en laboratoire, à des fins scientifiques (comprendre le cerveau, appuyer la recherche médicale).
 
 Ce qui mérite l'attention, ce n'est pas une menace immédiate, c'est la trajectoire : la capacité existe, elle est publique, et l'histoire de l'IA montre que ces briques de recherche finissent en produits. Il ne s'agit pas de choisir entre panique et indifférence, mais de comprendre tôt tout en restant aux commandes.

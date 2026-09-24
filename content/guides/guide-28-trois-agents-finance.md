@@ -44,19 +44,19 @@ Ces annonces ne permettent pas d'affirmer que chaque utilisateur dispose des « 
 Point de départ selon l'outil disponible : Claude avec les plugins officiels, ChatGPT avec des documents publics, ou ChatGPT via une offre institutionnelle.
 
 **Pour installer les trois agents du dépôt Anthropic dans Claude :**
-1. Ouvre les réglages des plugins et ajoute un plugin en collant l'adresse du dépôt officiel.
-2. Sélectionne Earnings Reviewer, Market Researcher et Model Builder ; vérifie leurs descriptions et les permissions demandées avant toute installation.
-3. Commence dans un dossier de travail ne contenant que tes propres copies de documents publics. Donne une mission à la fois et vérifie le résultat avant d'ajouter des connecteurs supplémentaires.
+1. Ouvrez les réglages des plugins et ajoutez un plugin en collant l'adresse du dépôt officiel.
+2. Sélectionnez Earnings Reviewer, Market Researcher et Model Builder ; vérifiez leurs descriptions et les permissions demandées avant toute installation.
+3. Commencez dans un dossier de travail ne contenant que vos propres copies de documents publics. Donnez une mission à la fois et vérifiez le résultat avant d'ajouter des connecteurs supplémentaires.
 
 Ces modèles sont proposés sur les offres payantes de Claude ; les abonnements et autorisations des fournisseurs de données restent distincts. Le dépôt officiel reste la référence à jour si l'interface évolue.
 
 **Le dossier de départ pour une entreprise :**
-- Identité : raison sociale, ticker, place, devise et catégorie d'actions ; vérifie les homonymes et les titres cotés sur plusieurs places.
+- Identité : raison sociale, ticker, place, devise et catégorie d'actions ; vérifiez les homonymes et les titres cotés sur plusieurs places.
 - Comptes : rapports annuels et trimestriels récents, avec les périodes comparables et les annexes, récupérés sur le site investisseurs de l'entreprise ou auprès du régulateur compétent.
 - Communication : communiqué, rapprochement des mesures ajustées, transcription de l'appel si accessible, ancienne guidance.
-- Registre : pour chaque pièce, note titre, période, date de publication, URL et date de récupération ; garde une copie du document réellement analysé.
+- Registre : pour chaque pièce, notez titre, période, date de publication, URL et date de récupération ; gardez une copie du document réellement analysé.
 
-Pour un premier essai, limite-toi à une entreprise opérationnelle non financière avec des comptes lisibles : les banques, assureurs et situations de restructuration demandent des méthodes spécifiques. Ne mélange jamais des notes confidentielles de clients avec cet exercice. Vérifie systématiquement l'inventaire des pièces effectivement lues par l'outil avant de lui demander des conclusions.
+Pour un premier essai, limitez-vous à une entreprise opérationnelle non financière avec des comptes lisibles : les banques, assureurs et situations de restructuration demandent des méthodes spécifiques. Ne mélangez jamais des notes confidentielles de clients avec cet exercice. Vérifiez systématiquement l'inventaire des pièces effectivement lues par l'outil avant de lui demander des conclusions.
 
 ---
 
@@ -82,13 +82,13 @@ Le livrable attendu tient en une page, complétée par une annexe chiffrée. L'o
 
 **Exemple fictif (un calcul à refaire soi-même) :** année précédente, CA trimestriel 100 M€, résultat opérationnel 20 M€ ; trimestre actuel, CA 110 M€, résultat opérationnel 19,8 M€. La croissance du CA est de 10 %. La marge passe de 20 % à 18 %, soit -2 points de pourcentage. Le résultat opérationnel diminue en réalité de 1 %. Une phrase du type « les profits montent de 10 % » serait donc fausse ici ; la question suivante porte sur les coûts et le mix de ventes, à vérifier dans les annexes. Cet exemple est construit pour le guide, il ne provient pas d'une analyse réelle d'agent.
 
-Si le premier résultat comporte une erreur : identifie la ligne erronée, fournis la bonne page, et demande la correction de toutes les conclusions qui en dépendent. S'il manque la transcription de l'appel, conserve la revue des comptes et marque l'analyse du discours comme partielle.
+Si le premier résultat comporte une erreur : identifiez la ligne erronée, fournissez la bonne page, et demandez la correction de toutes les conclusions qui en dépendent. S'il manque la transcription de l'appel, conservez la revue des comptes et marquez l'analyse du discours comme partielle.
 
 ---
 
 ## 04. Agent 2 : suivre ce qui change
 
-Le modèle officiel Market Researcher couvre la recherche sectorielle au sens large ; ici, on lui confie une mission de veille délimitée. Le premier brief doit réussir manuellement avant de chercher à le programmer automatiquement. Choisis jusqu'à cinq entreprises pour cet exercice et une fenêtre temporelle précise, par exemple depuis la dernière clôture jusqu'à 8h dans ton fuseau horaire.
+Le modèle officiel Market Researcher couvre la recherche sectorielle au sens large ; ici, on lui confie une mission de veille délimitée. Le premier brief doit réussir manuellement avant de chercher à le programmer automatiquement. Choisissez jusqu'à cinq entreprises pour cet exercice et une fenêtre temporelle précise, par exemple depuis la dernière clôture jusqu'à 8h dans votre fuseau horaire.
 
 **Prompt à copier (Préparer le brief de veille) :**
 > Mission 2 · Brief de veille à lancer une première fois manuellement
@@ -101,7 +101,7 @@ Le modèle officiel Market Researcher couvre la recherche sectorielle au sens la
 > Si tu mentionnes un cours : fournisseur, horodatage, devise, séance et caractère différé connu ou inconnu. Sinon omets-le. Ne calcule pas la performance d'un portefeuille.
 > Termine par les sources en échec et un contrôle de trois liens. Ce lancement ne crée aucune récurrence : décris le résultat obtenu, sans annoncer qu'un agent tourne déjà chaque matin.
 
-**Pour programmer le brief après un premier essai réussi manuellement :** si ton outil propose une fonction native de tâches planifiées, ouvre-la, crée la tâche, et vérifie sa confirmation native. Une tâche créée dans un projet n'a pas nécessairement accès aux fichiers de ce projet ; prévois des sources publiques réutilisables à chaque exécution. Contrôle la première exécution, l'heure de la suivante, et la possibilité de mettre en pause.
+**Pour programmer le brief après un premier essai réussi manuellement :** si votre outil propose une fonction native de tâches planifiées, ouvrez-la, créez la tâche, et vérifiez sa confirmation native. Une tâche créée dans un projet n'a pas nécessairement accès aux fichiers de ce projet ; prévoyez des sources publiques réutilisables à chaque exécution. Contrôlez la première exécution, l'heure de la suivante, et la possibilité de mettre en pause.
 
 **Prompt à copier (Programmer après le premier essai) :**
 > Configuration à effectuer seulement dans une fonction native de tâches planifiées disponible sur mon compte
@@ -110,7 +110,7 @@ Le modèle officiel Market Researcher couvre la recherche sectorielle au sens la
 > Ne passe aucun ordre, ne contacte personne et n'ouvre aucun accès supplémentaire. Publie le résultat dans cette tâche ; notifications selon mes réglages. Si une source est inaccessible ou si l'historique n'est pas disponible, signale-le. Ne suppose pas avoir accès aux pièces d'un autre chat ou d'un projet.
 > Affiche la confirmation native avec le calendrier, le fuseau, la prochaine exécution et la manière de mettre en pause. Si tu ne peux pas créer une vraie tâche, dis-le clairement et donne une procédure de lancement manuel. N'annonce pas une programmation sur la seule base de ce message.
 
-Dans Claude, installer le plugin ne programme pas à lui seul un brief quotidien. Utilise uniquement une fonction de planification réellement disponible et vérifiée dans ton environnement ; sinon, garde le lancement manuel. Aucun système n'est considéré comme actif parce qu'une conversation répond « c'est fait ». Après une panne, vérifie la période manquante avant de reprendre le rythme normal.
+Dans Claude, installer le plugin ne programme pas à lui seul un brief quotidien. Utilisez uniquement une fonction de planification réellement disponible et vérifiée dans votre environnement ; sinon, gardez le lancement manuel. Aucun système n'est considéré comme actif parce qu'une conversation répond « c'est fait ». Après une panne, vérifiez la période manquante avant de reprendre le rythme normal.
 
 ---
 
@@ -131,7 +131,7 @@ Le modèle complet demandé à l'agent comprend les historiques, les hypothèses
 > Étape D : sensibilité WACC/croissance terminale et marge/croissance opérationnelle. Signale le poids de la valeur terminale. Si le cours est disponible, compare uniquement à son horodatage. Un écart de modèle n'est pas une recommandation ni une prédiction du marché.
 > Critère de sortie : un humain doit refaire une année de projection, contrôler les deux égalités comptables et remonter chaque hypothèse à sa source ou à sa validation. S'il reste une rupture, marque le modèle INCOMPLET et liste les cellules concernées. Ne présente pas de valeur finale fiable avant correction.
 
-Commence toujours par valider la table d'hypothèses. Ensuite seulement, demande le fichier complet. Ouvre le tableur obtenu, change une hypothèse et vérifie que les résultats dépendants se recalculent réellement. Un fichier rempli de nombres figés ne démontre pas que le modèle est correctement relié. Vérifie une année à la main et ouvre les contrôles d'équilibre comptable.
+Commencez toujours par valider la table d'hypothèses. Ensuite seulement, demandez le fichier complet. Ouvrez le tableur obtenu, changez une hypothèse et vérifiez que les résultats dépendants se recalculent réellement. Un fichier rempli de nombres figés ne démontre pas que le modèle est correctement relié. Vérifiez une année à la main et ouvrez les contrôles d'équilibre comptable.
 
 **Le mécanisme du DCF en pratique, sur une entreprise fictive :** un modèle réduit permet de comprendre le principe (aucun titre réel, aucun cours connecté, il part d'un flux disponible déjà établi). Avec un flux de trésorerie disponible de départ de 10 M€, une croissance de 5 % sur cinq ans, un taux d'actualisation de 10 %, une croissance terminale de 2 %, un cash excédentaire de 15 M€, une dette de 30 M€ et 10 millions d'actions en circulation, la valeur théorique par action ressort à 12,96 €, avec une valeur des opérations de 144,62 M€, une valeur des capitaux propres de 129,62 M€ après ajustement du cash et de la dette, et une part de la valeur terminale actualisée représentant 69,87 % du total.
 
@@ -143,7 +143,7 @@ La valeur terminale suppose un régime durable : croissance, rentabilité et ré
 
 ## 06. Vérifier les preuves, garder la décision
 
-Ouvre une nouvelle conversation pour la revue, et redonne les sources d'origine. Cette séparation aide à repartir des pièces sans biais de continuité, mais garde en tête que deux modèles différents peuvent tout à fait reproduire la même erreur. La vraie preuve reste toujours la source elle-même et le calcul que tu peux refaire de ton côté.
+Ouvrez une nouvelle conversation pour la revue, et redonnez les sources d'origine. Cette séparation aide à repartir des pièces sans biais de continuité, mais gardez en tête que deux modèles différents peuvent tout à fait reproduire la même erreur. La vraie preuve reste toujours la source elle-même et le calcul que vous pouvez refaire de votre côté.
 
 **Prompt à copier (Auditer le résultat) :**
 > Revue indépendante de mon dossier financier
@@ -154,7 +154,7 @@ Ouvre une nouvelle conversation pour la revue, et redonne les sources d'origine.
 > Rends un registre : élément / résultat annoncé / source ou calcul indépendant / conforme, erroné ou non vérifiable / correction nécessaire / conséquence sur la conclusion. Une vérification par un autre modèle peut répéter la même erreur : montre les preuves, pas un score de confiance.
 > Puis classe le dossier : À REPRENDRE si une erreur change le sens ; PARTIEL si une preuve manque ; PRÊT POUR MA REVUE si les contrôles passent. Ce dernier statut n'autorise aucune transaction. Propose un message de correction ciblé, sans inventer de données pour combler les trous.
 
-**Ta revue humaine finale, en six points :**
+**Votre revue humaine finale, en six points :**
 - L'entreprise et la catégorie de titres sont les bonnes.
 - Chaque source s'ouvre et soutient réellement le fait cité.
 - Périodes, unités, devises et indicateurs sont comparables entre eux.
@@ -162,9 +162,9 @@ Ouvre une nouvelle conversation pour la revue, et redonne les sources d'origine.
 - Les hypothèses et données absentes restent visibles, pas masquées.
 - La conclusion reflète honnêtement les limites du dossier.
 
-Garde le dossier au statut « à reprendre » tant qu'un seul de ces six contrôles reste ouvert ; cette checklist ne valide jamais automatiquement les chiffres.
+Gardez le dossier au statut « à reprendre » tant qu'un seul de ces six contrôles reste ouvert ; cette checklist ne valide jamais automatiquement les chiffres.
 
-Conserve un dossier daté : mission initiale, sources, sortie de l'agent, corrections apportées et limites restantes. Pour une première session, vise une note relue et un calcul vérifié ; ajoute ensuite la veille, puis le modèle complet. Si une erreur change la conclusion, reprends toujours l'analyse avant d'utiliser cette conclusion dans une décision réelle.
+Conservez un dossier daté : mission initiale, sources, sortie de l'agent, corrections apportées et limites restantes. Pour une première session, visez une note relue et un calcul vérifié ; ajoutez ensuite la veille, puis le modèle complet. Si une erreur change la conclusion, reprenez toujours l'analyse avant d'utiliser cette conclusion dans une décision réelle.
 
 ---
 
@@ -176,6 +176,6 @@ Sources citées dans le guide original : OpenAI, ChatGPT for Financial Services 
 
 ## À retenir
 
-**Reviens toujours aux sources. Une conclusion utile résiste à ce retour aux chiffres.**
+**Revenez toujours aux sources. Une conclusion utile résiste à ce retour aux chiffres.**
 
 Trois missions, trois livrables vérifiables : une revue de résultats qui distingue faits, calculs et hypothèses ; un brief de veille qui ne transforme jamais une rumeur en fait ; un modèle financier dont chaque hypothèse peut être retracée jusqu'à sa source. Dans les trois cas, le contrôle final reste humain ; aucun statut généré par l'IA n'autorise une décision d'achat ou de vente.

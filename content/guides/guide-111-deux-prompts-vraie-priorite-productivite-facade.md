@@ -15,8 +15,8 @@ Le premier oblige à identifier ce qui compte vraiment cette semaine. Le second 
 
 > **Prompt : la pierre angulaire**
 >
-> Voici ma to-do de la semaine : [colle-la].
-> Voici mes objectifs trimestriels : [colle-les].
+> Voici ma to-do de la semaine : [collez-la].
+> Voici mes objectifs trimestriels : [collez-les].
 >
 > Question : si je ne pouvais faire qu'UNE SEULE chose cette semaine, laquelle aurait le plus gros impact sur mes objectifs trimestriels ?
 >
@@ -26,7 +26,7 @@ Le premier oblige à identifier ce qui compte vraiment cette semaine. Le second 
 
 > **Prompt : productivité de façade**
 >
-> Voici une semaine type pour moi : [décris ton calendrier]
+> Voici une semaine type pour moi : [décrivez votre calendrier]
 > Voici mon ressenti : « je travaille beaucoup mais je n'avance pas sur [X] ».
 >
 > Identifie :

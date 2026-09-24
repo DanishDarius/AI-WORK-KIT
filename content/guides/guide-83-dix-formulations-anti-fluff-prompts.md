@@ -41,7 +41,7 @@ La plupart des « mots magiques » qui circulent en ligne relèvent surtout du b
 
 > **Prompt : combo gagnant**
 >
-> Tâche : [décris en 2 lignes]
+> Tâche : [décrivez en 2 lignes]
 >
 > Avant de répondre :
 > - Que me demanderais-tu en premier ?

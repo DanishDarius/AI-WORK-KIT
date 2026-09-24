@@ -20,11 +20,11 @@ La plupart des lancements échouent au même endroit : le fondateur construit ce
 > Tu es un spécialiste de la recherche client. Je valide une nouvelle idée de business en collectant le vrai langage client là où mes clients cibles se plaignent. Ci-dessous, il y a des données brutes récupérées (avis, commentaires Reddit, posts X, avis Trustpilot) à propos des concurrents dans cet espace.
 >
 > Mon idée de business (une phrase) : [J'aide QUI à résoudre QUOI pour obtenir QUEL RÉSULTAT]
-> Le marché / créneau : [sois spécifique]
-> Concurrents que j'ai analysés : [liste-les]
-> Données brutes récupérées (colle 100+ commentaires ci-dessous) :
+> Le marché / créneau : [soyez spécifique]
+> Concurrents que j'ai analysés : [listez-les]
+> Données brutes récupérées (collez 100+ commentaires ci-dessous) :
 > ---
-> [colle toutes les données ici]
+> [collez toutes les données ici]
 > ---
 >
 > Fais tout ceci :
@@ -47,8 +47,8 @@ La plupart des lancements échouent au même endroit : le fondateur construit ce
 >
 > Ma marque : [nom]
 > Ce que je vends : [produit ou service]
-> Mon ICP (issu de la phase 1) : [colle]
-> Le langage client que j'ai récupéré (top 20 phrases) : [colle depuis la phase 1]
+> Mon ICP (issu de la phase 1) : [collez]
+> Le langage client que j'ai récupéré (top 20 phrases) : [collez depuis la phase 1]
 > 3 marques que j'admire (et pourquoi) : [ex. Liquid Death pour la rébellion, Glossier pour la chaleur, Allbirds pour le minimalisme calme]
 > 3 marques auxquelles je ne veux PAS ressembler : [ex. DTC bro générique, jargon corporate, startup IA survendue]
 >
@@ -96,11 +96,11 @@ La plupart des lancements échouent au même endroit : le fondateur construit ce
 > Tu es un stratège senior en email marketing qui a construit des welcome flows pour plus de 100 marques DTC. Écris ma séquence de bienvenue Klaviyo complète, prête à être collée dans l'éditeur Klaviyo.
 >
 > Ma marque : [nom]
-> Produit / offre : [colle]
+> Produit / offre : [collez]
 > Prix : [prix]
-> ICP : [colle depuis la phase 1]
-> Brand voice doc : [doit être chargé dans ton projet Claude, sinon colle-le ici]
-> Offre phare pour les nouveaux inscrits (code de réduction de bienvenue, livraison gratuite, etc.) : [précise]
+> ICP : [collez depuis la phase 1]
+> Brand voice doc : [doit être chargé dans votre projet Claude, sinon collez-le ici]
+> Offre phare pour les nouveaux inscrits (code de réduction de bienvenue, livraison gratuite, etc.) : [précisez]
 >
 > Écris la séquence complète de 5 emails. Pour chaque email, donne-moi :
 > - Le délai d'envoi (ex. immédiatement, +1 jour, +3 jours)
@@ -136,11 +136,11 @@ La plupart des lancements échouent au même endroit : le fondateur construit ce
 > Tu es un stratège vidéo short-form qui a écrit des hooks pour des comptes totalisant plus de 100M de vues. Génère 30 jours de hooks de contenu organique pour ma marque.
 >
 > Ma marque : [nom]
-> ICP (issu de la phase 1) : [colle]
+> ICP (issu de la phase 1) : [collez]
 > Brand voice doc : [chargé dans le projet Claude]
-> Plateforme prioritaire : [TikTok / Instagram Reels / YouTube Shorts, choisis-en une comme principale]
-> Les douleurs client (issues du doc ICP phase 1) : [colle le top 5]
-> Le langage client que j'ai récupéré (top 10 phrases) : [colle]
+> Plateforme prioritaire : [TikTok / Instagram Reels / YouTube Shorts, choisissez-en une comme principale]
+> Les douleurs client (issues du doc ICP phase 1) : [collez le top 5]
+> Le langage client que j'ai récupéré (top 10 phrases) : [collez]
 >
 > Génère 30 hooks. Chaque hook doit :
 > - Être une seule ligne qui arrête le scroll (idéalement moins de 12 mots)
@@ -212,14 +212,14 @@ La plupart des lancements échouent au même endroit : le fondateur construit ce
 > Tu es analyste customer insights pour mon business. Chaque semaine je colle ici le feedback client brut (DMs, transcripts d'appels de vente, avis, tickets support, commentaires de pubs) et tu synthétises ce qu'il faut en faire.
 >
 > Ma marque : [nom]
-> Produit / offre : [colle]
+> Produit / offre : [collez]
 > Semaine analysée : [Semaine du DATE]
 > Revenu total cette semaine : [si connu]
 > Total de nouveaux clients cette semaine : [si connu]
 >
-> Les données client brutes de cette semaine (colle tout ci-dessous : DMs, transcripts, avis, commentaires de pubs) :
+> Les données client brutes de cette semaine (collez tout ci-dessous : DMs, transcripts, avis, commentaires de pubs) :
 > ---
-> [colle]
+> [collez]
 > ---
 >
 > Fais tout ceci :

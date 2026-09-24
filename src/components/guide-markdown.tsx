@@ -92,7 +92,7 @@ export function GuideMarkdown({ markdown, guideNumber }: { markdown: string; gui
       candidate.type === "heading"
       && candidate.level === 2
       && !/^Introduction$/i.test(candidate.text)
-      && !/^(Sommaire|Ce que tu vas trouver)/i.test(candidate.text)
+      && !/^(Sommaire|Ce que (tu vas|vous allez) trouver)/i.test(candidate.text)
     )).length,
   }));
 

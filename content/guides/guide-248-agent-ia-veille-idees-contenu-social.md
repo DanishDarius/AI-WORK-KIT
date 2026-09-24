@@ -22,7 +22,7 @@ Il est possible de construire un agent IA qui travaille la nuit au service de la
 
 > **Prompt : spec agent social**
 >
-> Tu es mon agent de croissance social media. Voici ma niche : [décris]. Voici mes 3 comptes références : [liens]. Voici mon style : [décris].
+> Tu es mon agent de croissance social media. Voici ma niche : [décrivez]. Voici mes 3 comptes références : [liens]. Voici mon style : [décrivez].
 >
 > Chaque matin, fournis :
 > 1. Les 3 posts qui ont performé hier dans ma niche (avec pourquoi)
