@@ -7,8 +7,8 @@ Tu es un assistant administratif spécialisé dans la gestion de boîtes mail pr
 Ton objectif est de trier une boîte de réception en retard et de rédiger la réponse au message le plus urgent.
 
 # Contexte
-Tu es assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Tu reviens de deux jours de congé et trouves 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
-Colle ici les données du cas pratique ci-dessus (la liste des 11 emails).
+Je suis assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Je reviens de deux jours de congé et trouve 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
+Tu trouveras les données du cas pratique (la liste des 11 emails) à la fin de ce message.
 
 # Instructions
 1. Trie les 11 emails en 4 catégories : urgent à traiter aujourd'hui / à répondre cette semaine / à déléguer (précise à qui) / à archiver ou supprimer.
@@ -31,8 +31,8 @@ Tâche : Trie une boîte de réception de 11 emails en 4 catégories d'action et
 
 Contexte :
 """
-Tu es assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Tu reviens de deux jours de congé et trouves 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
-Colle ici les données du cas pratique ci-dessus (la liste des 11 emails).
+Je suis assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Je reviens de deux jours de congé et trouve 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
+Tu trouveras les données du cas pratique (la liste des 11 emails) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -53,8 +53,8 @@ Tu es un assistant administratif spécialisé dans la gestion de boîtes mail pr
 </role>
 
 <context>
-Tu es assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Tu reviens de deux jours de congé et trouves 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
-Colle ici les données du cas pratique ci-dessus (la liste des 11 emails).
+Je suis assistant(e) de direction chez Méridia Architecture (8 salariés, Lyon). Je reviens de deux jours de congé et trouve 11 emails non lus dans la boîte partagée "contact@meridia-archi.fr".
+Tu trouveras les données du cas pratique (la liste des 11 emails) à la fin de ce message.
 </context>
 
 <instructions>
@@ -83,8 +83,8 @@ Tu es un assistant administratif spécialisé dans la gestion de boîtes mail po
 Ton objectif est d'identifier les emails prioritaires du jour et de rédiger la réponse à un client mécontent.
 
 # Contexte
-Tu gères seul(e) "Studio K", un salon de coiffure à Lille. Tu consultes ta boîte mail le lundi matin après un week-end sans connexion.
-Colle ici les données du cas pratique ci-dessus (la liste des 8 emails).
+Je gère seul(e) "Studio K", un salon de coiffure à Lille. Je consulte ma boîte mail le lundi matin après un week-end sans connexion.
+Tu trouveras les données du cas pratique (la liste des 8 emails) à la fin de ce message.
 
 # Instructions
 1. Identifie les emails qui nécessitent une réponse aujourd'hui et ceux qui peuvent attendre.
@@ -107,8 +107,8 @@ Tâche : Identifie les emails prioritaires du jour parmi 8 messages et rédige l
 
 Contexte :
 """
-Tu gères seul(e) "Studio K", un salon de coiffure à Lille. Tu consultes ta boîte mail le lundi matin après un week-end sans connexion.
-Colle ici les données du cas pratique ci-dessus (la liste des 8 emails).
+Je gère seul(e) "Studio K", un salon de coiffure à Lille. Je consulte ma boîte mail le lundi matin après un week-end sans connexion.
+Tu trouveras les données du cas pratique (la liste des 8 emails) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -129,8 +129,8 @@ Tu es un assistant administratif spécialisé dans la gestion de boîtes mail po
 </role>
 
 <context>
-Tu gères seul(e) "Studio K", un salon de coiffure à Lille. Tu consultes ta boîte mail le lundi matin après un week-end sans connexion.
-Colle ici les données du cas pratique ci-dessus (la liste des 8 emails).
+Je gère seul(e) "Studio K", un salon de coiffure à Lille. Je consulte ma boîte mail le lundi matin après un week-end sans connexion.
+Tu trouveras les données du cas pratique (la liste des 8 emails) à la fin de ce message.
 </context>
 
 <instructions>
@@ -159,8 +159,8 @@ Tu es un community manager spécialisé dans les petits commerces et instituts d
 Ton objectif est de construire un calendrier de publication Instagram sur 14 jours à partir d'une liste d'idées en vrac.
 
 # Contexte
-Tu es gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier ton contenu Instagram pour les 2 prochaines semaines. Tu as listé en vrac ce que tu veux communiquer.
-Colle ici les données du cas pratique ci-dessus (les notes en vrac de Léna).
+Je suis gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier mon contenu Instagram pour les 2 prochaines semaines. J'ai listé en vrac ce que je veux communiquer.
+Tu trouveras les données du cas pratique (les notes en vrac de Léna) à la fin de ce message.
 
 # Instructions
 1. Construis un calendrier de publication sur 14 jours (jour, format (post/story/reel), thème, accroche courte).
@@ -183,8 +183,8 @@ Tâche : Construis un calendrier de publication Instagram sur 14 jours à partir
 
 Contexte :
 """
-Tu es gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier ton contenu Instagram pour les 2 prochaines semaines. Tu as listé en vrac ce que tu veux communiquer.
-Colle ici les données du cas pratique ci-dessus (les notes en vrac de Léna).
+Je suis gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier mon contenu Instagram pour les 2 prochaines semaines. J'ai listé en vrac ce que je veux communiquer.
+Tu trouveras les données du cas pratique (les notes en vrac de Léna) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -205,8 +205,8 @@ Tu es un community manager spécialisé dans les petits commerces et instituts d
 </role>
 
 <context>
-Tu es gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier ton contenu Instagram pour les 2 prochaines semaines. Tu as listé en vrac ce que tu veux communiquer.
-Colle ici les données du cas pratique ci-dessus (les notes en vrac de Léna).
+Je suis gérant(e) de l'institut "Belle Écorce" (Toulouse) et veux planifier mon contenu Instagram pour les 2 prochaines semaines. J'ai listé en vrac ce que je veux communiquer.
+Tu trouveras les données du cas pratique (les notes en vrac de Léna) à la fin de ce message.
 </context>
 
 <instructions>
@@ -235,8 +235,8 @@ Tu es un community manager spécialisé dans la communication LinkedIn pour des 
 Ton objectif est de construire un calendrier de 6 publications LinkedIn sur le mois à partir d'éléments disponibles.
 
 # Contexte
-Tu es responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
-Colle ici les données du cas pratique ci-dessus (les éléments disponibles).
+Je suis responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
+Tu trouveras les données du cas pratique (les éléments disponibles) à la fin de ce message.
 
 # Instructions
 1. Propose un calendrier de 6 publications LinkedIn sur le mois.
@@ -259,8 +259,8 @@ Tâche : Construis un calendrier de 6 publications LinkedIn sur le mois, avec un
 
 Contexte :
 """
-Tu es responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
-Colle ici les données du cas pratique ci-dessus (les éléments disponibles).
+Je suis responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
+Tu trouveras les données du cas pratique (les éléments disponibles) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -281,8 +281,8 @@ Tu es un community manager spécialisé dans la communication LinkedIn pour des 
 </role>
 
 <context>
-Tu es responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
-Colle ici les données du cas pratique ci-dessus (les éléments disponibles).
+Je suis responsable communication de "Structa Bois" (fabricant de charpentes industrielles, clientèle B2B) et dois préparer le contenu LinkedIn du mois, un canal très différent du grand public.
+Tu trouveras les données du cas pratique (les éléments disponibles) à la fin de ce message.
 </context>
 
 <instructions>
@@ -311,8 +311,8 @@ Tu es un relecteur professionnel spécialisé dans les documents administratifs 
 Ton objectif est de corriger intégralement une lettre de mission comptable avant son envoi à un client.
 
 # Contexte
-Tu travailles au cabinet et dois envoyer une lettre de mission à un nouveau client. Tu as rédigé, en tant que collaborateur (collaboratrice) junior, un premier jet rapide, à corriger avant envoi.
-Colle ici les données du cas pratique ci-dessus (le texte de la lettre de mission).
+Je travaille dans un cabinet comptable et dois envoyer une lettre de mission à un nouveau client. Un collaborateur (une collaboratrice) junior a rédigé un premier jet rapide, à corriger avant envoi.
+Tu trouveras les données du cas pratique (le texte de la lettre de mission) à la fin de ce message.
 
 # Instructions
 1. Corrige toutes les fautes d'orthographe, de grammaire et de ponctuation.
@@ -335,8 +335,8 @@ Tâche : Corrige intégralement une lettre de mission comptable et signale les i
 
 Contexte :
 """
-Tu travailles au cabinet et dois envoyer une lettre de mission à un nouveau client. Tu as rédigé, en tant que collaborateur (collaboratrice) junior, un premier jet rapide, à corriger avant envoi.
-Colle ici les données du cas pratique ci-dessus (le texte de la lettre de mission).
+Je travaille dans un cabinet comptable et dois envoyer une lettre de mission à un nouveau client. Un collaborateur (une collaboratrice) junior a rédigé un premier jet rapide, à corriger avant envoi.
+Tu trouveras les données du cas pratique (le texte de la lettre de mission) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -357,8 +357,8 @@ Tu es un relecteur professionnel spécialisé dans les documents administratifs 
 </role>
 
 <context>
-Tu travailles au cabinet et dois envoyer une lettre de mission à un nouveau client. Tu as rédigé, en tant que collaborateur (collaboratrice) junior, un premier jet rapide, à corriger avant envoi.
-Colle ici les données du cas pratique ci-dessus (le texte de la lettre de mission).
+Je travaille dans un cabinet comptable et dois envoyer une lettre de mission à un nouveau client. Un collaborateur (une collaboratrice) junior a rédigé un premier jet rapide, à corriger avant envoi.
+Tu trouveras les données du cas pratique (le texte de la lettre de mission) à la fin de ce message.
 </context>
 
 <instructions>
@@ -387,8 +387,8 @@ Tu es un relecteur professionnel spécialisé dans les comptes-rendus associatif
 Ton objectif est de corriger un compte-rendu d'assemblée générale avant son envoi aux adhérents.
 
 # Contexte
-Tu es président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à tes 60 adhérents. Le secrétaire a rédigé un brouillon que tu dois corriger.
-Colle ici les données du cas pratique ci-dessus (le texte du compte-rendu).
+Je suis président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à nos 60 adhérents. Le secrétaire a rédigé un brouillon que je dois corriger.
+Tu trouveras les données du cas pratique (le texte du compte-rendu) à la fin de ce message.
 
 # Instructions
 1. Corrige les fautes d'accord (participes passés, pluriels) et d'orthographe.
@@ -411,8 +411,8 @@ Tâche : Corrige un compte-rendu d'assemblée générale (fautes d'accord, ortho
 
 Contexte :
 """
-Tu es président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à tes 60 adhérents. Le secrétaire a rédigé un brouillon que tu dois corriger.
-Colle ici les données du cas pratique ci-dessus (le texte du compte-rendu).
+Je suis président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à nos 60 adhérents. Le secrétaire a rédigé un brouillon que je dois corriger.
+Tu trouveras les données du cas pratique (le texte du compte-rendu) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -433,8 +433,8 @@ Tu es un relecteur professionnel spécialisé dans les comptes-rendus associatif
 </role>
 
 <context>
-Tu es président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à tes 60 adhérents. Le secrétaire a rédigé un brouillon que tu dois corriger.
-Colle ici les données du cas pratique ci-dessus (le texte du compte-rendu).
+Je suis président(e) du club "Handball Club Vertois" et dois envoyer un compte-rendu d'assemblée générale à nos 60 adhérents. Le secrétaire a rédigé un brouillon que je dois corriger.
+Tu trouveras les données du cas pratique (le texte du compte-rendu) à la fin de ce message.
 </context>
 
 <instructions>
@@ -463,8 +463,8 @@ Tu es un assistant spécialisé dans la rédaction de comptes-rendus de réunion
 Ton objectif est de produire un compte-rendu structuré et exploitable de la réunion hebdomadaire de l'agence.
 
 # Contexte
-Tu travailles à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. Voici un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
-Colle ici les données du cas pratique ci-dessus (la transcription brute).
+Je travaille à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. J'ai un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
+Tu trouveras les données du cas pratique (la transcription brute) à la fin de ce message.
 
 # Instructions
 1. Nettoie le langage oral et corrige les incohérences mineures de la transcription.
@@ -487,8 +487,8 @@ Tâche : Rédige un compte-rendu structuré en trois blocs (points abordés, dé
 
 Contexte :
 """
-Tu travailles à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. Voici un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
-Colle ici les données du cas pratique ci-dessus (la transcription brute).
+Je travaille à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. J'ai un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
+Tu trouveras les données du cas pratique (la transcription brute) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -509,8 +509,8 @@ Tu es un assistant spécialisé dans la rédaction de comptes-rendus de réunion
 </role>
 
 <context>
-Tu travailles à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. Voici un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
-Colle ici les données du cas pratique ci-dessus (la transcription brute).
+Je travaille à l'agence "Pixel & Sens" (6 salariés) et dois traiter la transcription de la réunion hebdomadaire. J'ai un extrait brut de la transcription automatique (non corrigée, avec les défauts habituels d'une transcription).
+Tu trouveras les données du cas pratique (la transcription brute) à la fin de ce message.
 </context>
 
 <instructions>
@@ -539,8 +539,8 @@ Tu es un rédacteur web spécialisé dans les articles "portrait" à partir d'in
 Ton objectif est de produire un résumé structuré et fidèle utilisable pour un article web.
 
 # Contexte
-Tu es chargé(e) de communication et tu interviewes un boulanger pour un article "portrait" destiné au site web de la ville. Transcription brute de l'enregistrement :
-Colle ici les données du cas pratique ci-dessus (la transcription brute).
+Je suis chargé(e) de communication et j'ai interviewé un boulanger pour un article "portrait" destiné au site web de la ville. J'ai la transcription brute de l'enregistrement.
+Tu trouveras les données du cas pratique (la transcription brute) à la fin de ce message.
 
 # Instructions
 1. Rédige un résumé structuré en 4 à 6 phrases utilisables telles quelles pour un article web.
@@ -563,8 +563,8 @@ Tâche : Résume une interview retranscrite en 4 à 6 phrases fidèles, utilisab
 
 Contexte :
 """
-Tu es chargé(e) de communication et tu interviewes un boulanger pour un article "portrait" destiné au site web de la ville. Transcription brute de l'enregistrement :
-Colle ici les données du cas pratique ci-dessus (la transcription brute).
+Je suis chargé(e) de communication et j'ai interviewé un boulanger pour un article "portrait" destiné au site web de la ville. J'ai la transcription brute de l'enregistrement.
+Tu trouveras les données du cas pratique (la transcription brute) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -585,8 +585,8 @@ Tu es un rédacteur web spécialisé dans les articles "portrait" à partir d'in
 </role>
 
 <context>
-Tu es chargé(e) de communication et tu interviewes un boulanger pour un article "portrait" destiné au site web de la ville. Transcription brute de l'enregistrement :
-Colle ici les données du cas pratique ci-dessus (la transcription brute).
+Je suis chargé(e) de communication et j'ai interviewé un boulanger pour un article "portrait" destiné au site web de la ville. J'ai la transcription brute de l'enregistrement.
+Tu trouveras les données du cas pratique (la transcription brute) à la fin de ce message.
 </context>
 
 <instructions>
@@ -615,8 +615,8 @@ Tu es un assistant spécialisé dans la gestion d'agendas de cabinets médicaux.
 Ton objectif est de construire un planning hebdomadaire révisé intégrant 4 nouvelles demandes de rendez-vous.
 
 # Contexte
-Tu es secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
-Colle ici les données du cas pratique ci-dessus (l'agenda actuel et les 4 demandes reçues).
+Je suis secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
+Tu trouveras les données du cas pratique (l'agenda actuel et les 4 demandes reçues) à la fin de ce message.
 
 # Instructions
 1. Propose un planning révisé de la semaine intégrant les 4 demandes reçues, en respectant les contraintes déjà fixées dans l'agenda.
@@ -639,8 +639,8 @@ Tâche : Construis un planning hebdomadaire révisé intégrant 4 nouvelles dema
 
 Contexte :
 """
-Tu es secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
-Colle ici les données du cas pratique ci-dessus (l'agenda actuel et les 4 demandes reçues).
+Je suis secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
+Tu trouveras les données du cas pratique (l'agenda actuel et les 4 demandes reçues) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -661,8 +661,8 @@ Tu es un assistant spécialisé dans la gestion d'agendas de cabinets médicaux.
 </role>
 
 <context>
-Tu es secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
-Colle ici les données du cas pratique ci-dessus (l'agenda actuel et les 4 demandes reçues).
+Je suis secrétaire médicale du cabinet du Dr Aïcha Benali et dois organiser la semaine du 14 au 18 septembre à partir de plusieurs demandes reçues.
+Tu trouveras les données du cas pratique (l'agenda actuel et les 4 demandes reçues) à la fin de ce message.
 </context>
 
 <instructions>
@@ -691,8 +691,8 @@ Tu es un assistant spécialisé dans la gestion d'agenda de consultants indépen
 Ton objectif est de construire un planning hebdomadaire respectant les contraintes de mission en cours et de recommander un choix de créneau à un prospect.
 
 # Contexte
-Tu es consultant IT indépendant. Tu dois organiser tes rendez-vous clients de la semaine tout en gardant du temps pour tes missions en cours.
-Colle ici les données du cas pratique ci-dessus (les contraintes connues et les 3 demandes reçues).
+Je suis consultant IT indépendant. Je dois organiser mes rendez-vous clients de la semaine tout en gardant du temps pour mes missions en cours.
+Tu trouveras les données du cas pratique (les contraintes connues et les 3 demandes reçues) à la fin de ce message.
 
 # Instructions
 1. Construis un planning de la semaine (lundi à vendredi) qui respecte les contraintes de la mission en cours et le vendredi après-midi bloqué.
@@ -715,8 +715,8 @@ Tâche : Construis un planning hebdomadaire respectant les contraintes de missio
 
 Contexte :
 """
-Tu es consultant IT indépendant. Tu dois organiser tes rendez-vous clients de la semaine tout en gardant du temps pour tes missions en cours.
-Colle ici les données du cas pratique ci-dessus (les contraintes connues et les 3 demandes reçues).
+Je suis consultant IT indépendant. Je dois organiser mes rendez-vous clients de la semaine tout en gardant du temps pour mes missions en cours.
+Tu trouveras les données du cas pratique (les contraintes connues et les 3 demandes reçues) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -737,8 +737,8 @@ Tu es un assistant spécialisé dans la gestion d'agenda de consultants indépen
 </role>
 
 <context>
-Tu es consultant IT indépendant. Tu dois organiser tes rendez-vous clients de la semaine tout en gardant du temps pour tes missions en cours.
-Colle ici les données du cas pratique ci-dessus (les contraintes connues et les 3 demandes reçues).
+Je suis consultant IT indépendant. Je dois organiser mes rendez-vous clients de la semaine tout en gardant du temps pour mes missions en cours.
+Tu trouveras les données du cas pratique (les contraintes connues et les 3 demandes reçues) à la fin de ce message.
 </context>
 
 <instructions>
@@ -767,8 +767,8 @@ Tu es un spécialiste du support client, chargé de construire des bases de conn
 Ton objectif est de trier des questions clients et de rédiger les réponses FAQ correspondantes.
 
 # Contexte
-Tu gères "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Tu souhaites créer une FAQ pour désengorger le support.
-Colle ici les données du cas pratique ci-dessus (les 10 questions reçues et les informations connues de l'entreprise).
+Je gère "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Je souhaite créer une FAQ pour désengorger le support.
+Tu trouveras les données du cas pratique (les 10 questions reçues et les informations connues de l'entreprise) à la fin de ce message.
 
 # Instructions
 1. Classe les 10 questions en "peut être répondu par une FAQ automatique" vs "nécessite une intervention humaine au cas par cas".
@@ -791,8 +791,8 @@ Tâche : Trie 10 questions clients en "automatisables" ou "à escalader", et ré
 
 Contexte :
 """
-Tu gères "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Tu souhaites créer une FAQ pour désengorger le support.
-Colle ici les données du cas pratique ci-dessus (les 10 questions reçues et les informations connues de l'entreprise).
+Je gère "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Je souhaite créer une FAQ pour désengorger le support.
+Tu trouveras les données du cas pratique (les 10 questions reçues et les informations connues de l'entreprise) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -813,8 +813,8 @@ Tu es un spécialiste du support client, chargé de construire des bases de conn
 </role>
 
 <context>
-Tu gères "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Tu souhaites créer une FAQ pour désengorger le support.
-Colle ici les données du cas pratique ci-dessus (les 10 questions reçues et les informations connues de l'entreprise).
+Je gère "Petits Marmots", une boutique en ligne qui reçoit de plus en plus de questions répétitives par email. Je souhaite créer une FAQ pour désengorger le support.
+Tu trouveras les données du cas pratique (les 10 questions reçues et les informations connues de l'entreprise) à la fin de ce message.
 </context>
 
 <instructions>
@@ -843,8 +843,8 @@ Tu es un spécialiste du support client, chargé de construire des FAQ pour des 
 Ton objectif est de rédiger une FAQ complète pour le site web d'une salle de sport à partir des questions les plus posées à l'accueil.
 
 # Contexte
-Tu gères "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
-Colle ici les données du cas pratique ci-dessus (les 10 questions et les informations connues de la salle).
+Je gère "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
+Tu trouveras les données du cas pratique (les 10 questions et les informations connues de la salle) à la fin de ce message.
 
 # Instructions
 1. Rédige la FAQ complète (question reformulée si besoin + réponse) pour ce qui peut être répondu avec les informations disponibles.
@@ -867,8 +867,8 @@ Tâche : Rédige une FAQ complète pour le site web d'une salle de sport à part
 
 Contexte :
 """
-Tu gères "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
-Colle ici les données du cas pratique ci-dessus (les 10 questions et les informations connues de la salle).
+Je gère "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
+Tu trouveras les données du cas pratique (les 10 questions et les informations connues de la salle) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -889,8 +889,8 @@ Tu es un spécialiste du support client, chargé de construire des FAQ pour des 
 </role>
 
 <context>
-Tu gères "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
-Colle ici les données du cas pratique ci-dessus (les 10 questions et les informations connues de la salle).
+Je gère "Fit Zone", une salle de sport de quartier, et veux créer une FAQ pour son site web à partir des questions les plus posées à l'accueil.
+Tu trouveras les données du cas pratique (les 10 questions et les informations connues de la salle) à la fin de ce message.
 </context>
 
 <instructions>
@@ -919,8 +919,8 @@ Tu es un analyste marketing spécialisé dans la veille concurrentielle.
 Ton objectif est de rédiger une note de veille mensuelle synthétique sur 3 concurrents directs.
 
 # Contexte
-Tu es responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ta direction te demande une note de veille mensuelle sur 3 concurrents directs.
-Colle ici les données du cas pratique ci-dessus (les notes brutes collectées).
+Je suis responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ma direction me demande une note de veille mensuelle sur 3 concurrents directs.
+Tu trouveras les données du cas pratique (les notes brutes collectées) à la fin de ce message.
 
 # Instructions
 1. Organise la note par concurrent (A, B, C), en synthétisant les faits marquants de chacun.
@@ -943,8 +943,8 @@ Tâche : Rédige une note de veille mensuelle synthétique organisée par concur
 
 Contexte :
 """
-Tu es responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ta direction te demande une note de veille mensuelle sur 3 concurrents directs.
-Colle ici les données du cas pratique ci-dessus (les notes brutes collectées).
+Je suis responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ma direction me demande une note de veille mensuelle sur 3 concurrents directs.
+Tu trouveras les données du cas pratique (les notes brutes collectées) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -965,8 +965,8 @@ Tu es un analyste marketing spécialisé dans la veille concurrentielle.
 </role>
 
 <context>
-Tu es responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ta direction te demande une note de veille mensuelle sur 3 concurrents directs.
-Colle ici les données du cas pratique ci-dessus (les notes brutes collectées).
+Je suis responsable marketing chez "Botanika", une marque française de cosmétiques bio (crèmes visage, huiles). Ma direction me demande une note de veille mensuelle sur 3 concurrents directs.
+Tu trouveras les données du cas pratique (les notes brutes collectées) à la fin de ce message.
 </context>
 
 <instructions>
@@ -995,8 +995,8 @@ Tu es un analyste spécialisé dans la synthèse d'informations de marché pour 
 Ton objectif est de produire une synthèse claire distinguant faits vérifiés et hypothèses avant une décision de diversification.
 
 # Contexte
-Tu es menuisier ébéniste indépendant (Nantes) et envisages de te lancer dans l'agencement de cuisines sur-mesure en complément de ton activité meubles. Tu as demandé à ton neveu, étudiant en marketing, de rassembler des informations avant de te décider.
-Colle ici les données du cas pratique ci-dessus (les informations collectées par le neveu).
+Je suis menuisier ébéniste indépendant (Nantes) et envisage de me lancer dans l'agencement de cuisines sur-mesure en complément de mon activité meubles. J'ai demandé à mon neveu, étudiant en marketing, de rassembler des informations avant de me décider.
+Tu trouveras les données du cas pratique (les informations collectées par le neveu) à la fin de ce message.
 
 # Instructions
 1. Rédige une synthèse pour Thomas à partir des informations collectées.
@@ -1019,8 +1019,8 @@ Tâche : Produis une synthèse distinguant faits vérifiés et hypothèses, et p
 
 Contexte :
 """
-Tu es menuisier ébéniste indépendant (Nantes) et envisages de te lancer dans l'agencement de cuisines sur-mesure en complément de ton activité meubles. Tu as demandé à ton neveu, étudiant en marketing, de rassembler des informations avant de te décider.
-Colle ici les données du cas pratique ci-dessus (les informations collectées par le neveu).
+Je suis menuisier ébéniste indépendant (Nantes) et envisage de me lancer dans l'agencement de cuisines sur-mesure en complément de mon activité meubles. J'ai demandé à mon neveu, étudiant en marketing, de rassembler des informations avant de me décider.
+Tu trouveras les données du cas pratique (les informations collectées par le neveu) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1041,8 +1041,8 @@ Tu es un analyste spécialisé dans la synthèse d'informations de marché pour 
 </role>
 
 <context>
-Tu es menuisier ébéniste indépendant (Nantes) et envisages de te lancer dans l'agencement de cuisines sur-mesure en complément de ton activité meubles. Tu as demandé à ton neveu, étudiant en marketing, de rassembler des informations avant de te décider.
-Colle ici les données du cas pratique ci-dessus (les informations collectées par le neveu).
+Je suis menuisier ébéniste indépendant (Nantes) et envisage de me lancer dans l'agencement de cuisines sur-mesure en complément de mon activité meubles. J'ai demandé à mon neveu, étudiant en marketing, de rassembler des informations avant de me décider.
+Tu trouveras les données du cas pratique (les informations collectées par le neveu) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1071,8 +1071,8 @@ Tu es un analyste de données spécialisé dans le commerce de détail.
 Ton objectif est d'analyser une baisse de chiffre d'affaires et de produire un mini-rapport avec recommandation.
 
 # Contexte
-Tu gères une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Tu veux comprendre pourquoi ton chiffre d'affaires a baissé au 2e trimestre.
-Colle ici les données du cas pratique ci-dessus (l'export caisse mensuel et les notes de Nadia).
+Je gère une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Je veux comprendre pourquoi mon chiffre d'affaires a baissé au 2e trimestre.
+Tu trouveras les données du cas pratique (l'export caisse mensuel et les notes de Nadia) à la fin de ce message.
 
 # Instructions
 1. Analyse les données pour identifier la tendance du trimestre avril-juin comparée au trimestre janvier-mars.
@@ -1095,8 +1095,8 @@ Tâche : Analyse une baisse de chiffre d'affaires trimestrielle et rédige un mi
 
 Contexte :
 """
-Tu gères une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Tu veux comprendre pourquoi ton chiffre d'affaires a baissé au 2e trimestre.
-Colle ici les données du cas pratique ci-dessus (l'export caisse mensuel et les notes de Nadia).
+Je gère une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Je veux comprendre pourquoi mon chiffre d'affaires a baissé au 2e trimestre.
+Tu trouveras les données du cas pratique (l'export caisse mensuel et les notes de Nadia) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1117,8 +1117,8 @@ Tu es un analyste de données spécialisé dans le commerce de détail.
 </role>
 
 <context>
-Tu gères une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Tu veux comprendre pourquoi ton chiffre d'affaires a baissé au 2e trimestre.
-Colle ici les données du cas pratique ci-dessus (l'export caisse mensuel et les notes de Nadia).
+Je gère une boutique de prêt-à-porter "Alto Mode" à Bordeaux. Je veux comprendre pourquoi mon chiffre d'affaires a baissé au 2e trimestre.
+Tu trouveras les données du cas pratique (l'export caisse mensuel et les notes de Nadia) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1147,8 +1147,8 @@ Tu es un analyste RH spécialisé dans le suivi de l'absentéisme en entreprise.
 Ton objectif est de calculer les taux d'absentéisme par service et de rédiger une synthèse pour le comité de direction.
 
 # Contexte
-Tu travailles au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
-Colle ici les données du cas pratique ci-dessus (les données d'absentéisme par service, T1 et T2 2026).
+Je travaille au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
+Tu trouveras les données du cas pratique (les données d'absentéisme par service, T1 et T2 2026) à la fin de ce message.
 
 # Instructions
 1. Calcule le taux d'absentéisme par service (jours d'absence / (nb salariés × 63 jours ouvrés au T2), exprimé en %).
@@ -1171,8 +1171,8 @@ Tâche : Calcule les taux d'absentéisme par service et rédige une synthèse d'
 
 Contexte :
 """
-Tu travailles au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
-Colle ici les données du cas pratique ci-dessus (les données d'absentéisme par service, T1 et T2 2026).
+Je travaille au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
+Tu trouveras les données du cas pratique (les données d'absentéisme par service, T1 et T2 2026) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1193,8 +1193,8 @@ Tu es un analyste RH spécialisé dans le suivi de l'absentéisme en entreprise.
 </role>
 
 <context>
-Tu travailles au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
-Colle ici les données du cas pratique ci-dessus (les données d'absentéisme par service, T1 et T2 2026).
+Je travaille au service RH de "Mécatech Industries" (140 salariés) et dois préparer un rapport trimestriel sur l'absentéisme pour le comité de direction.
+Tu trouveras les données du cas pratique (les données d'absentéisme par service, T1 et T2 2026) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1223,8 +1223,8 @@ Tu es un spécialiste du prompt engineering pour la génération d'images IA à 
 Ton objectif est de traduire un brief flou en un prompt détaillé et exploitable par un générateur d'images.
 
 # Contexte
-Tu es le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Tu lances une nouvelle gamme "Infusions d'Automne" et as besoin de visuels pour tes réseaux sociaux, sans budget photographe.
-Colle ici les données du cas pratique ci-dessus (le brief du fondateur).
+Je suis le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Je lance une nouvelle gamme "Infusions d'Automne" et ai besoin de visuels pour mes réseaux sociaux, sans budget photographe.
+Tu trouveras les données du cas pratique (le brief du fondateur) à la fin de ce message.
 
 # Instructions
 1. Rédige un prompt détaillé et structuré pour un générateur d'images IA à partir de ce brief (sujet précis, style, ambiance/éclairage, palette de couleurs, cadrage, format).
@@ -1246,8 +1246,8 @@ Tâche : Traduis un brief marketing en langage flou en un prompt de génération
 
 Contexte :
 """
-Tu es le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Tu lances une nouvelle gamme "Infusions d'Automne" et as besoin de visuels pour tes réseaux sociaux, sans budget photographe.
-Colle ici les données du cas pratique ci-dessus (le brief du fondateur).
+Je suis le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Je lance une nouvelle gamme "Infusions d'Automne" et ai besoin de visuels pour mes réseaux sociaux, sans budget photographe.
+Tu trouveras les données du cas pratique (le brief du fondateur) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1268,8 +1268,8 @@ Tu es un spécialiste du prompt engineering pour la génération d'images IA à 
 </role>
 
 <context>
-Tu es le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Tu lances une nouvelle gamme "Infusions d'Automne" et as besoin de visuels pour tes réseaux sociaux, sans budget photographe.
-Colle ici les données du cas pratique ci-dessus (le brief du fondateur).
+Je suis le fondateur (la fondatrice) de "Thé des Cimes" (petite marque de thé en vrac). Je lance une nouvelle gamme "Infusions d'Automne" et ai besoin de visuels pour mes réseaux sociaux, sans budget photographe.
+Tu trouveras les données du cas pratique (le brief du fondateur) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1297,8 +1297,8 @@ Tu es un spécialiste du prompt engineering pour la génération d'images IA à 
 Ton objectif est de traduire un contre-exemple donné par le client en direction positive précise pour un prompt de génération d'image.
 
 # Contexte
-Tu es responsable marketing de la jeune pousse "Calmly" et as besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
-Colle ici les données du cas pratique ci-dessus (le brief du responsable marketing).
+Je suis responsable marketing de la jeune pousse "Calmly" et ai besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
+Tu trouveras les données du cas pratique (le brief du responsable marketing) à la fin de ce message.
 
 # Instructions
 1. Rédige le prompt détaillé pour l'IA en traduisant le contre-exemple donné ("pas de personne en tailleur sur un rocher") en direction positive précise.
@@ -1321,8 +1321,8 @@ Tâche : Traduis un contre-exemple donné par le client en direction positive pr
 
 Contexte :
 """
-Tu es responsable marketing de la jeune pousse "Calmly" et as besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
-Colle ici les données du cas pratique ci-dessus (le brief du responsable marketing).
+Je suis responsable marketing de la jeune pousse "Calmly" et ai besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
+Tu trouveras les données du cas pratique (le brief du responsable marketing) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1343,8 +1343,8 @@ Tu es un spécialiste du prompt engineering pour la génération d'images IA à 
 </role>
 
 <context>
-Tu es responsable marketing de la jeune pousse "Calmly" et as besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
-Colle ici les données du cas pratique ci-dessus (le brief du responsable marketing).
+Je suis responsable marketing de la jeune pousse "Calmly" et ai besoin d'un visuel pour illustrer un article de blog sur "les bienfaits de la méditation au travail", destiné à un public de cadres en entreprise.
+Tu trouveras les données du cas pratique (le brief du responsable marketing) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1373,8 +1373,8 @@ Tu es un spécialiste de la qualité des données CRM, spécialisé dans la déd
 Ton objectif est d'identifier les doublons d'une base fusionnée et de proposer les fiches consolidées.
 
 # Contexte
-Tu travailles au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Tu dois nettoyer la base avant import dans le CRM.
-Colle ici les données du cas pratique ci-dessus (l'extrait de la base fusionnée, 8 lignes).
+Je travaille au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Je dois nettoyer la base avant import dans le CRM.
+Tu trouveras les données du cas pratique (l'extrait de la base fusionnée, 8 lignes) à la fin de ce message.
 
 # Instructions
 1. Identifie les doublons probables, en justifiant ton raisonnement pour chaque cas ambigu (notamment les lignes qui pourraient représenter la même personne avec des coordonnées différentes).
@@ -1397,8 +1397,8 @@ Tâche : Identifie les doublons d'une base client fusionnée, propose les fiches
 
 Contexte :
 """
-Tu travailles au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Tu dois nettoyer la base avant import dans le CRM.
-Colle ici les données du cas pratique ci-dessus (l'extrait de la base fusionnée, 8 lignes).
+Je travaille au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Je dois nettoyer la base avant import dans le CRM.
+Tu trouveras les données du cas pratique (l'extrait de la base fusionnée, 8 lignes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1419,8 +1419,8 @@ Tu es un spécialiste de la qualité des données CRM, spécialisé dans la déd
 </role>
 
 <context>
-Tu travailles au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Tu dois nettoyer la base avant import dans le CRM.
-Colle ici les données du cas pratique ci-dessus (l'extrait de la base fusionnée, 8 lignes).
+Je travaille au cabinet "AssurConseil", qui fusionne deux fichiers clients suite au rachat d'un confrère. Je dois nettoyer la base avant import dans le CRM.
+Tu trouveras les données du cas pratique (l'extrait de la base fusionnée, 8 lignes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1449,8 +1449,8 @@ Tu es un spécialiste de la qualification de bases de contacts commerciaux.
 Ton objectif est de classer 6 contacts selon leur niveau d'engagement avant une campagne de relance.
 
 # Contexte
-Tu travailles chez "FormaPlus" et veux qualifier ta base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
-Colle ici les données du cas pratique ci-dessus (l'extrait de la base à qualifier, 6 contacts).
+Je travaille chez "FormaPlus" et veux qualifier notre base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
+Tu trouveras les données du cas pratique (l'extrait de la base à qualifier, 6 contacts) à la fin de ce message.
 
 # Instructions
 1. Classe ces 6 contacts en 3 catégories : prospect chaud à contacter en priorité / à nourrir avec du contenu avant contact commercial / à retirer ou vérifier avant toute campagne.
@@ -1472,8 +1472,8 @@ Tâche : Classe 6 contacts en 3 catégories d'engagement (prospect chaud / à no
 
 Contexte :
 """
-Tu travailles chez "FormaPlus" et veux qualifier ta base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
-Colle ici les données du cas pratique ci-dessus (l'extrait de la base à qualifier, 6 contacts).
+Je travaille chez "FormaPlus" et veux qualifier notre base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
+Tu trouveras les données du cas pratique (l'extrait de la base à qualifier, 6 contacts) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1494,8 +1494,8 @@ Tu es un spécialiste de la qualification de bases de contacts commerciaux.
 </role>
 
 <context>
-Tu travailles chez "FormaPlus" et veux qualifier ta base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
-Colle ici les données du cas pratique ci-dessus (l'extrait de la base à qualifier, 6 contacts).
+Je travaille chez "FormaPlus" et veux qualifier notre base de contacts avant une campagne de relance commerciale, en distinguant les prospects chauds des contacts obsolètes.
+Tu trouveras les données du cas pratique (l'extrait de la base à qualifier, 6 contacts) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1523,8 +1523,8 @@ Tu es un assistant comptable spécialisé dans la préparation de saisies à par
 Ton objectif est de préparer un tableau de saisie comptable à partir d'une facture partiellement illisible.
 
 # Contexte
-Tu gères le garage "Auto Services Moreau". Tu reçois tes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans ton logiciel de comptabilité.
-Colle ici les données du cas pratique ci-dessus (le contenu retranscrit de la facture).
+Je gère le garage "Auto Services Moreau". Je reçois mes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans mon logiciel de comptabilité.
+Tu trouveras les données du cas pratique (le contenu retranscrit de la facture) à la fin de ce message.
 
 # Instructions
 1. Prépare un tableau de saisie comptable avec les champs : fournisseur, n° facture, date, montant HT, TVA, montant TTC, échéance de paiement.
@@ -1546,8 +1546,8 @@ Tâche : Prépare un tableau de saisie comptable à partir d'une facture partiel
 
 Contexte :
 """
-Tu gères le garage "Auto Services Moreau". Tu reçois tes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans ton logiciel de comptabilité.
-Colle ici les données du cas pratique ci-dessus (le contenu retranscrit de la facture).
+Je gère le garage "Auto Services Moreau". Je reçois mes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans mon logiciel de comptabilité.
+Tu trouveras les données du cas pratique (le contenu retranscrit de la facture) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1568,8 +1568,8 @@ Tu es un assistant comptable spécialisé dans la préparation de saisies à par
 </role>
 
 <context>
-Tu gères le garage "Auto Services Moreau". Tu reçois tes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans ton logiciel de comptabilité.
-Colle ici les données du cas pratique ci-dessus (le contenu retranscrit de la facture).
+Je gère le garage "Auto Services Moreau". Je reçois mes factures fournisseurs par email en pièce jointe PDF et dois préparer leur saisie dans mon logiciel de comptabilité.
+Tu trouveras les données du cas pratique (le contenu retranscrit de la facture) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1597,8 +1597,8 @@ Tu es un assistant administratif spécialisé dans la saisie de bulletins d'adh�
 Ton objectif est de préparer le tableau de saisie de 3 adhésions et de lister les points à clarifier avec les adhérents.
 
 # Contexte
-Tu es trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
-Colle ici les données du cas pratique ci-dessus (le contenu des 3 bulletins).
+Je suis trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
+Tu trouveras les données du cas pratique (le contenu des 3 bulletins) à la fin de ce message.
 
 # Instructions
 1. Prépare le tableau de saisie des 3 adhésions avec toutes les colonnes utiles (nom, coordonnées, type d'adhésion, moyen de paiement, etc.).
@@ -1621,8 +1621,8 @@ Tâche : Prépare le tableau de saisie de 3 adhésions et liste les points à cl
 
 Contexte :
 """
-Tu es trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
-Colle ici les données du cas pratique ci-dessus (le contenu des 3 bulletins).
+Je suis trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
+Tu trouveras les données du cas pratique (le contenu des 3 bulletins) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1643,8 +1643,8 @@ Tu es un assistant administratif spécialisé dans la saisie de bulletins d'adh�
 </role>
 
 <context>
-Tu es trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
-Colle ici les données du cas pratique ci-dessus (le contenu des 3 bulletins).
+Je suis trésorière bénévole de l'association "Les Amis du Théâtre" et dois saisir dans un tableur les bulletins d'adhésion papier reçus par courrier ce mois-ci.
+Tu trouveras les données du cas pratique (le contenu des 3 bulletins) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1673,8 +1673,8 @@ Tu es un assistant juridique spécialisé dans l'organisation de dossiers numér
 Ton objectif est de proposer une convention de nommage et de renommer les fichiers d'un dossier avant une audience.
 
 # Contexte
-Tu es assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
-Colle ici les données du cas pratique ci-dessus (la liste des fichiers actuels et les éléments de contexte connus sur eux).
+Je suis assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
+Tu trouveras les données du cas pratique (la liste des fichiers actuels et les éléments de contexte connus sur eux) à la fin de ce message.
 
 # Instructions
 1. Propose une convention de nommage cohérente pour ce dossier, avec un exemple de format type.
@@ -1697,8 +1697,8 @@ Tâche : Propose une convention de nommage, renomme les fichiers identifiables d
 
 Contexte :
 """
-Tu es assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
-Colle ici les données du cas pratique ci-dessus (la liste des fichiers actuels et les éléments de contexte connus sur eux).
+Je suis assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
+Tu trouveras les données du cas pratique (la liste des fichiers actuels et les éléments de contexte connus sur eux) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1719,8 +1719,8 @@ Tu es un assistant juridique spécialisé dans l'organisation de dossiers numér
 </role>
 
 <context>
-Tu es assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
-Colle ici les données du cas pratique ci-dessus (la liste des fichiers actuels et les éléments de contexte connus sur eux).
+Je suis assistant(e) juridique du cabinet "Vasseur & Partners" et dois remettre de l'ordre dans le dossier numérique d'un client avant une audience.
+Tu trouveras les données du cas pratique (la liste des fichiers actuels et les éléments de contexte connus sur eux) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1749,8 +1749,8 @@ Tu es un assistant administratif spécialisé dans le classement de justificatif
 Ton objectif est de proposer une arborescence de classement par catégorie de dépense et de ranger chaque fichier existant.
 
 # Contexte
-Tu es graphiste indépendante et dois classer tes justificatifs de dépenses professionnelles de l'année pour ta déclaration fiscale annuelle. Tes fichiers sont actuellement dans un seul dossier "Factures divers".
-Colle ici les données du cas pratique ci-dessus (la liste des 12 fichiers présents).
+Je suis graphiste indépendante et dois classer mes justificatifs de dépenses professionnelles de l'année pour ma déclaration fiscale annuelle. Mes fichiers sont actuellement dans un seul dossier "Factures divers".
+Tu trouveras les données du cas pratique (la liste des 12 fichiers présents) à la fin de ce message.
 
 # Instructions
 1. Propose une arborescence de classement par catégorie de dépense (abonnements logiciels, matériel, formation, frais de déplacement/repas, assurances).
@@ -1773,8 +1773,8 @@ Tâche : Propose une arborescence de classement par catégorie de dépense et ra
 
 Contexte :
 """
-Tu es graphiste indépendante et dois classer tes justificatifs de dépenses professionnelles de l'année pour ta déclaration fiscale annuelle. Tes fichiers sont actuellement dans un seul dossier "Factures divers".
-Colle ici les données du cas pratique ci-dessus (la liste des 12 fichiers présents).
+Je suis graphiste indépendante et dois classer mes justificatifs de dépenses professionnelles de l'année pour ma déclaration fiscale annuelle. Mes fichiers sont actuellement dans un seul dossier "Factures divers".
+Tu trouveras les données du cas pratique (la liste des 12 fichiers présents) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1795,8 +1795,8 @@ Tu es un assistant administratif spécialisé dans le classement de justificatif
 </role>
 
 <context>
-Tu es graphiste indépendante et dois classer tes justificatifs de dépenses professionnelles de l'année pour ta déclaration fiscale annuelle. Tes fichiers sont actuellement dans un seul dossier "Factures divers".
-Colle ici les données du cas pratique ci-dessus (la liste des 12 fichiers présents).
+Je suis graphiste indépendante et dois classer mes justificatifs de dépenses professionnelles de l'année pour ma déclaration fiscale annuelle. Mes fichiers sont actuellement dans un seul dossier "Factures divers".
+Tu trouveras les données du cas pratique (la liste des 12 fichiers présents) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1825,8 +1825,8 @@ Tu es un assistant spécialisé dans l'analyse comparative de devis fournisseurs
 Ton objectif est de comparer deux devis clause par clause et de formuler une recommandation argumentée.
 
 # Contexte
-Tu gères le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de ton fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
-Colle ici les données du cas pratique ci-dessus (les devis A et B).
+Je gère le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de mon fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
+Tu trouveras les données du cas pratique (les devis A et B) à la fin de ce message.
 
 # Instructions
 1. Construis un tableau comparatif clause par clause des deux devis.
@@ -1849,8 +1849,8 @@ Tâche : Compare deux devis clause par clause et formule une recommandation argu
 
 Contexte :
 """
-Tu gères le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de ton fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
-Colle ici les données du cas pratique ci-dessus (les devis A et B).
+Je gère le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de mon fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
+Tu trouveras les données du cas pratique (les devis A et B) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1871,8 +1871,8 @@ Tu es un assistant spécialisé dans l'analyse comparative de devis fournisseurs
 </role>
 
 <context>
-Tu gères le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de ton fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
-Colle ici les données du cas pratique ci-dessus (les devis A et B).
+Je gère le restaurant "Le Comptoir Basque" et dois choisir entre deux devis reçus pour le renouvellement du contrat de mon fournisseur de linge professionnel (nappes, serviettes, tenues de cuisine).
+Tu trouveras les données du cas pratique (les devis A et B) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1901,8 +1901,8 @@ Tu es un assistant RH spécialisé dans l'analyse comparative de textes régleme
 Ton objectif est de comparer deux versions d'un article de règlement intérieur et de préparer les points clés pour une présentation au CSE.
 
 # Contexte
-Tu travailles au service RH de "Mécatech Industries" et as reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
-Colle ici les données du cas pratique ci-dessus (les deux versions de l'article 8).
+Je travaille au service RH de "Mécatech Industries" et ai reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
+Tu trouveras les données du cas pratique (les deux versions de l'article 8) à la fin de ce message.
 
 # Instructions
 1. Liste précisément chaque changement entre les deux versions (ajout, suppression, modification).
@@ -1925,8 +1925,8 @@ Tâche : Compare deux versions d'un article de règlement intérieur, classe cha
 
 Contexte :
 """
-Tu travailles au service RH de "Mécatech Industries" et as reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
-Colle ici les données du cas pratique ci-dessus (les deux versions de l'article 8).
+Je travaille au service RH de "Mécatech Industries" et ai reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
+Tu trouveras les données du cas pratique (les deux versions de l'article 8) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -1947,8 +1947,8 @@ Tu es un assistant RH spécialisé dans l'analyse comparative de textes régleme
 </role>
 
 <context>
-Tu travailles au service RH de "Mécatech Industries" et as reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
-Colle ici les données du cas pratique ci-dessus (les deux versions de l'article 8).
+Je travaille au service RH de "Mécatech Industries" et ai reçu de la direction une nouvelle version du règlement intérieur à comparer avec la version actuelle avant présentation au CSE.
+Tu trouveras les données du cas pratique (les deux versions de l'article 8) à la fin de ce message.
 </context>
 
 <instructions>
@@ -1977,8 +1977,8 @@ Tu es un traducteur professionnel spécialisé dans les fiches produits agroalim
 Ton objectif est de traduire une fiche produit en anglais britannique professionnel adapté à un usage commercial.
 
 # Contexte
-Tu travailles chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Tu dois traduire la fiche produit en anglais pour votre distributeur britannique.
-Colle ici les données du cas pratique ci-dessus (le texte source en français).
+Je travaille chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Je dois traduire la fiche produit en anglais pour notre distributeur britannique.
+Tu trouveras les données du cas pratique (le texte source en français) à la fin de ce message.
 
 # Instructions
 1. Traduis cette fiche produit en anglais britannique professionnel adapté à un usage commercial.
@@ -2001,8 +2001,8 @@ Tâche : Traduis une fiche produit en anglais britannique professionnel, en adap
 
 Contexte :
 """
-Tu travailles chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Tu dois traduire la fiche produit en anglais pour votre distributeur britannique.
-Colle ici les données du cas pratique ci-dessus (le texte source en français).
+Je travaille chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Je dois traduire la fiche produit en anglais pour notre distributeur britannique.
+Tu trouveras les données du cas pratique (le texte source en français) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2023,8 +2023,8 @@ Tu es un traducteur professionnel spécialisé dans les fiches produits agroalim
 </role>
 
 <context>
-Tu travailles chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Tu dois traduire la fiche produit en anglais pour votre distributeur britannique.
-Colle ici les données du cas pratique ci-dessus (le texte source en français).
+Je travaille chez "Fromagerie des Alpages" (PME savoyarde), qui exporte désormais vers le Royaume-Uni. Je dois traduire la fiche produit en anglais pour notre distributeur britannique.
+Tu trouveras les données du cas pratique (le texte source en français) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2053,8 +2053,8 @@ Tu es un traducteur-adaptateur professionnel spécialisé dans la communication 
 Ton objectif est d'adapter un email professionnel en allemand, en respectant les conventions de registre du correspondant.
 
 # Contexte
-Tu es consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
-Colle ici les données du cas pratique ci-dessus (l'email original en français).
+Je suis consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
+Tu trouveras les données du cas pratique (l'email original en français) à la fin de ce message.
 
 # Instructions
 1. Adapte cet email en allemand professionnel, avec un registre plus formel et une structure plus directe que l'original français.
@@ -2077,8 +2077,8 @@ Tâche : Adapte un email professionnel en allemand en respectant un registre plu
 
 Contexte :
 """
-Tu es consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
-Colle ici les données du cas pratique ci-dessus (l'email original en français).
+Je suis consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
+Tu trouveras les données du cas pratique (l'email original en français) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2099,8 +2099,8 @@ Tu es un traducteur-adaptateur professionnel spécialisé dans la communication 
 </role>
 
 <context>
-Tu es consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
-Colle ici les données du cas pratique ci-dessus (l'email original en français).
+Je suis consultant(e) au cabinet "Stratégia Conseil" et dois adapter (pas seulement traduire) un email initialement rédigé en français pour un client allemand, dont le registre de communication professionnelle diffère.
+Tu trouveras les données du cas pratique (l'email original en français) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2129,8 +2129,8 @@ Tu es un consultant spécialisé dans la construction de présentations commerci
 Ton objectif est de construire le plan détaillé d'une présentation de 6 slides pour convaincre d'investir dans un commercial supplémentaire.
 
 # Contexte
-Tu es directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
-Colle ici les données du cas pratique ci-dessus (le brief et les données T2 2026).
+Je suis directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
+Tu trouveras les données du cas pratique (le brief et les données T2 2026) à la fin de ce message.
 
 # Instructions
 1. Construis le plan détaillé des 6 slides (titre de chaque slide + contenu clé), sans mise en forme graphique.
@@ -2153,8 +2153,8 @@ Tâche : Construis le plan détaillé d'une présentation de 6 slides visant à 
 
 Contexte :
 """
-Tu es directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
-Colle ici les données du cas pratique ci-dessus (le brief et les données T2 2026).
+Je suis directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
+Tu trouveras les données du cas pratique (le brief et les données T2 2026) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2175,8 +2175,8 @@ Tu es un consultant spécialisé dans la construction de présentations commerci
 </role>
 
 <context>
-Tu es directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
-Colle ici les données du cas pratique ci-dessus (le brief et les données T2 2026).
+Je suis directeur (directrice) commercial(e) de "Mécatech Industries" et dois présenter les résultats du T2 au comité de direction en 6 slides maximum.
+Tu trouveras les données du cas pratique (le brief et les données T2 2026) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2205,8 +2205,8 @@ Tu es un consultant spécialisé dans la construction de présentations RH pour 
 Ton objectif est de construire le plan détaillé d'une présentation de 5 slides sur un nouveau parcours d'intégration.
 
 # Contexte
-Tu es responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
-Colle ici les données du cas pratique ci-dessus (le brief et le contenu du nouveau parcours).
+Je suis responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
+Tu trouveras les données du cas pratique (le brief et le contenu du nouveau parcours) à la fin de ce message.
 
 # Instructions
 1. Construis le plan détaillé des 5 slides (titre de chaque slide + contenu de chacune).
@@ -2229,8 +2229,8 @@ Tâche : Construis le plan détaillé d'une présentation de 5 slides sur un nou
 
 Contexte :
 """
-Tu es responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
-Colle ici les données du cas pratique ci-dessus (le brief et le contenu du nouveau parcours).
+Je suis responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
+Tu trouveras les données du cas pratique (le brief et le contenu du nouveau parcours) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2251,8 +2251,8 @@ Tu es un consultant spécialisé dans la construction de présentations RH pour 
 </role>
 
 <context>
-Tu es responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
-Colle ici les données du cas pratique ci-dessus (le brief et le contenu du nouveau parcours).
+Je suis responsable formation de l'entreprise "Solaris Énergie" et dois présenter en réunion RH un nouveau parcours d'intégration pour les nouveaux salariés.
+Tu trouveras les données du cas pratique (le brief et le contenu du nouveau parcours) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2281,8 +2281,8 @@ Tu es un assistant chef de projet spécialisé dans la structuration de suivis d
 Ton objectif est de structurer des notes brutes en tableau de suivi et d'identifier les dépendances critiques du projet.
 
 # Contexte
-Tu es chef de projet à l'agence "Événements Réunis" et organises un salon professionnel pour un client dans 6 semaines. Voici les notes de suivi prises en réunion de lancement.
-Colle ici les données du cas pratique ci-dessus (les notes brutes de réunion).
+Je suis chef de projet à l'agence "Événements Réunis" et organise un salon professionnel pour un client dans 6 semaines. J'ai les notes de suivi prises en réunion de lancement.
+Tu trouveras les données du cas pratique (les notes brutes de réunion) à la fin de ce message.
 
 # Instructions
 1. Structure ces notes en un tableau de suivi d'actions avec les colonnes : action, responsable, échéance, statut, ce qui bloque éventuellement l'action.
@@ -2305,8 +2305,8 @@ Tâche : Structure des notes de réunion en tableau de suivi d'actions, identifi
 
 Contexte :
 """
-Tu es chef de projet à l'agence "Événements Réunis" et organises un salon professionnel pour un client dans 6 semaines. Voici les notes de suivi prises en réunion de lancement.
-Colle ici les données du cas pratique ci-dessus (les notes brutes de réunion).
+Je suis chef de projet à l'agence "Événements Réunis" et organise un salon professionnel pour un client dans 6 semaines. J'ai les notes de suivi prises en réunion de lancement.
+Tu trouveras les données du cas pratique (les notes brutes de réunion) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2327,8 +2327,8 @@ Tu es un assistant chef de projet spécialisé dans la structuration de suivis d
 </role>
 
 <context>
-Tu es chef de projet à l'agence "Événements Réunis" et organises un salon professionnel pour un client dans 6 semaines. Voici les notes de suivi prises en réunion de lancement.
-Colle ici les données du cas pratique ci-dessus (les notes brutes de réunion).
+Je suis chef de projet à l'agence "Événements Réunis" et organise un salon professionnel pour un client dans 6 semaines. J'ai les notes de suivi prises en réunion de lancement.
+Tu trouveras les données du cas pratique (les notes brutes de réunion) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2357,8 +2357,8 @@ Tu es un assistant en gestion de projet spécialisé dans le suivi de chantiers 
 Ton objectif est de construire un tableau de suivi avec chemin critique et d'évaluer la faisabilité de la date d'ouverture.
 
 # Contexte
-Tu es gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de ton local avant ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
-Colle ici les données du cas pratique ci-dessus (les informations éparses collectées).
+Je suis gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de mon local avant l'ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
+Tu trouveras les données du cas pratique (les informations éparses collectées) à la fin de ce message.
 
 # Instructions
 1. Construis un tableau de suivi avec les dépendances entre les différentes tâches (qui doit être fini avant que l'autre commence).
@@ -2381,8 +2381,8 @@ Tâche : Construis un tableau de suivi avec chemin critique et évalue si l'ouve
 
 Contexte :
 """
-Tu es gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de ton local avant ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
-Colle ici les données du cas pratique ci-dessus (les informations éparses collectées).
+Je suis gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de mon local avant l'ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
+Tu trouveras les données du cas pratique (les informations éparses collectées) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2403,8 +2403,8 @@ Tu es un assistant en gestion de projet spécialisé dans le suivi de chantiers 
 </role>
 
 <context>
-Tu es gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de ton local avant ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
-Colle ici les données du cas pratique ci-dessus (les informations éparses collectées).
+Je suis gérant(e) d'une future boutique et dois suivre l'avancement des travaux de rénovation de mon local avant l'ouverture prévue dans 8 semaines, à partir des échanges avec les différents corps de métier.
+Tu trouveras les données du cas pratique (les informations éparses collectées) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2433,8 +2433,8 @@ Tu es un commercial spécialisé dans la prospection B2B personnalisée pour un 
 Ton objectif est de rédiger 3 messages de prospection courts, chacun personnalisé à partir d'une information spécifique sur le prospect concerné.
 
 # Contexte
-Tu es commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
-Colle ici les données du cas pratique ci-dessus (les informations sur les 3 prospects).
+Je suis commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
+Tu trouveras les données du cas pratique (les informations sur les 3 prospects) à la fin de ce message.
 
 # Instructions
 1. Rédige 3 messages de prospection courts (email ou LinkedIn, à préciser pour chacun), un par prospect.
@@ -2457,8 +2457,8 @@ Tâche : Rédige 3 messages de prospection courts, chacun personnalisé à parti
 
 Contexte :
 """
-Tu es commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
-Colle ici les données du cas pratique ci-dessus (les informations sur les 3 prospects).
+Je suis commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
+Tu trouveras les données du cas pratique (les informations sur les 3 prospects) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2479,8 +2479,8 @@ Tu es un commercial spécialisé dans la prospection B2B personnalisée pour un 
 </role>
 
 <context>
-Tu es commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
-Colle ici les données du cas pratique ci-dessus (les informations sur les 3 prospects).
+Je suis commercial(e) chez "RestoGest" (logiciel de caisse et gestion de stock pour restaurants) et dois prospecter 3 restaurants repérés comme prospects potentiels.
+Tu trouveras les données du cas pratique (les informations sur les 3 prospects) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2509,8 +2509,8 @@ Tu es un consultant en développement commercial spécialisé dans les relances 
 Ton objectif est de rédiger 2 messages de relance adaptés à deux situations différentes de contact.
 
 # Contexte
-Tu es consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
-Colle ici les données du cas pratique ci-dessus (l'historique disponible sur les 2 prospects).
+Je suis consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
+Tu trouveras les données du cas pratique (l'historique disponible sur les 2 prospects) à la fin de ce message.
 
 # Instructions
 1. Rédige les 2 messages de relance, chacun adapté à la situation du prospect concerné.
@@ -2533,8 +2533,8 @@ Tâche : Rédige 2 messages de relance adaptés chacun à une situation de conta
 
 Contexte :
 """
-Tu es consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
-Colle ici les données du cas pratique ci-dessus (l'historique disponible sur les 2 prospects).
+Je suis consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
+Tu trouveras les données du cas pratique (l'historique disponible sur les 2 prospects) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2555,8 +2555,8 @@ Tu es un consultant en développement commercial spécialisé dans les relances 
 </role>
 
 <context>
-Tu es consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
-Colle ici les données du cas pratique ci-dessus (l'historique disponible sur les 2 prospects).
+Je suis consultant(e) indépendant(e) et dois relancer 2 prospects avec qui le contact a été établi mais qui n'ont pas répondu depuis un moment.
+Tu trouveras les données du cas pratique (l'historique disponible sur les 2 prospects) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2585,8 +2585,8 @@ Tu es un assistant commercial spécialisé dans la préparation de devis pour de
 Ton objectif est de calculer et présenter un devis structuré pour un contrat de nettoyage de bureaux.
 
 # Contexte
-Tu travailles chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
-Colle ici les données du cas pratique ci-dessus (les notes de la visite technique et les tarifs de l'entreprise).
+Je travaille chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
+Tu trouveras les données du cas pratique (les notes de la visite technique et les tarifs de l'entreprise) à la fin de ce message.
 
 # Instructions
 1. Calcule le montant mensuel du devis à partir des tarifs et de la fréquence indiqués (bureaux, sanitaires/cuisine, vitres, surcoût produits écologiques).
@@ -2609,8 +2609,8 @@ Tâche : Calcule et présente un devis structuré pour un contrat de nettoyage d
 
 Contexte :
 """
-Tu travailles chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
-Colle ici les données du cas pratique ci-dessus (les notes de la visite technique et les tarifs de l'entreprise).
+Je travaille chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
+Tu trouveras les données du cas pratique (les notes de la visite technique et les tarifs de l'entreprise) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2631,8 +2631,8 @@ Tu es un assistant commercial spécialisé dans la préparation de devis pour de
 </role>
 
 <context>
-Tu travailles chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
-Colle ici les données du cas pratique ci-dessus (les notes de la visite technique et les tarifs de l'entreprise).
+Je travaille chez "NetPro Services" et dois préparer un devis pour un prospect (cabinet d'avocats, 400m² de bureaux) suite à une visite technique.
+Tu trouveras les données du cas pratique (les notes de la visite technique et les tarifs de l'entreprise) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2661,8 +2661,8 @@ Tu es un assistant commercial spécialisé dans la préparation de devis pour de
 Ton objectif est de calculer et présenter un devis détaillé pour une identité visuelle complète.
 
 # Contexte
-Tu es graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
-Colle ici les données du cas pratique ci-dessus (le brief du client et les tarifs habituels de la graphiste).
+Je suis graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
+Tu trouveras les données du cas pratique (le brief du client et les tarifs habituels de la graphiste) à la fin de ce message.
 
 # Instructions
 1. Calcule le montant total du devis à partir des tarifs fournis et du brief (logo, charte, packaging par format, templates par visuel, majoration délai serré).
@@ -2685,8 +2685,8 @@ Tâche : Calcule et présente un devis détaillé poste par poste pour une ident
 
 Contexte :
 """
-Tu es graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
-Colle ici les données du cas pratique ci-dessus (le brief du client et les tarifs habituels de la graphiste).
+Je suis graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
+Tu trouveras les données du cas pratique (le brief du client et les tarifs habituels de la graphiste) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2707,8 +2707,8 @@ Tu es un assistant commercial spécialisé dans la préparation de devis pour de
 </role>
 
 <context>
-Tu es graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
-Colle ici les données du cas pratique ci-dessus (le brief du client et les tarifs habituels de la graphiste).
+Je suis graphiste freelance et dois chiffrer une proposition pour la création d'une identité visuelle complète pour une nouvelle marque de thé.
+Tu trouveras les données du cas pratique (le brief du client et les tarifs habituels de la graphiste) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2737,8 +2737,8 @@ Tu es un assistant comptable spécialisé dans la catégorisation de relevés ba
 Ton objectif est de catégoriser chaque ligne d'un relevé bancaire selon sa nature économique réelle.
 
 # Contexte
-Tu es coach sportif indépendant et dois catégoriser tes relevés bancaires du mois pour ta comptabilité.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
+Je suis coach sportif indépendant et dois catégoriser mes relevés bancaires du mois pour ma comptabilité.
+Tu trouveras les données du cas pratique (le relevé bancaire du mois, 10 lignes) à la fin de ce message.
 
 # Instructions
 1. Catégorise chaque ligne dans l'une des catégories suivantes : Recette prestation, Achat de petit matériel, Charge d'immobilisation (si le montant unitaire dépasse 500€ pièce), Charge d'assurance, Frais de déplacement, Abonnement/logiciel, Charge sociale, Frais de représentation/repas professionnel, Location.
@@ -2760,8 +2760,8 @@ Tâche : Catégorise chaque ligne d'un relevé bancaire de 10 lignes selon sa na
 
 Contexte :
 """
-Tu es coach sportif indépendant et dois catégoriser tes relevés bancaires du mois pour ta comptabilité.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
+Je suis coach sportif indépendant et dois catégoriser mes relevés bancaires du mois pour ma comptabilité.
+Tu trouveras les données du cas pratique (le relevé bancaire du mois, 10 lignes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2782,8 +2782,8 @@ Tu es un assistant comptable spécialisé dans la catégorisation de relevés ba
 </role>
 
 <context>
-Tu es coach sportif indépendant et dois catégoriser tes relevés bancaires du mois pour ta comptabilité.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
+Je suis coach sportif indépendant et dois catégoriser mes relevés bancaires du mois pour ma comptabilité.
+Tu trouveras les données du cas pratique (le relevé bancaire du mois, 10 lignes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2811,8 +2811,8 @@ Tu es un assistant comptable spécialisé dans la catégorisation de relevés ba
 Ton objectif est de catégoriser un relevé bancaire selon un plan comptable adapté et d'identifier l'unique ligne ambiguë.
 
 # Contexte
-Tu gères "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à ton comptable.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
+Je gère "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à mon comptable.
+Tu trouveras les données du cas pratique (le relevé bancaire du mois, 10 lignes) à la fin de ce message.
 
 # Instructions
 1. Catégorise chaque ligne dans un plan comptable adapté à cette activité (Recette chantier, Recette contrat récurrent, Achat matières/fournitures, Achat matériel/immobilisation, Charge de personnel, Charge sociale, Entretien/réparation matériel, Assurance, Équipement de sécurité).
@@ -2834,8 +2834,8 @@ Tâche : Catégorise un relevé bancaire de 10 lignes selon un plan comptable ad
 
 Contexte :
 """
-Tu gères "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à ton comptable.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
+Je gère "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à mon comptable.
+Tu trouveras les données du cas pratique (le relevé bancaire du mois, 10 lignes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2856,8 +2856,8 @@ Tu es un assistant comptable spécialisé dans la catégorisation de relevés ba
 </role>
 
 <context>
-Tu gères "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à ton comptable.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire du mois, 10 lignes).
+Je gère "Jardins & Sens" et dois catégoriser les transactions du mois avant transmission à mon comptable.
+Tu trouveras les données du cas pratique (le relevé bancaire du mois, 10 lignes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2885,8 +2885,8 @@ Tu es un assistant comptable spécialisé dans le rapprochement bancaire pour de
 Ton objectif est d'identifier les écarts entre relevé bancaire et livre de comptes, et de déterminer le solde réel exact.
 
 # Contexte
-Tu es trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
+Je suis trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
+Tu trouveras les données du cas pratique (le relevé bancaire et le livre de comptes du mois) à la fin de ce message.
 
 # Instructions
 1. Identifie précisément les écarts entre le relevé bancaire et le livre de comptes (élément présent d'un côté mais pas de l'autre).
@@ -2909,8 +2909,8 @@ Tâche : Identifie les écarts entre un relevé bancaire et un livre de comptes,
 
 Contexte :
 """
-Tu es trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
+Je suis trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
+Tu trouveras les données du cas pratique (le relevé bancaire et le livre de comptes du mois) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -2931,8 +2931,8 @@ Tu es un assistant comptable spécialisé dans le rapprochement bancaire pour de
 </role>
 
 <context>
-Tu es trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
+Je suis trésorier bénévole de l'association "Vivre à Bellevue" et dois rapprocher le relevé bancaire du mois avec le livre de comptes tenu par l'association.
+Tu trouveras les données du cas pratique (le relevé bancaire et le livre de comptes du mois) à la fin de ce message.
 </context>
 
 <instructions>
@@ -2961,8 +2961,8 @@ Tu es un assistant comptable spécialisé dans le rapprochement bancaire pour de
 Ton objectif est d'identifier les écarts entre relevé bancaire et livre de comptes, et de signaler celui nécessitant une action urgente.
 
 # Contexte
-Tu es secrétaire du cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
+Je suis secrétaire d'un cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
+Tu trouveras les données du cas pratique (le relevé bancaire et le livre de comptes du mois) à la fin de ce message.
 
 # Instructions
 1. Identifie les 2 écarts entre les deux documents.
@@ -2985,8 +2985,8 @@ Tâche : Identifie les 2 écarts entre un relevé bancaire et un livre de compte
 
 Contexte :
 """
-Tu es secrétaire du cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
+Je suis secrétaire d'un cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
+Tu trouveras les données du cas pratique (le relevé bancaire et le livre de comptes du mois) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3007,8 +3007,8 @@ Tu es un assistant comptable spécialisé dans le rapprochement bancaire pour de
 </role>
 
 <context>
-Tu es secrétaire du cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
-Colle ici les données du cas pratique ci-dessus (le relevé bancaire et le livre de comptes du mois).
+Je suis secrétaire d'un cabinet de kinésithérapie et dois rapprocher le compte professionnel avant la clôture mensuelle.
+Tu trouveras les données du cas pratique (le relevé bancaire et le livre de comptes du mois) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3037,8 +3037,8 @@ Tu es un assistant comptable spécialisé dans les processus de relance de paiem
 Ton objectif est de déterminer le niveau de relance approprié pour 4 factures en retard et de rédiger 2 messages de relance.
 
 # Contexte
-Tu travailles à l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1) et dois relancer plusieurs clients pour des factures impayées.
-Colle ici les données du cas pratique ci-dessus (la liste des 4 factures en retard).
+Je travaille à l'agence "Pixel & Sens" et dois relancer plusieurs clients pour des factures impayées.
+Tu trouveras les données du cas pratique (la liste des 4 factures en retard) à la fin de ce message.
 
 # Instructions
 1. Détermine le niveau de relance approprié pour chacun des 4 clients (rappel amical / relance ferme / mise en demeure / autre action à envisager).
@@ -3060,8 +3060,8 @@ Tâche : Détermine le niveau de relance approprié pour 4 factures en retard et
 
 Contexte :
 """
-Tu travailles à l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1) et dois relancer plusieurs clients pour des factures impayées.
-Colle ici les données du cas pratique ci-dessus (la liste des 4 factures en retard).
+Je travaille à l'agence "Pixel & Sens" et dois relancer plusieurs clients pour des factures impayées.
+Tu trouveras les données du cas pratique (la liste des 4 factures en retard) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3082,8 +3082,8 @@ Tu es un assistant comptable spécialisé dans les processus de relance de paiem
 </role>
 
 <context>
-Tu travailles à l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1) et dois relancer plusieurs clients pour des factures impayées.
-Colle ici les données du cas pratique ci-dessus (la liste des 4 factures en retard).
+Je travaille à l'agence "Pixel & Sens" et dois relancer plusieurs clients pour des factures impayées.
+Tu trouveras les données du cas pratique (la liste des 4 factures en retard) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3111,8 +3111,8 @@ Tu es un assistant comptable spécialisé dans la priorisation des risques d'imp
 Ton objectif est de prioriser 4 situations d'impayés par niveau de risque réel et d'identifier celle nécessitant une action formelle.
 
 # Contexte
-Tu travailles chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Tu gères un volume important de factures à surveiller.
-Colle ici les données du cas pratique ci-dessus (l'extrait du tableau de suivi des impayés).
+Je travaille chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Je gère un volume important de factures à surveiller.
+Tu trouveras les données du cas pratique (l'extrait du tableau de suivi des impayés) à la fin de ce message.
 
 # Instructions
 1. Priorise ces 4 situations par niveau de risque réel, pas seulement par ancienneté du retard.
@@ -3135,8 +3135,8 @@ Tâche : Priorise 4 situations d'impayés par niveau de risque réel (pas seulem
 
 Contexte :
 """
-Tu travailles chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Tu gères un volume important de factures à surveiller.
-Colle ici les données du cas pratique ci-dessus (l'extrait du tableau de suivi des impayés).
+Je travaille chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Je gère un volume important de factures à surveiller.
+Tu trouveras les données du cas pratique (l'extrait du tableau de suivi des impayés) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3157,8 +3157,8 @@ Tu es un assistant comptable spécialisé dans la priorisation des risques d'imp
 </role>
 
 <context>
-Tu travailles chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Tu gères un volume important de factures à surveiller.
-Colle ici les données du cas pratique ci-dessus (l'extrait du tableau de suivi des impayés).
+Je travaille chez "Bureau Plus", qui livre des entreprises clientes en fournitures. Je gère un volume important de factures à surveiller.
+Tu trouveras les données du cas pratique (l'extrait du tableau de suivi des impayés) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3187,8 +3187,8 @@ Tu es un assistant achats spécialisé dans le suivi de commandes fournisseurs p
 Ton objectif est de statuer sur 4 commandes en cours et de rédiger les messages de relance nécessaires.
 
 # Contexte
-Tu gères l'atelier "Bois & Matières" et dois faire le point sur tes commandes fournisseurs en cours avant de lancer la production de la semaine.
-Colle ici les données du cas pratique ci-dessus (le tableau de suivi des 4 commandes).
+Je gère l'atelier "Bois & Matières" et dois faire le point sur mes commandes fournisseurs en cours avant de lancer la production de la semaine.
+Tu trouveras les données du cas pratique (le tableau de suivi des 4 commandes) à la fin de ce message.
 
 # Instructions
 1. Identifie pour chaque commande le statut réel (conforme / en attente / à relancer / anomalie à résoudre).
@@ -3211,8 +3211,8 @@ Tâche : Détermine le statut réel de 4 commandes fournisseurs, rédige les rel
 
 Contexte :
 """
-Tu gères l'atelier "Bois & Matières" et dois faire le point sur tes commandes fournisseurs en cours avant de lancer la production de la semaine.
-Colle ici les données du cas pratique ci-dessus (le tableau de suivi des 4 commandes).
+Je gère l'atelier "Bois & Matières" et dois faire le point sur mes commandes fournisseurs en cours avant de lancer la production de la semaine.
+Tu trouveras les données du cas pratique (le tableau de suivi des 4 commandes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3233,8 +3233,8 @@ Tu es un assistant achats spécialisé dans le suivi de commandes fournisseurs p
 </role>
 
 <context>
-Tu gères l'atelier "Bois & Matières" et dois faire le point sur tes commandes fournisseurs en cours avant de lancer la production de la semaine.
-Colle ici les données du cas pratique ci-dessus (le tableau de suivi des 4 commandes).
+Je gère l'atelier "Bois & Matières" et dois faire le point sur mes commandes fournisseurs en cours avant de lancer la production de la semaine.
+Tu trouveras les données du cas pratique (le tableau de suivi des 4 commandes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3263,8 +3263,8 @@ Tu es un assistant achats spécialisé dans le suivi de commandes fournisseurs p
 Ton objectif est d'identifier la commande la plus à risque avant un service de forte affluence et de rédiger la relance prioritaire.
 
 # Contexte
-Tu es chef du restaurant "La Table Verte" et dois vérifier tes commandes de la semaine avant le service du week-end, moment de forte affluence.
-Colle ici les données du cas pratique ci-dessus (le suivi des 4 commandes).
+Je suis chef du restaurant "La Table Verte" et dois vérifier mes commandes de la semaine avant le service du week-end, moment de forte affluence.
+Tu trouveras les données du cas pratique (le suivi des 4 commandes) à la fin de ce message.
 
 # Instructions
 1. Détermine quelle commande représente le risque le plus urgent pour le service du week-end, en justifiant ton choix.
@@ -3287,8 +3287,8 @@ Tâche : Identifie la commande la plus à risque avant un service de forte afflu
 
 Contexte :
 """
-Tu es chef du restaurant "La Table Verte" et dois vérifier tes commandes de la semaine avant le service du week-end, moment de forte affluence.
-Colle ici les données du cas pratique ci-dessus (le suivi des 4 commandes).
+Je suis chef du restaurant "La Table Verte" et dois vérifier mes commandes de la semaine avant le service du week-end, moment de forte affluence.
+Tu trouveras les données du cas pratique (le suivi des 4 commandes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3309,8 +3309,8 @@ Tu es un assistant achats spécialisé dans le suivi de commandes fournisseurs p
 </role>
 
 <context>
-Tu es chef du restaurant "La Table Verte" et dois vérifier tes commandes de la semaine avant le service du week-end, moment de forte affluence.
-Colle ici les données du cas pratique ci-dessus (le suivi des 4 commandes).
+Je suis chef du restaurant "La Table Verte" et dois vérifier mes commandes de la semaine avant le service du week-end, moment de forte affluence.
+Tu trouveras les données du cas pratique (le suivi des 4 commandes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3339,8 +3339,8 @@ Tu es un analyste spécialisé dans la prévision de la demande pour de petites 
 Ton objectif est d'estimer une quantité de matière première à commander en distinguant calcul basé sur les données et hypothèses.
 
 # Contexte
-Tu gères "Glace & Gourmandise" et dois préparer tes commandes de matières premières pour le mois de juillet à venir.
-Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
+Je gère "Glace & Gourmandise" et dois préparer mes commandes de matières premières pour le mois de juillet à venir.
+Tu trouveras les données du cas pratique (l'historique de ventes et les éléments de contexte) à la fin de ce message.
 
 # Instructions
 1. Propose une estimation de la quantité de mélange à glace à commander pour juillet à partir de ces données.
@@ -3363,8 +3363,8 @@ Tâche : Estime une quantité de matière première à commander pour le mois à
 
 Contexte :
 """
-Tu gères "Glace & Gourmandise" et dois préparer tes commandes de matières premières pour le mois de juillet à venir.
-Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
+Je gère "Glace & Gourmandise" et dois préparer mes commandes de matières premières pour le mois de juillet à venir.
+Tu trouveras les données du cas pratique (l'historique de ventes et les éléments de contexte) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3385,8 +3385,8 @@ Tu es un analyste spécialisé dans la prévision de la demande pour de petites 
 </role>
 
 <context>
-Tu gères "Glace & Gourmandise" et dois préparer tes commandes de matières premières pour le mois de juillet à venir.
-Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
+Je gère "Glace & Gourmandise" et dois préparer mes commandes de matières premières pour le mois de juillet à venir.
+Tu trouveras les données du cas pratique (l'historique de ventes et les éléments de contexte) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3415,8 +3415,8 @@ Tu es un analyste spécialisé dans la prévision de la demande pour le commerce
 Ton objectif est de calculer une estimation de commande de rentrée scolaire en tenant compte du stock existant et de deux facteurs de marché.
 
 # Contexte
-Tu gères la librairie-papeterie "Le Cartable" et dois préparer ta commande pour la rentrée scolaire de septembre.
-Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
+Je gère la librairie-papeterie "Le Cartable" et dois préparer ma commande pour la rentrée scolaire de septembre.
+Tu trouveras les données du cas pratique (l'historique de ventes et les éléments de contexte) à la fin de ce message.
 
 # Instructions
 1. Calcule une estimation du nombre de cartables à commander pour la rentrée à venir.
@@ -3439,8 +3439,8 @@ Tâche : Calcule une estimation de commande de rentrée scolaire en tenant compt
 
 Contexte :
 """
-Tu gères la librairie-papeterie "Le Cartable" et dois préparer ta commande pour la rentrée scolaire de septembre.
-Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
+Je gère la librairie-papeterie "Le Cartable" et dois préparer ma commande pour la rentrée scolaire de septembre.
+Tu trouveras les données du cas pratique (l'historique de ventes et les éléments de contexte) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3461,8 +3461,8 @@ Tu es un analyste spécialisé dans la prévision de la demande pour le commerce
 </role>
 
 <context>
-Tu gères la librairie-papeterie "Le Cartable" et dois préparer ta commande pour la rentrée scolaire de septembre.
-Colle ici les données du cas pratique ci-dessus (l'historique de ventes et les éléments de contexte).
+Je gère la librairie-papeterie "Le Cartable" et dois préparer ma commande pour la rentrée scolaire de septembre.
+Tu trouveras les données du cas pratique (l'historique de ventes et les éléments de contexte) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3491,8 +3491,8 @@ Tu es un assistant logistique spécialisé dans la planification de tournées de
 Ton objectif est de construire l'ordre de tournée optimal pour 4 livraisons dans la même journée.
 
 # Contexte
-Tu es traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ta tournée.
-Colle ici les données du cas pratique ci-dessus (les informations sur les 4 livraisons).
+Je suis traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ma tournée.
+Tu trouveras les données du cas pratique (les informations sur les 4 livraisons) à la fin de ce message.
 
 # Instructions
 1. Construis l'ordre de tournée optimal pour la journée en tenant compte des contraintes horaires fixes, du temps de trajet et du temps de mise en place nécessaire pour chaque livraison.
@@ -3515,8 +3515,8 @@ Tâche : Construis l'ordre de tournée optimal pour 4 livraisons dans la journé
 
 Contexte :
 """
-Tu es traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ta tournée.
-Colle ici les données du cas pratique ci-dessus (les informations sur les 4 livraisons).
+Je suis traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ma tournée.
+Tu trouveras les données du cas pratique (les informations sur les 4 livraisons) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3537,8 +3537,8 @@ Tu es un assistant logistique spécialisé dans la planification de tournées de
 </role>
 
 <context>
-Tu es traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ta tournée.
-Colle ici les données du cas pratique ci-dessus (les informations sur les 4 livraisons).
+Je suis traiteur événementiel chez "Saveurs & Événements" et dois livrer 4 commandes le même jour et planifier ma tournée.
+Tu trouveras les données du cas pratique (les informations sur les 4 livraisons) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3567,8 +3567,8 @@ Tu es un assistant logistique spécialisé dans la planification de tournées d'
 Ton objectif est de construire un planning journalier optimisé et de vérifier s'il tient dans la journée disponible.
 
 # Contexte
-Tu es technicien indépendant en maintenance de chaudières et dois planifier tes interventions de la journée chez 5 clients.
-Colle ici les données du cas pratique ci-dessus (les rendez-vous à planifier et les temps de trajet estimés).
+Je suis technicien indépendant en maintenance de chaudières et dois planifier mes interventions de la journée chez 5 clients.
+Tu trouveras les données du cas pratique (les rendez-vous à planifier et les temps de trajet estimés) à la fin de ce message.
 
 # Instructions
 1. Construis le planning de la journée en respectant la contrainte horaire fixe du client B (8h-9h30).
@@ -3591,8 +3591,8 @@ Tâche : Construis un planning journalier optimisé pour 5 interventions techniq
 
 Contexte :
 """
-Tu es technicien indépendant en maintenance de chaudières et dois planifier tes interventions de la journée chez 5 clients.
-Colle ici les données du cas pratique ci-dessus (les rendez-vous à planifier et les temps de trajet estimés).
+Je suis technicien indépendant en maintenance de chaudières et dois planifier mes interventions de la journée chez 5 clients.
+Tu trouveras les données du cas pratique (les rendez-vous à planifier et les temps de trajet estimés) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3613,8 +3613,8 @@ Tu es un assistant logistique spécialisé dans la planification de tournées d'
 </role>
 
 <context>
-Tu es technicien indépendant en maintenance de chaudières et dois planifier tes interventions de la journée chez 5 clients.
-Colle ici les données du cas pratique ci-dessus (les rendez-vous à planifier et les temps de trajet estimés).
+Je suis technicien indépendant en maintenance de chaudières et dois planifier mes interventions de la journée chez 5 clients.
+Tu trouveras les données du cas pratique (les rendez-vous à planifier et les temps de trajet estimés) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3643,8 +3643,8 @@ Tu es un assistant spécialisé dans le triage et la répartition de demandes cl
 Ton objectif est de prioriser 6 demandes reçues et de les assigner à l'agent compétent.
 
 # Contexte
-Tu es assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Tu dois les répartir chaque matin entre les 3 agents.
-Colle ici les données du cas pratique ci-dessus (les 6 demandes reçues et les informations sur les agents).
+Je suis assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Je dois les répartir chaque matin entre les 3 agents.
+Tu trouveras les données du cas pratique (les 6 demandes reçues et les informations sur les agents) à la fin de ce message.
 
 # Instructions
 1. Classe chacune des 6 demandes par ordre de priorité de traitement, avec une justification courte.
@@ -3667,8 +3667,8 @@ Tâche : Priorise 6 demandes clients et assigne chacune à l'agent compétent se
 
 Contexte :
 """
-Tu es assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Tu dois les répartir chaque matin entre les 3 agents.
-Colle ici les données du cas pratique ci-dessus (les 6 demandes reçues et les informations sur les agents).
+Je suis assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Je dois les répartir chaque matin entre les 3 agents.
+Tu trouveras les données du cas pratique (les 6 demandes reçues et les informations sur les agents) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3689,8 +3689,8 @@ Tu es un assistant spécialisé dans le triage et la répartition de demandes cl
 </role>
 
 <context>
-Tu es assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Tu dois les répartir chaque matin entre les 3 agents.
-Colle ici les données du cas pratique ci-dessus (les 6 demandes reçues et les informations sur les agents).
+Je suis assistant(e) à l'agence "Clé en Main Immobilier", qui reçoit ses demandes via un formulaire de contact unique sur son site, tous types de demandes confondues. Je dois les répartir chaque matin entre les 3 agents.
+Tu trouveras les données du cas pratique (les 6 demandes reçues et les informations sur les agents) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3719,8 +3719,8 @@ Tu es un responsable support spécialisé dans le triage de tickets pour un édi
 Ton objectif est de classer 6 tickets par urgence et type, de les assigner à la bonne personne, et de rédiger une réponse d'urgence.
 
 # Contexte
-Tu es responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Tu dois répartir les tickets du matin entre ton équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
-Colle ici les données du cas pratique ci-dessus (les 6 tickets reçus).
+Je suis responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Je dois répartir les tickets du matin entre mon équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
+Tu trouveras les données du cas pratique (les 6 tickets reçus) à la fin de ce message.
 
 # Instructions
 1. Classe les 6 tickets par urgence et par type (bug bloquant / question de facturation / question fonctionnelle / suggestion produit).
@@ -3743,8 +3743,8 @@ Tâche : Classe 6 tickets par urgence et type, assigne-les à la bonne personne 
 
 Contexte :
 """
-Tu es responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Tu dois répartir les tickets du matin entre ton équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
-Colle ici les données du cas pratique ci-dessus (les 6 tickets reçus).
+Je suis responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Je dois répartir les tickets du matin entre mon équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
+Tu trouveras les données du cas pratique (les 6 tickets reçus) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3765,8 +3765,8 @@ Tu es un responsable support spécialisé dans le triage de tickets pour un édi
 </role>
 
 <context>
-Tu es responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Tu dois répartir les tickets du matin entre ton équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
-Colle ici les données du cas pratique ci-dessus (les 6 tickets reçus).
+Je suis responsable support chez "ArtiSoft" (logiciel de devis/factures pour artisans), qui reçoit ses demandes de support via un chat en ligne. Je dois répartir les tickets du matin entre mon équipe de 2 personnes (un support technique niveau 1, une personne en charge de la facturation/comptes clients).
+Tu trouveras les données du cas pratique (les 6 tickets reçus) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3795,8 +3795,8 @@ Tu es un analyste spécialisé dans l'exploitation d'avis clients pour la restau
 Ton objectif est de calculer une note moyenne, d'identifier le thème négatif récurrent, et de rédiger une synthèse actionnable pour l'équipe.
 
 # Contexte
-Tu gères le restaurant "L'Écrin". Tu as reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour ton équipe.
-Colle ici les données du cas pratique ci-dessus (les 8 avis reçus).
+Je gère le restaurant "L'Écrin". J'ai reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour mon équipe.
+Tu trouveras les données du cas pratique (les 8 avis reçus) à la fin de ce message.
 
 # Instructions
 1. Calcule la note moyenne des 8 avis.
@@ -3819,8 +3819,8 @@ Tâche : Calcule la note moyenne de 8 avis, identifie le thème négatif dominan
 
 Contexte :
 """
-Tu gères le restaurant "L'Écrin". Tu as reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour ton équipe.
-Colle ici les données du cas pratique ci-dessus (les 8 avis reçus).
+Je gère le restaurant "L'Écrin". J'ai reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour mon équipe.
+Tu trouveras les données du cas pratique (les 8 avis reçus) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3841,8 +3841,8 @@ Tu es un analyste spécialisé dans l'exploitation d'avis clients pour la restau
 </role>
 
 <context>
-Tu gères le restaurant "L'Écrin". Tu as reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour ton équipe.
-Colle ici les données du cas pratique ci-dessus (les 8 avis reçus).
+Je gère le restaurant "L'Écrin". J'ai reçu 8 avis Google récents et veux en tirer une synthèse actionnable pour mon équipe.
+Tu trouveras les données du cas pratique (les 8 avis reçus) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3871,8 +3871,8 @@ Tu es un analyste spécialisé dans le calcul et l'interprétation de scores NPS
 Ton objectif est de calculer le NPS d'une entreprise de déménagement et de proposer des actions correctives ciblées.
 
 # Contexte
-Tu travailles chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. Voici les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
-Colle ici les données du cas pratique ci-dessus (les 10 réponses reçues).
+Je travaille chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. J'ai les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
+Tu trouveras les données du cas pratique (les 10 réponses reçues) à la fin de ce message.
 
 # Instructions
 1. Calcule le score NPS (% promoteurs notes 9-10 moins % détracteurs notes 0-6, les notes 7-8 étant neutres).
@@ -3895,8 +3895,8 @@ Tâche : Calcule le score NPS à partir de 10 réponses clients, identifie les 2
 
 Contexte :
 """
-Tu travailles chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. Voici les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
-Colle ici les données du cas pratique ci-dessus (les 10 réponses reçues).
+Je travaille chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. J'ai les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
+Tu trouveras les données du cas pratique (les 10 réponses reçues) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3917,8 +3917,8 @@ Tu es un analyste spécialisé dans le calcul et l'interprétation de scores NPS
 </role>
 
 <context>
-Tu travailles chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. Voici les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
-Colle ici les données du cas pratique ci-dessus (les 10 réponses reçues).
+Je travaille chez "Déména Pro", qui envoie systématiquement un questionnaire de satisfaction après chaque prestation. J'ai les réponses des 10 derniers clients à la question "Recommanderiez-vous nos services à un proche ? (note de 0 à 10)" et un commentaire libre.
+Tu trouveras les données du cas pratique (les 10 réponses reçues) à la fin de ce message.
 </context>
 
 <instructions>
@@ -3947,8 +3947,8 @@ Tu es un analyste CRM spécialisé dans la segmentation client par méthode RFM 
 Ton objectif est de segmenter une base de 12 clients et de proposer un message adapté à chaque segment.
 
 # Contexte
-Tu gères "Cave Numérique" et veux segmenter ta base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
-Colle ici les données du cas pratique ci-dessus (les données des 12 clients).
+Je gère "Cave Numérique" et veux segmenter ma base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
+Tu trouveras les données du cas pratique (les données des 12 clients) à la fin de ce message.
 
 # Instructions
 1. Classe les 12 clients en au moins 4 segments cohérents (par exemple clients fidèles à forte valeur, clients à réactiver, gros acheteurs occasionnels, petits clients inactifs).
@@ -3971,8 +3971,8 @@ Tâche : Segmente une base de 12 clients en au moins 4 groupes cohérents et pro
 
 Contexte :
 """
-Tu gères "Cave Numérique" et veux segmenter ta base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
-Colle ici les données du cas pratique ci-dessus (les données des 12 clients).
+Je gère "Cave Numérique" et veux segmenter ma base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
+Tu trouveras les données du cas pratique (les données des 12 clients) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -3993,8 +3993,8 @@ Tu es un analyste CRM spécialisé dans la segmentation client par méthode RFM 
 </role>
 
 <context>
-Tu gères "Cave Numérique" et veux segmenter ta base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
-Colle ici les données du cas pratique ci-dessus (les données des 12 clients).
+Je gère "Cave Numérique" et veux segmenter ma base de 12 clients pour cibler une prochaine campagne promotionnelle différemment selon leur profil.
+Tu trouveras les données du cas pratique (les données des 12 clients) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4023,8 +4023,8 @@ Tu es un analyste CRM spécialisé dans la fidélisation d'adhérents pour des c
 Ton objectif est d'identifier les profils à risque de désabonnement et les ambassadeurs potentiels parmi les adhérents.
 
 # Contexte
-Tu gères "Vertical Club" et veux identifier les profils d'adhérents pour adapter ta communication avant le renouvellement des abonnements annuels.
-Colle ici les données du cas pratique ci-dessus (les données des 6 adhérents).
+Je gère "Vertical Club" et veux identifier les profils d'adhérents pour adapter ma communication avant le renouvellement des abonnements annuels.
+Tu trouveras les données du cas pratique (les données des 6 adhérents) à la fin de ce message.
 
 # Instructions
 1. Identifie parmi les 6 profils celui qui présente le plus grand risque de ne pas renouveler son abonnement, en expliquant pourquoi.
@@ -4047,8 +4047,8 @@ Tâche : Identifie le profil le plus à risque de désabonnement, le profil amba
 
 Contexte :
 """
-Tu gères "Vertical Club" et veux identifier les profils d'adhérents pour adapter ta communication avant le renouvellement des abonnements annuels.
-Colle ici les données du cas pratique ci-dessus (les données des 6 adhérents).
+Je gère "Vertical Club" et veux identifier les profils d'adhérents pour adapter ma communication avant le renouvellement des abonnements annuels.
+Tu trouveras les données du cas pratique (les données des 6 adhérents) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4069,8 +4069,8 @@ Tu es un analyste CRM spécialisé dans la fidélisation d'adhérents pour des c
 </role>
 
 <context>
-Tu gères "Vertical Club" et veux identifier les profils d'adhérents pour adapter ta communication avant le renouvellement des abonnements annuels.
-Colle ici les données du cas pratique ci-dessus (les données des 6 adhérents).
+Je gère "Vertical Club" et veux identifier les profils d'adhérents pour adapter ma communication avant le renouvellement des abonnements annuels.
+Tu trouveras les données du cas pratique (les données des 6 adhérents) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4099,8 +4099,8 @@ Tu es un spécialiste en publicité digitale (Meta Ads) spécialisé dans les pe
 Ton objectif est de diagnostiquer le problème structurel d'une campagne publicitaire et de proposer une restructuration.
 
 # Contexte
-Tu es Léna ("Belle Écorce") et as lancé ta première campagne publicitaire Meta il y a 2 semaines pour promouvoir ton nouveau soin visage. Tu constates des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
-Colle ici les données du cas pratique ci-dessus (les données de la campagne actuelle).
+Je suis Léna ("Belle Écorce") et j'ai lancé ma première campagne publicitaire Meta il y a 2 semaines pour promouvoir mon nouveau soin visage. Je constate des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
+Tu trouveras les données du cas pratique (les données de la campagne actuelle) à la fin de ce message.
 
 # Instructions
 1. Identifie le problème structurel principal de cette campagne à partir des données fournies (nombre d'ensembles de publicités vs budget disponible).
@@ -4123,8 +4123,8 @@ Tâche : Diagnostique le problème structurel d'une campagne publicitaire Meta, 
 
 Contexte :
 """
-Tu es Léna ("Belle Écorce") et as lancé ta première campagne publicitaire Meta il y a 2 semaines pour promouvoir ton nouveau soin visage. Tu constates des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
-Colle ici les données du cas pratique ci-dessus (les données de la campagne actuelle).
+Je suis Léna ("Belle Écorce") et j'ai lancé ma première campagne publicitaire Meta il y a 2 semaines pour promouvoir mon nouveau soin visage. Je constate des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
+Tu trouveras les données du cas pratique (les données de la campagne actuelle) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4145,8 +4145,8 @@ Tu es un spécialiste en publicité digitale (Meta Ads) spécialisé dans les pe
 </role>
 
 <context>
-Tu es Léna ("Belle Écorce") et as lancé ta première campagne publicitaire Meta il y a 2 semaines pour promouvoir ton nouveau soin visage. Tu constates des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
-Colle ici les données du cas pratique ci-dessus (les données de la campagne actuelle).
+Je suis Léna ("Belle Écorce") et j'ai lancé ma première campagne publicitaire Meta il y a 2 semaines pour promouvoir mon nouveau soin visage. Je constate des résultats décevants et veux comprendre pourquoi avant de continuer à dépenser.
+Tu trouveras les données du cas pratique (les données de la campagne actuelle) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4175,8 +4175,8 @@ Tu es un spécialiste en publicité digitale spécialisé dans l'analyse de perf
 Ton objectif est de comparer le ROAS de deux campagnes et de proposer une nouvelle répartition budgétaire.
 
 # Contexte
-Tu es le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Tu veux savoir laquelle continuer à financer.
-Colle ici les données du cas pratique ci-dessus (les données des 2 campagnes sur 30 jours).
+Je suis le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Je veux savoir laquelle continuer à financer.
+Tu trouveras les données du cas pratique (les données des 2 campagnes sur 30 jours) à la fin de ce message.
 
 # Instructions
 1. Calcule le retour sur investissement publicitaire (ROAS = CA généré / budget dépensé) de chaque campagne.
@@ -4199,8 +4199,8 @@ Tâche : Calcule le ROAS de deux campagnes publicitaires, détermine la plus per
 
 Contexte :
 """
-Tu es le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Tu veux savoir laquelle continuer à financer.
-Colle ici les données du cas pratique ci-dessus (les données des 2 campagnes sur 30 jours).
+Je suis le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Je veux savoir laquelle continuer à financer.
+Tu trouveras les données du cas pratique (les données des 2 campagnes sur 30 jours) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4221,8 +4221,8 @@ Tu es un spécialiste en publicité digitale spécialisé dans l'analyse de perf
 </role>
 
 <context>
-Tu es le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Tu veux savoir laquelle continuer à financer.
-Colle ici les données du cas pratique ci-dessus (les données des 2 campagnes sur 30 jours).
+Je suis le fondateur (la fondatrice) de "Petits Marmots" et fais tourner deux campagnes publicitaires en parallèle. Je veux savoir laquelle continuer à financer.
+Tu trouveras les données du cas pratique (les données des 2 campagnes sur 30 jours) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4251,8 +4251,8 @@ Tu es un chargé de recrutement spécialisé dans la présélection de candidatu
 Ton objectif est d'appliquer une grille de critères à 5 candidatures et de rédiger un message de refus.
 
 # Contexte
-Tu travailles au cabinet comptable (déjà rencontré en catégorie 1), qui recrute un(e) assistant(e) comptable. Tu as reçu 5 candidatures à présélectionner.
-Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 5 candidatures).
+Je travaille dans un cabinet comptable qui recrute un(e) assistant(e) comptable. J'ai reçu 5 candidatures à présélectionner.
+Tu trouveras les données du cas pratique (les critères du poste et le résumé des 5 candidatures) à la fin de ce message.
 
 # Instructions
 1. Applique la grille de critères du poste à chacun des 5 candidats.
@@ -4275,8 +4275,8 @@ Tâche : Applique une grille de critères à 5 candidatures, élimine celles qui
 
 Contexte :
 """
-Tu travailles au cabinet comptable (déjà rencontré en catégorie 1), qui recrute un(e) assistant(e) comptable. Tu as reçu 5 candidatures à présélectionner.
-Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 5 candidatures).
+Je travaille dans un cabinet comptable qui recrute un(e) assistant(e) comptable. J'ai reçu 5 candidatures à présélectionner.
+Tu trouveras les données du cas pratique (les critères du poste et le résumé des 5 candidatures) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4297,8 +4297,8 @@ Tu es un chargé de recrutement spécialisé dans la présélection de candidatu
 </role>
 
 <context>
-Tu travailles au cabinet comptable (déjà rencontré en catégorie 1), qui recrute un(e) assistant(e) comptable. Tu as reçu 5 candidatures à présélectionner.
-Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 5 candidatures).
+Je travaille dans un cabinet comptable qui recrute un(e) assistant(e) comptable. J'ai reçu 5 candidatures à présélectionner.
+Tu trouveras les données du cas pratique (les critères du poste et le résumé des 5 candidatures) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4327,8 +4327,8 @@ Tu es un chargé de recrutement spécialisé dans la présélection de candidatu
 Ton objectif est d'éliminer les candidats ne remplissant pas les critères obligatoires et de classer les autres.
 
 # Contexte
-Tu travailles chez le traiteur "Saveurs & Événements" (déjà rencontré en catégorie 4), qui recrute un chauffeur-livreur en CDI. Tu as reçu 4 candidatures.
-Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 4 candidatures).
+Je travaille chez le traiteur "Saveurs & Événements", qui recrute un chauffeur-livreur en CDI. J'ai reçu 4 candidatures.
+Tu trouveras les données du cas pratique (les critères du poste et le résumé des 4 candidatures) à la fin de ce message.
 
 # Instructions
 1. Élimine les candidats qui ne remplissent pas les critères obligatoires du poste, en justifiant chaque élimination.
@@ -4351,8 +4351,8 @@ Tâche : Élimine les candidats ne remplissant pas les critères obligatoires d'
 
 Contexte :
 """
-Tu travailles chez le traiteur "Saveurs & Événements" (déjà rencontré en catégorie 4), qui recrute un chauffeur-livreur en CDI. Tu as reçu 4 candidatures.
-Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 4 candidatures).
+Je travaille chez le traiteur "Saveurs & Événements", qui recrute un chauffeur-livreur en CDI. J'ai reçu 4 candidatures.
+Tu trouveras les données du cas pratique (les critères du poste et le résumé des 4 candidatures) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4373,8 +4373,8 @@ Tu es un chargé de recrutement spécialisé dans la présélection de candidatu
 </role>
 
 <context>
-Tu travailles chez le traiteur "Saveurs & Événements" (déjà rencontré en catégorie 4), qui recrute un chauffeur-livreur en CDI. Tu as reçu 4 candidatures.
-Colle ici les données du cas pratique ci-dessus (les critères du poste et le résumé des 4 candidatures).
+Je travaille chez le traiteur "Saveurs & Événements", qui recrute un chauffeur-livreur en CDI. J'ai reçu 4 candidatures.
+Tu trouveras les données du cas pratique (les critères du poste et le résumé des 4 candidatures) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4403,8 +4403,8 @@ Tu es un consultant RH spécialisé dans la construction de parcours de formatio
 Ton objectif est de construire un parcours de formation sur 12 mois répondant à des axes de progression identifiés, sous contrainte de disponibilité et de budget.
 
 # Contexte
-Tu travailles au service RH de "Mécatech Industries" (déjà rencontrée en catégorie 1) et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
-Colle ici les données du cas pratique ci-dessus (le diagnostic complet et les contraintes).
+Je travaille au service RH de "Mécatech Industries" et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
+Tu trouveras les données du cas pratique (le diagnostic complet et les contraintes) à la fin de ce message.
 
 # Instructions
 1. Construis un parcours de formation sur 12 mois qui répond aux axes de progression identifiés (management, prise de parole, Excel).
@@ -4427,8 +4427,8 @@ Tâche : Construis un parcours de formation sur 12 mois répondant à des axes d
 
 Contexte :
 """
-Tu travailles au service RH de "Mécatech Industries" (déjà rencontrée en catégorie 1) et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
-Colle ici les données du cas pratique ci-dessus (le diagnostic complet et les contraintes).
+Je travaille au service RH de "Mécatech Industries" et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
+Tu trouveras les données du cas pratique (le diagnostic complet et les contraintes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4449,8 +4449,8 @@ Tu es un consultant RH spécialisé dans la construction de parcours de formatio
 </role>
 
 <context>
-Tu travailles au service RH de "Mécatech Industries" (déjà rencontrée en catégorie 1) et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
-Colle ici les données du cas pratique ci-dessus (le diagnostic complet et les contraintes).
+Je travaille au service RH de "Mécatech Industries" et dois construire un parcours de formation pour un technicien de production qui souhaite évoluer vers un poste de chef d'équipe.
+Tu trouveras les données du cas pratique (le diagnostic complet et les contraintes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4479,8 +4479,8 @@ Tu es un consultant RH spécialisé dans la structuration de parcours de montée
 Ton objectif est de structurer un diagnostic informel en axes de progression clairs et de proposer un parcours sur 6 mois.
 
 # Contexte
-Tu es responsable de l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1 et 2) et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
-Colle ici les données du cas pratique ci-dessus (le diagnostic informel de Léa).
+Je suis responsable de l'agence "Pixel & Sens" et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
+Tu trouveras les données du cas pratique (le diagnostic informel de Léa) à la fin de ce message.
 
 # Instructions
 1. Structure ce diagnostic informel en axes de progression clairs.
@@ -4503,8 +4503,8 @@ Tâche : Structure un diagnostic informel en axes de progression clairs et propo
 
 Contexte :
 """
-Tu es responsable de l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1 et 2) et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
-Colle ici les données du cas pratique ci-dessus (le diagnostic informel de Léa).
+Je suis responsable de l'agence "Pixel & Sens" et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
+Tu trouveras les données du cas pratique (le diagnostic informel de Léa) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4525,8 +4525,8 @@ Tu es un consultant RH spécialisé dans la structuration de parcours de montée
 </role>
 
 <context>
-Tu es responsable de l'agence "Pixel & Sens" (déjà rencontrée en catégorie 1 et 2) et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
-Colle ici les données du cas pratique ci-dessus (le diagnostic informel de Léa).
+Je suis responsable de l'agence "Pixel & Sens" et veux faire monter en compétence Karim (actuellement graphiste junior) vers plus d'autonomie sur les projets clients.
+Tu trouveras les données du cas pratique (le diagnostic informel de Léa) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4555,8 +4555,8 @@ Tu es un assistant spécialisé dans le métré (quantity takeoff) pour des trav
 Ton objectif est d'établir le décompte total des points lumineux et prises à partir d'une description de logement pièce par pièce.
 
 # Contexte
-Tu es électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
-Colle ici les données du cas pratique ci-dessus (la description du logement pièce par pièce).
+Je suis électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
+Tu trouveras les données du cas pratique (la description du logement pièce par pièce) à la fin de ce message.
 
 # Instructions
 1. Établis le décompte par catégorie (nombre total de points lumineux, nombre total de prises standard, nombre de prises spécifiques/spécialisées) pièce par pièce.
@@ -4579,8 +4579,8 @@ Tâche : Établis le décompte des points lumineux, prises standard et prises sp
 
 Contexte :
 """
-Tu es électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
-Colle ici les données du cas pratique ci-dessus (la description du logement pièce par pièce).
+Je suis électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
+Tu trouveras les données du cas pratique (la description du logement pièce par pièce) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4601,8 +4601,8 @@ Tu es un assistant spécialisé dans le métré (quantity takeoff) pour des trav
 </role>
 
 <context>
-Tu es électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
-Colle ici les données du cas pratique ci-dessus (la description du logement pièce par pièce).
+Je suis électricien indépendant et dois chiffrer l'installation électrique d'un appartement à partir de la description du client (pas de plan visuel disponible, description textuelle du bien à traiter comme un plan écrit).
+Tu trouveras les données du cas pratique (la description du logement pièce par pièce) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4631,8 +4631,8 @@ Tu es un assistant spécialisé dans le métré de surfaces pour des travaux de 
 Ton objectif est de calculer les surfaces à peindre et la quantité de peinture nécessaire à partir de mesures prises sur site.
 
 # Contexte
-Tu es peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
-Colle ici les données du cas pratique ci-dessus (les mesures prises sur site et les rendements de peinture).
+Je suis peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
+Tu trouveras les données du cas pratique (les mesures prises sur site et les rendements de peinture) à la fin de ce message.
 
 # Instructions
 1. Calcule le périmètre du local, la surface murale totale, la surface des ouvertures à déduire, et la surface nette à peindre (murs, avec les 2 couches comptées séparément) ainsi que la surface de plafond.
@@ -4654,8 +4654,8 @@ Tâche : Calcule les surfaces nettes à peindre (murs et plafond) et la quantit�
 
 Contexte :
 """
-Tu es peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
-Colle ici les données du cas pratique ci-dessus (les mesures prises sur site et les rendements de peinture).
+Je suis peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
+Tu trouveras les données du cas pratique (les mesures prises sur site et les rendements de peinture) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4676,8 +4676,8 @@ Tu es un assistant spécialisé dans le métré de surfaces pour des travaux de 
 </role>
 
 <context>
-Tu es peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
-Colle ici les données du cas pratique ci-dessus (les mesures prises sur site et les rendements de peinture).
+Je suis peintre en bâtiment et dois chiffrer les surfaces à peindre pour un local commercial à partir des mesures prises sur site.
+Tu trouveras les données du cas pratique (les mesures prises sur site et les rendements de peinture) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4705,8 +4705,8 @@ Tu es un assistant de suivi de chantier spécialisé dans la rédaction de compt
 Ton objectif est de rédiger le compte-rendu hebdomadaire d'avancement avec comparaison prévu/réalisé.
 
 # Contexte
-Tu es maître d'œuvre et tu suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
-Colle ici les données du cas pratique ci-dessus (les notes de visite des semaines 1 et 2).
+Je suis maître d'œuvre et je suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
+Tu trouveras les données du cas pratique (les notes de visite des semaines 1 et 2) à la fin de ce message.
 
 # Instructions
 1. Rédige le compte-rendu hebdomadaire à envoyer au client pour la semaine 2.
@@ -4729,8 +4729,8 @@ Tâche : Rédige un compte-rendu hebdomadaire avec un tableau prévu/réalisé p
 
 Contexte :
 """
-Tu es maître d'œuvre et tu suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
-Colle ici les données du cas pratique ci-dessus (les notes de visite des semaines 1 et 2).
+Je suis maître d'œuvre et je suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
+Tu trouveras les données du cas pratique (les notes de visite des semaines 1 et 2) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4751,8 +4751,8 @@ Tu es un assistant de suivi de chantier spécialisé dans la rédaction de compt
 </role>
 
 <context>
-Tu es maître d'œuvre et tu suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
-Colle ici les données du cas pratique ci-dessus (les notes de visite des semaines 1 et 2).
+Je suis maître d'œuvre et je suis l'avancement d'un chantier de rénovation pour informer le client (propriétaire, absent la semaine) de l'état des travaux.
+Tu trouveras les données du cas pratique (les notes de visite des semaines 1 et 2) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4781,8 +4781,8 @@ Tu es un assistant de suivi de chantier spécialisé dans l'aide aux particulier
 Ton objectif est de construire un tableau de suivi sur 3 semaines et de préparer des questions précises à poser à l'entreprise.
 
 # Contexte
-Tu es le client (la cliente) et tu suis toi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
-Colle ici les données du cas pratique ci-dessus (les notes du chef de chantier sur 3 semaines).
+Je suis le client (la cliente) et je suis moi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
+Tu trouveras les données du cas pratique (les notes du chef de chantier sur 3 semaines) à la fin de ce message.
 
 # Instructions
 1. Construis un tableau de suivi synthétique sur les 3 semaines (lot de travaux, statut, écart par rapport au planning initial).
@@ -4805,8 +4805,8 @@ Tâche : Construis un tableau de suivi sur 3 semaines, identifie le point de blo
 
 Contexte :
 """
-Tu es le client (la cliente) et tu suis toi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
-Colle ici les données du cas pratique ci-dessus (les notes du chef de chantier sur 3 semaines).
+Je suis le client (la cliente) et je suis moi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
+Tu trouveras les données du cas pratique (les notes du chef de chantier sur 3 semaines) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4827,8 +4827,8 @@ Tu es un assistant de suivi de chantier spécialisé dans l'aide aux particulier
 </role>
 
 <context>
-Tu es le client (la cliente) et tu suis toi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
-Colle ici les données du cas pratique ci-dessus (les notes du chef de chantier sur 3 semaines).
+Je suis le client (la cliente) et je suis moi-même l'avancement du chantier réalisé par une entreprise de construction, à partir des points faits chaque vendredi par le chef de chantier.
+Tu trouveras les données du cas pratique (les notes du chef de chantier sur 3 semaines) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4857,8 +4857,8 @@ Tu es un assistant HSE (hygiène-sécurité-environnement) spécialisé dans l'�
 Ton objectif est d'évaluer et hiérarchiser 6 points de risque d'un chantier de toiture.
 
 # Contexte
-Tu es chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
-Colle ici les données du cas pratique ci-dessus (les 6 points de risque identifiés).
+Je suis chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
+Tu trouveras les données du cas pratique (les 6 points de risque identifiés) à la fin de ce message.
 
 # Instructions
 1. Évalue chacun des 6 points sur une échelle de probabilité (1 à 5) et de gravité (1 à 5), en justifiant brièvement chaque score.
@@ -4881,8 +4881,8 @@ Tâche : Évalue et hiérarchise 6 points de risque d'un chantier de toiture sel
 
 Contexte :
 """
-Tu es chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
-Colle ici les données du cas pratique ci-dessus (les 6 points de risque identifiés).
+Je suis chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
+Tu trouveras les données du cas pratique (les 6 points de risque identifiés) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4903,8 +4903,8 @@ Tu es un assistant HSE (hygiène-sécurité-environnement) spécialisé dans l'�
 </role>
 
 <context>
-Tu es chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
-Colle ici les données du cas pratique ci-dessus (les 6 points de risque identifiés).
+Je suis chef de chantier d'une entreprise de couverture et dois établir la liste des points de vigilance avant de démarrer un chantier sur un immeuble ancien en centre-ville.
+Tu trouveras les données du cas pratique (les 6 points de risque identifiés) à la fin de ce message.
 </context>
 
 <instructions>
@@ -4933,8 +4933,8 @@ Tu es un assistant HSE spécialisé dans l'évaluation des risques de chantier d
 Ton objectif est d'évaluer 6 points de risque et de préparer les vérifications prioritaires avant le démarrage des travaux.
 
 # Contexte
-Tu es conducteur (conductrice) de travaux d'une entreprise de terrassement et prépares la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
-Colle ici les données du cas pratique ci-dessus (les 6 points identifiés).
+Je suis conducteur (conductrice) de travaux d'une entreprise de terrassement et prépare la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
+Tu trouveras les données du cas pratique (les 6 points identifiés) à la fin de ce message.
 
 # Instructions
 1. Évalue chacun des 6 points sur une échelle de probabilité et de gravité, en justifiant brièvement chaque score.
@@ -4957,8 +4957,8 @@ Tâche : Évalue 6 points de risque d'un chantier de terrassement, identifie cel
 
 Contexte :
 """
-Tu es conducteur (conductrice) de travaux d'une entreprise de terrassement et prépares la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
-Colle ici les données du cas pratique ci-dessus (les 6 points identifiés).
+Je suis conducteur (conductrice) de travaux d'une entreprise de terrassement et prépare la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
+Tu trouveras les données du cas pratique (les 6 points identifiés) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -4979,8 +4979,8 @@ Tu es un assistant HSE spécialisé dans l'évaluation des risques de chantier d
 </role>
 
 <context>
-Tu es conducteur (conductrice) de travaux d'une entreprise de terrassement et prépares la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
-Colle ici les données du cas pratique ci-dessus (les 6 points identifiés).
+Je suis conducteur (conductrice) de travaux d'une entreprise de terrassement et prépare la réunion de lancement d'un chantier d'extension de maison avec sous-sol.
+Tu trouveras les données du cas pratique (les 6 points identifiés) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5009,8 +5009,8 @@ Tu es un spécialiste de la retouche photo produit pour le e-commerce.
 Ton objectif est de lister les retouches nécessaires sur 3 photos produit et de prioriser les corrections obligatoires.
 
 # Contexte
-Tu gères "Alto Mode" (déjà rencontrée en catégorie 1) et as pris des photos de ta nouvelle collection avec ton téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
-Colle ici les données du cas pratique ci-dessus (la description des défauts des 3 photos).
+Je gère la boutique "Alto Mode" et j'ai pris des photos de ma nouvelle collection avec mon téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
+Tu trouveras les données du cas pratique (la description des défauts des 3 photos) à la fin de ce message.
 
 # Instructions
 1. Pour chacune des 3 photos, liste précisément les retouches nécessaires et leur ordre de priorité.
@@ -5033,8 +5033,8 @@ Tâche : Liste les retouches nécessaires sur 3 photos produit, en distinguant l
 
 Contexte :
 """
-Tu gères "Alto Mode" (déjà rencontrée en catégorie 1) et as pris des photos de ta nouvelle collection avec ton téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
-Colle ici les données du cas pratique ci-dessus (la description des défauts des 3 photos).
+Je gère la boutique "Alto Mode" et j'ai pris des photos de ma nouvelle collection avec mon téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
+Tu trouveras les données du cas pratique (la description des défauts des 3 photos) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5055,8 +5055,8 @@ Tu es un spécialiste de la retouche photo produit pour le e-commerce.
 </role>
 
 <context>
-Tu gères "Alto Mode" (déjà rencontrée en catégorie 1) et as pris des photos de ta nouvelle collection avec ton téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
-Colle ici les données du cas pratique ci-dessus (la description des défauts des 3 photos).
+Je gère la boutique "Alto Mode" et j'ai pris des photos de ma nouvelle collection avec mon téléphone dans la boutique, mais les photos ont des défauts à corriger avant mise en ligne.
+Tu trouveras les données du cas pratique (la description des défauts des 3 photos) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5085,8 +5085,8 @@ Tu es un spécialiste de la retouche photo immobilière, attentif aux limites d'
 Ton objectif est d'identifier les retouches nécessaires sur 3 photos et de qualifier chacune (correction légitime ou modification sensible).
 
 # Contexte
-Tu travailles à l'agence "Clé en Main Immobilier" (déjà rencontrée en catégorie 2) et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
-Colle ici les données du cas pratique ci-dessus (la description des 3 photos).
+Je travaille à l'agence "Clé en Main Immobilier" et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
+Tu trouveras les données du cas pratique (la description des 3 photos) à la fin de ce message.
 
 # Instructions
 1. Pour chacune des 3 photos, identifie la retouche nécessaire.
@@ -5109,8 +5109,8 @@ Tâche : Identifie les retouches nécessaires sur 3 photos d'un appartement, en 
 
 Contexte :
 """
-Tu travailles à l'agence "Clé en Main Immobilier" (déjà rencontrée en catégorie 2) et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
-Colle ici les données du cas pratique ci-dessus (la description des 3 photos).
+Je travaille à l'agence "Clé en Main Immobilier" et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
+Tu trouveras les données du cas pratique (la description des 3 photos) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5131,8 +5131,8 @@ Tu es un spécialiste de la retouche photo immobilière, attentif aux limites d'
 </role>
 
 <context>
-Tu travailles à l'agence "Clé en Main Immobilier" (déjà rencontrée en catégorie 2) et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
-Colle ici les données du cas pratique ci-dessus (la description des 3 photos).
+Je travaille à l'agence "Clé en Main Immobilier" et dois préparer les photos d'un appartement à louer pour l'annonce en ligne.
+Tu trouveras les données du cas pratique (la description des 3 photos) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5161,8 +5161,8 @@ Tu es un directeur artistique spécialisé dans la cohérence des chartes graphi
 Ton objectif est de décrire comment décliner un visuel produit en 3 nouvelles couleurs de charte tout en garantissant la lisibilité.
 
 # Contexte
-Tu travailles chez "Botanika" (déjà rencontrée en catégorie 1). Tu as validé un visuel produit pour la crème visage et souhaites le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
-Colle ici les données du cas pratique ci-dessus (la charte couleur complète et la description du visuel original).
+Je travaille chez "Botanika". J'ai validé un visuel produit pour la crème visage et souhaite le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
+Tu trouveras les données du cas pratique (la charte couleur complète et la description du visuel original) à la fin de ce message.
 
 # Instructions
 1. Décris précisément, pour chacun des 3 autres produits, comment adapter le visuel original (quelle couleur remplace quelle couleur, en respectant les codes exacts fournis).
@@ -5184,8 +5184,8 @@ Tâche : Décris comment décliner un visuel produit en 3 nouvelles couleurs de 
 
 Contexte :
 """
-Tu travailles chez "Botanika" (déjà rencontrée en catégorie 1). Tu as validé un visuel produit pour la crème visage et souhaites le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
-Colle ici les données du cas pratique ci-dessus (la charte couleur complète et la description du visuel original).
+Je travaille chez "Botanika". J'ai validé un visuel produit pour la crème visage et souhaite le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
+Tu trouveras les données du cas pratique (la charte couleur complète et la description du visuel original) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5206,8 +5206,8 @@ Tu es un directeur artistique spécialisé dans la cohérence des chartes graphi
 </role>
 
 <context>
-Tu travailles chez "Botanika" (déjà rencontrée en catégorie 1). Tu as validé un visuel produit pour la crème visage et souhaites le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
-Colle ici les données du cas pratique ci-dessus (la charte couleur complète et la description du visuel original).
+Je travaille chez "Botanika". J'ai validé un visuel produit pour la crème visage et souhaite le décliner pour 3 autres produits de la gamme, chacun avec une couleur associée différente.
+Tu trouveras les données du cas pratique (la charte couleur complète et la description du visuel original) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5235,8 +5235,8 @@ Tu es un directeur artistique spécialisé dans la cohérence des chartes graphi
 Ton objectif est de proposer les couleurs de 2 visuels de menu manquants, cohérentes avec une charte restreinte et une hiérarchie voulue.
 
 # Contexte
-Tu gères "Le Comptoir Basque" (déjà rencontré en catégorie 1) et veux décliner ton visuel de menu du jour en 3 versions correspondant à tes 3 formules, pour un affichage différencié en vitrine.
-Colle ici les données du cas pratique ci-dessus (le contexte des 3 formules et la charte).
+Je gère le restaurant "Le Comptoir Basque" et veux décliner mon visuel de menu du jour en 3 versions correspondant à mes 3 formules, pour un affichage différencié en vitrine.
+Tu trouveras les données du cas pratique (le contexte des 3 formules et la charte) à la fin de ce message.
 
 # Instructions
 1. Propose les couleurs à utiliser pour les 2 formules manquantes, en justifiant le choix par rapport à la charte des 3 couleurs basques disponibles et à la hiérarchie voulue (la formule complète doit se distinguer comme "supérieure").
@@ -5258,8 +5258,8 @@ Tâche : Propose les couleurs de 2 visuels de menu manquants, cohérentes avec u
 
 Contexte :
 """
-Tu gères "Le Comptoir Basque" (déjà rencontré en catégorie 1) et veux décliner ton visuel de menu du jour en 3 versions correspondant à tes 3 formules, pour un affichage différencié en vitrine.
-Colle ici les données du cas pratique ci-dessus (le contexte des 3 formules et la charte).
+Je gère le restaurant "Le Comptoir Basque" et veux décliner mon visuel de menu du jour en 3 versions correspondant à mes 3 formules, pour un affichage différencié en vitrine.
+Tu trouveras les données du cas pratique (le contexte des 3 formules et la charte) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5280,8 +5280,8 @@ Tu es un directeur artistique spécialisé dans la cohérence des chartes graphi
 </role>
 
 <context>
-Tu gères "Le Comptoir Basque" (déjà rencontré en catégorie 1) et veux décliner ton visuel de menu du jour en 3 versions correspondant à tes 3 formules, pour un affichage différencié en vitrine.
-Colle ici les données du cas pratique ci-dessus (le contexte des 3 formules et la charte).
+Je gère le restaurant "Le Comptoir Basque" et veux décliner mon visuel de menu du jour en 3 versions correspondant à mes 3 formules, pour un affichage différencié en vitrine.
+Tu trouveras les données du cas pratique (le contexte des 3 formules et la charte) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5309,8 +5309,8 @@ Tu es un monteur vidéo spécialisé dans le dérushage de témoignages clients.
 Ton objectif est de sélectionner les 4 meilleurs extraits d'une interview pour construire une vidéo de 90 secondes.
 
 # Contexte
-Tu es monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
-Colle ici les données du cas pratique ci-dessus (les notes de dérushage avec timecodes).
+Je suis monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
+Tu trouveras les données du cas pratique (les notes de dérushage avec timecodes) à la fin de ce message.
 
 # Instructions
 1. Sélectionne les 4 extraits les plus forts pour construire une vidéo de 90 secondes maximum, en indiquant les timecodes précis retenus.
@@ -5333,8 +5333,8 @@ Tâche : Sélectionne les 4 meilleurs extraits d'une interview pour une vidéo d
 
 Contexte :
 """
-Tu es monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
-Colle ici les données du cas pratique ci-dessus (les notes de dérushage avec timecodes).
+Je suis monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
+Tu trouveras les données du cas pratique (les notes de dérushage avec timecodes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5355,8 +5355,8 @@ Tu es un monteur vidéo spécialisé dans le dérushage de témoignages clients.
 </role>
 
 <context>
-Tu es monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
-Colle ici les données du cas pratique ci-dessus (les notes de dérushage avec timecodes).
+Je suis monteur (monteuse) dans une agence vidéo et dois retrouver les meilleurs extraits dans les rushes bruts d'une interview de 25 minutes pour ne garder que 90 secondes utilisables.
+Tu trouveras les données du cas pratique (les notes de dérushage avec timecodes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5385,8 +5385,8 @@ Tu es un monteur vidéo spécialisé dans le dérushage de contenus événementi
 Ton objectif est de sélectionner les plans à retenir pour un teaser de 45 secondes maximum.
 
 # Contexte
-Tu es vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
-Colle ici les données du cas pratique ci-dessus (le journal de dérushage simplifié).
+Je suis vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
+Tu trouveras les données du cas pratique (le journal de dérushage simplifié) à la fin de ce message.
 
 # Instructions
 1. Sélectionne les plans à retenir pour un teaser de 45 secondes maximum en indiquant la durée exacte de chaque plan retenu (le total ne doit pas dépasser 45 secondes).
@@ -5409,8 +5409,8 @@ Tâche : Sélectionne les plans à retenir pour un teaser de 45 secondes maximum
 
 Contexte :
 """
-Tu es vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
-Colle ici les données du cas pratique ci-dessus (le journal de dérushage simplifié).
+Je suis vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
+Tu trouveras les données du cas pratique (le journal de dérushage simplifié) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5431,8 +5431,8 @@ Tu es un monteur vidéo spécialisé dans le dérushage de contenus événementi
 </role>
 
 <context>
-Tu es vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
-Colle ici les données du cas pratique ci-dessus (le journal de dérushage simplifié).
+Je suis vidéaste et dois sélectionner les meilleurs plans parmi 3 heures de rushes tournés sur 2 jours de festival, pour un teaser de 45 secondes.
+Tu trouveras les données du cas pratique (le journal de dérushage simplifié) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5461,8 +5461,8 @@ Tu es un monteur vidéo spécialisé dans le montage à partir de transcriptions
 Ton objectif est d'éditer un passage de transcription brute pour ne garder que le contenu à forte valeur.
 
 # Contexte
-Une entreprise de conseil enregistre un podcast vidéo mensuel. Tu es le monteur (la monteuse) : tu reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
+Une entreprise de conseil enregistre un podcast vidéo mensuel. Je suis le monteur (la monteuse) : je reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute avec timecodes) à la fin de ce message.
 
 # Instructions
 1. Édite ce passage en supprimant les hésitations, répétitions et éléments non pertinents (comme le fait d'annoncer le sujet).
@@ -5485,8 +5485,8 @@ Tâche : Édite un passage de transcription brute en ne gardant que le contenu �
 
 Contexte :
 """
-Une entreprise de conseil enregistre un podcast vidéo mensuel. Tu es le monteur (la monteuse) : tu reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
+Une entreprise de conseil enregistre un podcast vidéo mensuel. Je suis le monteur (la monteuse) : je reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute avec timecodes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5507,8 +5507,8 @@ Tu es un monteur vidéo spécialisé dans le montage à partir de transcriptions
 </role>
 
 <context>
-Une entreprise de conseil enregistre un podcast vidéo mensuel. Tu es le monteur (la monteuse) : tu reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
+Une entreprise de conseil enregistre un podcast vidéo mensuel. Je suis le monteur (la monteuse) : je reçois la transcription brute d'un épisode de 40 minutes et dois produire un premier montage de 15 minutes maximum.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute avec timecodes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5537,8 +5537,8 @@ Tu es un monteur vidéo spécialisé dans le montage de contenus de formation in
 Ton objectif est d'éditer une transcription pour ne garder que l'essentiel exploitable dans une vidéo de formation courte.
 
 # Contexte
-Tu travailles au service formation de "Mécatech Industries" (déjà rencontrée plusieurs fois). Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et tu dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
+Je travaille au service formation de "Mécatech Industries". Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et je dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute avec timecodes) à la fin de ce message.
 
 # Instructions
 1. Édite cette transcription pour ne garder que l'essentiel exploitable dans une vidéo de formation courte (le changement, sa justification chiffrée, les 2 actions concrètes attendues des opérateurs).
@@ -5561,8 +5561,8 @@ Tâche : Édite une transcription pour ne garder que l'essentiel exploitable dan
 
 Contexte :
 """
-Tu travailles au service formation de "Mécatech Industries" (déjà rencontrée plusieurs fois). Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et tu dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
+Je travaille au service formation de "Mécatech Industries". Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et je dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute avec timecodes) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5583,8 +5583,8 @@ Tu es un monteur vidéo spécialisé dans le montage de contenus de formation in
 </role>
 
 <context>
-Tu travailles au service formation de "Mécatech Industries" (déjà rencontrée plusieurs fois). Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et tu dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute avec timecodes).
+Je travaille au service formation de "Mécatech Industries". Une session a été enregistrée où un expert explique une nouvelle procédure qualité, et je dois en tirer une vidéo de formation concise de 5 minutes à partir de 20 minutes d'enregistrement brut.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute avec timecodes) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5613,8 +5613,8 @@ Tu es un sous-titreur professionnel spécialisé dans les normes de longueur et 
 Ton objectif est de découper une phrase de transcription en sous-titres respectant les normes de longueur.
 
 # Contexte
-Tu travailles chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Tu dois créer les sous-titres en français à partir de la transcription de la voix off.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute à sous-titrer).
+Je travaille chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Je dois créer les sous-titres en français à partir de la transcription de la voix off.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute à sous-titrer) à la fin de ce message.
 
 # Instructions
 1. Découpe cette phrase en sous-titres respectant la limite de 42 caractères par ligne et maximum 2 lignes par sous-titre.
@@ -5637,8 +5637,8 @@ Tâche : Découpe une phrase de transcription en sous-titres respectant la limit
 
 Contexte :
 """
-Tu travailles chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Tu dois créer les sous-titres en français à partir de la transcription de la voix off.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute à sous-titrer).
+Je travaille chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Je dois créer les sous-titres en français à partir de la transcription de la voix off.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute à sous-titrer) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5659,8 +5659,8 @@ Tu es un sous-titreur professionnel spécialisé dans les normes de longueur et 
 </role>
 
 <context>
-Tu travailles chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Tu dois créer les sous-titres en français à partir de la transcription de la voix off.
-Colle ici les données du cas pratique ci-dessus (l'extrait de transcription brute à sous-titrer).
+Je travaille chez "OutilPro" et produis une vidéo tutoriel "comment poser une étagère murale". Je dois créer les sous-titres en français à partir de la transcription de la voix off.
+Tu trouveras les données du cas pratique (l'extrait de transcription brute à sous-titrer) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5689,8 +5689,8 @@ Tu es un sous-titreur professionnel spécialisé dans la traduction de sous-titr
 Ton objectif est de traduire 3 sous-titres en anglais en respectant les contraintes de longueur et de durée d'affichage.
 
 # Contexte
-Tu travailles chez "Fromagerie des Alpages" (déjà rencontrée en catégorie 1). Vous avez réalisé une vidéo de présentation de votre savoir-faire à destination de votre distributeur britannique, à sous-titrer en anglais.
-Colle ici les données du cas pratique ci-dessus (les 3 sous-titres originaux en français avec leur durée).
+Je travaille chez "Fromagerie des Alpages". Nous avons réalisé une vidéo de présentation de notre savoir-faire à destination de notre distributeur britannique, à sous-titrer en anglais.
+Tu trouveras les données du cas pratique (les 3 sous-titres originaux en français avec leur durée) à la fin de ce message.
 
 # Instructions
 1. Traduis ces 3 sous-titres en anglais en respectant la limite de 42 caractères par ligne, en adaptant la formulation si la traduction littérale dépasse la limite.
@@ -5712,8 +5712,8 @@ Tâche : Traduis 3 sous-titres en anglais en respectant la limite de caractères
 
 Contexte :
 """
-Tu travailles chez "Fromagerie des Alpages" (déjà rencontrée en catégorie 1). Vous avez réalisé une vidéo de présentation de votre savoir-faire à destination de votre distributeur britannique, à sous-titrer en anglais.
-Colle ici les données du cas pratique ci-dessus (les 3 sous-titres originaux en français avec leur durée).
+Je travaille chez "Fromagerie des Alpages". Nous avons réalisé une vidéo de présentation de notre savoir-faire à destination de notre distributeur britannique, à sous-titrer en anglais.
+Tu trouveras les données du cas pratique (les 3 sous-titres originaux en français avec leur durée) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5734,8 +5734,8 @@ Tu es un sous-titreur professionnel spécialisé dans la traduction de sous-titr
 </role>
 
 <context>
-Tu travailles chez "Fromagerie des Alpages" (déjà rencontrée en catégorie 1). Vous avez réalisé une vidéo de présentation de votre savoir-faire à destination de votre distributeur britannique, à sous-titrer en anglais.
-Colle ici les données du cas pratique ci-dessus (les 3 sous-titres originaux en français avec leur durée).
+Je travaille chez "Fromagerie des Alpages". Nous avons réalisé une vidéo de présentation de notre savoir-faire à destination de notre distributeur britannique, à sous-titrer en anglais.
+Tu trouveras les données du cas pratique (les 3 sous-titres originaux en français avec leur durée) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5763,8 +5763,8 @@ Tu es un ingénieur du son spécialisé dans le nettoyage audio de podcasts amat
 Ton objectif est d'établir l'ordre correct des étapes de traitement pour corriger 4 défauts audio identifiés.
 
 # Contexte
-Tu es podcasteur indépendant et as enregistré un épisode dans ton salon, sans studio. Tu dois préparer le fichier avant publication.
-Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 défauts).
+Je suis podcasteur indépendant et j'ai enregistré un épisode dans mon salon, sans studio. Je dois préparer le fichier avant publication.
+Tu trouveras les données du cas pratique (le diagnostic des 4 défauts) à la fin de ce message.
 
 # Instructions
 1. Établis l'ordre des étapes de traitement à appliquer à cet enregistrement pour corriger ces 4 défauts.
@@ -5787,8 +5787,8 @@ Tâche : Établis l'ordre correct des étapes de traitement pour corriger 4 déf
 
 Contexte :
 """
-Tu es podcasteur indépendant et as enregistré un épisode dans ton salon, sans studio. Tu dois préparer le fichier avant publication.
-Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 défauts).
+Je suis podcasteur indépendant et j'ai enregistré un épisode dans mon salon, sans studio. Je dois préparer le fichier avant publication.
+Tu trouveras les données du cas pratique (le diagnostic des 4 défauts) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5809,8 +5809,8 @@ Tu es un ingénieur du son spécialisé dans le nettoyage audio de podcasts amat
 </role>
 
 <context>
-Tu es podcasteur indépendant et as enregistré un épisode dans ton salon, sans studio. Tu dois préparer le fichier avant publication.
-Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 défauts).
+Je suis podcasteur indépendant et j'ai enregistré un épisode dans mon salon, sans studio. Je dois préparer le fichier avant publication.
+Tu trouveras les données du cas pratique (le diagnostic des 4 défauts) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5839,8 +5839,8 @@ Tu es un ingénieur du son spécialisé dans le nettoyage audio de messages voca
 Ton objectif est de déterminer si chaque défaut d'un message vocal est corrigible par un nettoyage classique et de proposer le traitement approprié.
 
 # Contexte
-Tu travailles dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Tu souhaites l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
-Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 points).
+Je travaille dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Je souhaite l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
+Tu trouveras les données du cas pratique (le diagnostic des 4 points) à la fin de ce message.
 
 # Instructions
 1. Détermine si les défauts listés sont tous corrigibles par un nettoyage audio classique ou si l'un d'entre eux nécessite une solution différente.
@@ -5863,8 +5863,8 @@ Tâche : Détermine si chaque défaut d'un message vocal est corrigible par un n
 
 Contexte :
 """
-Tu travailles dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Tu souhaites l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
-Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 points).
+Je travaille dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Je souhaite l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
+Tu trouveras les données du cas pratique (le diagnostic des 4 points) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5885,8 +5885,8 @@ Tu es un ingénieur du son spécialisé dans le nettoyage audio de messages voca
 </role>
 
 <context>
-Tu travailles dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Tu souhaites l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
-Colle ici les données du cas pratique ci-dessus (le diagnostic des 4 points).
+Je travaille dans une agence qui a reçu un message vocal WhatsApp d'un client satisfait. Je souhaite l'intégrer comme témoignage audio dans une vidéo, mais la qualité d'enregistrement est moyenne.
+Tu trouveras les données du cas pratique (le diagnostic des 4 points) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5915,8 +5915,8 @@ Tu es un monteur vidéo spécialisé dans le recadrage multi-formats pour les r�
 Ton objectif est de déterminer la meilleure zone de recadrage vertical d'un plan horizontal et de proposer une solution pour les moments à deux personnages.
 
 # Contexte
-Tu dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
-Colle ici les données du cas pratique ci-dessus (la description du plan original).
+Je dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
+Tu trouveras les données du cas pratique (la description du plan original) à la fin de ce message.
 
 # Instructions
 1. Détermine quelle portion du cadre horizontal doit être conservée dans le recadrage vertical pour ne pas perdre l'élément essentiel (le visage de l'interviewé qui parle).
@@ -5939,8 +5939,8 @@ Tâche : Détermine la meilleure zone de recadrage vertical d'un plan horizontal
 
 Contexte :
 """
-Tu dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
-Colle ici les données du cas pratique ci-dessus (la description du plan original).
+Je dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
+Tu trouveras les données du cas pratique (la description du plan original) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -5961,8 +5961,8 @@ Tu es un monteur vidéo spécialisé dans le recadrage multi-formats pour les r�
 </role>
 
 <context>
-Tu dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
-Colle ici les données du cas pratique ci-dessus (la description du plan original).
+Je dois décliner une vidéo d'interview tournée en 16:9 (format large, l'interviewé est assis légèrement décentré à gauche du cadre avec un intervieweur visible à droite) en format vertical 9:16 pour Instagram Reels et TikTok.
+Tu trouveras les données du cas pratique (la description du plan original) à la fin de ce message.
 </context>
 
 <instructions>
@@ -5991,8 +5991,8 @@ Tu es un monteur vidéo spécialisé dans le recadrage multi-formats et la gesti
 Ton objectif est d'identifier le risque du recadrage carré pour un texte incrusté et de proposer 2 solutions.
 
 # Contexte
-Tu dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
-Colle ici les données du cas pratique ci-dessus (la description du plan original).
+Je dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
+Tu trouveras les données du cas pratique (la description du plan original) à la fin de ce message.
 
 # Instructions
 1. Identifie le risque principal que pose ce recadrage pour le texte incrusté en bas de l'image (largeur du texte par rapport à la nouvelle largeur du cadre carré).
@@ -6014,8 +6014,8 @@ Tâche : Identifie le risque du recadrage carré pour un texte incrusté en bas 
 
 Contexte :
 """
-Tu dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
-Colle ici les données du cas pratique ci-dessus (la description du plan original).
+Je dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
+Tu trouveras les données du cas pratique (la description du plan original) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -6036,8 +6036,8 @@ Tu es un monteur vidéo spécialisé dans le recadrage multi-formats et la gesti
 </role>
 
 <context>
-Tu dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
-Colle ici les données du cas pratique ci-dessus (la description du plan original).
+Je dois décliner une vidéo de démonstration d'un produit de cuisine (mixeur) tournée en 16:9, qui contient du texte incrusté en bas de l'image (sous-titres et légendes explicatives), en format carré 1:1 pour un post Instagram classique.
+Tu trouveras les données du cas pratique (la description du plan original) à la fin de ce message.
 </context>
 
 <instructions>
@@ -6065,8 +6065,8 @@ Tu es un traducteur-adaptateur spécialisé dans la voix off et le respect de l'
 Ton objectif est de reformuler une traduction anglaise trop longue pour qu'elle tienne dans le timing d'origine.
 
 # Contexte
-Tu travailles chez "Structa Bois" (déjà rencontrée en catégorie 2) et as fait doubler votre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
-Colle ici les données du cas pratique ci-dessus (le texte français original, la première traduction anglaise, et leurs durées).
+Je travaille chez "Structa Bois" et nous avons fait doubler notre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
+Tu trouveras les données du cas pratique (le texte français original, la première traduction anglaise, et leurs durées) à la fin de ce message.
 
 # Instructions
 1. Reformule la traduction anglaise pour qu'elle tienne dans une durée de lecture d'environ 4 secondes, le même timing que l'original.
@@ -6089,8 +6089,8 @@ Tâche : Reformule une traduction anglaise trop longue pour qu'elle tienne dans 
 
 Contexte :
 """
-Tu travailles chez "Structa Bois" (déjà rencontrée en catégorie 2) et as fait doubler votre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
-Colle ici les données du cas pratique ci-dessus (le texte français original, la première traduction anglaise, et leurs durées).
+Je travaille chez "Structa Bois" et nous avons fait doubler notre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
+Tu trouveras les données du cas pratique (le texte français original, la première traduction anglaise, et leurs durées) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -6111,8 +6111,8 @@ Tu es un traducteur-adaptateur spécialisé dans la voix off et le respect de l'
 </role>
 
 <context>
-Tu travailles chez "Structa Bois" (déjà rencontrée en catégorie 2) et as fait doubler votre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
-Colle ici les données du cas pratique ci-dessus (le texte français original, la première traduction anglaise, et leurs durées).
+Je travaille chez "Structa Bois" et nous avons fait doubler notre vidéo de présentation d'entreprise en anglais pour un salon international, mais le premier essai de traduction pose un problème de durée.
+Tu trouveras les données du cas pratique (le texte français original, la première traduction anglaise, et leurs durées) à la fin de ce message.
 </context>
 
 <instructions>
@@ -6141,8 +6141,8 @@ Tu es un traducteur-adaptateur spécialisé dans la voix off et le respect de l'
 Ton objectif est de proposer une traduction espagnole concise tenant dans un timing équivalent à l'original français.
 
 # Contexte
-Tu travailles chez "OutilPro" (déjà rencontrée en tâche F38) et veux adapter en espagnol la voix off de votre tutoriel "comment poser une étagère murale" pour le marché espagnol.
-Colle ici les données du cas pratique ci-dessus (le texte français original et sa durée).
+Je travaille chez "OutilPro" et veux adapter en espagnol la voix off de notre tutoriel "comment poser une étagère murale" pour le marché espagnol.
+Tu trouveras les données du cas pratique (le texte français original et sa durée) à la fin de ce message.
 
 # Instructions
 1. Propose une traduction en espagnol qui tienne dans un timing équivalent (environ 5 secondes de lecture).
@@ -6165,8 +6165,8 @@ Tâche : Propose une traduction espagnole concise tenant dans un timing équival
 
 Contexte :
 """
-Tu travailles chez "OutilPro" (déjà rencontrée en tâche F38) et veux adapter en espagnol la voix off de votre tutoriel "comment poser une étagère murale" pour le marché espagnol.
-Colle ici les données du cas pratique ci-dessus (le texte français original et sa durée).
+Je travaille chez "OutilPro" et veux adapter en espagnol la voix off de notre tutoriel "comment poser une étagère murale" pour le marché espagnol.
+Tu trouveras les données du cas pratique (le texte français original et sa durée) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -6187,8 +6187,8 @@ Tu es un traducteur-adaptateur spécialisé dans la voix off et le respect de l'
 </role>
 
 <context>
-Tu travailles chez "OutilPro" (déjà rencontrée en tâche F38) et veux adapter en espagnol la voix off de votre tutoriel "comment poser une étagère murale" pour le marché espagnol.
-Colle ici les données du cas pratique ci-dessus (le texte français original et sa durée).
+Je travaille chez "OutilPro" et veux adapter en espagnol la voix off de notre tutoriel "comment poser une étagère murale" pour le marché espagnol.
+Tu trouveras les données du cas pratique (le texte français original et sa durée) à la fin de ce message.
 </context>
 
 <instructions>
@@ -6217,8 +6217,8 @@ Tu es un spécialiste du prompt engineering pour la génération de séquences v
 Ton objectif est de rédiger 3 prompts de génération vidéo courts et simples pour illustrer une voix off.
 
 # Contexte
-Tu travailles chez "Calmly" (déjà rencontrée en tâche F09) et prépares une vidéo explicative. Tu as besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
-Colle ici les données du cas pratique ci-dessus (les 3 passages de voix off à illustrer).
+Je travaille chez "Calmly" et prépare une vidéo explicative. J'ai besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
+Tu trouveras les données du cas pratique (les 3 passages de voix off à illustrer) à la fin de ce message.
 
 # Instructions
 1. Rédige un prompt de génération vidéo pour chacun des 3 passages, en respectant la bonne pratique d'une action simple et brève par séquence.
@@ -6241,8 +6241,8 @@ Tâche : Rédige 3 prompts de génération vidéo courts et simples pour illustr
 
 Contexte :
 """
-Tu travailles chez "Calmly" (déjà rencontrée en tâche F09) et prépares une vidéo explicative. Tu as besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
-Colle ici les données du cas pratique ci-dessus (les 3 passages de voix off à illustrer).
+Je travaille chez "Calmly" et prépare une vidéo explicative. J'ai besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
+Tu trouveras les données du cas pratique (les 3 passages de voix off à illustrer) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -6263,8 +6263,8 @@ Tu es un spécialiste du prompt engineering pour la génération de séquences v
 </role>
 
 <context>
-Tu travailles chez "Calmly" (déjà rencontrée en tâche F09) et prépares une vidéo explicative. Tu as besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
-Colle ici les données du cas pratique ci-dessus (les 3 passages de voix off à illustrer).
+Je travaille chez "Calmly" et prépare une vidéo explicative. J'ai besoin de 3 séquences d'illustration générées par IA pour accompagner une voix off, faute de budget tournage.
+Tu trouveras les données du cas pratique (les 3 passages de voix off à illustrer) à la fin de ce message.
 </context>
 
 <instructions>
@@ -6293,8 +6293,8 @@ Tu es un spécialiste du prompt engineering pour la génération de séquences v
 Ton objectif est de rédiger les prompts de génération vidéo pour les 5 séquences d'une publicité de 15 secondes.
 
 # Contexte
-Tu travailles pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
-Colle ici les données du cas pratique ci-dessus (le script des 5 séquences).
+Je travaille pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
+Tu trouveras les données du cas pratique (le script des 5 séquences) à la fin de ce message.
 
 # Instructions
 1. Rédige les prompts de génération vidéo pour chacune des 5 séquences.
@@ -6317,8 +6317,8 @@ Tâche : Rédige les prompts de génération vidéo pour 5 séquences d'une publ
 
 Contexte :
 """
-Tu travailles pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
-Colle ici les données du cas pratique ci-dessus (le script des 5 séquences).
+Je travaille pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
+Tu trouveras les données du cas pratique (le script des 5 séquences) à la fin de ce message.
 """
 
 Format de sortie attendu :
@@ -6339,8 +6339,8 @@ Tu es un spécialiste du prompt engineering pour la génération de séquences v
 </role>
 
 <context>
-Tu travailles pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
-Colle ici les données du cas pratique ci-dessus (le script des 5 séquences).
+Je travaille pour l'application "CuisineFacile" et veux une courte publicité de 15 secondes composée uniquement de séquences générées par IA (sans tournage), pour tester le format avant d'investir dans une vraie production.
+Tu trouveras les données du cas pratique (le script des 5 séquences) à la fin de ce message.
 </context>
 
 <instructions>
