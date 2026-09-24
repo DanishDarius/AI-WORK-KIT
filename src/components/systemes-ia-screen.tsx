@@ -54,7 +54,7 @@ export function SystemesIaScreen() {
         </div>
         <div className="aw-systems-hero-visual">
           <Image
-            src="/brand/systemes-ia-hero.png"
+            src="/brand/systemes-ia-hero-atelier.png"
             alt="Espace de travail AI WORK KIT présentant un parcours IA personnalisé."
             width={1536}
             height={1024}
@@ -81,7 +81,7 @@ export function SystemesIaScreen() {
 
         <div className="aw-systems-example-visual">
           <Image
-            src="/brand/systeme-suivi-client.png"
+            src="/brand/systeme-suivi-client-atelier.png"
             alt="Une demande client est analysée, une réponse est préparée puis soumise à validation."
             width={1792}
             height={896}
@@ -108,7 +108,7 @@ export function SystemesIaScreen() {
           </p>
           <div className="aw-systems-method-visual">
             <Image
-              src="/brand/systemes-ia-methode.png"
+              src="/brand/systemes-ia-methode-atelier.png"
               alt="Guide AI WORK KIT pour construire et transmettre un système IA d’entreprise."
               width={1024}
               height={1536}

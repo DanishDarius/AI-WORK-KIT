@@ -14,7 +14,7 @@ export function GuideCover({ number, title, tool, variant, featured = false, cla
     <div className={`aw-guide-book ${featured ? "is-featured" : ""} ${className}`.trim()}>
       <span className="aw-guide-page-block" aria-hidden="true" />
       <span className="aw-guide-page-bottom" aria-hidden="true" />
-      <div className={`aw-guide-cover aw-guide-cover-${variant}`}>
+      <div className={`aw-guide-cover aw-guide-cover-${variant}`} data-tool={tool.toLowerCase()}>
         {number === 1 && (
           <Image
             className="aw-guide-cover-art"

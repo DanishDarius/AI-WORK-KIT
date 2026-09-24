@@ -286,7 +286,7 @@ body {
   overflow: hidden;
   background-image:
     linear-gradient(180deg, rgba(3, 12, 16, 0.15), rgba(3, 12, 16, 0.68)),
-    url("/brand/ia-au-travail.webp");
+    url("/brand/ia-au-travail-atelier.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

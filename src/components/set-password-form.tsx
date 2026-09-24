@@ -4,6 +4,10 @@ import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
+const hasSupabaseConfig = Boolean(
+  process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+);
+
 export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
   const [sessionState, setSessionState] = useState<
     "checking" | "ready" | "missing"
@@ -15,6 +19,7 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
   const [error, setError] = useState<string>();
 
   useEffect(() => {
+    if (!hasSupabaseConfig) return;
     const supabase = createClient();
     supabase.auth.getUser().then(({ data }) => {
       setSessionState(data.user ? "ready" : "missing");
@@ -57,6 +62,10 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
 
     await supabase.auth.signOut();
     setCompleted(true);
+  }
+
+  if (!hasSupabaseConfig) {
+    return <p role="status">La connexion est momentanément indisponible. Veuillez réessayer plus tard.</p>;
   }
 
   if (sessionState === "checking") {

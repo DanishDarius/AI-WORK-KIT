@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import "./signature.css";
+import "./atelier.css";
 import { Shell } from "@/components/kit-ui";
 import { SessionFromHash } from "@/components/session-from-hash";
 
@@ -21,8 +22,11 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: "#0B6B5E",
 };
 export const metadata: Metadata = {
+  applicationName: "AI WORK KIT",
+  appleWebApp: { capable: true, title: "AIW", statusBarStyle: "default" },
   title: "AI WORK KIT",
   description: "Choisissez une tâche, copiez le prompt, gagnez du temps. L’IA appliquée à votre métier.",
 };

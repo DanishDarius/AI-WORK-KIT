@@ -1,0 +1,361 @@
+
+:root, :root[data-theme="light"], :root[data-theme="dark"], #awk-studio.aw-theme-atelier {
+  color-scheme: light;
+  --aw-bg: #f5f1ea;
+  --aw-paper: #fffdfc;
+  --aw-ink: #17211f;
+  --aw-muted: #596663;
+  --aw-line: #d8d1c6;
+  --aw-accent: #0b6b5e;
+  --aw-soft: #e9e3d9;
+  --aw-primary: #0b6b5e;
+  --aw-on-primary: #ffffff;
+  --aw-secondary: #4667d8;
+  --aw-secondary-soft: #e9ecfa;
+  --aw-night: #17211f;
+  --aw-lime: #0b6b5e;
+  --aw-on-night: #fffdfc;
+  --aw-on-night-muted: #c7d0cd;
+  --aw-art-line: #b7c4c0;
+  --aw-art-layer: #dce9e4;
+  --navy: #0b6b5e;
+  --background: #f5f1ea;
+  --border: #d8d1c6;
+  --muted: #596663;
+  color: #17211f;
+  background:
+    radial-gradient(circle at 82% 7%, rgba(70, 103, 216, 0.12), transparent 27rem),
+    radial-gradient(circle at 12% 31%, rgba(217, 111, 76, 0.08), transparent 25rem),
+    linear-gradient(rgba(11, 107, 94, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 107, 94, 0.025) 1px, transparent 1px),
+    #f5f1ea;
+  background-size: auto, auto, 72px 72px, 72px 72px, auto;
+}
+
+#awk-studio.aw-theme-atelier .aw-top {
+  border-color: rgba(23, 33, 31, 0.12);
+  background: rgba(255, 253, 252, 0.92);
+  box-shadow: 0 8px 30px rgba(23, 33, 31, 0.05);
+}
+#awk-studio.aw-theme-atelier .aw-brand { color: #17211f; }
+#awk-studio.aw-theme-atelier .aw-brand em { color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-desktop-nav > a,
+#awk-studio.aw-theme-atelier .aw-login-link { color: #596663; }
+#awk-studio.aw-theme-atelier .aw-desktop-nav > a:hover,
+#awk-studio.aw-theme-atelier .aw-desktop-nav > a[aria-current="page"],
+#awk-studio.aw-theme-atelier .aw-login-link:hover { color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-header-cta {
+  background: #17211f;
+  color: #fffdfc;
+  box-shadow: 0 8px 22px rgba(23, 33, 31, 0.14);
+}
+#awk-studio.aw-theme-atelier .aw-menu-toggle {
+  border-color: #d8d1c6;
+  background: #fffdfc;
+}
+#awk-studio.aw-theme-atelier .aw-menu-toggle span { background: #17211f; }
+
+#awk-studio.aw-theme-atelier .aw-signature-hero {
+  background:
+    radial-gradient(circle at 50% 2%, rgba(11, 107, 94, 0.14), transparent 31rem),
+    transparent;
+}
+#awk-studio.aw-theme-atelier .aw-signature-hero .aw-eyebrow { color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-signature-hero h1 { color: #17211f; }
+#awk-studio.aw-theme-atelier .aw-signature-hero h1 span { color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-signature-hero p { color: #596663; }
+#awk-studio.aw-theme-atelier .aw-hero-primary {
+  background: #0b6b5e;
+  color: #ffffff;
+  box-shadow: 0 14px 34px rgba(11, 107, 94, 0.2);
+}
+#awk-studio.aw-theme-atelier .aw-hero-primary:hover { background: #07594e; }
+#awk-studio.aw-theme-atelier .aw-hero-secondary { color: #17211f; }
+#awk-studio.aw-theme-atelier .aw-hero-secondary:hover { color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-hero-note { color: #6c7774; }
+
+#awk-studio.aw-theme-atelier .aw-start-pill {
+  border-color: #d8d1c6;
+  background: #fffdfc;
+  color: #17211f;
+  box-shadow: 0 18px 45px rgba(23, 33, 31, 0.13);
+}
+#awk-studio.aw-theme-atelier .aw-start-pill svg { color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-start-pill span { color: #596663; }
+#awk-studio.aw-theme-atelier .aw-start-window {
+  border-color: #c9c1b5;
+  background: #fffdfc;
+  box-shadow: 0 34px 85px rgba(23, 33, 31, 0.15);
+}
+#awk-studio.aw-theme-atelier .aw-window-bar {
+  border-color: #d8d1c6;
+  background: #e9e3d9;
+}
+#awk-studio.aw-theme-atelier .aw-window-bar > span { background: #a99f92; }
+#awk-studio.aw-theme-atelier .aw-window-bar > span:first-child { background: #d96f4c; }
+#awk-studio.aw-theme-atelier .aw-window-bar > span:nth-child(2) { background: #d5a645; }
+#awk-studio.aw-theme-atelier .aw-window-bar > span:nth-child(3) { background: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-window-bar small { color: #596663; }
+#awk-studio.aw-theme-atelier .aw-ai-video-overlay .aw-video-kicker { color: #d9f1ea; }
+#awk-studio.aw-theme-atelier .aw-ai-video-overlay .aw-video-play {
+  border-color: rgba(11, 107, 94, 0.26);
+  background: #0b6b5e;
+  color: #ffffff;
+}
+
+#awk-studio.aw-theme-atelier :is(.panel, .aw-path, .aw-tile, .aw-ai, .aw-list, .aw-sectionhead, .aw-video-section) {
+  background-color: #fffdfc;
+}
+#awk-studio.aw-theme-atelier .search-section {
+  padding: clamp(36px, 5vw, 58px) clamp(18px, 4vw, 46px);
+  border: 1px solid #d8d1c6;
+  border-radius: 20px;
+  background: rgba(255, 253, 252, 0.8);
+  box-shadow: 0 18px 54px rgba(23, 33, 31, 0.06);
+}
+#awk-studio.aw-theme-atelier .aw-sectionhead h2 { color: #17211f; }
+#awk-studio.aw-theme-atelier .aw-sectionhead p { color: #596663; }
+#awk-studio.aw-theme-atelier .aw-search {
+  border-color: #cfc7ba;
+  background: #fffdfc;
+  color: #0b6b5e;
+}
+#awk-studio.aw-theme-atelier .aw-search:focus-within {
+  border-color: #0b6b5e;
+  box-shadow: 0 0 0 3px rgba(11, 107, 94, 0.1);
+}
+#awk-studio.aw-theme-atelier .aw-filters button {
+  border-color: #d8d1c6;
+  color: #596663;
+}
+#awk-studio.aw-theme-atelier .aw-filters button:hover { border-color: #0b6b5e; color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-filters button[aria-pressed="true"] {
+  border-color: #17211f;
+  background: #17211f;
+  color: #fffdfc;
+}
+#awk-studio.aw-theme-atelier .aw-tile {
+  border-color: #d8d1c6;
+  background: #fffdfc;
+  box-shadow: 0 10px 28px rgba(23, 33, 31, 0.035);
+}
+#awk-studio.aw-theme-atelier .aw-tile:hover {
+  border-color: rgba(11, 107, 94, 0.5);
+  box-shadow: 0 18px 38px rgba(23, 33, 31, 0.09);
+}
+#awk-studio.aw-theme-atelier .aw-icon { background: #dce9e4; color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-icon.aw-blue { background: #e9ecfa; color: #4667d8; }
+#awk-studio.aw-theme-atelier .aw-tilefooter { border-color: #e3ddd4; }
+#awk-studio.aw-theme-atelier .aw-btn { border-color: #d8d1c6; background: #fffdfc; color: #17211f; }
+
+#awk-studio.aw-theme-atelier .aw-site-footer {
+  border-color: rgba(255, 253, 252, 0.12);
+  background: #17211f;
+  color: #eaf0ee;
+}
+#awk-studio.aw-theme-atelier .aw-footer-logo { color: #fffdfc; }
+#awk-studio.aw-theme-atelier .aw-footer-logo em { color: #85b9ae; }
+#awk-studio.aw-theme-atelier .aw-footer-brand p { color: #aebbb8; }
+#awk-studio.aw-theme-atelier .aw-footer-column h2 { color: #85b9ae; }
+#awk-studio.aw-theme-atelier .aw-footer-column a { color: #d4dcda; }
+#awk-studio.aw-theme-atelier .aw-footer-column a:hover,
+#awk-studio.aw-theme-atelier .aw-footer-column a:focus-visible { color: #75c8b8; }
+#awk-studio.aw-theme-atelier .aw-bottom { border-color: rgba(255, 253, 252, 0.12); }
+
+@media (max-width: 1180px) {
+  #awk-studio.aw-theme-atelier .aw-mobile-panel {
+    border-color: #d8d1c6;
+    background: #fffdfc;
+  }
+  #awk-studio.aw-theme-atelier .aw-menu-heading { color: #6d7976; }
+  #awk-studio.aw-theme-atelier .aw-mobile-panel nav a { color: #17211f; }
+  #awk-studio.aw-theme-atelier .aw-mobile-panel nav a:hover,
+  #awk-studio.aw-theme-atelier .aw-mobile-panel nav a[aria-current="page"] { background: #e9e3d9; }
+  #awk-studio.aw-theme-atelier .aw-mobile-panel nav svg { color: #0b6b5e; }
+  #awk-studio.aw-theme-atelier .aw-mobile-panel nav small { color: #596663; }
+  #awk-studio.aw-theme-atelier .aw-mobile-secondary { border-color: #d8d1c6; }
+  #awk-studio.aw-theme-atelier .aw-mobile-secondary a { color: #17211f; }
+}
+
+/* Shared tokens, interactive states and identity. */
+:root, #awk-studio.aw-theme-atelier {
+  --aw-blue: #4667d8;
+  --aw-success-soft: #e0eee8;
+  --aw-claude: #a34c31;
+  --aw-claude-soft: #f7e6dc;
+  --aw-gemini: #3854b6;
+  --aw-gemini-soft: #e8ecfb;
+}
+html, body { background: #f5f1ea; color: #17211f; color-scheme: light; }
+#awk-studio.aw-theme-atelier .aw-brand-lockup { width: 145px; height: 50px; object-fit: contain; }
+#awk-studio.aw-theme-atelier .aw-footer-logo .aw-brand-lockup { width: 174px; height: 60px; }
+#awk-studio.aw-theme-atelier :is(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--aw-accent); outline-offset: 4px;
+}
+#awk-studio.aw-theme-atelier ::selection { background: #c4dfd5; color: #17211f; }
+#awk-studio.aw-theme-atelier input::placeholder,
+#awk-studio.aw-theme-atelier textarea::placeholder { color: var(--aw-muted); opacity: 1; }
+#awk-studio.aw-theme-atelier .badge-chatgpt { background: var(--aw-success-soft); color: var(--aw-accent); }
+#awk-studio.aw-theme-atelier .badge-claude { background: var(--aw-claude-soft); color: var(--aw-claude); }
+#awk-studio.aw-theme-atelier .badge-gemini { background: var(--aw-gemini-soft); color: var(--aw-gemini); }
+#awk-studio.aw-theme-atelier .dot-chatgpt { background: var(--aw-accent); }
+#awk-studio.aw-theme-atelier .dot-claude { background: #d96f4c; }
+#awk-studio.aw-theme-atelier .dot-gemini { background: var(--aw-blue); }
+#awk-studio.aw-theme-atelier .action-error { color: #a34c31; }
+#awk-studio.aw-theme-atelier .aw-sectionhead { background: transparent; }
+#awk-studio.aw-theme-atelier :is(.aw-panel, .panel, .aw-taskrow) { background: var(--aw-paper); border-color: var(--aw-line); }
+#awk-studio.aw-theme-atelier .aw-btn.aw-primary { background: var(--aw-primary); color: white; border-color: var(--aw-primary); }
+#awk-studio.aw-theme-atelier .aw-login-form input { color: var(--aw-ink); background: var(--aw-paper); }
+#awk-studio.aw-theme-atelier .aw-login-form input:focus { outline-color: #0b6b5e; border-color: #0b6b5e; }
+#awk-studio.aw-theme-atelier .aw-bottom { color: #aebbb8; }
+#awk-studio.aw-theme-atelier .aw-bottom a { color: #d4dcda; }
+#awk-studio.aw-theme-atelier .aw-site-footer :is(a,button):focus-visible { outline-color: #85b9ae; }
+
+/* Accompaniment, systems and strategy: paper surfaces and ink text. */
+#awk-studio.aw-theme-atelier :is(.aw-systems-page,.aw-strategy-page,.aw-library-page,.aw-guide-page) { color: var(--aw-ink); }
+#awk-studio.aw-theme-atelier :is(
+ .aw-systems-hero-copy h1,.aw-systems-section-head h2,.aw-systems-method-copy h2,.aw-systems-cta h2,
+ .aw-systems-example-head h2,.aw-systems-example-captions strong,.aw-systems-method-intro h2,
+ .aw-systems-contact-copy h2,.aw-systems-steps h3,.aw-systems-flow article > p,
+ .aw-strategy-hero-copy h1,.aw-strategy-section-heading h2,.aw-strategy-approach h2,
+ .aw-strategy-scope h2,.aw-strategy-final h2,.aw-strategy-faq summary,
+ .aw-library-explore-head > p strong,.aw-guide-card-copy h3 a,
+ .aw-guide-prose h2,.aw-guide-prose h3,.aw-guide-prose h4) { color: var(--aw-ink); }
+#awk-studio.aw-theme-atelier :is(
+ .aw-systems-kicker,.aw-library-kicker,.aw-systems-steps li > span,.aw-systems-steps article > span,
+ .aw-strategy-method-list summary > span,.aw-strategy-method-card > strong,.aw-strategy-method-card > a,
+ .aw-strategy-approach dt,.aw-brief-topline strong,.aw-guide-meta,.aw-guide-reading-note > span,
+ .aw-guide-prose h2 > span,.aw-guide-prose a,.aw-guide-prose ol li::before,
+ .aw-guide-prompt > div span,.aw-guide-next a > b,.aw-guide-visual-placeholder span,
+ .aw-systems-hero-copy h1 span,.aw-systems-section-head h2 span,.aw-systems-method-copy h2 span,
+ .aw-systems-example-head h2 span,.aw-systems-method-intro h2 span,.aw-systems-contact-copy h2 span,
+ .aw-strategy-hero-copy h1 span,.aw-strategy-section-heading h2 span,.aw-strategy-approach h2 span,
+ .aw-strategy-scope h2 span,.aw-strategy-final h2 span) { color: var(--aw-accent); }
+#awk-studio.aw-theme-atelier :is(
+ .aw-systems-lead,.aw-systems-section-head > p:last-child,.aw-systems-example-head > div > p:last-child,
+ .aw-systems-context,.aw-systems-context a,.aw-systems-example-captions span,.aw-systems-method-intro > p,
+ .aw-systems-steps p,.aw-systems-contact-copy > p,.aw-systems-contact-copy small,.aw-systems-flow article small,
+ .aw-systems-cta > p:not(.aw-systems-kicker),.aw-systems-form label > span,.aw-systems-flow-number,
+ .aw-strategy-bread,.aw-strategy-bread a,.aw-strategy-hero-copy > p:not(.aw-systems-kicker),
+ .aw-strategy-hero-copy small,.aw-strategy-ecosystem > p,.aw-strategy-ecosystem span,
+ .aw-strategy-section-heading > p:last-child,.aw-strategy-method-list summary p,.aw-strategy-method-list summary b,
+ .aw-strategy-method-list details > p,.aw-strategy-method-card > span,.aw-strategy-method-card > strong small,
+ .aw-strategy-method-card > p,.aw-brief-topline,.aw-brief-progress li,.aw-brief-step label > span,
+ .aw-brief-ready p,.aw-strategy-approach-copy > p,.aw-strategy-approach dd span,
+ .aw-strategy-scope > p:not(.aw-systems-kicker),.aw-strategy-scope li,.aw-strategy-scope details p,
+ .aw-strategy-faq details p,.aw-strategy-final > p:not(.aw-systems-kicker),
+ .aw-library-hero h1 span,.aw-library-hero > p:last-child,.aw-shelf-note,
+ .aw-library-search > span:first-child,.aw-library-selects label > span,
+ .aw-library-feature-copy > p:not(.aw-library-kicker),.aw-library-explore-head > p,
+ .aw-guide-card-copy > p,.aw-guide-card-copy > span,.aw-library-empty p,
+ .aw-library-closing h2 span,.aw-library-closing > p:not(.aw-library-kicker),
+ .aw-guide-back,.aw-guide-meta span,.aw-guide-intro,.aw-guide-reading-note > p,
+ .aw-guide-visual-placeholder p,.aw-guide-visual figcaption,.aw-guide-next a > span) { color: var(--aw-muted); }
+#awk-studio.aw-theme-atelier :is(
+ .aw-systems-example,.aw-systems-contact,.aw-systems-cta,.aw-strategy-scope,.aw-strategy-final,
+ .aw-library-feature,.aw-library-closing,.aw-guide-next) {
+  background: radial-gradient(circle at 80% 15%,rgba(11,107,94,.07),transparent 30rem), var(--aw-paper);
+  border-color: var(--aw-line);
+}
+#awk-studio.aw-theme-atelier :is(.aw-guide-shelf-section,.aw-strategy-ecosystem) { background: #ebe6dc; border-color: var(--aw-line); }
+#awk-studio.aw-theme-atelier :is(.aw-strategy-method-card,.aw-brief-card,.aw-systems-flow article,.aw-guide-visual-placeholder) {
+  background: var(--aw-paper); border-color: var(--aw-line); box-shadow: 0 12px 36px rgba(23,33,31,.04);
+}
+#awk-studio.aw-theme-atelier :is(
+ .aw-systems-example-captions li,.aw-systems-example-captions li:last-child,.aw-systems-steps,
+ .aw-systems-method .aw-systems-steps,.aw-systems-steps li,.aw-systems-steps article,
+ .aw-strategy-method-list,.aw-strategy-method-list details,.aw-strategy-brief,
+ .aw-brief-progress,.aw-brief-progress li span,.aw-strategy-approach,.aw-strategy-approach dl,
+ .aw-strategy-approach dl > div,.aw-strategy-scope li,.aw-strategy-scope details,
+ .aw-strategy-faq details,.aw-strategy-faq details:last-child,.aw-guide-reading-layout,
+ .aw-guide-reading-note,.aw-library-empty,.aw-guide-visual img) { border-color: var(--aw-line); }
+#awk-studio.aw-theme-atelier :is(.aw-systems-flow-icon,.aw-systems-connector,.aw-strategy-orbit,.aw-brief-ready > span) {
+  border-color: #b7cec3; color: var(--aw-accent); background: var(--aw-success-soft);
+}
+#awk-studio.aw-theme-atelier .aw-strategy-orbit { box-shadow: 0 0 0 28px rgba(11,107,94,.04),0 0 0 58px rgba(11,107,94,.02); }
+#awk-studio.aw-theme-atelier :is(.aw-systems-hero-visual,.aw-systems-method-visual,.aw-systems-example-visual,.aw-strategy-hero-visual) {
+  border-color: #b7c4c0; box-shadow: 0 24px 60px rgba(23,33,31,.12);
+}
+#awk-studio.aw-theme-atelier :is(.aw-systems-form input,.aw-systems-form select,.aw-systems-form textarea,
+ .aw-brief-step input,.aw-brief-step textarea,.aw-library-search-field,.aw-library-selects select) {
+  background: var(--aw-paper); border-color: var(--aw-line); color: var(--aw-ink);
+}
+#awk-studio.aw-theme-atelier .aw-library-search-field input { color: var(--aw-ink); }
+#awk-studio.aw-theme-atelier .aw-library-search-field svg { stroke: var(--aw-accent); }
+#awk-studio.aw-theme-atelier :is(.aw-systems-form input,.aw-systems-form select,.aw-systems-form textarea,
+ .aw-brief-step input,.aw-brief-step textarea):focus,
+#awk-studio.aw-theme-atelier .aw-library-search-field:focus-within {
+  border-color: var(--aw-accent); box-shadow: 0 0 0 3px rgba(11,107,94,.12);
+}
+#awk-studio.aw-theme-atelier :is(.aw-systems-primary,.aw-systems-form button,.aw-brief-next,
+ .aw-strategy-final > a,.aw-library-feature-copy > a,.aw-library-closing > a,.aw-guide-download) {
+  background: var(--aw-accent); color: white; border-color: var(--aw-accent);
+}
+#awk-studio.aw-theme-atelier :is(.aw-systems-primary,.aw-systems-form button,.aw-brief-next,
+ .aw-strategy-final > a,.aw-library-feature-copy > a,.aw-library-closing > a,.aw-guide-download):hover { background: #07594e; }
+#awk-studio.aw-theme-atelier :is(.aw-systems-secondary,.aw-brief-back,.aw-guide-save,.aw-library-more,.aw-shelf-controls button,.aw-library-sort button) {
+  background: var(--aw-paper); border-color: var(--aw-line); color: var(--aw-ink);
+}
+#awk-studio.aw-theme-atelier :is(.aw-systems-secondary,.aw-guide-save,.aw-library-more,.aw-shelf-controls button):hover { border-color: var(--aw-accent); color: var(--aw-accent); }
+#awk-studio.aw-theme-atelier :is(.aw-guide-save[aria-pressed="true"],.aw-library-sort button[aria-pressed="true"]) {
+  background: var(--aw-success-soft); color: var(--aw-accent); border-color: var(--aw-accent);
+}
+#awk-studio.aw-theme-atelier :is(.aw-brief-progress li[data-active="true"],.aw-brief-progress li[data-done="true"],
+ .aw-brief-progress li[data-active="true"] span,.aw-brief-progress li[data-done="true"] span,.aw-brief-ready button) {
+  color: var(--aw-accent); border-color: var(--aw-accent);
+}
+
+/* Reading surfaces and prompts. */
+#awk-studio.aw-theme-atelier .aw-guide-prose { color: #33433d; }
+#awk-studio.aw-theme-atelier .aw-guide-prose code { background: #e9eee8; border-color: var(--aw-line); color: var(--aw-accent); }
+#awk-studio.aw-theme-atelier .aw-guide-prose ul li::before { background: var(--aw-accent); box-shadow: none; }
+#awk-studio.aw-theme-atelier .aw-guide-prose hr { background: var(--aw-line); }
+#awk-studio.aw-theme-atelier :is(.aw-guide-prompt,.aw-guide-table-wrap,.aw-guide-next a) { background: var(--aw-paper); border-color: var(--aw-line); color: var(--aw-ink); }
+#awk-studio.aw-theme-atelier .aw-guide-prompt > div { border-color: var(--aw-line); background: #e9eee8; }
+#awk-studio.aw-theme-atelier .aw-guide-prompt button { background: var(--aw-paper); border-color: #b7cec3; color: var(--aw-accent); }
+#awk-studio.aw-theme-atelier .aw-guide-prompt p { color: #33433d; }
+#awk-studio.aw-theme-atelier .aw-guide-table-wrap :is(th,td) { border-color: var(--aw-line); }
+#awk-studio.aw-theme-atelier .aw-guide-table-wrap th { background: #e9eee8; color: var(--aw-ink); }
+#awk-studio.aw-theme-atelier .aw-guide-card-copy h3 a:hover { color: var(--aw-accent); }
+#awk-studio.aw-theme-atelier .aw-guide-shelf { scrollbar-color: #b7c4c0 transparent; }
+
+/* Books retain their volume, with restrained emerald / terracotta / cobalt covers. */
+#awk-studio.aw-theme-atelier .aw-guide-book { filter: drop-shadow(0 18px 20px rgba(23,33,31,.16)); }
+#awk-studio.aw-theme-atelier .aw-guide-card-cover:hover .aw-guide-book { filter: drop-shadow(0 24px 28px rgba(23,33,31,.22)); }
+#awk-studio.aw-theme-atelier .aw-guide-cover {
+  --cover-accent: #85b9ae; --cover-base: #172f29;
+  background: var(--cover-base); border-color: #607b6f;
+}
+#awk-studio.aw-theme-atelier .aw-guide-cover[data-tool*="claude"] { --cover-accent: #edaf91; --cover-base: #573b31; border-color: #96654f; }
+#awk-studio.aw-theme-atelier .aw-guide-cover[data-tool*="gemini"] { --cover-accent: #b3c0f4; --cover-base: #283757; border-color: #6d80b4; }
+#awk-studio.aw-theme-atelier .aw-guide-cover::before { border-color: var(--cover-accent); box-shadow: none; }
+#awk-studio.aw-theme-atelier .aw-guide-cover::after { background: var(--cover-accent); box-shadow: none; }
+#awk-studio.aw-theme-atelier .aw-guide-cover-8::after { background: transparent; border-color: var(--cover-accent); }
+#awk-studio.aw-theme-atelier .aw-guide-cover-grid {
+  background: linear-gradient(180deg,transparent 20%,var(--cover-base) 82%),linear-gradient(90deg,rgba(255,253,252,.04) 1px,transparent 1px),linear-gradient(rgba(255,253,252,.04) 1px,transparent 1px);
+  background-size: auto,26px 26px,26px 26px;
+}
+#awk-studio.aw-theme-atelier .aw-guide-cover-orbit { border-color: var(--cover-accent); opacity: .5; }
+#awk-studio.aw-theme-atelier .aw-guide-cover :is(strong,.aw-guide-cover-brand) { color: #fffdfc; }
+#awk-studio.aw-theme-atelier .aw-guide-cover-index { color: #c8d5cd; }
+#awk-studio.aw-theme-atelier .aw-guide-cover-tool { color: var(--cover-accent); }
+#awk-studio.aw-theme-atelier .aw-guide-spine { border-color: rgba(255,253,252,.2); background: linear-gradient(90deg,rgba(0,0,0,.5),rgba(255,253,252,.06),rgba(0,0,0,.2)); }
+#awk-studio.aw-theme-atelier .aw-guide-spine b { color: #fffdfc; }
+#awk-studio.aw-theme-atelier .aw-guide-card-cover:hover .aw-guide-cover { border-color: var(--cover-accent); }
+
+@media(max-width:520px) {
+  #awk-studio.aw-theme-atelier .aw-brand-lockup { width: 116px; height: 40px; }
+  #awk-studio.aw-theme-atelier .aw-hero-secondary { border-color: var(--aw-line); }
+}
+@media print {
+  #awk-studio.aw-theme-atelier .aw-guide-heading h1,
+  #awk-studio.aw-theme-atelier .aw-guide-prose :is(h2,h3,h4) { color: #17211f !important; }
+  #awk-studio.aw-theme-atelier .aw-guide-intro,
+  #awk-studio.aw-theme-atelier .aw-guide-prose { color: #33433d !important; }
+  #awk-studio.aw-theme-atelier .aw-guide-prompt { background: #f5f1ea; border-color: #d8d1c6; }
+  #awk-studio.aw-theme-atelier .aw-guide-cover { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+#awk-studio.aw-theme-atelier .aw-strategy-hero-visual > span {
+  background: rgba(23,33,31,.92); color: #fffdfc; border-color: #85b9ae;
+}
+#awk-studio.aw-theme-atelier .aw-strategy-hero-visual b { color: #85b9ae; }

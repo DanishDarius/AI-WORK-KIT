@@ -79,6 +79,9 @@ export async function api<T>(
   url: string,
   options: RequestInit = {},
 ): Promise<T> {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    throw new Error("La connexion est momentanément indisponible. Veuillez réessayer plus tard.");
+  }
   const { data, error } = await createClient().auth.getSession();
   if (error || !data.session)
     throw new Error(

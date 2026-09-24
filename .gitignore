@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local design review and generated previews
+/output/
+/tmp/
+/public/brand/atelier/index.html
+/public/brand/atelier/preview-*.png
+/public/brand/atelier/*.pdf

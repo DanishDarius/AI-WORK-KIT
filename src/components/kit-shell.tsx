@@ -73,13 +73,12 @@ export function Shell({ children }: { children: React.ReactNode }) {
   // l'application, uniquement le repère de marque et le formulaire.
   if (isAuthPage) {
     return (
-      <div id="awk-studio" className="awk-studio-auth">
+      <div id="awk-studio" className="awk-studio-auth aw-theme-atelier">
         <a className="skip-link" href="#contenu">Aller au contenu</a>
         <header className="aw-top aw-top-auth">
           <div className="aw-header-inner">
             <Link href="/" className="aw-brand" aria-label="Accueil AI WORK KIT">
-              <Image className="aw-brand-symbol" src="/icon.svg" width={38} height={38} alt="" priority />
-              <span>AI WORK <em>KIT</em></span>
+              <Image className="aw-brand-lockup" src="/brand/atelier/logo-primary.svg" width={145} height={50} alt="AI WORK KIT" priority />
             </Link>
           </div>
         </header>
@@ -89,13 +88,12 @@ export function Shell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div id="awk-studio">
+    <div id="awk-studio" className="aw-theme-atelier">
       <a className="skip-link" href="#contenu">Aller au contenu</a>
       <header className="aw-top">
         <div className="aw-header-inner">
           <Link href="/" className="aw-brand" aria-label="Accueil AI WORK KIT" onClick={closeMenus}>
-            <Image className="aw-brand-symbol" src="/icon.svg" width={38} height={38} alt="" priority />
-            <span>AI WORK <em>KIT</em></span>
+            <Image className="aw-brand-lockup" src="/brand/atelier/logo-primary.svg" width={145} height={50} alt="AI WORK KIT" priority />
           </Link>
 
           <nav className="aw-desktop-nav" aria-label="Navigation principale">
@@ -149,8 +147,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="aw-footer-main">
           <div className="aw-footer-brand">
             <Link href="/" className="aw-footer-logo" aria-label="Accueil AI WORK KIT">
-              <Image src="/icon.svg" width={48} height={48} alt="" />
-              <span>AI WORK <em>KIT</em></span>
+              <Image className="aw-brand-lockup" src="/brand/atelier/logo-reverse.svg" width={174} height={60} alt="AI WORK KIT" />
             </Link>
             <p>L’IA appliquée à votre travail. Concrètement, dès aujourd’hui.</p>
           </div>

@@ -37,7 +37,7 @@ export function TransformationIaScreen() {
           <small>AI WORK KIT · Conseil stratégique et mise en œuvre</small>
         </div>
         <div className="aw-strategy-hero-visual">
-          <Image src="/brand/transformation-ia-hero.png" alt="Un chemin lumineux relie plusieurs étapes jusqu’à un impact mesurable." width={1680} height={945} priority sizes="(max-width: 850px) 100vw, 55vw" />
+          <Image src="/brand/transformation-ia-hero-atelier.png" alt="Un chemin lumineux relie plusieurs étapes jusqu’à un impact mesurable." width={1680} height={945} priority sizes="(max-width: 850px) 100vw, 55vw" />
           <span>Stratégie <b>→</b> Systèmes IA <b>→</b> Adoption</span>
         </div>
       </section>
