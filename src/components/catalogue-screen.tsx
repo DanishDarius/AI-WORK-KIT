@@ -374,22 +374,22 @@ export function CatalogueScreen({
                 <span /><span /><span />
                 <small>AI WORK KIT · guide de démarrage</small>
               </div>
-              <div
+              <Link
                 className="aw-ai-video"
-                role="img"
-                aria-label="Aperçu du guide vidéo sur le choix de l’intelligence artificielle, avec un ordinateur connecté à des outils de travail."
+                href="/comprendre-les-ia"
+                aria-label="Lire le guide : quelle IA choisir pour votre travail ? ChatGPT, Claude ou Gemini."
               >
-                <div className="aw-ai-video-overlay">
+                <span className="aw-ai-video-overlay">
                   <span className="aw-video-kicker">
                     AI WORK KIT · Pour bien commencer
                   </span>
-                  <span className="aw-video-play" aria-hidden="true">
-                    <Icon name="play" size={28} />
+                  <span className="aw-video-cta" aria-hidden="true">
+                    Lire le guide · 3 min <Icon name="arrow" />
                   </span>
-                  <h2>Quelle IA choisir pour votre travail ?</h2>
-                  <p>ChatGPT · Claude · Gemini</p>
-                </div>
-              </div>
+                  <span className="aw-video-title">Quelle IA choisir pour votre travail ?</span>
+                  <span className="aw-video-sub">ChatGPT · Claude · Gemini</span>
+                </span>
+              </Link>
             </div>
           </section>
           <ProgressDock metiers={data?.metiers} />
