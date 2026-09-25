@@ -3,11 +3,28 @@ import {
   IaUpdate,
   iaMakers,
   iaNoms as iaLabels,
+  mediaThumb,
   newestFirst,
   updateIas as chemins,
 } from "@/lib/ia-updates";
 import type { GuideSummary } from "@/lib/guides";
 import { GuideShelf } from "./guide-shelf";
+import { UpdateMediaBlock } from "./update-media";
+
+function Thumb({ item }: { item: IaUpdate }) {
+  const thumb = mediaThumb(item.media);
+  return (
+    <span className="aw-update-thumb" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={thumb.src} alt="" loading="lazy" decoding="async" />
+      {item.media.type !== "image" && (
+        <span className="aw-update-thumb-play">
+          <svg viewBox="0 0 24 24" width="14" height="14"><path d="m9 5 11 7-11 7V5Z" fill="currentColor" /></svg>
+        </span>
+      )}
+    </span>
+  );
+}
 
 export const longDate = new Intl.DateTimeFormat("fr-FR", {
   dateStyle: "long",
@@ -75,6 +92,7 @@ function Featured({ items }: { items: IaUpdate[] }) {
         À la une
       </h2>
       <article className="panel aw-update-lead">
+        <UpdateMediaBlock media={lead.media} priority />
         <UpdateTag item={lead} />
         <h3>
           <Link href={updateHref(lead)}>{lead.title}</Link>
@@ -92,6 +110,7 @@ function Featured({ items }: { items: IaUpdate[] }) {
         <div className="aw-update-side">
           {others.slice(0, 2).map((item) => (
             <article key={item.slug} className="aw-update-secondary">
+              <Thumb item={item} />
               <UpdateTag item={item} />
               <h3>
                 <Link href={updateHref(item)}>{item.title}</Link>
@@ -109,6 +128,7 @@ function Featured({ items }: { items: IaUpdate[] }) {
 function UpdateCard({ item }: { item: IaUpdate }) {
   return (
     <article className="aw-update-card">
+      <Thumb item={item} />
       <p className="aw-update-card-top">
         <span>{item.kind}</span>
         <time dateTime={item.publishedAt}>

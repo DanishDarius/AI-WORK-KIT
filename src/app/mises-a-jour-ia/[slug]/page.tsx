@@ -6,6 +6,7 @@ import {
   UpdateTag,
   updateHref,
 } from "@/components/ia-updates-screen";
+import { UpdateMediaBlock } from "@/components/update-media";
 import { getUpdate, iaUpdates, newestFirst } from "@/lib/ia-updates";
 
 export const dynamicParams = false;
@@ -52,6 +53,8 @@ export default async function UpdatePage({ params }: PageProps) {
         <UpdateMeta item={item} />
         <p className="aw-update-article-lead">{item.text}</p>
       </header>
+
+      <UpdateMediaBlock media={item.media} priority />
 
       <div className="aw-update-article-body">
         <div className="aw-update-article-main">

@@ -3,9 +3,15 @@ import type { IA } from "./kit-api";
 // Actualités des IA, rédigées à la main à partir des annonces officielles.
 // Règles de rédaction : faits vérifiés et sourcés, "vous", pas de jargon,
 // toujours dire ce que ça change et ce qu'il faut faire.
+// Bloc visuel obligatoire de chaque article : une image OU une vidéo.
+// - image : visuel officiel de l'éditeur (lien direct, crédit affiché) ou
+//   illustration maison placée dans /public/actus/.
+// - youtube : vidéo officielle, chargée seulement au clic (youtube-nocookie).
+// - video : fichier vidéo hébergé (mp4), avec affiche.
 export type UpdateMedia =
-  | { type: "image"; src: string; alt: string }
-  | { type: "video"; src: string; poster?: string; captions?: string };
+  | { type: "image"; src: string; alt: string; credit: string }
+  | { type: "youtube"; id: string; title: string; credit: string }
+  | { type: "video"; src: string; poster: string; title: string; credit: string; captions?: string };
 
 export type IaUpdate = {
   // Identifiant et adresse de la page : /mises-a-jour-ia/<slug>.
@@ -26,7 +32,7 @@ export type IaUpdate = {
   points: string[];
   disponibilite: string;
   sources: { label: string; url: string }[];
-  media?: UpdateMedia;
+  media: UpdateMedia;
   featured?: boolean;
 };
 
@@ -50,6 +56,7 @@ export const iaMakers: Record<IA, string> = {
 export const iaUpdates: IaUpdate[] = [
   {
     slug: "claude-opus-5-5",
+    media: { type: "image", src: "https://www-cdn.anthropic.com/images/4zrzovbb/website/f4d37a1d1f582f53f4e89440062b649b6273a093-1200x630.jpg", alt: "Visuel officiel d’Anthropic pour l’annonce de Claude Opus 5.5.", credit: "Image : Anthropic" },
     ia: "claude",
     kind: "Nouveau modèle",
     title: "Claude Opus 5.5 est disponible.",
@@ -76,6 +83,7 @@ export const iaUpdates: IaUpdate[] = [
   },
   {
     slug: "gpt-6-astra",
+    media: { type: "youtube", id: "1QNsdr-Qx_I", title: "Introducing GPT-6 Astra (vidéo officielle d’OpenAI)", credit: "Vidéo : OpenAI" },
     ia: "chatgpt",
     kind: "Nouveau modèle",
     title: "GPT-6 Astra arrive dans ChatGPT.",
@@ -102,6 +110,7 @@ export const iaUpdates: IaUpdate[] = [
   },
   {
     slug: "gemini-3-8-flash",
+    media: { type: "image", src: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8_flash__blog__header__16-9__light.width-1300.png", alt: "Visuel officiel de Google pour Gemini 3.8 Flash.", credit: "Image : Google" },
     ia: "gemini",
     kind: "Nouveau modèle",
     title: "Gemini 3.8 Flash va plus loin sur les tâches complexes.",
@@ -120,12 +129,14 @@ export const iaUpdates: IaUpdate[] = [
     disponibilite:
       "Abonnés Google AI Pro et Ultra, dans l’app Gemini, le mode IA de la recherche et Google Sheets, depuis le 2 septembre 2026.",
     sources: [
+      { label: "Google : Introducing Gemini 3.8 Flash", url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/" },
       { label: "9to5Google", url: "https://9to5google.com/2026/09/02/gemini-3-8-flash-launch/" },
       { label: "Notes de version de l’API Gemini", url: "https://ai.google.dev/gemini-api/docs/changelog" },
     ],
   },
   {
     slug: "chatgpt-dans-word",
+    media: { type: "image", src: "/actus/chatgpt-word.svg", alt: "Un document ouvert avec l’assistant ChatGPT dans un panneau latéral.", credit: "Illustration : AI WORK KIT" },
     ia: "chatgpt",
     kind: "Nouvelle fonction",
     title: "ChatGPT s’installe dans Microsoft Word.",
@@ -134,18 +145,22 @@ export const iaUpdates: IaUpdate[] = [
     impact:
       "Les tâches de rédaction et de correction (lettres, comptes-rendus, propositions) se font directement dans votre document.",
     action:
-      "Activez ChatGPT dans Word en suivant la page d’aide d’OpenAI. Nos prompts de rédaction se collent tels quels dans le panneau ChatGPT.",
+      "Installez « ChatGPT for Word » depuis Microsoft Marketplace, puis ouvrez ChatGPT depuis le ruban de Word et connectez-vous. Nos prompts de rédaction se collent tels quels dans le panneau.",
     points: [
       "Disponible sur toutes les offres, y compris la version gratuite.",
-      "Pratique pour les tâches « Rédaction et correction de documents professionnels » du kit.",
+      "ChatGPT s’ouvre dans un panneau à droite du document : il peut rédiger à partir de notes, résumer, réécrire un passage sélectionné ou réorganiser les titres.",
+      "Pour une modification précise, sélectionnez le texte dans Word puis décrivez le changement voulu.",
+      "En entreprise, l’administrateur doit autoriser le complément. Il sera activé par défaut à partir du 1er octobre 2026.",
     ],
     disponibilite: "Toutes les offres ChatGPT, depuis le 17 septembre 2026.",
     sources: [
+      { label: "Aide OpenAI : ChatGPT for Word", url: "https://help.openai.com/en/articles/20001526-chatgpt-for-word" },
       { label: "Notes de version ChatGPT", url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes" },
     ],
   },
   {
     slug: "fin-des-gpt-personnalises",
+    media: { type: "image", src: "/actus/fin-des-gpt.svg", alt: "Des assistants GPT se transforment en modules de plugins.", credit: "Illustration : AI WORK KIT" },
     ia: "chatgpt",
     kind: "À savoir",
     title: "Les GPT personnalisés vont être remplacés par des plugins.",
@@ -166,6 +181,7 @@ export const iaUpdates: IaUpdate[] = [
   },
   {
     slug: "taches-planifiees-declencheurs",
+    media: { type: "image", src: "/actus/taches-planifiees.svg", alt: "Une application envoie un signal qui déclenche une tâche planifiée.", credit: "Illustration : AI WORK KIT" },
     ia: "chatgpt",
     kind: "Nouvelle fonction",
     title: "Les tâches planifiées de ChatGPT réagissent à vos applications.",
@@ -186,6 +202,7 @@ export const iaUpdates: IaUpdate[] = [
   },
   {
     slug: "claude-slides-docs-designs",
+    media: { type: "youtube", id: "qMUf-jwSpMo", title: "Claude Cowork and chat are now one Claude (vidéo officielle d’Anthropic)", credit: "Vidéo : Anthropic" },
     ia: "claude",
     kind: "Nouvelle fonction",
     title: "Claude crée présentations, documents et designs dans n’importe quelle conversation.",
@@ -201,11 +218,13 @@ export const iaUpdates: IaUpdate[] = [
     ],
     disponibilite: "Toutes les offres Claude pour les présentations et documents, Pro et Max pour Cowork. Depuis le 16 septembre 2026.",
     sources: [
+      { label: "Claude : Cowork and chat are now one Claude", url: "https://claude.com/blog/cowork-is-now-claude" },
       { label: "Notes de version de l’app Claude", url: "https://support.claude.com/en/articles/12138966-release-notes" },
     ],
   },
   {
     slug: "memoire-claude-cowork",
+    media: { type: "image", src: "/actus/memoire-claude.svg", alt: "Des éléments de contexte reliés autour d’une fiche de mémoire.", credit: "Illustration : AI WORK KIT" },
     ia: "claude",
     kind: "Nouvelle fonction",
     title: "La mémoire de Claude fonctionne aussi dans Cowork.",
@@ -226,6 +245,7 @@ export const iaUpdates: IaUpdate[] = [
   },
   {
     slug: "gemini-3-7-flash",
+    media: { type: "image", src: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-7-flash.width-1300.png", alt: "Visuel officiel de Google pour Gemini 3.7 Flash.", credit: "Image : Google" },
     ia: "gemini",
     kind: "Nouveau modèle",
     title: "Gemini 3.7 Flash relie vos fichiers et vos e-mails.",
@@ -255,4 +275,12 @@ export function newestFirst(items: IaUpdate[]) {
 
 export function getUpdate(slug: string) {
   return iaUpdates.find((item) => item.slug === slug);
+}
+
+// Vignette statique d'un média (pour les listes).
+export function mediaThumb(media: UpdateMedia) {
+  if (media.type === "image") return { src: media.src, alt: media.alt };
+  if (media.type === "youtube")
+    return { src: `https://i.ytimg.com/vi/${media.id}/maxresdefault.jpg`, alt: media.title };
+  return { src: media.poster, alt: media.title };
 }
