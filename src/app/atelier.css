@@ -522,3 +522,12 @@ html, body { background: #f5f1ea; color: #17211f; color-scheme: light; }
   position: absolute; left: 10px; bottom: 10px; width: 30px; height: 30px; display: grid; place-items: center;
   border-radius: 50%; background: #0b6b5e; color: #fff;
 }
+
+/* Article : le visuel prend la largeur des blocs de texte (colonne principale)
+   et une hauteur réduite d'un quart par rapport à l'ancien format pleine
+   largeur (100 % de l'article × 9/16 × 3/4). */
+#awk-studio .aw-update-article { container-type: inline-size; }
+#awk-studio .aw-update-article-main .aw-media-frame {
+  aspect-ratio: auto;
+  height: calc(100cqi * 0.421875);
+}

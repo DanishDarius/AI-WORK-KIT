@@ -54,10 +54,9 @@ export default async function UpdatePage({ params }: PageProps) {
         <p className="aw-update-article-lead">{item.text}</p>
       </header>
 
-      <UpdateMediaBlock media={item.media} priority />
-
       <div className="aw-update-article-body">
         <div className="aw-update-article-main">
+          <UpdateMediaBlock media={item.media} priority />
           <section className="aw-update-callout" aria-labelledby="pour-vous">
             <h2 id="pour-vous">Ce que ça change pour vous</h2>
             <p>{item.impact}</p>
