@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "./kit-icons";
+import { SystemesContactForm } from "./systemes-contact-form";
 
 const accompagnement = [
   {
@@ -142,70 +143,7 @@ export function SystemesIaScreen() {
           <small>Nous étudions votre contexte, vos outils et le résultat attendu avant de vous répondre.</small>
         </div>
 
-        <form className="aw-systems-form" aria-label="Demande d’accompagnement personnalisé">
-          <div className="aw-systems-form-grid">
-            <label>
-              <span>Nom</span>
-              <input name="name" autoComplete="name" placeholder="Votre nom" required />
-            </label>
-            <label>
-              <span>Email professionnel</span>
-              <input name="email" type="email" autoComplete="email" placeholder="vous@entreprise.com" required />
-            </label>
-            <label>
-              <span>Entreprise</span>
-              <input name="company" autoComplete="organization" placeholder="Nom de votre entreprise" />
-            </label>
-            <label>
-              <span>Fonction</span>
-              <input name="role" autoComplete="organization-title" placeholder="Votre fonction" />
-            </label>
-            <label>
-              <span>Secteur</span>
-              <select name="industry" defaultValue="">
-                <option value="" disabled>Sélectionner un secteur</option>
-                <option>Communication et marketing</option>
-                <option>Conseil et services</option>
-                <option>Commerce et e-commerce</option>
-                <option>Finance et administration</option>
-                <option>Ressources humaines</option>
-                <option>Autre</option>
-              </select>
-            </label>
-            <label>
-              <span>Taille de l’entreprise</span>
-              <select name="company-size" defaultValue="">
-                <option value="" disabled>Sélectionner une taille</option>
-                <option>Indépendant</option>
-                <option>2 à 10 personnes</option>
-                <option>11 à 50 personnes</option>
-                <option>51 personnes et plus</option>
-              </select>
-            </label>
-          </div>
-          <label className="aw-systems-form-wide">
-            <span>Votre besoin</span>
-            <textarea
-              name="need"
-              rows={5}
-              placeholder="La tâche qui vous prend du temps, ce que vous avez déjà essayé, le résultat attendu…"
-              required
-            />
-          </label>
-          <label className="aw-systems-form-wide">
-            <span>Budget envisagé</span>
-            <select name="budget" defaultValue="">
-              <option value="" disabled>Sélectionner un budget</option>
-              <option>À définir ensemble</option>
-              <option>Moins de 500 €</option>
-              <option>500 € à 1 500 €</option>
-              <option>Plus de 1 500 €</option>
-            </select>
-          </label>
-          <button type="submit">
-            Demander mon accompagnement <Icon name="arrow" />
-          </button>
-        </form>
+        <SystemesContactForm />
       </section>
     </div>
   );

@@ -222,41 +222,11 @@ export function useCatalogue() {
   useEffect(() => {
     const controller = new AbortController();
     async function load() {
-      const metiers = await api<Metier[]>("/api/metiers", {
+      // Une seule requête : le serveur assemble métiers et tâches.
+      const catalogue = await api<Catalogue>("/api/catalogue", {
         signal: controller.signal,
       });
-      // Le contrat ne propose pas GET /api/taches : le catalogue est dérivé
-      // des fiches métier, avec quatre requêtes simultanées au maximum.
-      const details: MetierDetail[] = [];
-      let cursor = 0;
-      await Promise.all(
-        Array.from({ length: Math.min(4, metiers.length) }, async () => {
-          while (cursor < metiers.length) {
-            const index = cursor++;
-            details[index] = await api<MetierDetail>(
-              `/api/metiers/${encodeURIComponent(metiers[index].slug)}`,
-              { signal: controller.signal },
-            );
-          }
-        }),
-      );
-      const tasks = new Map<string, CatalogueTache>();
-      details.forEach((detail) =>
-        detail.taches.forEach((t) => {
-          const metier = { slug: detail.metier.slug, nom: detail.metier.nom };
-          const previous = tasks.get(t.id);
-          if (previous) previous.metiers.push(metier);
-          else tasks.set(t.id, { ...t, metiers: [metier] });
-        }),
-      );
-      if (!controller.signal.aborted)
-        setData({
-          metiers: metiers.map((m, i) => ({
-            ...m,
-            chemin_choisi: details[i].chemin_choisi,
-          })),
-          taches: [...tasks.values()],
-        });
+      if (!controller.signal.aborted) setData(catalogue);
     }
     load().catch((e) => {
       if (!controller.signal.aborted)
