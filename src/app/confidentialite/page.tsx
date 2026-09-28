@@ -67,9 +67,9 @@ export default function Confidentialite() {
               <tr><td>Compte</td><td>Adresse email, mot de passe (stocké chiffré, jamais lisible par nous), date de création du compte, dates de connexion</td><td>Vous, à l’activation</td></tr>
               <tr><td>Achat et accès</td><td>Adresse email d’achat, référence de la vente, offre achetée, statut de l’accès et de l’abonnement</td><td>Le prestataire de paiement, après votre commande</td></tr>
               <tr><td>Progression</td><td>Tâches marquées comme faites, favoris, IA choisie pour chaque métier, dernière tâche consultée, jours d’activité (pour la série)</td><td>Votre utilisation</td></tr>
-              <tr><td>Tâche sur mesure</td><td>La description de la tâche que vous soumettez et le plan qui vous est remis</td><td>Vous</td></tr>
+              <tr><td>Tâche sur mesure</td><td>Le métier concerné, la description de la tâche que vous soumettez, les IA choisies, le plan qui vous est remis et son statut (abonnés uniquement)</td><td>Vous</td></tr>
               <tr><td>Demandes de contact</td><td>Nom, email, entreprise, fonction, secteur, taille d’entreprise, description du besoin, budget envisagé, compte à l’origine de la demande</td><td>Formulaires Systèmes IA et Transformation IA</td></tr>
-              <tr><td>Support</td><td>Vos échanges par email avec le support</td><td>Vous</td></tr>
+              <tr><td>Support</td><td>Vos échanges avec le support, par email ou par le chat (messages, adresse email du compte, page depuis laquelle vous écrivez, navigateur et pays approximatif détectés par l’outil de chat)</td><td>Vous et l’outil de chat</td></tr>
               <tr><td>Données techniques</td><td>Adresse IP, type de navigateur, pages demandées et erreurs, dans les journaux de nos hébergeurs</td><td>Automatique</td></tr>
             </tbody>
           </table>
@@ -86,7 +86,7 @@ export default function Confidentialite() {
         <ul>
           <li><strong>Créer et sécuriser votre compte, ouvrir votre accès après paiement, gérer l’abonnement :</strong> exécution du contrat.</li>
           <li><strong>Afficher votre progression, vos favoris et votre série, reprendre là où vous en étiez :</strong> exécution du contrat.</li>
-          <li><strong>Préparer le plan de votre tâche sur mesure :</strong> exécution du contrat.</li>
+          <li><strong>Préparer le plan de votre tâche sur mesure et vous le remettre dans votre espace :</strong> exécution du contrat d’abonnement.</li>
           <li><strong>Répondre au support et aux demandes de contact, préparer un devis :</strong> exécution de mesures précontractuelles ou du contrat.</li>
           <li><strong>Vous envoyer les emails de service</strong> (activation, mot de passe, reçu, avis de renouvellement ou de changement de prix) : exécution du contrat.</li>
           <li><strong>Conserver les justificatifs de vente :</strong> obligation légale comptable.</li>
@@ -105,6 +105,7 @@ export default function Confidentialite() {
           <li><strong>Justificatifs d’achat :</strong> 10 ans, durée de conservation des pièces comptables.</li>
           <li><strong>Demandes de contact :</strong> 3 ans après le dernier échange, sauf si elles aboutissent à un contrat.</li>
           <li><strong>Échanges avec le support :</strong> 3 ans après le dernier échange.</li>
+          <li><strong>Demandes de tâche sur mesure et plans remis :</strong> tant que votre compte est actif, pour que vous puissiez retrouver vos plans.</li>
           <li><strong>Journaux techniques :</strong> selon la durée fixée par nos hébergeurs, en général quelques jours à 30 jours.</li>
         </ul>
       </LegalSection>
@@ -123,7 +124,8 @@ export default function Confidentialite() {
             <tbody>
               <tr><td>Supabase</td><td>Base de données, comptes et connexion</td><td>Union européenne (Irlande)</td></tr>
               <tr><td>Vercel</td><td>Hébergement et affichage de l’application</td><td>États-Unis et réseau mondial</td></tr>
-              <tr><td>Resend</td><td>Envoi des emails de la plateforme et des demandes de contact</td><td>Union européenne (Irlande), société américaine</td></tr>
+              <tr><td>Resend</td><td>Envoi des emails de la plateforme, des demandes de contact et des demandes de tâche sur mesure</td><td>Union européenne (Irlande), société américaine</td></tr>
+              <tr><td>tawk.to</td><td>Chat du support, uniquement si vous l’ouvrez</td><td>États-Unis</td></tr>
               <tr><td>Hostinger</td><td>Messagerie support@parlonsads.com et nom de domaine</td><td>Centres de données de Hostinger</td></tr>
               <tr><td>Prestataire de paiement</td><td>Encaissement des paiements</td><td>Indiqué sur la page de commande</td></tr>
             </tbody>
@@ -141,7 +143,9 @@ export default function Confidentialite() {
           États-Unis, vos données sont hébergées hors du Bénin. Nous
           choisissons des prestataires qui offrent des garanties de protection
           adaptées (engagements contractuels de protection des données,
-          chiffrement, contrôle des accès). Pour obtenir le détail de ces
+          chiffrement, contrôle des accès). tawk.to, qui traite les échanges
+          du chat aux États-Unis, est certifié au cadre de protection des
+          données UE-États-Unis (Data Privacy Framework). Pour obtenir le détail de ces
           garanties, écrivez à {mail}.
         </p>
       </LegalSection>
@@ -165,6 +169,17 @@ export default function Confidentialite() {
             </tbody>
           </table>
         </div>
+        <p>
+          <strong>Chat du support :</strong> le chat (tawk.to) ne se charge
+          que lorsque vous cliquez sur le bouton de chat. Avant ce clic, aucun
+          script ni cookie de tawk.to n’est présent. En l’ouvrant, vous
+          demandez ce service : tawk.to dépose alors les éléments nécessaires
+          à la conversation (cookies <em>tawk_uuid_…</em>, <em>twk_idm_key</em>,{" "}
+          <em>TawkConnectionTime</em> et un jeton de session dans le stockage
+          local), pour garder votre conversation ouverte d’une page à l’autre
+          et entre vos onglets, pendant 6 mois au plus. Ils sont décrits dans
+          la politique de tawk.to.
+        </p>
         <p>
           <strong>Vidéos :</strong> certaines actualités contiennent une vidéo
           YouTube. Elle ne se charge que si vous cliquez sur le bouton lecture,

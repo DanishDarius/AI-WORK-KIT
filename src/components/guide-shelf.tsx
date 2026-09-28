@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import type { GuideSummary } from "@/lib/guides";
+import { useAbonne } from "@/lib/moi";
 import { GuideCover } from "./guide-cover";
 
 export function GuideShelf({ guides, kicker = "Sélection AI WORK KIT", title = "12 guides pour aller plus loin." }: { guides: GuideSummary[]; kicker?: string; title?: string }) {
   const shelf = useRef<HTMLDivElement>(null);
   const dragState = useRef({ startX: 0, startScroll: 0, moved: false });
   const [isDragging, setIsDragging] = useState(false);
+  const nonAbonne = useAbonne() === false;
 
 function handleShelfPointerDown(event: React.PointerEvent<HTMLDivElement>) {
   const shelfEl = shelf.current;
@@ -38,7 +40,8 @@ function scrollShelf(direction: -1 | 1) {
   shelf.current?.scrollBy({ left: direction * Math.min(620, window.innerWidth * 0.72), behavior: "smooth" });
 }
 
-const shelfGuides = guides.slice(0, 12);
+// Sans abonnement, les guides inclus dans l'accès passent en premier.
+const shelfGuides = (nonAbonne ? [...guides.filter((g) => g.inclus), ...guides.filter((g) => !g.inclus)] : guides).slice(0, 12);
   if (!shelfGuides.length) return null;
 
 return (
@@ -55,8 +58,18 @@ return (
   </div>
   <div className={`aw-guide-shelf${isDragging ? " is-dragging" : ""}`} ref={shelf} onPointerDown={handleShelfPointerDown} onPointerMove={handleShelfPointerMove} onPointerUp={handleShelfPointerUp} onPointerLeave={handleShelfPointerUp}>
     {shelfGuides.map((guide) => (
-    <Link key={guide.slug} href={`/guides/${guide.slug}`} aria-label={`Lire le guide : ${guide.title}`} onClick={handleShelfLinkClick}>
+    <Link key={guide.slug} className="aw-shelf-item" href={`/guides/${guide.slug}`} aria-label={`Lire le guide : ${guide.title}${nonAbonne && !guide.inclus ? " (Premium, aperçu gratuit)" : ""}`} onClick={handleShelfLinkClick}>
     <GuideCover number={guide.number} title={guide.title} tool={guide.tool} variant={guide.coverVariant} />
+    {nonAbonne && (
+      <span className={`aw-shelf-access${guide.inclus ? " is-included" : ""}`} aria-hidden="true">
+        {guide.inclus ? (
+          <svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7" /></svg>
+        ) : (
+          <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>
+        )}
+        {guide.inclus ? "Inclus" : "Premium"}
+      </span>
+    )}
     </Link>
     ))}
   </div>

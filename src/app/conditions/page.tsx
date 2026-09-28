@@ -65,7 +65,7 @@ export default function Conditions() {
           <div><dt>Utilisateur ou vous</dt><dd>La personne titulaire d’un compte, qu’elle agisse à titre personnel ou pour son activité professionnelle.</dd></div>
           <div><dt>Contenus</dt><dd>Les tâches, cas pratiques, données d’exemple, prompts, parcours par métier, plans de mise en place, guides, fiches d’actualité et glossaire.</dd></div>
           <div><dt>Accès AI WORK KIT</dt><dd>L’offre payée en une seule fois, décrite ci-dessous.</dd></div>
-          <div><dt>Abonnement Bibliothèque</dt><dd>L’offre payante et renouvelable qui ouvre l’ensemble des guides.</dd></div>
+          <div><dt>Abonnement Bibliothèque</dt><dd>L’offre payante et renouvelable qui ouvre l’ensemble des guides et la tâche sur mesure.</dd></div>
         </dl>
       </LegalSection>
 
@@ -75,20 +75,22 @@ export default function Conditions() {
         <ul>
           <li>les parcours <strong>Tâches</strong> et <strong>Métiers</strong> : chaque tâche avec ses cas pratiques, ses données d’exemple et ses prompts prêts à copier pour ChatGPT, Claude et Gemini ;</li>
           <li>les plans <strong>Mettre en place</strong> : outils, prompts et configuration des tâches automatisables pour chaque IA ;</li>
-          <li>le bloc <strong>tâche sur mesure</strong> de chaque métier : vous décrivez une tâche précise et recevez un plan détaillé pour chacune des IA, sur le modèle des tâches existantes ;</li>
           <li><strong>Comprendre les IA</strong>, le glossaire et les <strong>Mises à jour IA</strong> ;</li>
-          <li><strong>25 guides</strong> de la bibliothèque, signalés comme inclus ;</li>
+          <li><strong>10 guides</strong> de la bibliothèque, signalés « Inclus », ainsi que l’aperçu gratuit (introduction et premier chapitre) des autres guides ;</li>
           <li>le suivi de votre progression, vos favoris et vos guides enregistrés ;</li>
           <li>le support décrit plus bas.</li>
         </ul>
 
         <h3>Abonnement Bibliothèque</h3>
         <p>
-          Il ouvre l’accès à l’ensemble des guides de la bibliothèque, au-delà
-          des 25 guides inclus dans l’Accès AI WORK KIT, ainsi qu’aux nouveaux
-          guides publiés pendant sa durée. Il est réservé aux titulaires de
-          l’Accès AI WORK KIT, sauf mention contraire sur la page de commande.
+          Réservé aux titulaires de l’Accès AI WORK KIT et souscrit depuis la
+          Plateforme, il ouvre pendant toute sa durée :
         </p>
+        <ul>
+          <li>l’ensemble des guides de la bibliothèque, au-delà des 10 guides inclus dans l’Accès AI WORK KIT, ainsi que les nouveaux guides publiés ;</li>
+          <li>le bloc <strong>tâche sur mesure</strong> de chaque métier : vous décrivez une tâche précise qui ne figure pas dans la liste, et l’équipe vous prépare un plan détaillé, étape par étape, avec un prompt pour chacune des IA choisies, sur le modèle des tâches existantes. Le plan est mis à disposition dans votre espace. Ce service est limité à un usage raisonnable (5 demandes par jour au plus) et ne couvre pas la réalisation de la tâche à votre place.</li>
+        </ul>
+        <p>Le bloc tâche sur mesure n’est utilisable que pendant un abonnement actif.</p>
 
         <h3>Services sur mesure</h3>
         <p>
@@ -121,10 +123,15 @@ export default function Conditions() {
       </LegalSection>
 
       <LegalSection id="prix" title="Prix et paiement">
+        <p>À la date de mise à jour de ces Conditions, les prix sont les suivants :</p>
+        <dl className="aw-legal-facts">
+          <div><dt>Accès AI WORK KIT</dt><dd>5 000 FCFA, payés une seule fois</dd></div>
+          <div><dt>Abonnement Bibliothèque mensuel</dt><dd>5 000 FCFA par mois</dd></div>
+          <div><dt>Abonnement Bibliothèque annuel</dt><dd>50 000 FCFA par an</dd></div>
+        </dl>
         <p>
-          Les prix sont ceux affichés sur la page de commande au moment de
-          l’achat, dans la devise indiquée. Ils comprennent l’ensemble des
-          éléments de l’offre choisie. Les éventuels frais facturés par votre
+          Le prix applicable est celui affiché au moment de la commande. Il
+          comprend l’ensemble des éléments de l’offre choisie. Les éventuels frais facturés par votre
           banque ou votre opérateur de paiement restent à votre charge.
         </p>
         <p>
@@ -141,10 +148,10 @@ export default function Conditions() {
 
       <LegalSection id="abonnement" title="Abonnement Bibliothèque">
         <ul>
-          <li><strong>Durée :</strong> l’abonnement court pour la période choisie à la commande (par exemple un mois ou un an).</li>
+          <li><strong>Durée :</strong> l’abonnement court pour la période choisie à la commande : un mois ou un an.</li>
           <li><strong>Renouvellement :</strong> il se renouvelle automatiquement pour une période identique, au prix en vigueur, sauf résiliation.</li>
-          <li><strong>Résiliation :</strong> vous pouvez le résilier à tout moment, sans frais, en écrivant à {mail} ou depuis votre espace dès que cette option y est proposée. La résiliation prend effet à la fin de la période en cours, jusqu’à laquelle vous gardez l’accès à tous les guides.</li>
-          <li><strong>Fin de l’abonnement :</strong> vous conservez l’Accès AI WORK KIT et les 25 guides inclus.</li>
+          <li><strong>Résiliation :</strong> vous pouvez le résilier à tout moment, sans frais, depuis Mon compte, par le chat du support ou en écrivant à {mail}. La résiliation prend effet à la fin de la période en cours, jusqu’à laquelle vous gardez l’accès à tous les guides et à la tâche sur mesure.</li>
+          <li><strong>Fin de l’abonnement :</strong> vous conservez l’Accès AI WORK KIT et les 10 guides inclus. Le bloc tâche sur mesure repasse en mode verrouillé.</li>
           <li><strong>Changement de prix :</strong> toute hausse vous est annoncée par email au moins 30 jours avant le renouvellement concerné. Vous pouvez résilier avant qu’elle s’applique.</li>
         </ul>
       </LegalSection>
@@ -216,8 +223,8 @@ export default function Conditions() {
 
       <LegalSection id="support" title="Support">
         <p>
-          Le support est joignable <strong>24 h/24 et 7 j/7</strong> à {mail},
-          pour toute question sur votre accès, votre abonnement ou l’utilisation
+          Le support est joignable <strong>24 h/24 et 7 j/7</strong>, par le
+          chat intégré à la Plateforme ou à {mail}, pour toute question sur votre accès, votre abonnement ou l’utilisation
           des Contenus. Nous répondons dans les meilleurs délais. Le support
           n’inclut pas la réalisation de vos tâches à votre place ni la
           conception de systèmes sur mesure, qui relèvent des services sur
