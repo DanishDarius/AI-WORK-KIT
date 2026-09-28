@@ -83,6 +83,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
         </header>
         <main id="contenu" className="aw-main">{children}</main>
+        <nav className="aw-auth-legal" aria-label="Pages légales">
+          <Link href="/mentions-legales">Mentions légales</Link>
+          <Link href="/conditions">Conditions générales</Link>
+          <Link href="/confidentialite">Confidentialité et cookies</Link>
+        </nav>
       </div>
     );
   }
@@ -167,9 +172,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
             <nav className="aw-footer-column" aria-label="Pages légales">
               <h2>Pages légales</h2>
-              <a href="https://boutique.parlonsads.com/mentions-legales">Mentions légales</a>
-              <a href="https://boutique.parlonsads.com/confidentialite">Politique de confidentialité</a>
-              <a href="https://boutique.parlonsads.com/conditions-de-vente">Conditions de vente</a>
+              <Link href="/mentions-legales">Mentions légales</Link>
+              <Link href="/conditions">Conditions générales</Link>
+              <Link href="/confidentialite">Confidentialité et cookies</Link>
             </nav>
           </div>
         </div>
