@@ -21,6 +21,10 @@ const PUBLIC_PATHS = [
   "/nouveau-mot-de-passe",
   "/activation",
   "/auth",
+  // Pages légales : lisibles avant tout achat ou connexion.
+  "/mentions-legales",
+  "/conditions",
+  "/confidentialite",
 ];
 
 const AUTH_ONLY_PATHS = ["/connexion", "/mot-de-passe-oublie"];

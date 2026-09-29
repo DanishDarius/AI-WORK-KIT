@@ -1,19 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { GuideSummary } from "@/lib/guides";
+import { useAbonne } from "@/lib/moi";
 import { GuideCover } from "./guide-cover";
 
 type SortMode = "recent" | "az" | "short";
+export type AccessMode = "tous" | "inclus" | "premium";
 
-export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; categories: string[] }) {
+export function AccessBadge({ inclus }: { inclus: boolean }) {
+  return inclus ? (
+    <span className="aw-access-badge is-included">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>Inclus
+    </span>
+  ) : (
+    <span className="aw-access-badge is-premium">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>Premium
+    </span>
+  );
+}
+
+export function LibraryScreen({ guides, categories, initialAccess = "tous" }: { guides: GuideSummary[]; categories: string[]; initialAccess?: AccessMode }) {
   const [query, setQuery] = useState("");
   const [tool, setTool] = useState("Tous les outils");
   const [category, setCategory] = useState("Tous les sujets");
   const [sort, setSort] = useState<SortMode>("recent");
   const [visibleCount, setVisibleCount] = useState(24);
+  const [access, setAccess] = useState<AccessMode>(initialAccess);
+  const abonne = useAbonne();
+  const nonAbonne = abonne === false;
+  const inclusCount = useMemo(() => guides.filter((guide) => guide.inclus).length, [guides]);
 
+  // Lien « Voir les guides inclus » depuis un guide Premium : /bibliotheque?acces=inclus
+  useEffect(() => {
+    if (initialAccess !== "tous" && nonAbonne)
+      document.getElementById("explore-guides-title")?.scrollIntoView({ block: "start" });
+  }, [initialAccess, nonAbonne]);
 
   const tools = useMemo(
     () => Array.from(new Set(guides.map((guide) => guide.tool))).sort((a, b) => a.localeCompare(b, "fr")),
@@ -26,7 +49,8 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
       const matchesQuery = !normalized || `${guide.title} ${guide.excerpt} ${guide.tool}`.toLocaleLowerCase("fr").includes(normalized);
       const matchesTool = tool === "Tous les outils" || guide.tool === tool;
       const matchesCategory = category === "Tous les sujets" || guide.category === category;
-      return matchesQuery && matchesTool && matchesCategory;
+      const matchesAccess = !nonAbonne || access === "tous" || (access === "inclus") === guide.inclus;
+      return matchesQuery && matchesTool && matchesCategory && matchesAccess;
     });
 
     return result.sort((a, b) => {
@@ -34,9 +58,9 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
       if (sort === "short") return Number.parseInt(a.duration) - Number.parseInt(b.duration);
       return a.number - b.number;
     });
-  }, [category, guides, query, sort, tool]);
+  }, [access, category, guides, nonAbonne, query, sort, tool]);
 
-  const featured = guides[0];
+  const featured = (nonAbonne && guides.find((guide) => guide.inclus)) || guides[0];
   function resetVisible() {
     setVisibleCount(24);
   }
@@ -47,6 +71,20 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
         <p className="aw-library-kicker">La bibliothèque</p>
         <h1 id="library-title">Les guides IA.<br /><span>À votre rythme.</span></h1>
         <p>Un sujet par guide. Lu en quelques minutes, appliqué le jour même.</p>
+        {nonAbonne && (
+          <div className="aw-access-summary">
+            <p><span>Votre accès</span><strong>{inclusCount} guides sur {guides.length}</strong></p>
+            <div className="aw-access-meter" aria-hidden="true"><span style={{ width: `${(inclusCount / guides.length) * 100}%` }} /></div>
+            <p className="aw-access-summary-foot">
+              Les {guides.length - inclusCount} autres guides s’ouvrent avec l’abonnement Bibliothèque. Chaque guide Premium reste lisible en aperçu.
+            </p>
+          </div>
+        )}
+        {abonne && (
+          <div className="aw-access-summary is-subscribed">
+            <p><span>Abonnement Bibliothèque actif</span><strong>Les {guides.length} guides vous sont ouverts</strong></p>
+          </div>
+        )}
       </section>
 
 <section className="aw-library-tools" aria-label="Rechercher et filtrer les guides">
@@ -75,6 +113,7 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
           </div>
           <div className="aw-library-feature-copy">
             <p className="aw-library-kicker">Commencer ici · {featured.tool} · {featured.duration}</p>
+            {nonAbonne && <AccessBadge inclus={featured.inclus} />}
             <h2 id="featured-title">{featured.title}</h2>
             <p>{featured.excerpt}</p>
             <Link href={`/guides/${featured.slug}`}>Lire ce guide <span aria-hidden="true">→</span></Link>
@@ -90,6 +129,17 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
           </div>
           <p><strong>{filteredGuides.length}</strong> guide{filteredGuides.length > 1 ? "s" : ""}</p>
         </div>
+        {nonAbonne && (
+          <div className="aw-access-filter" aria-label="Filtrer selon votre accès">
+            {([
+              ["tous", `Tous · ${guides.length}`],
+              ["inclus", `Inclus dans votre accès · ${inclusCount}`],
+              ["premium", `Premium · ${guides.length - inclusCount}`],
+            ] as Array<[AccessMode, string]>).map(([value, label]) => (
+              <button key={value} type="button" aria-pressed={access === value} onClick={() => { setAccess(value); resetVisible(); }}>{label}</button>
+            ))}
+          </div>
+        )}
         <div className="aw-library-sort" aria-label="Trier les guides">
           {([['recent', 'Ordre conseillé'], ['az', 'A → Z'], ['short', 'Les plus courts']] as Array<[SortMode, string]>).map(([value, label]) => (
             <button key={value} type="button" aria-pressed={sort === value} onClick={() => setSort(value)}>{label}</button>
@@ -105,6 +155,7 @@ export function LibraryScreen({ guides, categories }: { guides: GuideSummary[]; 
                     <GuideCover number={guide.number} title={guide.title} tool={guide.tool} variant={guide.coverVariant} />
                   </Link>
                   <div className="aw-guide-card-copy">
+                    {nonAbonne && <AccessBadge inclus={guide.inclus} />}
                     <p>{guide.category} · {guide.duration}</p>
                     <h3><Link href={`/guides/${guide.slug}`}>{guide.title}</Link></h3>
                     <span>{guide.tool}</span>

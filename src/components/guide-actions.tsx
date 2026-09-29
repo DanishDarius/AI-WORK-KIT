@@ -154,7 +154,7 @@ function GuideDownloadDialog({ number, slug, title, tool, variant, onClose }: {
   );
 }
 
-export function GuideActions({ slug, number, title, tool, variant }: { slug: string; number: number; title: string; tool: string; variant: number }) {
+export function GuideActions({ slug, number, title, tool, variant, telechargement = true }: { slug: string; number: number; title: string; tool: string; variant: number; telechargement?: boolean }) {
   const [downloadOpen, setDownloadOpen] = useState(false);
   const saved = useSyncExternalStore(
     subscribeSavedGuides,
@@ -176,10 +176,12 @@ export function GuideActions({ slug, number, title, tool, variant }: { slug: str
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.8h12v16.4l-6-3.8-6 3.8z" /></svg>
         {saved ? "Enregistré" : "Enregistrer"}
       </button>
-      <button type="button" className="aw-guide-download" onClick={() => setDownloadOpen(true)}>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 20h14" /></svg>
-        Télécharger le guide
-      </button>
+      {telechargement && (
+        <button type="button" className="aw-guide-download" onClick={() => setDownloadOpen(true)}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 20h14" /></svg>
+          Télécharger le guide
+        </button>
+      )}
       {saved && (
         <Link className="aw-guide-saved-link" href="/favoris#guides-enregistres">
           Retrouver dans Mes favoris <span aria-hidden="true">→</span>

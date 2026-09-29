@@ -1,6 +1,8 @@
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { NextResponse } from "next/server";
+import { getAbonnement } from "@/lib/abonnement";
+import { guideInclus } from "@/lib/offre";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
 export const runtime = "nodejs";
@@ -15,6 +17,14 @@ async function getPdf(request: Request, context: RouteContext, headOnly: boolean
   const { slug } = await context.params;
   if (!/^guide-\d{3}-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     return NextResponse.json({ error: "Guide introuvable" }, { status: 404 });
+  }
+
+  const guideNumber = Number(slug.slice(6, 9));
+  if (!guideInclus(guideNumber)) {
+    const abonnement = await getAbonnement(access.user.email);
+    if (!abonnement.actif) {
+      return NextResponse.json({ error: "Abonnement Bibliothèque requis" }, { status: 403 });
+    }
   }
 
   const filename = `${slug}.pdf`;
