@@ -38,7 +38,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <h1>{guide.title}</h1>
           <p className="aw-guide-meta">{guide.tool} <span>·</span> {guide.duration}</p>
           <p className="aw-guide-intro">{guide.excerpt}</p>
-          <GuideActions slug={guide.slug} />
+          <GuideActions slug={guide.slug} number={guide.number} title={guide.title} tool={guide.tool} variant={guide.coverVariant} />
         </div>
         <div className="aw-guide-hero-cover">
           <GuideCover number={guide.number} title={guide.title} tool={guide.tool} variant={guide.coverVariant} featured />
@@ -57,12 +57,22 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <section className="aw-guide-next" aria-labelledby="next-guides-title">
         <p className="aw-library-kicker">À lire ensuite</p>
         <h2 id="next-guides-title">Le guide suivant, dans la foulée.</h2>
-        <div>
+        <div className="aw-guide-next-books">
           {nextGuides.map((next) => (
-            <Link key={next.slug} href={`/guides/${next.slug}`}>
-              <span>{next.category} · {next.duration}</span>
-              <strong>{next.title}</strong>
-              <b aria-hidden="true">→</b>
+            <Link
+              key={next.slug}
+              className="aw-guide-next-book"
+              href={`/guides/${next.slug}`}
+              aria-label={`Lire le guide : ${next.title}`}
+            >
+              <span className="aw-guide-next-art" aria-hidden="true">
+                <GuideCover number={next.number} title={next.title} tool={next.tool} variant={next.coverVariant} />
+              </span>
+              <span className="aw-guide-next-copy" aria-hidden="true">
+                <span className="aw-guide-next-category">{next.tool} · {next.duration}</span>
+                <strong className="aw-guide-next-title">{next.title}</strong>
+                <span className="aw-guide-next-arrow">→</span>
+              </span>
             </Link>
           ))}
         </div>

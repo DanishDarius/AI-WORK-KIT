@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { RECOVERY_COOKIE } from "@/lib/supabase/recovery";
 
 // Rafraichit la session Supabase a chaque requete et repropage les cookies
 // mis a jour. Necessaire avec @supabase/ssr en Next.js : sans ce middleware,
@@ -63,6 +64,27 @@ export async function updateSession(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isApiRoute = pathname.startsWith("/api/");
   const isPublic = isApiRoute || matchesPath(pathname, PUBLIC_PATHS);
+
+  // Le lien de récupération crée une session Supabase. Elle sert uniquement
+  // à définir un nouveau mot de passe, pas à parcourir l'application.
+  const recoveryPending = Boolean(
+    user && request.cookies.get(RECOVERY_COOKIE)?.value === user.id,
+  );
+  if (
+    recoveryPending &&
+    !matchesPath(pathname, ["/nouveau-mot-de-passe", "/auth"])
+  ) {
+    if (isApiRoute) {
+      return NextResponse.json(
+        { error: "Terminez la réinitialisation du mot de passe." },
+        { status: 403 },
+      );
+    }
+    const url = request.nextUrl.clone();
+    url.pathname = "/nouveau-mot-de-passe";
+    url.search = "";
+    return NextResponse.redirect(url);
+  }
 
   if (!user && !isPublic) {
     const url = request.nextUrl.clone();

@@ -1,6 +1,5 @@
-import { CatalogueScreen } from "@/components/catalogue-screen";
-import { getGuideSummaries } from "@/lib/guides";
+import { HomeExperience } from "@/components/home-experience";
 
 export default function Home() {
-  return <CatalogueScreen home guides={getGuideSummaries()} />;
+  return <HomeExperience />;
 }

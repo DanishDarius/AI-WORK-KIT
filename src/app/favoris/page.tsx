@@ -4,7 +4,7 @@ import { FavorisList } from "@/components/favoris-list";
 export default function Favoris() {
   return (
     <>
-      <Back />
+      <Back href="/mon-compte">Ma progression</Back>
       <Intro eyebrow="Votre espace personnel" title="Mes favoris">
         Les tâches que vous utilisez souvent, à un clic.
       </Intro>

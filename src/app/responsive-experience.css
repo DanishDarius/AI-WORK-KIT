@@ -1,0 +1,347 @@
+/* Interior pages follow the visual rhythm of the local homepage maquette. */
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) {
+  --experience-display: var(--font-outfit), sans-serif;
+  --experience-mono: var(--font-dm-mono), ui-monospace, Consolas, monospace;
+}
+
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main :is(h1, h2, h3) {
+  font-family: var(--experience-display);
+  letter-spacing: -0.05em;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main h1 {
+  font-size: clamp(38px, 5vw, 70px);
+  line-height: 1.06;
+}
+
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main :is(
+  .aw-sectionhead h2, .aw-systems-section-head h2, .aw-systems-example-head h2,
+  .aw-systems-method-intro h2, .aw-strategy-section-heading h2,
+  .aw-strategy-approach h2, .aw-strategy-scope h2, .aw-strategy-final h2,
+  .aw-library-section-head h2, .aw-library-closing h2, .aw-updates-columns-head h2
+) {
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.1;
+}
+
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main :is(
+  .aw-eyebrow, .eyebrow, .aw-library-kicker, .aw-systems-kicker,
+  .aw-updates-kicker, .aw-catalogue-kicker
+) {
+  font-family: var(--experience-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-bread {
+  margin-block: 20px 0;
+  font-size: 12px;
+}
+
+/* The catalogue has a clear entry point before results load. */
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-intro {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  min-height: 360px;
+  margin: 12px 0 56px;
+  padding: clamp(38px, 6vw, 76px);
+  overflow: hidden;
+  border: 1px solid #285247;
+  border-radius: 26px;
+  color: #fffdfc;
+  background: radial-gradient(circle at 88% 22%, #276254 0, #143d34 34%, transparent 68%), #102a26;
+}
+
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-intro::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(#b9f2d60c 1px, transparent 1px), linear-gradient(90deg, #b9f2d60c 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-intro > div { max-width: 720px; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-kicker { margin-bottom: 24px; color: #b9f2d6; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-intro h1 { max-width: 13ch; margin-bottom: 22px; color: #fffdfc; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-lead {
+  max-width: 56ch;
+  margin: 0;
+  color: #d1e3dc;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.65;
+}
+
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-symbol {
+  display: grid;
+  flex: none;
+  width: clamp(112px, 17vw, 220px);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid #b9f2d666;
+  border-radius: 50%;
+  color: #b9f2d6;
+  font: 400 clamp(68px, 9vw, 128px)/1 var(--experience-display);
+  box-shadow: 0 0 0 32px #b9f2d60c, 0 0 0 64px #b9f2d608;
+}
+
+/* Lists, guides and detail screens share a predictable content rhythm. */
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-sectionhead { margin-bottom: 28px; gap: 28px; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-sectionhead p { max-width: 62ch; margin-top: 14px; line-height: 1.65; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-grid { gap: 16px; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-tile {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  gap: 16px;
+  padding: clamp(20px, 2vw, 28px);
+  border-radius: 18px;
+}
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-grid .aw-tile:nth-child(3n + 2) { background: #e5efe8; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-grid .aw-tile:nth-child(3n + 3) { background: #e9edf9; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-tile h3 {
+  margin-block: 14px auto;
+  font-size: clamp(23px, 2.2vw, 32px);
+  line-height: 1.15;
+}
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-tilefooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--aw-line);
+  line-height: 1.4;
+}
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-tileprogress { width: 100%; margin-top: 8px; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) :is(.panel, .aw-panel, .aw-taskrow) { border-radius: 18px; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-taskrow { margin-bottom: 10px; border: 1px solid var(--aw-line); }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) :is(.aw-guide-card, .aw-update-card, .aw-update-secondary) { border-radius: 16px; }
+#awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) :is(.aw-library-feature-copy, .aw-guide-card-copy, .aw-update-lead, .aw-update-card) p { line-height: 1.65; }
+
+/* The approved three-column footer carries through the entire application. */
+#awk-studio.aw-theme-atelier .aw-site-footer { background: #0a1e1c; }
+#awk-studio.aw-theme-atelier .aw-footer-main {
+  width: min(calc(100% - 48px), 1280px);
+  grid-template-columns: minmax(220px, 1.55fr) minmax(0, 2.45fr);
+  gap: clamp(32px, 5vw, 76px);
+  padding-block: clamp(64px, 7vw, 100px);
+}
+#awk-studio.aw-theme-atelier .aw-footer-links { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 3vw, 48px); }
+#awk-studio.aw-theme-atelier .aw-footer-column h2 {
+  font: 700 11px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.12em;
+}
+#awk-studio.aw-theme-atelier .aw-footer-column a { line-height: 1.65; }
+#awk-studio.aw-theme-atelier .aw-bottom { width: min(calc(100% - 48px), 1280px); }
+
+@media (max-width: 1024px) {
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main h1 { font-size: clamp(42px, 6vw, 60px); }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main :is(
+    .aw-sectionhead h2, .aw-systems-section-head h2, .aw-systems-example-head h2,
+    .aw-systems-method-intro h2, .aw-strategy-section-heading h2,
+    .aw-strategy-approach h2, .aw-strategy-scope h2, .aw-strategy-final h2,
+    .aw-library-section-head h2, .aw-library-closing h2, .aw-updates-columns-head h2
+  ) { font-size: clamp(38px, 5vw, 50px); }
+  #awk-studio.aw-theme-atelier .aw-footer-main { grid-template-columns: 1fr; gap: 42px; }
+}
+
+@media (max-width: 640px) {
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main h1 { font-size: clamp(34px, 9vw, 38px); line-height: 1.08; }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main :is(
+    .aw-sectionhead h2, .aw-systems-section-head h2, .aw-systems-example-head h2,
+    .aw-systems-method-intro h2, .aw-strategy-section-heading h2,
+    .aw-strategy-approach h2, .aw-strategy-scope h2, .aw-strategy-final h2,
+    .aw-library-section-head h2, .aw-library-closing h2, .aw-updates-columns-head h2
+  ) { font-size: clamp(30px, 8vw, 34px); line-height: 1.17; }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-intro {
+    min-height: 0;
+    margin-bottom: 42px;
+    padding: 40px 24px 44px;
+    border-radius: 20px;
+  }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-intro h1 { max-width: 12ch; }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-lead { font-size: 14px; }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-catalogue-symbol {
+    position: absolute;
+    top: 24px;
+    right: -24px;
+    width: 78px;
+    opacity: 0.35;
+    font-size: 48px;
+  }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main :is(.aw-library-hero, .aw-systems-hero, .aw-strategy-hero) {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-main :is(
+    .aw-library-hero > p:last-child, .aw-systems-lead,
+    .aw-strategy-hero-copy > p:not(.aw-systems-kicker),
+    .aw-updates-intro p:not(.aw-updates-kicker)
+  ) { font-size: 14px; line-height: 1.65; }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-tile { min-height: 0; padding: 20px; }
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) .aw-sectionhead { margin-bottom: 22px; }
+  #awk-studio.aw-theme-atelier .aw-footer-main { width: calc(100% - 32px); gap: 32px; padding-block: 52px; }
+  #awk-studio.aw-theme-atelier .aw-footer-links { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  #awk-studio.aw-theme-atelier .aw-footer-column a { font-size: 11px; overflow-wrap: anywhere; }
+  #awk-studio.aw-theme-atelier .aw-bottom { width: calc(100% - 32px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #awk-studio.aw-theme-atelier[data-page]:not([data-page="/"]) :is(.aw-tile, .aw-guide-card, .aw-update-card) { transition: none; }
+}
+
+/* Guide recommendations: existing book covers remain the visual entry point. */
+#awk-studio.aw-theme-atelier .aw-guide-next {
+  border-top: 1px solid var(--aw-line);
+  background: var(--aw-bg);
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next h2 {
+  max-width: 16ch;
+  margin: 16px 0 clamp(36px, 5vw, 64px);
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next > .aw-guide-next-books {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 48px);
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next .aw-guide-next-book {
+  display: grid;
+  grid-template-columns: clamp(130px, 14vw, 190px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(18px, 2vw, 28px);
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--aw-ink);
+  text-decoration: none;
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next .aw-guide-next-art {
+  display: block;
+  min-width: 0;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next-art .aw-guide-book {
+  width: 100%;
+  filter: drop-shadow(0 14px 17px rgba(23, 33, 31, 0.19));
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next .aw-guide-next-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  height: 100%;
+  padding-block: clamp(8px, 2vw, 28px);
+  color: var(--aw-ink);
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next-category {
+  color: var(--aw-accent);
+  font: 700 10px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next-title {
+  display: block;
+  margin-top: clamp(16px, 2vw, 30px);
+  color: var(--aw-ink);
+  font: 700 clamp(19px, 2vw, 28px)/1.16 var(--font-outfit), sans-serif;
+  letter-spacing: -0.045em;
+  text-wrap: pretty;
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next-arrow {
+  display: grid;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  margin-top: auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--aw-accent);
+  color: white;
+  font: 400 27px/1 var(--font-plus-jakarta), sans-serif;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next-book:hover .aw-guide-book,
+#awk-studio.aw-theme-atelier .aw-guide-next-book:focus-visible .aw-guide-book {
+  transform: translateY(-5px) rotateY(-2deg);
+}
+
+#awk-studio.aw-theme-atelier .aw-guide-next-book:hover .aw-guide-next-arrow,
+#awk-studio.aw-theme-atelier .aw-guide-next-book:focus-visible .aw-guide-next-arrow {
+  transform: translateX(4px);
+  background: #07594e;
+}
+
+@media (max-width: 900px) {
+  #awk-studio.aw-theme-atelier .aw-guide-next .aw-guide-next-book {
+    grid-template-columns: clamp(92px, 15vw, 120px) minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  #awk-studio.aw-theme-atelier .aw-guide-next-title {
+    font-size: clamp(17px, 2.4vw, 22px);
+  }
+}
+
+@media (max-width: 640px) {
+  #awk-studio.aw-theme-atelier .aw-guide-next > .aw-guide-next-books {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  #awk-studio.aw-theme-atelier .aw-guide-next .aw-guide-next-book {
+    grid-template-columns: clamp(104px, 28vw, 130px) minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  #awk-studio.aw-theme-atelier .aw-guide-next .aw-guide-next-copy {
+    padding-block: 6px;
+  }
+
+  #awk-studio.aw-theme-atelier .aw-guide-next-title {
+    margin-top: 12px;
+    font-size: clamp(17px, 5vw, 20px);
+  }
+
+  #awk-studio.aw-theme-atelier .aw-guide-next-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #awk-studio.aw-theme-atelier .aw-guide-next-arrow,
+  #awk-studio.aw-theme-atelier .aw-guide-next-art .aw-guide-book { transition: none; }
+}

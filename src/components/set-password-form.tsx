@@ -8,7 +8,13 @@ const hasSupabaseConfig = Boolean(
   process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
 );
 
-export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
+export function SetPasswordForm({
+  mode,
+  recoveryPending = false,
+}: {
+  mode: "activation" | "recovery";
+  recoveryPending?: boolean;
+}) {
   const [sessionState, setSessionState] = useState<
     "checking" | "ready" | "missing"
   >("checking");
@@ -20,6 +26,9 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
 
   useEffect(() => {
     if (!hasSupabaseConfig) return;
+    if (mode === "recovery" && !recoveryPending) {
+      return;
+    }
     const supabase = createClient();
     supabase.auth.getUser().then(({ data }) => {
       setSessionState(data.user ? "ready" : "missing");
@@ -30,7 +39,7 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
       if (session) setSessionState("ready");
     });
     return () => subscription.unsubscribe();
-  }, []);
+  }, [mode, recoveryPending]);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -46,6 +55,21 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
 
     setSaving(true);
     setError(undefined);
+    if (mode === "recovery") {
+      const response = await fetch("/auth/recovery", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      }).catch(() => null);
+      setSaving(false);
+      if (!response?.ok) {
+        setError("L’enregistrement a échoué. Demandez un nouveau lien.");
+        return;
+      }
+      setCompleted(true);
+      return;
+    }
+
     const supabase = createClient();
     const { error: updateError } = await supabase.auth.updateUser({ password });
     setSaving(false);
@@ -55,35 +79,19 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
       return;
     }
 
-    if (mode === "activation") {
-      window.location.replace("/");
-      return;
-    }
-
-    await supabase.auth.signOut();
-    setCompleted(true);
+    window.location.replace("/");
   }
 
   if (!hasSupabaseConfig) {
     return <p role="status">La connexion est momentanément indisponible. Veuillez réessayer plus tard.</p>;
   }
 
-  if (sessionState === "checking") {
-    return <p role="status">Vérification de votre lien…</p>;
-  }
+  const effectiveSessionState = mode === "recovery" && !recoveryPending
+    ? "missing"
+    : sessionState;
 
-  if (sessionState === "missing") {
-    return (
-      <div className="aw-login-confirmation" role="alert">
-        <div>
-          <h2>Lien invalide ou expiré</h2>
-          <p>Ce lien ne fonctionne plus. Demandez-en un nouveau, il arrive en quelques secondes.</p>
-          <Link className="button mt-5" href="/mot-de-passe-oublie">
-            Demander un nouveau lien
-          </Link>
-        </div>
-      </div>
-    );
+  if (effectiveSessionState === "checking") {
+    return <p role="status">Vérification de votre lien…</p>;
   }
 
   if (completed) {
@@ -95,8 +103,22 @@ export function SetPasswordForm({ mode }: { mode: "activation" | "recovery" }) {
         <div>
           <h2>Mot de passe enregistré</h2>
           <p>C’est fait. Connectez-vous avec votre nouveau mot de passe.</p>
-          <Link className="button mt-5" href="/connexion">
+          <a className="button mt-5" href="/connexion">
             Se connecter
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  if (effectiveSessionState === "missing") {
+    return (
+      <div className="aw-login-confirmation" role="alert">
+        <div>
+          <h2>Lien invalide ou expiré</h2>
+          <p>Ce lien ne fonctionne plus. Demandez-en un nouveau, il arrive en quelques secondes.</p>
+          <Link className="button mt-5" href="/mot-de-passe-oublie">
+            Demander un nouveau lien
           </Link>
         </div>
       </div>

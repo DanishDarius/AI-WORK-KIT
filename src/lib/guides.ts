@@ -48,11 +48,20 @@ function stripMarkdown(value: string) {
     .trim();
 }
 
+function removeEditorialPlaceholders(markdown: string) {
+  // These draft-only sections are excluded from the downloadable PDF too.
+  // Keep the authored guide files intact while matching the published reading page.
+  return markdown.replace(
+    /^---[ \t]*\r?\n[ \t]*\r?\n##[ \t]+(?:\d+\.[ \t]+)?(?:Le fichier complet|Pour aller plus loin)[ \t]*\r?\n[ \t]*\r?\n\*\[(?:Emplacement réservé|Section à adapter)[^\r\n]*\]\*[ \t]*\r?\n/gm,
+    "",
+  );
+}
+
 function parseFile(filename: string): Guide {
   const raw = fs.readFileSync(path.join(guidesDirectory, filename), "utf8");
   const frontMatterMatch = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
   const frontMatter = frontMatterMatch?.[1] ?? "";
-  const markdown = raw.slice(frontMatterMatch?.[0].length ?? 0).trim();
+  const markdown = removeEditorialPlaceholders(raw.slice(frontMatterMatch?.[0].length ?? 0)).trim();
   const number = Number(filename.match(/^guide-(\d+)/)?.[1] ?? 0);
   const slug = filename.replace(/^guide-\d+-/, "").replace(/\.md$/, "");
   const title = markdown.match(/^#\s+(.+)$/m)?.[1].trim() ?? slug.replaceAll("-", " ");

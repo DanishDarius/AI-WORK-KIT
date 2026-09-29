@@ -13,7 +13,7 @@ export default function Compte() {
   const date = data ? new Date(data.membre_depuis) : null;
   return (
     <>
-      <Back />
+      <Back href="/">Accueil</Back>
       <Intro eyebrow="Votre espace personnel" title="Ma progression">
         Ce que vous avez fait, votre série en cours, et la suite.
       </Intro>

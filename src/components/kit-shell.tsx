@@ -73,7 +73,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   // l'application, uniquement le repère de marque et le formulaire.
   if (isAuthPage) {
     return (
-      <div id="awk-studio" className="awk-studio-auth aw-theme-atelier">
+      <div id="awk-studio" className="awk-studio-auth aw-theme-atelier" data-page={path}>
         <a className="skip-link" href="#contenu">Aller au contenu</a>
         <header className="aw-top aw-top-auth">
           <div className="aw-header-inner">
@@ -88,7 +88,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div id="awk-studio" className="aw-theme-atelier">
+    <div id="awk-studio" className="aw-theme-atelier" data-page={path}>
       <a className="skip-link" href="#contenu">Aller au contenu</a>
       <header className="aw-top">
         <div className="aw-header-inner">
@@ -153,16 +153,20 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="aw-footer-links">
-            <nav className="aw-footer-column" aria-label="Menu du pied de page">
-              <h2>Menu</h2>
-              <Link href="/">Accueil</Link>
+            <nav className="aw-footer-column" aria-label="Explorer le kit">
+              <h2>Explorer</h2>
               <Link href="/taches">Tâches</Link>
               <Link href="/metiers">Métiers</Link>
+              <Link href="/comprendre-les-ia">Comprendre les IA</Link>
               <Link href="/bibliotheque">Bibliothèque</Link>
-              <Link href="/transformation-ia">Transformation IA</Link>
-              <Link href="/systemes-ia">Systèmes IA</Link>
               <Link href="/mises-a-jour-ia">Mises à jour IA</Link>
               <Link href="/mon-compte">Ma progression</Link>
+            </nav>
+
+            <nav className="aw-footer-column" aria-label="Accompagnement">
+              <h2>Accompagnement</h2>
+              <Link href="/systemes-ia">Systèmes IA</Link>
+              <Link href="/transformation-ia">Transformation IA</Link>
             </nav>
 
             <nav className="aw-footer-column" aria-label="Pages légales">

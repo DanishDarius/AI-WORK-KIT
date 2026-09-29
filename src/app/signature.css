@@ -1439,7 +1439,7 @@ body {
 #awk-studio .aw-guide-meta span { margin: 0 7px; color: #627981; }
 #awk-studio .aw-guide-intro { max-width: 720px; margin: 24px 0 0; color: #a5b6bc; font-size: 16px; line-height: 1.75; }
 #awk-studio .aw-guide-actions { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; }
-#awk-studio .aw-guide-actions button {
+#awk-studio .aw-guide-actions :is(button, a) {
   min-height: 52px;
   padding: 0 22px;
   display: inline-flex;
@@ -1448,6 +1448,7 @@ body {
   border-radius: 999px;
   font: 650 13px var(--font-plus-jakarta), sans-serif;
   cursor: pointer;
+  text-decoration: none;
 }
 #awk-studio .aw-guide-actions svg { width: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; }
 #awk-studio .aw-guide-save { border: 1px solid #36515b; background: #101f26; color: #eef6f8; }

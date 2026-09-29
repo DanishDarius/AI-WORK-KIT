@@ -122,7 +122,9 @@ function CatalogResults({
   mode: "taches" | "metiers";
   home: boolean;
 }) {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(() =>
+    typeof window === "undefined" ? "" : new URLSearchParams(window.location.search).get("q") ?? "",
+  );
   const [usage, setUsage] = useState("Tout");
   const [natureFilter, setNatureFilter] = useState<Nature | "Toutes">("Toutes");
   const [limit, setLimit] = useState(8);
@@ -327,11 +329,33 @@ export function CatalogueScreen({
   return (
     <>
       {!home && (
-        <nav className="aw-bread" aria-label="Fil d’Ariane">
-          <Link href="/">Accueil</Link>
-          <Icon name="chevron" />
-          <span>{mode === "taches" ? "Tâches" : "Métiers"}</span>
-        </nav>
+        <>
+          <nav className="aw-bread" aria-label="Fil d’Ariane">
+            <Link href="/">Accueil</Link>
+            <Icon name="chevron" />
+            <span>{mode === "taches" ? "Tâches" : "Métiers"}</span>
+          </nav>
+          <section className="aw-catalogue-intro" aria-labelledby="catalogue-title">
+            <div>
+              <p className="aw-catalogue-kicker">
+                {mode === "taches" ? "01 / PAR TÂCHE" : "02 / PAR MÉTIER"}
+              </p>
+              <h1 id="catalogue-title">
+                {mode === "taches"
+                  ? "Une tâche à faire. Un prompt pour agir."
+                  : "Votre métier. Des usages concrets."}
+              </h1>
+              <p className="aw-catalogue-lead">
+                {mode === "taches"
+                  ? "Partez de ce que vous devez accomplir aujourd’hui. Trouvez un cas pratique et le bon prompt à adapter."
+                  : "Explorez les tâches de votre quotidien. Voyez où ChatGPT, Claude ou Gemini peuvent vous aider."}
+              </p>
+            </div>
+            <span className="aw-catalogue-symbol" aria-hidden="true">
+              {mode === "taches" ? "✳" : "◉"}
+            </span>
+          </section>
+        </>
       )}
       {home && (
         <>
