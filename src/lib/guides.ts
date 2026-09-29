@@ -2,6 +2,7 @@ import "server-only";
 
 import fs from "node:fs";
 import path from "node:path";
+import { guideInclus } from "@/lib/offre";
 
 export type GuideSummary = {
   number: number;
@@ -14,6 +15,8 @@ export type GuideSummary = {
   source: string;
   hasVisual: boolean;
   coverVariant: number;
+  // Inclus dans l'accès AIW (lisible sans abonnement Bibliothèque).
+  inclus: boolean;
 };
 
 export type Guide = GuideSummary & {
@@ -87,16 +90,24 @@ function parseFile(filename: string): Guide {
     source,
     hasVisual,
     coverVariant: ((number - 1) % 8) + 1,
+    inclus: guideInclus(number),
     markdown,
   };
 }
 
+// Les fichiers ne changent pas entre deux déploiements : lus une seule fois
+// par instance serveur.
+let cache: Guide[] | null = null;
+
 export function getAllGuides(): Guide[] {
-  return fs
-    .readdirSync(guidesDirectory)
-    .filter((filename) => /^guide-\d+-.+\.md$/.test(filename))
-    .map(parseFile)
-    .sort((a, b) => a.number - b.number);
+  if (!cache) {
+    cache = fs
+      .readdirSync(guidesDirectory)
+      .filter((filename) => /^guide-\d+-.+\.md$/.test(filename))
+      .map(parseFile)
+      .sort((a, b) => a.number - b.number);
+  }
+  return cache;
 }
 
 export function getGuideSummaries(): GuideSummary[] {
@@ -111,6 +122,7 @@ export function getGuideSummaries(): GuideSummary[] {
     source: guide.source,
     hasVisual: guide.hasVisual,
     coverVariant: guide.coverVariant,
+    inclus: guide.inclus,
   }));
 }
 
@@ -120,4 +132,27 @@ export function getGuideBySlug(slug: string): Guide | undefined {
 
 export function getGuideCategories(guides = getGuideSummaries()) {
   return Array.from(new Set(guides.map((guide) => guide.category))).sort((a, b) => a.localeCompare(b, "fr"));
+}
+
+// Aperçu gratuit d'un guide Premium : l'introduction et le premier chapitre.
+// Pour un guide court (moins de trois chapitres), seul le premier paragraphe
+// du premier chapitre est montré, afin de ne pas livrer l'essentiel.
+const hors_chapitre = /^(sommaire|introduction|ce que (vous allez|tu vas) trouver)/i;
+
+export function guidePreview(markdown: string) {
+  const lignes = markdown.split(/\r?\n/);
+  const chapitres: number[] = [];
+  lignes.forEach((ligne, index) => {
+    const titre = ligne.match(/^##\s+(.+)$/);
+    if (titre && !hors_chapitre.test(titre[1].trim())) chapitres.push(index);
+  });
+  if (!chapitres.length) {
+    const blocs = markdown.split(/\r?\n\s*\r?\n/);
+    return blocs.slice(0, Math.max(3, Math.ceil(blocs.length / 4))).join("\n\n");
+  }
+  if (chapitres.length >= 3) return lignes.slice(0, chapitres[1]).join("\n").trim();
+  const suite = lignes.slice(chapitres[0] + 1);
+  const debut = suite.findIndex((l) => l.trim());
+  const fin = suite.findIndex((l, i) => i > debut && !l.trim());
+  return [...lignes.slice(0, chapitres[0] + 1), ...suite.slice(0, fin === -1 ? suite.length : fin)].join("\n").trim();
 }

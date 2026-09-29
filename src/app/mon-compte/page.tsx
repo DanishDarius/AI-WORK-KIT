@@ -4,12 +4,12 @@ import { Back, Intro, ResourceState } from "@/components/kit-ui";
 import { ProgressBar, Regularite } from "@/components/progression-ui";
 import { FavorisList } from "@/components/favoris-list";
 import { SignOutButton } from "@/components/account-actions";
+import { AideSupport, MonOffre } from "@/components/mon-offre";
+import { useMoi } from "@/lib/moi";
 export default function Compte() {
   const progression = useResource<Progression>("/api/progression");
-  const { data, error, retry } = useResource<{
-    email: string | null;
-    membre_depuis: string;
-  }>("/api/moi");
+  const moi = useMoi();
+  const data = moi ?? null;
   const date = data ? new Date(data.membre_depuis) : null;
   return (
     <>
@@ -50,9 +50,13 @@ export default function Compte() {
             <Regularite data={progression.data} />
           </section>
         )}
+        {data && <MonOffre moi={data} />}
         <FavorisList preview />
         {!data ? (
-          <ResourceState error={error} retry={retry} />
+          <ResourceState
+            error={moi === null ? "Impossible de charger votre compte." : undefined}
+            retry={() => window.location.reload()}
+          />
         ) : (
           <section className="panel">
             <h2>Votre compte</h2>
@@ -76,6 +80,7 @@ export default function Compte() {
             <SignOutButton />
           </section>
         )}
+        <AideSupport />
       </div>
     </>
   );

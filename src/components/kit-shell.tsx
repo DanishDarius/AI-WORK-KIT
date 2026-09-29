@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { Icon } from "./kit-icons";
+import { SupportChat } from "./support-chat";
 
 const exploreLinks = [
   { href: "/taches", label: "Tâches", description: "Le prompt prêt pour une tâche précise", icon: "tasks" },
@@ -15,6 +16,7 @@ const exploreLinks = [
   { href: "/systemes-ia", label: "Systèmes IA", description: "Nous automatisons vos tâches pour vous", icon: "layers" },
   { href: "/transformation-ia", label: "Transformation IA", description: "Un plan IA pour toute votre entreprise", icon: "analysis" },
   { href: "/mises-a-jour-ia", label: "Mises à jour IA", description: "Ce qui change chez les IA, chaque semaine", icon: "analysis" },
+  { href: "/aide", label: "Aide et support", description: "Une question ? Réponse 24 h/24, 7 j/7", icon: "chat" },
 ];
 
 // Pages publiques d'authentification : tant que la personne n'est pas
@@ -83,6 +85,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
         </header>
         <main id="contenu" className="aw-main">{children}</main>
+        <nav className="aw-auth-legal" aria-label="Pages légales">
+          <Link href="/mentions-legales">Mentions légales</Link>
+          <Link href="/conditions">Conditions générales</Link>
+          <Link href="/confidentialite">Confidentialité et cookies</Link>
+        </nav>
       </div>
     );
   }
@@ -143,6 +150,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </header>
 
       <main id="contenu" className="aw-main">{children}</main>
+      {authenticated && <SupportChat />}
       <footer className="aw-site-footer">
         <div className="aw-footer-main">
           <div className="aw-footer-brand">
@@ -163,13 +171,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
               <Link href="/systemes-ia">Systèmes IA</Link>
               <Link href="/mises-a-jour-ia">Mises à jour IA</Link>
               <Link href="/mon-compte">Ma progression</Link>
+              <Link href="/aide">Aide et support</Link>
             </nav>
 
             <nav className="aw-footer-column" aria-label="Pages légales">
               <h2>Pages légales</h2>
-              <a href="https://boutique.parlonsads.com/mentions-legales">Mentions légales</a>
-              <a href="https://boutique.parlonsads.com/confidentialite">Politique de confidentialité</a>
-              <a href="https://boutique.parlonsads.com/conditions-de-vente">Conditions de vente</a>
+              <Link href="/mentions-legales">Mentions légales</Link>
+              <Link href="/conditions">Conditions générales</Link>
+              <Link href="/confidentialite">Confidentialité et cookies</Link>
             </nav>
           </div>
         </div>

@@ -16,6 +16,7 @@ import { Icon } from "./kit-icons";
 import { UsageFilters } from "./catalogue-screen";
 import { ProgressBar } from "./progression-ui";
 import { TacheActions } from "./tache-actions";
+import { TacheSurMesure } from "./tache-sur-mesure";
 
 export function MetierScreen({ slug }: { slug: string }) {
   const endpoint = `/api/metiers/${encodeURIComponent(slug)}`;
@@ -249,6 +250,7 @@ export function MetierScreen({ slug }: { slug: string }) {
           )}
         </div>
       )}
+      <TacheSurMesure slug={slug} metier={data.metier.nom} />
     </>
   );
 }

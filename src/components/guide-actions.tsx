@@ -45,7 +45,7 @@ export function subscribeSavedGuides(callback: () => void) {
   };
 }
 
-export function GuideActions({ slug }: { slug: string }) {
+export function GuideActions({ slug, telechargement = true }: { slug: string; telechargement?: boolean }) {
   const saved = useSyncExternalStore(
     subscribeSavedGuides,
     () => slugsEnregistres().includes(slug),
@@ -65,10 +65,12 @@ export function GuideActions({ slug }: { slug: string }) {
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.8h12v16.4l-6-3.8-6 3.8z" /></svg>
         {saved ? "Enregistré" : "Enregistrer"}
       </button>
-      <button type="button" className="aw-guide-download" onClick={() => window.print()}>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 20h14" /></svg>
-        Télécharger le PDF
-      </button>
+      {telechargement && (
+        <button type="button" className="aw-guide-download" onClick={() => window.print()}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 20h14" /></svg>
+          Télécharger le PDF
+        </button>
+      )}
       {saved && (
         <Link className="aw-guide-saved-link" href="/favoris#guides-enregistres">
           Retrouver dans Mes favoris <span aria-hidden="true">→</span>
