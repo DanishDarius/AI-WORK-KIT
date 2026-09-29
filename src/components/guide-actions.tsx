@@ -1,9 +1,43 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { GuideCover } from "./guide-cover";
 
-function subscribeSavedGuides(callback: () => void) {
+const CLE = "awk-saved-guides";
+
+// Renvoie la chaîne brute (valeur stable pour useSyncExternalStore).
+export function lireGuidesEnregistres() {
+  try {
+    return localStorage.getItem(CLE) ?? "[]";
+  } catch {
+    return "[]";
+  }
+}
+
+function ecrireGuidesEnregistres(slugs: string[]) {
+  try {
+    localStorage.setItem(CLE, JSON.stringify(slugs));
+  } catch {
+    // Stockage indisponible (navigation privée) : rien à faire.
+  }
+  window.dispatchEvent(new Event("awk-guides-updated"));
+}
+
+function slugsEnregistres(): string[] {
+  try {
+    const v = JSON.parse(lireGuidesEnregistres());
+    return Array.isArray(v) ? v : [];
+  } catch {
+    return [];
+  }
+}
+
+export function retirerGuideEnregistre(slug: string) {
+  ecrireGuidesEnregistres(slugsEnregistres().filter((s) => s !== slug));
+}
+
+export function subscribeSavedGuides(callback: () => void) {
   window.addEventListener("storage", callback);
   window.addEventListener("awk-guides-updated", callback);
   return () => {
@@ -124,16 +158,15 @@ export function GuideActions({ slug, number, title, tool, variant }: { slug: str
   const [downloadOpen, setDownloadOpen] = useState(false);
   const saved = useSyncExternalStore(
     subscribeSavedGuides,
-    () => (JSON.parse(localStorage.getItem("awk-saved-guides") ?? "[]") as string[]).includes(slug),
+    () => slugsEnregistres().includes(slug),
     () => false,
   );
 
   function toggleSaved() {
-    const savedGuides = new Set(JSON.parse(localStorage.getItem("awk-saved-guides") ?? "[]") as string[]);
-    if (savedGuides.has(slug)) savedGuides.delete(slug);
-    else savedGuides.add(slug);
-    localStorage.setItem("awk-saved-guides", JSON.stringify(Array.from(savedGuides)));
-    window.dispatchEvent(new Event("awk-guides-updated"));
+    const slugs = slugsEnregistres();
+    ecrireGuidesEnregistres(
+      slugs.includes(slug) ? slugs.filter((s) => s !== slug) : [...slugs, slug],
+    );
   }
 
   return (
@@ -147,6 +180,11 @@ export function GuideActions({ slug, number, title, tool, variant }: { slug: str
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 20h14" /></svg>
         Télécharger le guide
       </button>
+      {saved && (
+        <Link className="aw-guide-saved-link" href="/favoris#guides-enregistres">
+          Retrouver dans Mes favoris <span aria-hidden="true">→</span>
+        </Link>
+      )}
     </div>
     {downloadOpen && <GuideDownloadDialog number={number} slug={slug} title={title} tool={tool} variant={variant} onClose={() => setDownloadOpen(false)} />}
     </>
