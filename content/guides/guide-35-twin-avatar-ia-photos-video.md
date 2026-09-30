@@ -30,6 +30,8 @@ Le character sheet est une planche de référence rassemblant plusieurs angles p
 
 La démarche : ouvrir un nouveau chat dans ChatGPT, joindre les photos réelles via le bouton d'ajout et attendre l'apparition de leurs vignettes, coller le prompt ci-dessous en remplaçant les champs entre crochets, puis comparer le résultat aux originaux à taille égale (forme du visage, lunettes, expression, coiffure), en ne conservant qu'une planche réellement reconnaissable.
 
+[IMAGE]
+
 > **Prompt : ChatGPT, la planche de référence**
 >
 > Je veux préparer une planche de référence photographique de moi pour mes vidéos IA.
