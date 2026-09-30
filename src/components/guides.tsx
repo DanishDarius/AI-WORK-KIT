@@ -8,14 +8,23 @@ import { Icon } from "./icon";
 import { Chip } from "./ui";
 
 // ------------------------------------------------------------ couverture
-export function GuideCover({ number, title, tool, variant, locked, width }: { number: number; title: string; tool: string; variant: number; locked?: boolean; width?: number }) {
+export function GuideCover({ number, title, tool, variant, locked, width, mini }: { number: number; title: string; tool: string; variant: number; locked?: boolean; width?: number; mini?: boolean }) {
   const court = title.split(/[:?.!]/)[0].trim();
   return (
-    <span className={`cover v${((variant - 1) % 8) + 1}`} style={width ? { width } : undefined} aria-hidden="true">
+    <span className={`cover v${((variant - 1) % 8) + 1}${mini ? " is-mini" : ""}`} style={width ? { width } : undefined} aria-hidden="true">
       {locked && <span className="cover-lock"><Icon name="lock" size={15} /></span>}
-      <small>AIW · Guide {String(number).padStart(3, "0")}</small>
-      <strong>{court.length > 60 ? `${court.slice(0, 57)}…` : court}</strong>
-      <span>{tool}</span>
+      {mini ? (
+        <>
+          <small>AIW</small>
+          <strong>{String(number).padStart(3, "0")}</strong>
+        </>
+      ) : (
+        <>
+          <small>AIW · Guide {String(number).padStart(3, "0")}</small>
+          <strong>{court.length > 60 ? `${court.slice(0, 57)}…` : court}</strong>
+          <span>{tool}</span>
+        </>
+      )}
     </span>
   );
 }

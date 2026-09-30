@@ -84,8 +84,8 @@ export default async function GuidePage({ params }: Props) {
         <h2 id="a-lire-ensuite" className="h2">À lire ensuite</h2>
         <div className="grid-2">
           {suivants.map((s) => (
-            <Link key={s.slug} href={`/guides/${s.slug}`} className="card pad-md card-link row" style={{ flexWrap: "nowrap", alignItems: "center" }}>
-              <GuideCover number={s.number} title={s.title} tool={s.tool} variant={s.coverVariant} width={90} />
+            <Link key={s.slug} href={`/guides/${s.slug}`} className="card pad-md card-link" style={{ flexDirection: "row", alignItems: "center", gap: 16 }}>
+              <GuideCover number={s.number} title={s.title} tool={s.tool} variant={s.coverVariant} width={72} mini />
               <span className="grow stack-sm">
                 <span className="tiny muted">{s.tool} · {s.duration}</span>
                 <span className="strong">{s.title}</span>

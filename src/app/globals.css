@@ -341,6 +341,9 @@ details.faq p { color: var(--muted); margin-top: 10px; font-size: 15.5px; }
 .cover.v7 { background: #2d3a37; }
 .cover.v8 { background: #0e5a78; }
 .cover.v8 small { color: #bfe6f5; }
+.cover.is-mini { flex: none; padding: 10px; border-radius: 12px; box-shadow: 0 3px 0 rgba(0,0,0,.18); }
+.cover.is-mini small { font-size: 10px; letter-spacing: .1em; }
+.cover.is-mini strong { font-size: 22px; }
 .cover-lock { position: absolute; top: 12px; right: 12px; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,.92); color: var(--orange); display: inline-flex; align-items: center; justify-content: center; }
 .book { display: flex; flex-direction: column; gap: 10px; color: var(--ink); }
 .book:hover { color: var(--ink); }

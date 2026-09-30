@@ -83,7 +83,7 @@ export default function Bienvenue() {
 
   return (
     <div className="auth" style={{ minHeight: "100vh" }}>
-      <header className="wrap row" style={{ paddingTop: 20, flexWrap: "nowrap", maxWidth: 900 }}>
+      <header className="wrap row" style={{ paddingTop: 20, flexWrap: "nowrap", maxWidth: 900, width: "100%" }}>
         <button type="button" className="icon-btn is-flat" aria-label="Revenir" onClick={() => setEtape((e) => Math.max(0, e - 1))} disabled={etape === 0}>
           <Icon name="left" size={24} />
         </button>
@@ -93,7 +93,7 @@ export default function Bienvenue() {
         </Link>
       </header>
 
-      <main id="contenu" className="wrap stack-lg" style={{ maxWidth: 760, paddingTop: 36, paddingBottom: 140, flexGrow: 1 }}>
+      <main id="contenu" className="wrap stack-lg" style={{ maxWidth: 760, width: "100%", paddingTop: 36, paddingBottom: 140, flexGrow: 1 }}>
         {etape === 0 && (
           <div className="stack-lg" style={{ alignItems: "center", textAlign: "center", paddingTop: 30 }}>
             <Image src="/brand/atelier/symbol-primary.svg" alt="" width={112} height={112} priority />
