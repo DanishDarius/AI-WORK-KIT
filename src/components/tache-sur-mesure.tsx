@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { chemins, type IA, iaLabels } from "@/lib/kit-api";
 import { useAbonne } from "@/lib/moi";
-import { LIEN_ABONNEMENT } from "@/lib/offre";
 import { GuideMarkdown } from "./guide-markdown";
+import { Icon } from "./icon";
+import { Chip } from "./ui";
 
 type Plan = {
   id: string;
@@ -17,17 +18,15 @@ type Plan = {
   livre_le: string | null;
 };
 
-const statutLabels: Record<Plan["statut"], string> = {
-  recue: "Demande reçue",
-  en_cours: "En préparation",
-  livre: "Plan prêt",
+const statuts: Record<Plan["statut"], { label: string; tone: "line" | "gold" | "green" }> = {
+  recue: { label: "Demande reçue", tone: "line" },
+  en_cours: { label: "En préparation", tone: "gold" },
+  livre: { label: "Plan prêt", tone: "green" },
 };
 
 function dateCourte(iso: string) {
   const date = new Date(iso);
-  return Number.isNaN(date.getTime())
-    ? ""
-    : new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "short" }).format(date);
+  return Number.isNaN(date.getTime()) ? "" : new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "short" }).format(date);
 }
 
 function resume(texte: string) {
@@ -35,41 +34,21 @@ function resume(texte: string) {
   return ligne.length > 80 ? `${ligne.slice(0, 77).trimEnd()}…` : ligne;
 }
 
-function Cadenas() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="5" y="11" width="14" height="10" rx="2" />
-      <path d="M8 11V8a4 4 0 0 1 8 0v3" />
-    </svg>
-  );
-}
-
 function Verrouille({ metier }: { metier: string }) {
   return (
-    <section className="aw-custom-task is-locked" aria-labelledby="sur-mesure-titre">
-      <div className="aw-custom-task-copy">
-        <span className="aw-custom-task-badge"><Cadenas />Inclus dans l’abonnement</span>
-        <h2 id="sur-mesure-titre">Votre tâche n’est pas dans la liste ?</h2>
-        <p>
-          Décrivez-la en quelques lignes. Vous recevez un plan détaillé, étape par étape, avec un prompt
-          prêt pour ChatGPT, Claude et Gemini, comme pour les tâches de {metier}.
-        </p>
-        <div className="aw-custom-task-actions">
-          <a className="aw-custom-task-cta" href={LIEN_ABONNEMENT}>S’abonner pour débloquer</a>
-          <Link href="/mon-compte#mon-offre">Voir ce que comprend l’abonnement <span aria-hidden="true">→</span></Link>
-        </div>
+    <section id="sur-mesure" className="card is-orange stack" aria-labelledby="sur-mesure-titre">
+      <Chip tone="orange" icon="lock">Abonnés</Chip>
+      <h2 id="sur-mesure-titre" className="h2">Votre tâche n’est pas dans la liste ?</h2>
+      <p className="muted">
+        Décrivez-la en quelques lignes. Vous recevez un plan détaillé, étape par étape, avec un prompt prêt
+        pour ChatGPT, Claude et Gemini, comme pour les tâches de {metier}.
+      </p>
+      <div className="card pad-sm stack-sm" style={{ borderBottomWidth: 2 }}>
+        <p className="kicker">Exemple de demande</p>
+        <p>« Chaque fin de mois, je rapproche les paiements Mobile Money reçus avec les factures envoyées. Je veux repérer vite les factures non payées. »</p>
       </div>
-      <div className="aw-custom-task-example" aria-label="Exemple">
-        <p className="aw-custom-task-label">Exemple de demande</p>
-        <p className="aw-custom-task-quote">
-          « Préparer chaque mois la déclaration de TVA d’un client à partir de ses relevés et de ses factures. »
-        </p>
-        <p className="aw-custom-task-label">Vous recevez</p>
-        <ul>
-          <li><span>Plan ChatGPT · étapes détaillées</span><b>prompt prêt</b></li>
-          <li><span>Plan Claude · étapes détaillées</span><b>prompt prêt</b></li>
-          <li><span>Plan Gemini · étapes détaillées</span><b>prompt prêt</b></li>
-        </ul>
+      <div className="row">
+        <Link className="btn btn-orange" href="/abonnement">Débloquer avec l’abonnement</Link>
       </div>
     </section>
   );
@@ -116,91 +95,64 @@ function Formulaire({ slug }: { slug: string }) {
       setDescription("");
       setMessage({ ok: true, texte: "C’est envoyé. Votre plan apparaîtra ici dès qu’il sera prêt." });
     } catch (error) {
-      setMessage({
-        ok: false,
-        texte: error instanceof Error ? error.message : "Connexion impossible. Vérifiez votre réseau puis réessayez.",
-      });
+      setMessage({ ok: false, texte: error instanceof Error ? error.message : "Connexion impossible. Vérifiez votre réseau puis réessayez." });
     } finally {
       setEnvoi(false);
     }
   }
 
   return (
-    <section className="aw-custom-task is-active" aria-labelledby="sur-mesure-titre">
-      <div className="aw-custom-task-copy">
-        <span className="aw-custom-task-badge">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>Abonnement actif
-        </span>
-        <h2 id="sur-mesure-titre">Votre tâche n’est pas dans la liste ?</h2>
-        <p>
-          Décrivez-la en quelques lignes : ce que vous faites, avec quels documents, et le résultat attendu.
-          Votre plan arrive ici, pour les IA que vous choisissez.
-        </p>
-        <div className="aw-custom-task-plans">
-          <h3>Vos plans sur mesure</h3>
-          {plans === null ? (
-            <p className="aw-muted">Chargement…</p>
-          ) : plans.length ? (
-            <ul>
-              {plans.map((p) => (
-                <li key={p.id}>
-                  <details>
-                    <summary>
-                      <span>{resume(p.description)}</span>
-                      <small className={`aw-plan-status is-${p.statut}`}>{statutLabels[p.statut]}</small>
-                      <time dateTime={p.cree_le}>{dateCourte(p.cree_le)}</time>
-                    </summary>
-                    <div className="aw-plan-body">
-                      {p.statut === "livre" && p.plan ? (
-                        <GuideMarkdown markdown={p.plan} guideNumber={0} />
-                      ) : (
-                        <p>Votre plan est en préparation. Il s’affichera ici dès qu’il sera prêt.</p>
-                      )}
-                    </div>
-                  </details>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="aw-muted">Aucune demande pour ce métier pour l’instant.</p>
-          )}
-        </div>
+    <section id="sur-mesure" className="card stack-lg" aria-labelledby="sur-mesure-titre">
+      <div className="stack-sm">
+        <Chip tone="green" icon="check">Abonnement actif</Chip>
+        <h2 id="sur-mesure-titre" className="h2">Votre tâche n’est pas dans la liste ?</h2>
+        <p className="muted">Décrivez-la : ce que vous faites, avec quels documents, et le résultat attendu. Votre plan arrive ici.</p>
       </div>
-      <form className="aw-custom-task-form" onSubmit={envoyer}>
-        <label>
-          <span>Décrivez votre tâche</span>
-          <textarea
-            rows={6}
-            required
-            minLength={30}
-            maxLength={3000}
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Exemple : chaque fin de mois, je rapproche les paiements Mobile Money reçus avec les factures envoyées, dans un tableau Excel. Je veux repérer vite les factures non payées."
-          />
-        </label>
-        <fieldset>
-          <legend>Plan pour</legend>
-          <div>
+      <form className="stack" onSubmit={envoyer}>
+        <div className="field">
+          <label className="field-label" htmlFor="sur-mesure-description">Décrivez votre tâche</label>
+          <textarea id="sur-mesure-description" className="textarea" rows={6} required minLength={30} maxLength={3000} value={description} onChange={(e) => setDescription(e.target.value)}
+            placeholder="Exemple : chaque fin de mois, je rapproche les paiements Mobile Money reçus avec les factures envoyées, dans un tableau Excel." />
+        </div>
+        <fieldset className="stack-sm" style={{ border: 0, padding: 0, margin: 0 }}>
+          <legend className="field-label" style={{ marginBottom: 8 }}>Plan pour</legend>
+          <div className="row">
             {chemins.map((ia) => (
-              <label key={ia} className="aw-custom-task-ia">
-                <input type="checkbox" checked={ias.includes(ia)} onChange={() => basculer(ia)} />
-                {iaLabels[ia]}
-              </label>
+              <button key={ia} type="button" className="pill" aria-pressed={ias.includes(ia)} onClick={() => basculer(ia)}>
+                {ias.includes(ia) && <Icon name="check" size={16} strokeWidth={3} />}{iaLabels[ia]}
+              </button>
             ))}
           </div>
         </fieldset>
-        <label className="aw-form-honeypot" aria-hidden="true">
-          Site <input type="text" name="site" tabIndex={-1} autoComplete="off" />
-        </label>
-        <button type="submit" disabled={envoi || !ias.length}>
-          {envoi ? "Envoi…" : "Recevoir mon plan"}
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-        </button>
-        <p role="status" className={message ? (message.ok ? "is-ok" : "is-error") : undefined}>
+        <label className="honeypot" aria-hidden="true">Site <input type="text" name="site" tabIndex={-1} autoComplete="off" /></label>
+        <div className="row">
+          <button type="submit" className="btn" disabled={envoi || !ias.length}>{envoi ? "Envoi…" : "Recevoir mon plan"}</button>
+        </div>
+        <p role="status" className={message ? (message.ok ? "form-ok" : "form-error") : "form-help"}>
           {message?.texte ?? "Évitez les données confidentielles : décrivez la tâche, pas vos clients."}
         </p>
       </form>
+      <div className="stack">
+        <h3 className="h3">Vos plans sur mesure</h3>
+        {plans === null ? (
+          <p className="muted small">Chargement…</p>
+        ) : plans.length ? (
+          plans.map((p) => (
+            <details key={p.id} className="faq">
+              <summary>
+                <span className="grow">{resume(p.description)}</span>
+                <Chip tone={statuts[p.statut].tone}>{statuts[p.statut].label}</Chip>
+                <time className="small muted" dateTime={p.cree_le}>{dateCourte(p.cree_le)}</time>
+              </summary>
+              <div style={{ marginTop: 12 }}>
+                {p.statut === "livre" && p.plan ? <GuideMarkdown markdown={p.plan} guideNumber={0} /> : <p className="muted">Votre plan est en préparation. Il s’affichera ici dès qu’il sera prêt.</p>}
+              </div>
+            </details>
+          ))
+        ) : (
+          <p className="muted small">Aucune demande pour ce métier pour l’instant.</p>
+        )}
+      </div>
     </section>
   );
 }

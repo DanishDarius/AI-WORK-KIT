@@ -27,8 +27,8 @@ export const officielLabel: Record<IA, string> = {
 // section "Automatiser avec ...".
 export const automatisationLabel: Record<IA, string> = {
   claude: "Cowork",
-  gemini: "les actions planifiees Gemini",
-  chatgpt: "les taches planifiees ChatGPT",
+  gemini: "les actions planifiées Gemini",
+  chatgpt: "les tâches planifiées ChatGPT",
 };
 
 export const outilsCount = (ia: IA, code: string) =>

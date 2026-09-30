@@ -1,0 +1,261 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FormEvent, ReactNode, useEffect, useState } from "react";
+import { createClient } from "@/lib/supabase/client";
+import { fcfa, LIEN_ACCES, PRIX } from "@/lib/offre";
+import { Icon } from "./icon";
+import { CheckList, Kicker } from "./ui";
+
+// Cadre commun aux pages de connexion, d'activation et de mot de passe.
+export function AuthFrame({
+  kicker,
+  title,
+  intro,
+  side = false,
+  children,
+}: {
+  kicker: string;
+  title: string;
+  intro: ReactNode;
+  side?: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <div className="auth">
+      <header className="auth-top">
+        <Link href="/acces" aria-label="AIW, page d’accès">
+          <Image src="/brand/atelier/logo-primary.svg" alt="AIW, AI WORK KIT" width={130} height={45} priority />
+        </Link>
+      </header>
+      <main id="contenu" className="auth-main">
+        <div className={`auth-card${side ? "" : " is-narrow"}`}>
+          <div className="auth-form">
+            <Kicker>{kicker}</Kicker>
+            <h1 className="h1" style={{ fontSize: 32 }}>{title}</h1>
+            <p className="muted">{intro}</p>
+            {children}
+          </div>
+          {side && (
+            <div className="auth-side">
+              <h2>Pas encore d’accès ?</h2>
+              <CheckList items={[{ label: "Les 42 tâches et leurs prompts" }, { label: "La mise en place pour votre IA" }, { label: "Le parcours de votre métier" }, { label: "10 guides inclus" }]} />
+              <a className="btn btn-mint btn-block" href={LIEN_ACCES}>Obtenir l’accès · {fcfa(PRIX.acces)}</a>
+              <p className="small" style={{ color: "var(--night-soft)" }}>
+                Votre compte est créé dès le paiement confirmé. Vous recevez un e-mail pour choisir votre mot de passe.
+              </p>
+              <Link className="link" href="/acces" style={{ color: "var(--mint)" }}>Voir ce que contient AIW <Icon name="arrow" size={16} /></Link>
+            </div>
+          )}
+        </div>
+      </main>
+      <footer className="auth-foot">
+        <Link href="/conditions">Conditions</Link>
+        <Link href="/confidentialite">Confidentialité</Link>
+        <Link href="/mentions-legales">Mentions légales</Link>
+      </footer>
+    </div>
+  );
+}
+
+function PasswordInput({ id, value, onChange, autoComplete }: { id: string; value: string; onChange: (v: string) => void; autoComplete: string }) {
+  const [visible, setVisible] = useState(false);
+  return (
+    <div className="password">
+      <input id={id} className="input" type={visible ? "text" : "password"} autoComplete={autoComplete} value={value} onChange={(e) => onChange(e.target.value)} required minLength={autoComplete === "new-password" ? 8 : undefined} />
+      <button type="button" className="icon-btn is-flat" aria-label={visible ? "Masquer le mot de passe" : "Afficher le mot de passe"} aria-pressed={visible} onClick={() => setVisible((v) => !v)}>
+        <Icon name={visible ? "eye-off" : "eye"} size={20} />
+      </button>
+    </div>
+  );
+}
+
+export function ConnexionForm() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string>();
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (sending) return;
+    setSending(true);
+    setError(undefined);
+    const { error: authError } = await createClient().auth.signInWithPassword({ email: email.trim(), password });
+    setSending(false);
+    if (authError) {
+      setError("E-mail ou mot de passe incorrect. Vérifiez vos informations, puis réessayez.");
+      return;
+    }
+    router.replace("/");
+    router.refresh();
+  }
+
+  return (
+    <form className="stack" onSubmit={submit}>
+      <div className="field">
+        <label className="field-label" htmlFor="email-connexion">Adresse e-mail utilisée lors de l’achat</label>
+        <input id="email-connexion" className="input" type="email" inputMode="email" autoComplete="email" placeholder="vous@exemple.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      </div>
+      <div className="field">
+        <div className="field-row">
+          <label className="field-label" htmlFor="mot-de-passe-connexion">Mot de passe</label>
+          <Link className="small strong" href="/mot-de-passe-oublie">Mot de passe oublié ?</Link>
+        </div>
+        <PasswordInput id="mot-de-passe-connexion" value={password} onChange={setPassword} autoComplete="current-password" />
+      </div>
+      {error && <p className="form-error" role="alert">{error}</p>}
+      <button className="btn btn-lg btn-block" type="submit" disabled={sending}>{sending ? "Connexion…" : "Se connecter"}</button>
+      <p className="form-help">Pas encore de compte ? Il se crée automatiquement après votre achat.</p>
+    </form>
+  );
+}
+
+export function ForgotPasswordForm() {
+  const [email, setEmail] = useState("");
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string>();
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (sending) return;
+    setSending(true);
+    setError(undefined);
+    const { error: resetError } = await createClient().auth.resetPasswordForEmail(email.trim(), {
+      redirectTo: `${window.location.origin}/auth/recovery`,
+    });
+    setSending(false);
+    if (resetError) {
+      setError("L’envoi a échoué. Réessayez dans un instant.");
+      return;
+    }
+    setSent(true);
+  }
+
+  if (sent)
+    return (
+      <div className="form-ok stack-sm" role="status">
+        <p className="strong">Vérifiez votre boîte mail.</p>
+        <p>Si cette adresse a un compte, le lien vous attend. Pensez à regarder dans les spams.</p>
+        <Link className="link" href="/connexion">Retour à la connexion</Link>
+      </div>
+    );
+
+  return (
+    <form className="stack" onSubmit={submit}>
+      <div className="field">
+        <label className="field-label" htmlFor="email-recuperation">Adresse e-mail du compte</label>
+        <input id="email-recuperation" className="input" type="email" inputMode="email" autoComplete="email" placeholder="vous@exemple.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      </div>
+      {error && <p className="form-error" role="alert">{error}</p>}
+      <button className="btn btn-lg btn-block" type="submit" disabled={sending}>{sending ? "Envoi en cours…" : "Recevoir le lien"}</button>
+      <Link className="link" href="/connexion">Retour à la connexion</Link>
+    </form>
+  );
+}
+
+const hasSupabaseConfig = Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+
+export function SetPasswordForm({ mode, recoveryPending = false }: { mode: "activation" | "recovery"; recoveryPending?: boolean }) {
+  const [sessionState, setSessionState] = useState<"checking" | "ready" | "missing">("checking");
+  const [password, setPassword] = useState("");
+  const [confirmation, setConfirmation] = useState("");
+  const [saving, setSaving] = useState(false);
+  const [completed, setCompleted] = useState(false);
+  const [error, setError] = useState<string>();
+
+  useEffect(() => {
+    if (!hasSupabaseConfig) return;
+    if (mode === "recovery" && !recoveryPending) return;
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data }) => setSessionState(data.user ? "ready" : "missing"));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session) setSessionState("ready");
+    });
+    return () => subscription.unsubscribe();
+  }, [mode, recoveryPending]);
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (saving) return;
+    if (password.length < 8) return setError("Le mot de passe doit contenir au moins 8 caractères.");
+    if (password !== confirmation) return setError("Les deux mots de passe ne correspondent pas.");
+    setSaving(true);
+    setError(undefined);
+    if (mode === "recovery") {
+      const response = await fetch("/auth/recovery", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      }).catch(() => null);
+      setSaving(false);
+      if (!response?.ok) return setError("L’enregistrement a échoué. Demandez un nouveau lien.");
+      setCompleted(true);
+      return;
+    }
+    const { error: updateError } = await createClient().auth.updateUser({ password });
+    setSaving(false);
+    if (updateError) return setError("L’enregistrement a échoué. Demandez un nouveau lien.");
+    window.location.replace("/bienvenue");
+  }
+
+  if (!hasSupabaseConfig) return <p role="status">La connexion est momentanément indisponible. Réessayez plus tard.</p>;
+  const state = mode === "recovery" && !recoveryPending ? "missing" : sessionState;
+  if (state === "checking") return <p role="status" className="muted">Vérification de votre lien…</p>;
+  if (completed)
+    return (
+      <div className="form-ok stack-sm" role="status">
+        <p className="strong">Mot de passe enregistré.</p>
+        <p>Connectez-vous avec votre nouveau mot de passe.</p>
+        <a className="btn btn-sm" href="/connexion">Se connecter</a>
+      </div>
+    );
+  if (state === "missing")
+    return (
+      <div className="form-error stack-sm" role="alert">
+        <p className="strong">Lien invalide ou expiré.</p>
+        <p>Ce lien ne fonctionne plus. Demandez-en un nouveau, il arrive en quelques secondes.</p>
+        <Link className="btn btn-sm" href="/mot-de-passe-oublie">Demander un nouveau lien</Link>
+      </div>
+    );
+
+  return (
+    <form className="stack" onSubmit={submit}>
+      <div className="field">
+        <label className="field-label" htmlFor="nouveau-mot-de-passe">Nouveau mot de passe</label>
+        <PasswordInput id="nouveau-mot-de-passe" value={password} onChange={setPassword} autoComplete="new-password" />
+      </div>
+      <div className="field">
+        <label className="field-label" htmlFor="confirmation-mot-de-passe">Confirmer le mot de passe</label>
+        <PasswordInput id="confirmation-mot-de-passe" value={confirmation} onChange={setConfirmation} autoComplete="new-password" />
+      </div>
+      <p className="form-help">Au moins 8 caractères.</p>
+      {error && <p className="form-error" role="alert">{error}</p>}
+      <button className="btn btn-lg btn-block" type="submit" disabled={saving}>
+        {saving ? "Enregistrement…" : mode === "activation" ? "Activer mon compte" : "Enregistrer le mot de passe"}
+      </button>
+    </form>
+  );
+}
+
+export function SignOutButton() {
+  const router = useRouter();
+  const [pending, setPending] = useState(false);
+  async function signOut() {
+    if (pending) return;
+    setPending(true);
+    await createClient().auth.signOut();
+    router.replace("/acces");
+    router.refresh();
+  }
+  return (
+    <button type="button" className="btn btn-ghost" disabled={pending} onClick={signOut}>
+      <Icon name="logout" size={18} />
+      {pending ? "Déconnexion…" : "Se déconnecter"}
+    </button>
+  );
+}

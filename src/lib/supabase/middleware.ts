@@ -10,12 +10,14 @@ import { RECOVERY_COOKIE } from "@/lib/supabase/recovery";
 // Controle d'acces : tant qu'elle n'est pas authentifiee, une personne ne
 // peut atteindre que les pages publiques ci-dessous (connexion, mot de passe
 // oublie/nouveau, activation du compte, confirmation par email) ; toute
-// autre page redirige vers /connexion. Une fois connectee, /connexion et
+// autre page redirige vers /acces (présentation et paiement). Une fois connectee, /connexion et
 // /mot-de-passe-oublie redirigent vers l'accueil pour eviter de revoir le
 // formulaire de connexion inutilement. /nouveau-mot-de-passe et /activation
 // restent accessibles meme authentifiee : ces pages s'appuient sur la
 // session temporaire creee par le lien recu par email.
 const PUBLIC_PATHS = [
+  // Page d'accès : la seule page de présentation visible sans compte.
+  "/acces",
   "/connexion",
   "/mot-de-passe-oublie",
   "/nouveau-mot-de-passe",
@@ -92,7 +94,7 @@ export async function updateSession(request: NextRequest) {
 
   if (!user && !isPublic) {
     const url = request.nextUrl.clone();
-    url.pathname = "/connexion";
+    url.pathname = "/acces";
     url.search = "";
     return NextResponse.redirect(url);
   }

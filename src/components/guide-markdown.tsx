@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { CopyPromptButton } from "./guide-actions";
+import { CopyPromptButton } from "./guides";
 
 type Block =
   | { type: "heading"; level: number; text: string }
@@ -97,7 +97,7 @@ export function GuideMarkdown({ markdown, guideNumber }: { markdown: string; gui
   }));
 
   return (
-    <div className="aw-guide-prose">
+    <div className="prose">
       {numberedBlocks.map(({ block, index, partNumber }) => {
         if (block.type === "heading") {
           const id = `section-${index}`;
@@ -110,7 +110,7 @@ export function GuideMarkdown({ markdown, guideNumber }: { markdown: string; gui
         if (block.type === "visual") {
           if (guideNumber !== 35) return null;
           return (
-            <figure className="aw-guide-visual" key={index}>
+            <figure className="prose-figure" key={index}>
               <Image
                 src="/guides/visuals/guide-35-planche-reference.png"
                 alt="Planche photographique d’une professionnelle fictive présentée de face, de profil et de dos."
@@ -127,11 +127,11 @@ export function GuideMarkdown({ markdown, guideNumber }: { markdown: string; gui
           return <Tag key={index}>{block.items.map((item, itemIndex) => <li key={itemIndex}>{inline(item)}</li>)}</Tag>;
         }
         if (block.type === "table") return (
-          <div className="aw-guide-table-wrap" key={index}><table><tbody>{block.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, cellIndex) => rowIndex === 0 ? <th key={cellIndex}>{inline(cell)}</th> : <td key={cellIndex}>{inline(cell)}</td>)}</tr>)}</tbody></table></div>
+          <div className="prose-table" key={index}><table><tbody>{block.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, cellIndex) => rowIndex === 0 ? <th key={cellIndex}>{inline(cell)}</th> : <td key={cellIndex}>{inline(cell)}</td>)}</tr>)}</tbody></table></div>
         );
         if (block.type === "quote") {
           const promptText = block.lines.join("\n").trim();
-          return <aside className="aw-guide-prompt" key={index}><div><span>Le prompt à copier</span><CopyPromptButton text={promptText} /></div>{block.lines.map((line, lineIndex) => line ? <p key={lineIndex}>{inline(line)}</p> : <br key={lineIndex} />)}</aside>;
+          return <aside className="prose-prompt" key={index}><div><span>Le prompt à copier</span><CopyPromptButton text={promptText} /></div>{block.lines.map((line, lineIndex) => line ? <p key={lineIndex}>{inline(line)}</p> : <br key={lineIndex} />)}</aside>;
         }
         return null;
       })}

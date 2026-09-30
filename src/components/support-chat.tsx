@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useMoi } from "@/lib/moi";
 import { SUPPORT_EMAIL } from "@/lib/offre";
+import { Icon } from "./icon";
 
 // Chat du support (tawk.to), chargé uniquement au clic.
 // Tant que personne n'ouvre le chat, aucun script tiers n'est chargé et aucun
@@ -106,29 +107,25 @@ export function SupportChat() {
   return (
     <button
       type="button"
-      className="aw-support-bubble"
+      className="support-bubble"
       onClick={ouvrirSupport}
       aria-label="Ouvrir le chat du support"
       aria-busy={attente || undefined}
       title="Une question ? Le support répond 24 h/24, 7 j/7."
     >
       {attente ? (
-        <span className="aw-support-spinner" aria-hidden="true" />
+        <span className="support-spinner" aria-hidden="true" />
       ) : (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z" />
-        </svg>
+        <Icon name="chat" size={26} strokeWidth={2.2} />
       )}
     </button>
   );
 }
 
-export function BoutonChat({ className, children }: { className?: string; children?: React.ReactNode }) {
+export function BoutonChat({ className = "btn", children }: { className?: string; children?: React.ReactNode }) {
   return (
     <button type="button" className={className} onClick={ouvrirSupport}>
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z" />
-      </svg>
+      <Icon name="chat" size={18} />
       {children ?? "Ouvrir le chat"}
     </button>
   );
