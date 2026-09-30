@@ -1,10 +1,3 @@
----
-Guide original : Semaine IA finance : ce qui vient de tomber
-Source : https://www.saadiakaram.ai/guides/finance-ai-week
-Position réelle dans la bibliothèque au moment du traitement : 159/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (guide long, 4 prompts complets). Noms de produits et partenaires de données réels conservés comme faits (Claude for Financial Services, Anthropic, Perplexity Finance, Databricks, Snowflake, LSEG, Moody's, MT Newswires, Excel, PowerPoint, Word, Microsoft 365, Claude Opus 4, SEC/EDGAR, FactSet, S&P Global, Morningstar, Quartr). Contenu financier : tous les avertissements de la source (« pas un conseil en investissement », nécessité de vérifier les chiffres et de consulter un conseiller qualifié) ont été intégralement conservés. Le titre original, ancré dans l'actualité d'une semaine précise, a été généralisé pour rester utilisable dans la durée.
----
-
 # Deux outils IA pour la finance, quatre prompts sourcés à copier
 
 *Multi-outils · 7 min de lecture*

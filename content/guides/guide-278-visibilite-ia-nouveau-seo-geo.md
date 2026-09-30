@@ -1,10 +1,3 @@
----
-Guide original : Le nouveau SEO : mon guide pratique visibilité IA
-Source : https://www.saadiakaram.ai/guides/ai-visibility-playbook
-Position réelle dans la bibliothèque au moment du traitement : 277/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés (ChatGPT, Claude, Perplexity, Reddit, GitHub, Wikipedia).
----
-
 # Devenir citable par les IA : le nouveau référencement (GEO)
 
 *Multi-outils · 5 min de lecture*
@@ -42,4 +35,4 @@ Une IA ne cite pas nécessairement le contenu le mieux positionné dans les mote
 
 **Viser la citation plutôt que le clic.**
 
-Selon la source, obtenir une citation dans une réponse générée par une IA vaudrait, en 2026, l'équivalent de mille clics issus d'un référencement classique. La stratégie de contenu doit désormais se construire autour de cet objectif.
+Selon certaines estimations, obtenir une citation dans une réponse générée par une IA vaudrait, en 2026, l'équivalent de mille clics issus d'un référencement classique. La stratégie de contenu doit désormais se construire autour de cet objectif.

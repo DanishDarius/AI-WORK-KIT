@@ -1,9 +1,3 @@
----
-Guide original : "DÉCRYPTAGE : trois agents pour lire, surveiller et modéliser une entreprise"
-Source : saadiakaram.ai/guides/decryptage-3-agents-finance-claude-chatgpt
-Statut : reformulé (texte) ; aucune image ni tableau HTML détecté (le "laboratoire DCF" est un widget de calcul interactif, pas une image ni un tableau HTML)
----
-
 # Trois missions IA pour lire des résultats, surveiller une entreprise et construire un modèle vérifiable
 
 *Multi-outils · 22 min de lecture*
@@ -165,12 +159,6 @@ Ouvrez une nouvelle conversation pour la revue, et redonnez les sources d'origin
 Gardez le dossier au statut « à reprendre » tant qu'un seul de ces six contrôles reste ouvert ; cette checklist ne valide jamais automatiquement les chiffres.
 
 Conservez un dossier daté : mission initiale, sources, sortie de l'agent, corrections apportées et limites restantes. Pour une première session, visez une note relue et un calcul vérifié ; ajoutez ensuite la veille, puis le modèle complet. Si une erreur change la conclusion, reprenez toujours l'analyse avant d'utiliser cette conclusion dans une décision réelle.
-
----
-
-## 07. Les sources
-
-Sources citées dans le guide original : OpenAI, ChatGPT for Financial Services (annonce du 10 septembre 2026, accès institutionnel) ; Anthropic, Agents for financial services (5 mai 2026, dix modèles d'agents dont les trois retenus ici) ; le dépôt officiel Anthropic financial-services (installation, noms des agents, plugins et licences de données) ; OpenAI, documentation sur les tâches planifiées (création, confirmation, gestion et limites d'accès aux fichiers) ; SEC, guide de lecture des états financiers (bilan, résultats, flux de trésorerie et notes annexes) ; Aswath Damodaran (NYU), sur la valeur terminale (hypothèses de croissance stable et cohérence de la valorisation).
 
 ---
 

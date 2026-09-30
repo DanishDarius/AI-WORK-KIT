@@ -1,10 +1,3 @@
----
-Guide original : La matrice de décision
-Source : https://www.saadiakaram.ai/guides/decision-matrix
-Position réelle dans la bibliothèque au moment du traitement : 273/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Guide à 3 prompts, reproduits avec leur structure fonctionnelle complète. Réutilise le concept d'« avocat du diable » du guide 273 dans une étape dédiée ; reformulation propre, sans reprise verbatim du guide 273. Nom réel conservé (Claude).
----
-
 # Construire une matrice de décision pondérée pour trancher entre deux options
 
 *Multi-outils · 7 min de lecture*

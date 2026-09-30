@@ -1,10 +1,3 @@
----
-Guide original : 5 fonctions IA cachées dans tes apps actuelles
-Source : https://www.saadiakaram.ai/guides/hidden-ai-features
-Position réelle dans la bibliothèque au moment du traitement : 215/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés comme faits (Notion, Gmail, Excel, Apple Photos, Google Photos, Slack).
----
-
 # Cinq fonctions IA déjà présentes dans des applications utilisées au quotidien
 
 *Multi-outils · 5 min de lecture*

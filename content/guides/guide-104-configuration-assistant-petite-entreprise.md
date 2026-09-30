@@ -1,10 +1,3 @@
----
-Guide original : Claude pour petite boîte en 15 minutes
-Source : https://www.saadiakaram.ai/guides/claude-small-business
-Position réelle dans la bibliothèque au moment du traitement : 102/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : ce guide décrit des réglages et fonctionnalités spécifiques d'un produit (plugin, menus, options de confidentialité) susceptibles d'évoluer ou de différer de l'interface actuelle, à vérifier directement dans l'outil au moment de l'usage.
----
-
 # Configurer un assistant IA pour une petite entreprise en quinze minutes
 
 *Claude · 5 min de lecture*

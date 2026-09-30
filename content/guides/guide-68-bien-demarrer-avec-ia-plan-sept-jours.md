@@ -1,10 +1,3 @@
----
-Guide original : Bien démarrer avec l'IA, pour de vrai
-Source : https://www.saadiakaram.ai/guides/getting-started-ai
-Position réelle dans la bibliothèque au moment du traitement : 66/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Démarrer vraiment avec l'IA : quatre outils, sept règles, un plan sur sept jours
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Arrête de poster plus. Poste mieux.
-Source : https://www.saadiakaram.ai/guides/ai-content-strategy
-Position réelle dans la bibliothèque au moment du traitement : 243/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé (Claude).
----
-
 # Le système 1-3-9 pour décliner une idée forte plutôt que multiplier les publications
 
 *Multi-outils · 5 min de lecture*

@@ -1,9 +1,3 @@
----
-Guide original : "La stack pour construire et livrer ton app : Claude, Supabase, Vercel, Stripe, GitHub Actions"
-Source : saadiakaram.ai/guides/la-stack-pour-lancer-ton-app
-Statut : reformulé (texte) ; voir ressources-visuelles.md pour les éléments non modifiables
----
-
 # La stack pour passer de l'idée à l'app en ligne : Claude, Supabase, Vercel, Stripe, GitHub Actions
 
 *Claude · 7 min de lecture*

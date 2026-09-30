@@ -1,10 +1,3 @@
----
-Guide original : L'IA voit maintenant ton compte bancaire
-Source : https://www.saadiakaram.ai/guides/perplexity-bank
-Position réelle dans la bibliothèque au moment du traitement : 166/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu financier traité comme organisationnel (budget, patrimoine, dettes) : aucune donnée de revenu/solde/dette personnelle n'est communiquée dans le guide lui-même, seulement une méthode ; la règle de sécurité (lecture seule, jamais d'exécution de virement) est conservée intégralement.
----
-
 # Connecter ses comptes bancaires à une IA : trois prompts pour démarrer sans risque
 
 *Perplexity · 5 min de lecture*

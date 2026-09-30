@@ -1,10 +1,3 @@
----
-Guide original : La compétence « angles publicitaires » sur Reddit
-Source : https://www.saadiakaram.ai/guides/reddit-ad-angles-skill
-Position réelle dans la bibliothèque au moment du traitement : 43/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court (6 min), aucune section collapsée ; contenu intégralement capturé, aucune troncature détectée.
----
-
 # Trouver ses meilleurs angles publicitaires dans les plaintes des forums
 
 *Claude · 6 min de lecture*

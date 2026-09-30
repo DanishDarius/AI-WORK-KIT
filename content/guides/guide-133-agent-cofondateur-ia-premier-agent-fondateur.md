@@ -1,10 +1,3 @@
----
-Guide original : Mon cofondateur IA connaît ma boîte par cœur
-Source : https://www.saadiakaram.ai/guides/co-founder-agent
-Position réelle dans la bibliothèque au moment du traitement : 131/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Le premier agent qu'un fondateur devrait construire
 
 *Multi-outils · 5 min de lecture*

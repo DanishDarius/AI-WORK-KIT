@@ -1,15 +1,8 @@
----
-Guide original : L'avocat du diable
-Source : https://www.saadiakaram.ai/guides/devils-advocate
-Position réelle dans la bibliothèque au moment du traitement : 272/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Statistique attribuée à Stanford (+49 % de validation) conservée comme affirmation de la source, non vérifiée indépendamment. Noms réels conservés (Claude, Stanford).
----
-
 # Le prompt « avocat du diable » pour tester une décision avant de s'y engager
 
 *Multi-outils · 5 min de lecture*
 
-Les IA ont tendance à valider ce qui leur est soumis. Selon la source, une étude de Stanford chiffrerait ce biais à environ 49 % de validation supplémentaire par rapport à un humain. Un prompt en trois lignes permet de corriger cette tendance : celui de l'avocat du diable.
+Les IA ont tendance à valider ce qui leur est soumis. Une étude de Stanford chiffrerait ce biais à environ 49 % de validation supplémentaire par rapport à un humain. Un prompt en trois lignes permet de corriger cette tendance : celui de l'avocat du diable.
 
 ## Le rôle à imposer
 

@@ -1,10 +1,3 @@
----
-Guide original : Live Artifacts : construis une fois, mis à jour
-Source : https://www.saadiakaram.ai/guides/live-artifacts
-Position réelle dans la bibliothèque au moment du traitement : 219/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Valeurs techniques du prompt (fréquence de rafraîchissement, format HTML autonome) conservées inchangées. Noms réels conservés comme faits (Claude, Google Sheets, Notion, Calendar, Cowork).
----
-
 # Des artifacts qui restent connectés et se mettent à jour tout seuls
 
 *Multi-outils · 5 min de lecture*

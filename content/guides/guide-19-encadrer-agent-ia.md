@@ -1,9 +1,3 @@
----
-Guide original : "Mets un cadre à ton IA"
-Source : saadiakaram.ai/guides/mettre-un-cadre-a-ton-ia
-Statut : reformulé (texte) : aucun visuel/tableau HTML détecté sur cette page
----
-
 # Encadrer un agent IA avant de le laisser agir : les 5 barrières indispensables
 
 *Multi-outils · 8 min de lecture*

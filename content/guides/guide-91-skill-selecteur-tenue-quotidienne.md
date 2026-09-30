@@ -1,10 +1,3 @@
----
-Guide original : Le sélecteur de tenue
-Source : https://www.saadiakaram.ai/guides/outfit-picker-skill
-Position réelle dans la bibliothèque au moment du traitement : 89/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un Skill qui prépare la tenue du jour selon la météo et l'agenda
 
 *Multi-outils · 5 min de lecture*

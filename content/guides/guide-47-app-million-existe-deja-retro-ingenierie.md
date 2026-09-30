@@ -1,10 +1,3 @@
----
-Guide original : L'app à un million existe déjà
-Source : https://www.saadiakaram.ai/guides/app-1-million-avec-claude
-Position réelle dans la bibliothèque au moment du traitement : 45/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée.
----
-
 # L'app à un million existe déjà : la retrouver par rétro-ingénierie
 
 *Claude · 8 min de lecture*

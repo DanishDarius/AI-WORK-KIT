@@ -1,10 +1,3 @@
----
-Guide original : Les meilleurs outils IA du moment
-Source : https://www.saadiakaram.ai/guides/gemini-photos
-Position réelle dans la bibliothèque au moment du traitement : 138/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms de produits réels (Claude, ChatGPT, Perplexity, Asana, Fathom, Gemini, Google Photos) conservés comme faits.
----
-
 # Six outils IA qui méritent vraiment le détour, et pour quoi faire
 
 *Gemini · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Planifie tout ton mariage avec Claude
-Source : https://www.saadiakaram.ai/guides/wedding-planner-skill
-Position réelle dans la bibliothèque au moment du traitement : 238/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (la mention « tableaux clairs » dans le prompt est une instruction de mise en forme demandée à l'IA, pas un tableau HTML présent dans la page). Nom réel conservé (Claude).
----
-
 # Organiser un mariage de A à Z dans un seul Project Claude
 
 *Claude · 5 min de lecture*

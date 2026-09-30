@@ -1,10 +1,3 @@
----
-Guide original : Claude a 11 plugins gratuits pour ton job
-Source : https://www.saadiakaram.ai/guides/claude-plugins-guide
-Position réelle dans la bibliothèque au moment du traitement : 171/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé comme fait (Claude).
----
-
 # Les onze plugins Claude : lesquels activer selon son poste
 
 *Claude · 5 min de lecture*

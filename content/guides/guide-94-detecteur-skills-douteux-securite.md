@@ -1,10 +1,3 @@
----
-Guide original : Le détecteur de malware pour Skills
-Source : https://www.saadiakaram.ai/guides/malware-finder
-Position réelle dans la bibliothèque au moment du traitement : 92/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un détecteur de skills douteux avant de les activer
 
 *Multi-outils · 5 min de lecture*

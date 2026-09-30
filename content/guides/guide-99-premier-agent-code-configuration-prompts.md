@@ -1,10 +1,3 @@
----
-Guide original : Ton premier agent Codex, version débutant
-Source : https://www.saadiakaram.ai/guides/codex-agent-setup
-Position réelle dans la bibliothèque au moment du traitement : 97/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Configurer un premier agent de code, version débutant
 
 *Multi-outils · 5 min de lecture*

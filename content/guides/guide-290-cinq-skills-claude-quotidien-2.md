@@ -1,10 +1,3 @@
----
-Guide original : 5 Skills Claude qui gèrent ma vie #2
-Source : https://www.saadiakaram.ai/guides/5-skills-that-run-my-life
-Position réelle dans la bibliothèque au moment du traitement : 289/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre source indiquant explicitement une suite (« #2 ») à un guide précédent sur le même thème général (Skills du quotidien) ; contenu de cette liste (triage d'idées, préparation de 1:1, DMs LinkedIn, revue de dépenses pro, plan du dimanche soir) distinct des guides Skills déjà traités (234, 240, 280, 285, 286, 287, 288), vérifié et confirmé distinct. Nom réel conservé (Claude, LinkedIn).
----
-
 # Cinq autres Skills Claude qui structurent le quotidien
 
 *Claude · 5 min de lecture*

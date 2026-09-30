@@ -1,10 +1,3 @@
----
-Guide original : Claude peut te construire des outils
-Source : https://www.saadiakaram.ai/guides/tool-prompts
-Position réelle dans la bibliothèque au moment du traitement : 250/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Noms réels conservés (Claude, GitHub Pages, Vercel).
----
-
 # Cinq prompts pour transformer Claude en fabricant d'outils sur mesure
 
 *Claude · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Ne crois jamais Claude sans faire ça
-Source : https://www.saadiakaram.ai/guides/audit-agent
-Position réelle dans la bibliothèque au moment du traitement : 83/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Faire auditer la sortie d'une IA par une seconde IA
 
 *Claude · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : 5 Artifacts créés avec Claude cette semaine
-Source : https://www.saadiakaram.ai/guides/5-artifacts
-Position réelle dans la bibliothèque au moment du traitement : 134/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Seul l'Artifact 1 comportait un prompt complet visible dans le contenu source ; les Artifacts 2 à 5 n'étaient décrits que par leur fonctionnement, sans bloc de prompt dédié dans la page ; aucun prompt n'a été inventé pour compléter ce qui manquait.
----
-
 # Cinq outils interactifs à construire en artefact
 
 *Claude · 5 min de lecture*

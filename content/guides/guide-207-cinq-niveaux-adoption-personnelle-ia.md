@@ -1,10 +1,3 @@
----
-Guide original : Les 5 niveaux d'AI-pilled
-Source : https://www.saadiakaram.ai/guides/five-levels-ai-pilled
-Position réelle dans la bibliothèque au moment du traitement : 206/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 173 (les cinq niveaux de l'IA, des LLM à la superintelligence) : celui-ci porte sur cinq niveaux de maturité personnelle d'adoption de l'IA par un individu, sujet entièrement différent malgré le nom similaire. Vérifié et confirmé distinct. Nom réel conservé (ChatGPT).
----
-
 # Les cinq niveaux d'adoption personnelle de l'IA : où se situer vraiment
 
 *Multi-outils · 5 min de lecture*

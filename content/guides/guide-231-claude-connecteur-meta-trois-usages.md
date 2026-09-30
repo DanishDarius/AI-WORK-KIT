@@ -1,10 +1,3 @@
----
-Guide original : Claude est branché à Meta. Fais ça maintenant
-Source : https://www.saadiakaram.ai/guides/claude-meta-connector
-Position réelle dans la bibliothèque au moment du traitement : 230/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Accroche annonçant « 5 prompts », un seul prompt présent dans le corps (incohérence source, non reprise dans le titre). Distinct du guide 228 (MCP Meta Ads, focus exclusif publicité) : celui-ci couvre un connecteur Meta plus large (messagerie, contenu, publicité), vérifié et confirmé distinct. Noms réels conservés (Claude, Meta, Facebook, Instagram, WhatsApp, Threads).
----
-
 # Le connecteur Claude-Meta : trois usages rentables dès la première semaine
 
 *Claude · 5 min de lecture*

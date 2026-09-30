@@ -1,10 +1,3 @@
----
-Guide original : 5 landing pages pendant mon café
-Source : https://www.saadiakaram.ai/guides/claude-design-landing-pages
-Position réelle dans la bibliothèque au moment du traitement : 155/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms de produits réels conservés (Claude Design, Claude Code, Tailwind). Le titre original, formulé à la première personne, a été généralisé.
----
-
 # Générer cinq pages d'atterrissage en un temps record
 
 *Claude · 5 min de lecture*

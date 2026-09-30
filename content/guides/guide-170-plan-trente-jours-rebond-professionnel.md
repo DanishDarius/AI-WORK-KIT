@@ -1,10 +1,3 @@
----
-Guide original : Le plan 30 jours pour trouver ton prochain job
-Source : https://www.saadiakaram.ai/guides/laidoff-30-day
-Position réelle dans la bibliothèque au moment du traitement : 168/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Guide traité comme contenu carrière/organisationnel (perte d'emploi, recherche d'emploi) ; pas de cadrage médical ou psychologique, conformément à l'approche appliquée aux guides de reconversion/incertitude professionnelle précédents.
----
-
 # Le plan de rebond en 30 jours après une perte d'emploi
 
 *Multi-outils · 5 min de lecture*

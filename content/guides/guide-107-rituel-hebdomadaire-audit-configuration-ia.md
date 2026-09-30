@@ -1,10 +1,3 @@
----
-Guide original : Claude s'améliore chaque semaine si tu fais ça
-Source : https://www.saadiakaram.ai/guides/self-improving-setup
-Position réelle dans la bibliothèque au moment du traitement : 105/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Une tâche hebdomadaire pour que l'IA audite sa propre configuration
 
 *Claude · 5 min de lecture*

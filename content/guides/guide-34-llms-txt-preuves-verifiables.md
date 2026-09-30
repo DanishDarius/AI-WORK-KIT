@@ -1,10 +1,3 @@
----
-Guide original : llms.txt : crée, publie et vérifie ton résumé pour les IA
-Source : https://www.saadiakaram.ai/guides/llms-txt-site-chatgpt-search
-Position réelle dans la bibliothèque au moment du traitement : 292/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 3 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Guide long et technique (14 min) : les deux prompts complets, le gabarit de structure du fichier llms.txt et la checklist en 8 points ont été conservés intégralement (valeurs et placeholders techniques inchangés) pour préserver leur fonctionnalité ; seule la prose environnante a été reformulée. Limites et avertissements de la source (absence de garantie de recommandation, distinctions OAI-SearchBot/GPTBot, non-utilisation par Google) intégralement préservés. Nom réel conservé (OpenAI, ChatGPT, Google, IETF, GPTBot, OAI-SearchBot, saadiakaram.ai comme exemple du site source).
----
-
 # Créer, publier et vérifier un fichier llms.txt pour son site
 
 *Multi-outils · 14 min de lecture*
@@ -138,8 +131,6 @@ Trois règles à respecter : utiliser des URL absolues (adresse complète en HTT
 
 La publication doit se faire à l'adresse https://votre-domaine.com/llms.txt : le fichier doit être public, servi comme texte lisible en UTF-8, et répondre directement. La convention porte sur le chemin exact et le format ; la méthode d'installation dépend du CMS, de l'hébergeur ou de l'application utilisés.
 
-Pour un exemple observable du résultat attendu, le fichier public de l'auteure du guide original est accessible à saadiakaram.ai/llms.txt, à lire comme un exemple, non comme la preuve qu'il aurait provoqué une recommandation.
-
 **Brief technique à transmettre, sans accès ni secret :**
 publier le fichier validé à la racine (/llms.txt), réponse HTTP 200 attendue, contenu texte lisible en UTF-8, à vérifier : URL publique, contenu exact, liens HTTPS et cache après mise à jour ; à préserver : espaces privés, authentification, règles robots existantes et protections réseau ; après publication : ouvrir l'URL dans une session déconnectée et conserver la date du contrôle.
 
@@ -161,7 +152,7 @@ Disallow: /chemin-prive/
 
 En l'absence d'un groupe nommé spécifiquement OAI-SearchBot, le groupe générique (`*`) s'applique aussi à lui : la partie publique reste ouverte, les exclusions privées restent exclues. Il est déconseillé de créer un groupe OAI-SearchBot avec `Allow: /` sans relire l'ensemble du fichier, car un groupe spécifique peut modifier les règles qui lui sont appliquées et faire perdre les exclusions du groupe générique.
 
-Sur le site source du guide original, à la date du 17 septembre 2026, aucun groupe nommé OAI-SearchBot n'existe : le groupe générique autorise les pages publiques et conserve les exclusions privées. Il s'agit d'un exemple de configuration déjà correcte, pas d'un modèle universel à copier tel quel ; remplacer l'intégralité d'un fichier robots.txt par un simple extrait reste déconseillé. Le protocole s'applique aux groupes et aux chemins correspondants ; une lecture de l'ensemble du fichier est recommandée, en préservant les chemins privés. robots.txt ne constitue pas un contrôle d'accès : une information réellement secrète doit être protégée par une authentification véritable.
+Sur un site déjà bien configuré, il est fréquent qu'aucun groupe nommé OAI-SearchBot n'existe : le groupe générique autorise les pages publiques et conserve les exclusions privées. C'est un exemple de configuration déjà correcte, pas d'un modèle universel à copier tel quel ; remplacer l'intégralité d'un fichier robots.txt par un simple extrait reste déconseillé. Le protocole s'applique aux groupes et aux chemins correspondants ; une lecture de l'ensemble du fichier est recommandée, en préservant les chemins privés. robots.txt ne constitue pas un contrôle d'accès : une information réellement secrète doit être protégée par une authentification véritable.
 
 ## Contrôle ligne par ligne, en huit points
 
@@ -205,9 +196,7 @@ Il reste ensuite possible d'observer périodiquement ce que répond ChatGPT avec
 
 **Protocole d'observation à J0 et J+30 :** à J0, noter la question exacte, la date, la langue, le pays ou la ville, et confirmer que la fonction de recherche est activée ; conserver la réponse complète et les sources affichées, en notant séparément si le domaine est cité, absent, ou mentionné sans lien. À J+30, reposer la même question avec la recherche activée, dans un contexte aussi identique que possible, puis relever les mêmes éléments. La comparaison porte sur des observations, pas sur une preuve de cause : une apparition, une disparition ou un changement de rang peut provenir de plusieurs facteurs, et ce relevé n'isole pas l'effet propre du fichier llms.txt.
 
-## Sources et limites explicites
-
-Sources consultées le 17 septembre 2026 par l'auteure du guide original : la documentation d'OpenAI sur les robots utilisés par ChatGPT, le guide officiel de Google sur l'optimisation pour les fonctionnalités d'IA générative, le protocole d'exclusion des robots de l'IETF (RFC 9309), et la proposition de format llms.txt elle-même. Ces éléments peuvent évoluer ; toute modification technique gagne à être précédée d'une vérification des liens.
+## Limites explicites
 
 La proposition llms.txt n'est pas un protocole standardisé au même titre que robots.txt. Google indique ignorer llms.txt pour sa visibilité et ses classements. OpenAI documente OAI-SearchBot pour ChatGPT Search, mais sa documentation sur les robots ne présente pas llms.txt comme une condition de sélection. Ces distinctions structurent l'ensemble du guide.
 

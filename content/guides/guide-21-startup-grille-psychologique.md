@@ -1,9 +1,3 @@
----
-Guide original : "Passe ta startup au grill"
-Source : saadiakaram.ai/guides/passe-ta-startup-au-grill-rory-sutherland
-Statut : reformulé (texte) : aucun visuel/tableau HTML détecté sur cette page
----
-
 # La grille de Rory Sutherland : passez votre startup à l'épreuve de la psychologie
 
 *Claude · 9 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Transforme n'importe quelle vidéo YouTube en prof
-Source : https://www.saadiakaram.ai/guides/youtube-to-ai-tutor
-Position réelle dans la bibliothèque au moment du traitement : 256/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Pourcentages de rétention (10 %, 70 %, 90 %) conservés comme affirmation de la source, non vérifiée indépendamment. Noms réels conservés (YouTube, Claude).
----
-
 # Transformer une vidéo YouTube en tuteur IA interactif
 
 *Multi-outils · 5 min de lecture*
@@ -39,4 +32,4 @@ Une vidéo YouTube marquante finit souvent par être oubliée faute de reprise a
 
 **Apprendre consiste à répéter activement ce qui a été compris.**
 
-Selon la source, regarder une vidéo sans reprise ne garderait qu'environ 10 % du contenu en mémoire ; résumer et se tester en garderait autour de 70 % ; un tuteur IA consulté à plusieurs reprises grimperait à 90 %. L'outil en lui-même compte moins que la boucle de répétition active qu'il permet de mettre en place.
+Selon certaines estimations, regarder une vidéo sans reprise ne garderait qu'environ 10 % du contenu en mémoire ; résumer et se tester en garderait autour de 70 % ; un tuteur IA consulté à plusieurs reprises grimperait à 90 %. L'outil en lui-même compte moins que la boucle de répétition active qu'il permet de mettre en place.

@@ -1,10 +1,3 @@
----
-Guide original : 1 000 € ce week-end en config Claude local
-Source : https://www.saadiakaram.ai/guides/claude-for-businesses
-Position réelle dans la bibliothèque au moment du traitement : 128/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le montant du titre original (« 1 000 € ce week-end ») est un chiffre promotionnel invérifiable présenté par l'auteure ; non repris dans le titre reformulé, conformément à la consigne de ne jamais reprendre une donnée financière non vérifiable. Contenu proche du guide 121 (même plugin Small Business) mais angle distinct : celui-ci présente la configuration comme une prestation facturable à d'autres petites entreprises, avec le prompt d'audit hebdomadaire complet.
----
-
 # Configurer le plugin petite entreprise et en faire une prestation
 
 *Claude · 5 min de lecture*

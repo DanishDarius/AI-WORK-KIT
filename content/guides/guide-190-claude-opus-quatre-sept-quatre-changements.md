@@ -1,10 +1,3 @@
----
-Guide original : Claude Opus 4.7 : 4 choses à savoir
-Source : https://www.saadiakaram.ai/guides/opus-4-7
-Position réelle dans la bibliothèque au moment du traitement : 189/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Nom réel conservé comme fait (Claude Opus 4.7, Sonnet). L'accroche d'introduction de la source mentionnait « 5 Skills gratuits à voler » sans qu'aucune liste de skills n'apparaisse dans le corps du guide capturé (incohérence présente dans la source elle-même) ; non reprise dans le titre reformulé pour rester fidèle au contenu réellement présent.
----
-
 # Claude Opus 4.7 : ce qui change vraiment
 
 *Claude · 5 min de lecture*

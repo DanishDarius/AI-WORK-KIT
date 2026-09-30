@@ -1,10 +1,3 @@
----
-Guide original : TWIN · Créer ton jumeau IA, des photos à la vidéo
-Source : https://www.saadiakaram.ai/guides/twin-creer-son-jumeau-ia
-Position réelle dans la bibliothèque au moment du traitement : 293/293, dernier guide de la bibliothèque, confirmé via vérification fraîche de la stabilité de l'ordre des rayons (293 liens uniques au total, position 0-indexée 292).
-Statut : 1 image réelle détectée dans le DOM (character-sheet.png, alt : « Exemple de planche photographique générée : Saadia vue de face, de profil et de dos, avec une tenue noire cohérente »), référencée en ressources-visuelles.md sous réf. #1 et marquée à sa place dans le texte ci-dessous. 0 tableau trouvé dans le DOM. 4 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Guide long (20 min) et technique : les six prompts complets (cinq en français, un en anglais pour Custom Motion) ont été conservés intégralement avec leurs placeholders, ainsi que la checklist de contrôle avant partage et les encadrés de dépannage ; seule la prose environnante a été reformulée. Garde-fous de consentement et de vérification d'identité de la source intégralement préservés (autorisation de la personne représentée, vidéo de consentement HeyGen, contrôle à 100 % par comparaison avec les photos réelles, avertissement contre la présentation d'un contenu généré comme une prise réelle). Noms réels conservés (ChatGPT, OpenAI, Fish Audio, ElevenLabs, HeyGen).
----
-
 # Créer son jumeau IA : des photos à la vidéo qui parle
 
 *Multi-outils · 20 min de lecture*
@@ -36,8 +29,6 @@ Pour un projet réalisé au nom d'un client, l'usage prévu de son visage et de 
 Le character sheet est une planche de référence rassemblant plusieurs angles pour comparer visage, coiffure et tenue. Il permet de garder une cohérence visuelle sur les prochaines images générées, mais ne remplace pas la vidéo nécessaire au Digital Twin de HeyGen.
 
 La démarche : ouvrir un nouveau chat dans ChatGPT, joindre les photos réelles via le bouton d'ajout et attendre l'apparition de leurs vignettes, coller le prompt ci-dessous en remplaçant les champs entre crochets, puis comparer le résultat aux originaux à taille égale (forme du visage, lunettes, expression, coiffure), en ne conservant qu'une planche réellement reconnaissable.
-
-[IMAGE, réf. #1, description : voir ressources-visuelles.md]
 
 > **Prompt : ChatGPT, la planche de référence**
 >
@@ -168,9 +159,9 @@ Pour un format court de type Reel, l'export en portrait 9:16 et en 1080 × 1920 
 
 Le premier objectif reste une courte vidéo reconnaissable, compréhensible et entièrement validable. Une fois l'image, la voix et une scène fonctionnant ensemble, ces références approuvées peuvent être réutilisées pour la suivante.
 
-## Sources et limites
+## Limites
 
-Documentation vérifiée le 15 septembre 2026 par l'auteure du guide original. Les parcours d'application peuvent évoluer selon les comptes ; les prompts et exemples de ce guide ne constituent ni une garantie de résultat, ni un test de toutes les combinaisons de modèles possibles. Sources citées : la documentation d'OpenAI sur la création et la modification d'images dans ChatGPT, celle de Fish Audio sur la préparation et la création d'une voix, les documentations d'ElevenLabs sur l'Instant Voice Cloning et le Professional Voice Cloning, ainsi que plusieurs pages de documentation HeyGen (conseils de tournage du Digital Twin, vidéo de consentement, création dans AI Studio, Custom Motion, démarrage avec Video Agent).
+Les parcours d'application peuvent évoluer selon les comptes ; les prompts et exemples de ce guide ne constituent ni une garantie de résultat, ni un test de toutes les combinaisons de modèles possibles.
 
 ## Questions fréquentes
 

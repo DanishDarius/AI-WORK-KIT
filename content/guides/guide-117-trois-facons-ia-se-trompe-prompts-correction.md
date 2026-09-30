@@ -1,10 +1,3 @@
----
-Guide original : Les 3 façons dont l'IA te ment
-Source : https://www.saadiakaram.ai/guides/3-ways-ai-lies
-Position réelle dans la bibliothèque au moment du traitement : 115/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Trois façons dont une IA se trompe, et les prompts pour les corriger
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : L'agent de tri de boîte mail
-Source : https://www.saadiakaram.ai/guides/inbox-triage-agent
-Position réelle dans la bibliothèque au moment du traitement : 53/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court, contenu intégralement capturé, aucune troncature détectée.
----
-
 # Un agent qui trie votre boîte mail en quatre catégories, avant même le café du matin
 
 *Multi-outils · 8 min de lecture*

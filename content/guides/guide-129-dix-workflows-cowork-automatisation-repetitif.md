@@ -1,10 +1,3 @@
----
-Guide original : 10 workflows IA qui me rendent 15 h/semaine
-Source : https://www.saadiakaram.ai/guides/15-hours-week
-Position réelle dans la bibliothèque au moment du traitement : 127/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le chiffre « 15 h/semaine » du titre original est une estimation personnelle de l'auteure, non vérifiable et non appuyée par une donnée chiffrée dans le corps du texte ; non repris dans le titre reformulé. Nom de produit (Claude Cowork) conservé comme fait.
----
-
 # Dix workflows pour automatiser le répétitif au quotidien
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Skills vs Plugins
-Source : https://www.saadiakaram.ai/guides/skills-vs-plugins
-Position réelle dans la bibliothèque au moment du traitement : 287/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Guide distinct des autres guides Skills déjà traités (234, 240, 280, 285) : angle conceptuel (différence Skill/Plugin et ordre d'adoption), pas une liste de Skills concrets. Vérifié et confirmé distinct. Nom réel conservé (Claude, Notion, Stripe, GitHub).
----
-
 # Skills et Plugins : la différence qui compte, et par lequel commencer
 
 *Multi-outils · 5 min de lecture*

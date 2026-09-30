@@ -1,10 +1,3 @@
----
-Guide original : La hiérarchie de contrôle de Claude
-Source : https://www.saadiakaram.ai/guides/claude-control-hierarchy
-Position réelle dans la bibliothèque au moment du traitement : 96/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Trois niveaux qui pilotent vraiment le comportement d'une IA
 
 *Claude · 5 min de lecture*

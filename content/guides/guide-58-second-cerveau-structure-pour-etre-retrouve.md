@@ -1,10 +1,3 @@
----
-Guide original : Un second cerveau qui vous répond
-Source : https://www.saadiakaram.ai/guides/notion-second-brain
-Position réelle dans la bibliothèque au moment du traitement : 56/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court, contenu intégralement capturé, aucune troncature détectée.
----
-
 # Un second cerveau structuré pour qu'un assistant puisse vraiment le fouiller
 
 *Notion · 7 min de lecture*

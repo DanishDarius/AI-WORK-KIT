@@ -1,9 +1,3 @@
----
-Guide original : "Construis ton Jarvis"
-Source : saadiakaram.ai/guides/ton-jarvis
-Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
----
-
 # Construire votre opérateur IA personnel : l'architecture complète, façon Jarvis
 
 *Multi-outils · 9 min de lecture*

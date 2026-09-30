@@ -1,10 +1,3 @@
----
-Guide original : Canva n'a plus rien à voir
-Source : https://www.saadiakaram.ai/guides/canva-ai
-Position réelle dans la bibliothèque au moment du traitement : 69/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Les fonctions IA de Canva que presque personne n'exploite vraiment
 
 *Canva · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : L'assistant hormones
-Source : https://www.saadiakaram.ai/guides/hormone-helper-skill
-Position réelle dans la bibliothèque au moment du traitement : 195/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Contenu de santé (cycle, sommeil, analyses sanguines), traité strictement comme un outil organisationnel de préparation de rendez-vous médicaux, jamais comme un substitut de diagnostic. La limite explicite de l'original (ce skill n'est pas un médecin, toute hypothèse doit être validée en consultation) est conservée intégralement et mise en avant. La note sur la confidentialité des données provient telle quelle de la source d'origine, reformulée sans en changer le sens. Noms réels conservés (Claude, Flo, Oura, Apple Health, Google Fit).
----
-
 # Un assistant pour croiser ses données hormonales et mieux préparer ses rendez-vous médicaux
 
 *Multi-outils · 5 min de lecture*

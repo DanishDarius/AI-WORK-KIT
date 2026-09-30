@@ -1,10 +1,3 @@
----
-Guide original : La check-list de nettoyage du contexte
-Source : https://www.saadiakaram.ai/guides/context-cleanup-checklist
-Position réelle dans la bibliothèque au moment du traitement : 52/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide très court, contenu intégralement capturé, aucune troncature détectée.
----
-
 # Alléger ses consignes IA : la check-list pour ne garder que ce qui change vraiment le résultat
 
 *Claude · 5 min de lecture*

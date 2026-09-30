@@ -1,10 +1,3 @@
----
-Guide original : Claude Design, l'essentiel sans bullshit
-Source : https://www.saadiakaram.ai/guides/claude-design-guide
-Position réelle dans la bibliothèque au moment du traitement : 281/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé (Claude, Figma).
----
-
 # Claude Design en cinq minutes : ce que l'outil fait vraiment
 
 *Claude · 5 min de lecture*

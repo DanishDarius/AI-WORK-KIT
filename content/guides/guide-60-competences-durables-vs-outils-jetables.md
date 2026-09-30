@@ -1,10 +1,3 @@
----
-Guide original : Les compétences qui valent le coup
-Source : https://www.saadiakaram.ai/guides/career-skill-stack
-Position réelle dans la bibliothèque au moment du traitement : 58/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court, contenu intégralement capturé, aucune troncature détectée.
----
-
 # Compétences durables contre outils jetables : où investir son temps d'apprentissage
 
 *Multi-outils · 6 min de lecture*

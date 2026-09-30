@@ -1,10 +1,3 @@
----
-Guide original : Le score secret de ta vraie maîtrise IA
-Source : https://www.saadiakaram.ai/guides/ai-fluency-scorecard
-Position réelle dans la bibliothèque au moment du traitement : 255/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Distinct du guide 207 (cinq niveaux d'adoption personnelle de l'IA) : celui-ci propose une grille de notation chiffrée sur cinq axes distincts (vitesse, profondeur, autonomie, discernement, transmission), vérifié et confirmé distinct. Noms réels conservés (Claude, Projects, Skills, Connectors, Cowork).
----
-
 # Une scorecard trimestrielle pour évaluer sa vraie maîtrise de l'IA
 
 *Claude · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Le planificateur de week-end
-Source : https://www.saadiakaram.ai/guides/weekend-planner
-Position réelle dans la bibliothèque au moment du traitement : 216/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 148 (organiser une soirée à deux) : celui-ci couvre un week-end entier pour tout contexte (seul, couple, famille, amis), vérifié et confirmé distinct. Nom réel conservé (Claude).
----
-
 # Un planificateur de week-end à configurer une seule fois
 
 *Multi-outils · 5 min de lecture*

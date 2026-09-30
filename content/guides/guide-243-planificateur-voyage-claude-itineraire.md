@@ -1,10 +1,3 @@
----
-Guide original : Le planificateur de voyage
-Source : https://www.saadiakaram.ai/guides/travel-planner
-Position réelle dans la bibliothèque au moment du traitement : 242/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé (Claude).
----
-
 # Construire un itinéraire de voyage réaliste avec Claude
 
 *Multi-outils · 5 min de lecture*

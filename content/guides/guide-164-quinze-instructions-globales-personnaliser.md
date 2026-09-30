@@ -1,10 +1,3 @@
----
-Guide original : 15 instructions globales pour Claude
-Source : https://www.saadiakaram.ai/guides/global-instructions
-Position réelle dans la bibliothèque au moment du traitement : 162/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Quinze instructions globales pour changer le comportement de l'assistant
 
 *Claude · 5 min de lecture*

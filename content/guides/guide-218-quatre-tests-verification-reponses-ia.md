@@ -1,15 +1,8 @@
----
-Guide original : Le test en 4 questions contre les mensonges
-Source : https://www.saadiakaram.ai/guides/pressure-test
-Position réelle dans la bibliothèque au moment du traitement : 217/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Les affirmations sur la fiabilité de Claude sont reformulées telles qu'énoncées par la source d'origine (caractérisation de l'autrice, pas un fait établi indépendamment). Nom réel conservé (Claude).
----
-
 # Quatre prompts de vérification pour mettre une réponse IA sous pression
 
 *Claude · 5 min de lecture*
 
-Selon la source, un assistant IA peut se tromper avec beaucoup d'assurance. Ces quatre prompts de vérification attrapent chacun un type d'erreur différent ; empilés ensemble, ils laissent passer très peu d'approximations.
+Un assistant IA peut se tromper avec beaucoup d'assurance. Ces quatre prompts de vérification attrapent chacun un type d'erreur différent ; empilés ensemble, ils laissent passer très peu d'approximations.
 
 ## Test 1 : La contradiction interne
 
@@ -43,4 +36,4 @@ Ces quatre tests gagnent à être appliqués sur ce qui compte vraiment, pas sur
 
 **Un résultat non vérifié reste une hypothèse déguisée en certitude.**
 
-Selon l'autrice, une IA ne se trompe pas par malveillance, mais par excès de confiance dans ses propres réponses. Mettre cette confiance sous pression avant d'agir reste la meilleure protection.
+Une IA ne se trompe pas par malveillance, mais par excès de confiance dans ses propres réponses. Mettre cette confiance sous pression avant d'agir reste la meilleure protection.

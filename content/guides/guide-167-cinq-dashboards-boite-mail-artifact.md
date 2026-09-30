@@ -1,10 +1,3 @@
----
-Guide original : 5 dashboards IA cachés dans ta boîte mail
-Source : https://www.saadiakaram.ai/guides/claude-email-dashboard
-Position réelle dans la bibliothèque au moment du traitement : 165/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (guide très long, 5 prompts techniques complets). Noms de produits, bibliothèques et services réels conservés tels quels car fonctionnels au prompt (Claude, Gmail, Leaflet.js, Tailwind, Chart.js, Google Fonts, Playfair Display, Cormorant, Inter, Anton, CartoDB, DoorDash, Uber Eats, Grubhub, Postmates, Caviar, Seamless, Instacart, Amazon Fresh, Whole Foods, Walmart Grocery, Gopuff, OpenTable, Resy, Toast, Starbucks, Dunkin', Blue Bottle, Philz, Peet's, UPS, USPS, FedEx, Stripe, Cash App). Les valeurs techniques exactes (couleurs hexadécimales, tailles en pixels, noms de bibliothèques) ont été conservées à l'identique car elles conditionnent le fonctionnement du prompt : seule la prose explicative autour a été reformulée. Contenu portant sur le suivi de dépenses et d'abonnements personnels (catégorie budget courant, pas de données financières sensibles comme revenu ou patrimoine).
----
-
 # Cinq tableaux de bord à construire à partir de sa boîte mail
 
 *Claude · 5 min de lecture*

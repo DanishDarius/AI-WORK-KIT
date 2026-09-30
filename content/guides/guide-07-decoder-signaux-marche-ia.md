@@ -1,9 +1,3 @@
----
-Guide original : "Le décodeur de signaux IA : lire ce que le marché va payer, avant tout le monde"
-Source : saadiakaram.ai/guides/decodeur-de-signaux-ia
-Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
----
-
 # Décoder les signaux du marché IA : anticiper ce qui va se monétiser avant les autres
 
 *Multi-outils · 8 min de lecture*

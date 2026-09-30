@@ -1,9 +1,3 @@
----
-Guide original : "Maîtriser l'IA : les 50 mots et notions essentielles"
-Source : saadiakaram.ai/guides/maitriser-ia-50-mots-notions-essentielles
-Statut : reformulé (texte). Aucune image détectée ; un fichier .md téléchargeable ("le mémo") existe sur la page source mais n'a pas été récupéré (voir ressources-visuelles.md)
----
-
 # Le lexique complet de l'IA : 50 notions à connaître pour comprendre ce que vous utilisez
 
 *Multi-outils · 35 min de lecture*
@@ -251,8 +245,6 @@ Ce test porte sur ces dix situations précises ; il ne certifie pas une maîtris
 ## Gardez les repères
 
 Pour continuer à progresser, choisissez un outil que vous utilisez déjà et décrivez une de ses fonctions en cinq lignes : entrée, traitement, sortie, contrôle et limites. N'utilisez que les termes dont vous pouvez expliquer le rôle. Comparez ensuite votre schéma à la documentation officielle du produit.
-
-**Sources citées dans le guide original**, consultées le 14 septembre 2026 (les définitions ont été reformulées à des fins pédagogiques ; les exercices et exemples ont été conçus pour cette édition) : Google : Glossaire de l'IA générative ; Google : Fondamentaux du machine learning ; Google Cloud : Introduction aux prompts ; Anthropic : Fenêtre de contexte ; Anthropic : Recherche dans les chats et mémoire ; Google Cloud : Principe du RAG ; Anthropic : Workflows et agents ; MDN : API ; Google : Glossaire du machine learning ; Google : Réseaux de neurones ; Anthropic : Ingénierie du contexte ; Google : Sorties structurées ; Google Cloud : Paramètres de génération ; Google Cloud : Embeddings de texte ; MCP : Outils et contrôle des actions ; MCP : Présentation du protocole ; OWASP : Prévention des injections de prompt ; Anthropic : Évaluer les agents ; Google : Mesures de qualité ; vLLM : Mesures de fonctionnement ; Google : Cache de contexte.
 
 ---
 

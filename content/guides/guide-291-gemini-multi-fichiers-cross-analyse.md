@@ -1,10 +1,3 @@
----
-Guide original : Gemini vient de lâcher un gros game changer
-Source : https://www.saadiakaram.ai/guides/gemini-files
-Position réelle dans la bibliothèque au moment du traitement : 290/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Sujet centré sur Gemini (et non Claude), sans recoupement avec les guides précédents. Nom réel conservé (Gemini, Claude, ChatGPT, PDF, Word, Excel, Google Docs, Sheets, Slides).
----
-
 # Gemini et l'analyse croisée de dizaines de fichiers en un seul chat
 
 *Gemini · 5 min de lecture*
@@ -42,4 +35,4 @@ Gemini se trompe moins souvent sur de gros corpus documentaires, mais des erreur
 
 **Le bon outil pour la bonne tâche.**
 
-Claude reste préférable pour la nuance et l'écriture, ChatGPT pour les workflows combinant plusieurs outils, et Gemini s'impose lorsque le volume de fichiers à traiter devient trop important pour les autres. Selon la source, combiner plusieurs modèles de cette façon permettrait un gain de productivité d'environ 30 %, sans abonnement supplémentaire (affirmation de la source, non vérifiée indépendamment).
+Claude reste préférable pour la nuance et l'écriture, ChatGPT pour les workflows combinant plusieurs outils, et Gemini s'impose lorsque le volume de fichiers à traiter devient trop important pour les autres. Combiner plusieurs modèles de cette façon permettrait un gain de productivité d'environ 30 %, sans abonnement supplémentaire (estimation non vérifiée indépendamment).

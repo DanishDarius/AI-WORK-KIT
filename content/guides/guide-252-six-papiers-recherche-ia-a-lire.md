@@ -1,10 +1,3 @@
----
-Guide original : 6 papiers IA à lire au lieu de doomscroll
-Source : https://www.saadiakaram.ai/guides/ai-research-papers
-Position réelle dans la bibliothèque au moment du traitement : 251/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels des publications, organismes et modèles conservés comme faits (Microsoft Research, Anthropic, Claude, Google, OpenAI, ChatGPT, AI Futures Project).
----
-
 # Six papiers de recherche IA à lire plutôt que de faire défiler les réseaux
 
 *Multi-outils · 5 min de lecture*

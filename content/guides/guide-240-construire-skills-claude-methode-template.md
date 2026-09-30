@@ -1,10 +1,3 @@
----
-Guide original : Construis tes Skills Claude (la vraie méthode)
-Source : https://www.saadiakaram.ai/guides/build-skills
-Position réelle dans la bibliothèque au moment du traitement : 239/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Proche thématiquement du guide 234 (5 astuces Skills) mais structurellement distinct : celui-ci définit ce qu'est une Skill et propose un gabarit en 6 sections différent, avec un angle propre (erreur des adjectifs vs exemples concrets), vérifié et confirmé distinct, contenu non redondant terme à terme. Nom réel conservé (Claude).
----
-
 # Construire une Skill Claude qui tient dans la durée : la méthode
 
 *Claude · 5 min de lecture*

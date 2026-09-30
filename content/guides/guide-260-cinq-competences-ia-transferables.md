@@ -1,10 +1,3 @@
----
-Guide original : Les outils meurent. Les compétences restent.
-Source : https://www.saadiakaram.ai/guides/ai-skills-that-transfer
-Position réelle dans la bibliothèque au moment du traitement : 259/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé (ChatGPT-3).
----
-
 # Cinq compétences de communication avec l'IA qui survivent aux outils
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Deviens fluent en IA en 7 jours
-Source : https://www.saadiakaram.ai/guides/7-day-ai-fluency
-Position réelle dans la bibliothèque au moment du traitement : 196/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 123 (« Sept jours pour prendre en main l'assistant », source first-7-days) : les deux partagent le format « un jour, une fonctionnalité » sur une semaine, mais le contenu jour par jour diffère nettement (celui-ci couvre Project, connecteur, Skill, Artifact et Cowork, avec un audit final ; le guide 123 couvrait calibration de voix, mémoire, espaces de travail et un rituel final) ; vérifié et confirmé suffisamment distinct pour être conservé comme guide séparé. Noms réels conservés (Claude, ChatGPT, Gmail, Calendar, Cowork).
----
-
 # Sept jours pour devenir à l'aise avec un assistant IA, fonctionnalité par fonctionnalité
 
 *Multi-outils · 5 min de lecture*

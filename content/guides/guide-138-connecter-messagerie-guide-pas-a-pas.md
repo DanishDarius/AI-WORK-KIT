@@ -1,10 +1,3 @@
----
-Guide original : Branche Gmail à Claude
-Source : https://www.saadiakaram.ai/guides/connect-gmail
-Position réelle dans la bibliothèque au moment du traitement : 136/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom de produit réel (Gmail) conservé comme fait.
----
-
 # Connecter sa messagerie à l'assistant, étape par étape
 
 *Claude · 5 min de lecture*

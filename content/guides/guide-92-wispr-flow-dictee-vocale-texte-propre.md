@@ -1,10 +1,3 @@
----
-Guide original : L'outil IA que j'utilise 300 fois par jour
-Source : https://www.saadiakaram.ai/guides/wispr-flow
-Position réelle dans la bibliothèque au moment du traitement : 90/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : le titre original contenait une statistique d'usage personnel non vérifiable de l'auteure du site ("300 fois par jour"), non reprise dans le titre reformulé, conformément à la consigne de dropper les affirmations personnelles invérifiables.
----
-
 # Wispr Flow : transformer sa voix en texte propre, partout où l'on écrit
 
 *Multi-outils · 5 min de lecture*

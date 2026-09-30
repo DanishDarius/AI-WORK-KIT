@@ -1,10 +1,3 @@
----
-Guide original : 5 updates IA à connaître cette semaine
-Source : https://www.saadiakaram.ai/guides/ai-news-this-week
-Position réelle dans la bibliothèque au moment du traitement : 76/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : le guide source, bien que titré comme une actualité hebdomadaire datée, contient en réalité une méthode générique de tri de l'actualité IA, sans événement daté spécifique. Reformulé comme méthode réutilisable.
----
-
 # Trier l'actualité IA : distinguer le signal du bruit
 
 *Multi-outils · 5 min de lecture*

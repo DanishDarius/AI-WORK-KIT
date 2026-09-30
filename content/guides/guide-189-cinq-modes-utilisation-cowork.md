@@ -1,10 +1,3 @@
----
-Guide original : Tire enfin le vrai jus de Claude Cowork
-Source : https://www.saadiakaram.ai/guides/5-ways-cowork
-Position réelle dans la bibliothèque au moment du traitement : 188/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé comme fait (Claude, Cowork).
----
-
 # Cinq façons d'exploiter pleinement Cowork au-delà du simple chat
 
 *Claude · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Une IA peut maintenant fouiller Instagram
-Source : https://www.saadiakaram.ai/guides/meta-muse-spark
-Position réelle dans la bibliothèque au moment du traitement : 221/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Noms réels conservés comme faits (Instagram, Facebook, Threads, Meta, Claude, ChatGPT, TikTok). Garde-fou légal de l'original conservé intégralement (lecture du contenu public autorisée, réutilisation encadrée).
----
-
 # Analyser les réseaux sociaux avec une IA : dix cas d'usage concrets
 
 *Multi-outils · 5 min de lecture*
@@ -46,7 +39,7 @@ Non, l'accès passe par l'IA elle-même. Le compte analysé doit cependant être
 
 **Ça marche aussi pour TikTok ?**
 
-Partiellement. Un accès aussi direct n'existe pas encore pour cette plateforme, selon la source, mais évolue.
+Partiellement. Un accès aussi direct n'existe pas encore pour cette plateforme, mais la situation évolue.
 
 ## À retenir
 

@@ -1,10 +1,3 @@
----
-Guide original : Remplace un designer à 5 000 € avec l'IA
-Source : https://www.saadiakaram.ai/guides/ai-brand-refresh
-Position réelle dans la bibliothèque au moment du traitement : 174/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre reformulé sans le montant « 5 000 € » (chiffre de comparaison invérifiable, non étayé dans le corps du guide), conformément à l'approche appliquée aux titres contenant des statistiques personnelles non vérifiables dans les guides précédents. Nom réel conservé (Claude).
----
-
 # Rafraîchir son identité de marque avec l'IA, en quatre livrables
 
 *Multi-outils · 5 min de lecture*

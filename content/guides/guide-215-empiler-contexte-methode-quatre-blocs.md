@@ -1,10 +1,3 @@
----
-Guide original : Ce n'est pas l'IA le problème. C'est ce que tu ne lui dis pas.
-Source : https://www.saadiakaram.ai/guides/context-stacking
-Position réelle dans la bibliothèque au moment du traitement : 214/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Empiler le contexte avant chaque demande : la méthode en quatre blocs
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Pourquoi tes visuels IA sentent l'IA
-Source : https://www.saadiakaram.ai/guides/ai-design-prompts
-Position réelle dans la bibliothèque au moment du traitement : 64/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Pourquoi les visuels générés par IA ont un air générique, et comment y échapper
 
 *Multi-outils · 5 min de lecture*

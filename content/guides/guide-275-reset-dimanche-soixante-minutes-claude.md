@@ -1,10 +1,3 @@
----
-Guide original : Le reset du dimanche en 60 minutes
-Source : https://www.saadiakaram.ai/guides/sunday-reset
-Position réelle dans la bibliothèque au moment du traitement : 274/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (la mention « tableau » dans le prompt est une instruction de mise en forme demandée à l'IA, pas un tableau HTML de la page). Nom réel conservé (Claude).
----
-
 # Un reset dominical en six blocs de dix minutes pour démarrer la semaine sereinement
 
 *Claude · 5 min de lecture*

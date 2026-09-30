@@ -1,10 +1,3 @@
----
-Guide original : L'organisateur du calendrier familial
-Source : https://www.saadiakaram.ai/guides/family-calendar
-Position réelle dans la bibliothèque au moment du traitement : 278/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Distinct du guide 275 (reset du dimanche personnel, six blocs individuels) : celui-ci porte spécifiquement sur la coordination familiale multi-agendas, vérifié et confirmé distinct. Nom réel conservé (Claude).
----
-
 # Un agent Claude pour coordonner le calendrier de toute la famille
 
 *Multi-outils · 5 min de lecture*

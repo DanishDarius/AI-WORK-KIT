@@ -1,10 +1,3 @@
----
-Guide original : Claude vient d'apprendre à rêver
-Source : https://www.saadiakaram.ai/guides/claude-managed-agents
-Position réelle dans la bibliothèque au moment du traitement : 264/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (la mention « tableau » dans le prompt est une instruction de mise en forme demandée à l'IA, pas un tableau HTML de la page). Titre source (« Claude vient d'apprendre à rêver ») sans rapport avec le contenu réel, entièrement reformulé. Proche thématiquement du guide 232 (Managed Agents, présentation conceptuelle) mais angle distinct : celui-ci propose trois agents concrets à construire avec un brief complet, vérifié et confirmé distinct ; contenu non redondant terme à terme. Nom réel conservé (Claude).
----
-
 # Trois agents managés Claude à mettre en place ce mois-ci
 
 *Claude · 5 min de lecture*

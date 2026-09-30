@@ -1,10 +1,3 @@
----
-Guide original : 5 Skills Claude pour étudiants
-Source : https://www.saadiakaram.ai/guides/student-skills
-Position réelle dans la bibliothèque au moment du traitement : 285/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Nom réel conservé (Claude).
----
-
 # Cinq Skills Claude utiles pour organiser ses études
 
 *Claude · 5 min de lecture*

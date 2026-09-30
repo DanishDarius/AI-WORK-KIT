@@ -1,21 +1,14 @@
----
-Guide original : L'IA s'entraînera seule d'ici 2028
-Source : https://www.saadiakaram.ai/guides/ai-trains-itself-2028
-Position réelle dans la bibliothèque au moment du traitement : 261/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Projections et échéances (2026, 2028) attribuées à Anthropic et OpenAI conservées comme prévisions rapportées par la source, non des faits établis ni vérifiés indépendamment. Noms réels conservés (Anthropic, OpenAI).
----
-
 # Vers un entraînement autonome des IA d'ici 2028 : ce que cela change concrètement
 
 *Multi-outils · 5 min de lecture*
 
-Plusieurs laboratoires de recherche sérieux évoquent, selon la source, une trajectoire où les IA s'entraîneraient principalement elles-mêmes d'ici 2028. Il ne s'agit pas de science-fiction mais d'une évolution déjà engagée. Voici ce que cela pourrait changer, sans emballement ni inquiétude excessive.
+Plusieurs laboratoires de recherche sérieux évoquent une trajectoire où les IA s'entraîneraient principalement elles-mêmes d'ici 2028. Il ne s'agit pas de science-fiction mais d'une évolution déjà engagée. Voici ce que cela pourrait changer, sans emballement ni inquiétude excessive.
 
-## Ce qui est en train de se produire, selon la source
+## Ce qui est en train de se produire
 
 Aujourd'hui, les modèles s'entraînent sur des données humaines complétées par un ajustement supervisé humain (RLHF). Entre 2024 et 2025, des modèles ont commencé à générer les données d'entraînement d'autres modèles (auto-distillation, données synthétiques). En 2026, des boucles d'auto-amélioration apparaissent, où le modèle évalue et améliore ses propres productions pour continuer à s'entraîner.
 
-D'ici 2028, selon les prévisions rapportées par la source et attribuées à Anthropic et OpenAI, la majorité de l'entraînement proviendrait de ces boucles auto-supervisées, l'humain devenant davantage évaluateur final que générateur de données brutes.
+D'ici 2028, selon des prévisions attribuées à Anthropic et OpenAI, la majorité de l'entraînement proviendrait de ces boucles auto-supervisées, l'humain devenant davantage évaluateur final que générateur de données brutes.
 
 ## Ce que cela change concrètement
 

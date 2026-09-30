@@ -1,10 +1,3 @@
----
-Guide original : 5 Skills Claude qui gèrent toute ma vie
-Source : https://www.saadiakaram.ai/guides/5-life-skills
-Position réelle dans la bibliothèque au moment du traitement : 153/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le Skill 2 (sommeil) reste un outil de bien-être général, sans diagnostic. Le Skill 5 (revue de dépenses personnelles) porte sur un budget courant, pas sur des données financières sensibles (pas de revenu, patrimoine ou dette évoqués) ; reformulé tel quel.
----
-
 # Cinq Skills personnels qui structurent le quotidien
 
 *Claude · 5 min de lecture*

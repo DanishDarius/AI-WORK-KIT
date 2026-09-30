@@ -1,10 +1,3 @@
----
-Guide original : Arrête de demander des idées business à l'IA
-Source : https://www.saadiakaram.ai/guides/ai-business-idea-workflow
-Position réelle dans la bibliothèque au moment du traitement : 95/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Trouver une vraie idée business : douleur, demande, stress test
 
 *Multi-outils · 5 min de lecture*

@@ -12,7 +12,6 @@ export type GuideSummary = {
   duration: string;
   excerpt: string;
   category: string;
-  source: string;
   hasVisual: boolean;
   coverVariant: number;
   // Inclus dans l'accès AIW (lisible sans abonnement Bibliothèque).
@@ -63,7 +62,6 @@ function removeEditorialPlaceholders(markdown: string) {
 function parseFile(filename: string): Guide {
   const raw = fs.readFileSync(path.join(guidesDirectory, filename), "utf8");
   const frontMatterMatch = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
-  const frontMatter = frontMatterMatch?.[1] ?? "";
   const markdown = removeEditorialPlaceholders(raw.slice(frontMatterMatch?.[0].length ?? 0)).trim();
   const number = Number(filename.match(/^guide-(\d+)/)?.[1] ?? 0);
   const slug = filename.replace(/^guide-\d+-/, "").replace(/\.md$/, "");
@@ -71,7 +69,6 @@ function parseFile(filename: string): Guide {
   const meta = markdown.match(/^\*([^*]+?)\s*·\s*([^*]+?)\*$/m);
   const tool = meta?.[1].trim() ?? "Multi-outils";
   const duration = meta?.[2].trim() ?? "Guide pratique";
-  const source = frontMatter.match(/^Source\s*:\s*(.+)$/mi)?.[1].trim() ?? "";
   const hasVisual = /\[IMAGE[^\]]*\]/i.test(markdown);
   const searchable = normalize(`${title} ${slug} ${markdown.slice(0, 2500)}`);
   const category = categories.find(({ terms }) => terms.some((term) => searchable.includes(term)))?.label ?? "Pratique IA";
@@ -96,7 +93,6 @@ function parseFile(filename: string): Guide {
     duration,
     excerpt,
     category,
-    source,
     hasVisual,
     coverVariant: ((number - 1) % 8) + 1,
     inclus: guideInclus(number),
@@ -128,7 +124,6 @@ export function getGuideSummaries(): GuideSummary[] {
     duration: guide.duration,
     excerpt: guide.excerpt,
     category: guide.category,
-    source: guide.source,
     hasVisual: guide.hasVisual,
     coverVariant: guide.coverVariant,
     inclus: guide.inclus,

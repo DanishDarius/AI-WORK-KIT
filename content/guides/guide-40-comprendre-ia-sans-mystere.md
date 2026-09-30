@@ -1,10 +1,3 @@
----
-Guide original : Comprendre l'IA : Sans mystère.
-Source : https://www.saadiakaram.ai/guides/fondations-ia-comprendre
-Position réelle dans la bibliothèque au moment du traitement : 38/293. Premier tome d'une série « Fondations » en 5 parties.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée.
----
-
 # Comprendre l'IA sans mystère : entraînement, usage et limites en clair
 
 *Multi-outils · 8 min de lecture (Fondations, livre 1 sur 5)*
@@ -84,4 +77,3 @@ Pour chaque situation suivante, écrivez vous-même l'entrée, la sortie attendu
 
 Sources primaires consultées à la mi-septembre 2026. Les exemples pédagogiques de ce guide sont fictifs ; les fonctions des produits cités peuvent évoluer avec le temps.
 
-Ressources citées : documentation de référence sur l'apprentissage automatique ; documentation sur l'apprentissage supervisé et l'inférence ; documentation sur les réseaux de neurones ; documentation sur les modèles de langage ; documentation sur le fonctionnement des tokens ; ressource de la CNIL sur l'utilisation d'un système d'IA générative.

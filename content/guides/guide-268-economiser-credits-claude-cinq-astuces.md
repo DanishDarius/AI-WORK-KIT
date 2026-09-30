@@ -1,10 +1,3 @@
----
-Guide original : Arrête de cramer tes limites Claude
-Source : https://www.saadiakaram.ai/guides/save-claude-credits
-Position réelle dans la bibliothèque au moment du traitement : 267/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Pourcentages d'économie conservés comme affirmation de la source, non vérifiés indépendamment. Noms réels des modèles conservés (Claude, Haiku, Sonnet, Opus).
----
-
 # Cinq astuces pour faire durer ses crédits Claude sur tout le mois
 
 *Claude · 5 min de lecture*
@@ -45,7 +38,7 @@ Trois raisons principales expliquent généralement ce phénomène : un contexte
 
 **Combien de crédits peut-on espérer économiser en moyenne ?**
 
-Selon la source, entre 30 et 50 % sur un mois complet, une fois les cinq réflexes intégrés.
+Comptez entre 30 et 50 % sur un mois complet, une fois les cinq réflexes intégrés.
 
 **Faut-il passer à l'API ?**
 

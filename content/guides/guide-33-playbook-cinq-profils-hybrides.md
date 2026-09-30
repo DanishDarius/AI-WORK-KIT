@@ -1,9 +1,3 @@
----
-Guide original : PLAYBOOK : 5 parcours pour croiser tes compétences
-Source : https://www.saadiakaram.ai/guides/playbook-5-profils-competences-hybrides
-Statut : 0 image trouvée dans le DOM (imgCount: 0). 1 tableau de données réel détecté (comparaison CA/coûts sur deux périodes), recréé en Markdown ci-dessous.
----
-
 # Cinq croisements de compétences pour élargir votre métier : le guide pratique
 
 *Multi-outils · 20 min de lecture*
@@ -305,12 +299,6 @@ Exemple de formulation honnête : « J'ai construit un calculateur local de coû
 > Termine par une fiche de cinq lignes : problème, livrable, correction, résultat observé, limite. Ne transforme aucune donnée manquante en chiffre, ni aucun résultat ponctuel en promesse générale. Ne prétends jamais avoir exécuté un outil ou interrogé une personne. Aucun partage ni publication.
 
 Si un critère échoue, notez « à reprendre » et refaites la partie concernée. Si personne n'a encore essayé le résultat, notez « non testé ». Une progression modeste et vérifiable se présente clairement, en rendez-vous ou dans votre portfolio.
-
-## Ressources
-
-Les huit ressources citées dans ce guide sont reliées aux exercices de chaque parcours ; leurs pages officielles ont été consultées à la mi-septembre 2026. Les articles sont en accès libre ; le cours de marketing de contenu demande la création d'un compte gratuit. Vérifiez toujours les conditions d'accès et la langue au moment d'y accéder. Pour un article en anglais, une traduction est utile, mais conservez les termes d'origine et le lien pour vérifier un passage ambigu.
-
-Les projets, le calendrier et les critères proposés ici sont des repères pédagogiques de ce guide. Les sources citées étayent les notions et les ressources recommandées ; elles ne démontrent pas que ces cinq profils seraient les plus rares du marché, ni qu'ils garantiraient un avantage salarial.
 
 ## À retenir
 

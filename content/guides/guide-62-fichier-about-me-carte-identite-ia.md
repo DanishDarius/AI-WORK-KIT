@@ -1,10 +1,3 @@
----
-Guide original : Le fichier about-me.md qui fait piger Claude
-Source : https://www.saadiakaram.ai/guides/about-me-md
-Position réelle dans la bibliothèque au moment du traitement : 60/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées dépliées et capturées intégralement.
----
-
 # Le fichier about-me.md : votre carte d'identité opérationnelle pour l'IA
 
 *Claude · 5 min de lecture*

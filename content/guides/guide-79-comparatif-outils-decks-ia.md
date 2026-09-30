@@ -1,10 +1,3 @@
----
-Guide original : Quel outil de deck IA vaut vraiment le coup ?
-Source : https://www.saadiakaram.ai/guides/chatgpt-powerpoint
-Position réelle dans la bibliothèque au moment du traitement : 77/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Comparatif honnête des outils de présentation IA : lequel pour quel deck
 
 *ChatGPT · 5 min de lecture*

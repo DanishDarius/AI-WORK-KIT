@@ -1,15 +1,8 @@
----
-Guide original : 5 Skills Claude pour décrocher le job
-Source : https://www.saadiakaram.ai/guides/job-hunting-skills
-Position réelle dans la bibliothèque au moment du traitement : 286/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Nom réel conservé (Claude, LinkedIn).
----
-
 # Cinq Skills Claude pour couvrir tout le cycle de recherche d'emploi
 
 *Claude · 5 min de lecture*
 
-Chercher un emploi sans s'appuyer sur l'IA revient, selon la source, à partir mal équipé pour une épreuve exigeante. Cinq Skills Claude permettent de couvrir l'ensemble du parcours : audit de correspondance au poste, CV, entretien, négociation et suivi après l'entretien.
+Chercher un emploi sans s'appuyer sur l'IA revient à partir mal équipé pour une épreuve exigeante. Cinq Skills Claude permettent de couvrir l'ensemble du parcours : audit de correspondance au poste, CV, entretien, négociation et suivi après l'entretien.
 
 ## Les cinq Skills
 

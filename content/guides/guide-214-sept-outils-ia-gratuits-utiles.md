@@ -1,10 +1,3 @@
----
-Guide original : 7 outils IA gratuits qui valent vraiment le coup
-Source : https://www.saadiakaram.ai/guides/7-free-ai-tools
-Position réelle dans la bibliothèque au moment du traitement : 213/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Distinct des guides 128 et 199 (autres sélections d'outils gratuits) : sélection différente (Claude, Google AI Studio, Perplexity, NotebookLM, ChatGPT, Whisper/MacWhisper, Cursor), vérifié. Noms réels conservés comme faits (Claude, Google AI Studio, Gemini, Perplexity, NotebookLM, ChatGPT, Whisper, MacWhisper, Cursor, Google).
----
-
 # Sept outils IA gratuits qui valent vraiment le coup
 
 *Multi-outils · 5 min de lecture*

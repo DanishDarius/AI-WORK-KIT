@@ -1,10 +1,3 @@
----
-Guide original : L'IA n'a pas « un » niveau. Elle en a cinq.
-Source : https://www.saadiakaram.ai/guides/5-niveaux-ia
-Position réelle dans la bibliothèque au moment du traitement : 172/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Guide très long (5 niveaux, 5 prompts complets). Un « tableau » mentionné dans le niveau 4 fait partie du texte d'un prompt (instruction demandant à l'IA de produire un tableau), ce n'est pas un élément HTML `<table>` sur la page. Aucune recréation Markdown nécessaire. Noms réels conservés comme faits (ChatGPT, Claude, Gemini, Mistral, LangGraph, CrewAI, OpenAI Swarm, n8n, Zapier, OpenAI, Anthropic, Google DeepMind, xAI, Peter Thiel). Les champs à remplir dans le prompt du niveau 5 (revenus, épargne, capital) sont des emplacements vides destinés à être complétés par le lecteur. Aucune donnée financière personnelle n'est présente dans le guide lui-même.
----
-
 # Les cinq niveaux de l'IA : des grands modèles de langage à la superintelligence
 
 *Multi-outils · 12 min de lecture*

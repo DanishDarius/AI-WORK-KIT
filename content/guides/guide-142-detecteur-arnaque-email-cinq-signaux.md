@@ -1,10 +1,3 @@
----
-Guide original : Cet email est une arnaque ?
-Source : https://www.saadiakaram.ai/guides/email-scam-detector
-Position réelle dans la bibliothèque au moment du traitement : 140/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu de sécurité défensive (aide à repérer les tentatives de phishing) ; aucun souci de conformité.
----
-
 # Détecter une tentative d'arnaque par e-mail en dix secondes
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Il y a 4 Claudes différents
-Source : https://www.saadiakaram.ai/guides/4-claudes
-Position réelle dans la bibliothèque au moment du traitement : 283/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Accroche mentionnant Cowork, Code et Design comme les trois autres composantes de l'abonnement, alors que le corps développe en réalité Haiku, Sonnet, Opus et Claude Code (incohérence source, non reprise dans le titre). Noms réels conservés (Claude, Claude Haiku, Claude Sonnet, Claude Opus, Claude Code).
----
-
 # Quatre versions de Claude, quatre usages différents
 
 *Claude · 5 min de lecture*

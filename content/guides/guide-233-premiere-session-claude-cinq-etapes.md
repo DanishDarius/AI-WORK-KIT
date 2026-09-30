@@ -1,10 +1,3 @@
----
-Guide original : Guide de départ de l'app desktop Claude
-Source : https://www.saadiakaram.ai/guides/claude-starter
-Position réelle dans la bibliothèque au moment du traitement : 232/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Distinct du guide 208 (configuration en une journée avec six outils) : celui-ci porte sur l'attitude à adopter lors de la toute première session, non une checklist de configuration, vérifié et confirmé distinct. Nom réel conservé (Claude).
----
-
 # Réussir sa première session avec Claude en cinq étapes
 
 *Claude · 5 min de lecture*

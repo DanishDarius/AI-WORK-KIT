@@ -1,10 +1,3 @@
----
-Guide original : Les 5 seuls outils IA dont tu as besoin
-Source : https://www.saadiakaram.ai/guides/5-ai-tools
-Position réelle dans la bibliothèque au moment du traitement : 135/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms de produits réels (Claude, Perplexity, Canva, NotebookLM, Make, Zapier) conservés comme faits.
----
-
 # Une stack minimaliste de cinq outils IA qui couvre l'essentiel
 
 *Multi-outils · 5 min de lecture*

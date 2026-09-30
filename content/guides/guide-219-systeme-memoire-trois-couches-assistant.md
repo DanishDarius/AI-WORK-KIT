@@ -1,10 +1,3 @@
----
-Guide original : Donne une vraie mémoire à Claude
-Source : https://www.saadiakaram.ai/guides/claude-memory-system
-Position réelle dans la bibliothèque au moment du traitement : 218/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 191 (audit de la mémoire native de Claude) : celui-ci propose une architecture complète en 3 couches avec un fichier source central et une routine hebdomadaire, approche différente, vérifié et confirmé distinct. Noms réels conservés (Claude, ChatGPT).
----
-
 # Construire un vrai système de mémoire pour son assistant IA, en trois couches
 
 *Claude · 5 min de lecture*

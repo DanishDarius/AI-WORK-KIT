@@ -1,10 +1,3 @@
----
-Guide original : L'auditeur d'abonnements
-Source : https://www.saadiakaram.ai/guides/subscription-auditor
-Position réelle dans la bibliothèque au moment du traitement : 65/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Faire auditer ses abonnements récurrents par l'IA en dix minutes
 
 *Multi-outils · 5 min de lecture*

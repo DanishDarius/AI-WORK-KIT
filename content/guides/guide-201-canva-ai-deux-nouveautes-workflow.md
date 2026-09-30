@@ -1,10 +1,3 @@
----
-Guide original : Canva AI 2.0 : tout ce qu'il y a dedans
-Source : https://www.saadiakaram.ai/guides/canva-ai-2
-Position réelle dans la bibliothèque au moment du traitement : 200/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés comme faits (Canva, Magic Studio, Claude, Photoshop cité en comparaison).
----
-
 # Canva AI 2.0 : les nouveautés qui comptent vraiment
 
 *Canva · 5 min de lecture*

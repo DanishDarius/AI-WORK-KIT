@@ -1,10 +1,3 @@
----
-Guide original : Claude Dispatch : config et astuces
-Source : https://www.saadiakaram.ai/guides/claude-dispatch
-Position réelle dans la bibliothèque au moment du traitement : 114/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le nom de fonctionnalité cité (« tâches planifiées ») est traité comme un fait produit ; description reformulée.
----
-
 # Configurer des tâches planifiées qui tournent en autonomie
 
 *Claude · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Tu paies pour des choses que l'IA fait gratuitement
-Source : https://www.saadiakaram.ai/guides/5-outils-ia-gratuits
-Position réelle dans la bibliothèque au moment du traitement : 198/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Distinct du guide 128 (cinq ressources gratuites souvent oubliées) : sélection d'outils différente, vérifié. Noms réels conservés comme faits (NotebookLM, Google, Mistral, Le Chat, Claude, ChatGPT, Canva). Note de la source sur l'évolution des offres gratuites conservée.
----
-
 # Cinq outils IA gratuits à combiner plutôt qu'à collectionner
 
 *Multi-outils · 5 min de lecture*

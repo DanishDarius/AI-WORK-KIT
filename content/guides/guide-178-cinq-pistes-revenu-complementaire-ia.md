@@ -1,10 +1,3 @@
----
-Guide original : 10 side hustles IA qui font du vrai cash
-Source : https://www.saadiakaram.ai/guides/ai-side-hustles
-Position réelle dans la bibliothèque au moment du traitement : 177/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre original annonçait « 10 » pistes mais le corps du guide en détaille 5 (incohérence présente dans la source elle-même, vérifiée via inspection complète du DOM) ; titre reformulé au nombre réellement présent (5) pour rester fidèle au contenu réel. Fourchettes de tarifs conservées telles quelles : ce sont des suggestions de positionnement commercial pour une activité, non des données financières personnelles.
----
-
 # Cinq pistes de revenu complémentaire avec l'IA, réalistes et actionnables
 
 *Multi-outils · 5 min de lecture*

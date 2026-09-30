@@ -1,10 +1,3 @@
----
-Guide original : 5 Skills Claude qui me gèrent la vie #3
-Source : https://www.saadiakaram.ai/guides/5-skills-part-3
-Position réelle dans la bibliothèque au moment du traitement : 68/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Cinq Skills à monter une fois pour gérer un pan de vie chacun
 
 *Claude · 5 min de lecture*

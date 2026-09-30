@@ -1,10 +1,3 @@
----
-Guide original : 5 Skills Claude pour cerveaux ADHD
-Source : https://www.saadiakaram.ai/guides/adhd-claude-skills
-Position réelle dans la bibliothèque au moment du traitement : 100/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : guide destiné aux personnes ayant des difficultés d'attention ou de démarrage de tâche ; reformulé comme outils pratiques d'organisation, sans reformuler en diagnostic ni en conseil médical.
----
-
 # Cinq Skills pour démarrer une tâche et gérer les distractions
 
 *Claude · 5 min de lecture*

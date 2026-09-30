@@ -1,10 +1,3 @@
----
-Guide original : Le Skill qui crée tes autres Skills
-Source : https://www.saadiakaram.ai/guides/lock-it-in-skill
-Position réelle dans la bibliothèque au moment du traitement : 72/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un meta-skill pour générer correctement tous les autres Skills
 
 *Multi-outils · 5 min de lecture*

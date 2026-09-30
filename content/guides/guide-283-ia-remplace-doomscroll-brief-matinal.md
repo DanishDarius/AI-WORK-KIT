@@ -1,15 +1,8 @@
----
-Guide original : L'IA est en train de tuer le doomscroll
-Source : https://www.saadiakaram.ai/guides/ai-killing-doomscroll
-Position réelle dans la bibliothèque au moment du traitement : 282/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés (LinkedIn, X, Particle, Bulletin, ChatGPT).
----
-
 # Remplacer le défilement infini par un brief d'actualité généré par IA
 
 *Multi-outils · 5 min de lecture*
 
-L'IA contribuerait, selon la source, à réduire progressivement l'attrait du défilement compulsif sur les réseaux sociaux, non pas par intention, mais par un effet de bord de sa propre diffusion.
+L'IA contribuerait à réduire progressivement l'attrait du défilement compulsif sur les réseaux sociaux, non pas par intention, mais par un effet de bord de sa propre diffusion.
 
 ## Ce qui se passerait
 

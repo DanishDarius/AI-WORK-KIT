@@ -1,10 +1,3 @@
----
-Guide original : Fais sonner Claude comme toi
-Source : https://www.saadiakaram.ai/guides/sound-like-you
-Position réelle dans la bibliothèque au moment du traitement : 193/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. À distinguer du guide 188 (entraîner l'IA à écrire avec sa voix) : thème proche mais méthode et prompt différents : celui-ci se concentre sur l'extraction de tics syntaxiques et sur la règle des « choses que je ne dirais jamais », avec un mémo réutilisable dans les instructions globales ; le guide 188 propose une méthode en 4 étapes distincte (analyse de style en 10 règles, fichier de voix, réutilisation via Projets, correction par l'exemple). Vérifié et confirmé suffisamment distinct pour être conservé comme guide séparé. Nom réel conservé (Claude).
----
-
 # Construire un brief de voix réutilisable pour que l'IA écrive vraiment comme soi
 
 *Claude · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Pourquoi ton Skill Claude ne marche pas
-Source : https://www.saadiakaram.ai/guides/fix-your-skills
-Position réelle dans la bibliothèque au moment du traitement : 106/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Pourquoi un Skill ne se déclenche pas, et comment le corriger
 
 *Claude · 5 min de lecture*

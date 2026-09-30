@@ -1,10 +1,3 @@
----
-Guide original : Le coach fitness sans excuses
-Source : https://www.saadiakaram.ai/guides/fitness-coach
-Position réelle dans la bibliothèque au moment du traitement : 93/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un coach fitness qui s'ajuste chaque jour aux vraies données
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Le ton « propre mais sans âme » te trahit
-Source : https://www.saadiakaram.ai/guides/parler-comme-toi
-Position réelle dans la bibliothèque au moment du traitement : 187/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 174 (vocabulaire à bannir) : celui-ci propose une méthode complète en 4 étapes pour entraîner sa voix, distincte de la simple liste de mots interdits ; vérifié et confirmé distinct. Noms réels conservés (Claude, ChatGPT).
----
-
 # Entraîner une IA à écrire avec sa propre voix, en quatre étapes
 
 *Multi-outils · 5 min de lecture*

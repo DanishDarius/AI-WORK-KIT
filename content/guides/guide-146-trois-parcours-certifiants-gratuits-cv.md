@@ -1,10 +1,3 @@
----
-Guide original : 3 certifs IA gratuites à ajouter à ton CV
-Source : https://www.saadiakaram.ai/guides/ai-certifications-resume
-Position réelle dans la bibliothèque au moment du traitement : 144/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels cités (Google AI Essentials, DeepLearning.AI, Andrew Ng, Anthropic, Claude, LinkedIn) conservés comme faits. À distinguer du guide 145 (certifications Anthropic uniquement) : celui-ci couvre trois organismes différents.
----
-
 # Trois parcours certifiants gratuits à valoriser sur son CV
 
 *Multi-outils · 5 min de lecture*

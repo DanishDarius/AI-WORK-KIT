@@ -1,10 +1,3 @@
----
-Guide original : Personnalise tes plugins Claude
-Source : https://www.saadiakaram.ai/guides/customize-plugins
-Position réelle dans la bibliothèque au moment du traitement : 145/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Le réglage qui rend les plugins vraiment utiles
 
 *Claude · 5 min de lecture*

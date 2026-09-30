@@ -1,10 +1,3 @@
----
-Guide original : L'analyseur de risque IA pour ton métier
-Source : https://www.saadiakaram.ai/guides/personalized-risk
-Position réelle dans la bibliothèque au moment du traitement : 176/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé comme fait (Claude).
----
-
 # Mesurer précisément l'exposition de son métier à l'IA
 
 *Multi-outils · 5 min de lecture*

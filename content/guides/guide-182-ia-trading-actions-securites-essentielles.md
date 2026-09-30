@@ -1,10 +1,3 @@
----
-Guide original : L'IA peut maintenant trader tes actions
-Source : https://www.saadiakaram.ai/guides/robinhood-ai-trading
-Position réelle dans la bibliothèque au moment du traitement : 181/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu financier à risque (trading automatisé) : toutes les mises en garde et limites de sécurité de l'original sont conservées intégralement (pas de promesse de rendement, validation manuelle obligatoire, interdiction du trading sur marge/options/crypto sans validation de chaque ordre). Le champ « capital total » du prompt est un espace vide à remplir par le lecteur, aucune donnée financière personnelle n'est communiquée dans le guide.
----
-
 # L'IA peut désormais exécuter des ordres boursiers : ce qu'il faut sécuriser avant tout
 
 *Multi-outils · 5 min de lecture*

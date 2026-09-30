@@ -1,10 +1,3 @@
----
-Guide original : Ma structure d'agent IA en 4 briques
-Source : https://www.saadiakaram.ai/guides/how-i-build-ai-agents
-Position réelle dans la bibliothèque au moment du traitement : 156/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le chiffre d'expérience personnelle de l'auteure du titre original (« une trentaine d'agents ») est une donnée d'usage invérifiable, reformulée de façon générique.
----
-
 # Une structure en quatre briques pour construire n'importe quel agent IA
 
 *Multi-outils · 5 min de lecture*

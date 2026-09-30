@@ -1,9 +1,3 @@
----
-Guide original : "Claude réserve ton voyage"
-Source : saadiakaram.ai/guides/claude-reserve-ton-voyage
-Statut : reformulé (texte) : aucun visuel/tableau HTML détecté sur cette page
----
-
 # Faire réserver votre voyage par Claude, sans jamais lui confier votre carte bancaire
 
 *Claude · 6 min de lecture*
@@ -20,8 +14,6 @@ Statut : reformulé (texte) : aucun visuel/tableau HTML détecté sur cette page
 ## Introduction
 
 Le workflow concret : Claude compare les options, remplit toutes les informations, et s'arrête pile avant l'écran de paiement. Deux méthodes vérifiées (les connecteurs Expedia/Booking et Claude for Chrome) accompagnées de 3 prompts prêts à l'emploi.
-
-Sources citées dans le guide original : Expedia dans Claude (connecteur), Booking.com dans Claude, Claude for Chrome (Anthropic, page produit).
 
 Tout le monde explique comment faire planifier un voyage par une IA. Peu de monde explique comment la faire réserver pour de vrai, sans lui donner accès à votre carte bancaire. C'est pourtant exactement là que ça se joue. Voici le workflow réel : Claude compare, remplit tout, avance jusqu'à l'écran de paiement, puis s'arrête. Le seul geste qui vous reste, c'est de payer vous-même. Deux méthodes vérifiées, trois prompts prêts à coller.
 

@@ -1,10 +1,3 @@
----
-Guide original : Arrête de faire confiance à Claude. Crée le Comité.
-Source : https://www.saadiakaram.ai/guides/comite-ia
-Position réelle dans la bibliothèque au moment du traitement : 161/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (guide long, prompt complet en 3 étapes). Noms et références réels conservés comme faits (Stanford, Claude, ChatGPT, Gemini, Llama, DeepSeek, Andrej Karpathy, OpenAI, Anthropic, GitHub, revue Science). La statistique citée (« 49 % plus souvent ») est attribuée à une étude sourcée par la source d'origine, conservée telle quelle avec son attribution.
----
-
 # Le Comité IA : cinq conseillers virtuels pour éviter la complaisance
 
 *Claude · 8 min de lecture*

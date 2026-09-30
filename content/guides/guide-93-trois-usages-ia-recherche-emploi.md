@@ -1,10 +1,3 @@
----
-Guide original : 3 façons d'utiliser Claude pour trouver un job
-Source : https://www.saadiakaram.ai/guides/job-hunting-claude
-Position réelle dans la bibliothèque au moment du traitement : 91/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Trois usages de l'IA pour rendre la recherche d'emploi moins chronophage
 
 *Claude · 5 min de lecture*

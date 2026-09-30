@@ -1,10 +1,3 @@
----
-Guide original : L'antisèche Claude, fonction par fonction
-Source : https://www.saadiakaram.ai/guides/claude-cheat-sheet
-Position réelle dans la bibliothèque au moment du traitement : 122/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms de fonctionnalités et connecteurs cités comme faits, conservés tels quels.
----
-
 # Le panorama des huit fonctions principales à connaître
 
 *Claude · 5 min de lecture*

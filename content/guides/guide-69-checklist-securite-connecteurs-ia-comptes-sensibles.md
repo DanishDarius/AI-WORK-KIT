@@ -1,10 +1,3 @@
----
-Guide original : Le check à faire avant tout connecteur IA
-Source : https://www.saadiakaram.ai/guides/ai-onboarding-check-before-bank-access
-Position réelle dans la bibliothèque au moment du traitement : 67/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Le contrôle à faire avant de connecter une IA à un compte sensible
 
 *Multi-outils · 5 min de lecture*

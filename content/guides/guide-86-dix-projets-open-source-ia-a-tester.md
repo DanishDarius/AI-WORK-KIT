@@ -1,10 +1,3 @@
----
-Guide original : 10 projets GitHub open source à surveiller
-Source : https://www.saadiakaram.ai/guides/top-github-projects
-Position réelle dans la bibliothèque au moment du traitement : 84/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : les 10 noms de projets open source cités sont des faits (noms de logiciels réels) et non du contenu protégé ; reformulation appliquée aux descriptions et au texte d'accompagnement uniquement.
----
-
 # Dix projets open source à tester sans savoir coder
 
 *Multi-outils · 5 min de lecture*

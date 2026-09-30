@@ -1,10 +1,3 @@
----
-Guide original : Le détecteur de gaps de compétences
-Source : https://www.saadiakaram.ai/guides/knowledge-gap-finder
-Position réelle dans la bibliothèque au moment du traitement : 88/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Détecter ses écarts de compétences et bâtir un plan sur douze semaines
 
 *Multi-outils · 5 min de lecture*

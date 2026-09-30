@@ -1,10 +1,3 @@
----
-Guide original : Claude Code n'est pas ce que tu crois
-Source : https://www.saadiakaram.ai/guides/claude-code-not-scary
-Position réelle dans la bibliothèque au moment du traitement : 152/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom de produit réel (Claude Code) conservé comme fait.
----
-
 # Claude Code n'est pas réservé aux développeurs
 
 *Claude · 5 min de lecture*

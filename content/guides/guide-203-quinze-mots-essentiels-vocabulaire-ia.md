@@ -1,10 +1,3 @@
----
-Guide original : Le glossaire IA qui te fait parler juste
-Source : https://www.saadiakaram.ai/guides/ai-glossary
-Position réelle dans la bibliothèque au moment du traitement : 202/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre original annonçait « 20 termes » mais le corps du guide en détaille 15 (incohérence présente dans la source elle-même) ; titre reformulé au nombre réellement présent. Noms réels et termes techniques conservés comme faits (LLM, Claude, GPT, Gemini, o1, MCP).
----
-
 # Quinze mots essentiels pour suivre une conversation sur l'IA
 
 *Multi-outils · 5 min de lecture*

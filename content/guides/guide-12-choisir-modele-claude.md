@@ -1,9 +1,3 @@
----
-Guide original : "Fable, Opus, Sonnet, Haiku : quel modèle Claude pour quelle tâche"
-Source : saadiakaram.ai/guides/quel-modele-claude-pour-quelle-tache
-Statut : reformulé (texte). Aucun visuel/tableau HTML détecté sur cette page
----
-
 # Haiku, Sonnet, Opus, Fable : bien choisir son modèle Claude selon la tâche
 
 *Claude · 6 min de lecture*

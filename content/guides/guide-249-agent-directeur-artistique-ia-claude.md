@@ -1,10 +1,3 @@
----
-Guide original : J'ai construit un directeur créatif IA
-Source : https://www.saadiakaram.ai/guides/creative-director-agent
-Position réelle dans la bibliothèque au moment du traitement : 248/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Accroche mentionnant UGC, graphisme, IA image/vidéo et shot lists, éléments non détaillés explicitement dans le corps capturé (incohérence mineure de la source, non reprise dans le titre). Nom réel conservé (Claude).
----
-
 # Construire un agent directeur artistique dans un Projet Claude
 
 *Multi-outils · 5 min de lecture*

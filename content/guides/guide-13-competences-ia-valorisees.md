@@ -1,9 +1,3 @@
----
-Guide original : "Les 5 compétences IA qui valent plus qu'un diplôme"
-Source : saadiakaram.ai/guides/5-competences-ia-qui-valent-plus-qu-un-diplome
-Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
----
-
 # Les 5 compétences IA que le marché paie plus cher qu'un diplôme
 
 *Multi-outils · 8 min de lecture*

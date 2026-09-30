@@ -1,19 +1,12 @@
----
-Guide original : L'optimiseur de score de crédit
-Source : https://www.saadiakaram.ai/guides/credit-score-optimizer
-Position réelle dans la bibliothèque au moment du traitement : 276/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu traité comme organisation financière personnelle, jamais comme conseil financier personnalisé ; le disclaimer de la source (règles variables selon pays/organisme, à croiser avec son dossier réel) a été conservé et mis en avant. Distinct du guide 237 (dix tâches d'organisation financière) qui ne mentionnait le score de crédit que comme un item parmi dix, sans développement. Nom réel conservé (Claude).
----
-
 # Construire un plan d'amélioration du score de crédit avec Claude
 
 *Multi-outils · 5 min de lecture*
 
-Le score de crédit influence le taux d'un prêt immobilier, une assurance, parfois même une candidature à un emploi. Selon la source, la majorité des personnes ne s'y intéressent qu'au moment d'emprunter, ce qui est souvent trop tard. Un agent Claude bien configuré peut surveiller la situation et indiquer l'action la plus efficace chaque mois.
+Le score de crédit influence le taux d'un prêt immobilier, une assurance, parfois même une candidature à un emploi. La majorité des personnes ne s'y intéressent qu'au moment d'emprunter, ce qui est souvent trop tard. Un agent Claude bien configuré peut surveiller la situation et indiquer l'action la plus efficace chaque mois.
 
 ## Les cinq leviers qui influencent réellement le score
 
-Le taux d'utilisation des crédits (idéalement en dessous de 30 %), l'ancienneté moyenne des comptes, l'absence de retard de paiement, la diversité des types de crédit, et un nombre limité de demandes récentes. Le reste relève, selon la source, davantage du bruit que d'un véritable levier.
+Le taux d'utilisation des crédits (idéalement en dessous de 30 %), l'ancienneté moyenne des comptes, l'absence de retard de paiement, la diversité des types de crédit, et un nombre limité de demandes récentes. Le reste relève davantage du bruit que d'un véritable levier.
 
 ## Le prompt d'audit et de plan d'action
 

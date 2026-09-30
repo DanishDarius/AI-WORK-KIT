@@ -1,10 +1,3 @@
----
-Guide original : PREUVE : la prépa d'entretien IA en 3 étapes
-Source : https://www.saadiakaram.ai/guides/prepa-entretien-ia-preuve
-Position réelle dans la bibliothèque au moment du traitement : 42/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée.
----
-
 # Trois preuves concrètes pour un entretien où l'IA compte
 
 *Multi-outils · 10 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Le tailleur de CV
-Source : https://www.saadiakaram.ai/guides/resume-tailor
-Position réelle dans la bibliothèque au moment du traitement : 123/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un CV maître et un prompt pour l'adapter à chaque offre
 
 *Multi-outils · 5 min de lecture*

@@ -1,9 +1,3 @@
----
-Guide original : "Les 10 formations et certifications IA que je recommande selon ton niveau"
-Source : saadiakaram.ai/guides/top-10-certifications-ia
-Statut : reformulé (texte). Voir ressources-visuelles.md, réf. #1/#2/#3, pour les logos d'origine (à consulter sur la page source, non copiés ici ; ce sont des marques tierces)
----
-
 # 10 formations IA pour progresser selon votre profil : le comparatif complet
 
 *Multi-outils · 15 min de lecture*
@@ -52,8 +46,6 @@ Choisissez une seule de ces quatre portes d'entrée. Si la barrière de la langu
 
 **3. AI Fluency (Anthropic · Claude Academy)** : Pour apprendre à décider quoi déléguer à l'IA, à expliquer clairement le résultat attendu, et à exercer votre jugement sur le travail produit. À la clé : un badge de fin de cours après l'évaluation finale ; ce programme ne délivre pas le titre Claude Certified Architect. *Recommandé pour garder la main sur l'usage de l'IA : écrivez, pour une vraie tâche, ce que vous déléguez et ce que vous devez vérifier vous-même. Cette méthode reste valable même en changeant d'assistant.*
 
-[IMAGE, réf. #1 (logo Université d'Helsinki / MinnaLearn) : voir ressources-visuelles.md]
-
 **4. Elements of AI (Université d'Helsinki · MinnaLearn)** : Pour comprendre les principes et les limites de l'IA, au-delà du simple usage d'un assistant conversationnel. À la clé : un certificat de fin de cours délivré par l'université d'Helsinki. Ce parcours demande davantage de lecture et de réflexion qu'une simple initiation à un outil. *C'est l'option gratuite à privilégier pour comprendre l'IA en français, si vous acceptez un parcours plus long et cherchez des fondations durables. Pour améliorer vos prompts dès cette semaine, préférez plutôt les options 1, 2 ou 6, selon la langue disponible.*
 
 ---
@@ -64,11 +56,7 @@ Ces trois formations répondent à des objectifs différents. Vous pouvez en cho
 
 **5. AI Professional Certificate (Google)** : Pour appliquer l'IA à la recherche, à la production de contenu et à des outils de travail réutilisables. À la clé : un certificat de parcours Google, accompagné de projets réalisés. « Professional Certificate » désigne ici le nom du parcours de formation lui-même ; la certification Google Cloud (option 10) repose, elle, sur un examen distinct. *Recommandé pour construire un petit portfolio pratique : à privilégier si vous voulez aller plus loin qu'une simple initiation et évoluer dans l'environnement Google. Vous pouvez d'ailleurs commencer directement ici plutôt que par AI Essentials si vous préférez un programme plus complet.*
 
-[IMAGE, réf. #2 (logo DeepLearning.AI) : voir ressources-visuelles.md]
-
 **6. AI Prompting for Everyone (DeepLearning.AI, Andrew Ng)** : Pour mieux formuler vos recherches avec l'IA, fournir du contexte pertinent, obtenir une critique utile et travailler avec différents types de contenus. À la clé : un certificat de cours avec Pro, une fois les exigences du programme remplies. Les exemples portent notamment sur ChatGPT, Claude et Gemini. *Recommandé si vous utilisez déjà l'IA mais obtenez des réponses trop vagues : comparez deux formulations d'une même demande, et gardez celle dont vous pouvez vérifier le résultat et expliquer les limites.*
-
-[IMAGE, réf. #3 (logo DeepLearning.AI) : voir ressources-visuelles.md]
 
 **7. AI for Everyone (DeepLearning.AI, Andrew Ng)** : Pour apprendre à repérer un projet IA pertinent, comprendre ses grandes étapes et mieux collaborer avec une équipe technique. À la clé : un certificat de fin de formation dans l'offre éligible. C'est un cours de compréhension et de stratégie, pas un tutoriel sur les derniers assistants disponibles. *Recommandé pour un manager ou un entrepreneur qui doit décider où investir ses efforts : terminez avec une fiche d'une page résumant le problème à résoudre, les données disponibles, le résultat attendu et le test à mener.*
 

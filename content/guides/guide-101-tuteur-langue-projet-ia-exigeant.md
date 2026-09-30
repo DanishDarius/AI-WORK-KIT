@@ -1,10 +1,3 @@
----
-Guide original : Le tuteur de langues
-Source : https://www.saadiakaram.ai/guides/language-tutor
-Position réelle dans la bibliothèque au moment du traitement : 99/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un espace de travail IA comme tuteur de langue exigeant
 
 *Multi-outils · 5 min de lecture*

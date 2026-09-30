@@ -1,10 +1,3 @@
----
-Guide original : Claude en 1 jour : les 6 outils à régler
-Source : https://www.saadiakaram.ai/guides/setup-in-1-day
-Position réelle dans la bibliothèque au moment du traitement : 207/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer des guides 123 et 197 (plans sur 7 jours) : celui-ci propose un plan sur une seule journée, structuré par tranche horaire (matin/après-midi/soir), couvrant un ensemble de fonctionnalités différent, vérifié et confirmé distinct. Noms réels conservés (Claude, Cowork, Gmail, Calendar, Slack, Google Sheets, Notion, MCP, Excel).
----
-
 # Configurer Claude en une seule journée : six fonctionnalités à régler
 
 *Claude · 5 min de lecture*

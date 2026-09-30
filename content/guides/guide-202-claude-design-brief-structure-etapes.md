@@ -1,10 +1,3 @@
----
-Guide original : Claude Design, le walkthrough qui sert vraiment
-Source : https://www.saadiakaram.ai/guides/claude-design
-Position réelle dans la bibliothèque au moment du traitement : 201/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche d'introduction de la source mentionnait « 7 prompts à voler » sans qu'une liste de 7 prompts n'apparaisse dans le corps du guide capturé (un seul prompt présent) : incohérence présente dans la source elle-même, non reprise dans le titre reformulé. Nom réel conservé comme fait (Claude, Claude Design).
----
-
 # Claude Design : la méthode en trois étapes pour un brief qui aboutit
 
 *Claude · 5 min de lecture*

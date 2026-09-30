@@ -1,10 +1,3 @@
----
-Guide original : 5 choses que Claude fait et pas ChatGPT
-Source : https://www.saadiakaram.ai/guides/claude-vs-chatgpt
-Position réelle dans la bibliothèque au moment du traitement : 179/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés comme faits (Claude, ChatGPT, DALL-E, Cowork). Le coût combiné mentionné (≈ 40 €/mois) est une estimation illustrative de configuration double, conservée telle quelle sans donnée financière personnelle précise associée à l'auteur.
----
-
 # Claude ou ChatGPT : comment trancher selon son usage réel
 
 *Claude · 5 min de lecture*

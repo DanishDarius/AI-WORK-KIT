@@ -1,10 +1,3 @@
----
-Guide original : Fais auditer à Claude sa mémoire sur toi
-Source : https://www.saadiakaram.ai/guides/make-claude-audit-its-memory-about-you
-Position réelle dans la bibliothèque au moment du traitement : 190/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé comme fait (Claude).
----
-
 # Faire auditer par son assistant IA sa propre mémoire, en trois étapes
 
 *Claude · 5 min de lecture*

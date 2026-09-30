@@ -1,10 +1,3 @@
----
-Guide original : Ta bibliothèque IA gratuite + le bon chemin
-Source : https://www.saadiakaram.ai/guides/exaggerated-ai-skills-stat
-Position réelle dans la bibliothèque au moment du traitement : 70/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : le guide source fait référence au site d'origine et à sa propre bibliothèque de 200+ guides ; reformulé de façon générique pour rester applicable à toute bibliothèque de contenus similaire.
----
-
 # Dans quel ordre progresser dans une bibliothèque de guides IA
 
 *Multi-outils · 5 min de lecture*

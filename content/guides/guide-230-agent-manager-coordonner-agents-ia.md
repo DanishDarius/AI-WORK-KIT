@@ -1,10 +1,3 @@
----
-Guide original : Le job qui explose en 2026
-Source : https://www.saadiakaram.ai/guides/ai-agent-manager
-Position réelle dans la bibliothèque au moment du traitement : 229/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche/le titre source orientaient vers une analyse de marché de l'emploi, mais le corps porte entièrement sur la structure fonctionnelle d'un « agent-manager » pour coordonner plusieurs agents IA ; titre reformulé pour refléter le contenu réel. Distinct du guide 224 (Forward Deployed Engineer, analyse de marché de l'emploi) : celui-ci décrit un rôle/pattern opérationnel, non un métier émergent, vérifié et confirmé distinct.
----
-
 # Structurer un agent-manager pour coordonner plusieurs agents IA
 
 *Multi-outils · 5 min de lecture*

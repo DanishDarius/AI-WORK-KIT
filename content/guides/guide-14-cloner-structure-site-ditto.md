@@ -1,9 +1,3 @@
----
-Guide original : "Vole le site qui t'inspire : clone-le en code propre avec Ditto + Claude"
-Source : saadiakaram.ai/guides/cloner-un-site-en-code-avec-ditto
-Statut : reformulé (texte) : aucun visuel/tableau HTML détecté sur cette page
----
-
 # Reproduire la structure d'un site qui vous inspire, en code propre, avec Ditto et Claude
 
 *Claude · 8 min de lecture*

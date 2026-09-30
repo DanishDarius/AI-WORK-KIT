@@ -1,10 +1,3 @@
----
-Guide original : 30 commandes Cowork à te voler
-Source : https://www.saadiakaram.ai/guides/cowork-commands
-Position réelle dans la bibliothèque au moment du traitement : 197/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre original annonçait « 30 commandes » mais le corps du guide en détaille 6 (incohérence présente dans la source elle-même, vérifiée via inspection complète du DOM). Titre reformulé au nombre réellement présent. À distinguer du guide 189 (cinq modes d'utilisation de Cowork) : celui-ci porte sur des commandes slash précises, l'autre sur des modes de travail généraux. Vérifié et confirmé distinct. Nom réel conservé (Claude, Cowork).
----
-
 # Six commandes essentielles pour structurer une session Cowork
 
 *Claude · 5 min de lecture*

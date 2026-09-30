@@ -1,10 +1,3 @@
----
-Guide original : Claude en 5 étapes, version débutant
-Source : https://www.saadiakaram.ai/guides/claude-setup-5-steps
-Position réelle dans la bibliothèque au moment du traitement : 235/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Distinct du guide 233 (attitude pour la première session, sans étapes de configuration technique) et du guide 208 (configuration en une journée avec six outils différents) : celui-ci propose une séquence précise en 5 étapes techniques (instructions globales, fichier about-me, projects, connecteurs, skill) sur 45 minutes, vérifié et confirmé distinct. Noms réels conservés (Claude, Gmail, Calendar).
----
-
 # Configurer Claude en cinq étapes pour un usage personnalisé
 
 *Claude · 5 min de lecture*

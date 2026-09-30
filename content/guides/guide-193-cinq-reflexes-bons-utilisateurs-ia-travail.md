@@ -1,10 +1,3 @@
----
-Guide original : 5 trucs malins que les bons utilisent avec l'IA
-Source : https://www.saadiakaram.ai/guides/ai-at-work
-Position réelle dans la bibliothèque au moment du traitement : 192/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés comme faits (Claude, Claude Sonnet, Notion, Apple Notes).
----
-
 # Cinq réflexes qui distinguent les bons utilisateurs d'IA au travail
 
 *Multi-outils · 5 min de lecture*

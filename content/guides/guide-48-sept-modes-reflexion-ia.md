@@ -1,10 +1,3 @@
----
-Guide original : 7 modes de réflexion à garder sous la main
-Source : https://www.saadiakaram.ai/guides/seven-thinking-modes
-Position réelle dans la bibliothèque au moment du traitement : 46/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court (4 min), contenu intégralement capturé, aucune troncature détectée.
----
-
 # Sept modes de réflexion à garder sous la main pour piloter une IA
 
 *ChatGPT · 4 min de lecture*

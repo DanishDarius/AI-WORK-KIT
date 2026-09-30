@@ -1,10 +1,3 @@
----
-Guide original : Claude Code : 94 % de justesse en 30 s
-Source : https://www.saadiakaram.ai/guides/karpathy-claude-code-skills
-Position réelle dans la bibliothèque au moment du traitement : 63/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un CLAUDE.md à la racine du projet pour corriger les trois erreurs classiques des agents de code
 
 *Claude · 5 min de lecture*

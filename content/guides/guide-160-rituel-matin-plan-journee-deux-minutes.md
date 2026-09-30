@@ -1,10 +1,3 @@
----
-Guide original : Le kickoff du matin
-Source : https://www.saadiakaram.ai/guides/morning-kickoff
-Position réelle dans la bibliothèque au moment du traitement : 158/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Thématique proche des guides 111 (Agent 1 « Morning Briefing » dans Notion) et 116 (tâches planifiées, brief du lundi), mais prompt et structure distincts propres à ce guide-ci ; conservé comme contenu à part entière.
----
-
 # Un rituel matinal de deux minutes pour construire son plan de journée
 
 *Multi-outils · 5 min de lecture*

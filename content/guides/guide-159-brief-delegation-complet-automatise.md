@@ -1,10 +1,3 @@
----
-Guide original : Délègue ça
-Source : https://www.saadiakaram.ai/guides/delegate-this
-Position réelle dans la bibliothèque au moment du traitement : 157/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un brief de délégation qui ne laisse presque plus de questions
 
 *Multi-outils · 5 min de lecture*

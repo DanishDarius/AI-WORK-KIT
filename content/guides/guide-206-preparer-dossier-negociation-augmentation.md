@@ -1,10 +1,3 @@
----
-Guide original : Le négociateur d'augmentation
-Source : https://www.saadiakaram.ai/guides/raise-negotiator
-Position réelle dans la bibliothèque au moment du traitement : 205/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé comme fait (Claude).
----
-
 # Construire un dossier de négociation d'augmentation à partir de son propre historique
 
 *Multi-outils · 5 min de lecture*

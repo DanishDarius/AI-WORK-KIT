@@ -1,10 +1,3 @@
----
-Guide original : Le générateur d'ordre du jour 1:1
-Source : https://www.saadiakaram.ai/guides/oneonone-agenda
-Position réelle dans la bibliothèque au moment du traitement : 104/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un Skill qui prépare l'ordre du jour des entretiens individuels
 
 *Multi-outils · 5 min de lecture*

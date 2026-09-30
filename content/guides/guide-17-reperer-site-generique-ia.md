@@ -1,9 +1,3 @@
----
-Guide original : "27 preuves qu'un site est fait par une IA (et le prompt anti-slop)"
-Source : saadiakaram.ai/guides/20-preuves-site-fait-par-ia
-Statut : reformulé (texte) ; aucun visuel/tableau HTML détecté sur cette page
----
-
 # 27 signes qui trahissent un site généré par IA (et le prompt pour l'éviter)
 
 *Multi-outils · 7 min de lecture*

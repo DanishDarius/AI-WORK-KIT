@@ -1,10 +1,3 @@
----
-Guide original : Arrête d'attendre Claude tâche par tâche
-Source : https://www.saadiakaram.ai/guides/cowork-parallel
-Position réelle dans la bibliothèque au moment du traitement : 226/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Distinct des guides 189 et 198 (modes et commandes Cowork) : celui-ci porte spécifiquement sur l'exécution de sessions Cowork en parallèle, vérifié et confirmé distinct. Nom réel conservé (Claude, Cowork).
----
-
 # Lancer plusieurs sessions Cowork en parallèle plutôt qu'une à la fois
 
 *Claude · 5 min de lecture*

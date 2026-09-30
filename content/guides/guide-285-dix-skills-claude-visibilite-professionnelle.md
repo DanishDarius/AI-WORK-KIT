@@ -1,10 +1,3 @@
----
-Guide original : Cette astuce Claude peut te faire promouvoir
-Source : https://www.saadiakaram.ai/guides/10-skills
-Position réelle dans la bibliothèque au moment du traitement : 284/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (la structure « | Quoi | Qui | Deadline |» dans le prompt est un gabarit de tableau markdown à produire par l'IA, pas un tableau HTML de la page). Proche thématiquement des guides 234, 240 et 280 (construction de Skills) mais angle distinct : liste de dix Skills professionnels concrets orientés visibilité au travail, avec un exemple de Skill entièrement rédigé, vérifié et confirmé distinct. Nom réel conservé (Claude, Notion).
----
-
 # Dix Skills Claude pour gagner en visibilité professionnelle
 
 *Claude · 5 min de lecture*

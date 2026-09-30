@@ -1,10 +1,3 @@
----
-Guide original : Les 5 MCP Claude qu'un patron doit avoir
-Source : https://www.saadiakaram.ai/guides/top-5-claude-mcps-business-owners
-Position réelle dans la bibliothèque au moment du traitement : 74/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Cinq catégories de connecteurs à brancher pour piloter son activité avec l'IA
 
 *Claude · 5 min de lecture*

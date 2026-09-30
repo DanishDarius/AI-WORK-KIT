@@ -1,10 +1,3 @@
----
-Guide original : 5 compétences IA qui valent plus qu'un diplôme
-Source : https://www.saadiakaram.ai/guides/ai-skills-career
-Position réelle dans la bibliothèque au moment du traitement : 148/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. ⚠️ ATTENTION DOUBLON POTENTIEL : le titre de ce guide est identique, mot pour mot, au guide 13 déjà traité dans le lot 2 (« Les 5 compétences IA qui valent plus qu'un diplôme »). L'URL source diffère (ai-skills-career vs l'URL du guide 13, non ré-vérifiée à ce stade) et le contenu capturé ici est distinct dans son détail (auto-évaluation avec prompt, 5 compétences précises : cadrer un prompt, auditer une sortie, construire un workflow, documenter, refuser l'IA). Recommandation : avant intégration dans ta PWA, compare ce fichier avec le guide 13 pour vérifier s'il s'agit d'un vrai doublon de contenu (possible republication du même article sous une nouvelle URL, comme le cas déjà rencontré au lot 4) ou de deux articles distincts partageant le même titre. En cas de doublon confirmé, ne garder qu'une seule version dans ta bibliothèque finale.
----
-
 # Cinq compétences IA qui pèsent plus lourd qu'un diplôme
 
 *Multi-outils · 5 min de lecture*

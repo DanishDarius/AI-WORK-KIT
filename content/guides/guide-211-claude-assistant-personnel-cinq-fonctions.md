@@ -1,10 +1,3 @@
----
-Guide original : Claude devient ton assistant personnel
-Source : https://www.saadiakaram.ai/guides/claude-personal-assistant
-Position réelle dans la bibliothèque au moment du traitement : 210/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche d'introduction de la source mentionnait « 15 nouveaux connecteurs » sans que 15 éléments distincts n'apparaissent dans le corps du guide (seulement 5 fonctions). Incohérence présente dans la source, non reprise dans le titre reformulé. Nom réel conservé (Claude, Gmail, Calendar).
----
-
 # Configurer Claude comme assistant personnel : cinq fonctions à activer
 
 *Claude · 5 min de lecture*

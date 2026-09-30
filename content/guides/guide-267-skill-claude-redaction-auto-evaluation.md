@@ -1,10 +1,3 @@
----
-Guide original : Le rédacteur d'auto-évaluation
-Source : https://www.saadiakaram.ai/guides/performance-review
-Position réelle dans la bibliothèque au moment du traitement : 266/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Noms réels conservés (Claude, Slack, Linear, Notion).
----
-
 # Un Skill Claude pour rédiger son bilan d'auto-évaluation trimestriel
 
 *Multi-outils · 5 min de lecture*

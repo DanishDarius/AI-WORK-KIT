@@ -1,10 +1,3 @@
----
-Guide original : "Connecte Claude à TradingView et fais-en ton bot de trading personnalisé"
-Source : saadiakaram.ai/guides/brancher-ton-ia-sur-tes-donnees
-Statut : reformulé (texte). Aucun visuel/tableau HTML détecté sur cette page
-Note importante : contenu à caractère éducatif sur un outil d'analyse technique, explicitement PAS un conseil financier dans l'original. Cette précision est conservée intégralement dans la version reformulée, y compris tous les garde-fous (lecture seule, confirmation humaine, aucun ordre automatique)
----
-
 # Connecter Claude à TradingView : construisez votre propre assistant d'analyse technique
 
 *Claude · 9 min de lecture*

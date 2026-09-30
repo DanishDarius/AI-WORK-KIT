@@ -1,10 +1,3 @@
----
-Guide original : 10 façons d'avoir l'air brillant en réunion
-Source : https://www.saadiakaram.ai/guides/meeting-smart
-Position réelle dans la bibliothèque au moment du traitement : 163/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Dix prompts pour arriver préparé à chaque réunion
 
 *Claude · 5 min de lecture*

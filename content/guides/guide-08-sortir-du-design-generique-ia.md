@@ -1,9 +1,3 @@
----
-Guide original : "Arrête les designs d'IA génériques"
-Source : saadiakaram.ai/guides/arrete-les-designs-ia-generiques
-Statut : reformulé (texte). Aucun visuel/tableau HTML détecté sur cette page
----
-
 # Sortir du design IA générique : la méthode par les références, pas par le prompt
 
 *Multi-outils · 6 min de lecture*

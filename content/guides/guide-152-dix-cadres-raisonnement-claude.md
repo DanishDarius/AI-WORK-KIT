@@ -1,10 +1,3 @@
----
-Guide original : 10 raccourcis Claude qui marchent vraiment
-Source : https://www.saadiakaram.ai/guides/10-cheat-codes-claude
-Position réelle dans la bibliothèque au moment du traitement : 150/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (guide long, 10 cadres + 1 section combinaison). Noms réels conservés comme faits (Claude, Claude Code, Anthropic, Elon Musk : référence factuelle à un propos largement connu associé aux « premiers principes », pas une citation fictive attribuée).
----
-
 # Dix cadres de raisonnement qui changent vraiment les réponses obtenues
 
 *Claude · 7 min de lecture*

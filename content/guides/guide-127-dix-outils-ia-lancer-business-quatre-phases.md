@@ -1,10 +1,3 @@
----
-Guide original : Lancer un business à 1 M$ avec 10 outils IA
-Source : https://www.saadiakaram.ai/guides/1m-business-ai-tools
-Position réelle dans la bibliothèque au moment du traitement : 125/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Les noms d'outils cités (Claude, Perplexity, Canva, Gamma, ElevenLabs, Claude Code, Notion, Make, Zapier, Claude Cowork, ChatGPT) sont des faits conservés tels quels ; seules les descriptions ont été reformulées.
----
-
 # Dix outils IA pour lancer un projet ambitieux, phase par phase
 
 *Multi-outils · 5 min de lecture*

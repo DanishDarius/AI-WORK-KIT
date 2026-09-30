@@ -1,10 +1,3 @@
----
-Guide original : Le jumeau numérique de la FIFA
-Source : https://www.saadiakaram.ai/guides/jumeau-numerique-fifa
-Position réelle dans la bibliothèque au moment du traitement : 50/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Ce que la technologie de hors-jeu de la Coupe du Monde apprend à un business solo
 
 *Multi-outils · 7 min de lecture*

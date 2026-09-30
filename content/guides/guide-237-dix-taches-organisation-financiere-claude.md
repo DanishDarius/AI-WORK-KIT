@@ -1,10 +1,3 @@
----
-Guide original : 10 tâches finance perso à donner à Claude
-Source : https://www.saadiakaram.ai/guides/personal-finance
-Position réelle dans la bibliothèque au moment du traitement : 236/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu traité comme organisation financière personnelle (audit, suivi, scripts de négociation), jamais comme conseil financier personnalisé. Le disclaimer explicite de la source (« pas de conseil financier, juste de l'organisation ») a été conservé et mis en avant. Nom réel conservé (Claude).
----
-
 # Dix tâches d'organisation financière à confier à Claude
 
 *Claude · 5 min de lecture*

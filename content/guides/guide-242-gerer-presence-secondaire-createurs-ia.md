@@ -1,10 +1,3 @@
----
-Guide original : 3K€/mois en gérant les autres plateformes
-Source : https://www.saadiakaram.ai/guides/creator-retainer-side-hustle
-Position réelle dans la bibliothèque au moment du traitement : 241/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Montants (tarif mensuel, revenu visé) conservés comme données de positionnement d'une offre commerciale, non des données financières personnelles.
----
-
 # Gérer la présence secondaire de créateurs de contenu avec l'IA, en formule d'abonnement
 
 *Multi-outils · 5 min de lecture*

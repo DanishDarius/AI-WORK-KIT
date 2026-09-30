@@ -1,10 +1,3 @@
----
-Guide original : Claude peut maintenant gérer tes pubs Meta
-Source : https://www.saadiakaram.ai/guides/meta-ads-mcp
-Position réelle dans la bibliothèque au moment du traitement : 227/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche annonçait « 5 premiers prompts » alors que seuls 2 prompts (Audit, Création) figurent dans le corps capturé (incohérence de la source), non repris dans le titre reformulé. Noms réels conservés comme faits (Claude, Meta, Business Manager).
----
-
 # Piloter ses campagnes publicitaires Meta depuis Claude grâce à un connecteur MCP
 
 *Claude · 5 min de lecture*

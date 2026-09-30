@@ -1,10 +1,3 @@
----
-Guide original : Bosse plus malin avec Claude
-Source : https://www.saadiakaram.ai/guides/work-smarter
-Position réelle dans la bibliothèque au moment du traitement : 263/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement (la mention « tableau » dans le prompt est une instruction de mise en forme demandée à l'IA, pas un tableau HTML de la page). Estimation de temps gagné conservée comme affirmation de la source, non vérifiée indépendamment. Noms réels conservés (Claude, Whisper, Otter).
----
-
 # Cinq intégrations de Claude qui tiennent vraiment dans la durée
 
 *Claude · 5 min de lecture*
@@ -49,7 +42,7 @@ Le triage de boîte mail, dont l'effet se fait sentir dès le premier jour.
 
 **Combien de temps peut-on espérer gagner par semaine ?**
 
-Selon la source, entre trois et six heures sur l'ensemble des cinq intégrations, après un mois d'adaptation.
+Comptez entre trois et six heures sur l'ensemble des cinq intégrations, après un mois d'adaptation.
 
 ## À retenir
 

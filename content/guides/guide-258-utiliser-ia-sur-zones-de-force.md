@@ -1,10 +1,3 @@
----
-Guide original : Utilise l'IA là où tu es déjà bon
-Source : https://www.saadiakaram.ai/guides/use-ai-where-youre-already-good
-Position réelle dans la bibliothèque au moment du traitement : 257/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Nom réel conservé (Claude).
----
-
 # Utiliser l'IA sur ses zones de force, pas sur ses points faibles
 
 *Multi-outils · 5 min de lecture*

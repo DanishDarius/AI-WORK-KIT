@@ -1,10 +1,3 @@
----
-Guide original : Le dico IA pour les non-techs
-Source : https://www.saadiakaram.ai/guides/ai-terms-dictionary
-Position réelle dans la bibliothèque au moment du traitement : 82/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Le lexique IA simple, en français, sans jargon
 
 *Multi-outils · 5 min de lecture*

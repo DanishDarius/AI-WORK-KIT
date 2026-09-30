@@ -1,10 +1,3 @@
----
-Guide original : La compétence qui regarde les vidéos à votre place
-Source : https://www.saadiakaram.ai/guides/ai-watch-youtube-skill
-Position réelle dans la bibliothèque au moment du traitement : 44/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court (5 min), contenu intégralement capturé, aucune troncature détectée.
----
-
 # Une compétence qui décortique une vidéo pour en extraire le format
 
 *Gemini · 5 min de lecture*

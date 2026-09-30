@@ -1,10 +1,3 @@
----
-Guide original : La configuration d'assistant en 5 étapes
-Source : https://www.saadiakaram.ai/guides/five-step-setup
-Position réelle dans la bibliothèque au moment du traitement : 48/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court (7 min), contenu intégralement capturé, aucune troncature détectée.
----
-
 # Transformer un chatbot en véritable système, en cinq réglages
 
 *ChatGPT · 7 min de lecture*

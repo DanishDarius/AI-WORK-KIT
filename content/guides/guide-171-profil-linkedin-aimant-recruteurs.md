@@ -1,10 +1,3 @@
----
-Guide original : L'aimant à recruteurs sur LinkedIn
-Source : https://www.saadiakaram.ai/guides/linkedin-magnet
-Position réelle dans la bibliothèque au moment du traitement : 170/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Réécrire son profil LinkedIn pour matcher le langage des recruteurs
 
 *Multi-outils · 5 min de lecture*

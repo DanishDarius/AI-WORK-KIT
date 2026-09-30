@@ -1,10 +1,3 @@
----
-Guide original : Claude Code sans coder
-Source : https://www.saadiakaram.ai/guides/claude-code-starter
-Position réelle dans la bibliothèque au moment du traitement : 120/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le nom de produit cité (Claude Code) est un fait conservé tel quel.
----
-
 # Construire de vrais outils sans savoir coder : trois premiers projets
 
 *Claude · 5 min de lecture*

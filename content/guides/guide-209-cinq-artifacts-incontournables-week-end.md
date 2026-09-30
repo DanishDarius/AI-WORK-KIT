@@ -1,10 +1,3 @@
----
-Guide original : 10 Artifacts Claude à construire ce week-end
-Source : https://www.saadiakaram.ai/guides/weekend-artifacts
-Position réelle dans la bibliothèque au moment du traitement : 208/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre original annonçait « 10 » artifacts mais le corps du guide en détaille 5 (incohérence présente dans la source elle-même) ; titre reformulé au nombre réellement présent. Sélection d'outils distincte des guides 136 et 192 déjà traités (CRM perso, tracker d'habitudes, matrice de décision, planificateur de voyage, générateur de recettes). Valeurs techniques du prompt (localStorage, HTML autonome) conservées inchangées. Nom réel conservé (Claude).
----
-
 # Cinq artifacts incontournables à construire en un week-end
 
 *Claude · 5 min de lecture*

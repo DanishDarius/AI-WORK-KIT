@@ -1,10 +1,3 @@
----
-Guide original : Donnez du goût à votre IA
-Source : https://www.saadiakaram.ai/guides/design-taste-file
-Position réelle dans la bibliothèque au moment du traitement : 51/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide très court, contenu intégralement capturé, aucune troncature détectée.
----
-
 # Un fichier de goût pour que votre IA arrête de designer comme tout le monde
 
 *Claude · 6 min de lecture*

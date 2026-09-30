@@ -1,15 +1,8 @@
----
-Guide original : Le cerveau repas
-Source : https://www.saadiakaram.ai/guides/meal-mastermind
-Position réelle dans la bibliothèque au moment du traitement : 291/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Contenu traité comme organisation domestique (planification de repas et liste de courses), pas de conseil nutritionnel personnalisé ; allergies et régimes mentionnés restent des contraintes fournies par l'utilisateur au prompt, non des données de santé le concernant. Nom réel conservé (Claude, Carrefour Drive, Chronodrive, Auchan).
----
-
 # Un Skill Claude pour planifier les repas et générer la liste de courses
 
 *Multi-outils · 5 min de lecture*
 
-Il suffit d'indiquer ce que l'on souhaite manger dans la semaine : Claude construit les recettes correspondantes, calcule les quantités exactes selon le nombre de personnes, et fournit une liste de courses prête à être collée dans un drive ou un panier en ligne. Selon la source, ce Skill permettrait de récupérer environ deux heures par semaine.
+Il suffit d'indiquer ce que l'on souhaite manger dans la semaine : Claude construit les recettes correspondantes, calcule les quantités exactes selon le nombre de personnes, et fournit une liste de courses prête à être collée dans un drive ou un panier en ligne. Selon certaines estimations, ce Skill permettrait de récupérer environ deux heures par semaine.
 
 ## Le brief de base
 

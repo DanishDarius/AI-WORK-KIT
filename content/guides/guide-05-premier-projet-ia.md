@@ -1,18 +1,8 @@
----
-Guide original : "Ton premier projet IA : de zéro à un produit qui tourne, en 7 étapes"
-Source : saadiakaram.ai/guides/ton-premier-projet-avec-l-ia
-Statut : reformulé (texte) ; voir ressources-visuelles.md pour les éléments non modifiables (composants interactifs à recréer côté app)
----
-
-
 # De zéro à un produit qui fonctionne : votre premier projet IA en 7 étapes
-
 
 *Multi-outils · 12 min de lecture*
 
-
 ## Sommaire
-
 
 - Introduction
 - Étape 0 : Trouver une idée qui en vaut la peine (1 soirée)

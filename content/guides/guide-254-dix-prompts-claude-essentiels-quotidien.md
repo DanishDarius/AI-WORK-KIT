@@ -1,10 +1,3 @@
----
-Guide original : 10 prompts Claude que tu aurais dû sauver hier
-Source : https://www.saadiakaram.ai/guides/god-tier-prompts
-Position réelle dans la bibliothèque au moment du traitement : 253/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé (Claude).
----
-
 # Dix prompts Claude à garder sous la main au quotidien
 
 *Claude · 5 min de lecture*

@@ -1,9 +1,3 @@
----
-Guide original : "Le défilé qui tient dans un fichier"
-Source : saadiakaram.ai/guides/fashion-runway-website
-Statut : reformulé (texte) ; aucune image détectée, mais un fichier .md téléchargeable (le brief technique complet de 263 lignes) est lié en externe et n'a pas été récupéré ; voir ressources-visuelles.md
----
-
 # Un défilé de mode qui tient dans un seul fichier
 
 *Claude · 9 min de lecture*
@@ -28,8 +22,6 @@ Un site de mode où les mannequins marchent vers vous en boucle, se figent au su
 Un défilé qui tourne en boucle directement dans le navigateur. Les mannequins arrivent du fond à gauche, grandissent progressivement, glissent vers vous, puis sortent à droite. Vous survolez l'écran, tout se fige sauf celui que vous regardez. Vous cliquez, il vient se placer au centre et sa fiche produit apparaît. Le tout dans un seul fichier HTML, sans framework, sans librairie externe, sans la moindre requête vers un serveur tiers.
 
 Ce projet se construit en deux heures avec Claude ou n'importe quel agent de code. Pas parce que l'IA serait particulièrement douée en soi, mais parce que le brief est rédigé correctement dès le départ. Voici la méthode complète.
-
-*Note sur les ressources : le guide original propose un fichier .md téléchargeable de 263 lignes contenant les maths de la perspective, les keyframes exactes, le SVG du logo, les données produit et la checklist de recette. Ce fichier n'a pas été récupéré ici (voir `ressources-visuelles.md`). C'est un document technique à part entière que vous devrez reconstruire vous-même ou adapter, pas juste un visuel à remplacer.*
 
 ---
 

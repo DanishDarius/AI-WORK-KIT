@@ -1,10 +1,3 @@
----
-Guide original : 10 façons d'utiliser Claude au travail
-Source : https://www.saadiakaram.ai/guides/10-ways-to-use-claude
-Position réelle dans la bibliothèque au moment du traitement : 142/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Dix configurations pour intégrer l'assistant au travail sans tout bouleverser
 
 *Claude · 5 min de lecture*

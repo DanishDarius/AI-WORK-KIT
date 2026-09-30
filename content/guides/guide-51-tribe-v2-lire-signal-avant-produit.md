@@ -1,10 +1,3 @@
----
-Guide original : Meta peut prédire ton cerveau
-Source : https://www.saadiakaram.ai/guides/meta-peut-predire-ton-cerveau
-Position réelle dans la bibliothèque au moment du traitement : 49/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # TRIBE v2 de Meta : ce que ça modélise vraiment, et pourquoi le signal compte plus que le titre
 
 *Multi-outils · 7 min de lecture*
@@ -18,8 +11,6 @@ Le titre qui circule, c'est « Meta prédit ton cerveau ». Le fantasme sous-jac
 Ce que TRIBE v2 fait, précisément : à partir d'un contenu (image, vidéo, podcast, texte), il prédit la réponse d'un cerveau telle que mesurée par IRM fonctionnelle. Il ne lit pas une pensée, il ne décode pas une intention. Il modélise la façon dont un cerveau moyen réagit à un stimulus. C'est un outil de recherche en neurosciences, publié à des fins scientifiques, pas un moteur de ciblage publicitaire ; Meta l'a d'ailleurs diffusé sous licence non commerciale, code et poids inclus, en accès public. Cette précision est le point de départ ; sans elle, on tire les mauvaises conclusions.
 
 Mais voici ce que le débat « pour ou contre la lecture de pensées » rate complètement : une entreprise dont le métier consiste à capter l'attention sait désormais modéliser, en laboratoire, la réaction d'un cerveau à ce qu'il voit, entend et lit. Ce n'est pas le produit d'aujourd'hui. C'est la direction prise. Et une capacité comme celle-ci n'est jamais publiée par hasard.
-
-*Sources citées : annonce officielle de Meta AI ; le papier de recherche associé ; « Attention Is All You Need », NIPS 2017.*
 
 ## Ce qu'est réellement TRIBE v2, sans l'emballage
 

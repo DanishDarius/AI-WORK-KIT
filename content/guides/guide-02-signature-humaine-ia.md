@@ -1,9 +1,3 @@
----
-Guide original : "Filigrane Humain : le protocole pour utiliser l'IA sans devenir du slop"
-Source : saadiakaram.ai/guides/filigrane-humain-anti-slop
-Statut : reformulé (texte) ; voir ressources-visuelles.md pour les éléments non modifiables
----
-
 # Signature Humaine : le protocole pour utiliser l'IA sans produire du contenu jetable
 
 *Multi-outils · 9 min de lecture*

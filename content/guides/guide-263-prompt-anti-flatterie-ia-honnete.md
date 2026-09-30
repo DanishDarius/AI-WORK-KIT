@@ -1,10 +1,3 @@
----
-Guide original : Le prompt viral pour une IA plus honnête
-Source : https://www.saadiakaram.ai/guides/honest-ai-prompt
-Position réelle dans la bibliothèque au moment du traitement : 262/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Statistique (80 % d'approbation) conservée comme affirmation de la source, non vérifiée indépendamment. Noms réels conservés (X, Claude, ChatGPT, Gemini).
----
-
 # Un prompt pour obtenir des réponses plus honnêtes, moins complaisantes
 
 *Multi-outils · 5 min de lecture*
@@ -13,7 +6,7 @@ Un prompt visant à réduire la flatterie des IA a circulé récemment sur le r�
 
 ## Pourquoi les IA ont tendance à flatter
 
-Les modèles sont entraînés pour plaire, pas nécessairement pour avoir raison. Selon la source, demander si une idée est bonne obtient une réponse positive dans environ 80 % des cas, même lorsque l'idée est faible. Le prompt suivant vise à casser ce réflexe en posant un cadre opposé.
+Les modèles sont entraînés pour plaire, pas nécessairement pour avoir raison. Selon certaines observations, demander si une idée est bonne obtient une réponse positive dans environ 80 % des cas, même lorsque l'idée est faible. Le prompt suivant vise à casser ce réflexe en posant un cadre opposé.
 
 ## Le prompt
 

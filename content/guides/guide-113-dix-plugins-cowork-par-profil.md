@@ -1,10 +1,3 @@
----
-Guide original : 10 plugins Cowork qui remplacent des équipes
-Source : https://www.saadiakaram.ai/guides/10-cowork-plugins
-Position réelle dans la bibliothèque au moment du traitement : 111/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Les noms de plugins cités sont traités comme des faits (noms propres d'extensions de la marketplace évoquée) et conservés tels quels ; seules les descriptions ont été reformulées.
----
-
 # Dix plugins à activer selon son profil pour transformer l'IA en spécialiste
 
 *Multi-outils · 5 min de lecture*

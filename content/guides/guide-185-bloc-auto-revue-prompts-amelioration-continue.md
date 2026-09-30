@@ -1,10 +1,3 @@
----
-Guide original : Rends chaque prompt Claude plus intelligent
-Source : https://www.saadiakaram.ai/guides/claude-prompts-that-improve-themselves
-Position réelle dans la bibliothèque au moment du traitement : 184/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé comme fait (Claude).
----
-
 # Un bloc d'auto-révision pour que chaque prompt s'améliore tout seul
 
 *Claude · 5 min de lecture*

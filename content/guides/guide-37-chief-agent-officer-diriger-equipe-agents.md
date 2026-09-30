@@ -1,10 +1,3 @@
----
-Guide original : Chief Agent Officer : apprends à diriger une équipe d'agents IA
-Source : https://www.saadiakaram.ai/guides/chief-agent-officer-diriger-agents-ia
-Position réelle dans la bibliothèque au moment du traitement : 35/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 8 sections collapsées dépliées et capturées intégralement.
----
-
 # Chief Agent Officer : apprendre à diriger une petite équipe d'agents IA
 
 *22 min de lecture*
@@ -234,8 +227,8 @@ Sur votre CV, décrivez le projet et les responsabilités démontrées. Si vous 
 
 Votre valeur se voit dans vos décisions. Le moment où vous détectez une inconnue, refusez une conclusion et vérifiez la reprise mérite autant de place dans votre portfolio que la note finale elle-même.
 
-## Repères et sources
+## Repères
 
-Repères vérifiés à la mi-septembre 2026. Les liens officiels des cours et des fonctions concernées se trouvent dans leurs documentations respectives. Les titres de poste, accès et catalogues peuvent évoluer avec le temps. Les huit consignes et le cas fictif présentés ici sont des propositions pédagogiques, sans exécution réelle dans un modèle externe au moment de la rédaction de ce guide.
+Repères vérifiés à la mi-septembre 2026. Les titres de poste, accès et catalogues peuvent évoluer avec le temps. Les huit consignes et le cas fictif présentés ici sont des propositions pédagogiques, sans exécution réelle dans un modèle externe au moment de la rédaction de ce guide.
 
 **Questions fréquentes.** *Ces cours permettent-ils de devenir Chief Agent Officer ?* Ils constituent un point de départ pour apprendre à déléguer et évaluer du travail avec l'IA. Ce guide fait construire un premier dossier de preuves ; il ne confère pas un titre de direction et ne garantit ni poste ni salaire. *Les cours cités sont-ils gratuits et certifiants ?* Les cours sont gratuits ; certains annoncent un badge après évaluation, d'autres non ; un badge d'achèvement reste distinct d'une certification professionnelle surveillée, et l'usage de l'espace collaboratif nécessite généralement un accès payant séparé. *Faut-il savoir coder pour pratiquer avec trois agents ?* Les consignes se rédigent en français. Ce guide explique la configuration de trois sous-agents dans un agent de code en ligne de commande, leurs accès et les traces à vérifier ; une variante de rôles dans un chat classique permet aussi de commencer, en indiquant clairement qu'il s'agit d'une simulation.

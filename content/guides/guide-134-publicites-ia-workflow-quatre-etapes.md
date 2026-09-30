@@ -1,10 +1,3 @@
----
-Guide original : Des pubs IA qui performent vraiment
-Source : https://www.saadiakaram.ai/guides/ai-ads-higgsfield
-Position réelle dans la bibliothèque au moment du traitement : 132/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms de produits réels (Claude, Higgsfield) conservés comme faits.
----
-
 # Des publicités générées par IA qui ne ressemblent pas à des publicités IA
 
 *Multi-outils · 5 min de lecture*

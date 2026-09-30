@@ -1,10 +1,3 @@
----
-Guide original : Donne le sale boulot à Claude
-Source : https://www.saadiakaram.ai/guides/creativity-prompts
-Position réelle dans la bibliothèque au moment du traitement : 141/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Cinq méthodes pour déléguer le répétitif et garder la vraie créativité
 
 *Claude · 5 min de lecture*

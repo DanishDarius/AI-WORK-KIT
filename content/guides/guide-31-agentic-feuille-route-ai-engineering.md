@@ -1,9 +1,3 @@
----
-Guide original : "AGENTIC : ta feuille de route pour développer les 4 compétences de l'AI engineering"
-Source : saadiakaram.ai/guides/agentic-feuille-de-route-ai-engineering
-Statut : reformulé (texte) ; aucune image ni tableau HTML détecté sur cette page
----
-
 # La feuille de route pour développer les 4 compétences de l'ingénierie IA
 
 *Multi-outils · 20 min de lecture*
@@ -232,12 +226,6 @@ Pour l'essai utilisateur, donner une tâche sans expliquer les boutons à l'avan
 Le récit à compléter avec ses propres faits : « J'ai construit [périmètre] pour [besoin observé ou hypothèse]. J'ai choisi [solution] parce que [compromis]. Sur [cas et répétitions], j'ai mesuré [résultats réels]. L'agent a réalisé [contribution], que j'ai vérifiée avec [preuves]. La limite actuelle est [limite] ; mon prochain test est [décision]. »
 
 Il faut commencer maintenant par renseigner les quatre niveaux du diagnostic, bloquer un créneau, et écrire sa spec. La première séance doit laisser un document que l'on peut relire ; la suivante doit tester une hypothèse précise.
-
----
-
-## 08. Retournez aux sources
-
-Les cinq lettres d'Andrew Ng citées dans le guide original ont été consultées le 13 septembre 2026 : la carte des compétences (14 août 2026), créer et déployer des applications IA (21 août 2026), les fondamentaux du logiciel (28 août 2026), utiliser les agents de code (4 septembre 2026), et façonner le produit (11 septembre 2026), toutes publiées par DeepLearning.AI. Le parcours en six semaines, le cas « Atelier Atlas », les consignes et l'exercice de diagnostic sont des créations pédagogiques originales de ce guide ; les exemples ne sont pas des sorties de modèles réellement exécutées pour cette publication.
 
 ---
 

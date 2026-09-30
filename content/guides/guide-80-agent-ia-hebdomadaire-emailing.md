@@ -1,10 +1,3 @@
----
-Guide original : J'ai monté un agent IA pour mon emailing
-Source : https://www.saadiakaram.ai/guides/email-marketing-agent
-Position réelle dans la bibliothèque au moment du traitement : 78/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un agent IA hebdomadaire pour auditer et préparer son emailing
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Le site gratuit qui sauve tes UI de la bouillie
-Source : https://www.saadiakaram.ai/guides/21st-dev-components
-Position réelle dans la bibliothèque au moment du traitement : 199/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés comme faits (21st.dev, Claude, Cursor, Claude Code, React, Tailwind). Valeurs techniques du prompt (placeholder couleur hex) conservées inchangées.
----
-
 # Une bibliothèque de composants gratuite pour des interfaces générées par IA vraiment propres
 
 *Multi-outils · 5 min de lecture*

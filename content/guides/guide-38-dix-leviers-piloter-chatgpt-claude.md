@@ -1,10 +1,3 @@
----
-Guide original : 10 leviers pour mieux piloter ChatGPT et Claude
-Source : https://www.saadiakaram.ai/guides/10-commandes-pour-piloter-chatgpt-et-claude
-Position réelle dans la bibliothèque au moment du traitement : 36/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée.
----
-
 # Dix leviers de pilotage pour obtenir de meilleures réponses de votre IA
 
 *Multi-outils · 10 min de lecture*

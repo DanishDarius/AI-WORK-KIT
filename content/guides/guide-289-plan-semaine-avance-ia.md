@@ -1,10 +1,3 @@
----
-Guide original : 5 choses à faire cette semaine pour prendre de l'avance
-Source : https://www.saadiakaram.ai/guides/get-ahead-ai
-Position réelle dans la bibliothèque au moment du traitement : 288/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Sujet distinct : plan d'exécution sur 5 jours combinant plusieurs fonctionnalités (Projets, calibrage de voix, itération). Noms réels conservés (Claude, LinkedIn, X, Projects, Skills, Dispatch, Perplexity, Artifacts).
----
-
 # Un plan sur cinq jours pour prendre de l'avance avec l'IA
 
 *Multi-outils · 5 min de lecture*

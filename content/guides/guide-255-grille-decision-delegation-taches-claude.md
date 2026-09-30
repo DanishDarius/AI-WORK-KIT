@@ -1,10 +1,3 @@
----
-Guide original : Quoi déléguer à Claude
-Source : https://www.saadiakaram.ai/guides/ai-risk-score
-Position réelle dans la bibliothèque au moment du traitement : 254/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (la mention « format tableau » dans le prompt est une instruction de mise en forme demandée à l'IA, pas un tableau HTML réel). Nom réel conservé (Claude).
----
-
 # Une grille en trois axes pour décider ce qui peut être délégué à Claude
 
 *Claude · 5 min de lecture*

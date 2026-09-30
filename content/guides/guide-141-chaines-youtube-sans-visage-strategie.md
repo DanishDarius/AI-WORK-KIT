@@ -1,10 +1,3 @@
----
-Guide original : Le faceless YouTube qui marche en 2026
-Source : https://www.saadiakaram.ai/guides/faceless-youtube
-Position réelle dans la bibliothèque au moment du traitement : 139/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms d'outils réels cités (Perplexity, Claude, ElevenLabs, Midjourney, Flux, CapCut, vidIQ, TubeBuddy) et plateforme (YouTube) conservés comme faits.
----
-
 # La stratégie qui fait fonctionner les chaînes vidéo sans visage
 
 *Multi-outils · 5 min de lecture*

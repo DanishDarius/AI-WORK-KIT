@@ -1,10 +1,3 @@
----
-Guide original : Le Skill qui trouve les gaps du marché
-Source : https://www.saadiakaram.ai/guides/gap-finder-skill
-Position réelle dans la bibliothèque au moment du traitement : 107/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un Skill pour repérer les angles de contenu que personne ne traite
 
 *Multi-outils · 5 min de lecture*

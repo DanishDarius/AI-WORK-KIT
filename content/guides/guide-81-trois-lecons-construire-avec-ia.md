@@ -1,10 +1,3 @@
----
-Guide original : 3 leçons du nouveau guide pratique fondateur
-Source : https://www.saadiakaram.ai/guides/anthropic-founder-playbook-takeaways
-Position réelle dans la bibliothèque au moment du traitement : 79/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Trois leçons essentielles pour construire un produit avec l'IA
 
 *Multi-outils · 5 min de lecture*

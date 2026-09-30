@@ -1,10 +1,3 @@
----
-Guide original : 3 Artifacts Claude qui ont viré mes apps fitness
-Source : https://www.saadiakaram.ai/guides/fitness-artifacts
-Position réelle dans la bibliothèque au moment du traitement : 191/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu de bien-être général (suivi d'entraînement, calcul de macronutriments) : pas de donnée médicale personnelle, traité normalement. Valeurs techniques du prompt (localStorage, vanilla JS, seuils numériques) conservées inchangées pour ne pas casser le fonctionnement du prompt. Nom réel conservé (Claude).
----
-
 # Trois artifacts qui remplacent des applications de fitness payantes
 
 *Claude · 5 min de lecture*

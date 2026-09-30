@@ -1,10 +1,3 @@
----
-Guide original : Le job IA le plus chaud de 2026
-Source : https://www.saadiakaram.ai/guides/forward-deployed-engineer
-Position réelle dans la bibliothèque au moment du traitement : 223/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Fourchette de rémunération conservée (donnée de marché par catégorie de poste, non donnée financière personnelle). Noms réels conservés (Anthropic, OpenAI, Python).
----
-
 # Forward Deployed Engineer : un métier émergent à fort potentiel
 
 *Multi-outils · 5 min de lecture*

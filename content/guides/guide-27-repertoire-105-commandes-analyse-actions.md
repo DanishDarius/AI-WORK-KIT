@@ -1,9 +1,3 @@
----
-Guide original : "CODES : 105 commandes pour analyser une entreprise avec l'IA"
-Source : saadiakaram.ai/guides/codes-105-commandes-analyse-actions-ia
-Statut : reformulé (texte) ; aucune image ni tableau HTML détecté. Guide très volumineux (105 prompts complets sur la page source, environ 250 000 caractères une fois développés) : les 5 commandes phares sont reformulées intégralement, les 100 autres sont présentées sous forme de répertoire structuré (nom, famille, objet) suivant un modèle de prompt unique reformulé une seule fois plutôt que répété 100 fois (voir note méthodologique en fin de fichier). Un fichier texte téléchargeable regroupant les 105 prompts complets existe sur la page source et n'a pas été récupéré (voir ressources-visuelles.md).
----
-
 # Le répertoire des 105 questions à poser à l'IA pour analyser une entreprise
 
 *Multi-outils · 30 min de lecture*
@@ -54,7 +48,7 @@ Vous pouvez ensuite convenir, dans la même conversation, qu'un nom abrégé ren
 
 **/earnings : Lire une publication trimestrielle.** Replace le trimestre dans son contexte : périodes comparables, mesures ajustées, et questions à poser pour la suite.
 
-**Le modèle de prompt commun aux 105 commandes :** chacune des 105 consignes de ce répertoire suit exactement la même structure, reformulée ici une seule fois pour éviter la répétition :
+**Le modèle de prompt commun aux 105 commandes :** chacune des 105 consignes de ce répertoire suit exactement la même structure, présentée ici une seule fois pour éviter la répétition :
 
 > [Nom de la commande] · [objet de la commande]. Ce raccourci est une convention de ce guide, pas une fonction native ni un accès à des données en direct. Exécute les instructions complètes ci-dessous.
 >
@@ -120,9 +114,9 @@ Pour un premier essai réel, choisissez /period-check ou /citation-audit sur un 
 
 ---
 
-## 06. Garder les références et les limites
+## 06. Garder les limites en tête
 
-Ces consignes constituent un répertoire pédagogique original ; elles ne sont validées ni par la SEC, ni par Anthropic, ni par OpenAI. Les sources citées dans le guide original expliquent les documents et concepts mentionnés, sans endosser ces prompts pour autant : SEC : Lire un rapport 10-K ; SEC : Comprendre les états financiers ; Aswath Damodaran (NYU) : sur la valeur terminale d'un DCF ; Anthropic : Plugins financiers officiels (pour distinguer une commande réellement installée d'une simple convention textuelle de ce guide).
+Ces consignes constituent un répertoire pédagogique original ; elles ne sont validées ni par la SEC, ni par Anthropic, ni par OpenAI.
 
 ---
 
@@ -134,6 +128,6 @@ Commencez par une seule commande dont vous pouvez contrôler vous-même le résu
 
 ---
 
-### Note méthodologique sur ce fichier
+### Utiliser la liste complète des 105 commandes
 
-La page source contient 105 prompts intégralement rédigés, avec pour chacun ses champs, ses pièces nécessaires et son texte de mission complet, soit environ 250 000 caractères une fois tous développés. Reproduire l'intégralité des 105 prompts mot pour mot représenterait, à lui seul, un fichier plus volumineux que l'ensemble des 26 autres guides de ce lot réunis. Le choix fait ici a été de reformuler intégralement les 5 commandes phares et le modèle de prompt commun aux 105 (qui ne varie, d'une commande à l'autre, que par son nom, son objet, ses pièces nécessaires et sa mission spécifique), puis de lister les 100 commandes complémentaires avec leur nom exact et leur objet reformulé, classées par famille comme sur la page source. Pour reconstituer le prompt complet d'une commande précise parmi les 100, appliquez le modèle reformulé en section 02 en y insérant le nom et l'objet de la commande souhaitée. Le fichier texte téléchargeable proposé sur la page source (« Télécharger les 105 commandes ») contient les 105 prompts intégraux tels que rédigés par l'autrice originale ; il n'a pas été récupéré ici (voir ressources-visuelles.md).
+Ce guide détaille les 5 commandes phares et le modèle de prompt commun aux 105 commandes, qui ne varie d'une commande à l'autre que par son nom, son objet, ses pièces nécessaires et sa mission. Les 100 commandes complémentaires sont listées par famille avec leur nom et leur objet. Pour obtenir le prompt complet de l'une d'elles, appliquez le modèle de la section 02 en y insérant son nom et son objet.

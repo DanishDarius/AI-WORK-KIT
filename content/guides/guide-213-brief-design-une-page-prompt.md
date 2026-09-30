@@ -1,10 +1,3 @@
----
-Guide original : Un outil design IA qui bosse à ta place
-Source : https://www.saadiakaram.ai/guides/figma-ai-agent-creative-brief
-Position réelle dans la bibliothèque au moment du traitement : 212/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés comme faits (Figma, Claude).
----
-
 # Transformer des notes brutes en brief design exploitable, en une page
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Quel modèle Claude tu dois utiliser
-Source : https://www.saadiakaram.ai/guides/which-model
-Position réelle dans la bibliothèque au moment du traitement : 147/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 114 (règle des cinq secondes, sans prompt sélecteur) : celui-ci ajoute un prompt qui recommande le modèle automatiquement, angle distinct. Noms de modèles (Haiku, Sonnet, Opus) conservés comme faits.
----
-
 # Un prompt qui choisit le bon modèle à sa place
 
 *Claude · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : 10 jobs IA sur lesquels te positionner
-Source : https://www.saadiakaram.ai/guides/10-ai-jobs
-Position réelle dans la bibliothèque au moment du traitement : 178/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Fourchettes de rémunération conservées telles quelles : il s'agit de données de marché sur des catégories de postes, non de données financières personnelles.
----
-
 # Dix métiers liés à l'IA sur lesquels se positionner dès maintenant
 
 *Multi-outils · 5 min de lecture*

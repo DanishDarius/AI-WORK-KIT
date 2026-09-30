@@ -1,10 +1,3 @@
----
-Guide original : 3 dashboards Codex depuis tes données clients
-Source : https://www.saadiakaram.ai/guides/codex-dashboards
-Position réelle dans la bibliothèque au moment du traitement : 204/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés comme faits (Codex, OpenAI, Chart.js, Chrome). Fourchette de tarifs conservée (positionnement commercial, non donnée personnelle).
----
-
 # Trois tableaux de bord générés à partir de données clients avec Codex
 
 *Multi-outils · 5 min de lecture*

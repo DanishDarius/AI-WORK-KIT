@@ -1,10 +1,3 @@
----
-Guide original : Le mode tuteur caché de Claude
-Source : https://www.saadiakaram.ai/guides/learning-mode
-Position réelle dans la bibliothèque au moment du traitement : 59/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées dépliées et capturées intégralement.
----
-
 # Le réglage méconnu qui transforme Claude en vrai tuteur socratique
 
 *Claude · 5 min de lecture*

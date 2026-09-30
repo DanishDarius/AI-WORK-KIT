@@ -1,10 +1,3 @@
----
-Guide original : 5 agents IA à monter avec ChatGPT
-Source : https://www.saadiakaram.ai/guides/chatgpt-5-agents
-Position réelle dans la bibliothèque au moment du traitement : 124/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Les noms de produits cités (ChatGPT, GPTs personnalisés, et les outils tiers mentionnés) sont des faits conservés tels quels.
----
-
 # Cinq agents à monter avec des GPTs personnalisés
 
 *ChatGPT · 5 min de lecture*

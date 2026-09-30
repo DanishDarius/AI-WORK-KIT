@@ -1,10 +1,3 @@
----
-Guide original : ChatGPT Images 2 : 6 choses qu'il fait
-Source : https://www.saadiakaram.ai/guides/chatgpt-images-2
-Position réelle dans la bibliothèque au moment du traitement : 244/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Affirmations sur les capacités du produit conservées telles que formulées par la source (caractéristiques annoncées d'un outil, non vérifiées de façon indépendante). Nom réel conservé (ChatGPT).
----
-
 # ChatGPT Images 2 : six nouveautés qui changent réellement l'usage
 
 *ChatGPT · 5 min de lecture*

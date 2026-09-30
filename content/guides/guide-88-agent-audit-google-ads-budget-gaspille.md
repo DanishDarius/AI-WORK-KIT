@@ -1,10 +1,3 @@
----
-Guide original : L'agent Google Ads
-Source : https://www.saadiakaram.ai/guides/google-ads-agent
-Position réelle dans la bibliothèque au moment du traitement : 86/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un agent IA pour auditer les campagnes Google Ads chaque semaine
 
 *Multi-outils · 5 min de lecture*

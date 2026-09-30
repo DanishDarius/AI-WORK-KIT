@@ -1,11 +1,3 @@
----
-Guide original : "UPGRADE : les 5 réglages qui font passer ChatGPT de 10 % à 100 %"
-Source : saadiakaram.ai/guides/5-reglages-chatgpt-setup
-Statut : reformulé (texte) ; voir ressources-visuelles.md, réf. #4, pour les icônes décoratives d'origine (à consulter sur la page source, non copiées ici)
----
-
-[IMAGE, réf. #4 : icônes décoratives d'interface, dispersées dans les sections 01 à 06 de la page source : voir ressources-visuelles.md]
-
 # ChatGPT niveau expert : les 5 réglages qui changent vraiment la donne
 
 *ChatGPT · 8 min de lecture*

@@ -1,9 +1,3 @@
----
-Guide original : "PRODUIT : crée ton produit digital avec la méthode sandwich IA"
-Source : saadiakaram.ai/guides/produit-sandwich-ia-skill-produit-digital
-Statut : reformulé (texte), aucune image détectée ; 17 balises <table> vides détectées dans le DOM (éléments de mise en page sans contenu textuel, rien à recréer) ; plusieurs ressources téléchargeables (skill .zip, PDF 28 pages, kit .zip) non récupérées (voir ressources-visuelles.md)
----
-
 # La méthode sandwich : garder votre expertise aux deux bouts, laisser l'IA construire au milieu
 
 *Claude · 25 min de lecture*
@@ -92,7 +86,7 @@ Une bonne référence visuelle se commente précisément : « les exercices sont
 
 ## 04. Construire votre propre version de la skill
 
-Le guide original propose une skill téléchargeable prête à l'emploi pour Claude, construite autour d'un fichier d'instructions unique (SKILL.md) sans code à exécuter ni donnée cachée. Le principe général, à reproduire vous-même si vous voulez construire votre propre version :
+Une skill prête à l'emploi pour Claude se construit autour d'un fichier d'instructions unique (SKILL.md), sans code à exécuter ni donnée cachée. Le principe général, à reproduire pour construire votre propre version :
 
 - Le fichier d'instructions doit rester lisible et modifiable avant toute utilisation.
 - Dans Claude, la fonctionnalité d'exécution de code et de création de fichiers doit être disponible et activée (les règles de votre organisation peuvent limiter cette option).
@@ -160,7 +154,7 @@ Une checklist déclarative comme celle-ci ne mesure pas la demande du marché : 
 
 ## 07. L'exemple appliqué : un produit terminé
 
-Le guide original inclut un exemple complet : un playbook fictif consacré à la publicité Meta (28 pages : économie du compte, mesure, campagne, création, test, diagnostic, budget), avec un cas chiffré corrigé, des prompts et des fiches réutilisables. Le cas utilisé (une boutique fictive nommée « Atelier Nacre ») illustre comment refaire la démarche avec vos propres données.
+Prenons un exemple complet : un playbook fictif consacré à la publicité Meta (28 pages : économie du compte, mesure, campagne, création, test, diagnostic, budget), avec un cas chiffré corrigé, des prompts et des fiches réutilisables. Le cas utilisé (une boutique fictive nommée « Atelier Nacre ») illustre comment refaire la démarche avec vos propres données.
 
 Quand vous regardez un produit fini de ce type, observez comment sa promesse se traduit concrètement en outils, décisions et exercices. Reprenez cette méthode de construction pour votre propre sujet, en y apportant votre propre expertise et vos propres exemples, pas ceux de quelqu'un d'autre.
 

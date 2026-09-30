@@ -1,9 +1,3 @@
----
-Guide original : "SCIENCE : comprendre le charisme et entraîner ton aisance en conversation"
-Source : saadiakaram.ai/guides/science-charisme-confiance-conversations
-Statut : reformulé (texte) ; aucune image ni tableau HTML détecté sur cette page
----
-
 # Ce que la science dit vraiment du charisme, et comment entraîner votre aisance en conversation
 
 *Multi-outils · 18 min de lecture*
@@ -170,16 +164,6 @@ Vous pouvez répartir ces séances sur une semaine ou davantage, selon votre pro
 > Si une information manque, demande la précision la plus utile. Ne présente pas le plan comme une thérapie ou un protocole de reprogrammation validé. Ne promets pas d'approbation sociale et n'utilise aucun score de personnalité. Termine par le premier petit pas à choisir, sans contacter personne à ma place.
 
 Votre bilan peut tenir en quatre lignes : « J'ai tenté [action] dans [situations]. J'ai observé [faits]. Je ne sais pas encore [inconnue]. Je vais reprendre [action adaptée]. » Aucun compteur de jours ne prouve un changement du cerveau. Une action devenue plus facile dans un contexte donné reste un progrès que vous pouvez décrire précisément, sans en tirer plus que ce qu'elle prouve réellement.
-
----
-
-## 07. Les études citées
-
-Sources consultées le 13 septembre 2026, dans le guide original. Les études de psychologie mesurent notamment des comportements et des appréciations ; la neuro-imagerie et les cadres théoriques répondent à d'autres types de questions. Les regrouper ne valide pas automatiquement l'ensemble du programme proposé ici.
-
-Weger et al. (2014) : écoute active lors de premières interactions ; Boothby et al. (2018) : le liking gap dans les conversations ; Barrett (2017) : théorie de l'émotion construite ; Hirsch et al. (2023) : expressions faciales et contagion émotionnelle ; Bandura (1977) : le sentiment d'efficacité personnelle ; Antonakis, Fenley et Liechti (2011) : peut-on enseigner le charisme ? ; Tissera et al. (2025) : distinguer les écarts d'appréciation.
-
-Le carnet, les scènes, l'exercice et les prompts de ce guide ont été écrits spécifiquement pour cette édition. Aucune donnée personnelle, mesure cérébrale ou conversation réelle n'a servi à produire les exemples ; les prompts n'ont pas été exécutés auprès d'un modèle pour valider une quelconque efficacité psychologique.
 
 ---
 

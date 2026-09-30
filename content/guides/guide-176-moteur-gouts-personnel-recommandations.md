@@ -1,10 +1,3 @@
----
-Guide original : Le moteur de goût personnel
-Source : https://www.saadiakaram.ai/guides/personal-taste-engine
-Position réelle dans la bibliothèque au moment du traitement : 175/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé comme fait (Netflix, cité en comparaison).
----
-
 # Construire un moteur de goût personnel plus précis qu'un algorithme de streaming
 
 *Multi-outils · 5 min de lecture*

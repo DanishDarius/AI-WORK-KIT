@@ -1,10 +1,3 @@
----
-Guide original : 10 services IA que des boîtes paient 5K+
-Source : https://www.saadiakaram.ai/guides/smb-services
-Position réelle dans la bibliothèque au moment du traitement : 275/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Montants conservés comme données de positionnement d'offres commerciales, non des données financières personnelles. Noms réels conservés (Notion, Excel, CRM, Claude, Zapier).
----
-
 # Dix offres de services IA que les PME sont prêtes à payer
 
 *Multi-outils · 5 min de lecture*

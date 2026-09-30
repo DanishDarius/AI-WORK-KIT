@@ -1,10 +1,3 @@
----
-Guide original : Le fichier savoir expert pour Claude
-Source : https://www.saadiakaram.ai/guides/expert-knowledge-file
-Position réelle dans la bibliothèque au moment du traitement : 129/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Construire un fichier savoir expert pour sortir des réponses génériques
 
 *Claude · 5 min de lecture*

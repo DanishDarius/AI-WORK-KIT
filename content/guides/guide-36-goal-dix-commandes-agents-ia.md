@@ -1,10 +1,3 @@
----
-Guide original : /goal et 10 commandes pour faire avancer tes projets avec l'IA
-Source : https://www.saadiakaram.ai/guides/goal-10-commandes-agents-ia
-Position réelle dans la bibliothèque au moment du traitement : 34/293 (note : deux guides traités précédemment sous les libellés « 34 » et « 35 » de ce lot, llms.txt et TWIN, correspondaient en réalité aux positions 292 et 293, les deux ajouts les plus récents du site ; voir ressources-visuelles.md pour le détail de cet écart de numérotation).
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 10 sections collapsées (« La consigne à envoyer ensuite » / « À envoyer avant ») dépliées et capturées intégralement.
----
-
 # /goal et dix commandes natives pour faire avancer un projet avec un agent IA
 
 *Multi-outils · 18 min de lecture*
@@ -215,8 +208,7 @@ Prenez le simulateur de devis sur une copie de travail. Prévoyez un premier cr�
 
 Choisissez une arrivée que vous pouvez reconnaître. Vous pouvez déléguer le chemin, puis ouvrir le fichier, refaire le calcul ou essayer le formulaire vous-même. Cette vérification personnelle donne un sens réel au mot « terminé ».
 
-## Références
+## Limites
 
-Fonctions vérifiées dans les documentations officielles à la mi-septembre 2026. Les menus évoluent selon la version, la surface et les accès. Les exemples, critères et enchaînements présentés sont des propositions de pratique, sans classement mesuré des utilisateurs ni résultat garanti.
+Les menus évoluent selon la version, la surface et les accès. Les exemples, critères et enchaînements présentés sont des propositions de pratique, sans classement mesuré des utilisateurs ni résultat garanti.
 
-Ressources citées : documentation officielle sur les objectifs persistants dans un agent en ligne de commande (critères de réussite, cycle de travail) ; documentation du menu et des contrôles d'objectif d'une application de bureau ; documentation des commandes en ligne de commande, avec la distinction par rapport à un chat web classique ; documentation sur l'évaluation, l'arrêt, les permissions et la disponibilité de la fonctionnalité d'objectif dans un agent de code ; répertoire de référence des commandes disponibles, avec leur syntaxe et leurs différences.

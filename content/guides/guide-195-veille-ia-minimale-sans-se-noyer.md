@@ -1,10 +1,3 @@
----
-Guide original : Reste en avance en IA sans te noyer
-Source : https://www.saadiakaram.ai/guides/ai-update-stack
-Position réelle dans la bibliothèque au moment du traitement : 194/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. L'accroche d'introduction de la source mentionnait « 17 sources gratuites » sans qu'une liste nominative de 17 sources n'apparaisse dans le corps du guide capturé (seulement 3 catégories génériques : une newsletter, un agrégateur, deux comptes). Incohérence présente dans la source elle-même, non reprise dans le titre reformulé pour rester fidèle au contenu réellement présent. Nom réel conservé (Perplexity Discover).
----
-
 # Une veille IA minimale pour rester à jour sans s'y noyer
 
 *Multi-outils · 5 min de lecture*

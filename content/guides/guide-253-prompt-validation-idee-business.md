@@ -1,15 +1,8 @@
----
-Guide original : Le prompt qui tue ton idée avant toi
-Source : https://www.saadiakaram.ai/guides/business-validator
-Position réelle dans la bibliothèque au moment du traitement : 252/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Référence de la source aux études sur la tendance des IA à flatter l'utilisateur conservée comme affirmation de la source, en écho au guide 252 (papier « Sycophancy in Language Models »). Nom réel conservé (Claude).
----
-
 # Le prompt qui teste une idée de business avant de s'y engager
 
 *Multi-outils · 5 min de lecture*
 
-Une idée de business partagée avec des proches reçoit généralement des encouragements. Partagée avec une IA, elle en reçoit souvent aussi : plusieurs études évoquées par la source pointent une tendance des modèles de langage à valider ce qui leur est soumis. Le prompt suivant est construit pour forcer l'effet inverse.
+Une idée de business partagée avec des proches reçoit généralement des encouragements. Partagée avec une IA, elle en reçoit souvent aussi : plusieurs études pointent une tendance des modèles de langage à valider ce qui leur est soumis. Le prompt suivant est construit pour forcer l'effet inverse.
 
 ## Le rôle qui change tout
 

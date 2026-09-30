@@ -1,10 +1,3 @@
----
-Guide original : Monte ton premier agent IA
-Source : https://www.saadiakaram.ai/guides/first-ai-agent
-Position réelle dans la bibliothèque au moment du traitement : 258/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Accroche mentionnant trois niveaux d'agents (Cowork, Claude Code, OpenClaw), non développés dans le corps capturé qui porte uniquement sur la construction d'un agent via un Projet Claude (incohérence source, non reprise dans le titre). Noms réels conservés (Claude, Cowork, Claude Code, OpenClaw).
----
-
 # Construire son premier agent IA en trente minutes, sans coder
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Choisis toujours le bon Claude
-Source : https://www.saadiakaram.ai/guides/claude-models
-Position réelle dans la bibliothèque au moment du traitement : 112/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Les noms de modèles (Opus, Sonnet, Haiku) sont des faits (noms de produits réels) conservés tels quels.
----
-
 # Choisir le bon modèle Claude en cinq secondes
 
 *Claude · 5 min de lecture*

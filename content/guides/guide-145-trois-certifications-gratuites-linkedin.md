@@ -1,10 +1,3 @@
----
-Guide original : 3 certifs Claude gratuites pour LinkedIn
-Source : https://www.saadiakaram.ai/guides/claude-certifications-3
-Position réelle dans la bibliothèque au moment du traitement : 143/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels cités (Anthropic, LinkedIn, et les intitulés des certifications) conservés comme faits.
----
-
 # Trois certifications gratuites à valoriser sur son profil professionnel
 
 *Claude · 5 min de lecture*

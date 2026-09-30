@@ -1,10 +1,3 @@
----
-Guide original : Le marché secret des Skills Claude est dingue
-Source : https://www.saadiakaram.ai/guides/claude-skills-marketplace
-Position réelle dans la bibliothèque au moment du traitement : 279/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Titre source à la formulation hyperbolique, reformulé de façon plus neutre. Proche thématiquement des guides 234 et 240 (construction de Skills) mais angle distinct : celui-ci porte sur les catégories de Skills qui se développent et un prompt de conception dédié, vérifié et confirmé distinct, contenu non redondant terme à terme. Nom réel conservé (Claude).
----
-
 # Les catégories de Skills Claude qui se développent, et comment concevoir la sienne
 
 *Claude · 5 min de lecture*

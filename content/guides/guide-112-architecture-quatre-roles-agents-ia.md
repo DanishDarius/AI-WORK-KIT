@@ -1,10 +1,3 @@
----
-Guide original : La bonne structure pour tes agents IA
-Source : https://www.saadiakaram.ai/guides/multi-agent-framework
-Position réelle dans la bibliothèque au moment du traitement : 110/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Une architecture en quatre rôles pour organiser ses agents IA
 
 *Multi-outils · 5 min de lecture*

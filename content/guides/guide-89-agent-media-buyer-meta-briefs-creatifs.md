@@ -1,10 +1,3 @@
----
-Guide original : L'agent media buyer Meta
-Source : https://www.saadiakaram.ai/guides/meta-media-buyer-agent
-Position réelle dans la bibliothèque au moment du traitement : 87/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un agent IA pour piloter la création publicitaire sur Meta
 
 *Multi-outils · 5 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Le prochain business à 1 milliard : l'IA + l'assurance
-Source : https://www.saadiakaram.ai/guides/ai-insurance-business
-Position réelle dans la bibliothèque au moment du traitement : 203/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu d'analyse de marché et d'opportunités entrepreneuriales, pas de conseil financier personnalisé. Noms réels et estimation de marché conservés comme faits sourcés par la source d'origine (Vouch, Coalition, At-Bay, estimation 2-5 Md$ d'ici 2028).
----
-
 # L'assurance liée à l'IA : une opportunité de marché encore largement ouverte
 
 *Multi-outils · 5 min de lecture*
@@ -15,7 +8,7 @@ Le prochain marché à fort potentiel dans l'IA n'est pas un modèle de langage.
 
 Les agents IA commencent à exécuter de vraies actions : envoyer des e-mails, modifier des fichiers clients, déclencher des paiements, écrire dans des bases de données de production. Tant qu'il ne s'agissait que d'un chat, le risque restait théorique. Il devient désormais concret : un agent qui se trompe en facturation peut coûter des dizaines de milliers d'euros en quelques minutes.
 
-Les assureurs traditionnels peinent à tarifer ce risque, faute de données historiques suffisantes. De nouveaux acteurs (Vouch, Coalition, At-Bay du côté cyber) commencent à proposer des polices de responsabilité liées à l'IA. Le marché américain est estimé entre 2 et 5 milliards de dollars d'ici 2028, selon les projections citées par la source.
+Les assureurs traditionnels peinent à tarifer ce risque, faute de données historiques suffisantes. De nouveaux acteurs (Vouch, Coalition, At-Bay du côté cyber) commencent à proposer des polices de responsabilité liées à l'IA. Le marché américain est estimé entre 2 et 5 milliards de dollars d'ici 2028, selon certaines projections.
 
 ## Où se trouvent les opportunités
 

@@ -1,10 +1,3 @@
----
-Guide original : 15 commandes pour apprendre avec ChatGPT et Claude
-Source : https://www.saadiakaram.ai/guides/15-commandes-pour-apprendre-chatgpt-claude
-Position réelle dans la bibliothèque au moment du traitement : 37/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 4 sections collapsées dépliées et capturées intégralement (bloc de configuration + deux fiches mémo d'exemple + une réponse possible).
----
-
 # Quinze raccourcis pour apprendre une compétence avec une IA conversationnelle
 
 *Multi-outils · 18 min de lecture*

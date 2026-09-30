@@ -1,10 +1,3 @@
----
-Guide original : Claude vient de lâcher un juriste IA gratuit
-Source : https://www.saadiakaram.ai/guides/claude-legal-ai
-Position réelle dans la bibliothèque au moment du traitement : 249/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Accroche annonçant trois usages (revue de contrat, mise en demeure, lettre pour facture impayée), seule la revue de contrat est développée dans le corps capturé (incohérence source, non reprise dans le titre). Contenu traité comme aide à la relecture de documents, jamais comme conseil juridique personnalisé. Le disclaimer de la source (recours à un humain au-delà d'un certain montant) a été conservé et mis en avant. Nom réel conservé (Claude).
----
-
 # Faire relire un contrat par Claude avant signature
 
 *Claude · 5 min de lecture*

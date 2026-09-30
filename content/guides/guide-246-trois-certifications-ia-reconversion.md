@@ -1,10 +1,3 @@
----
-Guide original : 3 certifs IA à mettre sur ton CV si tu pivotes
-Source : https://www.saadiakaram.ai/guides/3-ai-certifications-career-switchers
-Position réelle dans la bibliothèque au moment du traitement : 245/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Prix de certifications conservés comme données de marché générales, non des données financières personnelles. Noms réels conservés comme faits (Google, Coursera, Anthropic, AWS, Azure, LinkedIn).
----
-
 # Trois certifications IA vraiment utiles pour un CV de reconversion
 
 *Multi-outils · 5 min de lecture*

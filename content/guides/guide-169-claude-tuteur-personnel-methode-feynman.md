@@ -1,10 +1,3 @@
----
-Guide original : Transforme Claude en prof particulier
-Source : https://www.saadiakaram.ai/guides/ai-as-a-tutor
-Position réelle dans la bibliothèque au moment du traitement : 167/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Nom réel conservé comme fait (Claude).
----
-
 # Faire de Claude un tuteur personnel plutôt qu'un simple répondeur
 
 *Claude · 5 min de lecture*

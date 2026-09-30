@@ -1,15 +1,8 @@
----
-Guide original : Claude vient de rendre du temps aux créatifs
-Source : https://www.saadiakaram.ai/guides/claude-creative-connectors
-Position réelle dans la bibliothèque au moment du traitement : 271/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Estimation de temps gagné (5h/semaine) conservée comme affirmation de la source, non vérifiée indépendamment. Noms réels conservés (Claude, Figma, Canva, Adobe).
----
-
 # Les connecteurs créatifs de Claude : Figma, Canva et Adobe intégrés au workflow
 
 *Claude · 5 min de lecture*
 
-Claude propose désormais des connecteurs natifs vers les principaux outils créatifs (Figma, Canva, Adobe). Concrètement, cela permettrait, selon la source, de faire gagner environ cinq heures par semaine à un créatif travaillant en solo.
+Claude propose désormais des connecteurs natifs vers les principaux outils créatifs (Figma, Canva, Adobe). Concrètement, cela permettrait de faire gagner environ cinq heures par semaine à un créatif travaillant en solo.
 
 ## Ce que ça change
 

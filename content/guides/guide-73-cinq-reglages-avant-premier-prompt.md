@@ -1,10 +1,3 @@
----
-Guide original : Le top 1 % des users Claude fait ça
-Source : https://www.saadiakaram.ai/guides/top-1-percent
-Position réelle dans la bibliothèque au moment du traitement : 71/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Cinq réglages à faire avant le moindre prompt
 
 *Claude · 5 min de lecture*

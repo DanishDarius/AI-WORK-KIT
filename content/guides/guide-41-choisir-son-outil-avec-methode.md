@@ -1,10 +1,3 @@
----
-Guide original : Choisir son outil : Avec une méthode.
-Source : https://www.saadiakaram.ai/guides/fondations-ia-choisir-outil
-Position réelle dans la bibliothèque au moment du traitement : 39/293. Deuxième tome de la série « Fondations » en 5 parties.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée.
----
-
 # Choisir son outil IA avec une méthode, pas au hasard
 
 *Multi-outils · 8 min de lecture (Fondations, livre 2 sur 5)*
@@ -81,4 +74,3 @@ Sans ouvrir les corrections tout de suite, choisissez l'aide utile pour ces troi
 
 Sources primaires consultées à la mi-septembre 2026. Les exemples pédagogiques de ce guide sont fictifs ; les fonctions des produits cités peuvent évoluer avec le temps.
 
-Ressources citées : documentation officielle sur la fonction de recherche web dans un assistant conversationnel grand public ; documentation sur les carnets de notes, leurs sources et leur disponibilité ; documentation sur la différence entre workflows automatisés et agents autonomes ; documentation sur la génération d'images et de vidéos par un outil créatif grand public.

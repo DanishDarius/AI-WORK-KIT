@@ -1,10 +1,3 @@
----
-Guide original : Le vibe working, la nouvelle façon de bosser
-Source : https://www.saadiakaram.ai/guides/vibe-working
-Position réelle dans la bibliothèque au moment du traitement : 101/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Construire des workflows IA qui rendent du temps réel, pas symbolique
 
 *Multi-outils · 5 min de lecture*

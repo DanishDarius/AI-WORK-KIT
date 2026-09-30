@@ -1,10 +1,3 @@
----
-Guide original : 10 prompts Claude pour être promu en 6 mois
-Source : https://www.saadiakaram.ai/guides/promotion-prompts
-Position réelle dans la bibliothèque au moment du traitement : 260/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Sur les 10 prompts annoncés dans la liste, seuls 2 sont développés avec leur texte complet dans le corps capturé (les 8 autres ne sont listés que par leur intitulé) ; fidèlement reproduit tel quel, non une omission de ma part. Nom réel conservé (Claude).
----
-
 # Dix usages de Claude pour gagner en visibilité professionnelle
 
 *Claude · 5 min de lecture*

@@ -1,9 +1,3 @@
----
-Guide original : "GEO : l'article de Google et ton guide de setup pour la recherche IA"
-Source : saadiakaram.ai/guides/geo-google-guide-setup-visibilite-ia
-Statut : reformulé (texte) : aucune image ni tableau HTML détecté sur cette page
----
-
 # GEO : ce que Google dit vraiment sur la visibilité dans la recherche IA, et comment auditer votre site
 
 *Multi-outils · 18 min de lecture*
@@ -168,12 +162,6 @@ Comparez toujours des périodes de même durée, et notez les autres changements
 > Vérifie d'abord la comparabilité des périodes, les données manquantes et les métriques disponibles. Une donnée non disponible reste N/A. Les impressions ne sont ni des visites ni des prospects. Ne cumule pas des rapports contenant les mêmes impressions. Ne transforme pas des observations manuelles en part de marché ou probabilité de citation.
 > Rends : 1) faits mesurés et périmètre ; 2) limites de la comparaison ; 3) changements observés sans causalité supposée ; 4) décision proposée sur la page ; 5) prochain contrôle, date et critère.
 > Si l'échantillon est trop petit ou si plusieurs changements se superposent, dis ce qui reste inconnu. Ne fabrique ni classement ni pourcentage de progression. Ne modifie aucun compte ni paramètre.
-
----
-
-## 08. Les liens à garder
-
-Sources citées dans le guide original (consultées le 13 septembre 2026, susceptibles d'évoluer) : Google : « Optimizing your website for generative AI features on Google Search » ; Google : Contrôle Search generative AI ; Google : Rapport Generative AI performance (Search) ; Google : Inspection d'URL ; Google : À quoi sert robots.txt ; OpenAI : La recherche web dans ChatGPT ; OpenAI : Les robots et leurs usages. La checklist, le calendrier et les prompts de ce guide restent des propositions originales ; ils ne constituent en aucun cas une certification Google ou OpenAI.
 
 ---
 

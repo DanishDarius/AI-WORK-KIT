@@ -1,9 +1,3 @@
----
-Guide original : "HUMAIN : 32 mots et tournures à remplacer pour écrire naturellement avec l'IA"
-Source : saadiakaram.ai/guides/humain-mots-tournures-a-eviter-ia
-Statut : reformulé (texte) ; aucune image ni tableau HTML détecté sur cette page
----
-
 # 32 mots et tournures à repérer pour retrouver une écriture naturelle avec l'IA
 
 *Multi-outils · 16 min de lecture*

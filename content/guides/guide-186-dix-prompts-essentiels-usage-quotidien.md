@@ -1,10 +1,3 @@
----
-Guide original : 10 prompts qui rendent l'IA vraiment utile
-Source : https://www.saadiakaram.ai/guides/10-prompts-that-matter
-Position réelle dans la bibliothèque au moment du traitement : 185/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Dix prompts courts qui couvrent la majorité des besoins quotidiens
 
 *Multi-outils · 5 min de lecture*

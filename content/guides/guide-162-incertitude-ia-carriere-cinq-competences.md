@@ -1,10 +1,3 @@
----
-Guide original : Le brouillard IA, c'est le nouveau burnout
-Source : https://www.saadiakaram.ai/guides/ai-fog-career-uncertainty
-Position réelle dans la bibliothèque au moment du traitement : 160/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Contenu de bien-être professionnel général (gestion de l'incertitude liée à l'évolution technologique du métier), reformulé comme stratégies pratiques d'organisation et de recul, sans reformulation en diagnostic de santé mentale.
----
-
 # L'incertitude liée à l'IA et les compétences pour y faire face
 
 *Multi-outils · 5 min de lecture*

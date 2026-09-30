@@ -1,10 +1,3 @@
----
-Guide original : Bien dialoguer : Le contexte change tout.
-Source : https://www.saadiakaram.ai/guides/fondations-ia-bien-dialoguer
-Position réelle dans la bibliothèque au moment du traitement : 40/293. Troisième tome de la série « Fondations » en 5 parties.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 1 section collapsée dépliée et capturée intégralement.
----
-
 # Bien dialoguer avec une IA : le contexte change tout
 
 *Multi-outils · 8 min de lecture (Fondations, livre 3 sur 5)*
@@ -101,4 +94,3 @@ Le brouillon annonce : « Venez dimanche à 9 h, au 18 rue des Fleurs. Réparati
 
 Sources primaires consultées à la mi-septembre 2026. Les exemples pédagogiques de ce guide sont fictifs ; les fonctions des produits cités peuvent évoluer avec le temps.
 
-Ressources citées : documentation officielle sur la clarté et la révision des prompts ; documentation sur le contexte, les exemples et la structure des consignes ; documentation sur les tokens et les limites de contexte d'un modèle de langage.

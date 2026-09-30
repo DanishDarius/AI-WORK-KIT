@@ -1,10 +1,3 @@
----
-Guide original : 2 prompts qui me rendent 10x plus productif
-Source : https://www.saadiakaram.ai/guides/productivity-audit
-Position réelle dans la bibliothèque au moment du traitement : 109/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Note : le chiffre « 10x » du titre original est une estimation personnelle invérifiable de l'auteure, non appuyée par une donnée du corps de texte, non repris dans le titre reformulé.
----
-
 # Deux prompts pour retrouver sa vraie priorité et démonter la productivité de façade
 
 *Multi-outils · 5 min de lecture*

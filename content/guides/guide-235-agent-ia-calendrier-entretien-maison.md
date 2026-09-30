@@ -1,10 +1,3 @@
----
-Guide original : Le rappel d'entretien de la maison
-Source : https://www.saadiakaram.ai/guides/home-maintenance
-Position réelle dans la bibliothèque au moment du traitement : 234/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (la liste des 7 entretiens est une liste texte, pas un tableau HTML). Estimation de coûts annuels conservée comme donnée pratique générale du guide, non une donnée financière personnelle. Nom réel conservé (Claude).
----
-
 # Construire un calendrier d'entretien du logement avec un agent IA
 
 *Multi-outils · 5 min de lecture*

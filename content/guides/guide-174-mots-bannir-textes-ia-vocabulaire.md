@@ -1,10 +1,3 @@
----
-Guide original : Arrête de laisser l'IA te ridiculiser au taf
-Source : https://www.saadiakaram.ai/guides/ai-words-to-ban
-Position réelle dans la bibliothèque au moment du traitement : 173/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Le vocabulaire qui trahit un texte écrit par une IA
 
 *Multi-outils · 5 min de lecture*

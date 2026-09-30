@@ -1,10 +1,3 @@
----
-Guide original : Lance-le, point : ma checklist sur 30 jours
-Source : https://www.saadiakaram.ai/guides/30-day-launch-checklist
-Position réelle dans la bibliothèque au moment du traitement : 240/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Guide long à 6 prompts détaillés : prompts reproduits avec leur structure fonctionnelle complète (placeholders, consignes de sortie CSV/markdown) car toute reformulation en modifierait le fonctionnement ; seule la prose environnante a été reformulée. Noms réels conservés comme faits (Claude, Klaviyo, Meta, TikTok, Instagram Reels, YouTube Shorts, Liquid Death, Glossier, Allbirds).
----
-
 # Une checklist sur 30 jours pour lancer un business avec l'IA en renfort
 
 *Multi-outils · 5 min de lecture*

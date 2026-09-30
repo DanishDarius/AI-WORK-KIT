@@ -1,10 +1,3 @@
----
-Guide original : "Vibe coding 101 : construis ton app sans écrire une ligne de code"
-Source : saadiakaram.ai/guides/vibe-coding-101
-Statut : reformulé (texte). Aucun visuel/tableau HTML détecté sur cette page
-Note : le guide original crédite la méthode à Mariah Brunner ; attribution à conserver dans ta version
----
-
 # Vibe coding 101 : construire une app sans écrire une seule ligne de code
 
 *Multi-outils · 6 min de lecture*
@@ -23,7 +16,7 @@ Note : le guide original crédite la méthode à Mariah Brunner ; attribution à
 
 ## Introduction
 
-La méthode en 3 étapes (brief, premier écran, écran suivant), les outils à connaître en 2026, le prompt qui génère votre brief automatiquement, et les 5 erreurs qui font tout échouer. Méthode inspirée du travail de Mariah Brunner.
+La méthode en 3 étapes (brief, premier écran, écran suivant), les outils à connaître en 2026, le prompt qui génère votre brief automatiquement, et les 5 erreurs qui font tout échouer.
 
 ---
 
@@ -32,8 +25,6 @@ La méthode en 3 étapes (brief, premier écran, écran suivant), les outils à 
 Le vibe coding consiste à construire une app ou un site en décrivant simplement ce que vous voulez, en langage naturel. Un outil IA lit votre description et écrit le code à votre place. Le réflexe classique : ouvrir un outil, taper « construis-moi une app de réservation », et espérer un résultat miracle. Le résultat obtenu, lui, est souvent un écran esthétique mais qui se casse dès qu'on clique dessus.
 
 Le problème ne vient pas de l'IA elle-même, mais de la méthode employée. Un modèle qui reçoit une demande floue comble les vides avec une moyenne statistique. La règle qui change vraiment la donne : les prompts précis et restreints gagnent toujours. On ne construit pas une app entière en un seul prompt : on la construit écran par écran, en testant à chaque étape. C'est plus lent en apparence, et pourtant deux fois plus rapide dans les faits.
-
-*Méthode inspirée de l'approche « Vibe Coding 101 » développée par Mariah Brunner.*
 
 ---
 
@@ -117,4 +108,3 @@ Construire petit, tester, verrouiller, puis continuer. Commencez par un projet d
 
 ---
 
-*Méthode inspirée de l'approche de Mariah Brunner.*

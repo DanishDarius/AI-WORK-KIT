@@ -1,15 +1,8 @@
----
-Guide original : Le passage de la pyramide au diamant
-Source : https://www.saadiakaram.ai/guides/career-ladder
-Position réelle dans la bibliothèque au moment du traitement : 280/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Analyse de marché de l'emploi présentée comme la lecture de la source, non un fait établi.
----
-
 # De la pyramide au diamant : comment l'IA redessine les parcours de carrière
 
 *Multi-outils · 5 min de lecture*
 
-Selon la source, la pyramide hiérarchique classique des entreprises serait en train de se transformer en diamant : les postes juniors se réduiraient sous l'effet de l'IA, le niveau intermédiaire se renforcerait, et les postes stratégiques au sommet resteraient stables. Ne pas savoir où l'on se situe dans cette transformation expose à un risque réel de se retrouver coincé.
+La pyramide hiérarchique classique des entreprises serait en train de se transformer en diamant : les postes juniors se réduiraient sous l'effet de l'IA, le niveau intermédiaire se renforcerait, et les postes stratégiques au sommet resteraient stables. Ne pas savoir où l'on se situe dans cette transformation expose à un risque réel de se retrouver coincé.
 
 ## Ce qui se passerait réellement
 
@@ -17,7 +10,7 @@ L'IA absorberait avant tout les tâches d'exécution pure, ce qui réduirait le 
 
 ## Les trois mouvements possibles
 
-1. **Monter vers le centre du diamant** : devenir orchestrateur d'agents et d'équipes, la zone qui recruterait le plus selon la source.
+1. **Monter vers le centre du diamant** : devenir orchestrateur d'agents et d'équipes, la zone qui recruterait le plus.
 2. **Se spécialiser vers le sommet** : développer une expertise pointue que l'IA ne pourrait pas encore remplacer.
 3. **Sortir vers l'indépendance** : travailler seul avec l'appui de l'IA pour accomplir le travail habituellement réparti sur plusieurs personnes, sur un marché jugé important.
 

@@ -1,10 +1,3 @@
----
-Guide original : 5 Skills Claude qui me gèrent la vie #4
-Source : https://www.saadiakaram.ai/guides/5-skills-part-4
-Position réelle dans la bibliothèque au moment du traitement : 137/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le Skill 2 porte sur des données de bien-être général (sommeil, activité, humeur issues d'une montre connectée). Reformulé comme outil d'ajustement de routine, sans reformulation en diagnostic médical.
----
-
 # Cinq Skills du quotidien, quatrième série
 
 *Claude · 5 min de lecture*

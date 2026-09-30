@@ -1,10 +1,3 @@
----
-Guide original : Le scout d'offres d'emploi
-Source : https://www.saadiakaram.ai/guides/job-board-scout
-Position réelle dans la bibliothèque au moment du traitement : 186/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le format « tableau » mentionné dans le prompt fait partie d'une instruction de mise en forme du livrable, pas d'un élément HTML réel de la page. Noms réels conservés (Claude, LinkedIn, Welcome, Indeed).
----
-
 # Automatiser sa veille d'offres d'emploi pendant la nuit
 
 *Multi-outils · 5 min de lecture*

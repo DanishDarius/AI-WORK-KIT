@@ -1,10 +1,3 @@
----
-Guide original : Top 5 des certifs IA gratuites pour ton CV
-Source : https://www.saadiakaram.ai/guides/free-ai-certifications
-Position réelle dans la bibliothèque au moment du traitement : 269/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Distinct du guide 246 (trois certifications IA pour reconversion, liste partiellement payante centrée Google/Anthropic/AWS-Azure) : celui-ci propose une liste de cinq certifications entièrement gratuites avec un ordre de passage différent, vérifié et confirmé distinct. Noms réels conservés (Google, Microsoft, Azure, Anthropic, Claude, DeepLearning.AI, ChatGPT, Hugging Face).
----
-
 # Cinq certifications IA gratuites à ajouter à son CV
 
 *Multi-outils · 5 min de lecture*

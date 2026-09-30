@@ -1,10 +1,3 @@
----
-Guide original : Le copilote grossesse sur Claude
-Source : https://www.saadiakaram.ai/guides/pregnancy-copilot
-Position réelle dans la bibliothèque au moment du traitement : 180/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Guide traité comme outil organisationnel (suivi de rendez-vous, préparation de questions, mémoire externe), jamais comme conseil médical : la limite stricte de l'original (l'assistant ne pose aucun diagnostic et renvoie systématiquement au médecin/à la sage-femme) est conservée intégralement et mise en avant. Nom réel conservé (Claude).
----
-
 # Organiser le suivi d'une grossesse avec un espace de travail IA dédié
 
 *Claude · 5 min de lecture*

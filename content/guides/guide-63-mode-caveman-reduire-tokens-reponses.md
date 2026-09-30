@@ -1,10 +1,3 @@
----
-Guide original : Opus 4.7 te massacre tes limites ?
-Source : https://www.saadiakaram.ai/guides/caveman-skill
-Position réelle dans la bibliothèque au moment du traitement : 61/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 1 section FAQ collapsée dépliée et capturée intégralement.
----
-
 # Le mode « caveman » : jusqu'à 75 % de tokens en moins, même contenu
 
 *Multi-outils · 5 min de lecture*

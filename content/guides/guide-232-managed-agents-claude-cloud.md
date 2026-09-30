@@ -1,10 +1,3 @@
----
-Guide original : Claude Managed Agents : ce qui change
-Source : https://www.saadiakaram.ai/guides/managed-agents
-Position réelle dans la bibliothèque au moment du traitement : 231/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms réels conservés comme faits (Claude, Claude Code, Python).
----
-
 # Agents managés côté serveur : ce que ça change par rapport à un agent local
 
 *Claude · 5 min de lecture*

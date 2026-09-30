@@ -1,10 +1,3 @@
----
-Guide original : L'outil IA le plus sous-coté des marketeurs
-Source : https://www.saadiakaram.ai/guides/meta-ai-for-marketers
-Position réelle dans la bibliothèque au moment du traitement : 149/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms de produits et plateformes réels (Meta AI, Instagram, Facebook, WhatsApp, Reels, TikTok, Claude) conservés comme faits.
----
-
 # L'outil IA sous-estimé qui excelle sur trois tâches marketing
 
 *Multi-outils · 5 min de lecture*

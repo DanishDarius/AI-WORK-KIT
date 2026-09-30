@@ -1,10 +1,3 @@
----
-Guide original : 10 connecteurs Claude qui changent tes journées
-Source : https://www.saadiakaram.ai/guides/10-claude-connectors
-Position réelle dans la bibliothèque au moment du traitement : 228/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (le mot « tableau » dans le prompt d'audit est une instruction de mise en forme demandée à l'IA, pas un tableau HTML présent dans la page). Distinct du guide 211 (assistant personnel Claude, fonctions générales) : celui-ci propose un classement priorisé de 10 connecteurs par ROI, vérifié et confirmé distinct. Noms réels conservés (Claude, Gmail, Google Calendar, Google Drive, Notion, Slack, GitHub, Linear, Asana, HubSpot, Salesforce, Stripe, Zapier).
----
-
 # Dix connecteurs à activer sur Claude, classés par intérêt réel
 
 *Claude · 5 min de lecture*

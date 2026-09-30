@@ -1,10 +1,3 @@
----
-Guide original : 5 Skills Claude pour créateurs de contenu
-Source : https://www.saadiakaram.ai/guides/content-creator-skills
-Position réelle dans la bibliothèque au moment du traitement : 130/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Le Skill 3 porte sur la relecture de contrats ; l'avertissement d'origine (« pas un avocat, un premier filtre ») a été conservé intégralement.
----
-
 # Cinq Skills pour structurer une activité de création de contenu
 
 *Claude · 5 min de lecture*

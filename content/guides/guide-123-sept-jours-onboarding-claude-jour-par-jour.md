@@ -1,10 +1,3 @@
----
-Guide original : Tes 7 premiers jours avec Claude
-Source : https://www.saadiakaram.ai/guides/first-7-days
-Position réelle dans la bibliothèque au moment du traitement : 121/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. À distinguer du guide 68 (« Bien démarrer avec l'IA, pour de vrai », méthode générique en 5 réglages) : ce guide-ci est un plan jour par jour sur 7 jours couvrant des fonctionnalités spécifiques (mémoire, espaces de travail, connecteurs, artefacts). Noms de fonctionnalités traités comme des faits.
----
-
 # Sept jours pour prendre en main l'assistant, fonctionnalité par fonctionnalité
 
 *Claude · 5 min de lecture*

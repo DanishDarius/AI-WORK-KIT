@@ -1,10 +1,3 @@
----
-Guide original : Des garde-fous avant l'autonomie
-Source : https://www.saadiakaram.ai/guides/agent-guardrails
-Position réelle dans la bibliothèque au moment du traitement : 57/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court, contenu intégralement capturé, aucune troncature détectée.
----
-
 # Quatre garde-fous à poser avant de laisser un agent agir seul
 
 *Multi-outils · 5 min de lecture*

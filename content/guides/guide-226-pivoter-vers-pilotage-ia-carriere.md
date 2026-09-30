@@ -1,10 +1,3 @@
----
-Guide original : Ne te fais pas remplacer. Pilote l'IA
-Source : https://www.saadiakaram.ai/guides/ai-job-pivot
-Position réelle dans la bibliothèque au moment du traitement : 225/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 2 sections FAQ collapsées détectées et dépliées, contenu capturé intégralement. Distinct des guides 162, 177 et 179 (autres contenus carrière/IA) : méthode en 3 étapes avec 3 prompts dédiés au repositionnement vers un rôle de pilotage de l'IA, vérifié et confirmé distinct. Noms réels conservés (Claude, ChatGPT, Notion).
----
-
 # Devenir la personne qui pilote l'IA plutôt que celle qu'elle remplace
 
 *Multi-outils · 5 min de lecture*

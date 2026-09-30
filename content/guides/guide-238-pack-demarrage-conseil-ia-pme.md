@@ -1,10 +1,3 @@
----
-Guide original : Le starter pack du conseil IA
-Source : https://www.saadiakaram.ai/guides/ai-consulting-starter-pack
-Position réelle dans la bibliothèque au moment du traitement : 237/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Fourchettes de prix conservées comme données de marché/positionnement d'offre commerciale (non des données financières personnelles). Noms réels conservés (Claude, ChatGPT).
----
-
 # Se lancer dans le conseil en IA pour les PME : le pack de démarrage
 
 *Multi-outils · 5 min de lecture*

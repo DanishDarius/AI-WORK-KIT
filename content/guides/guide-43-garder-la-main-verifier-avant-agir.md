@@ -1,10 +1,3 @@
----
-Guide original : Garder la main : Vérifie avant d'agir.
-Source : https://www.saadiakaram.ai/guides/fondations-ia-garder-la-main
-Position réelle dans la bibliothèque au moment du traitement : 41/293. Quatrième tome de la série « Fondations » en 5 parties.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée.
----
-
 # Garder la main sur l'IA : vérifier avant d'agir
 
 *Multi-outils · 8 min de lecture (Fondations, livre 4 sur 5)*
@@ -96,4 +89,3 @@ Prenez le résultat d'une tâche à faible risque. Sur une feuille, notez les ci
 
 Sources primaires consultées à la mi-septembre 2026. Les exemples pédagogiques de ce guide sont fictifs ; les fonctions des produits cités peuvent évoluer avec le temps.
 
-Ressources citées : ressource de la CNIL sur les bénéfices, limites et précautions d'usage d'un système d'IA ; cadre de gestion des risques de l'IA du NIST (institut américain de standardisation) ; documentation sur les risques et la protection contre les injections de prompt.

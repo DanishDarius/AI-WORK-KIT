@@ -1,10 +1,3 @@
----
-Guide original : N'oublie plus jamais un anniversaire
-Source : https://www.saadiakaram.ai/guides/never-forget
-Position réelle dans la bibliothèque au moment du traitement : 113/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé.
----
-
 # Un agent qui repère les dates importantes et prépare cadeaux et messages
 
 *Multi-outils · 5 min de lecture*

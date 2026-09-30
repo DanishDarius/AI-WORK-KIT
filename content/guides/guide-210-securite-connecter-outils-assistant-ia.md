@@ -1,10 +1,3 @@
----
-Guide original : Brancher tes outils à Claude, c'est sûr ?
-Source : https://www.saadiakaram.ai/guides/is-claude-safe
-Position réelle dans la bibliothèque au moment du traitement : 209/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Les affirmations sur les pratiques de données d'Anthropic/Claude sont reformulées telles qu'énoncées par la source d'origine, sans ajout ni vérification indépendante de ma part, à considérer comme les déclarations de l'autrice, pas comme un fait établi par mes soins. Nom réel conservé (Claude, Anthropic, Gmail, Slack, Calendar).
----
-
 # Connecter ses outils à un assistant IA : ce qu'il faut savoir sur la sécurité
 
 *Claude · 5 min de lecture*
@@ -13,7 +6,7 @@ Connecter Gmail, Slack, Calendar ou des fichiers sensibles à un assistant IA es
 
 ## Premier niveau : le fournisseur
 
-Selon la source, les données ne servent pas à entraîner les modèles publics, les conversations sont chiffrées, et les connecteurs utilisent des jetons d'accès révocables plutôt que des mots de passe directs. C'est une base solide, mais elle ne dispense pas de vigilance sur ce qui est partagé.
+Selon les éditeurs, les données ne servent pas à entraîner les modèles publics, les conversations sont chiffrées, et les connecteurs utilisent des jetons d'accès révocables plutôt que des mots de passe directs. C'est une base solide, mais elle ne dispense pas de vigilance sur ce qui est partagé.
 
 ## Deuxième niveau : l'utilisateur
 

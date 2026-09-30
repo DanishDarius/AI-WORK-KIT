@@ -1,10 +1,3 @@
----
-Guide original : 5 hacks Skills Claude dont personne ne parle
-Source : https://www.saadiakaram.ai/guides/5-skill-hacks
-Position réelle dans la bibliothèque au moment du traitement : 233/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé (le modèle de Skill fourni dans le prompt est un gabarit texte, pas un tableau HTML). Nom réel conservé (Claude).
----
-
 # Cinq astuces peu connues pour rendre les Skills Claude vraiment utiles
 
 *Claude · 5 min de lecture*

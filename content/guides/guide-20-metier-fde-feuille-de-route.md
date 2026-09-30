@@ -1,10 +1,3 @@
----
-Guide original : "Le métier IA le mieux payé" (feuille de route FDE)
-Source : saadiakaram.ai/guides/feuille-de-route-fde
-Statut : reformulé (texte) ; un tableau HTML détecté (le récapitulatif des 5 étapes), recréé en Markdown ci-dessous ; aucune image
-Note importante : ce guide cite des chiffres, dates et sources précises (AWS, Salesforce, Paraform, Deloitte) ; tous les chiffres et sources ont été conservés strictement à l'identique, seule la formulation a été retravaillée, conformément à la consigne de ne jamais altérer le sens ni inventer de données
----
-
 # Forward Deployed Engineer : la feuille de route vers le métier IA le mieux payé du moment
 
 *Claude · 11 min de lecture*
@@ -219,13 +212,3 @@ L'affirmation centrale de ce guide reste plus étroite et plus solide qu'une pro
 
 ---
 
-## Sources (vérifiées avant rédaction)
-
-- AWS investit 1 milliard de dollars dans une organisation de Forward Deployed Engineers, effectif « se comptant en milliers », clients NBA, NFL, Southwest Airlines, Cox Automotive, Ricoh (annonce du 30 juin 2026).
-- Couverture indépendante de l'annonce AWS (cycles d'environ 45 jours, équipes de cinq à six personnes chez le client) : CNBC et TechCrunch, 30 juin 2026.
-- Salesforce, équipe FDE lancée en avril 2025, engagement sur 1 000 recrutements, équipe triplée en six mois.
-- Paraform, +800 % d'offres FDE sur LinkedIn entre janvier et septembre 2025 pendant que le vivier de candidats progressait d'environ 50 %, +350 % entre T1 2025 et T1 2026, et les fourchettes de salaires publiées.
-- Paraform, description du profil recherché et entreprises qui recrutent (Anthropic, OpenAI, Scale AI, Palantir, Salesforce).
-- Deloitte, State of AI in the Enterprise 2026, plus de 3 200 dirigeants dans 24 pays, le manque de compétences cité comme premier frein à l'intégration de l'IA.
-
-*Les liens sources précis figurent dans le guide original ; à retrouver et reconfirmer avant publication, ces informations pouvant évoluer avec le temps.*

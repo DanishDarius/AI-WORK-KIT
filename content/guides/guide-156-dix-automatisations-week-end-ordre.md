@@ -1,10 +1,3 @@
----
-Guide original : 10 choses à automatiser avec Claude ce week-end
-Source : https://www.saadiakaram.ai/guides/weekend-automation
-Position réelle dans la bibliothèque au moment du traitement : 154/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Noms d'outils réels cités (Slack, Notion) conservés comme faits.
----
-
 # Dix automatisations à installer en un week-end, dans le bon ordre
 
 *Claude · 5 min de lecture*

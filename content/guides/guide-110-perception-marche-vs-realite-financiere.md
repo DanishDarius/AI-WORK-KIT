@@ -1,10 +1,3 @@
----
-Guide original : Le marché se trompe sur cette action ?
-Source : https://www.saadiakaram.ai/guides/claude-stock-perception-vs-reality
-Position réelle dans la bibliothèque au moment du traitement : 108/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Aucune section collapsée. Contenu intégralement capturé. Avertissement financier de la source préservé intégralement (« pas un conseil financier », rappel que la décision appartient à l'utilisateur et que le broker reste responsable de ses propres conseils).
----
-
 # Distinguer une baisse justifiée d'une simple panique de marché
 
 *Claude · 5 min de lecture*

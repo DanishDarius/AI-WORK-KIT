@@ -1,18 +1,8 @@
----
-Guide original : "Ton conseil des 100 mentors : le board de fondateurs qui te contredit"
-Source : saadiakaram.ai/guides/ton-conseil-des-100-mentors
-Statut : reformulé (texte) ; voir ressources-visuelles.md pour les éléments non modifiables
----
-
-
 # Votre board de 100 fondateurs : le comité consultatif qui n'a pas peur de vous contredire
-
 
 *Multi-outils · 9 min de lecture*
 
-
 ## Sommaire
-
 
 - Introduction
 - Ce dont vous avez besoin (un seul outil suffit)

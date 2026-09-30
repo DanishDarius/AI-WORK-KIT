@@ -1,9 +1,3 @@
----
-Guide original : "Les 7 leviers d'attention"
-Source : saadiakaram.ai/guides/7-leviers-attention
-Statut : reformulé (texte). Aucun visuel/tableau HTML détecté sur cette page
----
-
 # Les 7 leviers d'attention de la Silicon Valley, détournés au profit de votre audience
 
 *Multi-outils · 9 min de lecture*

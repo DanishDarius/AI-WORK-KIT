@@ -1,10 +1,3 @@
----
-Guide original : Une idée, neuf publications
-Source : https://www.saadiakaram.ai/guides/content-repurposing-system
-Position réelle dans la bibliothèque au moment du traitement : 55/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). Guide court, contenu intégralement capturé, aucune troncature détectée.
----
-
 # Recycler un contenu long sans que ça sente le copier-coller
 
 *Claude · 6 min de lecture*

@@ -1,10 +1,3 @@
----
-Guide original : Maîtrise les Skills Claude en 10 min
-Source : https://www.saadiakaram.ai/guides/learn-skills
-Position réelle dans la bibliothèque au moment du traitement : 62/293.
-Statut : 0 image et 0 tableau trouvés dans le DOM (imgCount: 0, tables: 0). 1 section FAQ collapsée dépliée et capturée intégralement.
----
-
 # Créer son premier Skill Claude en dix minutes : anatomie et gabarit
 
 *Claude · 5 min de lecture*
