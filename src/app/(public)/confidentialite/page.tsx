@@ -88,7 +88,7 @@ export default function Confidentialite() {
           <li><strong>Afficher votre progression, vos favoris et votre série, reprendre là où vous en étiez :</strong> exécution du contrat.</li>
           <li><strong>Préparer le plan de votre tâche sur mesure et vous le remettre dans votre espace :</strong> exécution du contrat d’abonnement.</li>
           <li><strong>Répondre au support et aux demandes de contact, préparer un devis :</strong> exécution de mesures précontractuelles ou du contrat.</li>
-          <li><strong>Vous envoyer les emails de service</strong> (activation, mot de passe, reçu, avis de renouvellement ou de changement de prix) : exécution du contrat.</li>
+          <li><strong>Vous envoyer les emails de service</strong> (activation, mot de passe, reçu) : exécution du contrat.</li>
           <li><strong>Conserver les justificatifs de vente :</strong> obligation légale comptable.</li>
           <li><strong>Prévenir la fraude, le partage de comptes et les attaques, corriger les erreurs :</strong> intérêt légitime à protéger la plateforme.</li>
         </ul>

@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { PublicFooter, PublicTop, legalPages } from "./public";
 import { Kicker } from "./ui";
 
-export const LEGAL_UPDATED = "28 septembre 2026";
+export const LEGAL_UPDATED = "1er octobre 2026";
 
 // Mise en page commune aux pages légales : titre, date de mise à jour,
 // sommaire cliquable et navigation entre les trois documents.

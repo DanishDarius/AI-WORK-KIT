@@ -27,7 +27,7 @@ const FAQ = [
   { q: "Est-ce que ça marche sur mon téléphone ?", r: "Oui. AIW s’ouvre dans le navigateur et s’installe comme une application sur Android et sur iPhone." },
   { q: "Comment je paie ?", r: "Par Mobile Money ou par carte, sur la page de paiement sécurisée de Chariow. Votre compte est créé dès que le paiement est confirmé : vous recevez un e-mail pour choisir votre mot de passe." },
   { q: "Puis-je être remboursé ?", r: "Non, l’accès n’est pas remboursable. C’est pourquoi tout ce qu’il contient est détaillé sur cette page avant l’achat." },
-  { q: "Et l’abonnement ?", r: "Il se prend depuis la plateforme, une fois l’accès obtenu. Il ouvre tous les guides et la tâche sur mesure. Formules au mois, à l’année ou à vie." },
+  { q: "Et l’abonnement ?", r: "Il se prend depuis la plateforme, une fois l’accès obtenu. Il ouvre tous les guides et la tâche sur mesure. Formules au mois, à l’année ou à vie, payées une seule fois, sans prélèvement automatique." },
 ];
 
 function Phone() {

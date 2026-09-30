@@ -42,8 +42,8 @@ export function AbonnementEcran() {
           <section className="card pad-md row" style={{ alignItems: "flex-start", flexWrap: "nowrap" }}>
             <IconBox name="shield" tone="plain" />
             <div className="stack-sm">
-              <h3 className="h3">Pas de remboursement</h3>
-              <p className="small muted">Vous hésitez ? Commencez par le mensuel : il se résilie à tout moment.</p>
+              <h3 className="h3">Sans prélèvement automatique</h3>
+              <p className="small muted">Vous payez une période, une seule fois. Pour continuer, vous la prolongez quand vous voulez. Vous hésitez ? Commencez par le mensuel.</p>
             </div>
           </section>
         </>
@@ -56,7 +56,7 @@ export function AbonnementEcran() {
       {a?.actif && (
         <div className="notice" role="status" style={{ background: "var(--mint-bg)", borderColor: "#c9ebdb", color: "var(--green)" }}>
           <Icon name="check" size={20} />
-          <p>Votre abonnement {FORMULES.find((f) => f.id === a.periode)?.label.toLowerCase()} est actif{a.periode === "a_vie" ? ", sans échéance" : ` jusqu’au ${dateLongue(a.fin_le)}`}. Tout AIW est ouvert.</p>
+          <p>Votre abonnement {FORMULES.find((f) => f.id === a.periode)?.label.toLowerCase()} est actif{a.periode === "a_vie" ? ", sans échéance" : ` jusqu’au ${dateLongue(a.fin_le)}`}. Tout AIW est ouvert.{a.periode !== "a_vie" && " Un nouvel achat s’ajoute à la fin de votre période en cours."}</p>
         </div>
       )}
 
@@ -75,7 +75,7 @@ export function AbonnementEcran() {
         <a className="btn btn-orange btn-lg" href={lien} target={externe ? "_blank" : undefined} rel={externe ? "noopener noreferrer" : undefined}>
           <Icon name="lock" size={18} /> {externe ? `Payer ${fcfa(choisie.prix)}` : `Demander la formule ${choisie.label.toLowerCase()}`}
         </a>
-        <span className="small muted">{externe ? "Paiement sécurisé Chariow · Mobile Money ou carte" : "Le paiement en ligne arrive : nous vous répondons par e-mail avec le lien."}</span>
+        <span className="small muted">{externe ? <>Paiement sécurisé Chariow. Utilisez l’adresse e-mail de votre compte{moi?.email ? <> (<strong>{moi.email}</strong>)</> : null} : l’abonnement s’active tout seul.</> : "Le paiement en ligne arrive : nous vous répondons par e-mail avec le lien."}</span>
       </div>
 
       <section className="stack" aria-labelledby="comparaison">

@@ -65,7 +65,7 @@ export default function Conditions() {
           <div><dt>Utilisateur ou vous</dt><dd>La personne titulaire d’un compte, qu’elle agisse à titre personnel ou pour son activité professionnelle.</dd></div>
           <div><dt>Contenus</dt><dd>Les tâches, cas pratiques, données d’exemple, prompts, parcours par métier, plans de mise en place, guides, fiches d’actualité et glossaire.</dd></div>
           <div><dt>Accès AI WORK KIT</dt><dd>L’offre payée en une seule fois, décrite ci-dessous.</dd></div>
-          <div><dt>Abonnement Bibliothèque</dt><dd>L’offre payante et renouvelable qui ouvre l’ensemble des guides et la tâche sur mesure.</dd></div>
+          <div><dt>Abonnement Bibliothèque</dt><dd>L’offre payée par période (un mois, un an ou à vie) qui ouvre l’ensemble des guides et la tâche sur mesure.</dd></div>
         </dl>
       </LegalSection>
 
@@ -126,8 +126,8 @@ export default function Conditions() {
         <p>À la date de mise à jour de ces Conditions, les prix sont les suivants :</p>
         <dl className="legal-facts">
           <div><dt>Accès AI WORK KIT</dt><dd>5 000 FCFA, payés une seule fois</dd></div>
-          <div><dt>Abonnement Bibliothèque mensuel</dt><dd>5 000 FCFA par mois</dd></div>
-          <div><dt>Abonnement Bibliothèque annuel</dt><dd>50 000 FCFA par an</dd></div>
+          <div><dt>Abonnement Bibliothèque mensuel</dt><dd>5 000 FCFA pour un mois, payés une seule fois</dd></div>
+          <div><dt>Abonnement Bibliothèque annuel</dt><dd>50 000 FCFA pour un an, payés une seule fois</dd></div>
           <div><dt>Abonnement Bibliothèque à vie</dt><dd>95 000 FCFA, payés une seule fois</dd></div>
         </dl>
         <p>
@@ -149,11 +149,11 @@ export default function Conditions() {
 
       <LegalSection id="abonnement" title="Abonnement Bibliothèque">
         <ul>
-          <li><strong>Durée :</strong> l’abonnement court pour la période choisie à la commande : un mois ou un an. La formule à vie est payée une seule fois et ne se renouvelle pas.</li>
-          <li><strong>Renouvellement :</strong> il se renouvelle automatiquement pour une période identique, au prix en vigueur, sauf résiliation.</li>
-          <li><strong>Résiliation :</strong> vous pouvez le résilier à tout moment, sans frais, depuis votre Profil, par le chat du support ou en écrivant à {mail}. La résiliation prend effet à la fin de la période en cours, jusqu’à laquelle vous gardez l’accès à tous les guides et à la tâche sur mesure.</li>
-          <li><strong>Fin de l’abonnement :</strong> vous conservez l’Accès AI WORK KIT et les 10 guides inclus. Le bloc tâche sur mesure repasse en mode verrouillé.</li>
-          <li><strong>Changement de prix :</strong> toute hausse vous est annoncée par email au moins 30 jours avant le renouvellement concerné. Vous pouvez résilier avant qu’elle s’applique.</li>
+          <li><strong>Durée :</strong> l’abonnement court pour la période choisie à la commande : un mois ou un an à compter de l’activation. La formule à vie est sans échéance.</li>
+          <li><strong>Paiement unique, sans renouvellement automatique :</strong> chaque période est payée une seule fois. Aucun prélèvement n’est effectué ensuite, et il n’y a donc rien à résilier.</li>
+          <li><strong>Prolongation :</strong> vous pouvez prolonger à tout moment depuis la Plateforme, au prix en vigueur. La nouvelle période s’ajoute à la fin de celle en cours.</li>
+          <li><strong>Activation :</strong> l’abonnement s’active automatiquement lorsque le paiement est fait avec l’adresse email de votre compte. Si vous avez payé avec une autre adresse, écrivez à {mail} pour le faire rattacher.</li>
+          <li><strong>Fin de l’abonnement :</strong> à l’échéance, vous conservez l’Accès AI WORK KIT et les 10 guides inclus. Le bloc tâche sur mesure repasse en mode verrouillé.</li>
         </ul>
       </LegalSection>
 
@@ -168,8 +168,7 @@ export default function Conditions() {
         <p>
           En conséquence, <strong>les paiements ne sont pas remboursables</strong>,
           qu’il s’agisse de l’Accès AI WORK KIT ou d’une période d’abonnement
-          commencée. La résiliation d’un abonnement arrête les paiements
-          suivants, sans remboursement de la période en cours.
+          commencée.
         </p>
         <p>Nous vous remboursons toutefois dans les cas suivants :</p>
         <ul>
@@ -296,8 +295,7 @@ export default function Conditions() {
           Nous pouvons faire évoluer ces Conditions, notamment pour suivre
           l’évolution de la Plateforme ou de la loi. La version applicable est
           celle en vigueur à la date de votre commande. Pour les abonnements,
-          toute modification importante vous est notifiée par email au moins
-          30 jours avant de s’appliquer : vous pouvez alors résilier.
+          une modification ne s’applique pas à une période déjà payée.
         </p>
       </LegalSection>
 

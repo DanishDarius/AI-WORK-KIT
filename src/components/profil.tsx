@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { api, type Favori, tacheHref, useResource } from "@/lib/kit-api";
 import { useMoi } from "@/lib/moi";
-import { dateLongue, fcfa, FORMULES, PRIX, SUPPORT_EMAIL } from "@/lib/offre";
+import { dateLongue, fcfa, FORMULES, PRIX } from "@/lib/offre";
 import { useProfil } from "@/lib/profil";
 import type { GuideSummary } from "@/lib/guides";
 import { SignOutButton } from "./auth";
@@ -15,10 +15,6 @@ import { Chip, IconBox, ResourceState } from "./ui";
 import { StatsCard, useProgression } from "./widgets";
 
 const TYPES = { salarie: "Salarié", independant: "Indépendant", commercant: "Commerçant" } as const;
-
-function mail(sujet: string, corps: string) {
-  return `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
-}
 
 function Favoris() {
   const { data, error, retry, setData } = useResource<Favori[]>("/api/favoris");
@@ -118,10 +114,10 @@ export function ProfilEcran({ guides }: { guides: Pick<GuideSummary, "slug" | "t
           </div>
           {a?.actif ? (
             <div className="card is-orange pad-md stack-sm" style={{ borderBottomWidth: 2 }}>
-              <div className="row-between"><h3 className="h3">Abonnement {formule?.label.toLowerCase()}</h3><Chip tone="orange">{a.statut === "resilie" ? "Résilié" : "Actif"}</Chip></div>
-              <p className="small muted">{a.periode === "a_vie" ? "Sans échéance." : a.statut === "resilie" ? `Accès maintenu jusqu’au ${dateLongue(a.fin_le)}.` : `Renouvellement le ${dateLongue(a.fin_le)}.`}</p>
-              {a.periode !== "a_vie" && a.statut !== "resilie" && (
-                <a className="link small" href={mail("Résilier mon abonnement AIW", `Bonjour, je souhaite résilier mon abonnement AIW (${moi?.email ?? ""}).`)}>Résilier l’abonnement</a>
+              <div className="row-between"><h3 className="h3">Abonnement {formule?.label.toLowerCase()}</h3><Chip tone="orange">Actif</Chip></div>
+              <p className="small muted">{a.periode === "a_vie" ? "Sans échéance." : `Actif jusqu’au ${dateLongue(a.fin_le)}. Rien n’est prélevé automatiquement.`}</p>
+              {a.periode !== "a_vie" && (
+                <Link className="link small" href="/abonnement">Prolonger mon abonnement</Link>
               )}
             </div>
           ) : (

@@ -13,7 +13,7 @@ const QUESTIONS: [string, React.ReactNode][] = [
   ["Que change l’abonnement ?", <>Il ouvre tous les guides, y compris chaque nouveau guide publié, et la tâche sur mesure dans chaque métier. Il coûte {fcfa(PRIX.mensuel)} par mois, {fcfa(PRIX.annuel)} par an ou {fcfa(PRIX.a_vie)} à vie. <Link href="/abonnement">Voir les formules</Link>.</>],
   ["Comment fonctionne la tâche sur mesure ?", <>En bas de votre parcours, décrivez une tâche qui n’est pas dans la liste. L’équipe vous prépare un plan détaillé, étape par étape, avec un prompt prêt pour les IA choisies. Le plan s’affiche au même endroit dès qu’il est prêt.</>],
   ["Comment changer de métier ou d’IA ?", <>Depuis votre parcours : « Changer de métier » en haut, et « Votre IA pour ce métier » dans la colonne de droite (en bas de page sur téléphone).</>],
-  ["Comment résilier mon abonnement ?", <>Depuis votre <Link href="/profil#offre">profil</Link>, section Mon offre, ou en écrivant au support. L’accès reste ouvert jusqu’à la fin de la période déjà payée.</>],
+  ["Mon abonnement se renouvelle-t-il tout seul ?", <>Non. Vous payez une période (un mois, un an ou à vie) une seule fois, et rien n’est prélevé ensuite. Pour continuer, prolongez-le depuis la page <Link href="/abonnement">Abonnement</Link> : la nouvelle période s’ajoute à la fin de celle en cours. Payez avec l’adresse e-mail de votre compte AIW pour qu’il s’active tout seul.</>],
   ["Je n’arrive plus à me connecter.", <>Utilisez <Link href="/mot-de-passe-oublie">Mot de passe oublié</Link> avec l’adresse e-mail de votre achat. Si rien n’arrive, vérifiez vos courriers indésirables puis écrivez-nous.</>],
 ];
 

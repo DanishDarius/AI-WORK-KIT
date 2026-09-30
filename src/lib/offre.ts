@@ -37,8 +37,8 @@ export const PRIX = {
 export type Formule = "mensuel" | "annuel" | "a_vie";
 
 export const FORMULES: { id: Formule; label: string; prix: number; unite: string; note: string }[] = [
-  { id: "mensuel", label: "Mensuel", prix: PRIX.mensuel, unite: "par mois", note: "Sans engagement, résiliable à tout moment" },
-  { id: "annuel", label: "Annuel", prix: PRIX.annuel, unite: "par an", note: "Deux mois offerts par rapport au mensuel" },
+  { id: "mensuel", label: "Mensuel", prix: PRIX.mensuel, unite: "pour un mois", note: "Sans engagement, rien n’est prélevé ensuite" },
+  { id: "annuel", label: "Annuel", prix: PRIX.annuel, unite: "pour un an", note: "Deux mois offerts par rapport au mensuel" },
   { id: "a_vie", label: "À vie", prix: PRIX.a_vie, unite: "une seule fois", note: "Moins de deux ans d’abonnement annuel" },
 ];
 
