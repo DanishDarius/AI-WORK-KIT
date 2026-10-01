@@ -47,7 +47,7 @@ export default async function GuidePage({ params }: Props) {
           <p className="lead">{guide.excerpt}</p>
           <GuideActions slug={guide.slug} number={guide.number} title={guide.title} telechargement={abonnement.actif} />
           {!abonnement.actif && !verrouille && (
-            <p className="small muted"><Icon name="lock" size={14} /> Téléchargement en PDF, avec le droit de le revendre : <Link className="link" href="/abonnement">avec l’abonnement</Link>.</p>
+            <p className="small muted"><span aria-hidden="true" style={{ display: "inline-flex", verticalAlign: "-2px", marginRight: 6 }}><Icon name="lock" size={14} /></span>Téléchargement en PDF, avec le droit de le revendre : <Link className="link" href="/abonnement">avec l’abonnement</Link>.</p>
           )}
         </div>
         <div className="hide-sm">
