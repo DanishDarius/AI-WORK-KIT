@@ -1,0 +1,52 @@
+# Contrôles AIW : les mêmes que « npm run verif », lancés à chaque envoi.
+# Voir docs/REGLES-AIW.md. Chaque étape tourne même si la précédente échoue,
+# pour que le rapport montre tout ce qui ne va pas en une fois.
+name: Contrôles AIW
+
+on:
+  push:
+    branches: [main, "frontend/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verif-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verif:
+    name: Lint, types, tests, audit, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Lint
+        if: always()
+        run: npm run lint
+
+      - name: Types
+        if: always()
+        run: npm run typecheck
+
+      - name: Tests des règles et du serveur
+        if: always()
+        run: npm run test
+
+      - name: Audit des dépendances de production
+        if: always()
+        run: npm run audit:prod
+
+      - name: Build
+        if: always()
+        run: npm run build
