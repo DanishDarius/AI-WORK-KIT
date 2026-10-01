@@ -64,6 +64,12 @@ export const LIENS_ABONNEMENT: Record<Formule, string> = {
 // Page de l'abonnement dans l'application (les formules y sont présentées).
 export const LIEN_ABONNEMENT = "/abonnement";
 
+// L'abonnement reste fermé aux nouveaux clients tant que son flux de
+// nouveautés (tâche de la semaine, packs, kits mis à jour) n'est pas en place.
+// Pour l'ouvrir : variable Vercel NEXT_PUBLIC_ABONNEMENT_OUVERT=1.
+export const ABONNEMENT_OUVERT = process.env.NEXT_PUBLIC_ABONNEMENT_OUVERT === "1";
+export const LIEN_ETRE_PREVENU = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Ouverture de l’abonnement AIW")}&body=${encodeURIComponent("Bonjour, prévenez-moi dès l’ouverture de l’abonnement AIW.")}`;
+
 // Page de paiement de l'accès (produit Chariow « Accès AIW »).
 export const LIEN_ACCES =
   process.env.NEXT_PUBLIC_ACCESS_URL ||

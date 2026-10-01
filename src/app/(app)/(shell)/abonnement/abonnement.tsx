@@ -5,7 +5,7 @@ import { Icon } from "@/components/icon";
 import { Page } from "@/components/shell";
 import { CheckList, Chip, IconBox, PageHead } from "@/components/ui";
 import { useMoi } from "@/lib/moi";
-import { dateLongue, fcfa, type Formule, FORMULES, LIENS_ABONNEMENT, PRIX } from "@/lib/offre";
+import { ABONNEMENT_OUVERT, dateLongue, fcfa, type Formule, FORMULES, LIEN_ETRE_PREVENU, LIENS_ABONNEMENT, PRIX } from "@/lib/offre";
 
 const LIGNES: { label: string; base: boolean | string; abo: boolean | string }[] = [
   { label: "Les 42 tâches, cas pratiques et prompts", base: true, abo: true },
@@ -53,6 +53,13 @@ export function AbonnementEcran() {
         Tous les guides de la bibliothèque et la tâche sur mesure : décrivez une tâche qui n’est pas dans la liste, recevez son plan pour votre IA.
       </PageHead>
 
+      {!ABONNEMENT_OUVERT && !a?.actif && (
+        <div className="notice" role="status" style={{ background: "var(--orange-bg)", borderColor: "var(--orange-line)", color: "var(--orange)" }}>
+          <Icon name="clock" size={20} />
+          <p>L’abonnement ouvre bientôt. Voici ce qu’il contiendra : laissez-nous votre adresse, nous vous prévenons dès l’ouverture.</p>
+        </div>
+      )}
+
       {a?.actif && (
         <div className="notice" role="status" style={{ background: "var(--mint-bg)", borderColor: "#c9ebdb", color: "var(--green)" }}>
           <Icon name="check" size={20} />
@@ -71,12 +78,19 @@ export function AbonnementEcran() {
         ))}
       </div>
 
+      {!ABONNEMENT_OUVERT && !a?.actif ? (
+        <div className="row">
+          <a className="btn btn-orange btn-lg" href={LIEN_ETRE_PREVENU}><Icon name="bell" size={18} /> Être prévenu de l’ouverture</a>
+          <span className="small muted">Un e-mail, rien d’autre. Votre accès AIW reste inchangé.</span>
+        </div>
+      ) : (
       <div className="row">
         <a className="btn btn-orange btn-lg" href={lien} target={externe ? "_blank" : undefined} rel={externe ? "noopener noreferrer" : undefined}>
           <Icon name="lock" size={18} /> {externe ? `Payer ${fcfa(choisie.prix)}` : `Demander la formule ${choisie.label.toLowerCase()}`}
         </a>
         <span className="small muted">{externe ? <>Paiement sécurisé Chariow. Utilisez l’adresse e-mail de votre compte{moi?.email ? <> (<strong>{moi.email}</strong>)</> : null} : l’abonnement s’active tout seul.</> : "Le paiement en ligne arrive : nous vous répondons par e-mail avec le lien."}</span>
       </div>
+      )}
 
       <section className="stack" aria-labelledby="comparaison">
         <h2 id="comparaison" className="h2">Accès ou abonnement</h2>
