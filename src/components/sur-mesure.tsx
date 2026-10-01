@@ -56,6 +56,14 @@ function resume(texte: string) {
   return ligne.length > 90 ? `${ligne.slice(0, 87).trimEnd()}…` : ligne;
 }
 
+// Titre d'une demande dans « Mes demandes » : la première ligne de la
+// description, sans son étiquette (« Tâche : », « Métier : »). Pour une
+// tâche, on rappelle le métier ; pour un métier, l'intitulé suffit.
+function titreDemande(d: Demande) {
+  const premiere = (d.description.split(/\n+/)[0] ?? "").replace(/^(Tâche|Métier)\s*:\s*/, "");
+  return d.type === "metier" ? resume(premiere) : `${d.metier_nom} · ${resume(premiere)}`;
+}
+
 function ChoixIA({ ias, onChange }: { ias: IA[]; onChange: (ias: IA[]) => void }) {
   return (
     <fieldset className="stack-sm" style={{ border: 0, padding: 0, margin: 0 }}>
@@ -176,12 +184,19 @@ function MesDemandes({ demandes }: { demandes: Demande[] }) {
         <details key={d.id} className="faq">
           <summary>
             <Chip>{d.type === "metier" ? "Métier" : "Tâche"}</Chip>
-            <span className="grow">{d.metier_nom} · {resume(d.description)}</span>
+            <span className="grow">{titreDemande(d)}</span>
             <Chip tone={statuts[d.statut].tone}>{statuts[d.statut].label}</Chip>
-            <time className="small muted" dateTime={d.cree_le}>{dateCourte(d.cree_le)}</time>
+            <time className="small muted" style={{ whiteSpace: "nowrap" }} dateTime={d.cree_le}>{dateCourte(d.cree_le)}</time>
           </summary>
           <div style={{ marginTop: 12 }}>
-            {d.statut === "livre" && d.plan ? <GuideMarkdown markdown={d.plan} guideNumber={0} /> : <p className="muted">Votre demande est en préparation. Elle s’affichera ici dès qu’elle sera livrée.</p>}
+            {d.statut === "livre" && d.plan ? (
+              <GuideMarkdown markdown={d.plan} guideNumber={0} />
+            ) : (
+              <>
+                <p className="muted">Votre demande est en préparation. Elle s’affichera ici dès qu’elle sera livrée.</p>
+                <p className="small muted" style={{ whiteSpace: "pre-wrap", marginTop: 8 }}>{d.description}</p>
+              </>
+            )}
           </div>
         </details>
       ))}
