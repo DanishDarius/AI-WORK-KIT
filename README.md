@@ -68,3 +68,11 @@ Les fichiers 0004 et 0005 sont volumineux (plusieurs centaines de Ko) : mieux va
 - Vérifier l'authentification du domaine côté Brevo (bouton "Vérifier les enregistrements" / "Authentifier le domaine") une fois la propagation DNS terminée (jusqu'à 48h) - sans quoi Brevo peut appliquer des limites d'envoi ou un moins bon taux de délivrabilité tant que le domaine n'est pas authentifié.
 - Personnaliser les modèles Supabase "Invite user" et "Reset password" en français. Ils doivent conserver les variables Supabase requises et rediriger respectivement vers `/activation` et `/nouveau-mot-de-passe`.
 - Une fois une vraie vente effectuée, vérifier dans Supabase (table `acces_clients`) que la ligne est créée, que l'email d'invitation part bien via Brevo, et surtout **tester le clic sur le lien reçu de bout en bout** (jusqu'ici seul le build a été vérifié techniquement - la connexion réelle via un vrai email n'a pas encore été testée en conditions réelles).
+
+## Règles et contrôles
+
+Les règles de sécurité, de charge et de qualité du projet sont dans `docs/REGLES-AIW.md`. Elles s'appliquent à tout changement.
+
+- `npm run verif` lance le lint, la vérification des types, les tests (`tests/`), l'audit des dépendances de production et le build. La commande doit passer avant chaque livraison.
+- `npm run test` lance seulement les tests : les règles lues dans le code (`tests/regles`) et les tests du serveur (`tests/unitaires`).
+- Les mêmes contrôles tournent sur GitHub à chaque envoi (`.github/workflows/verif.yml`).

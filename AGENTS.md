@@ -7,3 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Règles AIW
+
+Avant d'écrire, de modifier ou de livrer quoi que ce soit dans ce dépôt, lire et appliquer `docs/REGLES-AIW.md` (sécurité, charge, qualité, base de données, livraison). La commande `npm run verif` doit passer avant chaque livraison, puis la revue manuelle décrite à la fin de ce fichier de règles est faite.
