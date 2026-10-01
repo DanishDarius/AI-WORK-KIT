@@ -8,13 +8,15 @@ import { useMoi } from "@/lib/moi";
 import { ABONNEMENT_OUVERT, dateLongue, fcfa, type Formule, FORMULES, LIEN_ETRE_PREVENU, LIENS_ABONNEMENT, PRIX } from "@/lib/offre";
 
 const LIGNES: { label: string; base: boolean | string; abo: boolean | string }[] = [
-  { label: "Les 42 tâches, cas pratiques et prompts", base: true, abo: true },
-  { label: "La mise en place pour ChatGPT, Claude et Gemini", base: true, abo: true },
-  { label: "Mon kit : outils à brancher et routines", base: true, abo: true },
+  { label: "Le kit de votre métier et ses mises à jour", base: true, abo: true },
+  { label: "Les tâches, cas pratiques et modèles à remplir", base: true, abo: true },
   { label: "Le parcours de votre métier", base: true, abo: true },
-  { label: "Guides de la bibliothèque", base: "10 inclus", abo: "Les 292" },
-  { label: "La tâche sur mesure dans chaque métier", base: false, abo: true },
-  { label: "Les nouveaux guides dès leur sortie", base: false, abo: true },
+  { label: "Guides de la bibliothèque (lecture)", base: "10 inclus", abo: "Tous" },
+  { label: "Guides téléchargeables, avec droit de revente", base: false, abo: true },
+  { label: "Tâche sur mesure", base: false, abo: "8 par mois" },
+  { label: "Métier sur mesure (kit complet)", base: false, abo: "2 par mois" },
+  { label: "Support", base: "E-mail", abo: "E-mail et chat" },
+  { label: "Les nouveautés dès leur sortie", base: false, abo: true },
 ];
 
 function Cellule({ v, orange }: { v: boolean | string; orange?: boolean }) {
@@ -37,7 +39,7 @@ export function AbonnementEcran() {
         <>
           <section className="card pad-md stack">
             <h3 className="h3">Ce que vous débloquez</h3>
-            <CheckList tone="orange" items={[{ label: "Les 282 guides réservés" }, { label: "La tâche sur mesure de chaque métier" }, { label: "Chaque nouveau guide publié" }]} />
+            <CheckList tone="orange" items={[{ label: "Tous les guides, à télécharger et à revendre" }, { label: "8 tâches et 2 métiers sur mesure par mois" }, { label: "Le chat du support, 7 j/7" }, { label: "Chaque nouveauté publiée" }]} />
           </section>
           <section className="card pad-md row" style={{ alignItems: "flex-start", flexWrap: "nowrap" }}>
             <IconBox name="shield" tone="plain" />
@@ -50,7 +52,7 @@ export function AbonnementEcran() {
       }
     >
       <PageHead kicker="Abonnement" title="Tout AIW, pour aller plus loin.">
-        Tous les guides de la bibliothèque et la tâche sur mesure : décrivez une tâche qui n’est pas dans la liste, recevez son plan pour votre IA.
+        Tous les guides, à télécharger et à revendre, et le sur-mesure : une tâche ou un métier entier préparé pour vous, avec le chat du support.
       </PageHead>
 
       {!ABONNEMENT_OUVERT && !a?.actif && (

@@ -14,9 +14,10 @@ const sections = [
   { id: "offres", title: "Les offres" },
   { id: "compte", title: "Création du compte et accès" },
   { id: "prix", title: "Prix et paiement" },
-  { id: "abonnement", title: "Abonnement Bibliothèque" },
+  { id: "abonnement", title: "Abonnement AIW" },
   { id: "retractation", title: "Rétractation et remboursement" },
   { id: "usage", title: "Ce que vous pouvez faire avec les contenus" },
+  { id: "licence", title: "Licence de revente des guides" },
   { id: "outils-ia", title: "Outils d’IA tiers" },
   { id: "support", title: "Support" },
   { id: "disponibilite", title: "Disponibilité et évolution" },
@@ -65,7 +66,7 @@ export default function Conditions() {
           <div><dt>Utilisateur ou vous</dt><dd>La personne titulaire d’un compte, qu’elle agisse à titre personnel ou pour son activité professionnelle.</dd></div>
           <div><dt>Contenus</dt><dd>Les tâches, cas pratiques, données d’exemple, prompts, parcours par métier, plans de mise en place, guides, fiches d’actualité et glossaire.</dd></div>
           <div><dt>Accès AI WORK KIT</dt><dd>L’offre payée en une seule fois, décrite ci-dessous.</dd></div>
-          <div><dt>Abonnement Bibliothèque</dt><dd>L’offre payée par période (un mois, un an ou à vie) qui ouvre l’ensemble des guides et la tâche sur mesure.</dd></div>
+          <div><dt>Abonnement AIW</dt><dd>L’offre payée par période (un mois, un an ou à vie) qui ouvre l’ensemble des guides avec leur licence de revente, le sur-mesure et le chat du support.</dd></div>
         </dl>
       </LegalSection>
 
@@ -73,24 +74,34 @@ export default function Conditions() {
         <h3>Accès AI WORK KIT (paiement unique)</h3>
         <p>Un paiement unique ouvre, sans limite de durée tant que la Plateforme est exploitée :</p>
         <ul>
+          <li>le <strong>kit de votre métier</strong> (configurations, skills, modèles de documents, routines), au fur et à mesure de sa publication, et ses mises à jour quand un outil d’IA change ;</li>
           <li>les parcours <strong>Tâches</strong> et <strong>Métiers</strong> : chaque tâche avec ses cas pratiques, ses données d’exemple et ses prompts prêts à copier pour ChatGPT, Claude et Gemini ;</li>
-          <li>les plans <strong>Mettre en place</strong> : outils, prompts et configuration des tâches automatisables pour chaque IA ;</li>
-          <li><strong>Comprendre les IA</strong>, le glossaire et les <strong>Mises à jour IA</strong> ;</li>
-          <li><strong>10 guides</strong> de la bibliothèque, signalés « Inclus », ainsi que l’aperçu gratuit (introduction et premier chapitre) des autres guides ;</li>
+          <li>les plans de mise en place : outils, prompts et configuration des tâches automatisables pour chaque IA ;</li>
+          <li>le glossaire et les nouveautés des IA ;</li>
+          <li><strong>10 guides</strong> de la bibliothèque à lire en ligne, signalés « Inclus », ainsi que l’aperçu (introduction et premier chapitre) des autres guides ;</li>
           <li>le suivi de votre progression, vos favoris et vos guides enregistrés ;</li>
-          <li>le support décrit plus bas.</li>
+          <li>le support par email, décrit plus bas.</li>
         </ul>
 
-        <h3>Abonnement Bibliothèque</h3>
+        <h3>Abonnement AIW</h3>
         <p>
           Réservé aux titulaires de l’Accès AI WORK KIT et souscrit depuis la
           Plateforme, il ouvre pendant toute sa durée :
         </p>
         <ul>
-          <li>l’ensemble des guides de la bibliothèque, au-delà des 10 guides inclus dans l’Accès AI WORK KIT, ainsi que les nouveaux guides publiés ;</li>
-          <li>le bloc <strong>tâche sur mesure</strong> de chaque métier : vous décrivez une tâche précise qui ne figure pas dans la liste, et l’équipe vous prépare un plan détaillé, étape par étape, avec un prompt pour chacune des IA choisies, sur le modèle des tâches existantes. Le plan est mis à disposition dans votre espace. Ce service est limité à un usage raisonnable (5 demandes par jour au plus) et ne couvre pas la réalisation de la tâche à votre place.</li>
+          <li>l’ensemble des guides de la bibliothèque et les nouveaux guides publiés, à lire en ligne et à <strong>télécharger en PDF</strong>, avec la licence de revente décrite plus bas ;</li>
+          <li>la <strong>tâche sur mesure</strong> : vous décrivez une tâche plus complexe ou propre à votre activité, même dans un métier déjà couvert, et l’équipe vous prépare sa fiche complète (cas, modèle à remplir, prompt pour chacune des IA choisies, ressources utiles), livrée dans votre espace en 30 minutes à 2 heures, dans la limite de <strong>8 demandes par mois</strong> ;</li>
+          <li>le <strong>métier sur mesure</strong> : pour un métier couvert ou non, l’équipe vous prépare un kit complet (configuration de votre IA, skills, modèles de documents, routines et vos principales tâches), livré en 8 à 24 heures, dans la limite de <strong>2 demandes par mois</strong> ;</li>
+          <li>le chat du support, en plus de l’email ;</li>
+          <li>les nouveautés publiées pour les abonnés.</li>
         </ul>
-        <p>Le bloc tâche sur mesure n’est utilisable que pendant un abonnement actif.</p>
+        <p>
+          Les délais de livraison du sur-mesure courent pendant les heures d’activité du support et sont indicatifs.
+          Les limites mensuelles se renouvellent le 1er de chaque mois. Le sur-mesure ne couvre pas la réalisation
+          de la tâche à votre place. Une version anonymisée d’une demande peut rejoindre le catalogue d’AIW quand
+          elle peut servir à d’autres clients ; aucune donnée qui vous identifie n’y figure.
+        </p>
+        <p>Le sur-mesure, le téléchargement des guides et le chat ne sont utilisables que pendant un abonnement actif.</p>
 
         <h3>Services sur mesure</h3>
         <p>
@@ -126,9 +137,9 @@ export default function Conditions() {
         <p>À la date de mise à jour de ces Conditions, les prix sont les suivants :</p>
         <dl className="legal-facts">
           <div><dt>Accès AI WORK KIT</dt><dd>5 000 FCFA, payés une seule fois</dd></div>
-          <div><dt>Abonnement Bibliothèque mensuel</dt><dd>5 000 FCFA pour un mois, payés une seule fois</dd></div>
-          <div><dt>Abonnement Bibliothèque annuel</dt><dd>50 000 FCFA pour un an, payés une seule fois</dd></div>
-          <div><dt>Abonnement Bibliothèque à vie</dt><dd>95 000 FCFA, payés une seule fois</dd></div>
+          <div><dt>Abonnement AIW mensuel</dt><dd>5 000 FCFA pour un mois, payés une seule fois</dd></div>
+          <div><dt>Abonnement AIW annuel</dt><dd>50 000 FCFA pour un an, payés une seule fois</dd></div>
+          <div><dt>Abonnement AIW à vie</dt><dd>95 000 FCFA, payés une seule fois</dd></div>
         </dl>
         <p>
           Le prix applicable est celui affiché au moment de la commande. Il
@@ -147,13 +158,13 @@ export default function Conditions() {
         </p>
       </LegalSection>
 
-      <LegalSection id="abonnement" title="Abonnement Bibliothèque">
+      <LegalSection id="abonnement" title="Abonnement AIW">
         <ul>
           <li><strong>Durée :</strong> l’abonnement court pour la période choisie à la commande : un mois ou un an à compter de l’activation. La formule à vie est sans échéance.</li>
           <li><strong>Paiement unique, sans renouvellement automatique :</strong> chaque période est payée une seule fois. Aucun prélèvement n’est effectué ensuite, et il n’y a donc rien à résilier.</li>
           <li><strong>Prolongation :</strong> vous pouvez prolonger à tout moment depuis la Plateforme, au prix en vigueur. La nouvelle période s’ajoute à la fin de celle en cours.</li>
           <li><strong>Activation :</strong> l’abonnement s’active automatiquement lorsque le paiement est fait avec l’adresse email de votre compte. Si vous avez payé avec une autre adresse, écrivez à {mail} pour le faire rattacher.</li>
-          <li><strong>Fin de l’abonnement :</strong> à l’échéance, vous conservez l’Accès AI WORK KIT et les 10 guides inclus. Le bloc tâche sur mesure repasse en mode verrouillé.</li>
+          <li><strong>Fin de l’abonnement :</strong> à l’échéance, vous conservez l’Accès AI WORK KIT et les 10 guides inclus, ainsi que les livraisons sur mesure déjà reçues et les guides déjà téléchargés. Le sur-mesure, le téléchargement et le chat se referment.</li>
         </ul>
       </LegalSection>
 
@@ -194,11 +205,28 @@ export default function Conditions() {
         <p><strong>Vous ne pouvez pas :</strong></p>
         <ul>
           <li>partager vos identifiants ou donner accès à votre compte à un tiers ;</li>
-          <li>reproduire, publier, revendre ou distribuer les Contenus, en tout ou en partie, y compris dans une formation, un produit ou un service concurrent ;</li>
+          <li>reproduire, publier, revendre ou distribuer les Contenus, en tout ou en partie, y compris dans une formation, un produit ou un service concurrent, sauf les guides téléchargés dans le cadre de la licence ci-dessous ;</li>
           <li>extraire les Contenus de façon automatisée (robots, aspiration, copie en masse) ;</li>
           <li>contourner les mesures de sécurité ou d’accès de la Plateforme, ou perturber son fonctionnement ;</li>
           <li>utiliser la Plateforme à des fins illicites ou contraires aux règles des outils d’IA concernés.</li>
         </ul>
+      </LegalSection>
+
+      <LegalSection id="licence" title="Licence de revente des guides">
+        <p>
+          Chaque guide que vous téléchargez pendant un abonnement actif est à vous : vous pouvez le vendre,
+          l’offrir, l’intégrer à vos produits ou le publier sous votre nom. Ce droit reste valable après la fin
+          de l’abonnement pour les guides déjà téléchargés.
+        </p>
+        <p>Une seule règle, selon que vous modifiez le guide ou non :</p>
+        <ul>
+          <li><strong>Vous le laissez tel quel :</strong> vous pouvez mentionner AI WORK KIT, ou ne pas le mentionner.</li>
+          <li><strong>Vous le modifiez :</strong> vous retirez toute mention d’AI WORK KIT et de Parlons ADS. Le guide modifié est votre œuvre, sous votre seule responsabilité.</li>
+        </ul>
+        <p>
+          Cette licence concerne uniquement les guides téléchargés. Les tâches, cas pratiques, prompts et kits
+          restent réservés à votre usage, et votre compte reste personnel.
+        </p>
       </LegalSection>
 
       <LegalSection id="outils-ia" title="Outils d’IA tiers">
@@ -223,8 +251,8 @@ export default function Conditions() {
 
       <LegalSection id="support" title="Support">
         <p>
-          Le support est joignable <strong>24 h/24 et 7 j/7</strong>, par le
-          chat intégré à la Plateforme ou à {mail}, pour toute question sur votre accès, votre abonnement ou l’utilisation
+          Le support est joignable par email à {mail} pour tous les clients, et
+          par le chat intégré à la Plateforme, <strong>7 j/7</strong>, pour les abonnés, pour toute question sur votre accès, votre abonnement ou l’utilisation
           des Contenus. Nous répondons dans les meilleurs délais. Le support
           n’inclut pas la réalisation de vos tâches à votre place ni la
           conception de systèmes sur mesure, qui relèvent des services sur

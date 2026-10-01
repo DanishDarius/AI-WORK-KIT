@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useMoi } from "@/lib/moi";
+import { useAbonne, useMoi } from "@/lib/moi";
 import { SUPPORT_EMAIL } from "@/lib/offre";
 import { Icon } from "./icon";
 
-// Chat du support (tawk.to), chargé uniquement au clic.
+// Chat du support (tawk.to), réservé aux abonnés et chargé uniquement au clic.
+// Les clients de l'accès seul écrivent au support par e-mail.
 // Tant que personne n'ouvre le chat, aucun script tiers n'est chargé et aucun
 // cookie tawk.to n'est déposé : pas besoin de bandeau cookies.
 // Variables (Vercel) : NEXT_PUBLIC_TAWK_PROPERTY_ID et NEXT_PUBLIC_TAWK_WIDGET_ID,
@@ -76,6 +77,11 @@ export function ouvrirSupport() {
 }
 
 export function SupportChat() {
+  const abonne = useAbonne();
+  return abonne ? <BulleChat /> : null;
+}
+
+function BulleChat() {
   const moi = useMoi();
   const [ouvert, setOuvert] = useState(false);
   const [attente, setAttente] = useState(false);
@@ -123,10 +129,24 @@ export function SupportChat() {
 }
 
 export function BoutonChat({ className = "btn", children }: { className?: string; children?: React.ReactNode }) {
+  const abonne = useAbonne();
+  if (!abonne)
+    return (
+      <a className={className} href={`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Question sur AIW")}`}>
+        <Icon name="mail" size={18} />
+        Écrire au support
+      </a>
+    );
   return (
     <button type="button" className={className} onClick={ouvrirSupport}>
       <Icon name="chat" size={18} />
       {children ?? "Ouvrir le chat"}
     </button>
   );
+}
+
+// Bouton de chat affiché seulement aux abonnés (rien pour les autres).
+export function ChatSiAbonne({ className = "btn btn-secondary btn-plain" }: { className?: string }) {
+  const abonne = useAbonne();
+  return abonne ? <BoutonChat className={className}>Ouvrir le chat</BoutonChat> : null;
 }

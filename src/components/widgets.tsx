@@ -98,7 +98,7 @@ export function AbonnementCard() {
         <IconBox name="gift" tone="orange" />
         <div className="stack-sm">
           <h3 className="h3">Passez à l’abonnement</h3>
-          <p className="small muted">Tous les guides et la tâche sur mesure. Au mois, à l’année ou à vie.</p>
+          <p className="small muted">Guides revendables, sur-mesure et chat. Au mois, à l’année ou à vie.</p>
         </div>
       </div>
       <Link className="btn btn-orange btn-block" href="/abonnement">Voir les formules</Link>

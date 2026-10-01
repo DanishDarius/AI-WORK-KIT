@@ -123,7 +123,7 @@ export function ProfilEcran({ guides }: { guides: Pick<GuideSummary, "slug" | "t
           ) : (
             <div className="card pad-md stack-sm" style={{ borderBottomWidth: 2, borderStyle: "dashed", borderColor: "var(--orange-line)" }}>
               <h3 className="h3">Abonnement</h3>
-              <p className="small muted">Tous les guides et la tâche sur mesure. Au mois, à l’année ou à vie.</p>
+              <p className="small muted">Guides revendables, sur-mesure et chat. Au mois, à l’année ou à vie.</p>
               <Link className="btn btn-orange btn-sm" href="/abonnement">Voir les formules</Link>
             </div>
           )}

@@ -17,7 +17,7 @@ export const NAV: NavItem[] = [
   { label: "Mon kit", href: "/kit", icon: "kit", match: (p) => p.startsWith("/kit"), tab: true },
   { label: "Guides", href: "/bibliotheque", icon: "book", match: (p) => p.startsWith("/bibliotheque") || p.startsWith("/guides"), tab: true },
   { label: "Nouveau", href: "/nouveau", icon: "spark", match: (p) => p.startsWith("/nouveau") || p.startsWith("/mises-a-jour-ia"), tab: false },
-  { label: "Profil", href: "/profil", icon: "user", match: (p) => p.startsWith("/profil") || p.startsWith("/abonnement") || p.startsWith("/aide") || p.startsWith("/accompagnement"), tab: true },
+  { label: "Profil", href: "/profil", icon: "user", match: (p) => p.startsWith("/profil") || p.startsWith("/abonnement") || p.startsWith("/sur-mesure") || p.startsWith("/aide") || p.startsWith("/accompagnement"), tab: true },
 ];
 
 export function AppShell({ children }: { children: ReactNode }) {

@@ -27,7 +27,7 @@ const FAQ = [
   { q: "Est-ce que ça marche sur mon téléphone ?", r: "Oui. AIW s’ouvre dans le navigateur et s’installe comme une application sur Android et sur iPhone." },
   { q: "Comment je paie ?", r: "Par Mobile Money ou par carte, sur la page de paiement sécurisée de Chariow. Votre compte est créé dès que le paiement est confirmé : vous recevez un e-mail pour choisir votre mot de passe." },
   { q: "Puis-je être remboursé ?", r: "Non, l’accès n’est pas remboursable. C’est pourquoi tout ce qu’il contient est détaillé sur cette page avant l’achat." },
-  { q: "Et l’abonnement ?", r: "Il se prend depuis la plateforme, une fois l’accès obtenu. Il ouvre tous les guides et la tâche sur mesure. Formules au mois, à l’année ou à vie, payées une seule fois, sans prélèvement automatique." },
+  { q: "Et l’abonnement ?", r: "Il se prend depuis la plateforme, une fois l’accès obtenu. Il ouvre tous les guides, à télécharger et à revendre, le sur-mesure et le chat du support. Formules au mois, à l’année ou à vie, payées une seule fois, sans prélèvement automatique." },
 ];
 
 function Phone() {
@@ -192,7 +192,7 @@ export default async function Acces({ searchParams }: PageProps<"/acces">) {
                   { label: "La mise en place pour ChatGPT, Claude et Gemini" },
                   { label: "Le parcours de votre métier et votre progression" },
                   { label: "10 guides de la bibliothèque" },
-                  { label: "Le support par chat" },
+                  { label: "Le support par e-mail" },
                 ]} />
                 <a className="btn btn-lg btn-block" href={LIEN_ACCES}>Obtenir l’accès</a>
               </article>
@@ -209,8 +209,9 @@ export default async function Acces({ searchParams }: PageProps<"/acces">) {
                 </div>
                 <CheckList tone="orange" items={[
                   { label: "Tout ce que contient l’accès" },
-                  { label: "Les 292 guides de la bibliothèque" },
-                  { label: "La tâche sur mesure : décrivez la vôtre, recevez son plan" },
+                  { label: "Tous les guides, à télécharger et à revendre" },
+                  { label: "8 tâches et 2 métiers sur mesure par mois" },
+                  { label: "Le chat du support" },
                 ]} />
                 <p className="small muted">L’abonnement se prend depuis la plateforme, une fois l’accès obtenu.</p>
               </article>

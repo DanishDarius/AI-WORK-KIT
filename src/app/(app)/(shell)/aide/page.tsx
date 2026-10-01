@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { Page } from "@/components/shell";
-import { BoutonChat } from "@/components/support-chat";
+import { ChatSiAbonne } from "@/components/support-chat";
 import { IconBox, PageHead } from "@/components/ui";
 import { fcfa, PRIX, SUPPORT_EMAIL } from "@/lib/offre";
 
@@ -10,8 +10,9 @@ export const metadata: Metadata = { title: "Aide", description: "Une question su
 
 const QUESTIONS: [string, React.ReactNode][] = [
   ["Que comprend mon accès AIW ?", <>Votre paiement unique ouvre, sans limite de durée, les tâches de tous les métiers avec leurs cas pratiques et leurs prompts, la mise en place pour votre IA, votre kit, votre parcours et <Link href="/bibliotheque?acces=inclus">10 guides de la bibliothèque</Link>.</>],
-  ["Que change l’abonnement ?", <>Il ouvre tous les guides, y compris chaque nouveau guide publié, et la tâche sur mesure dans chaque métier. Il coûte {fcfa(PRIX.mensuel)} par mois, {fcfa(PRIX.annuel)} par an ou {fcfa(PRIX.a_vie)} à vie. <Link href="/abonnement">Voir les formules</Link>.</>],
-  ["Comment fonctionne la tâche sur mesure ?", <>En bas de votre parcours, décrivez une tâche qui n’est pas dans la liste. L’équipe vous prépare un plan détaillé, étape par étape, avec un prompt prêt pour les IA choisies. Le plan s’affiche au même endroit dès qu’il est prêt.</>],
+  ["Que change l’abonnement ?", <>Il ouvre tous les guides, téléchargeables et revendables, chaque nouveauté publiée, le chat du support et le sur-mesure : 8 tâches et 2 métiers par mois. Il coûte {fcfa(PRIX.mensuel)} par mois, {fcfa(PRIX.annuel)} par an ou {fcfa(PRIX.a_vie)} à vie. <Link href="/abonnement">Voir les formules</Link>.</>],
+  ["Comment fonctionne le sur-mesure ?", <>Depuis la page <Link href="/sur-mesure">Sur mesure</Link>, décrivez une tâche plus complexe ou propre à votre activité (livrée en 30 min à 2 h, 8 par mois), ou demandez un kit complet pour votre métier (livré en 8 h à 24 h, 2 par mois). Vos demandes et leurs livraisons s’affichent sur la même page.</>],
+  ["Puis-je revendre les guides ?", <>Oui, avec l’abonnement. Un guide téléchargé peut être revendu ou publié sous votre nom. Tel quel, vous pouvez citer AIW ou non ; si vous le modifiez, vous retirez la mention d’AIW. Le détail est dans les <Link href="/conditions#licence">conditions</Link>.</>],
   ["Comment changer de métier ou d’IA ?", <>Depuis votre parcours : « Changer de métier » en haut, et « Votre IA pour ce métier » dans la colonne de droite (en bas de page sur téléphone).</>],
   ["Mon abonnement se renouvelle-t-il tout seul ?", <>Non. Vous payez une période (un mois, un an ou à vie) une seule fois, et rien n’est prélevé ensuite. Pour continuer, prolongez-le depuis la page <Link href="/abonnement">Abonnement</Link> : la nouvelle période s’ajoute à la fin de celle en cours. Payez avec l’adresse e-mail de votre compte AIW pour qu’il s’active tout seul.</>],
   ["Je n’arrive plus à me connecter.", <>Utilisez <Link href="/mot-de-passe-oublie">Mot de passe oublié</Link> avec l’adresse e-mail de votre achat. Si rien n’arrive, vérifiez vos courriers indésirables puis écrivez-nous.</>],
@@ -22,14 +23,14 @@ export default function Aide() {
     <Page width="single">
       <PageHead kicker="Aide et support" title="Comment pouvons-nous vous aider ?" />
       <section className="card row" style={{ gap: 20 }}>
-        <IconBox name="chat" size="lg" />
+        <IconBox name="mail" size="lg" />
         <div className="grow stack-sm" style={{ minWidth: 220 }}>
-          <h2 className="h3">Une question ? On vous répond 24 h/24, 7 j/7.</h2>
-          <p className="small muted">Par chat dans l’application, ou par e-mail à {SUPPORT_EMAIL}.</p>
+          <h2 className="h3">Une question ? Écrivez-nous.</h2>
+          <p className="small muted">Par e-mail à {SUPPORT_EMAIL}, pour tous les clients. Les abonnés ont aussi le chat dans l’application, 7 j/7.</p>
         </div>
         <div className="row">
-          <BoutonChat>Ouvrir le chat</BoutonChat>
-          <a className="btn btn-secondary btn-plain" href={`mailto:${SUPPORT_EMAIL}`}><Icon name="mail" size={18} /> E-mail</a>
+          <a className="btn" href={`mailto:${SUPPORT_EMAIL}`}><Icon name="mail" size={18} /> Écrire au support</a>
+          <ChatSiAbonne />
         </div>
       </section>
       <section className="stack" aria-labelledby="faq">

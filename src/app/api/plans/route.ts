@@ -4,19 +4,24 @@ import { echapperHtml, envoyerEmailEquipe } from "@/lib/email";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
-// Tâche sur mesure (réservée à l'abonnement Bibliothèque).
-// GET  /api/plans?metier=slug : les demandes de la personne pour ce métier.
-// POST /api/plans             : nouvelle demande, enregistrée puis envoyée
-//                               par email à l'équipe, qui rédige le plan.
+// Demandes sur mesure (réservées à l'abonnement).
+// GET  /api/plans               : toutes les demandes de la personne.
+// GET  /api/plans?metier=slug   : ses demandes de tâche pour ce métier.
+// POST /api/plans               : nouvelle demande, enregistrée puis envoyée
+//                                 par email à l'équipe, qui la prépare.
+// Deux types : « tache » (8 par mois, livrée en 30 min à 2 h) et « metier »
+// (un kit complet, 2 par mois, livré en 8 h à 24 h).
 
 const IAS = ["chatgpt", "claude", "gemini"] as const;
 const IA_LABELS: Record<string, string> = { chatgpt: "ChatGPT", claude: "Claude", gemini: "Gemini" };
-const MAX_PAR_JOUR = 5;
-const MIN_DESCRIPTION = 30;
-const MAX_DESCRIPTION = 3000;
+const LIMITES = { tache: 8, metier: 2 } as const;
+const DELAIS = { tache: "30 min à 2 h", metier: "8 h à 24 h" } as const;
+type TypeDemande = keyof typeof LIMITES;
 
 export type PlanSurMesure = {
   id: string;
+  type: TypeDemande;
+  metier_nom: string;
   description: string;
   ias: string[];
   statut: "recue" | "en_cours" | "livre";
@@ -25,6 +30,12 @@ export type PlanSurMesure = {
   livre_le: string | null;
 };
 
+const COLONNES = "id, type, metier_nom, description, ias, statut, plan, cree_le, livre_le";
+
+function texte(valeur: unknown, max: number) {
+  return typeof valeur === "string" ? valeur.trim().slice(0, max) : "";
+}
+
 async function verifierAbonne() {
   const access = await requireActiveUser();
   if ("response" in access) return access;
@@ -32,7 +43,7 @@ async function verifierAbonne() {
   if (!abonnement.actif)
     return {
       response: NextResponse.json(
-        { error: "La tâche sur mesure est incluse dans l’abonnement Bibliothèque." },
+        { error: "Le sur-mesure est inclus dans l’abonnement." },
         { status: 403 },
       ),
     };
@@ -42,20 +53,27 @@ async function verifierAbonne() {
 export async function GET(request: Request) {
   const access = await verifierAbonne();
   if ("response" in access) return access.response;
-  const metier = new URL(request.url).searchParams.get("metier") ?? "";
+  const metier = new URL(request.url).searchParams.get("metier");
 
   const admin = createAdminClient();
-  const { data, error } = await admin
-    .from("demandes_plans")
-    .select("id, description, ias, statut, plan, cree_le, livre_le")
-    .eq("user_id", access.user.id)
-    .eq("metier_slug", metier)
-    .order("cree_le", { ascending: false })
-    .limit(30);
+  let requete = admin.from("demandes_plans").select(COLONNES).eq("user_id", access.user.id);
+  if (metier) requete = requete.eq("metier_slug", metier).eq("type", "tache");
+  const { data, error } = await requete.order("cree_le", { ascending: false }).limit(50);
   if (error) return NextResponse.json({ error: "Chargement impossible." }, { status: 500 });
 
   const plans = (data ?? []).map((p) => ({ ...p, plan: p.statut === "livre" ? p.plan : null }));
-  return NextResponse.json({ plans }, { headers: { "Cache-Control": "private, no-store" } });
+  const debutMois = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), 1)).toISOString();
+  const { data: ceMois } = await admin
+    .from("demandes_plans")
+    .select("type")
+    .eq("user_id", access.user.id)
+    .gte("cree_le", debutMois);
+  const utilise = { tache: 0, metier: 0 };
+  for (const d of ceMois ?? []) if (d.type === "tache" || d.type === "metier") utilise[d.type as TypeDemande] += 1;
+  return NextResponse.json(
+    { plans, restant: { tache: Math.max(0, LIMITES.tache - utilise.tache), metier: Math.max(0, LIMITES.metier - utilise.metier) } },
+    { headers: { "Cache-Control": "private, no-store" } },
+  );
 }
 
 export async function POST(request: Request) {
@@ -63,39 +81,66 @@ export async function POST(request: Request) {
   if ("response" in access) return access.response;
   const { supabase, user } = access;
 
-  const body = (await request.json().catch(() => null)) as {
-    metier?: unknown;
-    description?: unknown;
-    ias?: unknown;
-    site?: unknown;
-  } | null;
+  const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   if (!body) return NextResponse.json({ error: "Demande illisible." }, { status: 400 });
   if (typeof body.site === "string" && body.site.trim()) return NextResponse.json({ ok: true });
 
-  const slug = typeof body.metier === "string" ? body.metier.slice(0, 120) : "";
-  const description = typeof body.description === "string" ? body.description.trim().slice(0, MAX_DESCRIPTION) : "";
+  const type: TypeDemande = body.type === "metier" ? "metier" : "tache";
   const ias = Array.isArray(body.ias) ? IAS.filter((ia) => (body.ias as unknown[]).includes(ia)) : [];
-
-  if (description.length < MIN_DESCRIPTION)
-    return NextResponse.json(
-      { error: "Décrivez votre tâche en quelques phrases : ce que vous faites, avec quoi, et le résultat attendu." },
-      { status: 400 },
-    );
   if (!ias.length) return NextResponse.json({ error: "Choisissez au moins une IA." }, { status: 400 });
 
-  const { data: metier } = await supabase.from("metiers").select("slug, nom").eq("slug", slug).maybeSingle();
-  if (!metier) return NextResponse.json({ error: "Métier introuvable." }, { status: 404 });
+  let metierSlug = "sur-mesure";
+  let metierNom = "";
+  let details: Record<string, string> = {};
+  let description = "";
+
+  if (type === "tache") {
+    const slug = texte(body.metier, 120);
+    const libre = texte(body.metier_libre, 120);
+    const tache = texte(body.tache, 3000);
+    const donnees = texte(body.donnees, 2000);
+    const resultat = texte(body.resultat, 1000);
+    if (slug && slug !== "autre") {
+      const { data: metier } = await supabase.from("metiers").select("slug, nom").eq("slug", slug).maybeSingle();
+      if (!metier) return NextResponse.json({ error: "Métier introuvable." }, { status: 404 });
+      metierSlug = metier.slug;
+      metierNom = metier.nom;
+    } else if (libre.length >= 3) {
+      metierNom = libre;
+    } else {
+      return NextResponse.json({ error: "Indiquez votre métier." }, { status: 400 });
+    }
+    if (tache.length < 30)
+      return NextResponse.json({ error: "Décrivez la tâche en quelques phrases : ce que vous faites et dans quel contexte." }, { status: 400 });
+    if (resultat.length < 10) return NextResponse.json({ error: "Dites quel résultat vous attendez." }, { status: 400 });
+    details = { tache, donnees, resultat };
+    description = [`Tâche : ${tache}`, donnees && `Données et documents : ${donnees}`, `Résultat attendu : ${resultat}`].filter(Boolean).join("\n\n");
+  } else {
+    const intitule = texte(body.intitule, 120);
+    const pays = texte(body.pays, 80);
+    const clients = texte(body.clients, 1000);
+    const taches = texte(body.taches, 3000);
+    const outils = texte(body.outils, 1000);
+    if (intitule.length < 3) return NextResponse.json({ error: "Indiquez l’intitulé de votre métier." }, { status: 400 });
+    if (pays.length < 2) return NextResponse.json({ error: "Indiquez votre pays." }, { status: 400 });
+    if (clients.length < 10) return NextResponse.json({ error: "Dites pour qui vous travaillez." }, { status: 400 });
+    if (taches.length < 30) return NextResponse.json({ error: "Listez les tâches qui vous prennent le plus de temps." }, { status: 400 });
+    metierNom = intitule;
+    details = { intitule, pays, clients, taches, outils };
+    description = [`Métier : ${intitule} (${pays})`, `Clients : ${clients}`, `Tâches les plus longues : ${taches}`, outils && `Outils : ${outils}`].filter(Boolean).join("\n\n");
+  }
 
   const admin = createAdminClient();
-  const depuis = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+  const debutMois = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), 1)).toISOString();
   const { count } = await admin
     .from("demandes_plans")
     .select("id", { count: "exact", head: true })
     .eq("user_id", user.id)
-    .gte("cree_le", depuis);
-  if ((count ?? 0) >= MAX_PAR_JOUR)
+    .eq("type", type)
+    .gte("cree_le", debutMois);
+  if ((count ?? 0) >= LIMITES[type])
     return NextResponse.json(
-      { error: "Vous avez déjà envoyé 5 demandes aujourd’hui. Réessayez demain." },
+      { error: type === "tache" ? "Vous avez utilisé vos 8 tâches sur mesure de ce mois. Elles reviennent le 1er du mois prochain." : "Vous avez utilisé vos 2 métiers sur mesure de ce mois. Ils reviennent le 1er du mois prochain." },
       { status: 429 },
     );
 
@@ -104,12 +149,14 @@ export async function POST(request: Request) {
     .insert({
       user_id: user.id,
       email: user.email,
-      metier_slug: metier.slug,
-      metier_nom: metier.nom,
+      type,
+      metier_slug: metierSlug,
+      metier_nom: metierNom,
       description,
+      details,
       ias,
     })
-    .select("id, description, ias, statut, plan, cree_le, livre_le")
+    .select(COLONNES)
     .single();
   if (error || !ligne) {
     console.error("[plans] enregistrement en échec", error?.message);
@@ -117,7 +164,7 @@ export async function POST(request: Request) {
   }
 
   const iasTexte = ias.map((ia) => IA_LABELS[ia]).join(", ");
-  const titre = `Tâche sur mesure · ${metier.nom}`;
+  const titre = `${type === "tache" ? "Tâche sur mesure" : "Métier sur mesure"} · ${metierNom} · à livrer en ${DELAIS[type]}`;
   const envoye = await envoyerEmailEquipe({
     tag: "plans",
     replyTo: user.email ?? undefined,
@@ -128,7 +175,7 @@ export async function POST(request: Request) {
       `Compte : ${user.email}`,
       `Plan pour : ${iasTexte}`,
       "",
-      "Tâche décrite :",
+      "Demande :",
       description,
       "",
       `Pour livrer : Supabase > demandes_plans > ligne ${ligne.id} : remplir « plan » (markdown), passer « statut » à livre et renseigner « livre_le ».`,

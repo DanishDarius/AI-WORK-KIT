@@ -45,7 +45,10 @@ export default async function GuidePage({ params }: Props) {
           </div>
           <h1 className="h1" style={{ maxWidth: 820 }}>{guide.title}</h1>
           <p className="lead">{guide.excerpt}</p>
-          <GuideActions slug={guide.slug} number={guide.number} title={guide.title} telechargement={!verrouille} />
+          <GuideActions slug={guide.slug} number={guide.number} title={guide.title} telechargement={abonnement.actif} />
+          {!abonnement.actif && !verrouille && (
+            <p className="small muted"><Icon name="lock" size={14} /> Téléchargement en PDF, avec le droit de le revendre : <Link className="link" href="/abonnement">avec l’abonnement</Link>.</p>
+          )}
         </div>
         <div className="hide-sm">
           <GuideCover number={guide.number} title={guide.title} tool={guide.tool} variant={guide.coverVariant} locked={verrouille} width={200} />
