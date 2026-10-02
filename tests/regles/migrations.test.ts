@@ -2,8 +2,9 @@ import { describe, expect, it } from "vitest";
 import { lire, lister } from "../outils/fichiers";
 
 // Règles S4 et B1 : chaque table a la RLS activée, des droits explicites pour
-// service_role, et aucun droit pour anon. Le contenu payant n'est ouvert ni
-// par une politique ni par un droit à « tout compte connecté ».
+// service_role, et aucun droit pour anon. Le contenu payant n'est lisible que
+// par un compte dont l'accès est actif (fonction a_un_acces_actif), jamais
+// par « tout compte connecté ». Les tables internes sont réservées au serveur.
 //
 // Le test rejoue les migrations dans l'ordre et calcule l'état final des
 // droits et des politiques. Il ne remplace pas la vérification en base.
@@ -19,11 +20,15 @@ const TABLES_PERSONNELLES = new Set([
   "activite_journaliere",
 ]);
 
+// Tables internes : seul le serveur (clé service) les lit et les écrit.
+const TABLES_INTERNES = new Set(["acces_clients", "abonnements", "demandes_plans", "demandes_contact"]);
+
 type Etat = {
   tables: Set<string>;
   rls: Set<string>;
   droits: Map<string, Map<string, Set<string>>>; // table -> rôle -> privilèges
   politiquesOuvertes: Map<string, string>; // nom -> table
+  politiquesAcces: Map<string, string>; // nom -> table (lecture conditionnée à l'accès actif)
   defautRoles: Set<string>;
 };
 
@@ -31,7 +36,7 @@ const nomTable = (brut: string) => brut.replace(/^public\./, "").replace(/"/g, "
 const liste = (brut: string) => brut.split(",").map((v) => v.trim().toLowerCase()).filter(Boolean);
 
 function rejouer(): Etat {
-  const etat: Etat = { tables: new Set(), rls: new Set(), droits: new Map(), politiquesOuvertes: new Map(), defautRoles: new Set() };
+  const etat: Etat = { tables: new Set(), rls: new Set(), droits: new Map(), politiquesOuvertes: new Map(), politiquesAcces: new Map(), defautRoles: new Set() };
   const fichiers = lister("supabase/migrations", (f) => f.endsWith(".sql"));
   for (const fichier of fichiers) {
     const sql = lire(fichier)
@@ -73,9 +78,12 @@ function rejouer(): Etat {
       } else if ((m = s.match(/^create policy "([^"]+)" on ([\w."]+)(.*)$/i))) {
         if (/auth\.role\(\)\s*=\s*'authenticated'/i.test(m[3]) || /using\s*\(\s*true\s*\)/i.test(m[3])) {
           etat.politiquesOuvertes.set(m[1], nomTable(m[2]));
+        } else if (/a_un_acces_actif\(\)/i.test(m[3])) {
+          etat.politiquesAcces.set(m[1], nomTable(m[2]));
         }
       } else if ((m = s.match(/^drop policy (?:if exists )?"([^"]+)" on/i))) {
         etat.politiquesOuvertes.delete(m[1]);
+        etat.politiquesAcces.delete(m[1]);
       }
     }
   }
@@ -102,12 +110,25 @@ describe("S4 · droits et protections des tables", () => {
     expect([...(etat.droits.get(table)?.get("anon") ?? [])]).toEqual([]);
   });
 
-  it.each(tables.filter((t) => !TABLES_PERSONNELLES.has(t)))(
-    "%s (contenu ou table interne) ne donne aucun droit à authenticated",
-    (table) => {
-      expect([...(etat.droits.get(table)?.get("authenticated") ?? [])]).toEqual([]);
-    },
-  );
+  it.each(tables.filter((t) => TABLES_INTERNES.has(t)))("%s (table interne) ne donne aucun droit à authenticated", (table) => {
+    expect([...(etat.droits.get(table)?.get("authenticated") ?? [])]).toEqual([]);
+  });
+
+  const contenu = tables.filter((t) => !TABLES_PERSONNELLES.has(t) && !TABLES_INTERNES.has(t));
+
+  it.each(contenu)("%s (contenu payant) n'est lisible que par un compte dont l'accès est actif", (table) => {
+    const droits = [...(etat.droits.get(table)?.get("authenticated") ?? [])];
+    expect(droits.filter((d) => d !== "select"), "authenticated ne peut que lire le contenu").toEqual([]);
+    if (droits.includes("select")) {
+      expect([...etat.politiquesAcces.values()], "politique a_un_acces_actif() manquante").toContain(table);
+    }
+  });
+
+  it("la fonction a_un_acces_actif existe, en security definer, sans droit pour anon", () => {
+    const sql = lister("supabase/migrations", (f) => f.endsWith(".sql")).map(lire).join("\n");
+    expect(sql).toMatch(/create or replace function public\.a_un_acces_actif\(\)[\s\S]{0,200}security definer[\s\S]{0,80}set search_path = ''/i);
+    expect(sql).toMatch(/revoke all on function public\.a_un_acces_actif\(\) from anon/i);
+  });
 
   it("aucune politique n'ouvre une table à tout compte connecté", () => {
     expect([...etat.politiquesOuvertes.entries()].map(([nom, table]) => `${table} : ${nom}`)).toEqual([]);
