@@ -18,7 +18,7 @@ AIW est une application web installable (PWA) de formation à l'IA au travail, u
 ## Parcours d'un acheteur
 
 1. Il paie sur Chariow. Le Pulse arrive sur `/api/webhooks/chariow`, qui vérifie la signature et crée une ligne dans `acces_clients`.
-2. Supabase lui envoie un e-mail d'activation. Le lien l'amène sur `/activation`, où il choisit son mot de passe.
+2. Supabase lui envoie un e-mail d'activation. Le lien l'amène sur `/activation`, où il choisit son mot de passe. Le modèle de cet e-mail et celui du nouveau mot de passe sont dans `supabase/emails/` ; ils se collent dans Supabase (Authentication, Emails, Templates).
 3. Si l'e-mail n'arrive pas, il redemande son lien sur `/activation/renvoi`. L'accès payé n'est jamais retiré pour un e-mail en échec.
 4. Chaque page réservée et chaque route API vérifie la session et l'accès actif.
 

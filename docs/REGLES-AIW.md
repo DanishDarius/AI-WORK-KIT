@@ -44,7 +44,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 | Q4 | Une fonction utilitaire existe à un seul endroit. Pas de code mort. Aucun fichier généré (cache de build) dans le dépôt. | test `cle-service.test.ts`, revue |
 | Q5 | Chaque groupe de pages a sa page d'erreur et son état de chargement. | test `pages.test.ts` |
 | Q6 | Avant d'utiliser une API de Next, lire sa page dans `node_modules/next/dist/docs/`. | revue |
-| Q7 | Textes en français, au vouvoiement, sans tiret long, sans le nom du fondateur, sans témoignage ni chiffre inventé. Tout contenu local suit la bible de localisation. | revue |
+| Q7 | Textes en français, au vouvoiement, sans tiret long, sans le nom du fondateur, sans témoignage ni chiffre inventé. Tout contenu local suit la bible de localisation. Les e-mails de compte suivent la même règle ; leur version de référence est dans `supabase/emails/`. | test `emails.test.ts`, revue |
 
 ## Base de données
 
@@ -70,7 +70,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 
 ## Réglages hors du code, à vérifier avant le lancement
 
-- Supabase : inscription publique désactivée ; e-mails envoyés par Resend (SMTP `smtp.resend.com`, expéditeur `hello@parlonsads.com`), limite de Supabase à 500 par heure, offre Resend adaptée au nombre d'achats attendus (un e-mail par achat) ; clés de signature asymétriques (ES256), sans quoi `lireSession` refait un appel réseau à chaque requête ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
+- Supabase : inscription publique désactivée ; e-mails envoyés par Resend (SMTP `smtp.resend.com`, expéditeur `hello@parlonsads.com`), limite de Supabase à 500 par heure, offre Resend adaptée au nombre d'achats attendus (un e-mail par achat) ; modèles d'e-mail « Invite user » et « Reset password » identiques aux fichiers de `supabase/emails/` (à recoller après chaque changement de ces fichiers) ; durée des liens (« Email OTP expiration ») égale à celle annoncée dans ces e-mails, 24 heures ; clés de signature asymétriques (ES256), sans quoi `lireSession` refait un appel réseau à chaque requête ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
 - Vercel : chaque secret présent dans tous les environnements qui en ont besoin (sans `CHARIOW_WEBHOOK_SECRET`, le webhook répond 503) ; protection des préversions ; offre adaptée à un usage commercial ; fonctions dans la région de la base (`vercel.json`, `dub1` pour une base en Irlande).
 - Pendant un lancement : lancer `supabase/controles/activations-en-attente.sql` (lecture seule) pour voir les acheteurs qui n'ont pas activé leur compte.
 - Après une migration de contenu : le site montre le changement dans les 10 minutes (cache du contenu).
