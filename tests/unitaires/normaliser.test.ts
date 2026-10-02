@@ -1,11 +1,17 @@
 import { describe, expect, it } from "vitest";
-import { cheminInterne, estEmail, estUuid, normaliserEmail } from "@/lib/normaliser";
+import { cheminInterne, estEmail, estUuid, normaliserEmail, sansAccents } from "@/lib/normaliser";
 
 // Règles S6 et S7 : validation des entrées partagée par le serveur.
 
 describe("normaliserEmail", () => {
   it("retire les espaces et met en minuscules", () => {
     expect(normaliserEmail("  Awa.Client@Exemple.COM ")).toBe("awa.client@exemple.com");
+  });
+});
+
+describe("sansAccents", () => {
+  it("retire les accents et met en minuscules, pour comparer une recherche", () => {
+    expect(sansAccents("Rédaction Ça Où Été ÎLE")).toBe("redaction ca ou ete ile");
   });
 });
 

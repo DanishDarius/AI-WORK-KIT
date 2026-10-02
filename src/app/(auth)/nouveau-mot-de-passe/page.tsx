@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import { AuthFrame, SetPasswordForm } from "@/components/auth";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { RECOVERY_COOKIE } from "@/lib/supabase/recovery";
+
+export const metadata: Metadata = { title: "Nouveau mot de passe" };
 
 export default async function NouveauMotDePasse({
   searchParams,

@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { echapperHtml, envoyerEmailEquipe } from "@/lib/email";
+import { estEmail, texteBorne } from "@/lib/normaliser";
 import { erreurServeur } from "@/lib/reponses-api";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 import { createAdminClient } from "@/lib/supabase/admin";
@@ -14,24 +16,13 @@ import {
 // 1. La demande est enregistrée dans la table demandes_contact (jamais perdue).
 // 2. Un email est envoyé via Resend à CONTACT_EMAIL_TO (support@parlonsads.com
 //    par défaut), avec "Répondre" qui répond directement au prospect.
-// Variables d'environnement (Vercel) : RESEND_API_KEY, CONTACT_EMAIL_FROM
-// (adresse d'un domaine vérifié dans Resend), CONTACT_EMAIL_TO (optionnelle).
+// L'envoi passe par src/lib/email.ts (variables RESEND_API_KEY,
+// CONTACT_EMAIL_FROM, CONTACT_EMAIL_TO).
 
 const MAX_PAR_HEURE = 5;
 const MAX_CHAMP = 4000;
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function texte(valeur: unknown, max = MAX_CHAMP) {
-  return typeof valeur === "string" ? valeur.trim().slice(0, max) : "";
-}
-
-function echapper(s: string) {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
+const texte = (valeur: unknown, max = MAX_CHAMP) => texteBorne(valeur, max);
 
 export async function POST(request: Request) {
   // Règle S1 : session ET accès payé actif, comme les autres routes.
@@ -60,7 +51,7 @@ export async function POST(request: Request) {
   }
 
   if (!nom) return NextResponse.json({ error: "Indiquez votre nom." }, { status: 400 });
-  if (!EMAIL_RE.test(email))
+  if (!estEmail(email))
     return NextResponse.json({ error: "Indiquez un email valide." }, { status: 400 });
   const obligatoire = formulaire === "systemes-ia" ? "besoin" : "activite";
   if (!reponses[obligatoire])
@@ -124,7 +115,7 @@ export async function POST(request: Request) {
   return NextResponse.json({ ok: true });
 }
 
-async function envoyerEmail(d: {
+function envoyerEmail(d: {
   formulaire: Formulaire;
   nom: string;
   email: string;
@@ -133,14 +124,6 @@ async function envoyerEmail(d: {
   reponses: Record<string, string>;
   compte: string;
 }) {
-  const cle = process.env.RESEND_API_KEY;
-  const from = process.env.CONTACT_EMAIL_FROM;
-  const to = process.env.CONTACT_EMAIL_TO || "support@parlonsads.com";
-  if (!cle || !from) {
-    console.error("[contact] RESEND_API_KEY ou CONTACT_EMAIL_FROM manquant");
-    return false;
-  }
-
   const lignes: [string, string][] = [
     ["Nom", d.nom],
     ["Email", d.email],
@@ -161,41 +144,23 @@ async function envoyerEmail(d: {
     "Répondez directement à cet email pour écrire au prospect.",
   ].join("\n");
   const html = `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:#111">
-<h2 style="margin:0 0 16px">${echapper(titre)}</h2>
+<h2 style="margin:0 0 16px">${echapperHtml(titre)}</h2>
 <table cellpadding="8" style="border-collapse:collapse;max-width:640px">
 ${remplies
   .map(
     ([label, v]) =>
-      `<tr><td style="vertical-align:top;font-weight:bold;border-bottom:1px solid #eee;white-space:nowrap">${echapper(label)}</td><td style="border-bottom:1px solid #eee;white-space:pre-wrap">${echapper(v)}</td></tr>`,
+      `<tr><td style="vertical-align:top;font-weight:bold;border-bottom:1px solid #eee;white-space:nowrap">${echapperHtml(label)}</td><td style="border-bottom:1px solid #eee;white-space:pre-wrap">${echapperHtml(v)}</td></tr>`,
   )
   .join("\n")}
 </table>
 <p style="color:#666;font-size:13px;margin-top:16px">Répondez directement à cet email pour écrire au prospect.</p>
 </div>`;
 
-  try {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${cle}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to: [to],
-        reply_to: d.email,
-        subject: `${titre} · ${d.nom}${d.entreprise ? ` (${d.entreprise})` : ""}`,
-        text,
-        html,
-      }),
-    });
-    if (!response.ok) {
-      console.error("[contact] Resend", response.status, await response.text());
-      return false;
-    }
-    return true;
-  } catch (error) {
-    console.error("[contact] Resend injoignable", error);
-    return false;
-  }
+  return envoyerEmailEquipe({
+    tag: "contact",
+    replyTo: d.email,
+    subject: `${titre} · ${d.nom}${d.entreprise ? ` (${d.entreprise})` : ""}`,
+    text,
+    html,
+  });
 }

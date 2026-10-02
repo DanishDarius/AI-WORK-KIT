@@ -1,5 +1,18 @@
 // Petites fonctions de validation et de normalisation partagées par le
-// serveur. Aucune dépendance : utilisable partout.
+// serveur et le navigateur. Aucune dépendance : utilisable partout.
+
+/** Texte en minuscules et sans accents, pour comparer des recherches. */
+export function sansAccents(texte: string) {
+  return texte
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+/** Texte saisi dans un formulaire : chaîne uniquement, sans espaces autour, longueur bornée. */
+export function texteBorne(valeur: unknown, max: number) {
+  return typeof valeur === "string" ? valeur.trim().slice(0, max) : "";
+}
 
 /** E-mail tel qu'il est stocké et comparé : sans espaces autour, en minuscules. */
 export function normaliserEmail(email: string) {

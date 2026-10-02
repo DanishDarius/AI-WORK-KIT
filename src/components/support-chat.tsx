@@ -72,7 +72,7 @@ function charger(onOuvert: (ouvert: boolean) => void) {
 }
 
 // À appeler depuis n'importe quel bouton « Ouvrir le chat ».
-export function ouvrirSupport() {
+function ouvrirSupport() {
   window.dispatchEvent(new Event(EVENEMENT));
 }
 
@@ -128,7 +128,7 @@ function BulleChat() {
   );
 }
 
-export function BoutonChat({ className = "btn", children }: { className?: string; children?: React.ReactNode }) {
+function BoutonChat({ className = "btn", children }: { className?: string; children?: React.ReactNode }) {
   const abonne = useAbonne();
   if (!abonne)
     return (

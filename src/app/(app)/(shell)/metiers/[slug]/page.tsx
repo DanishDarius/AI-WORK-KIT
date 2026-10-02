@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import { Parcours } from "@/components/parcours";
 import { exigerAccesActif } from "@/lib/acces";
+
+export const metadata: Metadata = { title: "Parcours" };
 
 export default async function MetierParcours({ params }: PageProps<"/metiers/[slug]">) {
   await exigerAccesActif();

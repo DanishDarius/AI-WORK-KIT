@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { estCookieDeSession } from "@/lib/supabase/cookie-session";
 import { RECOVERY_COOKIE } from "@/lib/supabase/recovery";
 import { lireSession } from "@/lib/supabase/session";
 
@@ -43,10 +44,8 @@ function matchesPath(pathname: string, paths: string[]) {
   );
 }
 
-// Cookie de session pose par Supabase (« sb-<projet>-auth-token », parfois
-// decoupe en « .0 », « .1 »).
 function aUnCookieDeSession(request: NextRequest) {
-  return request.cookies.getAll().some((c) => c.name.startsWith("sb-") && c.name.includes("-auth-token"));
+  return request.cookies.getAll().some((c) => estCookieDeSession(c.name));
 }
 
 export async function updateSession(request: NextRequest) {

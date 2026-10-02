@@ -43,3 +43,12 @@ describe("S3 · clé service confinée au serveur", () => {
     expect(suivis).toEqual([]);
   });
 });
+
+describe("Q4 · aucun fichier de build dans le dépôt", () => {
+  it("aucun fichier généré (cache TypeScript, dossier .next) n'est suivi par git", () => {
+    const suivis = execSync("git ls-files", { cwd: RACINE, encoding: "utf8" })
+      .split("\n")
+      .filter((f) => /\.tsbuildinfo$|^\.next\//.test(f));
+    expect(suivis).toEqual([]);
+  });
+});

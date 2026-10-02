@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import type { GuideSummary } from "@/lib/guides";
 import { useAbonne } from "@/lib/moi";
+import { sansAccents } from "@/lib/normaliser";
 import { Icon } from "./icon";
 import { Chip } from "./ui";
 
@@ -62,11 +63,11 @@ function abonner(cb: () => void) {
     window.removeEventListener("awk-guides-updated", cb);
   };
 }
-export function useGuidesEnregistres() {
+function useGuidesEnregistres() {
   const brut = useSyncExternalStore(abonner, lireBrut, () => null);
   return brut === null ? null : slugs(brut);
 }
-export function retirerGuide(slug: string) {
+function retirerGuide(slug: string) {
   ecrire(slugs().filter((s) => s !== slug));
 }
 
@@ -84,12 +85,12 @@ export function Bibliotheque({ guides, acces }: { guides: GuideSummary[]; acces?
   const inclus = guides.filter((g) => g.inclus);
 
   const liste = useMemo(() => {
-    const r = q.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const r = sansAccents(q.trim());
     const base = abonne ? guides : [...guides].sort((a, b) => Number(b.inclus) - Number(a.inclus));
     return base.filter((g) =>
       (outil === "tous" || g.tool === outil) &&
       (filtre === "tous" || (filtre === "inclus" ? g.inclus : !g.inclus)) &&
-      (!r || `${g.title} ${g.excerpt} ${g.category}`.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").includes(r)),
+      (!r || sansAccents(`${g.title} ${g.excerpt} ${g.category}`).includes(r)),
     );
   }, [guides, q, outil, filtre, abonne]);
 

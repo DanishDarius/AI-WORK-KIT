@@ -41,7 +41,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 | Q1 | `npm run verif` passe avant chaque livraison : lint, types, tests, audit, build. | `npm run verif`, GitHub |
 | Q2 | Une correction ou une règle nouvelle arrive avec son test. | revue |
 | Q3 | TypeScript strict : pas de `any`, pas de `@ts-ignore`. | test `code.test.ts` |
-| Q4 | Une fonction utilitaire existe à un seul endroit. Pas de code mort. | revue |
+| Q4 | Une fonction utilitaire existe à un seul endroit. Pas de code mort. Aucun fichier généré (cache de build) dans le dépôt. | test `cle-service.test.ts`, revue |
 | Q5 | Chaque groupe de pages a sa page d'erreur et son état de chargement. | test `pages.test.ts` |
 | Q6 | Avant d'utiliser une API de Next, lire sa page dans `node_modules/next/dist/docs/`. | revue |
 | Q7 | Textes en français, au vouvoiement, sans tiret long, sans le nom du fondateur, sans témoignage ni chiffre inventé. Tout contenu local suit la bible de localisation. | revue |
@@ -70,10 +70,11 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 
 ## Réglages hors du code, à vérifier avant le lancement
 
-- Supabase : inscription publique désactivée ; limite d'e-mails par heure relevée (un envoi par achat : sans service d'envoi dédié, la limite est de quelques dizaines par heure) ; clés de signature asymétriques (ES256), sans quoi `lireSession` refait un appel réseau à chaque requête ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
+- Supabase : inscription publique désactivée ; e-mails envoyés par Resend (SMTP `smtp.resend.com`, expéditeur `hello@parlonsads.com`), limite de Supabase à 500 par heure, offre Resend adaptée au nombre d'achats attendus (un e-mail par achat) ; clés de signature asymétriques (ES256), sans quoi `lireSession` refait un appel réseau à chaque requête ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
 - Vercel : chaque secret présent dans tous les environnements qui en ont besoin (sans `CHARIOW_WEBHOOK_SECRET`, le webhook répond 503) ; protection des préversions ; offre adaptée à un usage commercial ; fonctions dans la région de la base (`vercel.json`, `dub1` pour une base en Irlande).
 - Pendant un lancement : lancer `supabase/controles/activations-en-attente.sql` (lecture seule) pour voir les acheteurs qui n'ont pas activé leur compte.
 - Après une migration de contenu : le site montre le changement dans les 10 minutes (cache du contenu).
 - Après toute livraison qui touche aux en-têtes : ouvrir le site déployé, vérifier que la console du navigateur ne signale aucun blocage CSP, puis tester le chat du support et une vidéo.
 - Chariow : les quatre produits rattachés au Pulse ; secret de signature renseigné.
+- Resend : un seul service d'envoi pour toute l'application ; domaine `parlonsads.com` vérifié ; boîte `hello@parlonsads.com` relevée (les acheteurs y répondent).
 - GitHub : dépôt privé (il contient les guides et les PDF).

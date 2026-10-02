@@ -2,6 +2,7 @@ import "server-only";
 
 import fs from "node:fs";
 import path from "node:path";
+import { sansAccents } from "@/lib/normaliser";
 import { guideInclus } from "@/lib/offre";
 
 export type GuideSummary = {
@@ -33,13 +34,6 @@ const categories: Array<{ label: string; terms: string[] }> = [
   { label: "Agents IA", terms: ["agent", "assistant", "skill", "plugin", "mcp", "cowork"] },
 ];
 
-function normalize(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-}
-
 function stripMarkdown(value: string) {
   return value
     .replace(/`([^`]+)`/g, "$1")
@@ -70,7 +64,7 @@ function parseFile(filename: string): Guide {
   const tool = meta?.[1].trim() ?? "Multi-outils";
   const duration = meta?.[2].trim() ?? "Guide pratique";
   const hasVisual = /\[IMAGE[^\]]*\]/i.test(markdown);
-  const searchable = normalize(`${title} ${slug} ${markdown.slice(0, 2500)}`);
+  const searchable = sansAccents(`${title} ${slug} ${markdown.slice(0, 2500)}`);
   const category = categories.find(({ terms }) => terms.some((term) => searchable.includes(term)))?.label ?? "Pratique IA";
   const paragraphs = markdown
     .split(/\r?\n\s*\r?\n/)
@@ -128,14 +122,6 @@ export function getGuideSummaries(): GuideSummary[] {
     coverVariant: guide.coverVariant,
     inclus: guide.inclus,
   }));
-}
-
-export function getGuideBySlug(slug: string): Guide | undefined {
-  return getAllGuides().find((guide) => guide.slug === slug);
-}
-
-export function getGuideCategories(guides = getGuideSummaries()) {
-  return Array.from(new Set(guides.map((guide) => guide.category))).sort((a, b) => a.localeCompare(b, "fr"));
 }
 
 // Aperçu gratuit d'un guide Premium : l'introduction et le premier chapitre.

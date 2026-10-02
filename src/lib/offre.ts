@@ -6,7 +6,7 @@
 //   les guides et la « tâche sur mesure » de chaque métier.
 
 // Numéros des guides inclus dans l'accès (sans abonnement).
-export const GUIDES_INCLUS: readonly number[] = [
+const GUIDES_INCLUS: readonly number[] = [
   // Les plus recherchés
   292, // Planificateur de repas et de courses
   105, // Comparatif des applications de prise de notes IA
@@ -60,9 +60,6 @@ export const LIENS_ABONNEMENT: Record<Formule, string> = {
   annuel: process.env.NEXT_PUBLIC_SUBSCRIBE_URL_ANNUEL || process.env.NEXT_PUBLIC_SUBSCRIBE_URL || mailAbonnement("annuelle"),
   a_vie: process.env.NEXT_PUBLIC_SUBSCRIBE_URL_A_VIE || mailAbonnement("à vie"),
 };
-
-// Page de l'abonnement dans l'application (les formules y sont présentées).
-export const LIEN_ABONNEMENT = "/abonnement";
 
 // L'abonnement reste fermé aux nouveaux clients tant que son flux de
 // nouveautés (tâche de la semaine, packs, kits mis à jour) n'est pas en place.

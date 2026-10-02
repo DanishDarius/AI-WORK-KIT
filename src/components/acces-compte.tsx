@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { LIEN_ACCES } from "@/lib/offre";
+import { estCookieDeSession } from "@/lib/supabase/cookie-session";
 import { Icon } from "./icon";
 
 // La page d'accès est statique (règle C3) : elle est la même pour tout le
@@ -16,17 +17,19 @@ type Etat = "inconnu" | "deconnecte" | "actif" | "inactif";
 let enCours: Promise<Etat> | null = null;
 
 function aUnCookieDeSession() {
-  return document.cookie.split(";").some((c) => {
-    const nom = c.trim().split("=")[0];
-    return nom.startsWith("sb-") && nom.includes("-auth-token");
-  });
+  return document.cookie.split(";").some((c) => estCookieDeSession(c.trim().split("=")[0]));
 }
 
 function chargerEtat(): Promise<Etat> {
   if (!enCours) {
     enCours = aUnCookieDeSession()
       ? fetch("/api/moi", { credentials: "same-origin", cache: "no-store" })
-          .then((r): Etat => (r.ok ? "actif" : r.status === 403 ? "inactif" : "deconnecte"))
+          .then(async (r): Promise<Etat> => {
+            // Seul le statut compte, mais la réponse est lue jusqu'au bout pour
+            // libérer la connexion.
+            await r.text();
+            return r.ok ? "actif" : r.status === 403 ? "inactif" : "deconnecte";
+          })
           .catch((): Etat => "deconnecte")
       : Promise.resolve<Etat>("deconnecte");
   }

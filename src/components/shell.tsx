@@ -11,7 +11,7 @@ type NavItem = { label: string; href: string; icon: IconName; match: (path: stri
 
 // Navigation principale : 5 onglets sur téléphone, 6 entrées sur ordinateur
 // (Nouveau passe par la cloche sur téléphone).
-export const NAV: NavItem[] = [
+const NAV: NavItem[] = [
   { label: "Parcours", href: "/", icon: "path", match: (p) => p === "/" || p.startsWith("/metiers") || p.startsWith("/bienvenue"), tab: true },
   { label: "Tâches", href: "/taches", icon: "list", match: (p) => p.startsWith("/taches"), tab: true },
   { label: "Mon kit", href: "/kit", icon: "kit", match: (p) => p.startsWith("/kit"), tab: true },

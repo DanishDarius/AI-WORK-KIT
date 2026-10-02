@@ -7,7 +7,8 @@ import { iconeCategorie } from "@/components/parcours";
 import { Page } from "@/components/shell";
 import { Chip, IconBox, PageHead, ResourceState } from "@/components/ui";
 import { AbonnementCard, StatsCard } from "@/components/widgets";
-import { category, normalize, useCatalogue, usages } from "@/lib/catalogue";
+import { category, useCatalogue, usages } from "@/lib/catalogue";
+import { sansAccents } from "@/lib/normaliser";
 import { tacheHref } from "@/lib/kit-api";
 import { useProfil } from "@/lib/profil";
 
@@ -24,12 +25,12 @@ export default function Taches() {
 
   const liste = useMemo(() => {
     if (!data) return [];
-    const recherche = normalize(q.trim());
+    const recherche = sansAccents(q.trim());
     return data.taches.filter((t) =>
       (usage === "Tout" || category(t.code) === usage) &&
       (metier === "tous" || t.metiers.some((m) => m.slug === metier)) &&
       (statut === "toutes" || (statut === "faites" ? t.fait : !t.fait)) &&
-      (!recherche || normalize(`${t.titre} ${t.code} ${t.metiers.map((m) => m.nom).join(" ")}`).includes(recherche)),
+      (!recherche || sansAccents(`${t.titre} ${t.code} ${t.metiers.map((m) => m.nom).join(" ")}`).includes(recherche)),
     );
   }, [data, q, usage, metier, statut]);
 

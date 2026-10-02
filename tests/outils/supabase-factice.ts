@@ -8,7 +8,7 @@ export type Operation = {
   filtres: [methode: string, colonne: string, valeur: unknown][];
 };
 
-export type Reponse = { data?: unknown; error?: { message: string } | null };
+export type Reponse = { data?: unknown; error?: { message: string } | null; count?: number };
 
 const ECRITURES = ["insert", "update", "delete", "upsert"] as const;
 type Ecriture = (typeof ECRITURES)[number];
@@ -31,7 +31,7 @@ export function creerSupabaseFactice(repondre: (op: Operation) => Reponse = () =
         enregistree = true;
       }
       const reponse = repondre(op);
-      return Promise.resolve({ data: reponse.data ?? null, error: reponse.error ?? null });
+      return Promise.resolve({ data: reponse.data ?? null, error: reponse.error ?? null, count: reponse.count ?? null });
     };
     const chaine: unknown = new Proxy(
       {},

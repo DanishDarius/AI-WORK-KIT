@@ -27,7 +27,22 @@ describe("Q5 · pages d'erreur et états de chargement", () => {
     "src/app/global-error.tsx",
     "src/app/not-found.tsx",
     "src/app/(app)/loading.tsx",
+    "src/app/(app)/(shell)/loading.tsx",
   ])("%s existe", (fichier) => {
     expect(existsSync(chemin(fichier))).toBe(true);
+  });
+
+  it.each(["src/app/error.tsx", "src/app/global-error.tsx"])("%s est un composant client qui propose de réessayer", (fichier) => {
+    const contenu = lire(fichier);
+    expect(contenu).toMatch(/^"use client";/);
+    expect(contenu).toMatch(/\bretry\(\)/);
+    // Règle S8 : le message technique de l'erreur n'est jamais affiché.
+    expect(contenu).not.toMatch(/\{\s*error\.message\s*\}/);
+  });
+
+  it("la page d'erreur globale porte ses propres balises html et body", () => {
+    const contenu = lire("src/app/global-error.tsx");
+    expect(contenu).toMatch(/<html lang="fr">/);
+    expect(contenu).toMatch(/<body>/);
   });
 });

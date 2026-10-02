@@ -3,19 +3,18 @@ import type { EmailOtpType } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
 import { cheminInterne } from "@/lib/normaliser";
 
-// GET /auth/confirm : point d'arrivée du lien magique (invitation d'achat ou
-// reconnexion) envoyé par Supabase Auth.
+// GET /auth/confirm : point d'arrivée d'un lien d'e-mail en « token_hash »
+// (invitation d'achat, reconnexion).
 //
-// Ce lien ne fonctionne PAS tout seul : il faut que le modèle d'email "Invite
-// user" (et "Magic Link" si utilisé un jour) dans Supabase Dashboard →
-// Authentication → Email Templates pointe vers cette route, au lieu du lien
-// par défaut {{ .ConfirmationURL }}. Remplacer le corps du lien par :
+// Aujourd'hui, les modèles d'e-mail de Supabase (Authentication → Emails →
+// Templates) utilisent le lien par défaut {{ .ConfirmationURL }} : il passe
+// par le domaine *.supabase.co, puis revient sur /activation, où
+// src/components/session-from-hash.tsx ouvre la session.
 //
-//   {{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type={{ .Type }}&next=/
+// Cette route sert si l'on fait pointer les modèles directement sur le site,
+// pour que le lien de l'e-mail porte notre domaine :
 //
-// Sans ce changement de modèle, le clic sur le lien renvoie l'acheteur vers
-// le domaine *.supabase.co qui affiche une page de vérification neutre au
-// lieu d'ouvrir une session dans l'application.
+//   {{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type={{ .Type }}&next=/activation
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
   const tokenHash = searchParams.get("token_hash");

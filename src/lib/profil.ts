@@ -18,7 +18,7 @@ export type Profil = {
 
 const CLE = "aw-profil";
 const EVENEMENT = "aw-profil-maj";
-export const PROFIL_VIDE: Profil = { type: null, metier: null, outils: [], appareil: null };
+const PROFIL_VIDE: Profil = { type: null, metier: null, outils: [], appareil: null };
 
 function lireBrut() {
   try {
@@ -28,7 +28,7 @@ function lireBrut() {
   }
 }
 
-export function lireProfil(brut = lireBrut()): Profil {
+function lireProfil(brut = lireBrut()): Profil {
   if (!brut) return PROFIL_VIDE;
   try {
     const valeur = JSON.parse(brut) as Partial<Profil>;

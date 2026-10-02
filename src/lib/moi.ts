@@ -28,10 +28,6 @@ function chargerMoi() {
   return enCours;
 }
 
-export function oublierMoi() {
-  enCours = null;
-}
-
 // undefined : chargement en cours ; null : indisponible (déconnecté, réseau).
 export function useMoi() {
   const [moi, setMoi] = useState<Moi | null | undefined>(undefined);

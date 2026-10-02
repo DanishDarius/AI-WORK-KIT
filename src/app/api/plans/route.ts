@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getAbonnement } from "@/lib/abonnement";
 import { lireCatalogue, metierParSlug } from "@/lib/contenu";
 import { echapperHtml, envoyerEmailEquipe } from "@/lib/email";
+import { texteBorne } from "@/lib/normaliser";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
@@ -32,10 +33,6 @@ export type PlanSurMesure = {
 };
 
 const COLONNES = "id, type, metier_nom, description, ias, statut, plan, cree_le, livre_le";
-
-function texte(valeur: unknown, max: number) {
-  return typeof valeur === "string" ? valeur.trim().slice(0, max) : "";
-}
 
 async function verifierAbonne() {
   const access = await requireActiveUser();
@@ -111,11 +108,11 @@ export async function POST(request: Request) {
   let description = "";
 
   if (type === "tache") {
-    const slug = texte(body.metier, 120);
-    const libre = texte(body.metier_libre, 120);
-    const tache = texte(body.tache, 3000);
-    const donnees = texte(body.donnees, 2000);
-    const resultat = texte(body.resultat, 1000);
+    const slug = texteBorne(body.metier, 120);
+    const libre = texteBorne(body.metier_libre, 120);
+    const tache = texteBorne(body.tache, 3000);
+    const donnees = texteBorne(body.donnees, 2000);
+    const resultat = texteBorne(body.resultat, 1000);
     if (slug && slug !== "autre") {
       let metier;
       try {
@@ -138,11 +135,11 @@ export async function POST(request: Request) {
     details = { tache, donnees, resultat };
     description = [`Tâche : ${tache}`, donnees && `Données et documents : ${donnees}`, `Résultat attendu : ${resultat}`].filter(Boolean).join("\n\n");
   } else {
-    const intitule = texte(body.intitule, 120);
-    const pays = texte(body.pays, 80);
-    const clients = texte(body.clients, 1000);
-    const taches = texte(body.taches, 3000);
-    const outils = texte(body.outils, 1000);
+    const intitule = texteBorne(body.intitule, 120);
+    const pays = texteBorne(body.pays, 80);
+    const clients = texteBorne(body.clients, 1000);
+    const taches = texteBorne(body.taches, 3000);
+    const outils = texteBorne(body.outils, 1000);
     if (intitule.length < 3) return NextResponse.json({ error: "Indiquez l’intitulé de votre métier." }, { status: 400 });
     if (pays.length < 2) return NextResponse.json({ error: "Indiquez votre pays." }, { status: 400 });
     if (clients.length < 10) return NextResponse.json({ error: "Dites pour qui vous travaillez." }, { status: 400 });
