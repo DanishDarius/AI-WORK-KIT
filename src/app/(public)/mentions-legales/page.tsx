@@ -67,7 +67,7 @@ export default function MentionsLegales() {
           L’ensemble des contenus de la plateforme est la propriété exclusive
           de Parlons ADS, sauf mention contraire : textes, cas pratiques,
           prompts, guides, parcours par métier, plans de mise en place, fiches
-          d’actualité, glossaire, illustrations, logos, marque AI WORK KIT,
+          d’actualité, illustrations, logos, marque AI WORK KIT,
           charte graphique, organisation des contenus et code de l’application.
         </p>
         <p>

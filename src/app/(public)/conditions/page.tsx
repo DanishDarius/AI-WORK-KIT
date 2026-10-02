@@ -64,7 +64,7 @@ export default function Conditions() {
         <dl className="legal-facts">
           <div><dt>Plateforme</dt><dd>L’application web AI WORK KIT, installable sur ordinateur et mobile, et l’ensemble de ses contenus.</dd></div>
           <div><dt>Utilisateur ou vous</dt><dd>La personne titulaire d’un compte, qu’elle agisse à titre personnel ou pour son activité professionnelle.</dd></div>
-          <div><dt>Contenus</dt><dd>Les tâches, cas pratiques, données d’exemple, prompts, parcours par métier, plans de mise en place, guides, fiches d’actualité et glossaire.</dd></div>
+          <div><dt>Contenus</dt><dd>Les tâches, cas pratiques, données d’exemple, prompts, parcours par métier, plans de mise en place, guides et fiches d’actualité.</dd></div>
           <div><dt>Accès AI WORK KIT</dt><dd>L’offre payée en une seule fois, décrite ci-dessous.</dd></div>
           <div><dt>Abonnement AIW</dt><dd>L’offre payée par période (un mois, un an ou à vie) qui ouvre l’ensemble des guides avec leur licence de revente, le sur-mesure et le chat du support.</dd></div>
         </dl>
@@ -77,7 +77,7 @@ export default function Conditions() {
           <li>le <strong>kit de votre métier</strong> (configurations, skills, modèles de documents, routines), au fur et à mesure de sa publication, et ses mises à jour quand un outil d’IA change ;</li>
           <li>les parcours <strong>Tâches</strong> et <strong>Métiers</strong> : chaque tâche avec ses cas pratiques, ses données d’exemple et ses prompts prêts à copier pour ChatGPT, Claude et Gemini ;</li>
           <li>les plans de mise en place : outils, prompts et configuration des tâches automatisables pour chaque IA ;</li>
-          <li>le glossaire et les nouveautés des IA ;</li>
+          <li>les nouveautés des IA ;</li>
           <li><strong>10 guides</strong> de la bibliothèque à lire en ligne, signalés « Inclus », ainsi que l’aperçu (introduction et premier chapitre) des autres guides ;</li>
           <li>le suivi de votre progression, vos favoris et vos guides enregistrés ;</li>
           <li>le support par email, décrit plus bas.</li>
