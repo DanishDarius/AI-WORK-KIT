@@ -7,7 +7,12 @@ import { lire, lister } from "../outils/fichiers";
 // par « tout compte connecté ». Les tables internes sont réservées au serveur.
 //
 // Le test rejoue les migrations dans l'ordre et calcule l'état final des
-// droits et des politiques. Il ne remplace pas la vérification en base.
+// droits et des politiques. Il ne remplace pas la vérification en base :
+// Supabase donne de lui-même TRUNCATE, REFERENCES, TRIGGER et MAINTAIN aux
+// rôles publics à la création d'une table, et aucun de nos fichiers ne le dit.
+// D'où deux exigences : les droits d'un rôle public sont remis à zéro
+// (« revoke all ») avant d'être donnés, et supabase/controles/droits.sql
+// (lecture seule) est lancé en base après chaque migration.
 
 // Tables dont chaque ligne appartient à un utilisateur (politique
 // « auth.uid() = user_id »). Ce sont les seules que le rôle authenticated
@@ -30,13 +35,15 @@ type Etat = {
   politiquesOuvertes: Map<string, string>; // nom -> table
   politiquesAcces: Map<string, string>; // nom -> table (lecture conditionnée à l'accès actif)
   defautRoles: Set<string>;
+  defautToutRetire: Set<string>; // rôles dont tous les droits par défaut ont été retirés
+  remisAZero: Set<string>; // « table:rôle » passés par un « revoke all »
 };
 
 const nomTable = (brut: string) => brut.replace(/^public\./, "").replace(/"/g, "").toLowerCase();
 const liste = (brut: string) => brut.split(",").map((v) => v.trim().toLowerCase()).filter(Boolean);
 
 function rejouer(): Etat {
-  const etat: Etat = { tables: new Set(), rls: new Set(), droits: new Map(), politiquesOuvertes: new Map(), politiquesAcces: new Map(), defautRoles: new Set() };
+  const etat: Etat = { tables: new Set(), rls: new Set(), droits: new Map(), politiquesOuvertes: new Map(), politiquesAcces: new Map(), defautRoles: new Set(), defautToutRetire: new Set(), remisAZero: new Set() };
   const fichiers = lister("supabase/migrations", (f) => f.endsWith(".sql"));
   for (const fichier of fichiers) {
     const sql = lire(fichier)
@@ -55,7 +62,10 @@ function rejouer(): Etat {
       } else if ((m = s.match(/^alter default privileges .*? grant (.+?) on tables to (.+)$/i))) {
         for (const role of liste(m[2])) etat.defautRoles.add(role);
       } else if ((m = s.match(/^alter default privileges .*? revoke (.+?) on tables from (.+)$/i))) {
-        for (const role of liste(m[2])) etat.defautRoles.delete(role);
+        for (const role of liste(m[2])) {
+          etat.defautRoles.delete(role);
+          if (liste(m[1]).includes("all")) etat.defautToutRetire.add(role);
+        }
       } else if ((m = s.match(/^grant (.+?) on (?:table )?([\w."]+) to (.+)$/i)) && !/ on schema /i.test(s)) {
         const table = nomTable(m[2]);
         const parTable = etat.droits.get(table) ?? new Map<string, Set<string>>();
@@ -67,6 +77,9 @@ function rejouer(): Etat {
         etat.droits.set(table, parTable);
       } else if ((m = s.match(/^revoke (.+?) on (?:table )?([\w."]+) from (.+)$/i))) {
         const parTable = etat.droits.get(nomTable(m[2]));
+        if (liste(m[1]).includes("all")) {
+          for (const role of liste(m[3])) etat.remisAZero.add(`${nomTable(m[2])}:${role}`);
+        }
         if (parTable) {
           const retires = liste(m[1]);
           for (const role of liste(m[3])) {
@@ -124,6 +137,17 @@ describe("S4 · droits et protections des tables", () => {
     }
   });
 
+  const ouvertesAuxComptes = tables.filter((t) => (etat.droits.get(t)?.get("authenticated")?.size ?? 0) > 0);
+
+  it.each(ouvertesAuxComptes)("%s : les droits de authenticated sont remis à zéro avant d'être donnés", (table) => {
+    expect(etat.remisAZero.has(`${table}:authenticated`), "« revoke all on table … from authenticated » manquant").toBe(true);
+  });
+
+  it.each(ouvertesAuxComptes)("%s ne donne ni truncate, ni references, ni trigger à authenticated", (table) => {
+    const droits = [...(etat.droits.get(table)?.get("authenticated") ?? [])];
+    expect(droits.filter((d) => ["all", "truncate", "references", "trigger", "maintain"].includes(d))).toEqual([]);
+  });
+
   it("la fonction a_un_acces_actif existe, en security definer, sans droit pour anon", () => {
     const sql = lister("supabase/migrations", (f) => f.endsWith(".sql")).map(lire).join("\n");
     expect(sql).toMatch(/create or replace function public\.a_un_acces_actif\(\)[\s\S]{0,200}security definer[\s\S]{0,80}set search_path = ''/i);
@@ -136,6 +160,17 @@ describe("S4 · droits et protections des tables", () => {
 
   it("les droits par défaut ne donnent rien à anon ni à authenticated", () => {
     expect([...etat.defautRoles].filter((r) => r === "anon" || r === "authenticated")).toEqual([]);
+    expect([...etat.defautToutRetire].sort()).toEqual(expect.arrayContaining(["anon", "authenticated"]));
+  });
+
+  it("le contrôle des droits en base existe et ne fait que lire", () => {
+    const sql = lire("supabase/controles/droits.sql")
+      .split("\n")
+      .map((ligne) => ligne.replace(/--.*$/, ""))
+      .join("\n")
+      .replace(/'[^']*'/g, "''"); // les libellés entre apostrophes ne sont pas des ordres
+    expect(sql).toMatch(/pg_policies/);
+    expect(sql).not.toMatch(/\b(insert|update|delete|truncate|alter|drop|create|grant|revoke)\b/i);
   });
 
   it("les tables écrites par le serveur donnent l'écriture à service_role", () => {

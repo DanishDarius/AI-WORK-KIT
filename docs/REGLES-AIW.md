@@ -11,7 +11,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 | S1 | L'accès payé se vérifie côté serveur dans chaque page réservée (`exigerAccesActif`) et dans chaque route API réservée (`requireActiveUser`). Le layout et le proxy ne suffisent pas. | tests `acces.test.ts`, `acces-api.test.ts` |
 | S2 | Aucun contenu payant dans un composant client ni dans `public/`. Il arrive par un rendu serveur ou par une route protégée. | test `contenu-client.test.ts` |
 | S3 | La clé service ne vit que dans des fichiers marqués `server-only`. Aucune variable `NEXT_PUBLIC_` ne porte un secret. | test `cle-service.test.ts` |
-| S4 | Chaque table a la RLS activée, des droits explicites pour `service_role`, et aucun droit pour `anon`. Le contenu payant n'est lisible que par un compte dont l'accès est actif (politique `a_un_acces_actif()`), jamais par tout compte connecté. Les tables internes (accès, abonnements, demandes) sont réservées au serveur. Aucun droit par défaut pour `anon` ou `authenticated`. | test `migrations.test.ts` |
+| S4 | Chaque table a la RLS activée, des droits explicites pour `service_role`, et aucun droit pour `anon`. Le contenu payant n'est lisible que par un compte dont l'accès est actif (politique `a_un_acces_actif()`), jamais par tout compte connecté. Les tables internes (accès, abonnements, demandes) sont réservées au serveur. Aucun droit par défaut pour `anon` ou `authenticated`. Un compte connecté n'a que les droits dont l'application se sert : jamais `truncate`, `references` ni `trigger`. | test `migrations.test.ts`, contrôle en base `supabase/controles/droits.sql` |
 | S5 | Le webhook de paiement refuse la requête quand le secret est absent, vérifie la signature à temps constant, valide l'événement, le produit et l'e-mail, et reste idempotent. Un événement qui ne nous concerne pas reçoit 200 : Chariow désactive le Pulse après 5 erreurs. | test `webhook.test.ts` |
 | S6 | Aucune redirection vers une valeur fournie par l'utilisateur sans validation (`cheminInterne`) : chemin interne qui commence par `/` et pas par `//`. | tests `auth-confirm.test.ts`, `normaliser.test.ts` |
 | S7 | Toute entrée utilisateur est validée et bornée côté serveur (`src/lib/normaliser.ts`). Un identifiant est validé avant usage. Aucune entrée brute dans un filtre `.or()` ou `ilike`. | tests `code.test.ts`, `normaliser.test.ts`, revue |
@@ -50,7 +50,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 
 | Règle | Énoncé | Contrôle |
 | --- | --- | --- |
-| B1 | Toute modification passe par un fichier de migration numéroté et rejouable, qui porte dans le même fichier la RLS, les droits et les index. | test `migrations.test.ts`, revue |
+| B1 | Toute modification passe par un fichier de migration numéroté et rejouable, qui porte dans le même fichier la RLS, les droits et les index. Supabase donne de lui-même des droits aux rôles publics à la création d'une table : la migration les remet à zéro (`revoke all`) avant de donner les siens. Après chaque migration en production, `supabase/controles/droits.sql` (lecture seule) est lancé et ne doit renvoyer aucune ligne. | test `migrations.test.ts`, contrôle en base, revue |
 | B2 | En production, Claude montre le SQL et ne l'exécute qu'après accord. Claude ne supprime pas de données. | revue |
 
 ## Livraison
@@ -65,7 +65,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 1. `npm run verif` : noter le résultat et les tests en échec.
 2. Relire le diff avec les règles « revue » ci-dessus : S7, S10, S13, C1, C2, C4, C5, Q2, Q4, Q6, Q7, B1, B2.
 3. Compter les requêtes de chaque page ou route modifiée (règle C2).
-4. Si une table, une variable d'environnement ou un réglage externe change, mettre à jour la liste ci-dessous et `env.example`.
+4. Si une table, une variable d'environnement ou un réglage externe change, mettre à jour la liste ci-dessous et `env.example`. Si une migration a été exécutée, lancer `supabase/controles/droits.sql` en base : aucune ligne attendue.
 5. Écrire le message de livraison (règle L2).
 
 ## Réglages hors du code, à vérifier avant le lancement
