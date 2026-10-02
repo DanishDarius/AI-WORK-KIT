@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
+import { miseEnPlaceDeLaTache } from "@/lib/mise-en-place";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
+import { estUuid } from "@/lib/normaliser";
 
 // GET /api/taches/[id]?metier=<slug> : détail d'une tâche : ses 2 exercices,
 // avec pour chacun les 3 prompts (chatgpt / claude / gemini).
@@ -15,6 +18,9 @@ export async function GET(
   const { searchParams } = new URL(request.url);
   const metierSlug = searchParams.get("metier");
 
+  if (!estUuid(id)) {
+    return NextResponse.json({ error: "Tâche introuvable" }, { status: 404 });
+  }
   const access = await requireActiveUser();
   if ("response" in access) return access.response;
   const { supabase, user } = access;
@@ -94,7 +100,7 @@ export async function GET(
     .order("numero", { ascending: true });
 
   if (erreurExercices) {
-    return NextResponse.json({ error: erreurExercices.message }, { status: 500 });
+    return erreurServeur("tache", erreurExercices.message);
   }
 
   const exercicesAvecPrompts = await Promise.all(
@@ -134,5 +140,6 @@ export async function GET(
     fait: !!faitRow,
     favori: !!favoriRow,
     exercices: exercicesAvecPrompts,
+    mise_en_place: miseEnPlaceDeLaTache(tache.code),
   });
 }

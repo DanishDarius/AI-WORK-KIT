@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
 
 // GET /api/glossaire : les termes du glossaire, identiques pour tous les métiers.
 export async function GET() {
@@ -13,7 +14,7 @@ export async function GET() {
     .order("ordre", { ascending: true });
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return erreurServeur("glossaire", error.message);
   }
 
   return NextResponse.json(data);

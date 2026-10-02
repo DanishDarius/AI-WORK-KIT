@@ -2,7 +2,9 @@
 // copier (squelette officiel Claude) et configuration des taches planifiees Cowork,
 // tache par tache. Source : guide-complet-42-taches-claude.md (sources officielles
 // Claude verifiees).
-import { MiseEnPlace } from "./mise-en-place-types";
+import "server-only";
+
+import type { MiseEnPlace } from "./mise-en-place-types";
 
 export const miseEnPlaceClaude: Partial<Record<string, MiseEnPlace>> = {
   F01: {

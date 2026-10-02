@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
 
 type TacheEmbed = { code: string; titre: string } | { code: string; titre: string }[] | null;
 type MetierEmbed = { slug: string; nom: string } | { slug: string; nom: string }[] | null;
@@ -23,7 +24,7 @@ export async function GET() {
     .eq("user_id", user.id)
     .order("cree_le", { ascending: false });
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (error) return erreurServeur("favoris", error.message);
 
   const resultat = (data ?? []).map((f) => {
     const tache = un(f.taches as TacheEmbed);

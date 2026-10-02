@@ -4,10 +4,12 @@ import { Page } from "@/components/shell";
 import { PageHead } from "@/components/ui";
 import { AbonnementCard, StatsCard } from "@/components/widgets";
 import { getGuideSummaries } from "@/lib/guides";
+import { exigerAccesActif } from "@/lib/acces";
 
 export const metadata: Metadata = { title: "Guides" };
 
 export default async function Guides({ searchParams }: PageProps<"/bibliotheque">) {
+  await exigerAccesActif();
   const { acces } = await searchParams;
   const guides = getGuideSummaries();
   const filtre = acces === "inclus" || acces === "premium" ? acces : undefined;

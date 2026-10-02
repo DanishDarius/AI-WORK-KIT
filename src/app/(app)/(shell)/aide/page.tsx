@@ -5,6 +5,7 @@ import { Page } from "@/components/shell";
 import { ChatSiAbonne } from "@/components/support-chat";
 import { IconBox, PageHead } from "@/components/ui";
 import { fcfa, PRIX, SUPPORT_EMAIL } from "@/lib/offre";
+import { exigerAccesActif } from "@/lib/acces";
 
 export const metadata: Metadata = { title: "Aide", description: "Une question sur AIW ? Le support répond 24 h/24, 7 j/7, par chat ou par e-mail." };
 
@@ -18,7 +19,8 @@ const QUESTIONS: [string, React.ReactNode][] = [
   ["Je n’arrive plus à me connecter.", <>Utilisez <Link href="/mot-de-passe-oublie">Mot de passe oublié</Link> avec l’adresse e-mail de votre achat. Si rien n’arrive, vérifiez vos courriers indésirables puis écrivez-nous.</>],
 ];
 
-export default function Aide() {
+export default async function Aide() {
+  await exigerAccesActif();
   return (
     <Page width="single">
       <PageHead kicker="Aide et support" title="Comment pouvons-nous vous aider ?" />

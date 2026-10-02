@@ -6,6 +6,7 @@ import { Media } from "@/components/media";
 import { Page } from "@/components/shell";
 import { Chip, Kicker } from "@/components/ui";
 import { getUpdate, iaMakers, iaNoms, iaUpdates, newestFirst } from "@/lib/ia-updates";
+import { exigerAccesActif } from "@/lib/acces";
 
 export const dynamicParams = false;
 
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function MiseAJour({ params }: Props) {
+  await exigerAccesActif();
   const { slug } = await params;
   const item = getUpdate(slug);
   if (!item) notFound();

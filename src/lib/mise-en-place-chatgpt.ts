@@ -27,7 +27,9 @@
 //   26 avril 2026, API le 24 septembre 2026. A la date de redaction de ce guide,
 //   OpenAI ne propose donc plus d'outil officiel de generation video dans ChatGPT
 //   (voir la tache F42 ci-dessous pour le detail et une alternative).
-import { MiseEnPlace } from "./mise-en-place-types";
+import "server-only";
+
+import type { MiseEnPlace } from "./mise-en-place-types";
 
 export const miseEnPlaceChatgpt: Partial<Record<string, MiseEnPlace>> = {
   F01: {

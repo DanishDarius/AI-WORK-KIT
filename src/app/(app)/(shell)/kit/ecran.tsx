@@ -6,8 +6,8 @@ import { Icon } from "@/components/icon";
 import { Page } from "@/components/shell";
 import { Bar, Chip, IconBox, PageHead, ResourceState } from "@/components/ui";
 import { AbonnementCard, StatsCard } from "@/components/widgets";
-import { chemins, type IA, iaLabels, type MetierDetail, tacheHref, useResource } from "@/lib/kit-api";
-import { automatisationLabel, miseEnPlace, officielLabel } from "@/lib/mise-en-place";
+import { automatisationLabel, chemins, type IA, iaLabels, type MetierDetail, officielLabel, tacheHref, useResource } from "@/lib/kit-api";
+import type { MiseEnPlace } from "@/lib/mise-en-place-types";
 import { useProfil } from "@/lib/profil";
 
 // Mon kit : tout ce qu'il faut installer pour travailler avec l'IA dans son
@@ -61,13 +61,23 @@ function Coche({ fait, label, onClick }: { fait: boolean; label: string; onClick
 
 function Kit({ slug }: { slug: string }) {
   const { data, error, retry } = useResource<MetierDetail>(`/api/metiers/${encodeURIComponent(slug)}`);
+  if (!data) return <ResourceState error={error} retry={retry} />;
+  return <KitContenu slug={slug} data={data} />;
+}
+
+function KitContenu({ slug, data }: { slug: string; data: MetierDetail }) {
   const [choix, setChoix] = useState<IA | null>(null);
   const { set, basculer } = useInstalles();
   const [copie, setCopie] = useState("");
 
-  if (!data) return <ResourceState error={error} retry={retry} />;
   const ia: IA = choix ?? data.chemin_choisi ?? "chatgpt";
-  const parCode = miseEnPlace[ia] ?? {};
+  // Le contenu du kit est payant : il vient d'une route protégée (règle S2).
+  const codes = data.taches.map((t) => t.code).join(",");
+  const kit = useResource<{ mise_en_place: Record<string, MiseEnPlace> }>(
+    `/api/kit?ia=${ia}&codes=${encodeURIComponent(codes)}`,
+  );
+  const charge = kit.data !== undefined;
+  const parCode = kit.data?.mise_en_place ?? {};
 
   const outils = new Map<string, { nom: string; lien: string; type: "officiel" | "tiers"; taches: string[] }>();
   const routines: { id: string; tacheId: string; tache: string; nom: string; frequence: string; prompt: string }[] = [];
@@ -118,10 +128,12 @@ function Kit({ slug }: { slug: string }) {
       <section className="card stack" aria-labelledby="kit-outils">
         <div className="row-between">
           <h2 id="kit-outils" className="h2">1. Brancher vos outils</h2>
-          <Chip>{listeOutils.length} outils</Chip>
+          {charge && <Chip>{listeOutils.length} outils</Chip>}
         </div>
         <p className="muted small">Les connecteurs qui donnent à {iaLabels[ia]} accès à vos e-mails, documents ou agenda. Commencez par les officiels.</p>
-        {listeOutils.length ? (
+        {!charge ? (
+          <ResourceState error={kit.error} retry={kit.retry} />
+        ) : listeOutils.length ? (
           <div>
             {listeOutils.map((o) => {
               const id = `${ia}:outil:${o.nom}`;
@@ -146,10 +158,12 @@ function Kit({ slug }: { slug: string }) {
       <section className="card stack" aria-labelledby="kit-routines">
         <div className="row-between">
           <h2 id="kit-routines" className="h2">2. Programmer vos routines</h2>
-          <Chip icon="cycle">{routines.length} routines</Chip>
+          {charge && <Chip icon="cycle">{routines.length} routines</Chip>}
         </div>
         <p className="muted small">Des tâches qui se font toutes seules, avec {automatisationLabel[ia]}. Copiez le prompt, choisissez la fréquence.</p>
-        {routines.length ? (
+        {!charge ? (
+          <ResourceState error={kit.error} retry={kit.retry} />
+        ) : routines.length ? (
           <div>
             {routines.map((r) => (
               <div key={r.id} className="list-row" style={{ flexWrap: "wrap" }}>

@@ -11,11 +11,11 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 | S1 | L'accès payé se vérifie côté serveur dans chaque page réservée (`exigerAccesActif`) et dans chaque route API réservée (`requireActiveUser`). Le layout et le proxy ne suffisent pas. | tests `acces.test.ts`, `acces-api.test.ts` |
 | S2 | Aucun contenu payant dans un composant client ni dans `public/`. Il arrive par un rendu serveur ou par une route protégée. | test `contenu-client.test.ts` |
 | S3 | La clé service ne vit que dans des fichiers marqués `server-only`. Aucune variable `NEXT_PUBLIC_` ne porte un secret. | test `cle-service.test.ts` |
-| S4 | Chaque table a la RLS activée, des droits explicites pour `service_role`, et aucun droit par défaut pour `anon` ou `authenticated`. Aucune politique n'ouvre le contenu payant à tout compte connecté. | test `migrations.test.ts` |
-| S5 | Le webhook de paiement refuse la requête quand le secret est absent, vérifie la signature à temps constant, valide l'événement, le produit et l'e-mail, et reste idempotent. | test `webhook.test.ts` |
-| S6 | Aucune redirection vers une valeur fournie par l'utilisateur sans validation : chemin interne qui commence par `/` et pas par `//`. | test `auth-confirm.test.ts` |
-| S7 | Toute entrée utilisateur est validée et bornée côté serveur. Un identifiant est validé avant usage. Aucune entrée brute dans un filtre `.or()` ou `ilike`. | test `code.test.ts`, revue |
-| S8 | Le client reçoit un message d'erreur générique. Le détail technique va dans les logs. | test `code.test.ts` |
+| S4 | Chaque table a la RLS activée, des droits explicites pour `service_role`, et aucun droit pour `anon`. Le contenu payant n'est lisible que par un compte dont l'accès est actif (politique `a_un_acces_actif()`), jamais par tout compte connecté. Les tables internes (accès, abonnements, demandes) sont réservées au serveur. Aucun droit par défaut pour `anon` ou `authenticated`. | test `migrations.test.ts` |
+| S5 | Le webhook de paiement refuse la requête quand le secret est absent, vérifie la signature à temps constant, valide l'événement, le produit et l'e-mail, et reste idempotent. Un événement qui ne nous concerne pas reçoit 200 : Chariow désactive le Pulse après 5 erreurs. | test `webhook.test.ts` |
+| S6 | Aucune redirection vers une valeur fournie par l'utilisateur sans validation (`cheminInterne`) : chemin interne qui commence par `/` et pas par `//`. | tests `auth-confirm.test.ts`, `normaliser.test.ts` |
+| S7 | Toute entrée utilisateur est validée et bornée côté serveur (`src/lib/normaliser.ts`). Un identifiant est validé avant usage. Aucune entrée brute dans un filtre `.or()` ou `ilike`. | tests `code.test.ts`, `normaliser.test.ts`, revue |
+| S8 | Le client reçoit un message d'erreur générique (`erreurServeur`). Le détail technique va dans les logs. | tests `code.test.ts`, `webhook.test.ts` |
 | S9 | Les en-têtes de sécurité sont en place : CSP, `frame-ancestors`, `Referrer-Policy`, `X-Content-Type-Options`, `Permissions-Policy`. | test `en-tetes.test.ts` |
 | S10 | Une variable de sécurité absente bloque la fonction (jamais « optionnelle »). Aucun secret dans le dépôt. Claude ne saisit ni clé ni mot de passe. | revue |
 | S11 | `npm audit --omit=dev --audit-level=high` ne signale rien. Les correctifs de sécurité des dépendances sont appliqués. | `npm run verif` |
@@ -71,6 +71,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 ## Réglages hors du code, à vérifier avant le lancement
 
 - Supabase : inscription publique désactivée ; limite d'e-mails par heure relevée ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
-- Vercel : chaque secret présent dans tous les environnements qui en ont besoin ; protection des préversions ; offre adaptée à un usage commercial.
+- Vercel : chaque secret présent dans tous les environnements qui en ont besoin (sans `CHARIOW_WEBHOOK_SECRET`, le webhook répond 503) ; protection des préversions ; offre adaptée à un usage commercial.
+- Après toute livraison qui touche aux en-têtes : ouvrir le site déployé, vérifier que la console du navigateur ne signale aucun blocage CSP, puis tester le chat du support et une vidéo.
 - Chariow : les quatre produits rattachés au Pulse ; secret de signature renseigné.
 - GitHub : dépôt privé (il contient les guides et les PDF).

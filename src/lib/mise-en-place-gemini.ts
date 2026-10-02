@@ -6,7 +6,9 @@
 // une tache planifiee touche a de l'envoi ou de la creation, le prompt l'interdit
 // explicitement plutot que de s'appuyer sur un reglage dedie (voir modeApprobation
 // absent sur les entrees ci-dessous).
-import { MiseEnPlace } from "./mise-en-place-types";
+import "server-only";
+
+import type { MiseEnPlace } from "./mise-en-place-types";
 
 export const miseEnPlaceGemini: Partial<Record<string, MiseEnPlace>> = {
   F01: {

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getAbonnement } from "@/lib/abonnement";
+import { normaliserEmail } from "@/lib/normaliser";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 
@@ -14,7 +15,7 @@ export async function GET() {
     admin
       .from("acces_clients")
       .select("cree_le")
-      .ilike("email", user.email!)
+      .eq("email", normaliserEmail(user.email ?? ""))
       .eq("statut", "actif")
       .order("cree_le", { ascending: true })
       .limit(1),

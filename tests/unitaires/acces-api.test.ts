@@ -101,3 +101,43 @@ describe("route PDF des guides", () => {
     expect(reponse.headers.get("cache-control")).toContain("no-store");
   });
 });
+
+describe("S2 · route /api/kit (contenu payant de la mise en place)", () => {
+  async function demander(requete: string) {
+    const { GET } = await import("@/app/api/kit/route");
+    const reponse = await GET(new Request(`https://aiw.test/api/kit${requete}`));
+    if (!reponse) throw new Error("la route n'a renvoyé aucune réponse");
+    return reponse;
+  }
+
+  it("répond 401 sans session", async () => {
+    installer();
+    expect((await demander("?ia=claude&codes=F01")).status).toBe(401);
+  });
+
+  it("répond 403 sans accès actif", async () => {
+    const factice = installer(() => ({ data: [] }));
+    factice.etat.utilisateur = CLIENT;
+    expect((await demander("?ia=claude&codes=F01")).status).toBe(403);
+  });
+
+  it.each(["?ia=autre&codes=F01", "?ia=claude", "?ia=claude&codes=", "?ia=claude&codes=../x,DROP"])(
+    "répond 400 pour une demande invalide : %s",
+    async (requete) => {
+      const factice = installer(accesActif);
+      factice.etat.utilisateur = CLIENT;
+      expect((await demander(requete)).status).toBe(400);
+    },
+  );
+
+  it("sert la mise en place des tâches demandées à un client actif, sans mise en cache partagée", async () => {
+    const factice = installer(accesActif);
+    factice.etat.utilisateur = CLIENT;
+    const reponse = await demander("?ia=claude&codes=F01,F02,F999");
+    expect(reponse.status).toBe(200);
+    expect(reponse.headers.get("cache-control")).toContain("private");
+    const corps = (await reponse.json()) as { mise_en_place: Record<string, { outils: unknown[] }> };
+    expect(Object.keys(corps.mise_en_place).sort()).toEqual(["F01", "F02"]);
+    expect(Array.isArray(corps.mise_en_place.F01.outils)).toBe(true);
+  });
+});

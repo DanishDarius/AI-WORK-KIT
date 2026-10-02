@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
 
 // GET /api/metiers/[slug] : détail d'un métier + ses tâches (via la table de
 // liaison metiers_taches, une tâche pouvant appartenir à plusieurs métiers)
@@ -44,7 +45,7 @@ export async function GET(
     ]);
 
   if (erreurTaches) {
-    return NextResponse.json({ error: erreurTaches.message }, { status: 500 });
+    return erreurServeur("metiers", erreurTaches.message);
   }
 
   const cheminChoisi = chemin?.chemin ?? null;

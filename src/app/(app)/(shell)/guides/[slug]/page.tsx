@@ -8,6 +8,7 @@ import { Page } from "@/components/shell";
 import { Chip, Kicker } from "@/components/ui";
 import { getAbonnementCourant } from "@/lib/abonnement";
 import { getAllGuides, guidePreview } from "@/lib/guides";
+import { exigerAccesActif } from "@/lib/acces";
 
 // Rendu à la demande : le contenu envoyé dépend de l'abonnement. Un guide
 // réservé aux abonnés, lu sans abonnement, ne transmet que son aperçu.
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function GuidePage({ params }: Props) {
+  await exigerAccesActif();
   const { slug } = await params;
   const guides = getAllGuides();
   const index = guides.findIndex((g) => g.slug === slug);

@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
+import { estUuid } from "@/lib/normaliser";
 
 // POST /api/taches/[id]/favori?metier=<slug> : ajoute ou retire une tâche
 // des favoris de l'utilisateur connecté. Body attendu : { "favori": true|false }.
@@ -15,6 +17,9 @@ export async function POST(
   const { id } = await params;
   const { searchParams } = new URL(request.url);
   const metierSlug = searchParams.get("metier");
+  if (!estUuid(id)) {
+    return NextResponse.json({ error: "Tâche introuvable" }, { status: 404 });
+  }
   const access = await requireActiveUser();
   if ("response" in access) return access.response;
   const { supabase, user } = access;
@@ -52,14 +57,14 @@ export async function POST(
       },
       { onConflict: "user_id,tache_id" }
     );
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+    if (error) return erreurServeur("favori", error.message);
   } else {
     const { error } = await supabase
       .from("favoris")
       .delete()
       .eq("user_id", user.id)
       .eq("tache_id", id);
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+    if (error) return erreurServeur("favori", error.message);
   }
 
   return NextResponse.json({ ok: true, favori });

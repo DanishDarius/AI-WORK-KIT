@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
+import { estUuid } from "@/lib/normaliser";
 
 // POST /api/taches/[id]/faite : marque ou démarque une tâche comme faite
 // pour l'utilisateur connecté. Body attendu : { "fait": true } ou { "fait": false }.
@@ -8,6 +10,9 @@ export async function POST(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
+  if (!estUuid(id)) {
+    return NextResponse.json({ error: "Tâche introuvable" }, { status: 404 });
+  }
   const access = await requireActiveUser();
   if ("response" in access) return access.response;
   const { supabase, user } = access;
@@ -26,14 +31,14 @@ export async function POST(
       { user_id: user.id, tache_id: id, fait_le: new Date().toISOString() },
       { onConflict: "user_id,tache_id" }
     );
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+    if (error) return erreurServeur("tache-faite", error.message);
   } else {
     const { error } = await supabase
       .from("taches_faites")
       .delete()
       .eq("user_id", user.id)
       .eq("tache_id", id);
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+    if (error) return erreurServeur("tache-faite", error.message);
   }
 
   return NextResponse.json({ ok: true, fait });

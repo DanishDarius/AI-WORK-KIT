@@ -1,11 +1,9 @@
-import { redirect } from "next/navigation";
-import { getEtatAcces } from "@/lib/acces";
+import { exigerAccesActif } from "@/lib/acces";
 
 // Toute la plateforme est fermée : seules les personnes connectées ET dont
-// l'accès est actif passent. Les autres arrivent sur la page d'accès.
+// l'accès est actif passent. Chaque page refait ce contrôle (règle S1), car
+// un layout ne décide pas du rendu des pages qu'il contient.
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-  const { etat } = await getEtatAcces();
-  if (etat === "deconnecte") redirect("/acces");
-  if (etat === "inactif") redirect("/acces?compte=inactif");
+  await exigerAccesActif();
   return children;
 }

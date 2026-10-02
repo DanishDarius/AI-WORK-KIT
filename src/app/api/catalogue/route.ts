@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
 
 type TacheRow = {
   id: string;
@@ -40,7 +41,7 @@ export async function GET() {
     ]);
 
   const erreur = metiersRes.error || liaisonsRes.error;
-  if (erreur) return NextResponse.json({ error: erreur.message }, { status: 500 });
+  if (erreur) return erreurServeur("catalogue", erreur.message);
 
   const chemins = new Map(
     (cheminsRes.data ?? []).map((c) => [c.metier_id as string, c.chemin as string]),

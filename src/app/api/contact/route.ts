@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
+import { erreurServeur } from "@/lib/reponses-api";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { createClient } from "@/lib/supabase/server";
 import {
   champsReponses,
   formulaireLabels,
@@ -33,11 +34,10 @@ function echapper(s: string) {
 }
 
 export async function POST(request: Request) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return NextResponse.json({ error: "Non connecté" }, { status: 401 });
+  // Règle S1 : session ET accès payé actif, comme les autres routes.
+  const access = await requireActiveUser();
+  if ("response" in access) return access.response;
+  const { user } = access;
 
   const body = (await request.json().catch(() => null)) as Partial<DemandeContact> | null;
   if (!body) return NextResponse.json({ error: "Demande illisible." }, { status: 400 });
@@ -78,11 +78,13 @@ export async function POST(request: Request) {
 
   // Limite anti-abus : quelques demandes par heure et par compte.
   const depuis = new Date(Date.now() - 60 * 60 * 1000).toISOString();
-  const { count } = await admin
+  const { count, error: erreurCompte } = await admin
     .from("demandes_contact")
     .select("id", { count: "exact", head: true })
     .eq("user_id", user.id)
     .gte("cree_le", depuis);
+  // Règle S13 : si la limite ne peut pas être vérifiée, on n'envoie rien.
+  if (erreurCompte) return erreurServeur("contact", erreurCompte.message, "Envoi impossible.");
   if ((count ?? 0) >= MAX_PAR_HEURE)
     return NextResponse.json({ error: "Trop de demandes." }, { status: 429 });
 
@@ -100,6 +102,12 @@ export async function POST(request: Request) {
     .select("id")
     .single();
 
+  // Règle S13 : la limite compte les lignes enregistrées. Sans enregistrement,
+  // pas d'e-mail, sinon la limite ne protégerait plus rien.
+  if (erreurInsert || !ligne) {
+    return erreurServeur("contact", erreurInsert?.message ?? "insertion sans ligne", "Envoi impossible.");
+  }
+
   const envoye = await envoyerEmail({
     formulaire,
     nom,
@@ -110,15 +118,8 @@ export async function POST(request: Request) {
     compte: user.email ?? "",
   });
 
-  if (ligne && envoye)
-    await admin.from("demandes_contact").update({ email_envoye: true }).eq("id", ligne.id);
-
-  if (erreurInsert && !envoye) {
-    console.error("[contact] enregistrement et email en échec", erreurInsert.message);
-    return NextResponse.json({ error: "Envoi impossible." }, { status: 500 });
-  }
-  if (erreurInsert) console.error("[contact] enregistrement en échec", erreurInsert.message);
-  if (!envoye) console.error("[contact] email non envoyé, demande enregistrée", ligne?.id);
+  if (envoye) await admin.from("demandes_contact").update({ email_envoye: true }).eq("id", ligne.id);
+  else console.error("[contact] email non envoyé, demande enregistrée", ligne.id);
 
   return NextResponse.json({ ok: true });
 }

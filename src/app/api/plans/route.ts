@@ -132,12 +132,17 @@ export async function POST(request: Request) {
 
   const admin = createAdminClient();
   const debutMois = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), 1)).toISOString();
-  const { count } = await admin
+  const { count, error: erreurCompte } = await admin
     .from("demandes_plans")
     .select("id", { count: "exact", head: true })
     .eq("user_id", user.id)
     .eq("type", type)
     .gte("cree_le", debutMois);
+  // Règle S13 : si le quota ne peut pas être vérifié, on n'enregistre rien.
+  if (erreurCompte) {
+    console.error("[plans] quota non vérifiable", erreurCompte.message);
+    return NextResponse.json({ error: "Envoi impossible. Réessayez dans un instant." }, { status: 500 });
+  }
   if ((count ?? 0) >= LIMITES[type])
     return NextResponse.json(
       { error: type === "tache" ? "Vous avez utilisé vos 8 tâches sur mesure de ce mois. Elles reviennent le 1er du mois prochain." : "Vous avez utilisé vos 2 métiers sur mesure de ce mois. Ils reviennent le 1er du mois prochain." },

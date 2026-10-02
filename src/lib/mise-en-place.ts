@@ -1,35 +1,40 @@
-// Point d'entree du guide "Mettre en place", tous IA confondues. Le contenu reel
-// est reparti par IA dans mise-en-place-claude.ts, mise-en-place-gemini.ts et
-// mise-en-place-chatgpt.ts : chaque fichier vient d'un guide complet des 42 taches
-// base sur les sources officielles de l'IA concernee.
-import { IA } from "./kit-api";
-import { MiseEnPlace } from "./mise-en-place-types";
+import "server-only";
+
+// Point d'entrée de la « mise en place », toutes IA confondues. Le contenu
+// réel est réparti par IA dans mise-en-place-claude.ts, mise-en-place-gemini.ts
+// et mise-en-place-chatgpt.ts : chaque fichier vient d'un guide complet des 42
+// tâches, basé sur les sources officielles de l'IA concernée.
+//
+// Règle S2 : c'est du contenu payant. Ce module est réservé au serveur et ne
+// doit jamais être importé par un composant client. Les écrans le reçoivent
+// par /api/kit et /api/taches/[id], qui vérifient l'accès.
+import type { IA } from "./kit-api";
+import type { MiseEnPlace } from "./mise-en-place-types";
 import { miseEnPlaceClaude } from "./mise-en-place-claude";
 import { miseEnPlaceGemini } from "./mise-en-place-gemini";
 import { miseEnPlaceChatgpt } from "./mise-en-place-chatgpt";
 
-export type { Outil, ModeApprobation, TachePlanifiee, MiseEnPlace } from "./mise-en-place-types";
-
-export const miseEnPlace: Record<IA, Partial<Record<string, MiseEnPlace>>> = {
+const miseEnPlace: Record<IA, Partial<Record<string, MiseEnPlace>>> = {
   claude: miseEnPlaceClaude,
   gemini: miseEnPlaceGemini,
   chatgpt: miseEnPlaceChatgpt,
 };
 
-// Libelle du fournisseur officiel affiche a cote des outils "officiel", par IA.
-export const officielLabel: Record<IA, string> = {
-  claude: "Officiel Claude",
-  gemini: "Officiel Google",
-  chatgpt: "Officiel OpenAI",
-};
+/** Mise en place d'une tâche pour chacune des trois IA (null si absente). */
+export function miseEnPlaceDeLaTache(code: string): Record<IA, MiseEnPlace | null> {
+  return {
+    chatgpt: miseEnPlace.chatgpt[code] ?? null,
+    claude: miseEnPlace.claude[code] ?? null,
+    gemini: miseEnPlace.gemini[code] ?? null,
+  };
+}
 
-// Nom du mecanisme d'automatisation recurrente de chaque IA, pour le titre de la
-// section "Automatiser avec ...".
-export const automatisationLabel: Record<IA, string> = {
-  claude: "Cowork",
-  gemini: "les actions planifiées Gemini",
-  chatgpt: "les tâches planifiées ChatGPT",
-};
-
-export const outilsCount = (ia: IA, code: string) =>
-  miseEnPlace[ia]?.[code]?.outils.length ?? 0;
+/** Mise en place de plusieurs tâches pour une IA, indexée par code de tâche. */
+export function miseEnPlacePourCodes(ia: IA, codes: string[]): Record<string, MiseEnPlace> {
+  const resultat: Record<string, MiseEnPlace> = {};
+  for (const code of codes) {
+    const mep = miseEnPlace[ia][code];
+    if (mep) resultat[code] = mep;
+  }
+  return resultat;
+}

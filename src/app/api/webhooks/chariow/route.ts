@@ -1,18 +1,25 @@
 import { NextResponse } from "next/server";
 import { createHmac, timingSafeEqual } from "node:crypto";
+import { estEmail, normaliserEmail } from "@/lib/normaliser";
+import { erreurServeur } from "@/lib/reponses-api";
 import { createAdminClient } from "@/lib/supabase/admin";
 
+// Forme du Pulse « successful.sale », d'après la documentation Chariow
+// (https://chariow.dev/en/guides/pulses.md). Seuls les champs utilisés ici
+// sont décrits. Tout est « unknown » : rien n'est cru sans validation.
 type ChariowPayload = {
-  customer?: { email?: string };
-  client?: { email?: string };
-  email?: string;
-  sale?: { id?: string; status?: string };
-  id?: string;
-  sale_id?: string;
-  product?: { id?: string };
-  product_id?: string;
-  status?: string;
+  event?: unknown;
+  sale?: { id?: unknown; status?: unknown };
+  product?: { id?: unknown };
+  customer?: { email?: unknown };
 };
+
+const STATUTS_PAYES = new Set(["completed", "successful"]);
+
+const chaine = (valeur: unknown, max = 200) =>
+  typeof valeur === "string" && valeur.length > 0 && valeur.length <= max ? valeur : null;
+
+const ignorer = (raison: string) => NextResponse.json({ ok: true, ignore: true, raison });
 
 // POST /api/webhooks/chariow : reçoit le Pulse "successful.sale" de Chariow.
 //
@@ -20,46 +27,43 @@ type ChariowPayload = {
 // - Événement : Vente réussie (successful.sale)
 // - Produits : AI WORK KIT et les trois produits d'abonnement
 //   (variables CHARIOW_PRODUIT_ID_ABONNEMENT_MENSUEL, _ANNUEL et _A_VIE)
-// - URL de destination : https://<ton-domaine>/api/webhooks/chariow
+// - URL de destination : https://<domaine>/api/webhooks/chariow
 //
-// Sécurité (voir https://chariow.dev/en/guides/pulse-security.md) : Chariow
-// signe chaque requête en HMAC-SHA256 sur le corps BRUT (avant tout parsing
-// JSON), au format "sha256=<hex>", dans l'en-tête x-chariow-signature. Le
-// secret utilisé est celui du Pulse ("Secret de signature", préfixe
-// whsec_...), à renseigner dans la variable d'environnement
-// CHARIOW_WEBHOOK_SECRET. Il faut impérativement vérifier la signature sur
-// le texte brut reçu, sans le re-sérialiser, sous peine de ne jamais faire
-// correspondre le digest.
+// Sécurité (règle S5, voir https://chariow.dev/en/guides/pulse-security.md) :
+// Chariow signe chaque requête en HMAC-SHA256 sur le corps BRUT, au format
+// "sha256=<hex>", dans l'en-tête x-chariow-signature. Le secret est celui du
+// Pulse (préfixe whsec_...), dans la variable CHARIOW_WEBHOOK_SECRET.
+// - Sans secret configuré, la route refuse tout : jamais d'accès sans signature.
+// - Seule une vente « successful.sale », payée, d'un produit connu, avec une
+//   adresse e-mail valide, ouvre un accès. Le reste est ignoré ou refusé.
+// - Une vente déjà traitée n'est jamais rejouée (identifiant de vente unique).
 //
-// Ce point d'entrée reste tolérant sur la forme exacte du payload Chariow :
-// il cherche l'email du client et l'identifiant de vente sous plusieurs noms
-// de champs possibles.
+// Chariow réessaie 5 fois une livraison qui reçoit une erreur, puis désactive
+// le Pulse. Un événement qui ne nous concerne pas reçoit donc toujours 200.
 export async function POST(request: Request) {
   const corpsBrut = await request.text();
 
-  // Vérification de la signature HMAC-SHA256 (si le secret est configuré).
   const secretAttendu = process.env.CHARIOW_WEBHOOK_SECRET;
-  if (secretAttendu) {
-    const signatureRecue = request.headers.get("x-chariow-signature") ?? "";
-    const signatureCalculee =
-      "sha256=" +
-      createHmac("sha256", secretAttendu).update(corpsBrut).digest("hex");
+  if (!secretAttendu) {
+    console.error("[chariow] CHARIOW_WEBHOOK_SECRET manquant : requête refusée");
+    return NextResponse.json({ error: "Webhook non configuré" }, { status: 503 });
+  }
 
-    const bufferRecu = Buffer.from(signatureRecue);
-    const bufferCalcule = Buffer.from(signatureCalculee);
-
-    const signatureValide =
-      bufferRecu.length === bufferCalcule.length &&
-      timingSafeEqual(bufferRecu, bufferCalcule);
-
-    if (!signatureValide) {
-      return NextResponse.json({ error: "Signature invalide" }, { status: 401 });
-    }
+  const signatureRecue = request.headers.get("x-chariow-signature") ?? "";
+  const signatureCalculee =
+    "sha256=" + createHmac("sha256", secretAttendu).update(corpsBrut).digest("hex");
+  const bufferRecu = Buffer.from(signatureRecue);
+  const bufferCalcule = Buffer.from(signatureCalculee);
+  const signatureValide =
+    bufferRecu.length === bufferCalcule.length && timingSafeEqual(bufferRecu, bufferCalcule);
+  if (!signatureValide) {
+    return NextResponse.json({ error: "Signature invalide" }, { status: 401 });
   }
 
   let payload: ChariowPayload | null = null;
   try {
-    payload = corpsBrut ? (JSON.parse(corpsBrut) as ChariowPayload) : null;
+    const lu: unknown = corpsBrut ? JSON.parse(corpsBrut) : null;
+    payload = lu && typeof lu === "object" && !Array.isArray(lu) ? (lu as ChariowPayload) : null;
   } catch {
     payload = null;
   }
@@ -67,25 +71,25 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Payload invalide" }, { status: 400 });
   }
 
-  // Extraction tolérante, à préciser dès qu'on a un exemple réel de payload.
-  const email: string | undefined =
-    payload.customer?.email ?? payload.client?.email ?? payload.email;
-  const saleId: string | undefined =
-    payload.sale?.id ?? payload.id ?? payload.sale_id;
-  const productId: string | undefined =
-    payload.product?.id ?? payload.product_id;
-  const status: string | undefined = payload.status ?? payload.sale?.status;
+  if (payload.event !== "successful.sale") return ignorer("événement non traité");
 
-  if (!email || !saleId) {
+  const saleId = chaine(payload.sale?.id, 100);
+  const emailBrut = payload.customer?.email;
+  if (!saleId || !estEmail(emailBrut)) {
     return NextResponse.json(
-      { error: "Champs requis manquants (email / identifiant de vente)" },
-      { status: 400 }
+      { error: "Champs requis manquants (e-mail / identifiant de vente)" },
+      { status: 400 },
     );
   }
-  const normalizedEmail = email.trim().toLowerCase();
+  const normalizedEmail = normaliserEmail(emailBrut);
 
-  if (status && status !== "successful" && status !== "completed") {
-    return NextResponse.json({ ok: true, ignore: true, raison: "statut non finalisé" });
+  const status = chaine(payload.sale?.status, 40);
+  if (!status || !STATUTS_PAYES.has(status)) return ignorer("statut non finalisé");
+
+  const productId = chaine(payload.product?.id, 100);
+  if (!productId) {
+    console.error("[chariow] vente sans identifiant de produit", saleId);
+    return ignorer("produit absent");
   }
 
   // Abonnement : un produit Chariow à paiement unique par formule. Chariow ne
@@ -96,10 +100,11 @@ export async function POST(request: Request) {
   }
 
   const produitAttendu = process.env.CHARIOW_PRODUIT_ID_AI_WORK_KIT;
-  if (produitAttendu && productId && productId !== produitAttendu) {
-    // Vente d'un autre produit Chariow : on l'ignore proprement.
-    return NextResponse.json({ ok: true, ignore: true });
+  if (!produitAttendu) {
+    console.error("[chariow] CHARIOW_PRODUIT_ID_AI_WORK_KIT manquant : vente non traitée", saleId);
+    return NextResponse.json({ error: "Webhook non configuré" }, { status: 503 });
   }
+  if (productId !== produitAttendu) return ignorer("autre produit");
 
   const supabaseAdmin = createAdminClient();
 
@@ -123,7 +128,7 @@ export async function POST(request: Request) {
     });
 
   if (erreurInsertion) {
-    return NextResponse.json({ error: erreurInsertion.message }, { status: 500 });
+    return erreurServeur("chariow", erreurInsertion.message, "Enregistrement impossible");
   }
 
   // Pour un premier achat, l'invitation confirme l'email puis conduit à la
@@ -145,7 +150,7 @@ export async function POST(request: Request) {
       .from("acces_clients")
       .delete()
       .eq("chariow_sale_id", saleId);
-    return NextResponse.json({ error: erreurInvitation.message }, { status: 500 });
+    return erreurServeur("chariow", erreurInvitation.message, "Invitation impossible");
   }
 
   return NextResponse.json({ ok: true });
@@ -153,8 +158,7 @@ export async function POST(request: Request) {
 
 type Formule = "mensuel" | "annuel" | "a_vie";
 
-function formuleDuProduit(productId: string | undefined): Formule | null {
-  if (!productId) return null;
+function formuleDuProduit(productId: string): Formule | null {
   const produits: [string | undefined, Formule][] = [
     [process.env.CHARIOW_PRODUIT_ID_ABONNEMENT_MENSUEL, "mensuel"],
     [process.env.CHARIOW_PRODUIT_ID_ABONNEMENT_ANNUEL, "annuel"],
@@ -187,7 +191,7 @@ async function enregistrerAbonnement(email: string, saleId: string, formule: For
     const { data: enCours } = await admin
       .from("abonnements")
       .select("fin_le")
-      .ilike("email", email)
+      .eq("email", email)
       .neq("statut", "expire")
       .order("fin_le", { ascending: false })
       .limit(1);
@@ -215,7 +219,7 @@ async function enregistrerAbonnement(email: string, saleId: string, formule: For
     reference_paiement: saleId,
   });
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return erreurServeur("chariow", error.message, "Enregistrement impossible");
   }
   return NextResponse.json({ ok: true, abonnement: formule, fin_le: fin });
 }

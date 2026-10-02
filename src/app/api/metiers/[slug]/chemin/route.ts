@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
 
 const CHEMINS_VALIDES = ["chatgpt", "claude", "gemini"];
 
@@ -44,7 +45,7 @@ export async function POST(
   );
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return erreurServeur("chemin", error.message);
   }
 
   return NextResponse.json({ ok: true, chemin_choisi: chemin });

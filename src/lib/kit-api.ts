@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import type { MiseEnPlace } from "@/lib/mise-en-place-types";
 export type IA = "chatgpt" | "claude" | "gemini";
 export const iaLabels: Record<IA, string> = {
   chatgpt: "ChatGPT",
@@ -8,6 +9,18 @@ export const iaLabels: Record<IA, string> = {
   gemini: "Gemini",
 };
 export const chemins: IA[] = ["chatgpt", "claude", "gemini"];
+// Libellé du fournisseur officiel affiché à côté des outils « officiel », par IA.
+export const officielLabel: Record<IA, string> = {
+  claude: "Officiel Claude",
+  gemini: "Officiel Google",
+  chatgpt: "Officiel OpenAI",
+};
+// Nom du mécanisme d'automatisation récurrente de chaque IA.
+export const automatisationLabel: Record<IA, string> = {
+  claude: "Cowork",
+  gemini: "les actions planifiées Gemini",
+  chatgpt: "les tâches planifiées ChatGPT",
+};
 export type Metier = {
   id: string;
   slug: string;
@@ -45,6 +58,9 @@ export type TacheDetail = {
   favori: boolean;
   ia_par_defaut: IA | null;
   exercices: Exercice[];
+  // Outils, prompt et routine de la tâche, pour chaque IA (contenu payant,
+  // fourni par la route protégée, jamais importé côté client).
+  mise_en_place: Record<IA, MiseEnPlace | null>;
 };
 export type Favori = {
   tache_id: string;
@@ -61,16 +77,6 @@ export type Progression = {
   reprise: Favori | null;
   serie_jours: number;
   jours_actifs_semaine: boolean[];
-};
-export type Recherche = {
-  taches: {
-    id: string;
-    code: string;
-    titre: string;
-    metier_slug: string;
-    metier_nom: string;
-  }[];
-  glossaire: { terme: string; definition: string }[];
 };
 export function tacheHref(id: string, metier: string) {
   return `/taches/${encodeURIComponent(id)}?metier=${encodeURIComponent(metier)}`;

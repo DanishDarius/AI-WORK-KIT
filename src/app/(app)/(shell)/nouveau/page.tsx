@@ -6,6 +6,7 @@ import { Chip, PageHead } from "@/components/ui";
 import { AbonnementCard, StatsCard } from "@/components/widgets";
 import { iaNoms, iaUpdates, mediaThumb, newestFirst, updateIas } from "@/lib/ia-updates";
 import type { IA } from "@/lib/kit-api";
+import { exigerAccesActif } from "@/lib/acces";
 
 export const metadata: Metadata = { title: "Nouveau" };
 
@@ -14,6 +15,7 @@ function dateCourte(iso: string) {
 }
 
 export default async function Nouveau({ searchParams }: PageProps<"/nouveau">) {
+  await exigerAccesActif();
   const { ia } = await searchParams;
   const filtre = updateIas.includes(ia as IA) ? (ia as IA) : null;
   const liste = newestFirst(iaUpdates).filter((u) => !filtre || u.ia === filtre);

@@ -1,5 +1,6 @@
 import "server-only";
 
+import { normaliserEmail } from "@/lib/normaliser";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import { SANS_ABONNEMENT, type Abonnement } from "@/lib/offre";
@@ -14,7 +15,7 @@ export async function getAbonnement(email: string | null | undefined): Promise<A
     const { data, error } = await admin
       .from("abonnements")
       .select("periode, statut, fin_le")
-      .ilike("email", email)
+      .eq("email", normaliserEmail(email))
       .order("fin_le", { ascending: false })
       .limit(1);
     if (error || !data?.length) return SANS_ABONNEMENT;

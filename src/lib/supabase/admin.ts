@@ -3,6 +3,8 @@
 // jamais importé depuis un composant client, jamais exposé au navigateur.
 // La clé vient de la variable d'environnement SUPABASE_SERVICE_ROLE_KEY,
 // configurée uniquement sur Vercel (jamais préfixée NEXT_PUBLIC_).
+import "server-only";
+
 import { createClient } from "@supabase/supabase-js";
 
 export function createAdminClient() {

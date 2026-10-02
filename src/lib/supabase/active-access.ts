@@ -1,4 +1,7 @@
+import "server-only";
+
 import { NextResponse } from "next/server";
+import { normaliserEmail } from "@/lib/normaliser";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 
@@ -21,11 +24,12 @@ export async function requireActiveUser() {
   const { data: accesses, error: accessError } = await admin
     .from("acces_clients")
     .select("id")
-    .ilike("email", user.email)
+    .eq("email", normaliserEmail(user.email))
     .eq("statut", "actif")
     .limit(1);
 
   if (accessError) {
+    console.error("[acces] vérification impossible", accessError.message);
     return {
       response: NextResponse.json(
         { error: "Impossible de vérifier votre accès" },

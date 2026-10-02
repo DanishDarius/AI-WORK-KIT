@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireActiveUser } from "@/lib/supabase/active-access";
+import { erreurServeur } from "@/lib/reponses-api";
 
 // GET /api/metiers : liste des 12 métiers avec le nombre de tâches de chacun
 // (une tâche pouvant appartenir à plusieurs métiers, relation many-to-many
@@ -19,7 +20,7 @@ export async function GET() {
   ]);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return erreurServeur("metiers", error.message);
   }
 
   // Nombre de tâches faites par métier, pour la barre de progression de

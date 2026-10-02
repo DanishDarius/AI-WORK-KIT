@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { category } from "@/lib/catalogue";
-import { api, chemins, type IA, iaLabels, type MetierDetail, tacheHref, type TacheDetail, useResource } from "@/lib/kit-api";
-import { automatisationLabel, miseEnPlace, officielLabel } from "@/lib/mise-en-place";
+import { api, automatisationLabel, chemins, type IA, iaLabels, type MetierDetail, officielLabel, tacheHref, type TacheDetail, useResource } from "@/lib/kit-api";
 import { Icon } from "./icon";
 import { iconeCategorie } from "./parcours";
 import { Chip, IconBox, Kicker, ResourceState } from "./ui";
@@ -66,7 +65,7 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
   const exercice = exercices[cas];
   const prompt = exercice?.prompts[ia] ?? "";
   const aCopier = `${prompt}${exercice?.donnees ? `\n\n---\nDonnées du cas pratique\n\n${exercice.donnees}` : ""}`;
-  const mep = miseEnPlace[ia]?.[tache.code];
+  const mep = data.mise_en_place?.[ia] ?? undefined;
   const categorie = category(tache.code);
   const taches = metierDetail.data?.taches ?? [];
   const position = taches.findIndex((t) => t.id === id);
