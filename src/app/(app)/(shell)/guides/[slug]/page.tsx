@@ -6,7 +6,7 @@ import { GuideActions, GuideCover } from "@/components/guides";
 import { Icon } from "@/components/icon";
 import { Page } from "@/components/shell";
 import { Chip, Kicker } from "@/components/ui";
-import { getAbonnementCourant } from "@/lib/abonnement";
+import { getAbonnement } from "@/lib/abonnement";
 import { getAllGuides, guidePreview } from "@/lib/guides";
 import { exigerAccesActif } from "@/lib/acces";
 
@@ -23,14 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function GuidePage({ params }: Props) {
-  await exigerAccesActif();
+  const { email } = await exigerAccesActif();
   const { slug } = await params;
   const guides = getAllGuides();
   const index = guides.findIndex((g) => g.slug === slug);
   if (index < 0) notFound();
   const guide = guides[index];
   const suivants = [guides[(index + 1) % guides.length], guides[(index + 2) % guides.length]];
-  const { abonnement } = await getAbonnementCourant();
+  const abonnement = await getAbonnement(email);
   const verrouille = !guide.inclus && !abonnement.actif;
   const markdown = verrouille ? guidePreview(guide.markdown) : guide.markdown;
   const reserves = guides.filter((g) => !g.inclus).length;

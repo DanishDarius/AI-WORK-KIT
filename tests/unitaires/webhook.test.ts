@@ -160,6 +160,30 @@ describe("C6 · un e-mail qui échoue ne fait pas perdre l'accès payé", () => 
     expect(factice.ecritures("acces_clients").filter((op) => op.action === "insert")).toHaveLength(1);
     expect(factice.ecritures("acces_clients").filter((op) => op.action === "delete")).toEqual([]);
   });
+
+  it("répond 200 à Chariow quand l'e-mail échoue : 5 erreurs désactiveraient le Pulse", async () => {
+    const factice = installer();
+    factice.etat.erreurInvitation = { message: "email rate limit exceeded" };
+    const reponse = await appeler(vente());
+    expect(reponse.status).toBe(200);
+    expect(await reponse.json()).toEqual({ ok: true, activation: "a_renvoyer" });
+  });
+
+  it("note la date de la demande d'envoi, pour limiter les renvois", async () => {
+    const factice = installer();
+    await appeler(vente());
+    const creation = factice.ecritures("acces_clients").find((op) => op.action === "insert");
+    expect((creation?.valeurs as { activation_demandee_le?: string }).activation_demandee_le).toMatch(/^\d{4}-\d{2}-\d{2}T/);
+  });
+
+  it("n'envoie rien et répond 200 quand l'adresse a déjà un compte activé", async () => {
+    const factice = installer();
+    factice.etat.erreurInvitation = { message: "A user with this email address has already been registered" };
+    const reponse = await appeler(vente());
+    expect(reponse.status).toBe(200);
+    expect(await reponse.json()).toEqual({ ok: true });
+    expect(factice.ecritures("acces_clients").filter((op) => op.action === "delete")).toEqual([]);
+  });
 });
 
 describe("S8 · aucun détail technique dans la réponse", () => {

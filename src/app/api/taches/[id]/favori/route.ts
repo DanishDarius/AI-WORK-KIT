@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { lireCatalogue, metierParSlug } from "@/lib/contenu";
 import { requireActiveUser } from "@/lib/supabase/active-access";
 import { erreurServeur } from "@/lib/reponses-api";
 import { estUuid } from "@/lib/normaliser";
@@ -40,13 +41,15 @@ export async function POST(
         { status: 400 }
       );
     }
-    const { data: metier, error: erreurMetier } = await supabase
-      .from("metiers")
-      .select("id")
-      .eq("slug", metierSlug)
-      .maybeSingle();
-    if (erreurMetier || !metier) {
-      return NextResponse.json({ error: "Métier introuvable" }, { status: 404 });
+    let catalogue;
+    try {
+      catalogue = await lireCatalogue();
+    } catch (erreur) {
+      return erreurServeur("favori", erreur);
+    }
+    const metier = metierParSlug(catalogue, metierSlug);
+    if (!metier || !catalogue.taches[id]) {
+      return NextResponse.json({ error: "Tâche ou métier introuvable" }, { status: 404 });
     }
     const { error } = await supabase.from("favoris").upsert(
       {

@@ -57,6 +57,9 @@ export type TacheDetail = {
   fait: boolean;
   favori: boolean;
   ia_par_defaut: IA | null;
+  // Nom du métier d'où l'on vient et tâche suivante de son parcours.
+  metier_nom: string | null;
+  suivante_id: string | null;
   exercices: Exercice[];
   // Outils, prompt et routine de la tâche, pour chaque IA (contenu payant,
   // fourni par la route protégée, jamais importé côté client).
@@ -81,6 +84,30 @@ export type Progression = {
 export function tacheHref(id: string, metier: string) {
   return `/taches/${encodeURIComponent(id)}?metier=${encodeURIComponent(metier)}`;
 }
+// Réponses des lectures (GET), partagées entre les composants d'une page.
+//
+// Règle C2 : plusieurs composants demandent la même ressource (la carte de
+// progression et la carte « Reprendre », par exemple). Sans partage, chaque
+// composant relançait sa propre requête. Ici, une ressource est demandée une
+// fois, puis resservie pendant quelques secondes.
+//
+// Toute écriture (POST, PUT, DELETE) vide ce partage : après une tâche
+// marquée faite ou un favori, les lectures suivantes repartent du serveur.
+const DUREE_PARTAGE_MS = 10_000;
+const partage = new Map<string, { promesse: Promise<unknown>; expire: number }>();
+
+function lirePartage<T>(url: string): Promise<T> {
+  const connue = partage.get(url);
+  if (connue && connue.expire > Date.now()) return connue.promesse as Promise<T>;
+  const promesse = api<T>(url);
+  partage.set(url, { promesse, expire: Date.now() + DUREE_PARTAGE_MS });
+  // Un échec n'est jamais gardé : le prochain composant réessaie.
+  promesse.catch(() => {
+    if (partage.get(url)?.promesse === promesse) partage.delete(url);
+  });
+  return promesse;
+}
+
 export async function api<T>(
   url: string,
   options: RequestInit = {},
@@ -93,12 +120,18 @@ export async function api<T>(
     throw new Error(
       "Vous n’êtes pas connecté. Connectez-vous pour continuer.",
     );
-  const response = await fetch(url, {
-    ...options,
-    credentials: "same-origin",
-    cache: "no-store",
-    headers: { "Content-Type": "application/json", ...options.headers },
-  });
+  const ecriture = Boolean(options.method && options.method.toUpperCase() !== "GET");
+  let response: Response;
+  try {
+    response = await fetch(url, {
+      ...options,
+      credentials: "same-origin",
+      cache: "no-store",
+      headers: { "Content-Type": "application/json", ...options.headers },
+    });
+  } finally {
+    if (ecriture) partage.clear();
+  }
   if (response.status === 401)
     throw new Error(
       "Votre session a expiré. Reconnectez-vous pour continuer.",
@@ -118,13 +151,13 @@ export function useResource<T>(url: string) {
   );
   const [attempt, setAttempt] = useState(0);
   useEffect(() => {
-    const controller = new AbortController();
-    api<T>(url, { signal: controller.signal }).then(
+    let actif = true;
+    lirePartage<T>(url).then(
       (data) => {
-        if (!controller.signal.aborted) setState({ url, data });
+        if (actif) setState({ url, data });
       },
       (error) => {
-        if (!controller.signal.aborted)
+        if (actif)
           setState({
             url,
             error:
@@ -134,12 +167,15 @@ export function useResource<T>(url: string) {
           });
       },
     );
-    return () => controller.abort();
+    return () => {
+      actif = false;
+    };
   }, [url, attempt]);
   return {
     data: state.url === url ? state.data : undefined,
     error: state.url === url ? state.error : undefined,
     retry: () => {
+      partage.delete(url);
       setState({ url });
       setAttempt((n) => n + 1);
     },

@@ -1,35 +1,29 @@
 import "server-only";
 
 import { NextResponse } from "next/server";
-import { normaliserEmail } from "@/lib/normaliser";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { accesActif } from "@/lib/acces-actif";
 import { createClient } from "@/lib/supabase/server";
+import { lireSession } from "@/lib/supabase/session";
 
-// Authentification + autorisation commerciale. Une session Supabase valide ne
-// suffit pas : l'adresse doit également posséder au moins un accès Chariow actif.
+// Authentification + autorisation commerciale des routes API. Une session
+// valide ne suffit pas : l'adresse doit posséder un accès Chariow actif.
+//
+// Coût (règle C2) : aucun appel au serveur d'authentification, et au plus
+// une requête base par minute et par compte pour l'accès.
 export async function requireActiveUser() {
   const supabase = await createClient();
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.getUser();
-
-  if (authError || !user?.email) {
+  const user = await lireSession(supabase);
+  if (!user) {
     return {
       response: NextResponse.json({ error: "Non connecté" }, { status: 401 }),
     };
   }
 
-  const admin = createAdminClient();
-  const { data: accesses, error: accessError } = await admin
-    .from("acces_clients")
-    .select("id")
-    .eq("email", normaliserEmail(user.email))
-    .eq("statut", "actif")
-    .limit(1);
-
-  if (accessError) {
-    console.error("[acces] vérification impossible", accessError.message);
+  let acces;
+  try {
+    acces = await accesActif(user.email);
+  } catch (erreur) {
+    console.error("[acces] vérification impossible", erreur);
     return {
       response: NextResponse.json(
         { error: "Impossible de vérifier votre accès" },
@@ -38,7 +32,7 @@ export async function requireActiveUser() {
     };
   }
 
-  if (!accesses?.length) {
+  if (!acces.actif) {
     return {
       response: NextResponse.json(
         { error: "Accès inactif" },
@@ -47,5 +41,5 @@ export async function requireActiveUser() {
     };
   }
 
-  return { supabase, user };
+  return { supabase, user, accesDepuis: acces.depuis };
 }

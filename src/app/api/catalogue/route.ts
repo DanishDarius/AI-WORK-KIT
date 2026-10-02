@@ -1,67 +1,37 @@
 import { NextResponse } from "next/server";
-import { requireActiveUser } from "@/lib/supabase/active-access";
+import { lireCatalogue, tachesDuMetier, type TacheContenu } from "@/lib/contenu";
 import { erreurServeur } from "@/lib/reponses-api";
+import { cheminsChoisis, idsFavoris, idsTachesFaites } from "@/lib/suivi";
+import { requireActiveUser } from "@/lib/supabase/active-access";
 
-type TacheRow = {
-  id: string;
-  code: string;
-  titre: string;
-  limite_connue: boolean;
-  ia_alternative_conseillee: string | null;
-};
-
-// GET /api/catalogue : tout ce dont l'accueil et les pages Tâches / Métiers ont
-// besoin, en UNE requête (au lieu de 1 + 12 appels à /api/metiers/[slug]).
-// Même contenu que l'assemblage fait auparavant dans le navigateur : métiers
-// (avec progression et chemin choisi) et tâches (avec leurs métiers, dans
-// l'ordre des métiers puis de la liaison).
+// GET /api/catalogue : tout ce dont les pages Tâches et Métiers ont besoin, en
+// un appel : métiers (avec progression et IA choisie) et tâches (avec leurs
+// métiers, dans l'ordre des métiers puis du parcours).
+//
+// Le contenu vient du cache (règle C1). Restent 3 requêtes base, propres au
+// compte : IA choisies, favoris, tâches faites.
 export async function GET() {
   const access = await requireActiveUser();
   if ("response" in access) return access.response;
   const { supabase, user } = access;
 
-  const [metiersRes, liaisonsRes, cheminsRes, favorisRes, faitesRes] =
-    await Promise.all([
-      supabase
-        .from("metiers")
-        .select("id, slug, nom, description, ordre")
-        .order("ordre", { ascending: true }),
-      supabase
-        .from("metiers_taches")
-        .select(
-          "metier_id, ordre, taches(id, code, titre, limite_connue, ia_alternative_conseillee)",
-        )
-        .order("ordre", { ascending: true }),
-      supabase
-        .from("utilisateurs_chemins")
-        .select("metier_id, chemin")
-        .eq("user_id", user.id),
-      supabase.from("favoris").select("tache_id").eq("user_id", user.id),
-      supabase.from("taches_faites").select("tache_id").eq("user_id", user.id),
-    ]);
-
-  const erreur = metiersRes.error || liaisonsRes.error;
-  if (erreur) return erreurServeur("catalogue", erreur.message);
-
-  const chemins = new Map(
-    (cheminsRes.data ?? []).map((c) => [c.metier_id as string, c.chemin as string]),
-  );
-  const favoris = new Set((favorisRes.data ?? []).map((f) => f.tache_id));
-  const faites = new Set((faitesRes.data ?? []).map((f) => f.tache_id));
-
-  const parMetier = new Map<string, TacheRow[]>();
-  for (const l of liaisonsRes.data ?? []) {
-    const t = (Array.isArray(l.taches) ? l.taches[0] : l.taches) as TacheRow | null;
-    if (!t) continue;
-    const liste = parMetier.get(l.metier_id) ?? [];
-    liste.push(t);
-    parMetier.set(l.metier_id, liste);
+  let catalogue;
+  try {
+    catalogue = await lireCatalogue();
+  } catch (erreur) {
+    return erreurServeur("catalogue", erreur);
   }
+
+  const [chemins, favoris, faites] = await Promise.all([
+    cheminsChoisis(supabase, user.id),
+    idsFavoris(supabase, user.id),
+    idsTachesFaites(supabase, user.id),
+  ]);
 
   const metiers = [];
   const taches = new Map<
     string,
-    TacheRow & {
+    TacheContenu & {
       ia_par_defaut: string | null;
       fait: boolean;
       favori: boolean;
@@ -69,8 +39,8 @@ export async function GET() {
     }
   >();
 
-  for (const m of metiersRes.data ?? []) {
-    const liste = parMetier.get(m.id) ?? [];
+  for (const m of catalogue.metiers) {
+    const liste = tachesDuMetier(catalogue, m.id);
     const chemin = chemins.get(m.id) ?? null;
     metiers.push({
       id: m.id,

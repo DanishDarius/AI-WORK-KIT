@@ -109,7 +109,10 @@ export function ConnexionForm() {
       </div>
       {error && <p className="form-error" role="alert">{error}</p>}
       <button className="btn btn-lg btn-block" type="submit" disabled={sending}>{sending ? "Connexion…" : "Se connecter"}</button>
-      <p className="form-help">Pas encore de compte ? Il se crée automatiquement après votre achat.</p>
+      <p className="form-help">
+        Pas encore de compte ? Il se crée automatiquement après votre achat. Vous avez payé et rien reçu ?{" "}
+        <Link className="strong" href="/activation/renvoi">Recevoir le lien d’activation</Link>
+      </p>
     </form>
   );
 }
@@ -150,6 +153,56 @@ export function ForgotPasswordForm() {
       <div className="field">
         <label className="field-label" htmlFor="email-recuperation">Adresse e-mail du compte</label>
         <input id="email-recuperation" className="input" type="email" inputMode="email" autoComplete="email" placeholder="vous@exemple.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      </div>
+      {error && <p className="form-error" role="alert">{error}</p>}
+      <button className="btn btn-lg btn-block" type="submit" disabled={sending}>{sending ? "Envoi en cours…" : "Recevoir le lien"}</button>
+      <Link className="link" href="/connexion">Retour à la connexion</Link>
+    </form>
+  );
+}
+
+// Renvoi du lien d'activation après un achat. La réponse du serveur est la
+// même pour toute adresse : le message ne dit pas si un achat existe.
+export function RenvoiActivationForm() {
+  const [email, setEmail] = useState("");
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string>();
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (sending) return;
+    setSending(true);
+    setError(undefined);
+    const response = await fetch("/api/activation/renvoi", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email.trim() }),
+    }).catch(() => null);
+    setSending(false);
+    if (!response?.ok) {
+      setError(response?.status === 400 ? "Vérifiez l’adresse e-mail, puis réessayez." : "L’envoi a échoué. Réessayez dans un instant.");
+      return;
+    }
+    setSent(true);
+  }
+
+  if (sent)
+    return (
+      <div className="form-ok stack-sm" role="status">
+        <p className="strong">Vérifiez votre boîte mail.</p>
+        <p>Si un achat attend son activation à cette adresse, un nouveau lien vient de partir. Pensez à regarder dans les spams.</p>
+        <p>Rien reçu après quelques minutes ? Vous pouvez refaire une demande toutes les 5 minutes, ou écrire à support@parlonsads.com.</p>
+        <p>Compte déjà activé ? <Link className="strong" href="/mot-de-passe-oublie">Choisissez un nouveau mot de passe</Link>.</p>
+        <Link className="link" href="/connexion">Retour à la connexion</Link>
+      </div>
+    );
+
+  return (
+    <form className="stack" onSubmit={submit}>
+      <div className="field">
+        <label className="field-label" htmlFor="email-activation">Adresse e-mail utilisée lors de l’achat</label>
+        <input id="email-activation" className="input" type="email" inputMode="email" autoComplete="email" placeholder="vous@exemple.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
       </div>
       {error && <p className="form-error" role="alert">{error}</p>}
       <button className="btn btn-lg btn-block" type="submit" disabled={sending}>{sending ? "Envoi en cours…" : "Recevoir le lien"}</button>
@@ -219,7 +272,7 @@ export function SetPasswordForm({ mode, recoveryPending = false }: { mode: "acti
       <div className="form-error stack-sm" role="alert">
         <p className="strong">Lien invalide ou expiré.</p>
         <p>Ce lien ne fonctionne plus. Demandez-en un nouveau, il arrive en quelques secondes.</p>
-        <Link className="btn btn-sm" href="/mot-de-passe-oublie">Demander un nouveau lien</Link>
+        <Link className="btn btn-sm" href={mode === "activation" ? "/activation/renvoi" : "/mot-de-passe-oublie"}>Demander un nouveau lien</Link>
       </div>
     );
 

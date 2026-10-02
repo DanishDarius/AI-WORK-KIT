@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createHmac, timingSafeEqual } from "node:crypto";
+import { envoyerActivation } from "@/lib/activation";
 import { estEmail, normaliserEmail } from "@/lib/normaliser";
 import { erreurServeur } from "@/lib/reponses-api";
 import { createAdminClient } from "@/lib/supabase/admin";
@@ -40,6 +41,10 @@ const ignorer = (raison: string) => NextResponse.json({ ok: true, ignore: true, 
 //
 // Chariow réessaie 5 fois une livraison qui reçoit une erreur, puis désactive
 // le Pulse. Un événement qui ne nous concerne pas reçoit donc toujours 200.
+//
+// Règle C6 : une vente enregistrée reçoit toujours 200, même si l'e-mail
+// d'activation ne part pas. L'accès payé n'est jamais retiré pour un e-mail :
+// l'acheteur redemande son lien sur /activation/renvoi.
 export async function POST(request: Request) {
   const corpsBrut = await request.text();
 
@@ -125,32 +130,21 @@ export async function POST(request: Request) {
       email: normalizedEmail,
       chariow_sale_id: saleId,
       statut: "actif",
+      activation_demandee_le: new Date().toISOString(),
     });
 
   if (erreurInsertion) {
     return erreurServeur("chariow", erreurInsertion.message, "Enregistrement impossible");
   }
 
-  // Pour un premier achat, l'invitation confirme l'email puis conduit à la
+  // Pour un premier achat, l'invitation confirme l'e-mail puis conduit à la
   // création du mot de passe. Un client déjà inscrit conserve son mot de passe.
-  const activationUrl = `${new URL(request.url).origin}/activation`;
-  const { error: erreurInvitation } =
-    await supabaseAdmin.auth.admin.inviteUserByEmail(normalizedEmail, {
-      redirectTo: activationUrl,
-    });
-
-  const compteExistant =
-    erreurInvitation &&
-    /already (been )?registered|already exists/i.test(erreurInvitation.message);
-
-  if (erreurInvitation && !compteExistant) {
-    // L'accès et l'invitation forment une seule opération logique. En cas
-    // d'échec d'envoi, on retire la ligne afin que Chariow puisse retenter.
-    await supabaseAdmin
-      .from("acces_clients")
-      .delete()
-      .eq("chariow_sale_id", saleId);
-    return erreurServeur("chariow", erreurInvitation.message, "Invitation impossible");
+  const envoi = await envoyerActivation(supabaseAdmin, normalizedEmail, new URL(request.url).origin);
+  if (envoi === "echec") {
+    // L'accès est payé et enregistré : on ne le retire pas, et on ne demande
+    // pas à Chariow de recommencer (5 erreurs désactivent le Pulse).
+    console.error("[chariow] accès créé, activation à renvoyer", saleId);
+    return NextResponse.json({ ok: true, activation: "a_renvoyer" });
   }
 
   return NextResponse.json({ ok: true });

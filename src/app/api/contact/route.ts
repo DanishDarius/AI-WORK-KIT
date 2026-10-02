@@ -115,7 +115,7 @@ export async function POST(request: Request) {
     entreprise,
     fonction,
     reponses,
-    compte: user.email ?? "",
+    compte: user.email,
   });
 
   if (envoye) await admin.from("demandes_contact").update({ email_envoye: true }).eq("id", ligne.id);

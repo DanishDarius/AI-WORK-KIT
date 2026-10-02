@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getAbonnement } from "@/lib/abonnement";
+import { lireCatalogue, metierParSlug } from "@/lib/contenu";
 import { echapperHtml, envoyerEmailEquipe } from "@/lib/email";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { requireActiveUser } from "@/lib/supabase/active-access";
@@ -55,21 +56,36 @@ export async function GET(request: Request) {
   if ("response" in access) return access.response;
   const metier = new URL(request.url).searchParams.get("metier");
 
-  const admin = createAdminClient();
-  let requete = admin.from("demandes_plans").select(COLONNES).eq("user_id", access.user.id);
-  if (metier) requete = requete.eq("metier_slug", metier).eq("type", "tache");
-  const { data, error } = await requete.order("cree_le", { ascending: false }).limit(50);
+  // Une seule requête (règle C2) : les demandes du compte, les plus récentes
+  // d'abord. Le quota du mois (10 demandes au plus) et le filtre par métier
+  // se calculent sur cette liste.
+  const { data, error } = await createAdminClient()
+    .from("demandes_plans")
+    .select(`${COLONNES}, metier_slug`)
+    .eq("user_id", access.user.id)
+    .order("cree_le", { ascending: false })
+    .limit(200);
   if (error) return NextResponse.json({ error: "Chargement impossible." }, { status: 500 });
 
-  const plans = (data ?? []).map((p) => ({ ...p, plan: p.statut === "livre" ? p.plan : null }));
+  const lignes = (data ?? []) as unknown as (PlanSurMesure & { metier_slug: string })[];
+  const plans = lignes
+    .filter((p) => !metier || (p.metier_slug === metier && p.type === "tache"))
+    .slice(0, 50)
+    .map((p) => ({
+      id: p.id,
+      type: p.type,
+      metier_nom: p.metier_nom,
+      description: p.description,
+      ias: p.ias,
+      statut: p.statut,
+      plan: p.statut === "livre" ? p.plan : null,
+      cree_le: p.cree_le,
+      livre_le: p.livre_le,
+    }));
+
   const debutMois = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), 1)).toISOString();
-  const { data: ceMois } = await admin
-    .from("demandes_plans")
-    .select("type")
-    .eq("user_id", access.user.id)
-    .gte("cree_le", debutMois);
   const utilise = { tache: 0, metier: 0 };
-  for (const d of ceMois ?? []) if (d.type === "tache" || d.type === "metier") utilise[d.type as TypeDemande] += 1;
+  for (const d of lignes) if (d.cree_le >= debutMois && (d.type === "tache" || d.type === "metier")) utilise[d.type] += 1;
   return NextResponse.json(
     { plans, restant: { tache: Math.max(0, LIMITES.tache - utilise.tache), metier: Math.max(0, LIMITES.metier - utilise.metier) } },
     { headers: { "Cache-Control": "private, no-store" } },
@@ -79,7 +95,7 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   const access = await verifierAbonne();
   if ("response" in access) return access.response;
-  const { supabase, user } = access;
+  const { user } = access;
 
   const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   if (!body) return NextResponse.json({ error: "Demande illisible." }, { status: 400 });
@@ -101,7 +117,13 @@ export async function POST(request: Request) {
     const donnees = texte(body.donnees, 2000);
     const resultat = texte(body.resultat, 1000);
     if (slug && slug !== "autre") {
-      const { data: metier } = await supabase.from("metiers").select("slug, nom").eq("slug", slug).maybeSingle();
+      let metier;
+      try {
+        metier = metierParSlug(await lireCatalogue(), slug);
+      } catch (erreur) {
+        console.error("[plans] catalogue illisible", erreur);
+        return NextResponse.json({ error: "Envoi impossible. Réessayez dans un instant." }, { status: 500 });
+      }
       if (!metier) return NextResponse.json({ error: "Métier introuvable." }, { status: 404 });
       metierSlug = metier.slug;
       metierNom = metier.nom;
@@ -172,7 +194,7 @@ export async function POST(request: Request) {
   const titre = `${type === "tache" ? "Tâche sur mesure" : "Métier sur mesure"} · ${metierNom} · à livrer en ${DELAIS[type]}`;
   const envoye = await envoyerEmailEquipe({
     tag: "plans",
-    replyTo: user.email ?? undefined,
+    replyTo: user.email,
     subject: `${titre} · ${user.email}`,
     text: [
       titre,
@@ -187,7 +209,7 @@ export async function POST(request: Request) {
     ].join("\n"),
     html: `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:#111">
 <h2 style="margin:0 0 16px">${echapperHtml(titre)}</h2>
-<p><strong>Compte :</strong> ${echapperHtml(user.email ?? "")}<br><strong>Plan pour :</strong> ${echapperHtml(iasTexte)}</p>
+<p><strong>Compte :</strong> ${echapperHtml(user.email)}<br><strong>Plan pour :</strong> ${echapperHtml(iasTexte)}</p>
 <p style="white-space:pre-wrap;border-left:3px solid #0b6b5e;padding-left:12px">${echapperHtml(description)}</p>
 <p style="color:#666;font-size:13px">Pour livrer : Supabase &gt; demandes_plans &gt; ligne ${ligne.id} : remplir « plan » (markdown), passer « statut » à livre et renseigner « livre_le ».</p>
 </div>`,

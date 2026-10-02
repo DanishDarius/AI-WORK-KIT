@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { category } from "@/lib/catalogue";
-import { api, automatisationLabel, chemins, type IA, iaLabels, type MetierDetail, officielLabel, tacheHref, type TacheDetail, useResource } from "@/lib/kit-api";
+import { api, automatisationLabel, chemins, type IA, iaLabels, officielLabel, tacheHref, type TacheDetail, useResource } from "@/lib/kit-api";
 import { Icon } from "./icon";
 import { iconeCategorie } from "./parcours";
 import { Chip, IconBox, Kicker, ResourceState } from "./ui";
@@ -60,16 +60,19 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
   const [copie, setCopie] = useState<"" | "ok" | "echec">("");
   const [copieRoutine, setCopieRoutine] = useState(false);
   const { statut, erreur, basculer } = useStatut(id, metier, { fait: data.fait, favori: data.favori });
-  const metierDetail = useResource<MetierDetail>(`/api/metiers/${encodeURIComponent(metier)}`);
+
+  // Enregistre la consultation (« Reprendre » et série de régularité), une
+  // fois la tâche affichée. Un échec ne gêne pas la lecture de la tâche.
+  useEffect(() => {
+    if (!metier) return;
+    api(`/api/taches/${encodeURIComponent(id)}/vue?metier=${encodeURIComponent(metier)}`, { method: "POST" }).catch(() => undefined);
+  }, [id, metier]);
 
   const exercice = exercices[cas];
   const prompt = exercice?.prompts[ia] ?? "";
   const aCopier = `${prompt}${exercice?.donnees ? `\n\n---\nDonnées du cas pratique\n\n${exercice.donnees}` : ""}`;
   const mep = data.mise_en_place?.[ia] ?? undefined;
   const categorie = category(tache.code);
-  const taches = metierDetail.data?.taches ?? [];
-  const position = taches.findIndex((t) => t.id === id);
-  const suivante = position >= 0 ? taches.slice(position + 1).find((t) => !t.fait) ?? taches[position + 1] : undefined;
   const retour = `/metiers/${encodeURIComponent(metier)}`;
 
   async function copierPrompt() {
@@ -83,7 +86,7 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
       <header className="task-top">
         <Link className="icon-btn is-flat" href={retour} aria-label="Fermer et revenir au parcours"><Icon name="x" size={26} /></Link>
         <div className="grow">
-          <span>{metierDetail.data?.metier.nom ?? "Parcours"} · {categorie}</span>
+          <span>{data.metier_nom ?? "Parcours"} · {categorie}</span>
           <h1>{tache.titre}</h1>
         </div>
         <button type="button" className="icon-btn" aria-pressed={statut.favori} aria-label={statut.favori ? "Retirer des favoris" : "Ajouter aux favoris"} onClick={() => basculer("favori")} style={statut.favori ? { color: "var(--gold)", borderColor: "#f5dfa3", background: "var(--gold-bg)" } : undefined}>
@@ -220,8 +223,8 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
             <button type="button" className={`btn btn-plain${statut.fait ? "" : " btn-secondary"}`} aria-pressed={statut.fait} onClick={() => basculer("fait")}>
               <Icon name="check" size={18} /> {statut.fait ? "Tâche faite" : "Marquer comme faite"}
             </button>
-            {suivante ? (
-              <Link className="btn btn-plain" href={tacheHref(suivante.id, metier)}>Tâche suivante <Icon name="arrow" size={18} /></Link>
+            {data.suivante_id ? (
+              <Link className="btn btn-plain" href={tacheHref(data.suivante_id, metier)}>Tâche suivante <Icon name="arrow" size={18} /></Link>
             ) : (
               <Link className="btn btn-secondary btn-plain" href={retour}>Retour au parcours</Link>
             )}

@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
-import { api, Metier, MetierDetail, Tache } from "./kit-api";
+import { type Metier, type MetierDetail, type Tache, useResource } from "./kit-api";
 
 // Taxonomie visuelle conservée de la version 1. Aucun champ API supplémentaire.
 const categories: Record<string, string> = {
@@ -215,34 +214,8 @@ export type Catalogue = {
   taches: CatalogueTache[];
 };
 
+// Une seule requête : le serveur assemble métiers et tâches.
 export function useCatalogue() {
-  const [data, setData] = useState<Catalogue>();
-  const [error, setError] = useState<string>();
-  const [attempt, setAttempt] = useState(0);
-  useEffect(() => {
-    const controller = new AbortController();
-    async function load() {
-      // Une seule requête : le serveur assemble métiers et tâches.
-      const catalogue = await api<Catalogue>("/api/catalogue", {
-        signal: controller.signal,
-      });
-      if (!controller.signal.aborted) setData(catalogue);
-    }
-    load().catch((e) => {
-      if (!controller.signal.aborted)
-        setError(
-          e instanceof Error ? e.message : "Le catalogue n’est pas disponible.",
-        );
-    });
-    return () => controller.abort();
-  }, [attempt]);
-  return {
-    data,
-    error,
-    retry: () => {
-      setData(undefined);
-      setError(undefined);
-      setAttempt((n) => n + 1);
-    },
-  };
+  const { data, error, retry } = useResource<Catalogue>("/api/catalogue");
+  return { data, error, retry };
 }

@@ -60,7 +60,15 @@ export function creerSupabaseFactice(repondre: (op: Operation) => Reponse = () =
   const client = {
     from: (table: string) => requete(table),
     auth: {
-      getUser: async () => ({ data: { user: etat.utilisateur }, error: null }),
+      // La session se lit dans le jeton (getClaims), sans appel réseau. Le faux
+      // client n'a volontairement PAS de getUser : un code serveur qui
+      // l'appellerait ferait échouer son test (règle C2).
+      getClaims: async () => ({
+        data: etat.utilisateur
+          ? { claims: { sub: etat.utilisateur.id, email: etat.utilisateur.email, role: "authenticated", is_anonymous: false } }
+          : null,
+        error: null,
+      }),
       verifyOtp: async () => ({ data: {}, error: null }),
       admin: {
         inviteUserByEmail: async (email: string) => {

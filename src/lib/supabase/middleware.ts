@@ -1,11 +1,17 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { RECOVERY_COOKIE } from "@/lib/supabase/recovery";
+import { lireSession } from "@/lib/supabase/session";
 
 // Rafraichit la session Supabase a chaque requete et repropage les cookies
 // mis a jour. Necessaire avec @supabase/ssr en Next.js : sans ce middleware,
 // un jeton de session arrive a expiration ne se renouvelle jamais tout seul
 // cote serveur, et l'utilisateur se retrouve deconnecte sans raison visible.
+//
+// Cout (regle C2) : aucun appel reseau tant que le jeton est valable. Le
+// jeton est verifie sur place (lireSession) ; le serveur d'authentification
+// n'est joint que pour le renouveler, environ une fois par heure. Un visiteur
+// sans cookie de session ne declenche aucun travail.
 //
 // Controle d'acces : tant qu'elle n'est pas authentifiee, une personne ne
 // peut atteindre que les pages publiques ci-dessous (connexion, mot de passe
@@ -37,7 +43,27 @@ function matchesPath(pathname: string, paths: string[]) {
   );
 }
 
+// Cookie de session pose par Supabase (« sb-<projet>-auth-token », parfois
+// decoupe en « .0 », « .1 »).
+function aUnCookieDeSession(request: NextRequest) {
+  return request.cookies.getAll().some((c) => c.name.startsWith("sb-") && c.name.includes("-auth-token"));
+}
+
 export async function updateSession(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  const isApiRoute = pathname.startsWith("/api/");
+  const isPublic = isApiRoute || matchesPath(pathname, PUBLIC_PATHS);
+
+  // Visiteur sans session : rien a verifier ni a renouveler. Les routes API
+  // repondent elles-memes 401 (requireActiveUser).
+  if (!aUnCookieDeSession(request)) {
+    if (isPublic) return NextResponse.next({ request });
+    const url = request.nextUrl.clone();
+    url.pathname = "/acces";
+    url.search = "";
+    return NextResponse.redirect(url);
+  }
+
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
@@ -61,15 +87,9 @@ export async function updateSession(request: NextRequest) {
     }
   );
 
-  // Ne pas retirer : necessaire pour declencher le rafraichissement du
-  // jeton aupres de Supabase avant qu'il n'expire.
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  const { pathname } = request.nextUrl;
-  const isApiRoute = pathname.startsWith("/api/");
-  const isPublic = isApiRoute || matchesPath(pathname, PUBLIC_PATHS);
+  // Ne pas retirer : c'est cet appel qui renouvelle le jeton aupres de
+  // Supabase quand il arrive a expiration, et qui repose les cookies.
+  const user = await lireSession(supabase);
 
   // Le lien de récupération crée une session Supabase. Elle sert uniquement
   // à définir un nouveau mot de passe, pas à parcourir l'application.

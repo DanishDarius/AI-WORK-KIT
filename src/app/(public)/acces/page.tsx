@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ActionAcces, AvisCompteInactif, LienDejaClient } from "@/components/acces-compte";
 import { Icon } from "@/components/icon";
 import { PublicFooter, PublicTop } from "@/components/public";
 import { CheckList, Chip, IconBox, Kicker } from "@/components/ui";
-import { getEtatAcces } from "@/lib/acces";
 import { fcfa, FORMULES, LIEN_ACCES, PRIX } from "@/lib/offre";
 
 export const metadata: Metadata = {
@@ -62,11 +61,9 @@ function Phone() {
   );
 }
 
-export default async function Acces({ searchParams }: PageProps<"/acces">) {
-  const params = await searchParams;
-  const { etat, email } = await getEtatAcces();
-  const inactif = etat === "inactif" || params.compte === "inactif";
-
+// Page statique (règle C3) : aucune lecture de session ni de cookie ici. Ce
+// qui dépend du visiteur est décidé dans le navigateur (acces-compte.tsx).
+export default function Acces() {
   return (
     <>
       <PublicTop
@@ -76,29 +73,10 @@ export default async function Acces({ searchParams }: PageProps<"/acces">) {
           { href: "#offres", label: "Offres" },
           { href: "#questions", label: "Questions" },
         ]}
-        action={
-          etat === "actif" ? (
-            <Link className="btn btn-sm" href="/">Mon parcours</Link>
-          ) : (
-            <>
-              {etat === "deconnecte" && <Link className="link hide-sm" href="/connexion">Se connecter</Link>}
-              <a className="btn btn-sm" href={LIEN_ACCES}>Obtenir l’accès</a>
-            </>
-          )
-        }
+        action={<ActionAcces />}
       />
       <main id="contenu-principal">
-        {inactif && (
-          <div className="wrap" style={{ paddingTop: 20 }}>
-            <div className="notice" role="status">
-              <Icon name="lock" size={20} />
-              <div className="stack-sm">
-                <p><b>Votre compte {email ? `(${email}) ` : ""}n’a pas encore d’accès actif.</b></p>
-                <p>Obtenez l’accès avec cette même adresse e-mail. Déjà payé ? Écrivez-nous à support@parlonsads.com, nous vérifions tout de suite.</p>
-              </div>
-            </div>
-          </div>
-        )}
+        <AvisCompteInactif />
 
         <section className="hero">
           <div className="wrap hero-grid">
@@ -231,7 +209,7 @@ export default async function Acces({ searchParams }: PageProps<"/acces">) {
           ))}
           <div className="row" style={{ marginTop: 12 }}>
             <a className="btn btn-lg" href={LIEN_ACCES}>Obtenir l’accès · {fcfa(PRIX.acces)}</a>
-            {etat === "deconnecte" && <Link className="link" href="/connexion">Déjà client ? Se connecter</Link>}
+            <LienDejaClient />
           </div>
         </section>
       </main>

@@ -8,7 +8,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 
 | Règle | Énoncé | Contrôle |
 | --- | --- | --- |
-| S1 | L'accès payé se vérifie côté serveur dans chaque page réservée (`exigerAccesActif`) et dans chaque route API réservée (`requireActiveUser`). Le layout et le proxy ne suffisent pas. | tests `acces.test.ts`, `acces-api.test.ts` |
+| S1 | L'accès payé se vérifie côté serveur dans chaque page réservée (`exigerAccesActif`) et dans chaque route API réservée (`requireActiveUser`). Le layout et le proxy ne suffisent pas. Une seule fonction lit l'accès en base (`src/lib/acces-actif.ts`) ; elle garde une réponse « actif » 60 secondes, jamais un refus ni une erreur. Une route publique est une exception écrite et justifiée dans `acces.test.ts`. | tests `acces.test.ts`, `acces-api.test.ts`, `acces-actif.test.ts` |
 | S2 | Aucun contenu payant dans un composant client ni dans `public/`. Il arrive par un rendu serveur ou par une route protégée. | test `contenu-client.test.ts` |
 | S3 | La clé service ne vit que dans des fichiers marqués `server-only`. Aucune variable `NEXT_PUBLIC_` ne porte un secret. | test `cle-service.test.ts` |
 | S4 | Chaque table a la RLS activée, des droits explicites pour `service_role`, et aucun droit pour `anon`. Le contenu payant n'est lisible que par un compte dont l'accès est actif (politique `a_un_acces_actif()`), jamais par tout compte connecté. Les tables internes (accès, abonnements, demandes) sont réservées au serveur. Aucun droit par défaut pour `anon` ou `authenticated`. Un compte connecté n'a que les droits dont l'application se sert : jamais `truncate`, `references` ni `trigger`. | test `migrations.test.ts`, contrôle en base `supabase/controles/droits.sql` |
@@ -26,12 +26,12 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 
 | Règle | Énoncé | Contrôle |
 | --- | --- | --- |
-| C1 | Le contenu commun à tous les clients (catalogue, métiers, tâches, glossaire, guides) est mis en cache côté serveur. Il n'est pas relu en base à chaque requête. | revue |
-| C2 | Un affichage de page fait au plus 2 appels Auth et 8 requêtes base. Pas de boucle de requêtes, pas d'appel en double. | revue |
-| C3 | Les pages publiques sont statiques. | test `pages.test.ts` |
-| C4 | Un GET n'écrit jamais en base. | revue |
-| C5 | Toute liste lue en base est bornée (`limit`) ou paginée. | revue |
-| C6 | Le parcours d'achat ne casse pas sous la charge : un accès payé n'est jamais retiré parce qu'un e-mail échoue, et l'envoi peut être repris. | test `webhook.test.ts` |
+| C1 | Le contenu commun à tous les clients (métiers, tâches, cas pratiques, prompts, guides) est mis en cache côté serveur. Il n'est pas relu en base à chaque requête. Seul `src/lib/contenu.ts` interroge les tables de contenu (cache de 10 minutes) ; il ne s'appelle qu'après la vérification de l'accès. | tests `charge.test.ts`, `routes-charge.test.ts` |
+| C2 | Un affichage de page fait au plus 2 appels Auth et 8 requêtes base. Pas de boucle de requêtes, pas d'appel en double. La session se vérifie sur place (`lireSession`, sans appel réseau) : `getUser()` est réservé aux exceptions listées dans `charge.test.ts`. Une route fait au plus 3 requêtes propres au compte. Côté navigateur, une même lecture est partagée entre les composants (`useResource`). | tests `charge.test.ts`, `routes-charge.test.ts`, `session.test.ts`, `proxy.test.ts`, revue |
+| C3 | Les pages publiques sont statiques : ce qui dépend du visiteur se décide dans le navigateur. Le proxy ne s'exécute pas sur elles, et ne fait aucun travail pour un visiteur sans session. | tests `pages.test.ts`, `proxy.test.ts` |
+| C4 | Un GET n'écrit jamais en base. | tests `charge.test.ts`, `routes-charge.test.ts` |
+| C5 | Toute liste lue en base est bornée (`limit`) ou paginée. La requête s'écrit en une seule chaîne, limite comprise. | test `charge.test.ts` |
+| C6 | Le parcours d'achat ne casse pas sous la charge : un accès payé n'est jamais retiré parce qu'un e-mail échoue, une vente enregistrée reçoit toujours 200 (Chariow désactive le Pulse après 5 erreurs), et l'acheteur peut redemander son lien (`/activation/renvoi`). | tests `webhook.test.ts`, `activation-renvoi.test.ts` |
 | C7 | Chaque colonne filtrée a un index. Un e-mail se compare en minuscules avec une égalité, jamais avec `ilike`. | test `code.test.ts` |
 
 ## Qualité
@@ -63,15 +63,17 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 ## Revue manuelle avant livraison
 
 1. `npm run verif` : noter le résultat et les tests en échec.
-2. Relire le diff avec les règles « revue » ci-dessus : S7, S10, S13, C1, C2, C4, C5, Q2, Q4, Q6, Q7, B1, B2.
+2. Relire le diff avec les règles « revue » ci-dessus : S7, S10, S13, C2, Q2, Q4, Q6, Q7, B1, B2.
 3. Compter les requêtes de chaque page ou route modifiée (règle C2).
 4. Si une table, une variable d'environnement ou un réglage externe change, mettre à jour la liste ci-dessous et `env.example`. Si une migration a été exécutée, lancer `supabase/controles/droits.sql` en base : aucune ligne attendue.
 5. Écrire le message de livraison (règle L2).
 
 ## Réglages hors du code, à vérifier avant le lancement
 
-- Supabase : inscription publique désactivée ; limite d'e-mails par heure relevée ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
-- Vercel : chaque secret présent dans tous les environnements qui en ont besoin (sans `CHARIOW_WEBHOOK_SECRET`, le webhook répond 503) ; protection des préversions ; offre adaptée à un usage commercial.
+- Supabase : inscription publique désactivée ; limite d'e-mails par heure relevée (un envoi par achat : sans service d'envoi dédié, la limite est de quelques dizaines par heure) ; clés de signature asymétriques (ES256), sans quoi `lireSession` refait un appel réseau à chaque requête ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
+- Vercel : chaque secret présent dans tous les environnements qui en ont besoin (sans `CHARIOW_WEBHOOK_SECRET`, le webhook répond 503) ; protection des préversions ; offre adaptée à un usage commercial ; fonctions dans la région de la base (`vercel.json`, `dub1` pour une base en Irlande).
+- Pendant un lancement : lancer `supabase/controles/activations-en-attente.sql` (lecture seule) pour voir les acheteurs qui n'ont pas activé leur compte.
+- Après une migration de contenu : le site montre le changement dans les 10 minutes (cache du contenu).
 - Après toute livraison qui touche aux en-têtes : ouvrir le site déployé, vérifier que la console du navigateur ne signale aucun blocage CSP, puis tester le chat du support et une vidéo.
 - Chariow : les quatre produits rattachés au Pulse ; secret de signature renseigné.
 - GitHub : dépôt privé (il contient les guides et les PDF).
