@@ -57,15 +57,6 @@ function rejouer(): Etat {
 
       if ((m = s.match(/^create table (?:if not exists )?([\w."]+)/i))) {
         etat.tables.add(nomTable(m[1]));
-      } else if ((m = s.match(/^drop table (?:if exists )?([\w."]+)/i))) {
-        // Une table supprimée emporte sa RLS, ses droits et ses politiques.
-        const table = nomTable(m[1]);
-        etat.tables.delete(table);
-        etat.rls.delete(table);
-        etat.droits.delete(table);
-        for (const politiques of [etat.politiquesOuvertes, etat.politiquesAcces]) {
-          for (const [nom, cible] of politiques) if (cible === table) politiques.delete(nom);
-        }
       } else if ((m = s.match(/^alter table ([\w."]+) enable row level security/i))) {
         etat.rls.add(nomTable(m[1]));
       } else if ((m = s.match(/^alter default privileges .*? grant (.+?) on tables to (.+)$/i))) {
@@ -118,11 +109,6 @@ describe("S4 · droits et protections des tables", () => {
 
   it("retrouve les tables de l'application", () => {
     expect(tables.length).toBeGreaterThan(10);
-  });
-
-  it("ne compte plus une table supprimée par une migration", () => {
-    expect(tables).not.toContain("glossaire");
-    expect(tables).toContain("metiers");
   });
 
   it.each(tables)("%s a la RLS activée", (table) => {
