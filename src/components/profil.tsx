@@ -7,7 +7,7 @@ import { useMoi } from "@/lib/moi";
 import { dateLongue, fcfa, FORMULES, PRIX } from "@/lib/offre";
 import { useProfil } from "@/lib/profil";
 import type { GuideSummary } from "@/lib/guides";
-import { SignOutButton } from "./auth";
+import { ActionsCompte } from "./auth";
 import { GuidesEnregistres } from "./guides";
 import { Icon } from "./icon";
 import { Page } from "./shell";
@@ -88,6 +88,15 @@ export function ProfilEcran({ guides }: { guides: Pick<GuideSummary, "slug" | "t
         <Link className="btn btn-secondary btn-sm btn-plain" href="/bienvenue"><Icon name="settings" size={16} /> Modifier mon profil</Link>
       </section>
 
+      <section id="compte" className="card stack" aria-labelledby="mon-compte">
+        <h2 id="mon-compte" className="h2">Mon compte</h2>
+        <div className="stack-sm" style={{ gap: 2 }}>
+          <span className="small muted">Adresse e-mail de connexion</span>
+          <span className="strong" style={{ overflowWrap: "anywhere" }}>{moi?.email ?? "…"}</span>
+        </div>
+        <ActionsCompte email={moi?.email ?? undefined} />
+      </section>
+
       <div className="grid-3">
         {[
           { icon: "flame" as const, color: "var(--gold)", valeur: prog ? `${prog.serie_jours} j` : "–", label: "Série en cours" },
@@ -156,8 +165,6 @@ export function ProfilEcran({ guides }: { guides: Pick<GuideSummary, "slug" | "t
           ))}
         </div>
       </section>
-
-      <div><SignOutButton /></div>
     </Page>
   );
 }

@@ -21,6 +21,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 | S11 | `npm audit --omit=dev --audit-level=high` ne signale rien. Les correctifs de sécurité des dépendances sont appliqués. | `npm run verif` |
 | S12 | Pas de `dangerouslySetInnerHTML`. Les liens externes portent `rel="noreferrer"`. | test `code.test.ts` |
 | S13 | Toute route qui écrit en base ou envoie un e-mail a une limite par compte, et la limite ne dépend pas d'une écriture qui peut échouer. | revue |
+| S14 | Un lien de nouveau mot de passe vaut 1 heure. Supabase n'a qu'une durée pour tous ses liens (24 heures, celle du lien d'activation) : c'est la route `/auth/recovery` qui refuse un lien plus ancien et ferme la session qu'il a ouverte. Sans date d'envoi lisible, le lien est refusé. | test `recovery.test.ts` |
 
 ## Charge
 
@@ -70,7 +71,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 
 ## Réglages hors du code, à vérifier avant le lancement
 
-- Supabase : inscription publique désactivée ; e-mails envoyés par Resend (SMTP `smtp.resend.com`, expéditeur `hello@parlonsads.com`), limite de Supabase à 500 par heure, offre Resend adaptée au nombre d'achats attendus (un e-mail par achat) ; modèles d'e-mail « Invite user » et « Reset password » identiques aux fichiers de `supabase/emails/` (à recoller après chaque changement de ces fichiers) ; durée des liens (« Email OTP expiration ») égale à celle annoncée dans ces e-mails, 24 heures ; clés de signature asymétriques (ES256), sans quoi `lireSession` refait un appel réseau à chaque requête ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
+- Supabase : inscription publique désactivée ; e-mails envoyés par Resend (SMTP `smtp.resend.com`, expéditeur `hello@parlonsads.com`), limite de Supabase à 500 par heure, offre Resend adaptée au nombre d'achats attendus (un e-mail par achat) ; modèles d'e-mail « Invite user » et « Reset password » identiques aux fichiers de `supabase/emails/` (à recoller après chaque changement de ces fichiers) ; durée des liens (« Email OTP expiration ») à 86400 secondes, soit les 24 heures annoncées dans l'e-mail d'activation (le lien de mot de passe est ramené à 1 heure par l'application, règle S14) ; clés de signature asymétriques (ES256), sans quoi `lireSession` refait un appel réseau à chaque requête ; longueur minimale du mot de passe ; liste des URL de redirection ; sauvegardes ; offre adaptée au trafic.
 - Vercel : chaque secret présent dans tous les environnements qui en ont besoin (sans `CHARIOW_WEBHOOK_SECRET`, le webhook répond 503) ; protection des préversions ; offre adaptée à un usage commercial ; fonctions dans la région de la base (`vercel.json`, `dub1` pour une base en Irlande).
 - Pendant un lancement : lancer `supabase/controles/activations-en-attente.sql` (lecture seule) pour voir les acheteurs qui n'ont pas activé leur compte.
 - Après une migration de contenu : le site montre le changement dans les 10 minutes (cache du contenu).

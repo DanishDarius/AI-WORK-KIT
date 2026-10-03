@@ -117,6 +117,16 @@ export function ConnexionForm() {
   );
 }
 
+// Envoi du lien de nouveau mot de passe : un seul endroit, pour le formulaire
+// « Mot de passe oublié » et pour le bloc « Mon compte ». Le lien ne s'ouvre
+// que dans le navigateur qui l'a demandé, et vaut une heure (/auth/recovery).
+async function demanderLienMotDePasse(email: string) {
+  const { error } = await createClient().auth.resetPasswordForEmail(email, {
+    redirectTo: `${window.location.origin}/auth/recovery`,
+  });
+  return !error;
+}
+
 export function ForgotPasswordForm() {
   const [email, setEmail] = useState("");
   const [sending, setSending] = useState(false);
@@ -128,11 +138,9 @@ export function ForgotPasswordForm() {
     if (sending) return;
     setSending(true);
     setError(undefined);
-    const { error: resetError } = await createClient().auth.resetPasswordForEmail(email.trim(), {
-      redirectTo: `${window.location.origin}/auth/recovery`,
-    });
+    const envoye = await demanderLienMotDePasse(email.trim());
     setSending(false);
-    if (resetError) {
+    if (!envoye) {
       setError("L’envoi a échoué. Réessayez dans un instant.");
       return;
     }
@@ -295,7 +303,40 @@ export function SetPasswordForm({ mode, recoveryPending = false }: { mode: "acti
   );
 }
 
-export function SignOutButton() {
+// Bloc « Mon compte » du profil : changer son mot de passe sans se
+// déconnecter, et se déconnecter. Supabase n'envoie qu'un e-mail par minute
+// à une même adresse : un second clic trop rapide affiche l'échec.
+export function ActionsCompte({ email }: { email?: string }) {
+  const [etat, setEtat] = useState<"repos" | "envoi" | "envoye" | "echec">("repos");
+  const occupe = etat === "envoi" || etat === "envoye";
+
+  async function envoyer() {
+    if (!email || occupe) return;
+    setEtat("envoi");
+    setEtat((await demanderLienMotDePasse(email)) ? "envoye" : "echec");
+  }
+
+  return (
+    <div className="stack-sm">
+      {etat === "envoye" ? (
+        <p className="form-ok" role="status">Un lien vient de partir à {email}. Il est valable 1 heure : ouvrez-le sur cet appareil, dans ce navigateur.</p>
+      ) : etat === "echec" ? (
+        <p className="form-error" role="alert">L’envoi a échoué. Réessayez dans une minute.</p>
+      ) : (
+        <p className="form-help">Pour changer de mot de passe, vous recevez un lien par e-mail.</p>
+      )}
+      <div className="row">
+        <button type="button" className="btn btn-secondary btn-sm btn-plain" onClick={envoyer} disabled={!email || occupe}>
+          <Icon name="lock" size={16} />
+          {etat === "envoi" ? "Envoi en cours…" : "Changer mon mot de passe"}
+        </button>
+        <SignOutButton />
+      </div>
+    </div>
+  );
+}
+
+function SignOutButton() {
   const router = useRouter();
   const [pending, setPending] = useState(false);
   async function signOut() {
@@ -306,8 +347,8 @@ export function SignOutButton() {
     router.refresh();
   }
   return (
-    <button type="button" className="btn btn-ghost" disabled={pending} onClick={signOut}>
-      <Icon name="logout" size={18} />
+    <button type="button" className="btn btn-secondary btn-sm btn-plain" disabled={pending} onClick={signOut}>
+      <Icon name="logout" size={16} />
       {pending ? "Déconnexion…" : "Se déconnecter"}
     </button>
   );

@@ -16,7 +16,7 @@ const QUESTIONS: [string, React.ReactNode][] = [
   ["Puis-je revendre les guides ?", <>Oui, avec l’abonnement. Un guide téléchargé peut être revendu ou publié sous votre nom. Tel quel, vous pouvez citer AIW ou non ; si vous le modifiez, vous retirez la mention d’AIW. Le détail est dans les <Link href="/conditions#licence">conditions</Link>.</>],
   ["Comment changer de métier ou d’IA ?", <>Depuis votre parcours : « Changer de métier » en haut, et « Votre IA pour ce métier » dans la colonne de droite (en bas de page sur téléphone).</>],
   ["Mon abonnement se renouvelle-t-il tout seul ?", <>Non. Vous payez une période (un mois, un an ou à vie) une seule fois, et rien n’est prélevé ensuite. Pour continuer, prolongez-le depuis la page <Link href="/abonnement">Abonnement</Link> : la nouvelle période s’ajoute à la fin de celle en cours. Payez avec l’adresse e-mail de votre compte AIW pour qu’il s’active tout seul.</>],
-  ["Je n’arrive plus à me connecter.", <>Utilisez <Link href="/mot-de-passe-oublie">Mot de passe oublié</Link> avec l’adresse e-mail de votre achat. Si rien n’arrive, vérifiez vos courriers indésirables puis écrivez-nous.</>],
+  ["Comment changer mon mot de passe ?", <>Depuis votre profil, bloc <Link href="/profil#compte">Mon compte</Link> : vous recevez un lien par e-mail, valable 1 heure. Si vous êtes déconnecté, utilisez « Mot de passe oublié » sur la page de connexion, avec l’adresse e-mail de votre achat. Si rien n’arrive, vérifiez vos courriers indésirables puis écrivez-nous.</>],
 ];
 
 export default async function Aide() {

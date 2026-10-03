@@ -8,9 +8,12 @@ import { chemin, lire } from "../outils/fichiers";
 // Ce test lit ces fichiers ; il ne voit pas ce qui est réellement enregistré
 // dans Supabase (réglage hors du code, à recopier après chaque changement).
 
-const MODELES = ["invitation", "mot-de-passe"] as const;
+const MODELES = [
+  ["invitation", "24 heures"],
+  ["mot-de-passe", "1 heure"],
+] as const;
 
-describe.each(MODELES)("e-mail de compte · %s", (nom) => {
+describe.each(MODELES)("e-mail de compte · %s", (nom, duree) => {
   const html = lire(`supabase/emails/${nom}.html`);
   const texte = html.replace(/<style[\s\S]*?<\/style>/g, "").replace(/<[^>]+>/g, " ");
 
@@ -20,9 +23,9 @@ describe.each(MODELES)("e-mail de compte · %s", (nom) => {
     expect(html).toMatch(/<a href="\{\{ \.ConfirmationURL \}\}"/);
   });
 
-  it("n'utilise aucune autre variable de Supabase", () => {
+  it("n'utilise que le lien et l'adresse parmi les variables de Supabase", () => {
     const variables = new Set(html.match(/\{\{[^}]*\}\}/g) ?? []);
-    expect([...variables]).toEqual(["{{ .ConfirmationURL }}"]);
+    expect([...variables].sort()).toEqual(["{{ .ConfirmationURL }}", "{{ .Email }}"]);
   });
 
   it("ne charge une image que depuis notre site, et cette image existe", () => {
@@ -36,7 +39,11 @@ describe.each(MODELES)("e-mail de compte · %s", (nom) => {
   });
 
   it("reste lisible sans feuille de style : chaque texte porte sa couleur", () => {
-    expect(html).not.toMatch(/<(p|h1|td)(?![^>]*style=)[^>]*>[^<\s]/);
+    for (const balise of html.match(/<(p|h1|a)\b[^>]*>/g) ?? []) expect(balise).toMatch(/style="[^"]*color:/);
+  });
+
+  it("garde son fond sombre dans une messagerie qui ignore les styles", () => {
+    expect(html.match(/bgcolor="#[0-9a-f]{6}"/g)?.length).toBeGreaterThanOrEqual(5);
   });
 
   it("respecte le ton (Q7) : français, vouvoiement, sans tiret long", () => {
@@ -46,8 +53,17 @@ describe.each(MODELES)("e-mail de compte · %s", (nom) => {
     expect(texte).toMatch(/AI WORK KIT, un produit de Parlons ADS/);
   });
 
-  it("annonce la durée du lien réglée dans Supabase (24 heures)", () => {
-    expect(texte).toMatch(/valable 24 heures/);
+  it(`annonce la durée réelle du lien : ${duree}`, () => {
+    const annonces = texte.match(/valable \d+ heures?/g) ?? [];
+    expect(annonces.length).toBeGreaterThan(0);
+    for (const annonce of annonces) expect(annonce).toBe(`valable ${duree}`);
+  });
+});
+
+describe("e-mails de compte · durées annoncées", () => {
+  it("l'heure du lien de mot de passe est celle que la route applique", async () => {
+    const { DUREE_LIEN_MOT_DE_PASSE_MS } = await import("@/lib/supabase/recovery");
+    expect(DUREE_LIEN_MOT_DE_PASSE_MS).toBe(60 * 60 * 1000);
   });
 });
 
@@ -56,9 +72,7 @@ describe("e-mails de compte · gabarit commun", () => {
     const squelette = (nom: string) =>
       lire(`supabase/emails/${nom}.html`)
         .replace(/>[^<]+</g, "><")
-        .replace(/<title>.*?<\/title>/, "")
-        .replace(/<p style="margin:0 0 10px;"><\/p>\s*/g, "")
-        .replace(/<p style="margin:0 0 10px;"><a[^>]*><\/a><\/p>\s*/g, "");
+        .replace(/<title>.*?<\/title>/, "");
     expect(squelette("invitation")).toBe(squelette("mot-de-passe"));
   });
 });
