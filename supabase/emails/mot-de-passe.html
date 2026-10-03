@@ -47,14 +47,14 @@
               <tr>
                 <td align="center" bgcolor="#18231f" style="background:#18231f;border:1px solid #2b3a36;border-radius:12px;padding:16px 18px;">
                   <p style="margin:0 0 4px;font-family:Nunito,'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:12px;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:#86d9b3;text-align:center;">Compte concerné</p>
-                  <p style="margin:0;font-family:Nunito,'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:17px;font-weight:900;color:#ffffff;text-align:center;word-break:break-all;">{{ .Email }}</p>
+                  <p style="margin:0;font-family:Nunito,'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:17px;font-weight:900;color:#ffffff;text-align:center;word-break:break-all;"><a href="mailto:{{ .Email }}" style="color:#ffffff;text-decoration:none;">{{ .Email }}</a></p>
                 </td>
               </tr>
             </table>
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:28px auto 0;">
               <tr>
-                <td align="center" bgcolor="#b9f2d6" style="background:#b9f2d6;border-radius:14px;border-bottom:4px solid #86d9b3;">
-                  <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:15px 30px 13px;font-family:Nunito,'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:16px;font-weight:900;color:#0d2420;text-decoration:none;">Choisir un nouveau mot de passe</a>
+                <td align="center" bgcolor="#0b6b5e" style="background:#0b6b5e;border-radius:14px;border-bottom:4px solid #064a41;">
+                  <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:15px 30px 13px;font-family:Nunito,'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:16px;font-weight:900;color:#ffffff;text-decoration:none;">Choisir un nouveau mot de passe</a>
                 </td>
               </tr>
             </table>

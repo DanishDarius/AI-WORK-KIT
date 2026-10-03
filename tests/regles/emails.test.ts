@@ -43,6 +43,22 @@ describe.each(MODELES)("e-mail de compte · %s", (nom, duree) => {
     for (const balise of html.match(/<(p|h1|a)\b[^>]*>/g) ?? []) expect(balise).toMatch(/style="[^"]*color:/);
   });
 
+  // Constat du 3 octobre 2026 dans Gmail sur Android, en mode sombre : un
+  // fond clair est assombri et son texte passe en blanc (le bouton vert clair
+  // devenait vert foncé), et une adresse e-mail nue devient un lien bleu.
+  it("n'a aucun fond clair, que le mode sombre d'une messagerie assombrirait", () => {
+    const fonds = [...html.matchAll(/bgcolor="#([0-9a-f]{6})"/g)].map((m) => m[1]);
+    for (const fond of fonds) {
+      const [r, v, b] = [0, 2, 4].map((i) => parseInt(fond.slice(i, i + 2), 16));
+      expect((r * 299 + v * 587 + b * 114) / 1000, `fond #${fond}`).toBeLessThan(110);
+    }
+  });
+
+  it("écrit l'adresse du compte dans un lien à sa couleur, pas en bleu", () => {
+    expect(html).toContain('<a href="mailto:{{ .Email }}" style="color:#ffffff;text-decoration:none;">{{ .Email }}</a>');
+    expect(html.replace(/<a [^>]*>\{\{ \.Email \}\}<\/a>/g, "")).not.toContain("{{ .Email }}");
+  });
+
   it("garde son fond sombre dans une messagerie qui ignore les styles", () => {
     expect(html.match(/bgcolor="#[0-9a-f]{6}"/g)?.length).toBeGreaterThanOrEqual(5);
   });
