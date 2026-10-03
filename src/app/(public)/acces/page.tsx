@@ -3,10 +3,11 @@ import { ActionAcces, AvisCompteInactif, LienDejaClient } from "@/components/acc
 import { Icon } from "@/components/icon";
 import { PublicFooter, PublicTop } from "@/components/public";
 import { CheckList, Chip, IconBox, Kicker } from "@/components/ui";
+import { SLOGAN, SLOGAN_PARTIES } from "@/lib/marque";
 import { fcfa, FORMULES, LIEN_ACCES, PRIX } from "@/lib/offre";
 
 export const metadata: Metadata = {
-  title: "L’IA au travail, prête à l’emploi",
+  title: SLOGAN,
   description: "Pour votre métier : des tâches concrètes, des prompts prêts pour ChatGPT, Claude et Gemini, et tout ce qu’il faut pour les mettre en place. Accès 5 000 FCFA.",
 };
 
@@ -86,7 +87,7 @@ export default function Acces() {
                 <Chip tone="green">Indépendants</Chip>
                 <Chip tone="green">Commerçants</Chip>
               </div>
-              <h1>L’IA au travail,<br /><em>prête à l’emploi.</em></h1>
+              <h1>{SLOGAN_PARTIES[0]} <em>{SLOGAN_PARTIES[1]}.</em></h1>
               <p className="lead" style={{ fontSize: 19 }}>
                 Choisissez une tâche de votre métier. AIW vous donne le cas concret, le prompt prêt
                 pour ChatGPT, Claude ou Gemini, et tout ce qu’il faut pour le mettre en place.

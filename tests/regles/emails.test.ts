@@ -33,7 +33,8 @@ describe.each(MODELES)("e-mail de compte · %s", (nom, duree) => {
     expect(images.length).toBeGreaterThan(0);
     for (const src of images) {
       expect(src.startsWith("https://ai-work-kit.parlonsads.com/")).toBe(true);
-      const fichier = src.replace("https://ai-work-kit.parlonsads.com/", "public/");
+      // « ?v= » change l'adresse quand l'image change : les messageries gardent l'ancienne en mémoire.
+      const fichier = src.replace("https://ai-work-kit.parlonsads.com/", "public/").replace(/\?v=\d+$/, "");
       expect(existsSync(chemin(fichier))).toBe(true);
     }
   });

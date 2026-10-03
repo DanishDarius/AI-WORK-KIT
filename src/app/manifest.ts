@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
+import { NOM, SIGLE, SLOGAN } from "@/lib/marque";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
     id: "/",
-    name: "AI WORK KIT",
-    short_name: "AIW",
-    description: "L’intelligence artificielle appliquée à votre travail, concrètement.",
+    name: NOM,
+    short_name: SIGLE,
+    description: `${SLOGAN}.`,
     lang: "fr",
     start_url: "/",
     scope: "/",
