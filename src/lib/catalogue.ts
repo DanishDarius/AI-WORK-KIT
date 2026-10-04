@@ -44,6 +44,12 @@ const categories: Record<string, string> = {
   F48: "Organisation",
   F49: "Rédaction",
   F50: "Relation client",
+  F51: "Rédaction",
+  F52: "Rédaction",
+  F53: "Rédaction",
+  F54: "Organisation",
+  F55: "Création",
+  F56: "Relation client",
 };
 export const usages = [
   "Tout",
