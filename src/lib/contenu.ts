@@ -38,6 +38,13 @@ export type TacheContenu = {
   resultat: string | null;
   etapes: string[] | null;
   precisions: string | null;
+  /** Badges (migration 0037). null : non renseigné, aucun badge. */
+  gratuit_ok: boolean | null;
+  mobile_ok: boolean | null;
+  /** Nom de l'IA gratuite qui fait le mieux la tâche, quand il y en a une. */
+  outil_gratuit_conseille: string | null;
+  /** Lien de la vidéo de la tâche, chargée au clic. */
+  video_url: string | null;
 };
 
 export type CatalogueContenu = {
@@ -132,7 +139,7 @@ async function chargerCatalogue(): Promise<CatalogueContenu> {
   const admin = createAdminClient();
   const [metiers, taches, liaisons] = await Promise.all([
     admin.from("metiers").select("id, slug, nom, description, description_local").order("ordre", { ascending: true }).limit(200),
-    admin.from("taches").select("id, code, titre, limite_connue, ia_alternative_conseillee, resultat, etapes, precisions").limit(2000),
+    admin.from("taches").select("id, code, titre, limite_connue, ia_alternative_conseillee, resultat, etapes, precisions, gratuit_ok, mobile_ok, outil_gratuit_conseille, video_url").limit(2000),
     admin.from("metiers_taches").select("metier_id, tache_id").order("ordre", { ascending: true }).limit(10000),
   ]);
   const erreur = metiers.error || taches.error || liaisons.error;
@@ -141,7 +148,17 @@ async function chargerCatalogue(): Promise<CatalogueContenu> {
 
   const parId: Record<string, TacheContenu> = {};
   for (const t of (taches.data ?? []) as TacheContenu[]) {
-    parId[t.id] = { ...t, resultat: t.resultat ?? null, etapes: Array.isArray(t.etapes) ? t.etapes : null, precisions: t.precisions ?? null };
+    parId[t.id] = {
+      ...t,
+      resultat: t.resultat ?? null,
+      etapes: Array.isArray(t.etapes) ? t.etapes : null,
+      precisions: t.precisions ?? null,
+      // Un badge ne s'affiche que sur une réponse nette : vrai ou faux.
+      gratuit_ok: typeof t.gratuit_ok === "boolean" ? t.gratuit_ok : null,
+      mobile_ok: typeof t.mobile_ok === "boolean" ? t.mobile_ok : null,
+      outil_gratuit_conseille: t.outil_gratuit_conseille ?? null,
+      video_url: t.video_url ?? null,
+    };
   }
 
   const tachesParMetier: Record<string, string[]> = {};

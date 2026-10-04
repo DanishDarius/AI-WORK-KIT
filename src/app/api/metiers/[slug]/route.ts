@@ -43,6 +43,8 @@ export async function GET(
     ia_par_defaut: cheminChoisi,
     limite_connue: t.limite_connue,
     ia_alternative_conseillee: t.ia_alternative_conseillee,
+    gratuit_ok: t.gratuit_ok,
+    mobile_ok: t.mobile_ok,
     fait: faites.has(t.id),
     favori: favoris.has(t.id),
   }));

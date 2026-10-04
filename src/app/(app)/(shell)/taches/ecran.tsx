@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { Icon } from "@/components/icon";
 import { iconeCategorie } from "@/components/parcours";
 import { Page } from "@/components/shell";
-import { Chip, IconBox, PageHead, ResourceState } from "@/components/ui";
+import { BadgesTache, Chip, IconBox, PageHead, ResourceState } from "@/components/ui";
 import { AbonnementCard, StatsCard } from "@/components/widgets";
 import { category, useCatalogue, usages } from "@/lib/catalogue";
 import { sansAccents } from "@/lib/normaliser";
@@ -21,6 +21,8 @@ export default function Taches() {
   const [usage, setUsage] = useState("Tout");
   const [metier, setMetier] = useState("tous");
   const [statut, setStatut] = useState<"toutes" | "a-faire" | "faites">("toutes");
+  // « Seulement ce que je peux faire gratuitement sur mon téléphone ».
+  const [gratuitMobile, setGratuitMobile] = useState(false);
   const [limite, setLimite] = useState(PAR_PAGE);
 
   const liste = useMemo(() => {
@@ -30,9 +32,10 @@ export default function Taches() {
       (usage === "Tout" || category(t.code) === usage) &&
       (metier === "tous" || t.metiers.some((m) => m.slug === metier)) &&
       (statut === "toutes" || (statut === "faites" ? t.fait : !t.fait)) &&
+      (!gratuitMobile || (t.gratuit_ok === true && t.mobile_ok === true)) &&
       (!recherche || sansAccents(`${t.titre} ${t.code} ${t.metiers.map((m) => m.nom).join(" ")}`).includes(recherche)),
     );
-  }, [data, q, usage, metier, statut]);
+  }, [data, q, usage, metier, statut, gratuitMobile]);
 
   return (
     <Page aside={<><StatsCard /><AbonnementCard /></>}>
@@ -65,6 +68,9 @@ export default function Taches() {
           <button type="button" aria-pressed={statut === "a-faire"} onClick={() => setStatut("a-faire")}>À faire</button>
           <button type="button" aria-pressed={statut === "faites"} onClick={() => setStatut("faites")}>Faites</button>
         </div>
+        <button type="button" className="pill" aria-pressed={gratuitMobile} onClick={() => { setGratuitMobile((v) => !v); setLimite(PAR_PAGE); }}>
+          <Icon name="phone" size={18} /> Seulement ce que je peux faire gratuitement sur mon téléphone
+        </button>
         {data && <span className="small muted" style={{ marginLeft: "auto" }} role="status">{liste.length} tâche{liste.length > 1 ? "s" : ""}</span>}
       </div>
 
@@ -83,6 +89,7 @@ export default function Taches() {
                     {t.fait ? <Chip tone="green" icon="check">Faite</Chip> : t.favori ? <Chip tone="gold" icon="star">Favori</Chip> : null}
                   </div>
                   <span className="strong" style={{ fontSize: 17, lineHeight: 1.3, flexGrow: 1 }}>{t.titre}</span>
+                  <span className="chips"><BadgesTache gratuit={t.gratuit_ok} mobile={t.mobile_ok} /></span>
                   <span className="row-between tiny muted" style={{ borderTop: "2px solid var(--line)", paddingTop: 10 }}>
                     <span>{cat}</span>
                     <span>{t.metiers.length > 1 ? `${t.metiers.length} métiers` : t.metiers[0]?.nom}</span>
@@ -101,7 +108,7 @@ export default function Taches() {
         <div className="card empty">
           <h2 className="h3">Aucune tâche ne correspond.</h2>
           <p className="muted">Essayez un autre mot ou retirez un filtre.</p>
-          <button type="button" className="btn btn-secondary btn-sm btn-plain" onClick={() => { setQ(""); setUsage("Tout"); setMetier("tous"); setStatut("toutes"); }}>Effacer les filtres</button>
+          <button type="button" className="btn btn-secondary btn-sm btn-plain" onClick={() => { setQ(""); setUsage("Tout"); setMetier("tous"); setStatut("toutes"); setGratuitMobile(false); }}>Effacer les filtres</button>
         </div>
       )}
     </Page>

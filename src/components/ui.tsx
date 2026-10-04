@@ -15,6 +15,18 @@ export function Chip({ tone = "line", icon, children }: { tone?: Tone; icon?: Ic
   );
 }
 
+// Badges d'une tâche : un compte gratuit suffit-il, et se fait-elle sur un
+// téléphone ? Rien ne s'affiche tant que la réponse n'est pas renseignée.
+export function BadgesTache({ gratuit, mobile }: { gratuit: boolean | null; mobile: boolean | null }) {
+  return (
+    <>
+      {gratuit === true && <Chip tone="green" icon="check">Gratuit suffit</Chip>}
+      {gratuit === false && <Chip tone="orange">Payant conseillé</Chip>}
+      {mobile === true && <Chip icon="phone">Faisable sur téléphone</Chip>}
+    </>
+  );
+}
+
 export function Bar({ value, tone, thin, label }: { value: number; tone?: "gold" | "orange"; thin?: boolean; label?: string }) {
   const pct = Math.max(0, Math.min(100, Math.round(value)));
   return (

@@ -31,7 +31,7 @@ export async function GET() {
   const metiers = [];
   const taches = new Map<
     string,
-    Omit<TacheContenu, "resultat" | "etapes" | "precisions"> & {
+    Omit<TacheContenu, "resultat" | "etapes" | "precisions" | "outil_gratuit_conseille" | "video_url"> & {
       ia_par_defaut: string | null;
       fait: boolean;
       favori: boolean;
@@ -62,6 +62,8 @@ export async function GET() {
           titre: t.titre,
           limite_connue: t.limite_connue,
           ia_alternative_conseillee: t.ia_alternative_conseillee,
+          gratuit_ok: t.gratuit_ok,
+          mobile_ok: t.mobile_ok,
           ia_par_defaut: chemin,
           fait: faites.has(t.id),
           favori: favoris.has(t.id),

@@ -8,7 +8,7 @@ import { copierTexte } from "@/lib/presse-papiers";
 import { Icon, type IconName } from "./icon";
 import { ModeleARemplir } from "./modele";
 import { iconeCategorie } from "./parcours";
-import { Chip, IconBox, Kicker, ResourceState } from "./ui";
+import { BadgesTache, Chip, IconBox, Kicker, ResourceState } from "./ui";
 
 const LIENS_IA: Record<IA, string> = {
   chatgpt: "https://chatgpt.com/",
@@ -105,6 +105,7 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
           <div className="chips">
             <Chip tone="green" icon={iconeCategorie[categorie] ?? "list"}>{categorie}</Chip>
             <Chip>{tache.code}</Chip>
+            <BadgesTache gratuit={tache.gratuit_ok} mobile={tache.mobile_ok} />
             {statut.fait && <Chip tone="green" icon="check">Faite</Chip>}
           </div>
           <h2 className="h1" style={{ fontSize: 30 }}>{tache.titre}</h2>
@@ -123,7 +124,15 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
             </div>
           )}
 
-          {tache.limite_connue && (
+          {tache.outil_gratuit_conseille && (
+            <p className="tip">
+              IA gratuite conseillée pour cette tâche : <b>{tache.outil_gratuit_conseille}</b>. La note de chaque IA, sous la consigne, dit ce qu’elle fait et ce qu’elle ne fait pas.
+            </p>
+          )}
+
+          {/* Ancienne mention, écrite pour les prompts figés : une tâche qui a
+              son modèle à remplir porte une note précise par IA. */}
+          {tache.limite_connue && !modele && (
             <div className="notice" role="note">
               <Icon name="help" size={20} />
               <p>

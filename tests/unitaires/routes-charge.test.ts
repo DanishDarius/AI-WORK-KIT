@@ -59,8 +59,9 @@ function base(op: Operation): Reponse {
     case "taches":
       return {
         data: [
-          { id: T1, code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null },
-          { id: T2, code: "F02", titre: "Planification de rendez-vous", limite_connue: true, ia_alternative_conseillee: "claude" },
+          // T1 porte ses badges (migration 0037) ; T2 n'en a qu'un, et une valeur absente.
+          { id: T1, code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null, gratuit_ok: true, mobile_ok: true, outil_gratuit_conseille: "Gemini", video_url: "https://youtu.be/exemple" },
+          { id: T2, code: "F02", titre: "Planification de rendez-vous", limite_connue: true, ia_alternative_conseillee: "claude", gratuit_ok: false },
         ],
       };
     case "metiers_taches":
@@ -173,6 +174,13 @@ describe("C1 C2 C4 · GET /api/catalogue", () => {
       ["F02", false, true],
     ]);
     expect(corps.taches[0].metiers).toEqual([{ slug: "comptabilite", nom: "Comptabilité" }]);
+    // Badges : vrai, faux, ou null quand la base ne dit rien (aucun badge affiché).
+    expect(corps.taches.map((t: { gratuit_ok: boolean | null; mobile_ok: boolean | null }) => [t.gratuit_ok, t.mobile_ok])).toEqual([
+      [true, true],
+      [false, null],
+    ]);
+    // La liste ne transporte ni le lien de la vidéo ni les textes de la tâche.
+    expect(Object.keys(corps.taches[0])).not.toEqual(expect.arrayContaining(["video_url", "outil_gratuit_conseille", "resultat"]));
     verifierBudget();
   });
 
@@ -211,7 +219,7 @@ describe("C1 C2 C4 · GET /api/metiers et /api/metiers/[slug]", () => {
     expect(corps.chemin_choisi).toBe("claude");
     expect(corps.taches_faites).toBe(1);
     expect(corps.taches.map((t: { code: string }) => t.code)).toEqual(["F01", "F02"]);
-    expect(corps.taches[1]).toMatchObject({ ia_par_defaut: "claude", limite_connue: true, ia_alternative_conseillee: "claude", fait: false, favori: true });
+    expect(corps.taches[1]).toMatchObject({ ia_par_defaut: "claude", limite_connue: true, ia_alternative_conseillee: "claude", gratuit_ok: false, mobile_ok: null, fait: false, favori: true });
     verifierBudget();
   });
 
@@ -253,7 +261,10 @@ describe("C1 C2 C4 · GET /api/taches/[id]", () => {
     const reponse = await demander(T1);
     expect(reponse.status).toBe(200);
     const corps = await reponse.json();
-    expect(corps.tache).toEqual({ code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null, resultat: null, etapes: null, precisions: null });
+    expect(corps.tache).toEqual({
+      code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null, resultat: null, etapes: null, precisions: null,
+      gratuit_ok: true, mobile_ok: true, outil_gratuit_conseille: "Gemini", video_url: "https://youtu.be/exemple",
+    });
     expect(corps).toMatchObject({ ia_par_defaut: "claude", fait: true, favori: false, metier_nom: "Comptabilité", suivante_id: T2 });
     expect(corps.exercices).toEqual([
       { titre: "Cas 1", contexte: "Contexte", donnees: null, travail_a_faire: "À faire", prenom: null, lieu: null, profil: null, reponse_attendue: null, prompts: { chatgpt: null, claude: "Prompt Claude", gemini: null } },

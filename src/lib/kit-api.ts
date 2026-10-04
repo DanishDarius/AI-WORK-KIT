@@ -36,6 +36,9 @@ export type Tache = {
   ia_par_defaut: IA | null;
   limite_connue: boolean;
   ia_alternative_conseillee: IA | null;
+  // Badges : true ou false quand la réponse est connue, null sinon.
+  gratuit_ok: boolean | null;
+  mobile_ok: boolean | null;
   fait: boolean;
   favori: boolean;
 };
@@ -123,6 +126,9 @@ export type TacheDetail = {
     resultat: string | null;
     etapes: string[] | null;
     precisions: string | null;
+    // IA gratuite conseillée et vidéo de la tâche (facultatifs).
+    outil_gratuit_conseille: string | null;
+    video_url: string | null;
   };
   fait: boolean;
   favori: boolean;
