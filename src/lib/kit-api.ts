@@ -85,7 +85,7 @@ export type ModeleTache = {
 };
 export type TypeRessource = "configuration" | "skill" | "document" | "routine";
 export type RessourceLiee = { cle: string; type: TypeRessource; titre: string; outil: IA | null };
-export type InstallationOutil = { etapes?: string[]; gratuit?: string; telephone?: string; notes?: string[] };
+export type InstallationOutil = { etapes?: string[]; gratuit?: string; telephone?: string; notes?: string[]; video?: string };
 export type RessourceKit = {
   id: string;
   cle: string;

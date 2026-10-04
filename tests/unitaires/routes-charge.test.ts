@@ -93,7 +93,7 @@ function base(op: Operation): Reponse {
     case "kits_metier":
       return {
         data: [
-          { etape_installation: 1, ressources: { id: R1, cle: "config-test", type: "configuration", titre: "Assistant", description: null, outil: "claude", contenu: "Texte", installation: { claude: { etapes: ["Coller"] } }, fichier: null, lien_copie: null, video_url: null, revu_le: null, ressources_taches: [{ tache_id: T1 }, { tache_id: "20000000-0000-4000-8000-00000000ffff" }] } },
+          { etape_installation: 1, ressources: { id: R1, cle: "config-test", type: "configuration", titre: "Assistant", description: null, outil: "claude", contenu: "Texte", installation: { claude: { etapes: ["Coller"], video: "https://youtu.be/geste" }, chatgpt: { etapes: ["Coller"], video: "javascript:alert(1)" } }, fichier: null, lien_copie: null, video_url: null, revu_le: null, ressources_taches: [{ tache_id: T1 }, { tache_id: "20000000-0000-4000-8000-00000000ffff" }] } },
           { etape_installation: null, ressources: { id: R2, cle: "doc-test", type: "document", titre: "Tableau", description: "Un tableau", outil: null, contenu: null, installation: null, fichier: "prix-et-marge.xlsx", lien_copie: "https://docs.google.com/spreadsheets/d/x/copy", video_url: null, revu_le: null, ressources_taches: null } },
         ],
       };
@@ -442,6 +442,8 @@ describe("C1 C2 C4 · GET /api/kits/[slug]", () => {
     // Seules les tâches du catalogue sont citées ; une installation absente devient un objet vide.
     expect(corps.kit.ressources[0].taches).toEqual([{ id: T1, code: "F01", titre: "Gestion et tri des e-mails" }]);
     expect(corps.kit.ressources[1]).toMatchObject({ installation: {}, taches: [], fichier: "prix-et-marge.xlsx" });
+    // La vidéo d'un geste se range par outil ; un lien qui n'est pas en https est écarté.
+    expect(corps.kit.ressources[0].installation).toEqual({ claude: { etapes: ["Coller"], video: "https://youtu.be/geste" }, chatgpt: { etapes: ["Coller"] } });
     expect(lectures(TABLES_COMPTE).map((op) => op.table).sort()).toEqual(["progression_kit", "utilisateurs_chemins"]);
     // Le kit et ses ressources arrivent en deux lectures, pas une par ressource.
     expect(lectures(["kits", "kits_metier", "ressources", "ressources_taches"])).toHaveLength(2);

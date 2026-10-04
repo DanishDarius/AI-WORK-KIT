@@ -73,7 +73,14 @@ export type ExerciceContenu = {
 export type TypeRessource = "configuration" | "skill" | "document" | "routine";
 
 /** Comment installer une ressource dans un outil. */
-export type InstallationContenu = { etapes?: string[]; gratuit?: string; telephone?: string; notes?: string[] };
+export type InstallationContenu = {
+  etapes?: string[];
+  gratuit?: string;
+  telephone?: string;
+  notes?: string[];
+  /** Vidéo du geste dans cet outil (une skill s'installe autrement dans chaque IA). */
+  video?: string;
+};
 
 export type RessourceContenu = {
   id: string;
@@ -230,6 +237,17 @@ const tableau = <T,>(valeur: unknown): T[] => (Array.isArray(valeur) ? (valeur a
 const objet = <T,>(valeur: unknown): Record<string, T> =>
   valeur && typeof valeur === "object" && !Array.isArray(valeur) ? (valeur as Record<string, T>) : {};
 
+// L'installation par outil. Une vidéo n'est gardée que si son lien est en https.
+function installations(valeur: unknown): Record<string, InstallationContenu> {
+  const resultat: Record<string, InstallationContenu> = {};
+  for (const [outil, brut] of Object.entries(objet<InstallationContenu>(valeur))) {
+    if (!brut || typeof brut !== "object") continue;
+    const { video, ...reste } = brut;
+    resultat[outil] = typeof video === "string" && /^https:\/\//.test(video) ? { ...reste, video } : reste;
+  }
+  return resultat;
+}
+
 async function chargerKit(metierId: string): Promise<KitContenu | null> {
   const admin = createAdminClient();
   const [kit, composition] = await Promise.all([
@@ -270,7 +288,7 @@ async function chargerKit(metierId: string): Promise<KitContenu | null> {
       description: r.description ?? null,
       outil: r.outil ?? null,
       contenu: r.contenu ?? null,
-      installation: objet<InstallationContenu>(r.installation),
+      installation: installations(r.installation),
       fichier: r.fichier ?? null,
       lien_copie: r.lien_copie ?? null,
       video_url: r.video_url ?? null,

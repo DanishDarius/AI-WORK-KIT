@@ -111,6 +111,8 @@ function Ressource({ ressource, ia, slug, explication, basculer }: { ressource: 
   const type = TYPE[ressource.type];
   const propre = ressource.installation[ia];
   const installation = propre ?? ressource.installation.tous;
+  // Une skill s'installe autrement dans chaque IA : sa vidéo est celle de l'IA choisie.
+  const video = propre?.video ?? ressource.video_url;
   return (
     <div id={ressource.cle} className="list-row" style={{ display: "block", scrollMarginTop: 90 }}>
       <div className="row" style={{ flexWrap: "nowrap", alignItems: "flex-start" }}>
@@ -135,7 +137,7 @@ function Ressource({ ressource, ia, slug, explication, basculer }: { ressource: 
         {explication && <p className="tiny muted">{type.nom} : {explication}</p>}
         {ressource.description && <p className="small">{ressource.description}</p>}
 
-        {(ressource.lien_copie || ressource.fichier || ressource.video_url) && (
+        {(ressource.lien_copie || ressource.fichier || video) && (
           <div className="row">
             {ressource.lien_copie && (
               <a className="btn btn-sm btn-plain" href={ressource.lien_copie} target="_blank" rel="noreferrer"><Icon name="external" size={16} /> Faire une copie</a>
@@ -143,8 +145,8 @@ function Ressource({ ressource, ia, slug, explication, basculer }: { ressource: 
             {ressource.fichier && (
               <a className="btn btn-secondary btn-sm btn-plain" href={`/api/kits/fichiers/${encodeURIComponent(ressource.fichier)}`} download><Icon name="download" size={16} /> Télécharger</a>
             )}
-            {ressource.video_url && (
-              <a className="btn btn-secondary btn-sm btn-plain" href={ressource.video_url} target="_blank" rel="noreferrer"><Icon name="video" size={16} /> Voir la vidéo</a>
+            {video && (
+              <a className="btn btn-secondary btn-sm btn-plain" href={video} target="_blank" rel="noreferrer"><Icon name="video" size={16} /> Voir la vidéo</a>
             )}
           </div>
         )}
