@@ -7,6 +7,7 @@ import { Bar, PageHead, ResourceState } from "@/components/ui";
 import { StatsCard } from "@/components/widgets";
 import { type Metier, useResource } from "@/lib/kit-api";
 import { enregistrerProfil, useProfil } from "@/lib/profil";
+import { rangPublic, trierParPublic } from "@/lib/profil-commun";
 
 export default function Metiers() {
   const router = useRouter();
@@ -27,7 +28,7 @@ export default function Metiers() {
         <ResourceState error={error} retry={retry} />
       ) : (
         <div className="grid-2">
-          {data.map((m) => {
+          {trierParPublic(data, (m) => rangPublic(m.publics, profil?.type)).map((m) => {
             const actuel = profil?.metier === m.slug;
             return (
               <button key={m.slug} type="button" className="option" aria-pressed={actuel} onClick={() => choisir(m.slug)} style={{ alignItems: "flex-start" }}>

@@ -30,6 +30,7 @@ export async function GET() {
         slug: m.slug,
         nom: m.nom,
         description: m.description,
+        publics: m.publics,
         nb_taches: taches.length,
         taches_faites: taches.filter((t) => faites.has(t.id)).length,
       };

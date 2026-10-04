@@ -11,12 +11,14 @@ import { category, useCatalogue, usages } from "@/lib/catalogue";
 import { sansAccents } from "@/lib/normaliser";
 import { tacheHref } from "@/lib/kit-api";
 import { useProfil } from "@/lib/profil";
+import { rangPublic, trierParPublic } from "@/lib/profil-commun";
 
 const PAR_PAGE = 12;
 
 export default function Taches() {
   const { data, error, retry } = useCatalogue();
   const profil = useProfil();
+  const type = profil?.type ?? null;
   const [q, setQ] = useState("");
   const [usage, setUsage] = useState("Tout");
   const [metier, setMetier] = useState("tous");
@@ -28,14 +30,17 @@ export default function Taches() {
   const liste = useMemo(() => {
     if (!data) return [];
     const recherche = sansAccents(q.trim());
-    return data.taches.filter((t) =>
+    // Les tâches des métiers du public du client passent en premier.
+    const publics = new Map(data.metiers.map((m) => [m.slug, m.publics]));
+    const rang = (t: (typeof data.taches)[number]) => Math.min(2, ...t.metiers.map((m) => rangPublic(publics.get(m.slug), type)));
+    return trierParPublic(data.taches, rang).filter((t) =>
       (usage === "Tout" || category(t.code) === usage) &&
       (metier === "tous" || t.metiers.some((m) => m.slug === metier)) &&
       (statut === "toutes" || (statut === "faites" ? t.fait : !t.fait)) &&
       (!gratuitMobile || (t.gratuit_ok === true && t.mobile_ok === true)) &&
       (!recherche || sansAccents(`${t.titre} ${t.code} ${t.metiers.map((m) => m.nom).join(" ")}`).includes(recherche)),
     );
-  }, [data, q, usage, metier, statut, gratuitMobile]);
+  }, [data, q, usage, metier, statut, gratuitMobile, type]);
 
   return (
     <Page aside={<><StatsCard /><AbonnementCard /></>}>

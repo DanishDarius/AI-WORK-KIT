@@ -26,6 +26,8 @@ export type MetierContenu = {
   slug: string;
   nom: string;
   description: string | null;
+  /** Publics du métier : salarie, independant, commercant (migration 0038). */
+  publics: string[];
 };
 
 export type TacheContenu = {
@@ -138,7 +140,7 @@ export type ComplementsTache = { modele: ModeleContenu | null; ressources: Resso
 async function chargerCatalogue(): Promise<CatalogueContenu> {
   const admin = createAdminClient();
   const [metiers, taches, liaisons] = await Promise.all([
-    admin.from("metiers").select("id, slug, nom, description, description_local").order("ordre", { ascending: true }).limit(200),
+    admin.from("metiers").select("id, slug, nom, description, description_local, publics").order("ordre", { ascending: true }).limit(200),
     admin.from("taches").select("id, code, titre, limite_connue, ia_alternative_conseillee, resultat, etapes, precisions, gratuit_ok, mobile_ok, outil_gratuit_conseille, video_url").limit(2000),
     admin.from("metiers_taches").select("metier_id, tache_id").order("ordre", { ascending: true }).limit(10000),
   ]);
@@ -168,9 +170,15 @@ async function chargerCatalogue(): Promise<CatalogueContenu> {
   }
 
   // Un métier dont la description est localisée affiche celle-ci (migration 0021).
-  const lignes = (metiers.data ?? []) as (MetierContenu & { description_local: string | null })[];
+  const lignes = (metiers.data ?? []) as (Omit<MetierContenu, "publics"> & { description_local: string | null; publics: unknown })[];
   return {
-    metiers: lignes.map((m) => ({ id: m.id, slug: m.slug, nom: m.nom, description: m.description_local ?? m.description ?? null })),
+    metiers: lignes.map((m) => ({
+      id: m.id,
+      slug: m.slug,
+      nom: m.nom,
+      description: m.description_local ?? m.description ?? null,
+      publics: Array.isArray(m.publics) ? (m.publics as string[]) : [],
+    })),
     taches: parId,
     tachesParMetier,
   };

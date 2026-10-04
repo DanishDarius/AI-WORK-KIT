@@ -66,6 +66,7 @@ export default function Confidentialite() {
             <tbody>
               <tr><td>Compte</td><td>Adresse email, mot de passe (stocké chiffré, jamais lisible par nous), date de création du compte, dates de connexion</td><td>Vous, à l’activation</td></tr>
               <tr><td>Achat et accès</td><td>Adresse email d’achat, référence de la vente, offre achetée, statut de l’accès et de l’abonnement</td><td>Le prestataire de paiement, après votre commande</td></tr>
+              <tr><td>Profil</td><td>Vos réponses au questionnaire de bienvenue : votre situation (salarié, indépendant, commerçant), votre métier, les IA que vous utilisez, votre appareil principal et votre pays</td><td>Vous, à la première ouverture ou depuis « Modifier mon profil »</td></tr>
               <tr><td>Progression</td><td>Tâches marquées comme faites, favoris, IA choisie pour chaque métier, dernière tâche consultée, jours d’activité (pour la série)</td><td>Votre utilisation</td></tr>
               <tr><td>Tâche sur mesure</td><td>Le métier concerné, la description de la tâche que vous soumettez, les IA choisies, le plan qui vous est remis et son statut (abonnés uniquement)</td><td>Vous</td></tr>
               <tr><td>Demandes de contact</td><td>Nom, email, entreprise, fonction, secteur, taille d’entreprise, description du besoin, budget envisagé, compte à l’origine de la demande</td><td>Formulaires Systèmes IA et Transformation IA</td></tr>
@@ -86,6 +87,7 @@ export default function Confidentialite() {
         <ul>
           <li><strong>Créer et sécuriser votre compte, ouvrir votre accès après paiement, gérer l’abonnement :</strong> exécution du contrat.</li>
           <li><strong>Afficher votre progression, vos favoris et votre série, reprendre là où vous en étiez :</strong> exécution du contrat.</li>
+          <li><strong>Adapter l’affichage à votre profil</strong> (métiers et tâches montrés en premier, étapes pensées pour votre appareil) et le retrouver sur un autre appareil : exécution du contrat.</li>
           <li><strong>Préparer le plan de votre tâche sur mesure et vous le remettre dans votre espace :</strong> exécution du contrat d’abonnement.</li>
           <li><strong>Répondre au support et aux demandes de contact, préparer un devis :</strong> exécution de mesures précontractuelles ou du contrat.</li>
           <li><strong>Vous envoyer les emails de service</strong> (activation, mot de passe, reçu) : exécution du contrat.</li>
@@ -101,7 +103,7 @@ export default function Confidentialite() {
 
       <LegalSection id="conservation" title="Durées de conservation">
         <ul>
-          <li><strong>Compte et progression :</strong> tant que votre compte est actif. Après une demande de fermeture, suppression sous 30 jours.</li>
+          <li><strong>Compte, profil et progression :</strong> tant que votre compte est actif. Après une demande de fermeture, suppression sous 30 jours.</li>
           <li><strong>Justificatifs d’achat :</strong> 10 ans, durée de conservation des pièces comptables.</li>
           <li><strong>Demandes de contact :</strong> 3 ans après le dernier échange, sauf si elles aboutissent à un contrat.</li>
           <li><strong>Échanges avec le support :</strong> 3 ans après le dernier échange.</li>
@@ -164,6 +166,7 @@ export default function Confidentialite() {
             </thead>
             <tbody>
               <tr><td>sb-…-auth-token</td><td>Cookie de connexion (Supabase)</td><td>Vous garder connecté de façon sécurisée</td><td>Jusqu’à la déconnexion, renouvelé automatiquement</td></tr>
+              <tr><td>aw-profil, aw-profil-envoye</td><td>Stockage local du navigateur</td><td>Afficher tout de suite votre profil (métier, situation, IA, appareil, pays), sans attendre le serveur</td><td>Jusqu’à ce que vous effaciez les données du site</td></tr>
               <tr><td>awk-saved-guides</td><td>Stockage local du navigateur</td><td>Mémoriser les guides que vous avez enregistrés sur cet appareil</td><td>Jusqu’à ce que vous le retiriez ou effaciez les données du site</td></tr>
               <tr><td>aw-dock-hidden</td><td>Stockage de session</td><td>Garder masqué le module de progression si vous l’avez fermé</td><td>Jusqu’à la fermeture de l’onglet</td></tr>
             </tbody>

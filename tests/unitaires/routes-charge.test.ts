@@ -55,7 +55,7 @@ function base(op: Operation): Reponse {
     case "acces_clients":
       return { data: [{ cree_le: "2026-09-01T10:00:00.000Z" }] };
     case "metiers":
-      return { data: [{ id: M1, slug: "comptabilite", nom: "Comptabilité", description: local.actif ? "Ancienne description" : null, description_local: local.actif ? "Description localisée" : null }] };
+      return { data: [{ id: M1, slug: "comptabilite", nom: "Comptabilité", description: local.actif ? "Ancienne description" : null, description_local: local.actif ? "Description localisée" : null, publics: ["salarie"] }] };
     case "taches":
       return {
         data: [
@@ -167,7 +167,7 @@ describe("C1 C2 C4 · GET /api/catalogue", () => {
     expect(reponse.status).toBe(200);
     const corps = await reponse.json();
     expect(corps.metiers).toEqual([
-      { id: M1, slug: "comptabilite", nom: "Comptabilité", description: null, nb_taches: 2, taches_faites: 1, chemin_choisi: "claude" },
+      { id: M1, slug: "comptabilite", nom: "Comptabilité", description: null, publics: ["salarie"], nb_taches: 2, taches_faites: 1, chemin_choisi: "claude" },
     ]);
     expect(corps.taches.map((t: { code: string; fait: boolean; favori: boolean }) => [t.code, t.fait, t.favori])).toEqual([
       ["F01", true, false],
@@ -205,7 +205,7 @@ describe("C1 C2 C4 · GET /api/metiers et /api/metiers/[slug]", () => {
     installer();
     const { GET } = await import("@/app/api/metiers/route");
     const corps = await sur(await GET()).json();
-    expect(corps).toEqual([{ id: M1, slug: "comptabilite", nom: "Comptabilité", description: null, nb_taches: 2, taches_faites: 1 }]);
+    expect(corps).toEqual([{ id: M1, slug: "comptabilite", nom: "Comptabilité", description: null, publics: ["salarie"], nb_taches: 2, taches_faites: 1 }]);
     expect(lectures(TABLES_COMPTE)).toHaveLength(1);
     verifierBudget();
   });
@@ -215,7 +215,7 @@ describe("C1 C2 C4 · GET /api/metiers et /api/metiers/[slug]", () => {
     const { GET } = await import("@/app/api/metiers/[slug]/route");
     const reponse = sur(await GET(new Request("https://aiw.test/api/metiers/comptabilite"), { params: Promise.resolve({ slug: "comptabilite" }) }));
     const corps = await reponse.json();
-    expect(corps.metier).toEqual({ id: M1, slug: "comptabilite", nom: "Comptabilité", description: null });
+    expect(corps.metier).toEqual({ id: M1, slug: "comptabilite", nom: "Comptabilité", description: null, publics: ["salarie"] });
     expect(corps.chemin_choisi).toBe("claude");
     expect(corps.taches_faites).toBe(1);
     expect(corps.taches.map((t: { code: string }) => t.code)).toEqual(["F01", "F02"]);

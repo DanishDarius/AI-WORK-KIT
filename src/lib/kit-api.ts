@@ -26,6 +26,8 @@ export type Metier = {
   slug: string;
   nom: string;
   description: string | null;
+  // Publics du métier : salarie, independant, commercant.
+  publics: string[];
   nb_taches: number;
   taches_faites: number;
 };

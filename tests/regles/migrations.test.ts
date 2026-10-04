@@ -24,6 +24,7 @@ const TABLES_PERSONNELLES = new Set([
   "derniere_activite",
   "activite_journaliere",
   "progression_kit",
+  "profils",
 ]);
 
 // Tables internes : seul le serveur (clé service) les lit et les écrit.
