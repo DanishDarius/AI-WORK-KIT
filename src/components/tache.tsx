@@ -221,6 +221,12 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
 
             <div className="stack-sm">
               <Kicker>Étapes</Kicker>
+              {tache.video_url && (
+                <div className="row">
+                  <a className="btn btn-secondary btn-sm btn-plain" href={tache.video_url} target="_blank" rel="noreferrer"><Icon name="video" size={16} /> Voir la vidéo</a>
+                  <span className="tiny muted">Elle s’ouvre hors de l’application. Les étapes sont aussi écrites ci-dessous.</span>
+                </div>
+              )}
               {tache.etapes?.length ? (
                 <ol className="steps">
                   {tache.etapes.map((etape, i) => <li key={i}>{etape}</li>)}

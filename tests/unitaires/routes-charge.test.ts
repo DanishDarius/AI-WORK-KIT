@@ -88,7 +88,7 @@ function base(op: Operation): Reponse {
       return { data: [{ jour: AUJOURDHUI }] };
     case "kits":
       return kit.avecKit
-        ? { data: { titre: "Kit de test", presentation: "Présentation", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], prerequis: ["Un téléphone"], limites: [], a_savoir: { chatgpt: "À savoir" }, mots: [], revu_le: "2026-10-03" } }
+        ? { data: { titre: "Kit de test", presentation: "Présentation", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], prerequis: ["Un téléphone"], limites: [], a_savoir: { chatgpt: "À savoir" }, mots: [], revu_le: "2026-10-03", video_url: "https://youtu.be/accueil" } }
         : { data: null };
     case "kits_metier":
       return {
@@ -434,7 +434,7 @@ describe("C1 C2 C4 · GET /api/kits/[slug]", () => {
     const corps = await reponse.json();
     expect(corps.metier).toEqual({ slug: "comptabilite", nom: "Comptabilité" });
     expect(corps.chemin_choisi).toBe("claude");
-    expect(corps.kit).toMatchObject({ titre: "Kit de test", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], a_savoir: { chatgpt: "À savoir" } });
+    expect(corps.kit).toMatchObject({ titre: "Kit de test", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], a_savoir: { chatgpt: "À savoir" }, video_url: "https://youtu.be/accueil" });
     expect(corps.kit.ressources.map((r: { cle: string; etape: number | null; installee: boolean }) => [r.cle, r.etape, r.installee])).toEqual([
       ["config-test", 1, false],
       ["doc-test", null, true],

@@ -106,6 +106,8 @@ export type KitContenu = {
   a_savoir: Record<string, string>;
   mots: { mot: string; phrase: string }[];
   revu_le: string | null;
+  /** Lien de la vidéo d'accueil du kit, chargée au clic. */
+  video_url: string | null;
   ressources: RessourceContenu[];
 };
 
@@ -233,7 +235,7 @@ async function chargerKit(metierId: string): Promise<KitContenu | null> {
   const [kit, composition] = await Promise.all([
     admin
       .from("kits")
-      .select("titre, presentation, etapes, prerequis, limites, a_savoir, mots, revu_le")
+      .select("titre, presentation, etapes, prerequis, limites, a_savoir, mots, revu_le, video_url")
       .eq("metier_id", metierId)
       .maybeSingle(),
     admin
@@ -278,7 +280,7 @@ async function chargerKit(metierId: string): Promise<KitContenu | null> {
     });
   }
 
-  const k = kit.data as { titre: string; presentation: string; revu_le: string | null } & Record<string, unknown>;
+  const k = kit.data as { titre: string; presentation: string; revu_le: string | null; video_url?: string | null } & Record<string, unknown>;
   return {
     titre: k.titre,
     presentation: k.presentation,
@@ -288,6 +290,7 @@ async function chargerKit(metierId: string): Promise<KitContenu | null> {
     a_savoir: objet<string>(k.a_savoir),
     mots: tableau<KitContenu["mots"][number]>(k.mots),
     revu_le: k.revu_le ?? null,
+    video_url: k.video_url ?? null,
     ressources,
   };
 }

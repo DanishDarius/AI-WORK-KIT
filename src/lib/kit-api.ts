@@ -113,6 +113,8 @@ export type KitMetier = {
   a_savoir: Record<string, string>;
   mots: { mot: string; phrase: string }[];
   revu_le: string | null;
+  // Vidéo d'accueil du kit (facultative), ouverte au clic.
+  video_url: string | null;
   ressources: RessourceKit[];
 };
 // Réponse de /api/kits/[slug]. « kit » vaut null quand le métier n'a pas
