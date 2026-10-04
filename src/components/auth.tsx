@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { FormEvent, ReactNode, useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { oublierCompte, viderCopiesHorsLigne } from "@/lib/hors-ligne";
-import { fcfa, LIEN_ACCES, PRIX } from "@/lib/offre";
+import { fcfa, LIEN_ACCES, NB_TACHES, PRIX } from "@/lib/offre";
 import { oublierProfil } from "@/lib/profil";
 import { Icon } from "./icon";
 import { CheckList, Kicker } from "./ui";
@@ -43,7 +43,7 @@ export function AuthFrame({
           {side && (
             <div className="auth-side">
               <h2>Pas encore d’accès ?</h2>
-              <CheckList items={[{ label: "Les 42 tâches et leurs prompts" }, { label: "La mise en place pour votre IA" }, { label: "Le parcours de votre métier" }, { label: "10 guides inclus" }]} />
+              <CheckList items={[{ label: `Les ${NB_TACHES} tâches et leurs consignes` }, { label: "Le kit de votre métier" }, { label: "La mise en place pour votre IA" }, { label: "Le parcours de votre métier" }, { label: "10 guides inclus" }]} />
               <a className="btn btn-mint btn-block" href={LIEN_ACCES}>Obtenir l’accès · {fcfa(PRIX.acces)}</a>
               <p className="small" style={{ color: "var(--night-soft)" }}>
                 Votre compte est créé dès le paiement confirmé. Vous recevez un e-mail pour choisir votre mot de passe.

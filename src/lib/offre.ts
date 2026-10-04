@@ -64,6 +64,17 @@ export const LIENS_ABONNEMENT: Record<Formule, string> = {
 // L'abonnement reste fermé aux nouveaux clients tant que son flux de
 // nouveautés (tâche de la semaine, packs, kits mis à jour) n'est pas en place.
 // Pour l'ouvrir : variable Vercel NEXT_PUBLIC_ABONNEMENT_OUVERT=1.
+// Ce que contient l'accès, en chiffres. Ils se comptent en base (tables taches
+// et metiers) et se mettent à jour ici quand le contenu change : la page
+// d'accès et l'écran d'activation les reprennent.
+export const NB_TACHES = 56;
+export const NB_METIERS = 14;
+
+// Vidéo de démonstration de la page d'accès : l'identifiant d'une vidéo
+// YouTube (11 caractères). Sans lui, ou s'il est mal formé, rien ne s'affiche.
+const videoDemo = process.env.NEXT_PUBLIC_VIDEO_DEMO_ID ?? "";
+export const VIDEO_DEMO_ID = /^[A-Za-z0-9_-]{11}$/.test(videoDemo) ? videoDemo : null;
+
 export const ABONNEMENT_OUVERT = process.env.NEXT_PUBLIC_ABONNEMENT_OUVERT === "1";
 export const LIEN_ETRE_PREVENU = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Ouverture de l’abonnement AIW")}&body=${encodeURIComponent("Bonjour, prévenez-moi dès l’ouverture de l’abonnement AIW.")}`;
 
