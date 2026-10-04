@@ -289,6 +289,24 @@ describe("C1 C2 C4 · GET /api/taches/[id]", () => {
     expect(sansMetier.ressources).toEqual([]);
   });
 
+  it("montre les ressources dans un ordre fixe : configuration, skills, documents, routines", async () => {
+    const { ressourcesPourMetier } = await import("@/lib/contenu");
+    const r = (cle: string, type: "configuration" | "skill" | "document" | "routine", titre: string) => ({ cle, type, titre, outil: null, metiers: ["m"] });
+    // La base rend les liens sans ordre : l'écran ne doit pas en dépendre.
+    const melange = [
+      r("routine-b", "routine", "Point du vendredi"),
+      r("doc-a", "document", "Journal"),
+      r("config-x-gemini", "configuration", "Assistant"),
+      r("skill-b", "skill", "Relance"),
+      r("config-x-chatgpt", "configuration", "Assistant"),
+      r("skill-a", "skill", "Classement"),
+      r("config-x-claude", "configuration", "Assistant"),
+    ];
+    const attendu = ["config-x-chatgpt", "config-x-claude", "config-x-gemini", "skill-a", "skill-b", "doc-a", "routine-b"];
+    expect(ressourcesPourMetier(melange, "m").map((x) => x.cle)).toEqual(attendu);
+    expect(ressourcesPourMetier([...melange].reverse(), null).map((x) => x.cle)).toEqual(attendu);
+  });
+
   it("affiche le cas localisé à la place de l'ancien, sans mêler les deux", async () => {
     local.actif = true;
     installer();

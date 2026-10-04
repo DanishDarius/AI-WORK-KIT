@@ -366,9 +366,20 @@ export const lireComplementsTache = unstable_cache(chargerComplementsTache, ["co
  */
 export function ressourcesPourMetier(ressources: RessourceDeTache[], metierId: string | null): RessourceLiee[] {
   const garder = (r: RessourceDeTache): RessourceLiee => ({ cle: r.cle, type: r.type, titre: r.titre, outil: r.outil });
-  if (metierId) return ressources.filter((r) => r.metiers.includes(metierId)).map(garder);
+  if (metierId) return dansLOrdre(ressources.filter((r) => r.metiers.includes(metierId)).map(garder));
   const kits = new Set(ressources.flatMap((r) => r.metiers));
-  return kits.size <= 1 ? ressources.map(garder) : [];
+  return kits.size <= 1 ? dansLOrdre(ressources.map(garder)) : [];
+}
+
+// La base rend les liens ressource-tâche sans ordre. L'écran les montre
+// toujours dans le même : la configuration, les skills, les documents, les
+// routines, puis par titre.
+const RANG_TYPE: Record<TypeRessource, number> = { configuration: 0, skill: 1, document: 2, routine: 3 };
+
+function dansLOrdre(liste: RessourceLiee[]): RessourceLiee[] {
+  return [...liste].sort(
+    (a, b) => RANG_TYPE[a.type] - RANG_TYPE[b.type] || a.titre.localeCompare(b.titre, "fr") || a.cle.localeCompare(b.cle),
+  );
 }
 
 export function metierParSlug(catalogue: CatalogueContenu, slug: string | null | undefined) {
