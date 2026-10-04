@@ -1,3 +1,4 @@
+import { HorsLigne } from "@/components/hors-ligne";
 import { exigerAccesActif } from "@/lib/acces";
 
 // Toute la plateforme est fermée : seules les personnes connectées ET dont
@@ -5,5 +6,10 @@ import { exigerAccesActif } from "@/lib/acces";
 // un layout ne décide pas du rendu des pages qu'il contient.
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   await exigerAccesActif();
-  return children;
+  return (
+    <>
+      <HorsLigne />
+      {children}
+    </>
+  );
 }

@@ -5,7 +5,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, ReactNode, useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { oublierCompte, viderCopiesHorsLigne } from "@/lib/hors-ligne";
 import { fcfa, LIEN_ACCES, PRIX } from "@/lib/offre";
+import { oublierProfil } from "@/lib/profil";
 import { Icon } from "./icon";
 import { CheckList, Kicker } from "./ui";
 
@@ -342,6 +344,11 @@ function SignOutButton() {
   async function signOut() {
     if (pending) return;
     setPending(true);
+    // Rien de ce compte ne reste dans ce navigateur : ni les copies du mode
+    // hors ligne, ni le profil (il est gardé en base).
+    await viderCopiesHorsLigne();
+    oublierProfil();
+    oublierCompte();
     await createClient().auth.signOut();
     router.replace("/acces");
     router.refresh();

@@ -56,7 +56,20 @@ const nextConfig: NextConfig = {
   // N'annonce pas la technologie du serveur.
   poweredByHeader: false,
   async headers() {
-    return [{ source: "/(.*)", headers: enTetesSecurite }];
+    return [
+      { source: "/(.*)", headers: enTetesSecurite },
+      // Service worker du mode hors ligne (public/sw.js). Jamais gardé en
+      // mémoire par le navigateur : une correction arrive au chargement
+      // suivant. Sa propre CSP ne lui laisse joindre que le site.
+      {
+        source: "/sw.js",
+        headers: [
+          { key: "Content-Type", value: "application/javascript; charset=utf-8" },
+          { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
+          { key: "Content-Security-Policy", value: "default-src 'self'; script-src 'self'" },
+        ],
+      },
+    ];
   },
   outputFileTracingIncludes: {
     "/api/guides/[slug]/pdf": ["./private/guides/pdf/**/*.pdf"],

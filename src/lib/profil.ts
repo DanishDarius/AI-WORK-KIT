@@ -102,6 +102,17 @@ export async function synchroniserProfil(): Promise<Profil> {
   return local;
 }
 
+/** Retire le profil de ce navigateur (déconnexion, changement de compte). Celui du serveur reste. */
+export function oublierProfil() {
+  try {
+    localStorage.removeItem(CLE);
+    localStorage.removeItem(CLE_ENVOYE);
+  } catch {
+    // Rien à retirer.
+  }
+  window.dispatchEvent(new Event(EVENEMENT));
+}
+
 function abonner(callback: () => void) {
   window.addEventListener("storage", callback);
   window.addEventListener(EVENEMENT, callback);

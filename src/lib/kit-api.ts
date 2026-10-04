@@ -200,12 +200,18 @@ export async function api<T>(
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
     throw new Error("La connexion est momentanément indisponible. Veuillez réessayer plus tard.");
   }
-  const { data, error } = await createClient().auth.getSession();
-  if (error || !data.session)
-    throw new Error(
-      "Vous n’êtes pas connecté. Connectez-vous pour continuer.",
-    );
   const ecriture = Boolean(options.method && options.method.toUpperCase() !== "GET");
+  // Sans connexion, la session ne peut pas se renouveler : on ne la contrôle
+  // pas ici. Une lecture déjà faite revient de la réserve du mode hors ligne
+  // (public/sw.js) ; une écriture échoue, et l'écran le dit.
+  const horsLigne = typeof navigator !== "undefined" && navigator.onLine === false;
+  if (!horsLigne) {
+    const { data, error } = await createClient().auth.getSession();
+    if (error || !data.session)
+      throw new Error(
+        "Vous n’êtes pas connecté. Connectez-vous pour continuer.",
+      );
+  }
   let response: Response;
   try {
     response = await fetch(url, {
@@ -214,6 +220,14 @@ export async function api<T>(
       cache: "no-store",
       headers: { "Content-Type": "application/json", ...options.headers },
     });
+  } catch {
+    throw new Error(
+      horsLigne
+        ? ecriture
+          ? "Vous êtes hors connexion : rien ne peut s’enregistrer pour le moment."
+          : "Vous êtes hors connexion, et cette page n’a pas encore été ouverte avec une connexion."
+        : "Échec du chargement ou de l’enregistrement. Réessayez dans un instant.",
+    );
   } finally {
     if (ecriture) partage.clear();
   }

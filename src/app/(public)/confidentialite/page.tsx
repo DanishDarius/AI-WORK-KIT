@@ -167,6 +167,8 @@ export default function Confidentialite() {
             <tbody>
               <tr><td>sb-…-auth-token</td><td>Cookie de connexion (Supabase)</td><td>Vous garder connecté de façon sécurisée</td><td>Jusqu’à la déconnexion, renouvelé automatiquement</td></tr>
               <tr><td>aw-profil, aw-profil-envoye</td><td>Stockage local du navigateur</td><td>Afficher tout de suite votre profil (métier, situation, IA, appareil, pays), sans attendre le serveur</td><td>Jusqu’à ce que vous effaciez les données du site</td></tr>
+              <tr><td>aw-compte</td><td>Stockage local du navigateur</td><td>Reconnaître qu’un autre compte se connecte sur cet appareil, pour ne pas lui montrer les copies du précédent</td><td>Jusqu’à la déconnexion</td></tr>
+              <tr><td>aiw-pages, aiw-donnees, aiw-statique</td><td>Mémoire du navigateur pour le mode hors ligne</td><td>Garder lisibles sans connexion les pages, les tâches, les kits et les guides que vous avez déjà ouverts. Ces copies restent sur votre appareil</td><td>Jusqu’à la déconnexion ou au changement de compte ; les copies les plus anciennes sont remplacées par les plus récentes</td></tr>
               <tr><td>awk-saved-guides</td><td>Stockage local du navigateur</td><td>Mémoriser les guides que vous avez enregistrés sur cet appareil</td><td>Jusqu’à ce que vous le retiriez ou effaciez les données du site</td></tr>
               <tr><td>aw-dock-hidden</td><td>Stockage de session</td><td>Garder masqué le module de progression si vous l’avez fermé</td><td>Jusqu’à la fermeture de l’onglet</td></tr>
             </tbody>

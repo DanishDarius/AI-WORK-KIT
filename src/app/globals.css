@@ -316,6 +316,7 @@ details.faq p { color: var(--muted); margin-top: 10px; font-size: 15.5px; }
 .prompt-panel header { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,.12); }
 .prompt-panel pre { margin: 0; padding: 18px; white-space: pre-wrap; word-break: break-word; font-family: var(--font-mono); font-size: 14px; line-height: 1.65; color: #e8f2ef; max-height: 560px; overflow: auto; }
 .tip { font-size: 14px; line-height: 1.55; color: var(--muted); background: var(--paper); border: 2px dashed var(--line-strong); border-radius: 14px; padding: 12px 14px; }
+.offline-banner { margin: 0; padding: 10px 16px; background: var(--night); color: #fff; font-size: 14px; line-height: 1.45; text-align: center; }
 .notice { display: flex; gap: 12px; align-items: flex-start; background: var(--gold-bg); border: 2px solid #f5dfa3; border-radius: 16px; padding: 14px 16px; color: var(--gold-ink); font-size: 15px; }
 @media (max-width: 960px) {
   .task-split { grid-template-columns: minmax(0, 1fr); }
