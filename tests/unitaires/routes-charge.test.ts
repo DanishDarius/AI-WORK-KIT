@@ -400,12 +400,15 @@ describe("C4 · POST /api/taches/[id]/vue enregistre la consultation", () => {
 });
 
 describe("C2 · GET /api/moi", () => {
-  it("ne fait que deux requêtes : l'accès et l'abonnement", async () => {
+  it("ne fait que trois requêtes propres au compte : l'accès, l'abonnement et les préférences", async () => {
     const factice = installer();
     const { GET } = await import("@/app/api/moi/route");
     const corps = await sur(await GET()).json();
-    expect(corps).toMatchObject({ email: CLIENT.email, acces_depuis: "2026-09-01T10:00:00.000Z", membre_depuis: "2026-09-01T10:00:00.000Z" });
-    expect(factice.operations.map((op) => op.table).sort()).toEqual(["abonnements", "acces_clients"]);
+    expect(corps).toMatchObject({ email: CLIENT.email, acces_depuis: "2026-09-01T10:00:00.000Z", membre_depuis: "2026-09-01T10:00:00.000Z", nouveautes: 0 });
+    // Le fil vient du cache (neutralisé dans les tests) : ses tables ne sont pas propres au compte.
+    const duFil = ["publications", "mises_a_jour_ia", "packs", "packs_taches", "taches", "sessions_live", "videos"];
+    expect(factice.operations.map((op) => op.table).filter((t) => !duFil.includes(t)).sort()).toEqual(["abonnements", "acces_clients", "preferences_notifications"]);
+    expect(factice.ecritures(), "un GET n'écrit jamais (règle C4)").toEqual([]);
   });
 });
 

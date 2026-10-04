@@ -272,6 +272,7 @@ export default function Acces() {
                 <CheckList tone="orange" items={[
                   { label: "Tout ce que contient l’accès" },
                   { label: "Tous les guides, à télécharger et à revendre" },
+                  { label: "La tâche de la semaine, un pack de tâches par mois et les mises à jour des IA" },
                   { label: "8 tâches et 2 métiers sur mesure par mois" },
                   { label: "Le chat du support" },
                 ]} />

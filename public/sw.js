@@ -36,7 +36,7 @@ const MAX_DONNEES = 150;
 const DELAI_RESEAU_MS = 6000;
 
 // Pages visibles sans compte : jamais gardées, jamais servies d'ici.
-const PAGES_PUBLIQUES = ["/acces", "/connexion", "/mot-de-passe-oublie", "/nouveau-mot-de-passe", "/activation", "/auth", "/conditions", "/confidentialite", "/mentions-legales"];
+const PAGES_PUBLIQUES = ["/acces", "/connexion", "/mot-de-passe-oublie", "/nouveau-mot-de-passe", "/activation", "/auth", "/desabonnement", "/conditions", "/confidentialite", "/mentions-legales"];
 // Arriver sur l'une d'elles veut dire que le compte n'est plus connecté.
 const PAGES_SANS_SESSION = ["/acces", "/connexion"];
 

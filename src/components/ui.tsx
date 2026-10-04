@@ -89,11 +89,14 @@ export function ResourceState({ error, retry }: { error?: string; retry?: () => 
     );
   // « hors connexion » n'est pas une session expirée : on propose alors de réessayer.
   const session = /pas connecté|session a expiré/i.test(error);
+  const reserve = /réservé aux abonnés/i.test(error);
   return (
     <div className="card pad-md empty" role="alert">
       <p>{error}</p>
       {session ? (
         <a className="btn btn-sm" href="/connexion">Se connecter</a>
+      ) : reserve ? (
+        <a className="btn btn-orange btn-sm" href="/abonnement">Voir les formules</a>
       ) : retry ? (
         <button type="button" className="btn btn-secondary btn-sm btn-plain" onClick={retry}>Réessayer</button>
       ) : null}

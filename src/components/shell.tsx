@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
+import { useMoi } from "@/lib/moi";
 import { Icon, type IconName } from "./icon";
 import { SupportChat } from "./support-chat";
 
@@ -12,16 +13,25 @@ type NavItem = { label: string; href: string; icon: IconName; match: (path: stri
 // Navigation principale : 5 onglets sur téléphone, 6 entrées sur ordinateur
 // (Nouveau passe par la cloche sur téléphone).
 const NAV: NavItem[] = [
-  { label: "Parcours", href: "/", icon: "path", match: (p) => p === "/" || p.startsWith("/metiers") || p.startsWith("/bienvenue"), tab: true },
+  { label: "Parcours", href: "/", icon: "path", match: (p) => p === "/" || p.startsWith("/metiers") || p.startsWith("/bienvenue") || p.startsWith("/premiers-pas"), tab: true },
   { label: "Tâches", href: "/taches", icon: "list", match: (p) => p.startsWith("/taches"), tab: true },
   { label: "Mon kit", href: "/kit", icon: "kit", match: (p) => p.startsWith("/kit"), tab: true },
   { label: "Guides", href: "/bibliotheque", icon: "book", match: (p) => p.startsWith("/bibliotheque") || p.startsWith("/guides"), tab: true },
-  { label: "Nouveau", href: "/nouveau", icon: "spark", match: (p) => p.startsWith("/nouveau") || p.startsWith("/mises-a-jour-ia"), tab: false },
+  { label: "Nouveau", href: "/nouveau", icon: "spark", match: (p) => p.startsWith("/nouveau") || p.startsWith("/mises-a-jour-ia") || p.startsWith("/packs"), tab: false },
   { label: "Profil", href: "/profil", icon: "user", match: (p) => p.startsWith("/profil") || p.startsWith("/abonnement") || p.startsWith("/sur-mesure") || p.startsWith("/aide") || p.startsWith("/accompagnement"), tab: true },
 ];
 
+// Pastille de la cloche : le nombre de publications du fil Nouveau parues
+// depuis la dernière visite (9 au plus). Rien quand il n'y en a pas.
+function Pastille({ nombre }: { nombre: number }) {
+  if (nombre <= 0) return null;
+  return <span className="pastille" aria-hidden="true">{nombre >= 9 ? "9+" : nombre}</span>;
+}
+
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname() || "/";
+  const nouveautes = useMoi()?.nouveautes ?? 0;
+  const annonce = nouveautes > 0 ? `Nouveautés : ${nouveautes >= 9 ? "9 ou plus" : nouveautes} à lire` : "Nouveautés";
   return (
     <div className="app">
       <a className="skip-link" href="#contenu">Aller au contenu</a>
@@ -30,9 +40,10 @@ export function AppShell({ children }: { children: ReactNode }) {
           <Image src="/brand/atelier/symbol-primary.svg" alt="" width={46} height={46} priority />
         </Link>
         {NAV.map((item) => (
-          <Link key={item.href} className="rail-link" href={item.href} aria-current={item.match(pathname) ? "page" : undefined}>
+          <Link key={item.href} className="rail-link" href={item.href} aria-current={item.match(pathname) ? "page" : undefined} aria-label={item.href === "/nouveau" ? annonce : undefined}>
             <Icon name={item.icon} size={24} strokeWidth={2.2} />
             <span>{item.label}</span>
+            {item.href === "/nouveau" && <Pastille nombre={nouveautes} />}
           </Link>
         ))}
         <span className="rail-spacer" />
@@ -47,8 +58,9 @@ export function AppShell({ children }: { children: ReactNode }) {
             <Image src="/brand/atelier/symbol-primary.svg" alt="" width={36} height={36} />
           </Link>
           <span className="grow strong">AIW</span>
-          <Link className="icon-btn" href="/nouveau" aria-label="Nouveautés">
+          <Link className="icon-btn" href="/nouveau" aria-label={annonce}>
             <Icon name="bell" size={20} />
+            <Pastille nombre={nouveautes} />
           </Link>
         </header>
         <main id="contenu">{children}</main>

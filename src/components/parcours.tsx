@@ -5,6 +5,7 @@ import { useState } from "react";
 import { category } from "@/lib/catalogue";
 import { api, chemins, type IA, iaLabels, type MetierDetail, kitHref, tacheHref, useResource } from "@/lib/kit-api";
 import { Icon, type IconName } from "./icon";
+import { NouveauCetteSemaine } from "./fil";
 import { Page } from "./shell";
 import { TacheSurMesure } from "./tache-sur-mesure";
 import { Bar, Chip, ResourceState } from "./ui";
@@ -102,9 +103,11 @@ export function Parcours({ slug }: { slug: string }) {
         </div>
         <Link className="pill" href={kitHref(metier.slug)}><Icon name="kit" size={18} /> Mon kit</Link>
         <Link className="pill" href="/metiers">Changer de métier</Link>
+        <Link className="pill" href="/premiers-pas">Premiers pas</Link>
       </div>
 
       <ReprendreCard />
+      <NouveauCetteSemaine />
 
       <div className="journey">
         {secs.map((section, si) => (

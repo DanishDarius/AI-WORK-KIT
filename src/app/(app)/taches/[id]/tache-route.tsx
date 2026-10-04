@@ -6,8 +6,12 @@ import { useProfil } from "@/lib/profil";
 
 // La tâche s'affiche dans le contexte d'un métier (progression, favoris,
 // tâche suivante). Sans métier dans l'adresse, on prend celui du profil.
-export function TacheRoute({ id, metier }: { id: string; metier: string }) {
+//
+// Une tâche du fil Nouveau (tâche de la semaine, tâche d'un pack) n'appartient
+// à aucun métier : elle s'ouvre telle quelle.
+export function TacheRoute({ id, metier, duFil }: { id: string; metier: string; duFil: boolean }) {
   const profil = useProfil();
+  if (duFil) return <TacheEcran id={id} metier="" />;
   const slug = metier || profil?.metier || "";
   if (!metier && profil === undefined) return null;
   if (!slug)

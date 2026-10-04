@@ -11,6 +11,10 @@ const ROUTES_HORS_ACCES: Record<string, string> = {
   "src/app/api/webhooks/chariow/route.ts": "appelée par Chariow, protégée par signature (règle S5)",
   "src/app/api/activation/renvoi/route.ts":
     "publique par nature : l'acheteur n'a pas encore de compte. Réponse identique pour toute adresse, un envoi par 5 minutes (règles S13 et C6)",
+  "src/app/api/planifie/quotidien/route.ts":
+    "appelée par le planificateur de Vercel, pas par un client : protégée par le secret CRON_SECRET, 503 sans secret (règle S10)",
+  "src/app/api/desabonnement/route.ts":
+    "lien « ne plus recevoir » d'un e-mail, ouvert sans connexion : le jeton aléatoire de l'e-mail tient lieu de preuve, la route ne crée aucune ligne (règle S13)",
 };
 
 const ROUTES_API = lister("src/app/api", (f) => f.endsWith("/route.ts"));

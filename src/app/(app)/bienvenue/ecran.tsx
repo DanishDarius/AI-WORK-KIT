@@ -78,7 +78,8 @@ export default function Bienvenue() {
     if (ia) {
       await api(`/api/metiers/${encodeURIComponent(metier)}/chemin`, { method: "POST", body: JSON.stringify({ chemin: ia }) }).catch(() => null);
     }
-    router.replace("/");
+    // Jamais utilisé d'IA : on commence par les premiers pas, avant le parcours.
+    router.replace(outils.includes("aucune") ? "/premiers-pas" : "/");
   }
 
   return (
@@ -161,7 +162,11 @@ export default function Bienvenue() {
                 {pays && pays !== "autre" && <Chip>{PAYS.find((p) => p.code === pays)?.nom}</Chip>}
               </div>
               <h2 className="h2">Vos tâches vous attendent, étape par étape.</h2>
-              <p className="muted">Commencez par la première : un cas concret, un prompt à copier, et c’est fait.</p>
+              <p className="muted">
+                {outils.includes("aucune")
+                  ? "On commence par les premiers pas : installer une IA gratuite sur votre téléphone et lui écrire, en 15 minutes."
+                  : "Commencez par la première : un cas concret, une consigne à copier, et c’est fait."}
+              </p>
             </div>
           </div>
         )}
@@ -173,7 +178,7 @@ export default function Bienvenue() {
           {etape < 6 ? (
             <button type="button" className="btn btn-lg" disabled={!peutContinuer} onClick={() => peutContinuer && setEtape((e) => e + 1)}>Continuer</button>
           ) : (
-            <button type="button" className="btn btn-lg" disabled={envoi} onClick={terminer}>{envoi ? "Un instant…" : "Commencer mon parcours"}</button>
+            <button type="button" className="btn btn-lg" disabled={envoi} onClick={terminer}>{envoi ? "Un instant…" : outils.includes("aucune") ? "Faire mes premiers pas" : "Commencer mon parcours"}</button>
           )}
         </div>
       </footer>

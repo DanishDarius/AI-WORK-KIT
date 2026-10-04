@@ -16,7 +16,7 @@ const LIGNES: { label: string; base: boolean | string; abo: boolean | string }[]
   { label: "Tâche sur mesure", base: false, abo: "8 par mois" },
   { label: "Métier sur mesure (kit complet)", base: false, abo: "2 par mois" },
   { label: "Support", base: "E-mail", abo: "E-mail et chat" },
-  { label: "Les nouveautés dès leur sortie", base: false, abo: true },
+  { label: "La tâche de la semaine, les packs et les mises à jour des IA", base: "Titres seuls", abo: true },
 ];
 
 function Cellule({ v, orange }: { v: boolean | string; orange?: boolean }) {
@@ -39,7 +39,7 @@ export function AbonnementEcran() {
         <>
           <section className="card pad-md stack">
             <h3 className="h3">Ce que vous débloquez</h3>
-            <CheckList tone="orange" items={[{ label: "Tous les guides, à télécharger et à revendre" }, { label: "8 tâches et 2 métiers sur mesure par mois" }, { label: "Le chat du support, 7 j/7" }, { label: "Chaque nouveauté publiée" }]} />
+            <CheckList tone="orange" items={[{ label: "Tous les guides, à télécharger et à revendre" }, { label: "8 tâches et 2 métiers sur mesure par mois" }, { label: "Le chat du support, 7 j/7" }, { label: "La tâche de la semaine, les packs et les mises à jour des IA" }]} />
           </section>
           <section className="card pad-md row" style={{ alignItems: "flex-start", flexWrap: "nowrap" }}>
             <IconBox name="shield" tone="plain" />

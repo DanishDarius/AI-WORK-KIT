@@ -68,6 +68,7 @@ export default function Confidentialite() {
               <tr><td>Achat et accès</td><td>Adresse email d’achat, référence de la vente, offre achetée, statut de l’accès et de l’abonnement</td><td>Le prestataire de paiement, après votre commande</td></tr>
               <tr><td>Profil</td><td>Vos réponses au questionnaire de bienvenue : votre situation (salarié, indépendant, commerçant), votre métier, les IA que vous utilisez, votre appareil principal et votre pays</td><td>Vous, à la première ouverture ou depuis « Modifier mon profil »</td></tr>
               <tr><td>Progression</td><td>Tâches marquées comme faites, favoris, IA choisie pour chaque métier, dernière tâche consultée, jours d’activité (pour la série)</td><td>Votre utilisation</td></tr>
+              <tr><td>Notifications</td><td>Vos choix de notification (e-mail de la semaine, rappels d’échéance), la date de votre dernière visite du fil Nouveau, et le journal des e-mails qui vous ont été envoyés (type, date)</td><td>Vous, depuis votre profil, et votre utilisation</td></tr>
               <tr><td>Tâche sur mesure</td><td>Le métier concerné, la description de la tâche que vous soumettez, les IA choisies, le plan qui vous est remis et son statut (abonnés uniquement)</td><td>Vous</td></tr>
               <tr><td>Demandes de contact</td><td>Nom, email, entreprise, fonction, secteur, taille d’entreprise, description du besoin, budget envisagé, compte à l’origine de la demande</td><td>Formulaires Systèmes IA et Transformation IA</td></tr>
               <tr><td>Support</td><td>Vos échanges avec le support, par email ou par le chat (messages, adresse email du compte, page depuis laquelle vous écrivez, navigateur et pays approximatif détectés par l’outil de chat)</td><td>Vous et l’outil de chat</td></tr>
@@ -126,7 +127,7 @@ export default function Confidentialite() {
             <tbody>
               <tr><td>Supabase</td><td>Base de données, comptes et connexion</td><td>Union européenne (Irlande)</td></tr>
               <tr><td>Vercel</td><td>Hébergement et affichage de l’application</td><td>États-Unis et réseau mondial</td></tr>
-              <tr><td>Resend</td><td>Envoi des emails de la plateforme, des demandes de contact et des demandes de tâche sur mesure</td><td>Union européenne (Irlande), société américaine</td></tr>
+              <tr><td>Resend</td><td>Envoi des emails de la plateforme (compte, e-mail de la semaine, rappels d’échéance), des demandes de contact et des demandes de tâche sur mesure</td><td>Union européenne (Irlande), société américaine</td></tr>
               <tr><td>tawk.to</td><td>Chat du support, uniquement si vous l’ouvrez</td><td>États-Unis</td></tr>
               <tr><td>Hostinger</td><td>Messagerie support@parlonsads.com et nom de domaine</td><td>Centres de données de Hostinger</td></tr>
               <tr><td>Prestataire de paiement</td><td>Encaissement des paiements</td><td>Indiqué sur la page de commande</td></tr>
@@ -169,6 +170,7 @@ export default function Confidentialite() {
               <tr><td>aw-profil, aw-profil-envoye</td><td>Stockage local du navigateur</td><td>Afficher tout de suite votre profil (métier, situation, IA, appareil, pays), sans attendre le serveur</td><td>Jusqu’à ce que vous effaciez les données du site</td></tr>
               <tr><td>aw-compte</td><td>Stockage local du navigateur</td><td>Reconnaître qu’un autre compte se connecte sur cet appareil, pour ne pas lui montrer les copies du précédent</td><td>Jusqu’à la déconnexion</td></tr>
               <tr><td>aiw-pages, aiw-donnees, aiw-statique</td><td>Mémoire du navigateur pour le mode hors ligne</td><td>Garder lisibles sans connexion les pages, les tâches, les kits et les guides que vous avez déjà ouverts. Ces copies restent sur votre appareil</td><td>Jusqu’à la déconnexion ou au changement de compte ; les copies les plus anciennes sont remplacées par les plus récentes</td></tr>
+              <tr><td>aw-premiers-pas</td><td>Stockage local du navigateur</td><td>Retenir les étapes que vous avez cochées dans « Premiers pas »</td><td>Jusqu’à ce que vous effaciez les données du site</td></tr>
               <tr><td>awk-saved-guides</td><td>Stockage local du navigateur</td><td>Mémoriser les guides que vous avez enregistrés sur cet appareil</td><td>Jusqu’à ce que vous le retiriez ou effaciez les données du site</td></tr>
               <tr><td>aw-dock-hidden</td><td>Stockage de session</td><td>Garder masqué le module de progression si vous l’avez fermé</td><td>Jusqu’à la fermeture de l’onglet</td></tr>
             </tbody>

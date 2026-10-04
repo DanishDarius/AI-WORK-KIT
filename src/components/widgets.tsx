@@ -30,13 +30,15 @@ export function StatsCard() {
   const serie = data?.serie_jours ?? 0;
   const faites = data?.taches_faites_total ?? 0;
   const total = data?.taches_total ?? 0;
+  const nouveautes = useMoi()?.nouveautes ?? 0;
   return (
     <section className="card pad-md stack" aria-label="Votre progression">
       <div className="stats">
         <span className="stat is-gold"><Icon name="flame" size={22} strokeWidth={2.2} /><b>{data ? serie : "–"}</b> {serie > 1 ? "jours" : "jour"}</span>
         <span className="stat is-green"><Icon name="check" size={22} strokeWidth={2.4} /><b>{data ? faites : "–"}</b> {faites > 1 ? "tâches" : "tâche"}</span>
-        <Link className="icon-btn" href="/nouveau" aria-label="Nouveautés">
+        <Link className="icon-btn" href="/nouveau" aria-label={nouveautes > 0 ? `Nouveautés : ${nouveautes >= 9 ? "9 ou plus" : nouveautes} à lire` : "Nouveautés"}>
           <Icon name="bell" size={20} />
+          {nouveautes > 0 && <span className="pastille" aria-hidden="true">{nouveautes >= 9 ? "9+" : nouveautes}</span>}
         </Link>
       </div>
       <Bar value={total ? (faites / total) * 100 : 0} thin label={`${faites} tâches faites sur ${total}`} />

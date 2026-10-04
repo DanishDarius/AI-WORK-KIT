@@ -5,31 +5,60 @@ import { Icon } from "@/components/icon";
 import { Media } from "@/components/media";
 import { Page } from "@/components/shell";
 import { Chip, Kicker } from "@/components/ui";
-import { getUpdate, iaMakers, iaNoms, iaUpdates, newestFirst } from "@/lib/ia-updates";
+import { AbonnementCard } from "@/components/widgets";
+import { getAbonnement } from "@/lib/abonnement";
 import { exigerAccesActif } from "@/lib/acces";
+import { lireFil } from "@/lib/contenu";
+import { accesPublication, elementsDuFil } from "@/lib/fil";
+import { iaMakers, iaNoms } from "@/lib/ia-updates";
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return iaUpdates.map((item) => ({ slug: item.slug }));
-}
+export const metadata: Metadata = { title: "Mise à jour des IA" };
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const item = getUpdate(slug);
-  return item ? { title: item.title, description: item.text } : {};
-}
-
+// Une actualité des IA, lue dans le fil (cache, règle C1). Elle ne s'affiche
+// que si elle est parue ; réservée aux abonnés, un client sans abonnement en
+// voit le titre seul.
 export default async function MiseAJour({ params }: Props) {
-  await exigerAccesActif();
+  const { email } = await exigerAccesActif();
   const { slug } = await params;
-  const item = getUpdate(slug);
-  if (!item) notFound();
-  const autres = newestFirst(iaUpdates).filter((u) => u.slug !== item.slug);
+  const [fil, abonnement] = await Promise.all([lireFil(), getAbonnement(email)]);
+  const item = /^[a-z0-9-]{1,80}$/.test(slug) ? fil.misesAJour[slug] : undefined;
+  const acces = item ? accesPublication(fil, "mise_a_jour", slug, abonnement.actif) : "absente";
+  if (!item || acces === "absente") notFound();
+
+  const date = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeZone: "UTC" }).format(new Date(item.annonce_le));
+  const entete = (
+    <header className="stack">
+      <div className="row" style={{ gap: 8 }}>
+        <Chip tone="blue">{iaNoms[item.ia]}</Chip>
+        <Chip>{item.genre}</Chip>
+        <span className="tiny muted">{iaMakers[item.ia]} · {date}</span>
+      </div>
+      <h1 className="h1">{item.titre}</h1>
+      {acces === "ouverte" && <p className="lead">{item.resume}</p>}
+    </header>
+  );
+
+  if (acces === "reservee")
+    return (
+      <Page aside={<AbonnementCard />}>
+        <Link className="link" href="/nouveau"><Icon name="left" size={18} /> Nouveau</Link>
+        {entete}
+        <section className="card stack-sm" style={{ background: "var(--orange-bg)", borderColor: "var(--orange-line)" }}>
+          <h2 className="h3">Réservé aux abonnés</h2>
+          <p>Cette mise à jour fait partie de « Ce qui a changé dans les IA », publié chaque jeudi pour les abonnés : ce que cela change pour vous, et ce que vous devez faire.</p>
+          <div className="row"><Link className="btn btn-orange" href="/abonnement">Voir les formules</Link></div>
+        </section>
+      </Page>
+    );
+
+  // À lire aussi : les autres actualités que ce client peut ouvrir, la même IA d'abord.
+  const autres = elementsDuFil(fil, abonnement.actif)
+    .filter((e) => e.type === "mise_a_jour" && e.ref && e.ref !== item.slug)
+    .map((e) => fil.misesAJour[e.ref as string])
+    .filter(Boolean);
   const liees = [...autres.filter((u) => u.ia === item.ia), ...autres.filter((u) => u.ia !== item.ia)].slice(0, 3);
-  const date = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeZone: "UTC" }).format(new Date(item.publishedAt));
 
   return (
     <Page
@@ -51,16 +80,8 @@ export default async function MiseAJour({ params }: Props) {
       }
     >
       <Link className="link" href="/nouveau"><Icon name="left" size={18} /> Nouveau</Link>
-      <header className="stack">
-        <div className="row" style={{ gap: 8 }}>
-          <Chip tone="blue">{iaNoms[item.ia]}</Chip>
-          <Chip>{item.kind}</Chip>
-          <span className="tiny muted">{iaMakers[item.ia]} · {date}</span>
-        </div>
-        <h1 className="h1">{item.title}</h1>
-        <p className="lead">{item.text}</p>
-      </header>
-      <Media media={item.media} priority />
+      {entete}
+      {item.media && <Media media={item.media} priority />}
       <section className="card is-mint stack-sm" aria-labelledby="pour-vous">
         <h2 id="pour-vous" className="h3">Ce que ça change pour vous</h2>
         <p>{item.impact}</p>
@@ -69,10 +90,12 @@ export default async function MiseAJour({ params }: Props) {
         <h2 id="a-faire" className="h3">Ce que vous devez faire</h2>
         <p>{item.action}</p>
       </section>
-      <section className="stack-sm" aria-labelledby="en-detail">
-        <h2 id="en-detail" className="h2">En détail</h2>
-        <ul className="steps">{item.points.map((p) => <li key={p}>{p}</li>)}</ul>
-      </section>
+      {item.points.length > 0 && (
+        <section className="stack-sm" aria-labelledby="en-detail">
+          <h2 id="en-detail" className="h2">En détail</h2>
+          <ul className="steps">{item.points.map((p) => <li key={p}>{p}</li>)}</ul>
+        </section>
+      )}
       {liees.length > 0 && (
         <section className="stack" aria-labelledby="a-lire-aussi">
           <h2 id="a-lire-aussi" className="h2">À lire aussi</h2>
@@ -80,7 +103,7 @@ export default async function MiseAJour({ params }: Props) {
             {liees.map((u) => (
               <Link key={u.slug} href={`/mises-a-jour-ia/${u.slug}`} className="card pad-md card-link">
                 <Chip tone="blue">{iaNoms[u.ia]}</Chip>
-                <span className="strong">{u.title}</span>
+                <span className="strong">{u.titre}</span>
               </Link>
             ))}
           </div>

@@ -30,6 +30,9 @@ const PUBLIC_PATHS = [
   "/nouveau-mot-de-passe",
   "/activation",
   "/auth",
+  // Lien « ne plus recevoir » de l'e-mail de la semaine : ouvert depuis la
+  // messagerie, sans connexion.
+  "/desabonnement",
   // Pages légales : lisibles avant tout achat ou connexion.
   "/mentions-legales",
   "/conditions",

@@ -23,6 +23,13 @@ describe("C1 · le contenu commun passe par le cache", () => {
     "modeles_prompts",
     "champs_modele",
     "conseils_ia",
+    // Le fil Nouveau (migration 0040).
+    "publications",
+    "mises_a_jour_ia",
+    "packs",
+    "packs_taches",
+    "sessions_live",
+    "videos",
   ];
   const motif = new RegExp(`\\.from\\(\\s*["'](${TABLES.join("|")})["']`);
 
@@ -36,8 +43,8 @@ describe("C1 · le contenu commun passe par le cache", () => {
   it("src/lib/contenu.ts met ses lectures en cache et reste côté serveur", () => {
     const contenu = lire("src/lib/contenu.ts");
     expect(contenu).toMatch(/^import "server-only";/);
-    // Catalogue, cas pratiques, kit d'un métier, modèle d'une tâche.
-    expect(contenu.match(/unstable_cache\(/g)?.length).toBe(4);
+    // Catalogue, cas pratiques, kit d'un métier, modèle d'une tâche, fil Nouveau.
+    expect(contenu.match(/unstable_cache\(/g)?.length).toBe(5);
     expect(contenu).toMatch(/revalidate:\s*DUREE_SECONDES/);
   });
 });
@@ -78,6 +85,40 @@ describe("C4 · un GET n'écrit jamais en base", () => {
     const suite = contenu.slice(debut + 10).search(/export\s+(async\s+)?function\s+(POST|PUT|PATCH|DELETE)\b/);
     const corps = suite === -1 ? contenu.slice(debut) : contenu.slice(debut, debut + 10 + suite);
     expect(corps).not.toMatch(/\.(insert|upsert|update|delete)\s*\(/);
+  });
+});
+
+describe("C4 · une seule exception écrite : le travail planifié", () => {
+  // Le planificateur de Vercel n'appelle qu'en GET. Cette route inscrit les
+  // envois d'e-mails au journal : elle est protégée par un secret, idempotente
+  // et bornée. Aucune autre route ne lance ce travail.
+  const ROUTE = "src/app/api/planifie/quotidien/route.ts";
+
+  it("seule la route planifiée lance le travail quotidien", () => {
+    const lanceurs = sources().filter((f) => f !== "src/lib/planifie.ts" && /@\/lib\/planifie["']/.test(lire(f)));
+    expect(lanceurs).toEqual([ROUTE]);
+  });
+
+  it("la route planifiée exige le secret, comparé à temps constant, et ne fait rien sans lui", () => {
+    const route = lire(ROUTE);
+    expect(route).toMatch(/process\.env\.CRON_SECRET/);
+    expect(route).toMatch(/timingSafeEqual/);
+    expect(route).toMatch(/status:\s*503/);
+    expect(route).toMatch(/status:\s*401/);
+    // Le secret est contrôlé avant le travail.
+    expect(route.indexOf("autorise(request)")).toBeLessThan(route.indexOf("travailQuotidien()"));
+  });
+
+  it("le planificateur de Vercel n'appelle que cette route, une fois par jour", () => {
+    const config = JSON.parse(lire("vercel.json") || "{}") as { crons?: { path: string; schedule: string }[] };
+    expect(config.crons).toEqual([{ path: "/api/planifie/quotidien", schedule: "0 6 * * *" }]);
+  });
+
+  it("le travail planifié borne ses envois et inscrit chaque e-mail au journal avant de l'envoyer", () => {
+    const travail = lire("src/lib/planifie.ts");
+    expect(travail).toMatch(/export const ENVOIS_MAX = \d+/);
+    expect(travail.indexOf('.upsert(lot.map')).toBeGreaterThan(-1);
+    expect(travail.indexOf('.upsert(lot.map')).toBeLessThan(travail.indexOf("envoyerEmailsClients(lot"));
   });
 });
 

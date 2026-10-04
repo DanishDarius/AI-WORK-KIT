@@ -79,7 +79,8 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
   const prenomExemple = modele?.exemple_cas ? exercices[modele.exemple_cas - 1]?.prenom ?? null : null;
   const ressources = (data.ressources ?? []).filter((r) => !r.outil || r.outil === ia);
   const categorie = category(tache.code);
-  const retour = `/metiers/${encodeURIComponent(metier)}`;
+  // Une tâche du fil Nouveau n'appartient à aucun parcours : on revient au fil ou au pack.
+  const retour = data.fil?.retour ?? `/metiers/${encodeURIComponent(metier)}`;
 
   async function copierPrompt() {
     const ok = await copierTexte(aCopier);
@@ -90,12 +91,13 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
   return (
     <div className="task">
       <header className="task-top">
-        <Link className="icon-btn is-flat" href={retour} aria-label="Fermer et revenir au parcours"><Icon name="x" size={26} /></Link>
+        <Link className="icon-btn is-flat" href={retour} aria-label={data.fil ? "Fermer et revenir" : "Fermer et revenir au parcours"}><Icon name="x" size={26} /></Link>
         <div className="grow">
-          <span>{data.metier_nom ?? "Parcours"} · {categorie}</span>
+          <span>{data.fil?.libelle ?? data.metier_nom ?? "Parcours"} · {categorie}</span>
           <h1>{tache.titre}</h1>
         </div>
-        <button type="button" className="icon-btn" aria-pressed={statut.favori} aria-label={statut.favori ? "Retirer des favoris" : "Ajouter aux favoris"} onClick={() => basculer("favori")} style={statut.favori ? { color: "var(--gold)", borderColor: "#f5dfa3", background: "var(--gold-bg)" } : undefined}>
+        {/* Les favoris se rangent par métier : une tâche du fil n'en a pas. */}
+        <button type="button" hidden={Boolean(data.fil)} className="icon-btn" aria-pressed={statut.favori} aria-label={statut.favori ? "Retirer des favoris" : "Ajouter aux favoris"} onClick={() => basculer("favori")} style={statut.favori ? { color: "var(--gold)", borderColor: "#f5dfa3", background: "var(--gold-bg)" } : undefined}>
           <Icon name="star" size={20} filled={statut.favori} />
         </button>
       </header>
@@ -302,7 +304,7 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
             {data.suivante_id ? (
               <Link className="btn btn-plain" href={tacheHref(data.suivante_id, metier)}>Tâche suivante <Icon name="arrow" size={18} /></Link>
             ) : (
-              <Link className="btn btn-secondary btn-plain" href={retour}>Retour au parcours</Link>
+              <Link className="btn btn-secondary btn-plain" href={retour}>{data.fil ? "Retour" : "Retour au parcours"}</Link>
             )}
           </div>
         </section>

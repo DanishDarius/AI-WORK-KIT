@@ -134,6 +134,9 @@ export type TacheDetail = {
     outil_gratuit_conseille: string | null;
     video_url: string | null;
   };
+  // Tâche du fil Nouveau (tâche de la semaine, tâche d'un pack) : d'où elle
+  // vient et où revenir. null pour une tâche d'un parcours.
+  fil?: { libelle: string; retour: string } | null;
   fait: boolean;
   favori: boolean;
   ia_par_defaut: IA | null;
@@ -237,6 +240,7 @@ export async function api<T>(
     throw new Error(
       "Votre session a expiré. Reconnectez-vous pour continuer.",
     );
+  if (response.status === 402) throw new Error("Ce contenu est réservé aux abonnés.");
   if (response.status === 403)
     throw new Error("Votre abonnement ne donne pas accès à ce contenu.");
   if (response.status === 404) throw new Error("Ce contenu n’existe plus ou a été déplacé.");

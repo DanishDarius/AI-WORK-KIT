@@ -34,13 +34,28 @@ union all
 select 'table interne ouverte à un compte connecté', nom, droit
 from droits
 where role = 'authenticated'
-  and nom in ('acces_clients', 'abonnements', 'demandes_plans', 'demandes_contact')
+  and nom in ('acces_clients', 'abonnements', 'demandes_plans', 'demandes_contact', 'preferences_notifications', 'envois_notifications')
 
 union all
 select 'contenu d''un kit ouvert à un compte connecté', nom, droit
 from droits
 where role = 'authenticated'
   and nom in ('kits', 'ressources', 'kits_metier', 'ressources_taches', 'modeles_prompts', 'champs_modele', 'conseils_ia')
+
+union all
+select 'contenu du fil ouvert à un compte connecté', nom, droit
+from droits
+where role = 'authenticated'
+  and nom in ('publications', 'mises_a_jour_ia', 'packs', 'packs_taches', 'sessions_live', 'videos')
+
+union all
+select 'tâches du fil lisibles sans passer par le serveur', t.nom, ''
+from tables t
+where t.nom in ('taches', 'exercices')
+  and not exists (
+    select 1 from pg_policies p
+    where p.schemaname = 'public' and p.tablename = t.nom and p.permissive = 'RESTRICTIVE' and p.cmd = 'SELECT'
+  )
 
 union all
 select 'contenu payant modifiable par un compte connecté', nom, droit

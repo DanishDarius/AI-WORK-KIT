@@ -20,6 +20,6 @@ export async function generateMetadata({ params }: PageProps<"/taches/[id]">): P
 export default async function TachePage({ params, searchParams }: PageProps<"/taches/[id]">) {
   await exigerAccesActif();
   const { id } = await params;
-  const { metier } = await searchParams;
-  return <TacheRoute id={id} metier={typeof metier === "string" ? metier : ""} />;
+  const { metier, fil } = await searchParams;
+  return <TacheRoute id={id} metier={typeof metier === "string" ? metier : ""} duFil={fil === "1"} />;
 }

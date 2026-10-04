@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import { lireCatalogue, lireComplementsTache, lireExercices, metierParSlug, ressourcesPourMetier, tachesDuMetier } from "@/lib/contenu";
+import { getAbonnement } from "@/lib/abonnement";
+import { lireCatalogue, lireComplementsTache, lireExercices, lireFil, metierParSlug, ressourcesPourMetier, tachesDuMetier, type TacheContenu } from "@/lib/contenu";
+import { tacheDuFil } from "@/lib/fil";
 import { miseEnPlaceDeLaTache } from "@/lib/mise-en-place";
 import { estUuid } from "@/lib/normaliser";
 import { erreurServeur } from "@/lib/reponses-api";
@@ -43,7 +45,8 @@ export async function GET(
   }
   const tache = catalogue.taches[id];
   if (!tache) {
-    return NextResponse.json({ error: "Tâche introuvable" }, { status: 404 });
+    // Ce n'est pas une tâche d'un parcours : peut-être une tâche du fil Nouveau.
+    return tacheDuFilNouveau(id, access);
   }
   const metier = metierParSlug(catalogue, metierSlug);
 
@@ -68,19 +71,8 @@ export async function GET(
   const suivante = apres.find((t) => !faites.has(t.id)) ?? apres[0] ?? null;
 
   return NextResponse.json({
-    tache: {
-      code: tache.code,
-      titre: tache.titre,
-      limite_connue: tache.limite_connue,
-      ia_alternative_conseillee: tache.ia_alternative_conseillee,
-      resultat: tache.resultat,
-      etapes: tache.etapes,
-      precisions: tache.precisions,
-      gratuit_ok: tache.gratuit_ok,
-      mobile_ok: tache.mobile_ok,
-      outil_gratuit_conseille: tache.outil_gratuit_conseille,
-      video_url: tache.video_url,
-    },
+    tache: detail(tache),
+    fil: null,
     ia_par_defaut: (metier && chemins.get(metier.id)) ?? null,
     fait: faites.has(tache.id),
     favori: favoris.has(tache.id),
@@ -93,5 +85,73 @@ export async function GET(
     // l'ancienne mise en place (outils et automatisations écrits dans le code,
     // souvent liés à une offre payante de l'IA).
     mise_en_place: complements.modele ? null : miseEnPlaceDeLaTache(tache.code),
+  });
+}
+
+function detail(tache: TacheContenu) {
+  return {
+    code: tache.code,
+    titre: tache.titre,
+    limite_connue: tache.limite_connue,
+    ia_alternative_conseillee: tache.ia_alternative_conseillee,
+    resultat: tache.resultat,
+    etapes: tache.etapes,
+    precisions: tache.precisions,
+    gratuit_ok: tache.gratuit_ok,
+    mobile_ok: tache.mobile_ok,
+    outil_gratuit_conseille: tache.outil_gratuit_conseille,
+    video_url: tache.video_url,
+  };
+}
+
+// Une tâche du fil Nouveau (tâche de la semaine, tâche d'un pack). Elle ne
+// s'ouvre que si sa publication est parue, et, quand elle est réservée, que
+// pour un abonné : 404 avant parution, 402 sans abonnement. Elle n'appartient
+// à aucun parcours : ni métier, ni tâche suivante, ni favori.
+//
+// Le fil vient du cache (règle C1). Deux requêtes base propres au compte :
+// l'abonnement (gardé 60 secondes) et les tâches faites.
+async function tacheDuFilNouveau(id: string, access: { supabase: Awaited<ReturnType<typeof import("@/lib/supabase/server").createClient>>; user: { id: string; email?: string | null } }) {
+  let fil;
+  try {
+    fil = await lireFil();
+  } catch (erreur) {
+    return erreurServeur("tache", erreur);
+  }
+  if (!fil.taches[id]) {
+    return NextResponse.json({ error: "Tâche introuvable" }, { status: 404 });
+  }
+  const abonnement = await getAbonnement(access.user.email);
+  const trouvee = tacheDuFil(fil, id, abonnement.actif);
+  if (!trouvee || trouvee.acces === "absente") {
+    return NextResponse.json({ error: "Tâche introuvable" }, { status: 404 });
+  }
+  if (trouvee.acces === "reservee") {
+    // 402 et non 403 : un 403 veut dire « accès retiré » et fait vider les
+    // copies du mode hors ligne (public/sw.js). Ici l'accès est valable, il
+    // manque seulement l'abonnement.
+    return NextResponse.json({ error: "Réservé aux abonnés" }, { status: 402 });
+  }
+
+  let exercices, complements;
+  try {
+    [exercices, complements] = await Promise.all([lireExercices(id), lireComplementsTache(id)]);
+  } catch (erreur) {
+    return erreurServeur("tache", erreur);
+  }
+  const faites = await idsTachesFaites(access.supabase, access.user.id);
+
+  return NextResponse.json({
+    tache: detail(trouvee.tache),
+    fil: trouvee.origine,
+    ia_par_defaut: null,
+    fait: faites.has(id),
+    favori: false,
+    metier_nom: null,
+    suivante_id: null,
+    exercices,
+    modele: complements.modele,
+    ressources: [],
+    mise_en_place: null,
   });
 }

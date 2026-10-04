@@ -28,7 +28,16 @@ const TABLES_PERSONNELLES = new Set([
 ]);
 
 // Tables internes : seul le serveur (clé service) les lit et les écrit.
-const TABLES_INTERNES = new Set(["acces_clients", "abonnements", "demandes_plans", "demandes_contact"]);
+const TABLES_INTERNES = new Set([
+  "acces_clients",
+  "abonnements",
+  "demandes_plans",
+  "demandes_contact",
+  // Notifications : lues et écrites par le serveur, pour le compte connecté
+  // ou sur présentation du jeton d'un e-mail (migration 0040).
+  "preferences_notifications",
+  "envois_notifications",
+]);
 
 // Contenu des kits : lu par le serveur seulement (clé service, puis cache).
 // Un compte connecté n'y a aucun droit, même en lecture.
@@ -40,6 +49,14 @@ const TABLES_CONTENU_SERVEUR = new Set([
   "modeles_prompts",
   "champs_modele",
   "conseils_ia",
+  // Le fil Nouveau (migration 0040) : c'est le serveur qui décide, compte par
+  // compte, ce qui est montré en entier ou en titre seul.
+  "publications",
+  "mises_a_jour_ia",
+  "packs",
+  "packs_taches",
+  "sessions_live",
+  "videos",
 ]);
 
 type Etat = {
@@ -173,6 +190,21 @@ describe("S4 · droits et protections des tables", () => {
     const sql = lister("supabase/migrations", (f) => f.endsWith(".sql")).map(lire).join("\n");
     expect(sql).toMatch(/create or replace function public\.a_un_acces_actif\(\)[\s\S]{0,200}security definer[\s\S]{0,80}set search_path = ''/i);
     expect(sql).toMatch(/revoke all on function public\.a_un_acces_actif\(\) from anon/i);
+  });
+
+  it("les tâches du fil ne sortent que par le serveur : politiques restrictives sur taches et exercices", () => {
+    const sql = lister("supabase/migrations", (f) => f.endsWith(".sql")).map(lire).join("\n");
+    expect(sql).toMatch(/create policy "taches_du_fil_par_le_serveur" on taches\s+as restrictive for select to authenticated using \(not du_fil\)/i);
+    expect(sql).toMatch(/create policy "exercices_du_fil_par_le_serveur" on exercices\s+as restrictive for select to authenticated using \(not public\.tache_du_fil\(tache_id\)\)/i);
+    expect(sql).toMatch(/create or replace function public\.tache_du_fil\(p_tache uuid\)[\s\S]{0,200}security definer[\s\S]{0,80}set search_path = ''/i);
+    expect(sql).toMatch(/revoke all on function public\.tache_du_fil\(uuid\) from anon/i);
+    // Aucune migration ne retire ces deux politiques sans les recréer.
+    for (const nom of ["taches_du_fil_par_le_serveur", "exercices_du_fil_par_le_serveur"]) {
+      const creations = sql.split(`create policy "${nom}"`).length - 1;
+      const retraits = sql.split(`drop policy if exists "${nom}"`).length - 1;
+      expect(creations, nom).toBeGreaterThanOrEqual(retraits);
+      expect(creations, nom).toBeGreaterThan(0);
+    }
   });
 
   it("aucune politique n'ouvre une table à tout compte connecté", () => {

@@ -146,19 +146,72 @@ export type RessourceDeTache = RessourceLiee & { metiers: string[] };
 
 export type ComplementsTache = { modele: ModeleContenu | null; ressources: RessourceDeTache[] };
 
-async function chargerCatalogue(): Promise<CatalogueContenu> {
-  const admin = createAdminClient();
-  const [metiers, taches, liaisons] = await Promise.all([
-    admin.from("metiers").select("id, slug, nom, description, description_local, publics").order("ordre", { ascending: true }).limit(200),
-    admin.from("taches").select("id, code, titre, limite_connue, ia_alternative_conseillee, resultat, etapes, precisions, gratuit_ok, mobile_ok, outil_gratuit_conseille, video_url").limit(2000),
-    admin.from("metiers_taches").select("metier_id, tache_id").order("ordre", { ascending: true }).limit(10000),
-  ]);
-  const erreur = metiers.error || taches.error || liaisons.error;
-  // Une erreur n'est jamais mise en cache : la prochaine requête réessaie.
-  if (erreur) throw new Error(`Lecture du catalogue impossible : ${erreur.message}`);
+// ===== Le fil « Nouveau » (migration 0040) =====
 
+export type TypePublication = "tache" | "pack" | "mise_a_jour" | "guide" | "ressource";
+
+export type PublicationContenu = {
+  id: string;
+  type: TypePublication;
+  /** Ce qui paraît : id de la tâche, slug du pack, de la mise à jour ou du guide, clé de la ressource. */
+  ref_id: string;
+  titre: string;
+  resume: string | null;
+  /** Date ISO. Avant cette date, la publication ne se voit pas. */
+  publie_le: string;
+  reserve_abonnes: boolean;
+};
+
+/** Image ou vidéo d'une actualité. Les vidéos ne se chargent qu'au clic. */
+export type MediaContenu =
+  | { type: "image"; src: string; alt: string; credit: string }
+  | { type: "youtube"; id: string; title: string; credit: string }
+  | { type: "video"; src: string; poster: string; title: string; credit: string; captions?: string };
+
+export type MiseAJourContenu = {
+  slug: string;
+  ia: "chatgpt" | "claude" | "gemini";
+  genre: string;
+  titre: string;
+  /** Date de l'annonce par l'éditeur (AAAA-MM-JJ). */
+  annonce_le: string;
+  resume: string;
+  impact: string;
+  action: string;
+  points: string[];
+  disponibilite: string;
+  sources: { label: string; url: string }[];
+  media: MediaContenu | null;
+};
+
+export type PackContenu = {
+  slug: string;
+  titre: string;
+  description: string;
+  pour_qui: string | null;
+  /** Identifiants des tâches du pack, dans l'ordre. */
+  taches: string[];
+};
+
+export type SessionLiveContenu = { debut_le: string; titre: string; lien: string | null; replay_url: string | null };
+
+export type FilContenu = {
+  /** Toutes les publications, de la plus récente à la plus ancienne, y compris celles à paraître. */
+  publications: PublicationContenu[];
+  misesAJour: Record<string, MiseAJourContenu>;
+  packs: Record<string, PackContenu>;
+  /** Les tâches du fil (tâche de la semaine, tâches d'un pack), par identifiant. */
+  taches: Record<string, TacheContenu>;
+  sessions: SessionLiveContenu[];
+  /** Lien des vidéos hors kit, par clé. */
+  videos: Record<string, string>;
+};
+
+const COLONNES_TACHE = "id, code, titre, limite_connue, ia_alternative_conseillee, resultat, etapes, precisions, gratuit_ok, mobile_ok, outil_gratuit_conseille, video_url";
+
+function tachesParId(lignes: unknown): Record<string, TacheContenu> {
   const parId: Record<string, TacheContenu> = {};
-  for (const t of (taches.data ?? []) as TacheContenu[]) {
+  for (const t of (Array.isArray(lignes) ? lignes : []) as TacheContenu[]) {
     parId[t.id] = {
       ...t,
       resultat: t.resultat ?? null,
@@ -171,6 +224,22 @@ async function chargerCatalogue(): Promise<CatalogueContenu> {
       video_url: t.video_url ?? null,
     };
   }
+  return parId;
+}
+
+async function chargerCatalogue(): Promise<CatalogueContenu> {
+  const admin = createAdminClient();
+  const [metiers, taches, liaisons] = await Promise.all([
+    admin.from("metiers").select("id, slug, nom, description, description_local, publics").order("ordre", { ascending: true }).limit(200),
+    // Les tâches du fil Nouveau (du_fil) n'entrent dans aucun parcours : elles se lisent avec le fil.
+    admin.from("taches").select(COLONNES_TACHE).eq("du_fil", false).limit(2000),
+    admin.from("metiers_taches").select("metier_id, tache_id").order("ordre", { ascending: true }).limit(10000),
+  ]);
+  const erreur = metiers.error || taches.error || liaisons.error;
+  // Une erreur n'est jamais mise en cache : la prochaine requête réessaie.
+  if (erreur) throw new Error(`Lecture du catalogue impossible : ${erreur.message}`);
+
+  const parId = tachesParId(taches.data);
 
   const tachesParMetier: Record<string, string[]> = {};
   for (const l of (liaisons.data ?? []) as { metier_id: string; tache_id: string }[]) {
@@ -369,6 +438,110 @@ async function chargerComplementsTache(tacheId: string): Promise<ComplementsTach
     ressources,
   };
 }
+
+const HTTPS = /^https:\/\//;
+const texte = (valeur: unknown) => (typeof valeur === "string" ? valeur : "");
+
+// Le média d'une actualité vient d'un champ JSON : il est relu ici. Un média
+// mal formé (lien qui n'est pas en https, identifiant YouTube inattendu) est
+// écarté : l'actualité s'affiche alors sans image.
+function lireMedia(valeur: unknown): MediaContenu | null {
+  if (!valeur || typeof valeur !== "object") return null;
+  const m = valeur as Record<string, unknown>;
+  const credit = texte(m.credit);
+  if (m.type === "image") {
+    const src = texte(m.src);
+    return HTTPS.test(src) || /^\/actus\/[a-z0-9-]+\.(svg|png|jpg|webp)$/.test(src) ? { type: "image", src, alt: texte(m.alt), credit } : null;
+  }
+  if (m.type === "youtube") {
+    const id = texte(m.id);
+    return /^[A-Za-z0-9_-]{11}$/.test(id) ? { type: "youtube", id, title: texte(m.title), credit } : null;
+  }
+  if (m.type === "video") {
+    const src = texte(m.src);
+    const poster = texte(m.poster);
+    if (!HTTPS.test(src) || !HTTPS.test(poster)) return null;
+    const captions = texte(m.captions);
+    return { type: "video", src, poster, title: texte(m.title), credit, ...(HTTPS.test(captions) ? { captions } : {}) };
+  }
+  return null;
+}
+
+async function chargerFil(): Promise<FilContenu> {
+  const admin = createAdminClient();
+  const [publications, misesAJour, packs, liaisons, taches, sessions, videos] = await Promise.all([
+    admin.from("publications").select("id, type, ref_id, titre, resume, publie_le, reserve_abonnes").order("publie_le", { ascending: false }).limit(300),
+    admin.from("mises_a_jour_ia").select("slug, ia, genre, titre, annonce_le, resume, impact, action, points, disponibilite, sources, media").limit(300),
+    admin.from("packs").select("id, slug, titre, description, pour_qui").limit(100),
+    admin.from("packs_taches").select("pack_id, tache_id").order("ordre", { ascending: true }).limit(1000),
+    admin.from("taches").select(COLONNES_TACHE).eq("du_fil", true).limit(500),
+    admin.from("sessions_live").select("debut_le, titre, lien, replay_url").order("debut_le", { ascending: false }).limit(24),
+    admin.from("videos").select("cle, url").limit(50),
+  ]);
+  const erreur = publications.error || misesAJour.error || packs.error || liaisons.error || taches.error || sessions.error || videos.error;
+  if (erreur) throw new Error(`Lecture du fil impossible : ${erreur.message}`);
+
+  const tachesFil = tachesParId(taches.data);
+
+  const parPack: Record<string, string[]> = {};
+  for (const l of (liaisons.data ?? []) as { pack_id: string; tache_id: string }[]) {
+    if (tachesFil[l.tache_id]) (parPack[l.pack_id] ??= []).push(l.tache_id);
+  }
+
+  const lesPacks: Record<string, PackContenu> = {};
+  for (const p of (packs.data ?? []) as { id: string; slug: string; titre: string; description: string; pour_qui: string | null }[]) {
+    lesPacks[p.slug] = { slug: p.slug, titre: p.titre, description: p.description, pour_qui: p.pour_qui ?? null, taches: parPack[p.id] ?? [] };
+  }
+
+  const lesMisesAJour: Record<string, MiseAJourContenu> = {};
+  for (const m of (misesAJour.data ?? []) as (Omit<MiseAJourContenu, "points" | "sources" | "media"> & { points: unknown; sources: unknown; media: unknown })[]) {
+    lesMisesAJour[m.slug] = {
+      slug: m.slug,
+      ia: m.ia,
+      genre: m.genre,
+      titre: m.titre,
+      annonce_le: m.annonce_le,
+      resume: m.resume,
+      impact: m.impact,
+      action: m.action,
+      points: tableau<unknown>(m.points).filter((p): p is string => typeof p === "string"),
+      disponibilite: m.disponibilite,
+      sources: tableau<{ label?: unknown; url?: unknown }>(m.sources)
+        .map((x) => ({ label: texte(x?.label), url: texte(x?.url) }))
+        .filter((x) => x.label && HTTPS.test(x.url)),
+      media: lireMedia(m.media),
+    };
+  }
+
+  return {
+    publications: ((publications.data ?? []) as PublicationContenu[]).map((p) => ({
+      id: p.id,
+      type: p.type,
+      ref_id: p.ref_id,
+      titre: p.titre,
+      resume: p.resume ?? null,
+      publie_le: p.publie_le,
+      reserve_abonnes: p.reserve_abonnes !== false,
+    })),
+    misesAJour: lesMisesAJour,
+    packs: lesPacks,
+    taches: tachesFil,
+    sessions: ((sessions.data ?? []) as SessionLiveContenu[]).map((x) => ({ debut_le: x.debut_le, titre: x.titre, lien: x.lien ?? null, replay_url: x.replay_url ?? null })),
+    videos: Object.fromEntries(((videos.data ?? []) as { cle: string; url: string }[]).filter((v) => HTTPS.test(v.url)).map((v) => [v.cle, v.url])),
+  };
+}
+
+/**
+ * Le fil Nouveau : publications, mises à jour des IA, packs, tâches du fil,
+ * sessions en direct et vidéos hors kit. Une lecture en base toutes les
+ * 10 minutes : une publication programmée paraît donc avec 10 minutes de
+ * retard au plus. Ce cache contient aussi ce qui n'est pas encore paru et ce
+ * qui est réservé aux abonnés : src/lib/fil.ts décide de ce qui est montré.
+ */
+export const lireFil = unstable_cache(chargerFil, ["contenu-fil"], {
+  revalidate: DUREE_SECONDES,
+  tags: [ETIQUETTE],
+});
 
 /** Métiers, tâches et parcours : une lecture en base toutes les 10 minutes. */
 export const lireCatalogue = unstable_cache(chargerCatalogue, ["contenu-catalogue"], {

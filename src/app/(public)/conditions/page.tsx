@@ -93,7 +93,7 @@ export default function Conditions() {
           <li>la <strong>tâche sur mesure</strong> : vous décrivez une tâche plus complexe ou propre à votre activité, même dans un métier déjà couvert, et l’équipe vous prépare sa fiche complète (cas, modèle à remplir, prompt pour chacune des IA choisies, ressources utiles), livrée dans votre espace en 30 minutes à 2 heures, dans la limite de <strong>8 demandes par mois</strong> ;</li>
           <li>le <strong>métier sur mesure</strong> : pour un métier couvert ou non, l’équipe vous prépare un kit complet (configuration de votre IA, skills, modèles de documents, routines et vos principales tâches), livré en 8 à 24 heures, dans la limite de <strong>2 demandes par mois</strong> ;</li>
           <li>le chat du support, en plus de l’email ;</li>
-          <li>les nouveautés publiées pour les abonnés.</li>
+          <li>les nouveautés publiées pour les abonnés : la tâche de la semaine, les packs de tâches et les mises à jour des IA. Un client sans abonnement en voit le titre.</li>
         </ul>
         <p>
           Les délais de livraison du sur-mesure courent pendant les heures d’activité du support et sont indicatifs.
@@ -101,7 +101,12 @@ export default function Conditions() {
           de la tâche à votre place. Une version anonymisée d’une demande peut rejoindre le catalogue d’AIW quand
           elle peut servir à d’autres clients ; aucune donnée qui vous identifie n’y figure.
         </p>
-        <p>Le sur-mesure, le téléchargement des guides et le chat ne sont utilisables que pendant un abonnement actif.</p>
+        <p>Le sur-mesure, le téléchargement des guides, le chat et les nouveautés réservées aux abonnés ne sont utilisables que pendant un abonnement actif.</p>
+        <p>
+          Les abonnés reçoivent un e-mail par semaine, qui annonce ce qui est paru, et, pour les formules au mois et à l’année,
+          un rappel 5 jours avant l’échéance puis le jour même. Chacun de ces e-mails se coupe depuis le profil ; l’e-mail de la
+          semaine se coupe aussi par le lien placé en bas du message.
+        </p>
 
         <h3>Services sur mesure</h3>
         <p>
@@ -164,7 +169,7 @@ export default function Conditions() {
           <li><strong>Paiement unique, sans renouvellement automatique :</strong> chaque période est payée une seule fois. Aucun prélèvement n’est effectué ensuite, et il n’y a donc rien à résilier.</li>
           <li><strong>Prolongation :</strong> vous pouvez prolonger à tout moment depuis la Plateforme, au prix en vigueur. La nouvelle période s’ajoute à la fin de celle en cours.</li>
           <li><strong>Activation :</strong> l’abonnement s’active automatiquement lorsque le paiement est fait avec l’adresse email de votre compte. Si vous avez payé avec une autre adresse, écrivez à {mail} pour le faire rattacher.</li>
-          <li><strong>Fin de l’abonnement :</strong> à l’échéance, vous conservez l’Accès AI WORK KIT et les 10 guides inclus, ainsi que les livraisons sur mesure déjà reçues et les guides déjà téléchargés. Le sur-mesure, le téléchargement et le chat se referment.</li>
+          <li><strong>Fin de l’abonnement :</strong> à l’échéance, vous conservez l’Accès AI WORK KIT et les 10 guides inclus, ainsi que les livraisons sur mesure déjà reçues et les guides déjà téléchargés. Le sur-mesure, le téléchargement, le chat et les nouveautés réservées aux abonnés se referment.</li>
         </ul>
       </LegalSection>
 

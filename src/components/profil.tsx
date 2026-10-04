@@ -8,6 +8,7 @@ import { dateLongue, fcfa, FORMULES, PRIX } from "@/lib/offre";
 import { useProfil } from "@/lib/profil";
 import type { GuideSummary } from "@/lib/guides";
 import { ActionsCompte } from "./auth";
+import { CommunauteAbonnes, Notifications } from "./compte-abonne";
 import { GuidesEnregistres } from "./guides";
 import { Icon } from "./icon";
 import { Page } from "./shell";
@@ -137,6 +138,19 @@ export function ProfilEcran({ guides }: { guides: Pick<GuideSummary, "slug" | "t
             </div>
           )}
         </div>
+      </section>
+
+      <section id="notifications" className="card stack-sm" aria-labelledby="mes-notifications">
+        <h2 id="mes-notifications" className="h2">Notifications</h2>
+        <Notifications />
+      </section>
+
+      <section id="communaute" className="card stack" aria-labelledby="ma-communaute">
+        <div className="row-between">
+          <h2 id="ma-communaute" className="h2">Communauté des abonnés</h2>
+          <Chip tone="orange">Abonnés</Chip>
+        </div>
+        <CommunauteAbonnes />
       </section>
 
       <section id="favoris" className="card stack-sm" aria-labelledby="mes-favoris">
