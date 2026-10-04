@@ -50,6 +50,16 @@ const categories: Record<string, string> = {
   F54: "Organisation",
   F55: "Création",
   F56: "Relation client",
+  // Tâches du fil Nouveau (tâche de la semaine, tâches d'un pack).
+  F57: "Relation client",
+  F58: "Rédaction",
+  F59: "Relation client",
+  F60: "Rédaction",
+  F61: "Analyse",
+  F62: "Analyse",
+  F63: "Création",
+  F64: "Rédaction",
+  F65: "Analyse",
 };
 export const usages = [
   "Tout",
