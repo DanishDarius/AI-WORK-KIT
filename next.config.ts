@@ -60,6 +60,7 @@ const nextConfig: NextConfig = {
   },
   outputFileTracingIncludes: {
     "/api/guides/[slug]/pdf": ["./private/guides/pdf/**/*.pdf"],
+    "/api/kits/fichiers/[nom]": ["./private/kits/**/*"],
     "/guides/*": ["./content/guides/**/*"],
   },
   // Anciennes adresses de la version précédente, redirigées vers les écrans

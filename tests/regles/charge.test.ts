@@ -9,7 +9,21 @@ const ROUTES_API = lister("src/app/api", (f) => f.endsWith("/route.ts"));
 const SERVEUR = sources().filter((f) => !estClient(lire(f)));
 
 describe("C1 · le contenu commun passe par le cache", () => {
-  const TABLES = ["metiers", "taches", "metiers_taches", "exercices", "prompts", "glossaire"];
+  const TABLES = [
+    "metiers",
+    "taches",
+    "metiers_taches",
+    "exercices",
+    "prompts",
+    "glossaire",
+    "kits",
+    "ressources",
+    "kits_metier",
+    "ressources_taches",
+    "modeles_prompts",
+    "champs_modele",
+    "conseils_ia",
+  ];
   const motif = new RegExp(`\\.from\\(\\s*["'](${TABLES.join("|")})["']`);
 
   it("seul src/lib/contenu.ts interroge les tables de contenu", () => {
@@ -22,7 +36,8 @@ describe("C1 · le contenu commun passe par le cache", () => {
   it("src/lib/contenu.ts met ses lectures en cache et reste côté serveur", () => {
     const contenu = lire("src/lib/contenu.ts");
     expect(contenu).toMatch(/^import "server-only";/);
-    expect(contenu.match(/unstable_cache\(/g)?.length).toBe(2);
+    // Catalogue, cas pratiques, kit d'un métier, modèle d'une tâche.
+    expect(contenu.match(/unstable_cache\(/g)?.length).toBe(4);
     expect(contenu).toMatch(/revalidate:\s*DUREE_SECONDES/);
   });
 });

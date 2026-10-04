@@ -50,10 +50,80 @@ export type Exercice = {
   contexte: string | null;
   donnees: string | null;
   travail_a_faire: string | null;
+  // Cas d'un kit : personnage, lieu, profil, et résultat exact quand le cas
+  // se vérifie par un calcul.
+  prenom: string | null;
+  lieu: string | null;
+  profil: string | null;
+  reponse_attendue: string | null;
   prompts: Record<IA, string | null>;
 };
+// Modèle à remplir d'une tâche : une consigne dont les parties variables
+// sont des champs, écrits {{ainsi}} dans le gabarit.
+export type ChampModele = {
+  cle: string;
+  libelle: string;
+  type: "texte" | "long" | "choix" | "nombre";
+  options: string[] | null;
+  exemple: string | null;
+  requis: boolean;
+};
+export type ModeleTache = {
+  titre: string;
+  gabarit: string;
+  exemple_cas: number | null;
+  avertissement: string | null;
+  revu_le: string | null;
+  champs: ChampModele[];
+  // Note par IA : chatgpt, claude, gemini, meta_ai, copilot.
+  conseils: Record<string, string>;
+};
+export type TypeRessource = "configuration" | "skill" | "document" | "routine";
+export type RessourceLiee = { cle: string; type: TypeRessource; titre: string; outil: IA | null };
+export type InstallationOutil = { etapes?: string[]; gratuit?: string; telephone?: string; notes?: string[] };
+export type RessourceKit = {
+  id: string;
+  cle: string;
+  type: TypeRessource;
+  titre: string;
+  description: string | null;
+  outil: IA | null;
+  contenu: string | null;
+  // Par outil (chatgpt, claude, gemini) ou « tous ».
+  installation: Record<string, InstallationOutil>;
+  fichier: string | null;
+  lien_copie: string | null;
+  video_url: string | null;
+  revu_le: string | null;
+  etape: number | null;
+  installee: boolean;
+  taches: { id: string; code: string; titre: string }[];
+};
+export type KitMetier = {
+  titre: string;
+  presentation: string;
+  etapes: { numero: number; titre: string; minutes: number | null }[];
+  prerequis: string[];
+  limites: string[];
+  a_savoir: Record<string, string>;
+  mots: { mot: string; phrase: string }[];
+  revu_le: string | null;
+  ressources: RessourceKit[];
+};
+// Réponse de /api/kits/[slug]. « kit » vaut null quand le métier n'a pas
+// encore de kit : l'écran montre alors les outils et routines des tâches.
+export type KitReponse = {
+  metier: { slug: string; nom: string };
+  chemin_choisi?: IA | null;
+  kit: KitMetier | null;
+};
 export type TacheDetail = {
-  tache: Omit<Tache, "id" | "ia_par_defaut" | "fait" | "favori">;
+  tache: Omit<Tache, "id" | "ia_par_defaut" | "fait" | "favori"> & {
+    // Tâche d'un kit : ce qu'elle produit, ses étapes, ses précisions.
+    resultat: string | null;
+    etapes: string[] | null;
+    precisions: string | null;
+  };
   fait: boolean;
   favori: boolean;
   ia_par_defaut: IA | null;
@@ -61,6 +131,9 @@ export type TacheDetail = {
   metier_nom: string | null;
   suivante_id: string | null;
   exercices: Exercice[];
+  // Modèle à remplir et ressources du kit (tâches d'un kit seulement).
+  modele: ModeleTache | null;
+  ressources: RessourceLiee[];
   // Outils, prompt et routine de la tâche, pour chaque IA (contenu payant,
   // fourni par la route protégée, jamais importé côté client).
   mise_en_place: Record<IA, MiseEnPlace | null>;
@@ -81,6 +154,9 @@ export type Progression = {
   serie_jours: number;
   jours_actifs_semaine: boolean[];
 };
+export function kitHref(metier: string, cle?: string) {
+  return `/kit?metier=${encodeURIComponent(metier)}${cle ? `#${encodeURIComponent(cle)}` : ""}`;
+}
 export function tacheHref(id: string, metier: string) {
   return `/taches/${encodeURIComponent(id)}?metier=${encodeURIComponent(metier)}`;
 }

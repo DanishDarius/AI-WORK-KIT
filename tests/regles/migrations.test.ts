@@ -23,10 +23,23 @@ const TABLES_PERSONNELLES = new Set([
   "favoris",
   "derniere_activite",
   "activite_journaliere",
+  "progression_kit",
 ]);
 
 // Tables internes : seul le serveur (clé service) les lit et les écrit.
 const TABLES_INTERNES = new Set(["acces_clients", "abonnements", "demandes_plans", "demandes_contact"]);
+
+// Contenu des kits : lu par le serveur seulement (clé service, puis cache).
+// Un compte connecté n'y a aucun droit, même en lecture.
+const TABLES_CONTENU_SERVEUR = new Set([
+  "kits",
+  "ressources",
+  "kits_metier",
+  "ressources_taches",
+  "modeles_prompts",
+  "champs_modele",
+  "conseils_ia",
+]);
 
 type Etat = {
   tables: Set<string>;
@@ -125,6 +138,13 @@ describe("S4 · droits et protections des tables", () => {
 
   it.each(tables.filter((t) => TABLES_INTERNES.has(t)))("%s (table interne) ne donne aucun droit à authenticated", (table) => {
     expect([...(etat.droits.get(table)?.get("authenticated") ?? [])]).toEqual([]);
+  });
+
+  it.each([...TABLES_CONTENU_SERVEUR])("%s (contenu d'un kit) existe et ne donne aucun droit à authenticated", (table) => {
+    expect(tables).toContain(table);
+    expect([...(etat.droits.get(table)?.get("authenticated") ?? [])]).toEqual([]);
+    expect(etat.remisAZero.has(`${table}:authenticated`), "« revoke all on table … from authenticated » manquant").toBe(true);
+    expect(etat.remisAZero.has(`${table}:anon`), "« revoke all on table … from anon » manquant").toBe(true);
   });
 
   const contenu = tables.filter((t) => !TABLES_PERSONNELLES.has(t) && !TABLES_INTERNES.has(t));

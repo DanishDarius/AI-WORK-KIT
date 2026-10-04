@@ -31,7 +31,7 @@ export async function GET() {
   const metiers = [];
   const taches = new Map<
     string,
-    TacheContenu & {
+    Omit<TacheContenu, "resultat" | "etapes" | "precisions"> & {
       ia_par_defaut: string | null;
       fait: boolean;
       favori: boolean;

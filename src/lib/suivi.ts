@@ -3,7 +3,7 @@ import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 // Les données propres à un compte : tâches faites, favoris, IA choisie par
-// métier. Lues avec la session de l'utilisateur (la RLS limite chaque compte
+// métier, ressources de kit installées. Lues avec la session de l'utilisateur (la RLS limite chaque compte
 // à ses lignes). Chaque liste est bornée (règle C5).
 const MAX_LIGNES = 2000;
 
@@ -15,6 +15,12 @@ export async function idsTachesFaites(supabase: SupabaseClient, userId: string):
 export async function idsFavoris(supabase: SupabaseClient, userId: string): Promise<Set<string>> {
   const { data } = await supabase.from("favoris").select("tache_id").eq("user_id", userId).limit(MAX_LIGNES);
   return new Set(((data ?? []) as { tache_id: string }[]).map((l) => l.tache_id));
+}
+
+/** Ressources de kit que l'utilisateur a cochées comme installées. */
+export async function idsRessourcesInstallees(supabase: SupabaseClient, userId: string): Promise<Set<string>> {
+  const { data } = await supabase.from("progression_kit").select("ressource_id").eq("user_id", userId).limit(MAX_LIGNES);
+  return new Set(((data ?? []) as { ressource_id: string }[]).map((l) => l.ressource_id));
 }
 
 /** IA choisie par l'utilisateur, par identifiant de métier. */

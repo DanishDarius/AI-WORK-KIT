@@ -37,6 +37,12 @@ where role = 'authenticated'
   and nom in ('acces_clients', 'abonnements', 'demandes_plans', 'demandes_contact')
 
 union all
+select 'contenu d''un kit ouvert à un compte connecté', nom, droit
+from droits
+where role = 'authenticated'
+  and nom in ('kits', 'ressources', 'kits_metier', 'ressources_taches', 'modeles_prompts', 'champs_modele', 'conseils_ia')
+
+union all
 select 'contenu payant modifiable par un compte connecté', nom, droit
 from droits
 where role = 'authenticated'

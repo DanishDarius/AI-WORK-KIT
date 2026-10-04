@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { category } from "@/lib/catalogue";
-import { api, chemins, type IA, iaLabels, type MetierDetail, tacheHref, useResource } from "@/lib/kit-api";
+import { api, chemins, type IA, iaLabels, type MetierDetail, kitHref, tacheHref, useResource } from "@/lib/kit-api";
 import { Icon, type IconName } from "./icon";
 import { Page } from "./shell";
 import { TacheSurMesure } from "./tache-sur-mesure";
@@ -100,7 +100,7 @@ export function Parcours({ slug }: { slug: string }) {
           <p className="small muted"><Link className="strong" href="/metiers">{metier.nom}</Link> › {sectionCourante}</p>
           <h1 className="h2">{courante ? "Votre parcours" : "Parcours terminé"}</h1>
         </div>
-        <Link className="pill" href="/kit"><Icon name="kit" size={18} /> Mon kit</Link>
+        <Link className="pill" href={kitHref(metier.slug)}><Icon name="kit" size={18} /> Mon kit</Link>
         <Link className="pill" href="/metiers">Changer de métier</Link>
       </div>
 

@@ -3,15 +3,19 @@
 import Link from "next/link";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { Icon } from "@/components/icon";
+import { KitMetierEcran } from "@/components/kit-metier";
 import { Page } from "@/components/shell";
 import { Bar, Chip, IconBox, PageHead, ResourceState } from "@/components/ui";
 import { AbonnementCard, StatsCard } from "@/components/widgets";
-import { automatisationLabel, chemins, type IA, iaLabels, type MetierDetail, officielLabel, tacheHref, useResource } from "@/lib/kit-api";
+import { automatisationLabel, chemins, type IA, iaLabels, type KitMetier, type KitReponse, type MetierDetail, officielLabel, tacheHref, useResource } from "@/lib/kit-api";
 import type { MiseEnPlace } from "@/lib/mise-en-place-types";
+import { copierTexte } from "@/lib/presse-papiers";
 import { useProfil } from "@/lib/profil";
 
 // Mon kit : tout ce qu'il faut installer pour travailler avec l'IA dans son
-// métier, rassemblé à partir de la mise en place de chaque tâche.
+// métier. Un métier qui a un kit (configuration, skills, documents, routines)
+// affiche ce kit ; les autres affichent les outils et les routines rassemblés
+// à partir de la mise en place de chaque tâche.
 const CLE = "aw-kit-installe";
 const EVENEMENT = "aw-kit-maj";
 
@@ -60,6 +64,14 @@ function Coche({ fait, label, onClick }: { fait: boolean; label: string; onClick
 }
 
 function Kit({ slug }: { slug: string }) {
+  const { data, error, retry, setData } = useResource<KitReponse>(`/api/kits/${encodeURIComponent(slug)}`);
+  if (!data) return <ResourceState error={error} retry={retry} />;
+  if (data.kit) return <KitMetierEcran slug={slug} data={data as KitReponse & { kit: KitMetier }} setData={setData} />;
+  return <KitOutils slug={slug} />;
+}
+
+// Métier sans kit : les outils à brancher et les routines de ses tâches.
+function KitOutils({ slug }: { slug: string }) {
   const { data, error, retry } = useResource<MetierDetail>(`/api/metiers/${encodeURIComponent(slug)}`);
   if (!data) return <ResourceState error={error} retry={retry} />;
   return <KitContenu slug={slug} data={data} />;
@@ -97,11 +109,9 @@ function KitContenu({ slug, data }: { slug: string; data: MetierDetail }) {
   const pct = ids.length ? Math.round((faits / ids.length) * 100) : 0;
 
   async function copier(id: string, texte: string) {
-    try {
-      await navigator.clipboard.writeText(texte);
-      setCopie(id);
-      window.setTimeout(() => setCopie(""), 2000);
-    } catch {}
+    if (!(await copierTexte(texte))) return;
+    setCopie(id);
+    window.setTimeout(() => setCopie(""), 2000);
   }
 
   return (
@@ -187,14 +197,17 @@ function KitContenu({ slug, data }: { slug: string; data: MetierDetail }) {
   );
 }
 
-export default function MonKit() {
+export default function MonKit({ metier }: { metier: string }) {
   const profil = useProfil();
+  // Le métier de l'adresse (« /kit?metier=… », lien venu d'une tâche) passe
+  // avant celui du profil.
+  const slug = metier || profil?.metier || "";
   return (
-    <Page aside={<><StatsCard /><section className="card pad-md stack-sm"><h3 className="h3">Toujours à jour</h3><p className="small muted">Les outils et routines suivent les changements des IA. Cochez ce que vous avez installé : c’est enregistré sur cet appareil.</p></section><AbonnementCard /></>}>
-      {profil === undefined ? (
+    <Page aside={<><StatsCard /><section className="card pad-md stack-sm"><h3 className="h3">Toujours à jour</h3><p className="small muted">Les outils et routines suivent les changements des IA. Cochez ce que vous avez installé, au fur et à mesure.</p></section><AbonnementCard /></>}>
+      {!metier && profil === undefined ? (
         <ResourceState />
-      ) : profil.metier ? (
-        <Kit slug={profil.metier} />
+      ) : slug ? (
+        <Kit slug={slug} />
       ) : (
         <div className="card empty">
           <h1 className="h2">Choisissez d’abord votre métier.</h1>

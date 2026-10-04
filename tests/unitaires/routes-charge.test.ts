@@ -20,8 +20,29 @@ const T1 = "20000000-0000-4000-8000-000000000001";
 const T2 = "20000000-0000-4000-8000-000000000002";
 const AUJOURDHUI = new Date().toISOString().slice(0, 10);
 
-const TABLES_CONTENU = ["metiers", "taches", "metiers_taches", "exercices", "prompts", "glossaire"];
-const TABLES_COMPTE = ["taches_faites", "favoris", "utilisateurs_chemins", "derniere_activite", "activite_journaliere"];
+const R1 = "30000000-0000-4000-8000-000000000001";
+const R2 = "30000000-0000-4000-8000-000000000002";
+
+const TABLES_CONTENU = [
+  "metiers",
+  "taches",
+  "metiers_taches",
+  "exercices",
+  "prompts",
+  "glossaire",
+  "kits",
+  "ressources",
+  "kits_metier",
+  "ressources_taches",
+  "modeles_prompts",
+  "champs_modele",
+  "conseils_ia",
+];
+const TABLES_COMPTE = ["taches_faites", "favoris", "utilisateurs_chemins", "derniere_activite", "activite_journaliere", "progression_kit"];
+
+// Le kit du métier de test et le modèle de la tâche T1. « avecKit » permet de
+// tester aussi un métier sans kit et une tâche sans modèle.
+const kit = { avecKit: true };
 
 function base(op: Operation): Reponse {
   const filtre = (colonne: string) => op.filtres.find(([, c]) => c === colonne)?.[2];
@@ -55,6 +76,34 @@ function base(op: Operation): Reponse {
       return { data: { tache_id: T1, metier_id: M1 } };
     case "activite_journaliere":
       return { data: [{ jour: AUJOURDHUI }] };
+    case "kits":
+      return kit.avecKit
+        ? { data: { titre: "Kit de test", presentation: "Présentation", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], prerequis: ["Un téléphone"], limites: [], a_savoir: { chatgpt: "À savoir" }, mots: [], revu_le: "2026-10-03" } }
+        : { data: null };
+    case "kits_metier":
+      return {
+        data: [
+          { etape_installation: 1, ressources: { id: R1, cle: "config-test", type: "configuration", titre: "Assistant", description: null, outil: "claude", contenu: "Texte", installation: { claude: { etapes: ["Coller"] } }, fichier: null, lien_copie: null, video_url: null, revu_le: null, ressources_taches: [{ tache_id: T1 }, { tache_id: "20000000-0000-4000-8000-00000000ffff" }] } },
+          { etape_installation: null, ressources: { id: R2, cle: "doc-test", type: "document", titre: "Tableau", description: "Un tableau", outil: null, contenu: null, installation: null, fichier: "prix-et-marge.xlsx", lien_copie: "https://docs.google.com/spreadsheets/d/x/copy", video_url: null, revu_le: null, ressources_taches: null } },
+        ],
+      };
+    case "progression_kit":
+      return { data: [{ ressource_id: R2 }] };
+    case "modeles_prompts":
+      return kit.avecKit && filtre("tache_id") === T1
+        ? {
+            data: {
+              titre: "Modèle", gabarit: "Je vends {{article}} à {{prix}} FCFA.", exemple_cas: 1, avertissement: null, revu_le: "2026-10-03",
+              champs_modele: [
+                { cle: "prix", libelle: "Quel prix ?", type: "nombre", options: null, exemple: "4 000", requis: true, ordre: 2 },
+                { cle: "article", libelle: "Quel article ?", type: "texte", options: null, exemple: "une crème", requis: true, ordre: 1 },
+              ],
+              conseils_ia: [{ ia: "claude", conseil: "Ouvrez votre projet." }],
+            },
+          }
+        : { data: null };
+    case "ressources_taches":
+      return kit.avecKit && filtre("tache_id") === T1 ? { data: [{ ressources: { cle: "config-test", type: "configuration", titre: "Assistant", outil: "claude" } }] } : { data: [] };
     default:
       return {};
   }
@@ -88,6 +137,7 @@ function verifierBudget() {
 
 beforeEach(() => {
   vi.resetModules();
+  kit.avecKit = true;
 });
 
 describe("C1 C2 C4 · GET /api/catalogue", () => {
@@ -177,15 +227,34 @@ describe("C1 C2 C4 · GET /api/taches/[id]", () => {
     const reponse = await demander(T1);
     expect(reponse.status).toBe(200);
     const corps = await reponse.json();
-    expect(corps.tache).toEqual({ code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null });
+    expect(corps.tache).toEqual({ code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null, resultat: null, etapes: null, precisions: null });
     expect(corps).toMatchObject({ ia_par_defaut: "claude", fait: true, favori: false, metier_nom: "Comptabilité", suivante_id: T2 });
     expect(corps.exercices).toEqual([
-      { titre: "Cas 1", contexte: "Contexte", donnees: null, travail_a_faire: "À faire", prompts: { chatgpt: null, claude: "Prompt Claude", gemini: null } },
+      { titre: "Cas 1", contexte: "Contexte", donnees: null, travail_a_faire: "À faire", prenom: null, lieu: null, profil: null, reponse_attendue: null, prompts: { chatgpt: null, claude: "Prompt Claude", gemini: null } },
     ]);
     expect(corps.mise_en_place).toBeTruthy();
     // Les cas et leurs prompts arrivent en UNE lecture, pas une par cas.
     expect(lectures(["exercices", "prompts"])).toHaveLength(1);
     verifierBudget();
+  });
+
+  it("sert le modèle à remplir d'une tâche de kit : champs dans l'ordre, note par IA, ressources", async () => {
+    installer();
+    const corps = await (await demander(T1)).json();
+    expect(corps.modele).toMatchObject({ titre: "Modèle", gabarit: "Je vends {{article}} à {{prix}} FCFA.", exemple_cas: 1, conseils: { claude: "Ouvrez votre projet." } });
+    expect(corps.modele.champs.map((c: { cle: string }) => c.cle)).toEqual(["article", "prix"]);
+    expect(corps.ressources).toEqual([{ cle: "config-test", type: "configuration", titre: "Assistant", outil: "claude" }]);
+    // Modèle, champs et notes arrivent en UNE lecture ; les ressources en une autre.
+    expect(lectures(["modeles_prompts", "champs_modele", "conseils_ia"])).toHaveLength(1);
+    expect(lectures(["ressources_taches", "ressources"])).toHaveLength(1);
+    verifierBudget();
+  });
+
+  it("sert une tâche sans modèle comme avant : modèle absent, aucune ressource", async () => {
+    installer();
+    const corps = await (await demander(T2)).json();
+    expect(corps.modele).toBeNull();
+    expect(corps.ressources).toEqual([]);
   });
 
   it("n'annonce aucune tâche suivante sur la dernière tâche du parcours", async () => {
@@ -265,5 +334,149 @@ describe("C1 · GET /api/favoris", () => {
     expect(corps).toEqual([{ tache_id: T2, tache_code: "F02", tache_titre: "Planification de rendez-vous", metier_slug: "comptabilite", metier_nom: "Comptabilité" }]);
     expect(lectures(TABLES_COMPTE)).toHaveLength(1);
     verifierBudget();
+  });
+});
+
+describe("C1 C2 C4 · GET /api/kits/[slug]", () => {
+  async function demander(slug = "comptabilite") {
+    const { GET } = await import("@/app/api/kits/[slug]/route");
+    return sur(await GET(new Request(`https://aiw.test/api/kits/${slug}`), { params: Promise.resolve({ slug }) }));
+  }
+
+  it("sert le kit du métier, ce qui est installé et l'IA choisie, avec deux requêtes propres au compte", async () => {
+    installer();
+    const reponse = await demander();
+    expect(reponse.status).toBe(200);
+    expect(reponse.headers.get("Cache-Control")).toBe("private, no-store");
+    const corps = await reponse.json();
+    expect(corps.metier).toEqual({ slug: "comptabilite", nom: "Comptabilité" });
+    expect(corps.chemin_choisi).toBe("claude");
+    expect(corps.kit).toMatchObject({ titre: "Kit de test", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], a_savoir: { chatgpt: "À savoir" } });
+    expect(corps.kit.ressources.map((r: { cle: string; etape: number | null; installee: boolean }) => [r.cle, r.etape, r.installee])).toEqual([
+      ["config-test", 1, false],
+      ["doc-test", null, true],
+    ]);
+    // Seules les tâches du catalogue sont citées ; une installation absente devient un objet vide.
+    expect(corps.kit.ressources[0].taches).toEqual([{ id: T1, code: "F01", titre: "Gestion et tri des e-mails" }]);
+    expect(corps.kit.ressources[1]).toMatchObject({ installation: {}, taches: [], fichier: "prix-et-marge.xlsx" });
+    expect(lectures(TABLES_COMPTE).map((op) => op.table).sort()).toEqual(["progression_kit", "utilisateurs_chemins"]);
+    // Le kit et ses ressources arrivent en deux lectures, pas une par ressource.
+    expect(lectures(["kits", "kits_metier", "ressources", "ressources_taches"])).toHaveLength(2);
+    verifierBudget();
+  });
+
+  it("répond « kit: null » pour un métier sans kit, sans aucune requête propre au compte", async () => {
+    installer();
+    kit.avecKit = false;
+    const corps = await (await demander()).json();
+    expect(corps).toEqual({ metier: { slug: "comptabilite", nom: "Comptabilité" }, kit: null });
+    expect(lectures(TABLES_COMPTE)).toEqual([]);
+    verifierBudget();
+  });
+
+  it("répond 404 pour un métier inconnu, sans lire de kit", async () => {
+    installer();
+    expect((await demander("inconnu")).status).toBe(404);
+    expect(lectures(["kits", "kits_metier"])).toEqual([]);
+  });
+
+  it("répond 401 sans session, sans lire le contenu", async () => {
+    installer(false);
+    expect((await demander()).status).toBe(401);
+    expect(lectures(TABLES_CONTENU)).toEqual([]);
+  });
+});
+
+describe("C4 S7 · POST /api/kits/ressources/[id]/installee", () => {
+  async function poster(id: string, corps: unknown) {
+    const { POST } = await import("@/app/api/kits/ressources/[id]/installee/route");
+    return sur(
+      await POST(new Request(`https://aiw.test/api/kits/ressources/${id}/installee`, { method: "POST", body: JSON.stringify(corps) }), {
+        params: Promise.resolve({ id }),
+      }),
+    );
+  }
+
+  it("coche une ressource pour le compte connecté, et pour lui seul", async () => {
+    const factice = installer();
+    const reponse = await poster(R1, { fait: true, user_id: "autre-compte" });
+    expect(await reponse.json()).toEqual({ ok: true, fait: true });
+    const ecritures = factice.ecritures();
+    expect(ecritures.map((op) => [op.table, op.action])).toEqual([["progression_kit", "upsert"]]);
+    expect(ecritures[0].valeurs).toMatchObject({ user_id: CLIENT.id, ressource_id: R1 });
+  });
+
+  it("décoche en supprimant la seule ligne du compte pour cette ressource", async () => {
+    const factice = installer();
+    expect(await (await poster(R1, { fait: false })).json()).toEqual({ ok: true, fait: false });
+    const [ecriture] = factice.ecritures();
+    expect([ecriture.table, ecriture.action]).toEqual(["progression_kit", "delete"]);
+    expect(ecriture.filtres).toEqual(expect.arrayContaining([["eq", "user_id", CLIENT.id], ["eq", "ressource_id", R1]]));
+  });
+
+  it("répond 404 quand la ressource n'existe pas (clé étrangère)", async () => {
+    partage.factice = creerSupabaseFactice((op) =>
+      op.table === "progression_kit" ? { error: { message: "violates foreign key constraint", code: "23503" } as { message: string } } : base(op),
+    );
+    partage.factice.etat.utilisateur = CLIENT;
+    expect((await poster(R1, { fait: true })).status).toBe(404);
+  });
+
+  it("refuse un identifiant qui n'est pas un UUID, sans toucher la base", async () => {
+    const factice = installer();
+    expect((await poster("../../etc", { fait: true })).status).toBe(404);
+    expect(factice.operations).toEqual([]);
+  });
+
+  it("refuse un corps sans booléen, sans rien écrire", async () => {
+    const factice = installer();
+    expect((await poster(R1, { fait: "oui" })).status).toBe(400);
+    expect((await poster(R1, null)).status).toBe(400);
+    expect(factice.ecritures()).toEqual([]);
+  });
+
+  it("n'écrit rien sans session", async () => {
+    const factice = installer(false);
+    expect((await poster(R1, { fait: true })).status).toBe(401);
+    expect(factice.ecritures()).toEqual([]);
+  });
+});
+
+describe("S2 S7 · GET /api/kits/fichiers/[nom]", () => {
+  async function demander(nom: string) {
+    const { GET } = await import("@/app/api/kits/fichiers/[nom]/route");
+    return sur(await GET(new Request("https://aiw.test/api/kits/fichiers/x"), { params: Promise.resolve({ nom }) }));
+  }
+
+  it("sert un fichier du kit en pièce jointe, jamais mis en cache", async () => {
+    installer();
+    const reponse = await demander("prix-et-marge.xlsx");
+    expect(reponse.status).toBe(200);
+    expect(reponse.headers.get("Content-Type")).toBe("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+    expect(reponse.headers.get("Content-Disposition")).toBe('attachment; filename="AIW-prix-et-marge.xlsx"');
+    expect(reponse.headers.get("Cache-Control")).toContain("no-store");
+    expect(reponse.headers.get("X-Content-Type-Options")).toBe("nosniff");
+    const octets = new Uint8Array(await reponse.arrayBuffer());
+    expect(octets.length).toBe(Number(reponse.headers.get("Content-Length")));
+    // Un fichier Excel est une archive ZIP : il commence par « PK ».
+    expect([octets[0], octets[1]]).toEqual([0x50, 0x4b]);
+  });
+
+  it.each(["../guides/pdf/guide-001-x.pdf", "..%2F..%2Fpackage.json", "prix-et-marge.xlsx/..", "Prix-et-marge.xlsx", "prix et marge.xlsx", "prix-et-marge.pdf", ".env", "prix-et-marge.xlsx.zip.exe", ""])(
+    "refuse le nom « %s »",
+    async (nom) => {
+      installer();
+      expect((await demander(nom)).status).toBe(404);
+    },
+  );
+
+  it("répond 404 pour un fichier bien nommé mais absent", async () => {
+    installer();
+    expect((await demander("fichier-absent.zip")).status).toBe(404);
+  });
+
+  it("ne sert rien sans session", async () => {
+    installer(false);
+    expect((await demander("prix-et-marge.xlsx")).status).toBe(401);
   });
 });

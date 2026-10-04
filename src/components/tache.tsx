@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { category } from "@/lib/catalogue";
-import { api, automatisationLabel, chemins, type IA, iaLabels, officielLabel, tacheHref, type TacheDetail, useResource } from "@/lib/kit-api";
-import { Icon } from "./icon";
+import { api, automatisationLabel, chemins, type IA, iaLabels, kitHref, officielLabel, tacheHref, type TacheDetail, type TypeRessource, useResource } from "@/lib/kit-api";
+import { copierTexte } from "@/lib/presse-papiers";
+import { Icon, type IconName } from "./icon";
+import { ModeleARemplir } from "./modele";
 import { iconeCategorie } from "./parcours";
 import { Chip, IconBox, Kicker, ResourceState } from "./ui";
 
@@ -20,14 +22,13 @@ const CONSEILS_IA: Record<IA, string> = {
   gemini: "Sur Android, ouvrez l’application Gemini et collez le prompt. Vous pouvez aussi joindre une photo ou un fichier.",
 };
 
-async function copier(texte: string) {
-  try {
-    await navigator.clipboard.writeText(texte);
-    return true;
-  } catch {
-    return false;
-  }
-}
+// Ressources du kit citées dans une tâche : libellé et icône par type.
+const RESSOURCE: Record<TypeRessource, { nom: string; icone: IconName }> = {
+  configuration: { nom: "Configuration", icone: "settings" },
+  skill: { nom: "Skill", icone: "wand" },
+  document: { nom: "Document", icone: "sheet" },
+  routine: { nom: "Routine", icone: "calendar" },
+};
 
 function useStatut(id: string, metier: string, initial: { fait: boolean; favori: boolean }) {
   const [statut, setStatut] = useState(initial);
@@ -72,11 +73,16 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
   const prompt = exercice?.prompts[ia] ?? "";
   const aCopier = `${prompt}${exercice?.donnees ? `\n\n---\nDonnées du cas pratique\n\n${exercice.donnees}` : ""}`;
   const mep = data.mise_en_place?.[ia] ?? undefined;
+  // Tâche d'un kit : un modèle à remplir remplace les trois prompts, et les
+  // données du cas se lisent directement (elles ne sont pas ajoutées à la copie).
+  const modele = data.modele;
+  const prenomExemple = modele?.exemple_cas ? exercices[modele.exemple_cas - 1]?.prenom ?? null : null;
+  const ressources = (data.ressources ?? []).filter((r) => !r.outil || r.outil === ia);
   const categorie = category(tache.code);
   const retour = `/metiers/${encodeURIComponent(metier)}`;
 
   async function copierPrompt() {
-    const ok = await copier(aCopier);
+    const ok = await copierTexte(aCopier);
     setCopie(ok ? "ok" : "echec");
     window.setTimeout(() => setCopie(""), 2200);
   }
@@ -103,6 +109,20 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
           </div>
           <h2 className="h1" style={{ fontSize: 30 }}>{tache.titre}</h2>
 
+          {tache.resultat && (
+            <div className="stack-sm">
+              <Kicker>Ce que vous obtenez</Kicker>
+              <p>{tache.resultat}</p>
+            </div>
+          )}
+
+          {tache.precisions && (
+            <div className="notice" role="note">
+              <Icon name="help" size={20} />
+              <p>À savoir avant de commencer : {tache.precisions}</p>
+            </div>
+          )}
+
           {tache.limite_connue && (
             <div className="notice" role="note">
               <Icon name="help" size={20} />
@@ -123,80 +143,121 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
 
           {exercice ? (
             <>
-              <div className="situation">
-                <Kicker>La situation</Kicker>
-                <h3 className="h3">{exercice.titre}</h3>
-                {exercice.contexte && <p>{exercice.contexte}</p>}
-                {exercice.donnees && (
+                <div className="situation">
+                  <Kicker>La situation</Kicker>
+                  <h3 className="h3">{exercice.titre}</h3>
+                  {(exercice.lieu || exercice.profil) && (
+                    <div className="chips">
+                      {exercice.lieu && <Chip>{exercice.lieu}</Chip>}
+                      {exercice.profil && <Chip>{exercice.profil}</Chip>}
+                    </div>
+                  )}
+                  {exercice.contexte && <p>{exercice.contexte}</p>}
+                  {exercice.donnees && modele && <p>{exercice.donnees}</p>}
+                  {exercice.donnees && !modele && (
+                    <details>
+                      <summary className="link" style={{ cursor: "pointer" }}>Voir les données du cas</summary>
+                      <pre style={{ whiteSpace: "pre-wrap", fontFamily: "var(--font-mono)", fontSize: 13.5, lineHeight: 1.6, margin: "8px 0 0" }}>{exercice.donnees}</pre>
+                    </details>
+                  )}
+                </div>
+                {exercice.travail_a_faire && (
+                  <div className="stack-sm">
+                    <Kicker>Ce que vous devez obtenir</Kicker>
+                    <p style={{ whiteSpace: "pre-line" }}>{exercice.travail_a_faire}</p>
+                  </div>
+                )}
+                {exercice.reponse_attendue && (
                   <details>
-                    <summary className="link" style={{ cursor: "pointer" }}>Voir les données du cas</summary>
-                    <pre style={{ whiteSpace: "pre-wrap", fontFamily: "var(--font-mono)", fontSize: 13.5, lineHeight: 1.6, margin: "8px 0 0" }}>{exercice.donnees}</pre>
+                    <summary className="link" style={{ cursor: "pointer" }}>Voir le résultat attendu, pour vérifier votre IA</summary>
+                    <p style={{ marginTop: 8 }}>{exercice.reponse_attendue}</p>
                   </details>
                 )}
-              </div>
-              {exercice.travail_a_faire && (
-                <div className="stack-sm">
-                  <Kicker>Ce que vous devez obtenir</Kicker>
-                  <p style={{ whiteSpace: "pre-line" }}>{exercice.travail_a_faire}</p>
-                </div>
-              )}
-            </>
-          ) : (
-            <p className="muted">Le cas pratique de cette tâche arrive bientôt.</p>
-          )}
+              </>
+            ) : (
+              <p className="muted">Le cas pratique de cette tâche arrive bientôt.</p>
+            )}
 
-          {mep && mep.outils.length > 0 && (
-            <div className="stack">
-              <Kicker>Ce qu’il vous faut avec {iaLabels[ia]}</Kicker>
-              {mep.outils.map((o) => (
-                <a key={o.nom} className="card pad-sm row" href={o.lien} target="_blank" rel="noreferrer" style={{ flexWrap: "nowrap", color: "var(--ink)" }}>
-                  <IconBox name="link" size="sm" tone={o.type === "officiel" ? undefined : "blue"} />
-                  <span className="grow stack-sm" style={{ gap: 2 }}>
-                    <span className="strong">{o.nom}</span>
-                    <span className="tiny muted">{o.type === "officiel" ? officielLabel[ia] : "Outil tiers"}</span>
-                  </span>
-                  <Icon name="external" size={18} />
-                </a>
+            {mep && mep.outils.length > 0 && (
+              <div className="stack">
+                <Kicker>Ce qu’il vous faut avec {iaLabels[ia]}</Kicker>
+                {mep.outils.map((o) => (
+                  <a key={o.nom} className="card pad-sm row" href={o.lien} target="_blank" rel="noreferrer" style={{ flexWrap: "nowrap", color: "var(--ink)" }}>
+                    <IconBox name="link" size="sm" tone={o.type === "officiel" ? undefined : "blue"} />
+                    <span className="grow stack-sm" style={{ gap: 2 }}>
+                      <span className="strong">{o.nom}</span>
+                      <span className="tiny muted">{o.type === "officiel" ? officielLabel[ia] : "Outil tiers"}</span>
+                    </span>
+                    <Icon name="external" size={18} />
+                  </a>
+                ))}
+              </div>
+            )}
+
+            {ressources.length > 0 && (
+              <div className="stack">
+                <Kicker>Ce qu’il vous faut dans votre kit</Kicker>
+                {ressources.map((r) => (
+                  <Link key={r.cle} className="card pad-sm row" href={kitHref(metier, r.cle)} style={{ flexWrap: "nowrap", color: "var(--ink)" }}>
+                    <IconBox name={RESSOURCE[r.type].icone} size="sm" />
+                    <span className="grow stack-sm" style={{ gap: 2 }}>
+                      <span className="strong">{r.titre}</span>
+                      <span className="tiny muted">{RESSOURCE[r.type].nom}</span>
+                    </span>
+                    <Icon name="right" size={18} />
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <div className="stack-sm">
+              <Kicker>Étapes</Kicker>
+              {tache.etapes?.length ? (
+                <ol className="steps">
+                  {tache.etapes.map((etape, i) => <li key={i}>{etape}</li>)}
+                </ol>
+              ) : (
+                <ol className="steps">
+                  <li>Choisissez votre IA à droite.</li>
+                  <li>Copiez le prompt : les données du cas sont ajoutées automatiquement.</li>
+                  <li>Ouvrez votre IA, collez, envoyez.</li>
+                  <li>Relisez le résultat, puis refaites l’exercice avec vos propres informations.</li>
+                </ol>
+              )}
+            </div>
+          </section>
+
+          <section className="task-right" aria-label="Espace de travail">
+            <div className="seg" role="group" aria-label="Votre IA">
+              {chemins.map((c) => (
+                <button key={c} type="button" aria-pressed={ia === c} onClick={() => setIa(c)}>{iaLabels[c]}</button>
               ))}
             </div>
+
+            {modele ? (
+              <ModeleARemplir modele={modele} ia={ia} lienIa={LIENS_IA[ia]} prenom={prenomExemple} />
+            ) : (
+              <>
+              <div className="prompt-panel">
+                <header>
+                  <span className="kicker is-light">Le prompt · {iaLabels[ia]}</span>
+                  {exercice?.donnees && <span className="tiny" style={{ color: "var(--night-soft)" }}>+ données du cas à la copie</span>}
+                </header>
+                <pre>{prompt || "Le prompt de ce cas n’est pas encore disponible pour cette IA."}</pre>
+              </div>
+
+              <div className="row">
+                <button type="button" className="btn btn-plain" onClick={copierPrompt} disabled={!prompt}>
+                  <Icon name={copie === "ok" ? "check" : "copy"} size={18} />
+                  {copie === "ok" ? "Copié !" : copie === "echec" ? "Copie impossible" : "Copier le prompt"}
+                </button>
+                <a className="btn btn-secondary btn-plain" href={LIENS_IA[ia]} target="_blank" rel="noreferrer">
+                  <Icon name="external" size={18} /> Ouvrir {iaLabels[ia]}
+                </a>
+              </div>
+              <p className="tip">{CONSEILS_IA[ia]}</p>
+            </>
           )}
-
-          <div className="stack-sm">
-            <Kicker>Étapes</Kicker>
-            <ol className="steps">
-              <li>Choisissez votre IA à droite.</li>
-              <li>Copiez le prompt : les données du cas sont ajoutées automatiquement.</li>
-              <li>Ouvrez votre IA, collez, envoyez.</li>
-              <li>Relisez le résultat, puis refaites l’exercice avec vos propres informations.</li>
-            </ol>
-          </div>
-        </section>
-
-        <section className="task-right" aria-label="Espace de travail">
-          <div className="seg" role="group" aria-label="Votre IA">
-            {chemins.map((c) => (
-              <button key={c} type="button" aria-pressed={ia === c} onClick={() => setIa(c)}>{iaLabels[c]}</button>
-            ))}
-          </div>
-
-          <div className="prompt-panel">
-            <header>
-              <span className="kicker is-light">Le prompt · {iaLabels[ia]}</span>
-              {exercice?.donnees && <span className="tiny" style={{ color: "var(--night-soft)" }}>+ données du cas à la copie</span>}
-            </header>
-            <pre>{prompt || "Le prompt de ce cas n’est pas encore disponible pour cette IA."}</pre>
-          </div>
-
-          <div className="row">
-            <button type="button" className="btn btn-plain" onClick={copierPrompt} disabled={!prompt}>
-              <Icon name={copie === "ok" ? "check" : "copy"} size={18} />
-              {copie === "ok" ? "Copié !" : copie === "echec" ? "Copie impossible" : "Copier le prompt"}
-            </button>
-            <a className="btn btn-secondary btn-plain" href={LIENS_IA[ia]} target="_blank" rel="noreferrer">
-              <Icon name="external" size={18} /> Ouvrir {iaLabels[ia]}
-            </a>
-          </div>
-          <p className="tip">{CONSEILS_IA[ia]}</p>
 
           {mep?.tachePlanifiee && (
             <div className="card stack">
@@ -209,7 +270,7 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
               </div>
               <pre style={{ margin: 0, whiteSpace: "pre-wrap", fontFamily: "var(--font-mono)", fontSize: 13.5, lineHeight: 1.6, background: "var(--bg)", borderRadius: 14, padding: 14, maxHeight: 260, overflow: "auto" }}>{mep.tachePlanifiee.prompt}</pre>
               <div className="row">
-                <button type="button" className="btn btn-secondary btn-sm btn-plain" onClick={async () => { setCopieRoutine(await copier(mep.tachePlanifiee!.prompt)); window.setTimeout(() => setCopieRoutine(false), 2000); }}>
+                <button type="button" className="btn btn-secondary btn-sm btn-plain" onClick={async () => { setCopieRoutine(await copierTexte(mep.tachePlanifiee!.prompt)); window.setTimeout(() => setCopieRoutine(false), 2000); }}>
                   <Icon name="copy" size={16} /> {copieRoutine ? "Copié !" : "Copier la routine"}
                 </button>
                 {mep.tachePlanifiee.modeApprobation && <Chip tone={mep.tachePlanifiee.modeApprobation === "Manuelle" ? "gold" : "green"}>Validation {mep.tachePlanifiee.modeApprobation.toLowerCase()}</Chip>}

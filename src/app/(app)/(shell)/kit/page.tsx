@@ -5,7 +5,8 @@ import MonKit from "./ecran";
 export const metadata: Metadata = { title: "Mon kit" };
 
 // Page serveur : elle vérifie l'accès payé (règle S1), puis rend l'écran.
-export default async function Page() {
+export default async function Page({ searchParams }: PageProps<"/kit">) {
   await exigerAccesActif();
-  return <MonKit />;
+  const { metier } = await searchParams;
+  return <MonKit metier={typeof metier === "string" ? metier : ""} />;
 }
