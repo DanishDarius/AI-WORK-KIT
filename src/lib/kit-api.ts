@@ -136,7 +136,8 @@ export type TacheDetail = {
   ressources: RessourceLiee[];
   // Outils, prompt et routine de la tâche, pour chaque IA (contenu payant,
   // fourni par la route protégée, jamais importé côté client).
-  mise_en_place: Record<IA, MiseEnPlace | null>;
+  // null quand la tâche a un modèle à remplir : son kit remplace la mise en place.
+  mise_en_place: Record<IA, MiseEnPlace | null> | null;
 };
 export type Favori = {
   tache_id: string;

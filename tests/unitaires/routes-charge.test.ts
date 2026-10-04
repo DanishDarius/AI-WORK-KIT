@@ -44,13 +44,18 @@ const TABLES_COMPTE = ["taches_faites", "favoris", "utilisateurs_chemins", "dern
 // tester aussi un métier sans kit et une tâche sans modèle.
 const kit = { avecKit: true };
 
+// Un autre métier, dont le kit partage la tâche T1 ; « local » ajoute un cas
+// localisé et une description localisée (migration 0021).
+const M2 = "10000000-0000-4000-8000-000000000002";
+const local = { actif: false };
+
 function base(op: Operation): Reponse {
   const filtre = (colonne: string) => op.filtres.find(([, c]) => c === colonne)?.[2];
   switch (op.table) {
     case "acces_clients":
       return { data: [{ cree_le: "2026-09-01T10:00:00.000Z" }] };
     case "metiers":
-      return { data: [{ id: M1, slug: "comptabilite", nom: "Comptabilité", description: null }] };
+      return { data: [{ id: M1, slug: "comptabilite", nom: "Comptabilité", description: local.actif ? "Ancienne description" : null, description_local: local.actif ? "Description localisée" : null }] };
     case "taches":
       return {
         data: [
@@ -63,7 +68,11 @@ function base(op: Operation): Reponse {
     case "exercices":
       return {
         data: [
-          { titre: "Cas 1", contexte: "Contexte", donnees: null, travail_a_faire: "À faire", prompts: [{ ia: "claude", contenu: "Prompt Claude" }] },
+          {
+            titre: "Cas 1", contexte: "Contexte", donnees: null, travail_a_faire: "À faire",
+            ...(local.actif ? { titre_local: "Gérante d'un salon à Abidjan", contexte_local: "Vous gérez un salon à Yopougon.", donnees_local: null, travail_local: "Classez ces messages." } : {}),
+            prompts: [{ ia: "claude", contenu: "Prompt Claude" }],
+          },
         ],
       };
     case "taches_faites":
@@ -103,7 +112,15 @@ function base(op: Operation): Reponse {
           }
         : { data: null };
     case "ressources_taches":
-      return kit.avecKit && filtre("tache_id") === T1 ? { data: [{ ressources: { cle: "config-test", type: "configuration", titre: "Assistant", outil: "claude" } }] } : { data: [] };
+      return kit.avecKit && filtre("tache_id") === T1
+        ? {
+            data: [
+              { ressources: { cle: "config-test", type: "configuration", titre: "Assistant", outil: "claude", kits_metier: [{ metier_id: M1 }] } },
+              // La même tâche sert au kit d'un autre métier : sa ressource ne doit pas sortir ici.
+              { ressources: { cle: "config-autre-metier", type: "configuration", titre: "Assistant d'un autre métier", outil: "claude", kits_metier: [{ metier_id: M2 }] } },
+            ],
+          }
+        : { data: [] };
     default:
       return {};
   }
@@ -138,6 +155,7 @@ function verifierBudget() {
 beforeEach(() => {
   vi.resetModules();
   kit.avecKit = true;
+  local.actif = false;
 });
 
 describe("C1 C2 C4 · GET /api/catalogue", () => {
@@ -167,6 +185,14 @@ describe("C1 C2 C4 · GET /api/catalogue", () => {
 });
 
 describe("C1 C2 C4 · GET /api/metiers et /api/metiers/[slug]", () => {
+  it("affiche la description localisée d'un métier quand elle existe", async () => {
+    local.actif = true;
+    installer();
+    const { GET } = await import("@/app/api/metiers/route");
+    const corps = await sur(await GET()).json();
+    expect(corps[0].description).toBe("Description localisée");
+  });
+
   it("liste les métiers avec une seule requête propre au compte", async () => {
     installer();
     const { GET } = await import("@/app/api/metiers/route");
@@ -232,7 +258,8 @@ describe("C1 C2 C4 · GET /api/taches/[id]", () => {
     expect(corps.exercices).toEqual([
       { titre: "Cas 1", contexte: "Contexte", donnees: null, travail_a_faire: "À faire", prenom: null, lieu: null, profil: null, reponse_attendue: null, prompts: { chatgpt: null, claude: "Prompt Claude", gemini: null } },
     ]);
-    expect(corps.mise_en_place).toBeTruthy();
+    // La tâche a un modèle à remplir : l'ancienne mise en place ne sort plus.
+    expect(corps.mise_en_place).toBeNull();
     // Les cas et leurs prompts arrivent en UNE lecture, pas une par cas.
     expect(lectures(["exercices", "prompts"])).toHaveLength(1);
     verifierBudget();
@@ -250,11 +277,38 @@ describe("C1 C2 C4 · GET /api/taches/[id]", () => {
     verifierBudget();
   });
 
+  it("ne montre que les ressources du kit du métier d'où l'on vient", async () => {
+    installer();
+    // Depuis le métier M1 : la ressource du kit de M2 n'apparaît pas.
+    const corps = await (await demander(T1)).json();
+    expect(corps.ressources.map((r: { cle: string }) => r.cle)).toEqual(["config-test"]);
+    // Aucun identifiant de métier ne sort avec une ressource.
+    expect(Object.keys(corps.ressources[0]).sort()).toEqual(["cle", "outil", "titre", "type"]);
+    // Sans métier connu, et avec des ressources de deux kits : on n'en montre aucune.
+    const sansMetier = await (await demander(T1, "metier-inconnu")).json();
+    expect(sansMetier.ressources).toEqual([]);
+  });
+
+  it("affiche le cas localisé à la place de l'ancien, sans mêler les deux", async () => {
+    local.actif = true;
+    installer();
+    const corps = await (await demander(T1)).json();
+    expect(corps.exercices[0]).toMatchObject({
+      titre: "Gérante d'un salon à Abidjan",
+      contexte: "Vous gérez un salon à Yopougon.",
+      donnees: null,
+      travail_a_faire: "Classez ces messages.",
+    });
+    expect(lectures(["exercices", "prompts"])).toHaveLength(1);
+  });
+
   it("sert une tâche sans modèle comme avant : modèle absent, aucune ressource", async () => {
     installer();
     const corps = await (await demander(T2)).json();
     expect(corps.modele).toBeNull();
     expect(corps.ressources).toEqual([]);
+    // Sans modèle, l'ancienne mise en place reste servie.
+    expect(corps.mise_en_place).toBeTruthy();
   });
 
   it("n'annonce aucune tâche suivante sur la dernière tâche du parcours", async () => {

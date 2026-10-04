@@ -53,6 +53,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 | --- | --- | --- |
 | B1 | Toute modification passe par un fichier de migration numéroté et rejouable, qui porte dans le même fichier la RLS, les droits et les index. Supabase donne de lui-même des droits aux rôles publics à la création d'une table : la migration les remet à zéro (`revoke all`) avant de donner les siens. Après chaque migration en production, `supabase/controles/droits.sql` (lecture seule) est lancé et ne doit renvoyer aucune ligne. | test `migrations.test.ts`, contrôle en base, revue |
 | B2 | En production, Claude montre le SQL et ne l'exécute qu'après accord. Claude ne supprime pas de données. | revue |
+| B3 | Tant que la nouvelle interface n'est pas fusionnée, le site en ligne et l'aperçu lisent la même base. Le contenu neuf d'un métier déjà en ligne s'écrit donc à côté de l'ancien : cas dans `exercices.*_local`, description dans `metiers.description_local`. Les colonnes et les prompts lus par le site en ligne ne changent pas, et le titre d'une tâche non plus. Une tâche partagée par plusieurs métiers ne montre que les ressources du kit du métier d'où l'on vient. | tests `routes-charge.test.ts`, contrôle de fin de migration, revue |
 
 ## Livraison
 
@@ -64,7 +65,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 ## Revue manuelle avant livraison
 
 1. `npm run verif` : noter le résultat et les tests en échec.
-2. Relire le diff avec les règles « revue » ci-dessus : S7, S10, S13, C2, Q2, Q4, Q6, Q7, B1, B2.
+2. Relire le diff avec les règles « revue » ci-dessus : S7, S10, S13, C2, Q2, Q4, Q6, Q7, B1, B2, B3.
 3. Compter les requêtes de chaque page ou route modifiée (règle C2).
 4. Si une table, une variable d'environnement ou un réglage externe change, mettre à jour la liste ci-dessous et `env.example`. Si une migration a été exécutée, lancer `supabase/controles/droits.sql` en base : aucune ligne attendue.
 5. Écrire le message de livraison (règle L2).

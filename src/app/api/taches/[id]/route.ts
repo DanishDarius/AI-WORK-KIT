@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { lireCatalogue, lireComplementsTache, lireExercices, metierParSlug, tachesDuMetier } from "@/lib/contenu";
+import { lireCatalogue, lireComplementsTache, lireExercices, metierParSlug, ressourcesPourMetier, tachesDuMetier } from "@/lib/contenu";
 import { miseEnPlaceDeLaTache } from "@/lib/mise-en-place";
 import { estUuid } from "@/lib/normaliser";
 import { erreurServeur } from "@/lib/reponses-api";
@@ -9,7 +9,8 @@ import { requireActiveUser } from "@/lib/supabase/active-access";
 // GET /api/taches/[id]?metier=<slug> : détail d'une tâche : ses cas pratiques,
 // avec pour chacun les 3 prompts (chatgpt / claude / gemini). Une tâche d'un
 // kit porte en plus son résultat, ses étapes, son modèle à remplir et les
-// ressources du kit qui lui servent.
+// ressources du kit qui lui servent : celles du kit du métier d'où l'on vient,
+// car une tâche partagée est reliée aux kits de plusieurs métiers.
 //
 // Le paramètre "metier" (slug) est nécessaire car une tâche peut appartenir
 // à plusieurs métiers : il indique de quel métier on vient, pour savoir
@@ -83,7 +84,10 @@ export async function GET(
     suivante_id: suivante?.id ?? null,
     exercices,
     modele: complements.modele,
-    ressources: complements.ressources,
-    mise_en_place: miseEnPlaceDeLaTache(tache.code),
+    ressources: ressourcesPourMetier(complements.ressources, metier?.id ?? null),
+    // Une tâche qui a son modèle à remplir se suffit : son kit remplace
+    // l'ancienne mise en place (outils et automatisations écrits dans le code,
+    // souvent liés à une offre payante de l'IA).
+    mise_en_place: complements.modele ? null : miseEnPlaceDeLaTache(tache.code),
   });
 }

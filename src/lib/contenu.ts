@@ -123,12 +123,15 @@ export type ModeleContenu = {
 
 export type RessourceLiee = { cle: string; type: TypeRessource; titre: string; outil: string | null };
 
-export type ComplementsTache = { modele: ModeleContenu | null; ressources: RessourceLiee[] };
+/** Une ressource liée à une tâche, avec les métiers dont le kit la contient. */
+export type RessourceDeTache = RessourceLiee & { metiers: string[] };
+
+export type ComplementsTache = { modele: ModeleContenu | null; ressources: RessourceDeTache[] };
 
 async function chargerCatalogue(): Promise<CatalogueContenu> {
   const admin = createAdminClient();
   const [metiers, taches, liaisons] = await Promise.all([
-    admin.from("metiers").select("id, slug, nom, description").order("ordre", { ascending: true }).limit(200),
+    admin.from("metiers").select("id, slug, nom, description, description_local").order("ordre", { ascending: true }).limit(200),
     admin.from("taches").select("id, code, titre, limite_connue, ia_alternative_conseillee, resultat, etapes, precisions").limit(2000),
     admin.from("metiers_taches").select("metier_id, tache_id").order("ordre", { ascending: true }).limit(10000),
   ]);
@@ -147,26 +150,42 @@ async function chargerCatalogue(): Promise<CatalogueContenu> {
     (tachesParMetier[l.metier_id] ??= []).push(l.tache_id);
   }
 
-  return { metiers: (metiers.data ?? []) as MetierContenu[], taches: parId, tachesParMetier };
+  // Un métier dont la description est localisée affiche celle-ci (migration 0021).
+  const lignes = (metiers.data ?? []) as (MetierContenu & { description_local: string | null })[];
+  return {
+    metiers: lignes.map((m) => ({ id: m.id, slug: m.slug, nom: m.nom, description: m.description_local ?? m.description ?? null })),
+    taches: parId,
+    tachesParMetier,
+  };
 }
 
 async function chargerExercices(tacheId: string): Promise<ExerciceContenu[]> {
   const { data, error } = await createAdminClient()
     .from("exercices")
-    .select("titre, contexte, donnees, travail_a_faire, prenom, lieu, profil, reponse_attendue, prompts(ia, contenu)")
+    .select("titre, contexte, donnees, travail_a_faire, titre_local, contexte_local, donnees_local, travail_local, prenom, lieu, profil, reponse_attendue, prompts(ia, contenu)")
     .eq("tache_id", tacheId)
     .order("numero", { ascending: true })
     .limit(20);
   if (error) throw new Error(`Lecture des cas pratiques impossible : ${error.message}`);
 
-  type Ligne = Omit<ExerciceContenu, "prompts"> & { prompts: { ia: string; contenu: string }[] | null };
+  type Ligne = Omit<ExerciceContenu, "prompts"> & {
+    titre_local: string | null;
+    contexte_local: string | null;
+    donnees_local: string | null;
+    travail_local: string | null;
+    prompts: { ia: string; contenu: string }[] | null;
+  };
   return ((data ?? []) as Ligne[]).map((exo) => {
     const parIa = new Map((exo.prompts ?? []).map((p) => [p.ia, p.contenu]));
+    // Les 42 premières tâches gardent leur ancien cas pour le site en ligne :
+    // le cas localisé est écrit à côté (migration 0021) et passe avant lui.
+    // Un cas localisé est entier : ses données ne se mêlent pas à l'ancien.
+    const local = Boolean(exo.titre_local);
     return {
-      titre: exo.titre,
-      contexte: exo.contexte,
-      donnees: exo.donnees,
-      travail_a_faire: exo.travail_a_faire,
+      titre: local ? (exo.titre_local as string) : exo.titre,
+      contexte: local ? exo.contexte_local : exo.contexte,
+      donnees: local ? exo.donnees_local : exo.donnees,
+      travail_a_faire: local ? exo.travail_local : exo.travail_a_faire,
       prenom: exo.prenom ?? null,
       lieu: exo.lieu ?? null,
       profil: exo.profil ?? null,
@@ -258,7 +277,7 @@ async function chargerComplementsTache(tacheId: string): Promise<ComplementsTach
       )
       .eq("tache_id", tacheId)
       .maybeSingle(),
-    admin.from("ressources_taches").select("ressources(cle, type, titre, outil)").eq("tache_id", tacheId).limit(50),
+    admin.from("ressources_taches").select("ressources(cle, type, titre, outil, kits_metier(metier_id))").eq("tache_id", tacheId).limit(500),
   ]);
   const erreur = modele.error || liens.error;
   if (erreur) throw new Error(`Lecture du modèle impossible : ${erreur.message}`);
@@ -268,10 +287,17 @@ async function chargerComplementsTache(tacheId: string): Promise<ComplementsTach
     conseils_ia: { ia: string; conseil: string }[] | null;
   };
   const m = modele.data as unknown as LigneModele | null;
-  const ressources = ((liens.data ?? []) as unknown as { ressources: RessourceLiee | null }[])
+  type LigneRessource = RessourceLiee & { kits_metier: { metier_id: string }[] | null };
+  const ressources = ((liens.data ?? []) as unknown as { ressources: LigneRessource | null }[])
     .map((l) => l.ressources)
-    .filter((r): r is RessourceLiee => Boolean(r))
-    .map((r) => ({ cle: r.cle, type: r.type, titre: r.titre, outil: r.outil ?? null }));
+    .filter((r): r is LigneRessource => Boolean(r))
+    .map((r) => ({
+      cle: r.cle,
+      type: r.type,
+      titre: r.titre,
+      outil: r.outil ?? null,
+      metiers: (r.kits_metier ?? []).map((k) => k.metier_id),
+    }));
 
   return {
     modele: m
@@ -331,6 +357,19 @@ export const lireComplementsTache = unstable_cache(chargerComplementsTache, ["co
   revalidate: DUREE_SECONDES,
   tags: [ETIQUETTE],
 });
+
+/**
+ * Les ressources d'une tâche à montrer pour un métier. Une tâche partagée par
+ * plusieurs métiers est reliée aux ressources de plusieurs kits : on ne
+ * montre que celles du kit du métier d'où vient le client. Sans métier connu,
+ * on ne montre les ressources que si elles sont toutes du même kit.
+ */
+export function ressourcesPourMetier(ressources: RessourceDeTache[], metierId: string | null): RessourceLiee[] {
+  const garder = (r: RessourceDeTache): RessourceLiee => ({ cle: r.cle, type: r.type, titre: r.titre, outil: r.outil });
+  if (metierId) return ressources.filter((r) => r.metiers.includes(metierId)).map(garder);
+  const kits = new Set(ressources.flatMap((r) => r.metiers));
+  return kits.size <= 1 ? ressources.map(garder) : [];
+}
 
 export function metierParSlug(catalogue: CatalogueContenu, slug: string | null | undefined) {
   if (!slug) return null;
