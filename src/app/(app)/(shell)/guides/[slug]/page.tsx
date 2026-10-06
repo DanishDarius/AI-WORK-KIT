@@ -7,11 +7,11 @@ import { Icon } from "@/components/icon";
 import { Page } from "@/components/shell";
 import { Chip, Kicker } from "@/components/ui";
 import { getAbonnement } from "@/lib/abonnement";
-import { getAllGuides, guidePreview } from "@/lib/guides";
+import { getAllGuides, guideLisible } from "@/lib/guides";
 import { exigerAccesActif } from "@/lib/acces";
 
 // Rendu à la demande : le contenu envoyé dépend de l'abonnement. Un guide
-// réservé aux abonnés, lu sans abonnement, ne transmet que son aperçu.
+// réservé aux abonnés, ouvert sans abonnement, ne transmet que son titre.
 export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -19,7 +19,9 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const guide = getAllGuides().find((g) => g.slug === slug);
-  return guide ? { title: guide.title, description: guide.excerpt } : {};
+  if (!guide) return {};
+  // Le résumé d'un guide réservé ne sort pas du serveur sans abonnement.
+  return guide.inclus ? { title: guide.title, description: guide.excerpt } : { title: guide.title };
 }
 
 export default async function GuidePage({ params }: Props) {
@@ -31,8 +33,7 @@ export default async function GuidePage({ params }: Props) {
   const guide = guides[index];
   const suivants = [guides[(index + 1) % guides.length], guides[(index + 2) % guides.length]];
   const abonnement = await getAbonnement(email);
-  const verrouille = !guide.inclus && !abonnement.actif;
-  const markdown = verrouille ? guidePreview(guide.markdown) : guide.markdown;
+  const verrouille = !guideLisible(guide, abonnement.actif);
   const reserves = guides.filter((g) => !g.inclus).length;
 
   return (
@@ -41,12 +42,12 @@ export default async function GuidePage({ params }: Props) {
       <header className="row" style={{ alignItems: "flex-end", gap: 32 }}>
         <div className="grow stack" style={{ minWidth: 280 }}>
           <div className="chips">
-            {verrouille ? <Chip tone="orange" icon="lock">Aperçu · abonnés</Chip> : guide.inclus && !abonnement.actif ? <Chip tone="green">Inclus</Chip> : null}
+            {verrouille ? <Chip tone="orange" icon="lock">Abonnés</Chip> : guide.inclus && !abonnement.actif ? <Chip tone="green">Inclus</Chip> : null}
             <Chip>{guide.category}</Chip>
             <Chip icon="clock">{guide.tool} · {guide.duration}</Chip>
           </div>
           <h1 className="h1" style={{ maxWidth: 820 }}>{guide.title}</h1>
-          <p className="lead">{guide.excerpt}</p>
+          {!verrouille && <p className="lead">{guide.excerpt}</p>}
           <GuideActions slug={guide.slug} number={guide.number} title={guide.title} telechargement={abonnement.actif} />
           {!abonnement.actif && !verrouille && (
             <p className="small muted"><span aria-hidden="true" style={{ display: "inline-flex", verticalAlign: "-2px", marginRight: 6 }}><Icon name="lock" size={14} /></span>Téléchargement en PDF, avec le droit de le revendre : <Link className="link" href="/abonnement">avec l’abonnement</Link>.</p>
@@ -57,33 +58,32 @@ export default async function GuidePage({ params }: Props) {
         </div>
       </header>
 
-      <div className="reading">
-        <aside className="reading-nav">
-          <div className="card pad-sm stack-sm">
-            <Kicker>Guide {String(guide.number).padStart(3, "0")}</Kicker>
-            <p className="small muted">{verrouille ? "Vous lisez l’introduction. La suite s’ouvre avec l’abonnement." : "Lisez, copiez les prompts, testez-les tout de suite sur votre travail."}</p>
-            <Link className="link small" href="/taches">Mettre en pratique <Icon name="arrow" size={16} /></Link>
+      {verrouille ? (
+        <section className="card is-orange stack" style={{ maxWidth: 700 }}>
+          <div className="row" style={{ flexWrap: "nowrap" }}>
+            <span className="iconbox is-orange" aria-hidden="true" style={{ background: "#fff" }}><Icon name="lock" size={22} /></span>
+            <h2 className="h2">Ce guide est réservé aux abonnés</h2>
           </div>
-        </aside>
-        <article className="stack-lg">
-          <div className={verrouille ? "preview-wrap" : undefined}>
-            <GuideMarkdown markdown={markdown} guideNumber={guide.number} />
+          <p>Il fait partie des {reserves} guides de l’abonnement. Vos {guides.length - reserves} guides inclus s’affichent en entier.</p>
+          <div className="row">
+            <Link className="btn btn-orange" href="/abonnement">Voir les formules</Link>
+            <Link className="btn btn-secondary btn-plain" href="/bibliotheque?acces=inclus">Mes guides inclus</Link>
           </div>
-          {verrouille && (
-            <section className="card is-orange stack" style={{ maxWidth: 700 }}>
-              <div className="row" style={{ flexWrap: "nowrap" }}>
-                <span className="iconbox is-orange" aria-hidden="true" style={{ background: "#fff" }}><Icon name="lock" size={22} /></span>
-                <h2 className="h2">La suite est réservée aux abonnés</h2>
-              </div>
-              <p>Ce guide fait partie des {reserves} guides de l’abonnement. Vos {guides.length - reserves} guides inclus s’affichent en entier.</p>
-              <div className="row">
-                <Link className="btn btn-orange" href="/abonnement">Voir les formules</Link>
-                <Link className="btn btn-secondary btn-plain" href="/bibliotheque?acces=inclus">Mes guides inclus</Link>
-              </div>
-            </section>
-          )}
-        </article>
-      </div>
+        </section>
+      ) : (
+        <div className="reading">
+          <aside className="reading-nav">
+            <div className="card pad-sm stack-sm">
+              <Kicker>Guide {String(guide.number).padStart(3, "0")}</Kicker>
+              <p className="small muted">Lisez, copiez les prompts, testez-les tout de suite sur votre travail.</p>
+              <Link className="link small" href="/taches">Mettre en pratique <Icon name="arrow" size={16} /></Link>
+            </div>
+          </aside>
+          <article className="stack-lg">
+            <GuideMarkdown markdown={guide.markdown} guideNumber={guide.number} />
+          </article>
+        </div>
+      )}
 
       <section className="stack" aria-labelledby="a-lire-ensuite">
         <h2 id="a-lire-ensuite" className="h2">À lire ensuite</h2>

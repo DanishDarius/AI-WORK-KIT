@@ -109,40 +109,23 @@ export function getAllGuides(): Guide[] {
   return cache;
 }
 
-export function getGuideSummaries(): GuideSummary[] {
+// Sans abonnement, un guide réservé ne montre que son titre (plan : « titres
+// seulement »). Son texte, son résumé compris, ne quitte pas le serveur.
+export function guideLisible(guide: Pick<GuideSummary, "inclus">, abonne: boolean) {
+  return guide.inclus || abonne;
+}
+
+export function getGuideSummaries(abonne: boolean): GuideSummary[] {
   return getAllGuides().map((guide) => ({
     number: guide.number,
     slug: guide.slug,
     title: guide.title,
     tool: guide.tool,
     duration: guide.duration,
-    excerpt: guide.excerpt,
+    excerpt: guideLisible(guide, abonne) ? guide.excerpt : "",
     category: guide.category,
     hasVisual: guide.hasVisual,
     coverVariant: guide.coverVariant,
     inclus: guide.inclus,
   }));
-}
-
-// Aperçu gratuit d'un guide Premium : l'introduction et le premier chapitre.
-// Pour un guide court (moins de trois chapitres), seul le premier paragraphe
-// du premier chapitre est montré, afin de ne pas livrer l'essentiel.
-const hors_chapitre = /^(sommaire|introduction|ce que (vous allez|tu vas) trouver)/i;
-
-export function guidePreview(markdown: string) {
-  const lignes = markdown.split(/\r?\n/);
-  const chapitres: number[] = [];
-  lignes.forEach((ligne, index) => {
-    const titre = ligne.match(/^##\s+(.+)$/);
-    if (titre && !hors_chapitre.test(titre[1].trim())) chapitres.push(index);
-  });
-  if (!chapitres.length) {
-    const blocs = markdown.split(/\r?\n\s*\r?\n/);
-    return blocs.slice(0, Math.max(3, Math.ceil(blocs.length / 4))).join("\n\n");
-  }
-  if (chapitres.length >= 3) return lignes.slice(0, chapitres[1]).join("\n").trim();
-  const suite = lignes.slice(chapitres[0] + 1);
-  const debut = suite.findIndex((l) => l.trim());
-  const fin = suite.findIndex((l, i) => i > debut && !l.trim());
-  return [...lignes.slice(0, chapitres[0] + 1), ...suite.slice(0, fin === -1 ? suite.length : fin)].join("\n").trim();
 }

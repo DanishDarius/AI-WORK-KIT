@@ -3,15 +3,18 @@ import { Bibliotheque } from "@/components/guides";
 import { Page } from "@/components/shell";
 import { PageHead } from "@/components/ui";
 import { AbonnementCard, StatsCard } from "@/components/widgets";
+import { getAbonnement } from "@/lib/abonnement";
 import { getGuideSummaries } from "@/lib/guides";
 import { exigerAccesActif } from "@/lib/acces";
 
 export const metadata: Metadata = { title: "Guides" };
 
 export default async function Guides({ searchParams }: PageProps<"/bibliotheque">) {
-  await exigerAccesActif();
+  const { email } = await exigerAccesActif();
   const { acces } = await searchParams;
-  const guides = getGuideSummaries();
+  // Sans abonnement, un guide réservé arrive avec son titre, sans résumé.
+  const abonnement = await getAbonnement(email);
+  const guides = getGuideSummaries(abonnement.actif);
   const filtre = acces === "inclus" || acces === "premium" ? acces : undefined;
   return (
     <Page aside={<><StatsCard /><AbonnementCard /></>}>

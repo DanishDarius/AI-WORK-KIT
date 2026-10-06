@@ -380,8 +380,6 @@ details.faq p { color: var(--muted); margin-top: 10px; font-size: 15.5px; }
 .prose-figure { margin: 0; }
 .prose-figure img { width: 100%; height: auto; border-radius: 16px; }
 .prose-figure figcaption { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
-.preview-wrap { position: relative; max-height: 900px; overflow: hidden; }
-.preview-wrap::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 180px; background: linear-gradient(transparent, var(--bg)); }
 
 /* --------------------------------------------------------- média, dialogue */
 .media { position: relative; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: var(--night); }

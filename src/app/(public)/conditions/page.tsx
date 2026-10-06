@@ -78,7 +78,7 @@ export default function Conditions() {
           <li>les parcours <strong>Tâches</strong> et <strong>Métiers</strong> : chaque tâche avec ses cas pratiques, ses données d’exemple et ses prompts prêts à copier pour ChatGPT, Claude et Gemini ;</li>
           <li>les plans de mise en place : outils, prompts et configuration des tâches automatisables pour chaque IA ;</li>
           <li>les nouveautés des IA ;</li>
-          <li><strong>10 guides</strong> de la bibliothèque à lire en ligne, signalés « Inclus », ainsi que l’aperçu (introduction et premier chapitre) des autres guides ;</li>
+          <li><strong>10 guides</strong> de la bibliothèque à lire en ligne, signalés « Inclus », ainsi que le titre des autres guides ;</li>
           <li>le suivi de votre progression, vos favoris et vos guides enregistrés ;</li>
           <li>le support par email, décrit plus bas.</li>
         </ul>

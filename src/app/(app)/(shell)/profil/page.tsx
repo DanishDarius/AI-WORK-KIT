@@ -7,6 +7,6 @@ export const metadata: Metadata = { title: "Profil" };
 
 export default async function Profil() {
   await exigerAccesActif();
-  const guides = getGuideSummaries().map(({ slug, title, tool, duration }) => ({ slug, title, tool, duration }));
+  const guides = getGuideSummaries(false).map(({ slug, title, tool, duration }) => ({ slug, title, tool, duration }));
   return <ProfilEcran guides={guides} />;
 }
