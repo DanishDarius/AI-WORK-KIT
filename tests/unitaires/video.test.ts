@@ -93,6 +93,21 @@ describe("vidéos · dans le code", () => {
     expect(styles).not.toMatch(/\.lecteur-(texte|kicker|titre)\b/);
   });
 
+  it("le cadre du lecteur est debout, comme l'écran de téléphone que filment les vidéos", () => {
+    const styles = lire("src/app/globals.css");
+    expect(styles).toMatch(/\.lecteur \.media \{ aspect-ratio: 9 \/ 16; \}/);
+    // Une largeur bornée, et un cadre qui tient en entier dans la hauteur de l'écran.
+    const regle = /\.lecteur \{([^}]*)\}/.exec(styles);
+    expect(regle![1]).toMatch(/width: min\(100%, 300px\);/);
+    expect(regle![1]).toMatch(/width: min\(100%, 300px, calc\(72svh \* 9 \/ 16\)\);/);
+    // Le cadre commun des autres médias (vidéos des éditeurs dans les actualités) reste couché.
+    expect(styles).toMatch(/\.media \{[^}]*aspect-ratio: 16 \/ 9;/);
+    // Aucune page n'impose plus sa propre largeur au lecteur.
+    for (const fichier of ["src/components/tache.tsx", "src/components/kit-metier.tsx", "src/app/(public)/acces/page.tsx"]) {
+      expect(lire(fichier), fichier).not.toMatch(/maxWidth: \d+ \}\}>\s*<LecteurVideo/);
+    }
+  });
+
   it.each(["src/components/tache.tsx", "src/components/kit-metier.tsx", "src/components/premiers-pas.tsx", "src/app/(public)/acces/page.tsx"])("%s lit ses vidéos dans la page", (fichier) => {
     expect(lire(fichier)).toMatch(/<(LecteurVideo|VideoRepliable)\b/);
   });

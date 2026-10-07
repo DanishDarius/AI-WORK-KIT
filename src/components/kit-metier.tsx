@@ -236,11 +236,7 @@ export function KitMetierEcran({ slug, data, setData }: { slug: string; data: Ki
     <>
       <PageHead kicker="Votre boîte à outils" title={`Mon kit : ${kit.titre}`}>{kit.presentation}</PageHead>
 
-      {kit.video_url && (
-        <div style={{ maxWidth: 720 }}>
-          <LecteurVideo adresse={kit.video_url} titre={`Bienvenue dans votre kit ${kit.titre}`} legende="Deux minutes. Tout ce qu’elle montre est aussi écrit ci-dessous." />
-        </div>
-      )}
+      {kit.video_url && <LecteurVideo adresse={kit.video_url} titre={`Bienvenue dans votre kit ${kit.titre}`} legende="Deux minutes. Tout ce qu’elle montre est aussi écrit ci-dessous." />}
 
       <section className="card row" style={{ gap: 20 }}>
         <div aria-hidden="true" style={{ width: 88, height: 88, borderRadius: "50%", background: `conic-gradient(var(--green) 0 ${pct}%, #e6ecea ${pct}% 100%)`, display: "flex", alignItems: "center", justifyContent: "center", flex: "none" }}>

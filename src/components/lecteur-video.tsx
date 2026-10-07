@@ -9,6 +9,7 @@ import { Icon } from "./icon";
 // donnée envoyée). Au clic, le lecteur de Bunny Stream prend la place de
 // l'affiche et la lecture démarre. L'affiche ne porte aucun texte : le bouton
 // de lecture, seul, au milieu. Le titre reste dit aux lecteurs d'écran.
+// Le cadre est debout (9/16) : ces vidéos filment l'écran d'un téléphone.
 export function LecteurVideo({ adresse, titre, legende, lancee = false }: { adresse: string; titre: string; legende?: string; lancee?: boolean }) {
   const id = lireVideo(adresse);
   const [lecture, setLecture] = useState(lancee);

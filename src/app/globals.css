@@ -387,15 +387,19 @@ details.faq p { color: var(--muted); margin-top: 10px; font-size: 15.5px; }
 .media-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; border: 0; background: transparent; color: #fff; }
 .media-play > span { width: 72px; height: 72px; border-radius: 50%; background: var(--green); box-shadow: 0 5px 0 var(--green-deep); display: inline-flex; align-items: center; justify-content: center; }
 .media-credit { font-size: 12.5px; color: var(--muted); margin-top: 6px; }
-/* Lecteur des vidéos d'AIW : l'affiche se dessine ici, le lecteur ne se charge qu'au clic. */
-.lecteur { margin: 0; }
+/* Lecteur des vidéos d'AIW : l'affiche se dessine ici, le lecteur ne se charge qu'au clic.
+   Les vidéos de l'application filment l'écran d'un téléphone : le cadre est debout (9/16),
+   large de 300 px au plus, et toujours entier à l'écran (72 % de la hauteur visible au plus). */
+.lecteur { margin: 0; width: min(100%, 300px); width: min(100%, 300px, calc(72svh * 9 / 16)); }
+.lecteur .media { aspect-ratio: 9 / 16; }
+@media (max-width: 640px) { .lecteur { margin-inline: auto; } }
 .lecteur-affiche { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer; background: radial-gradient(90% 120% at 100% 0%, rgba(185, 242, 214, .2), rgba(185, 242, 214, 0) 60%), linear-gradient(200deg, #16443c 0%, var(--night) 62%); }
-.lecteur-affiche::before { content: ""; position: absolute; top: clamp(14px, 5%, 26px); left: clamp(14px, 4%, 30px); width: clamp(64px, 14%, 92px); aspect-ratio: 116 / 40; background: url("/brand/atelier/logo-reverse.svg") left center / contain no-repeat; opacity: .92; }
+.lecteur-affiche::before { content: ""; position: absolute; top: 16px; left: 16px; width: 72px; aspect-ratio: 116 / 40; background: url("/brand/atelier/logo-reverse.svg") left center / contain no-repeat; opacity: .92; }
 .lecteur-affiche:focus-visible { outline: 3px solid var(--mint); outline-offset: -6px; border-radius: 18px; }
-.lecteur-bouton { flex: none; width: clamp(58px, 15%, 84px); aspect-ratio: 1; border-radius: 50%; background: var(--mint); color: var(--night); box-shadow: 0 5px 0 var(--mint-deep); display: inline-flex; align-items: center; justify-content: center; padding-left: 4px; margin-bottom: 5px; transition: transform .12s ease, box-shadow .12s ease; }
+.lecteur-bouton { flex: none; width: clamp(60px, 22%, 72px); aspect-ratio: 1; border-radius: 50%; background: var(--mint); color: var(--night); box-shadow: 0 5px 0 var(--mint-deep); display: inline-flex; align-items: center; justify-content: center; padding-left: 4px; margin-bottom: 5px; transition: transform .12s ease, box-shadow .12s ease; }
 .lecteur-affiche:hover .lecteur-bouton { transform: translateY(-2px); box-shadow: 0 7px 0 var(--mint-deep); }
 .lecteur-affiche:active .lecteur-bouton { transform: translateY(4px); box-shadow: 0 1px 0 var(--mint-deep); }
-.lecteur-panneau { flex-basis: 100%; width: 100%; max-width: 640px; }
+.lecteur-panneau { flex-basis: 100%; width: 100%; }
 dialog.dialog { border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 24px; padding: 28px; width: min(440px, calc(100vw - 32px)); background: var(--paper); color: var(--ink); }
 dialog.dialog::backdrop { background: rgba(16, 42, 38, .45); }
 

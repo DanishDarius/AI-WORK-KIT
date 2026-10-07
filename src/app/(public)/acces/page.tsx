@@ -154,11 +154,7 @@ export default function Acces() {
             </p>
           </div>
 
-          {VIDEO_DEMO_ID && (
-            <div style={{ maxWidth: 760 }}>
-              <LecteurVideo adresse={adresseVideo(VIDEO_DEMO_ID)} titre="Une tâche d’AIW, du début à la fin" legende="Vidéo : AIW. Elle se charge seulement si vous la lancez." />
-            </div>
-          )}
+          {VIDEO_DEMO_ID && <LecteurVideo adresse={adresseVideo(VIDEO_DEMO_ID)} titre="Une tâche d’AIW, du début à la fin" legende="Vidéo : AIW. Elle se charge seulement si vous la lancez." />}
 
           <article className="card stack">
             <div className="chips">

@@ -224,11 +224,7 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
 
             <div className="stack-sm">
               <Kicker>Étapes</Kicker>
-              {tache.video_url && (
-                <div style={{ maxWidth: 640 }}>
-                  <LecteurVideo adresse={tache.video_url} titre={tache.titre} legende="Les étapes sont aussi écrites ci-dessous." />
-                </div>
-              )}
+              {tache.video_url && <LecteurVideo adresse={tache.video_url} titre={tache.titre} legende="Les étapes sont aussi écrites ci-dessous." />}
               {tache.etapes?.length ? (
                 <ol className="steps">
                   {tache.etapes.map((etape, i) => <li key={i}>{etape}</li>)}
