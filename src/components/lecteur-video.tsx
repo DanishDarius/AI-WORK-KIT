@@ -7,7 +7,8 @@ import { Icon } from "./icon";
 // Une vidéo d'AIW, lue dans la page. Avant le clic, l'affiche est dessinée
 // par l'application : rien ne se charge chez l'hébergeur (page légère, aucune
 // donnée envoyée). Au clic, le lecteur de Bunny Stream prend la place de
-// l'affiche et la lecture démarre.
+// l'affiche et la lecture démarre. L'affiche ne porte aucun texte : le bouton
+// de lecture, seul, au milieu. Le titre reste dit aux lecteurs d'écran.
 export function LecteurVideo({ adresse, titre, legende, lancee = false }: { adresse: string; titre: string; legende?: string; lancee?: boolean }) {
   const id = lireVideo(adresse);
   const [lecture, setLecture] = useState(lancee);
@@ -26,11 +27,7 @@ export function LecteurVideo({ adresse, titre, legende, lancee = false }: { adre
           />
         ) : (
           <button type="button" className="lecteur-affiche" onClick={() => setLecture(true)} aria-label={`Lire la vidéo : ${titre}`}>
-            <span className="lecteur-bouton" aria-hidden="true"><Icon name="play" size={30} /></span>
-            <span className="lecteur-texte">
-              <span className="lecteur-kicker">Vidéo</span>
-              <span className="lecteur-titre">{titre}</span>
-            </span>
+            <span className="lecteur-bouton" aria-hidden="true"><Icon name="play" size={32} /></span>
           </button>
         )}
       </div>

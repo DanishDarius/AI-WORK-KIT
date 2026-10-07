@@ -79,6 +79,20 @@ describe("vidéos · dans le code", () => {
     expect(lecteur).not.toMatch(/<img|b-cdn\.net/);
   });
 
+  it("l'affiche ne porte aucun texte : le bouton de lecture, seul, au milieu", () => {
+    const lecteur = lire("src/components/lecteur-video.tsx");
+    const affiche = /<button type="button" className="lecteur-affiche".*>\n([\s\S]*?)<\/button>/.exec(lecteur);
+    expect(affiche).not.toBeNull();
+    // Dans le bouton : le rond de lecture et rien d'autre. Le titre reste dit aux lecteurs d'écran.
+    expect(affiche![1].trim()).toMatch(/^<span className="lecteur-bouton" aria-hidden="true"><Icon name="play" size=\{\d+\} \/><\/span>$/);
+    expect(affiche![0]).toContain("aria-label={`Lire la vidéo : ${titre}`}");
+    const styles = lire("src/app/globals.css");
+    const regle = /\.lecteur-affiche \{([^}]*)\}/.exec(styles);
+    expect(regle![1]).toMatch(/align-items: center/);
+    expect(regle![1]).toMatch(/justify-content: center/);
+    expect(styles).not.toMatch(/\.lecteur-(texte|kicker|titre)\b/);
+  });
+
   it.each(["src/components/tache.tsx", "src/components/kit-metier.tsx", "src/components/premiers-pas.tsx", "src/app/(public)/acces/page.tsx"])("%s lit ses vidéos dans la page", (fichier) => {
     expect(lire(fichier)).toMatch(/<(LecteurVideo|VideoRepliable)\b/);
   });
