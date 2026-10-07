@@ -32,7 +32,7 @@ Ne jamais donner à l'IA le droit de trader sur marge, sur options ou en cryptom
 > Tu es mon assistant trading, mode prudence maximale.
 >
 > Mon profil :
-> - Capital total : [xx €]
+> - Capital total : [xx € ou FCFA]
 > - Horizon : [court / moyen / long terme]
 > - Tolérance au risque : [faible / moyenne / haute]
 > - Actifs déjà détenus : [liste]

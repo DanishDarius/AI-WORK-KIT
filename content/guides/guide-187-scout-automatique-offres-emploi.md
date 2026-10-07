@@ -18,7 +18,7 @@ Il balaie plusieurs sources (LinkedIn, Welcome, Indeed, sites propres des entrep
 > - Postes : [titres cibles]
 > - Secteurs : [liste ou « tous sauf X »]
 > - Géo : [zones acceptées + télétravail oui/non]
-> - Salaire cible mini : [xx €]
+> - Salaire cible mini : [xx € ou FCFA]
 > - Exclusions : [entreprises, secteurs, mots-clés à éviter]
 >
 > Pour chaque offre, sors :

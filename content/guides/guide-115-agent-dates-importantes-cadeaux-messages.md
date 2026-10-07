@@ -24,7 +24,7 @@ Anniversaires oubliés, dates importantes manquées, « un an dans l'entreprise 
 > Étape 2 : Construis une base « moments à honorer » avec : la personne, la date, le type de moment, ce qu'elle aime (déduit des échanges).
 >
 > Étape 3 : Tâche planifiée chaque lundi : « Cette semaine et la semaine prochaine, quelles dates approchent ? »
-> Pour chacune : deux idées de cadeau dans une fourchette de budget [X €], et un message court prêt à envoyer, dans le ton habituellement utilisé avec cette personne.
+> Pour chacune : deux idées de cadeau dans une fourchette de budget [X € ou FCFA], et un message court prêt à envoyer, dans le ton habituellement utilisé avec cette personne.
 
 ## Le détail qui change tout
 

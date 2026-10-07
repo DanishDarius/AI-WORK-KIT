@@ -58,7 +58,7 @@ On ne pose plus une question, on confie un objectif. Pas « écris-moi un e-mail
 > CONSTRUIS-MOI :
 > 1. L'OBJECTIF (une phrase, mesurable, pas « aide-moi à… »)
 > 2. LES OUTILS AUTORISÉS (mail, calendrier, web, fichier X, base Y, liste précise)
-> 3. LES GARDE-FOUS (ce que l'agent NE DOIT JAMAIS faire seul : envoyer à un client sans validation, dépenser > X€, toucher au CRM sur les gros comptes…)
+> 3. LES GARDE-FOUS (ce que l'agent NE DOIT JAMAIS faire seul : envoyer à un client sans validation, dépenser > X € ou FCFA, toucher au CRM sur les gros comptes…)
 > 4. LE CRITÈRE DE SUCCÈS (comment je sais que c'est bien fait : 3 conditions concrètes)
 > 5. LE FORMAT DE RENDU (à quoi ressemble la sortie que je reçois chaque jour / semaine)
 > 6. LE PROTOCOLE D'ESCALADE (dans quels 3-4 cas exacts l'agent doit s'arrêter et me demander)

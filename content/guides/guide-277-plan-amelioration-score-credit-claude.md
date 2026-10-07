@@ -16,8 +16,8 @@ Le taux d'utilisation des crédits (idéalement en dessous de 30 %), l'anciennet
 >
 > VOICI MA SITUATION :
 > - Score actuel : [xxx]
-> - Encours total : [€]
-> - Limites totales : [€]
+> - Encours total : [€ ou FCFA]
+> - Limites totales : [€ ou FCFA]
 > - Comptes (avec ancienneté) : [liste]
 > - Retards 24 derniers mois : [oui/non, lesquels]
 > - Demandes récentes : [combien]

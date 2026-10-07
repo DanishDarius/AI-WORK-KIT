@@ -126,7 +126,7 @@ Celui-ci pique un peu, et c'est le but. Il donne le total mensuel, le total annu
 > 3. TENDANCE MENSUELLE : graphique en ligne des dépenses mensuelles sur les 12 derniers mois. Lisse la ligne. Annote les 3 mois les plus chers avec un petit texte sur la cause probable.
 > 4. CLASSEMENT DES PRESTATAIRES : top 10 des prestataires par dépense totale, affichés en liste verticale de cartes. Chaque carte : nom du prestataire, icône catégorie, total dépensé, nombre total de commandes, et une mini barre montrant sa part du total alimentaire.
 > 5. PLUS GROSSE COMMANDE UNIQUE : une carte dédiée avec la plus grosse dépense alimentaire de l'année (prestataire, date, montant, catégorie), présentée comme un aveu assumé.
-> 6. MOYENNE QUOTIDIENNE. Petit bloc final : « Cela représente X €/jour. Ou Y €/semaine. Ou Z €/mois. » Dans le même ton éditorial.
+> 6. MOYENNE QUOTIDIENNE. Petit bloc final : « Cela représente X €/jour. Ou Y €/semaine. Ou Z €/mois. », en euros ou en FCFA selon la monnaie des reçus. Dans le même ton éditorial.
 > - Apparitions progressives subtiles au défilement sur chaque section.
 > - Adapté au mobile.
 >

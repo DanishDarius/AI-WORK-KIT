@@ -17,7 +17,7 @@ Une soirée à deux échoue rarement par manque d'envie. Elle échoue par manque
 > Contexte :
 > - Code postal : [xxxxx]
 > - Ambiance recherchée : [cosy / festif / surprise / détendu]
-> - Budget total : [xx €]
+> - Budget total : [xx € ou FCFA]
 > - Heure de départ : [xxh]
 > - Contraintes : [végétarien, allergies, voiture ou non, etc.]
 > - Ce qu'on a déjà fait ensemble : [pour éviter les redites]
