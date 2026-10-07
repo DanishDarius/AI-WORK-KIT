@@ -4,6 +4,7 @@ import { chemin, lire, lister } from "../outils/fichiers";
 
 // Règle C3 : les pages publiques sont statiques.
 // Règle Q5 : chaque groupe de pages a sa page d'erreur et son état de chargement.
+// Règle Q8 : sur téléphone, les barres restent à l'écran et ne bougent pas.
 
 const PAGES_PUBLIQUES = lister("src/app/(public)", (f) => f.endsWith("/page.tsx"));
 
@@ -44,5 +45,47 @@ describe("Q5 · pages d'erreur et états de chargement", () => {
     const contenu = lire("src/app/global-error.tsx");
     expect(contenu).toMatch(/<html lang="fr">/);
     expect(contenu).toMatch(/<body>/);
+  });
+});
+
+describe("Q8 · sur téléphone, les barres restent à l'écran", () => {
+  const styles = lire("src/app/globals.css");
+  const ecrans = lister("src", (f) => f.endsWith(".tsx"));
+
+  it("aucun écran n'accroche une barre au bas de sa page, ni ne fixe sa hauteur en vh", () => {
+    for (const fichier of ecrans) {
+      const source = lire(fichier);
+      // « sticky » en bas d'une page suit la page, pas l'écran : la barre flotte quand le navigateur replie les siennes.
+      expect(source, fichier).not.toMatch(/position:\s*["']sticky["']/);
+      expect(source, fichier).not.toMatch(/100vh/);
+    }
+  });
+
+  it("une hauteur d'écran s'écrit en dvh : la hauteur vraiment visible, barres du navigateur comprises", () => {
+    // Pas de repli en vh : la construction le retire (navigateurs visés : Chrome 111, Safari 16.4), il ne servirait à rien.
+    expect(styles).not.toMatch(/100vh/);
+    expect(styles.match(/100dvh/g)?.length).toBeGreaterThanOrEqual(6);
+  });
+
+  it("le questionnaire de démarrage est un cadre à la hauteur de l'écran, dont seules les réponses défilent", () => {
+    const ecran = lire("src/app/(app)/bienvenue/ecran.tsx");
+    expect(ecran).toMatch(/<div className="etapes">/);
+    expect(ecran).toMatch(/<header className="etapes-haut">/);
+    expect(ecran).toMatch(/<main id="contenu" ref=\{corps\} className="etapes-corps stack-lg">/);
+    expect(ecran).toMatch(/<footer className="etapes-bas">/);
+    // Chaque question s'ouvre en haut de la zone qui défile.
+    expect(ecran).toMatch(/corps\.current\?\.scrollTo\(0, 0\)/);
+    expect(styles).toMatch(/\.etapes \{ height: 100dvh; display: flex; flex-direction: column; overflow: hidden;/);
+    expect(styles).toMatch(/\.etapes-corps \{[^}]*min-height: 0; overflow-y: auto;/);
+    expect(styles).toMatch(/\.etapes-haut \{ flex: none;/);
+    expect(styles).toMatch(/\.etapes-bas \{ flex: none;[^}]*env\(safe-area-inset-bottom\)/);
+  });
+
+  it("le menu du bas est fixé à l'écran, au-dessus de la zone réservée du téléphone", () => {
+    expect(styles).toMatch(/\.tabbar \{ display: flex; position: fixed; left: 0; right: 0; bottom: 0;[^}]*env\(safe-area-inset-bottom\)/);
+  });
+
+  it("sur téléphone, le bloc « Votre parcours » reste à sa place et ne glisse pas sous l'en-tête", () => {
+    expect(styles).toMatch(/@media \(max-width: 860px\) \{ \.path-head \{ position: static; \} \}/);
   });
 });

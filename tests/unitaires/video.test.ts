@@ -98,7 +98,6 @@ describe("vidéos · dans le code", () => {
     expect(styles).toMatch(/\.lecteur \.media \{ aspect-ratio: 9 \/ 16; \}/);
     // Une largeur bornée, et un cadre qui tient en entier dans la hauteur de l'écran.
     const regle = /\.lecteur \{([^}]*)\}/.exec(styles);
-    expect(regle![1]).toMatch(/width: min\(100%, 300px\);/);
     expect(regle![1]).toMatch(/width: min\(100%, 300px, calc\(72svh \* 9 \/ 16\)\);/);
     // Le cadre commun des autres médias (vidéos des éditeurs dans les actualités) reste couché.
     expect(styles).toMatch(/\.media \{[^}]*aspect-ratio: 16 \/ 9;/);

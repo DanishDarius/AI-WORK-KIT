@@ -51,7 +51,7 @@
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
@@ -173,9 +173,9 @@ button { cursor: pointer; }
 .divider { height: 2px; background: var(--line); border: 0; margin: 0; }
 
 /* ---------------------------------------------------------- coquille appli */
-.app { display: grid; grid-template-columns: var(--rail-w) minmax(0, 1fr); min-height: 100vh; background: linear-gradient(to right, var(--paper) var(--rail-w), transparent var(--rail-w)); }
+.app { display: grid; grid-template-columns: var(--rail-w) minmax(0, 1fr); min-height: 100dvh; background: linear-gradient(to right, var(--paper) var(--rail-w), transparent var(--rail-w)); }
 .stack > .chip, .stack-sm > .chip, .stack-lg > .chip { align-self: flex-start; }
-.rail { position: sticky; top: 0; height: 100vh; background: var(--paper); border-right: 2px solid var(--line); padding: 18px 12px; display: flex; flex-direction: column; gap: 6px; z-index: 20; }
+.rail { position: sticky; top: 0; height: 100dvh; background: var(--paper); border-right: 2px solid var(--line); padding: 18px 12px; display: flex; flex-direction: column; gap: 6px; z-index: 20; }
 .rail-logo { display: flex; justify-content: center; padding: 4px 0 18px; }
 .rail-link { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-height: 64px; padding: 10px 4px; border-radius: 16px; border: 2px solid transparent; color: var(--muted); font-family: var(--font-title); font-weight: 800; font-size: 11.5px; text-align: center; }
 .rail-link:hover { color: var(--ink); background: var(--bg); }
@@ -228,6 +228,8 @@ button { cursor: pointer; }
 
 /* ---------------------------------------------------------------- parcours */
 .path-head { position: sticky; top: 16px; z-index: 5; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+/* Sur téléphone, ce bloc reste à sa place en haut de la page : accroché, il glissait sous l'en-tête. */
+@media (max-width: 860px) { .path-head { position: static; } }
 .resume { background: var(--night); color: #fff; border-radius: 22px; padding: 22px 24px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 .resume h2 { color: #fff; font-size: 22px; }
 .resume p { color: var(--night-soft); font-size: 14px; }
@@ -305,11 +307,11 @@ details.faq[open] summary svg { transform: rotate(180deg); }
 details.faq p { color: var(--muted); margin-top: 10px; font-size: 15.5px; }
 
 /* ------------------------------------------------------------ écran tâche */
-.task { min-height: 100vh; background: var(--bg); }
+.task { min-height: 100dvh; background: var(--bg); }
 .task-top { position: sticky; top: 0; z-index: 30; background: var(--paper); border-bottom: 2px solid var(--line); display: flex; align-items: center; gap: 14px; padding: 10px 20px; }
 .task-top .grow > span { display: block; font-size: 12.5px; color: var(--muted); }
 .task-top h1 { font-size: 19px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.task-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); min-height: calc(100vh - 66px); }
+.task-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); min-height: calc(100dvh - 66px); }
 .task-left { background: var(--paper); border-right: 2px solid var(--line); padding: 28px 32px 56px; display: flex; flex-direction: column; gap: 22px; }
 .task-right { padding: 28px 32px 56px; display: flex; flex-direction: column; gap: 18px; }
 .situation { background: var(--bg); border-radius: 18px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
@@ -390,7 +392,7 @@ details.faq p { color: var(--muted); margin-top: 10px; font-size: 15.5px; }
 /* Lecteur des vidéos d'AIW : l'affiche se dessine ici, le lecteur ne se charge qu'au clic.
    Les vidéos de l'application filment l'écran d'un téléphone : le cadre est debout (9/16),
    large de 300 px au plus, et toujours entier à l'écran (72 % de la hauteur visible au plus). */
-.lecteur { margin: 0; width: min(100%, 300px); width: min(100%, 300px, calc(72svh * 9 / 16)); }
+.lecteur { margin: 0; width: min(100%, 300px, calc(72svh * 9 / 16)); }
 .lecteur .media { aspect-ratio: 9 / 16; }
 @media (max-width: 640px) { .lecteur { margin-inline: auto; } }
 .lecteur-affiche { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer; background: radial-gradient(90% 120% at 100% 0%, rgba(185, 242, 214, .2), rgba(185, 242, 214, 0) 60%), linear-gradient(200deg, #16443c 0%, var(--night) 62%); }
@@ -437,7 +439,14 @@ dialog.dialog::backdrop { background: rgba(16, 42, 38, .45); }
 }
 
 /* ------------------------------------------------------------------ auth */
-.auth { min-height: 100vh; display: flex; flex-direction: column; background: var(--bg); }
+.auth { min-height: 100dvh; display: flex; flex-direction: column; background: var(--bg); }
+/* Questionnaire de démarrage : un cadre à la hauteur de l'écran. La barre du haut et celle du bas
+   n'en bougent pas, seules les réponses défilent entre elles. Aucune position « sticky » ni « fixed » :
+   sur téléphone, elles se décalent quand le navigateur replie ses propres barres. */
+.etapes { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; background: var(--bg); }
+.etapes-haut { flex: none; padding: calc(14px + env(safe-area-inset-top)) 0 12px; }
+.etapes-corps { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 24px max(24px, calc((100% - 712px) / 2)) 40px; }
+.etapes-bas { flex: none; background: var(--paper); border-top: 2px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
 .auth-top { padding: 18px 24px; }
 .auth-main { flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 16px 16px 56px; }
 .auth-card { width: 100%; max-width: 940px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); border-radius: 28px; overflow: hidden; border: 2px solid var(--line); border-bottom-width: 4px; background: var(--paper); }

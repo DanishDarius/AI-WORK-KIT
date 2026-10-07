@@ -46,6 +46,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 | Q5 | Chaque groupe de pages a sa page d'erreur et son état de chargement. | test `pages.test.ts` |
 | Q6 | Avant d'utiliser une API de Next, lire sa page dans `node_modules/next/dist/docs/`. | revue |
 | Q7 | Textes en français, au vouvoiement, sans tiret long, sans le nom du fondateur, sans témoignage ni chiffre inventé. Tout contenu local suit la bible de localisation. Le contenu d'un kit se livre par une migration de contenu fabriquée à partir de son document validé : les textes n'y sont pas réécrits à la main. Le contenu du fil Nouveau (tâche de la semaine, pack, actualités des IA) se livre de la même façon, à partir de sa source : une actualité cite sa page officielle, et ne dit rien que cette page ne dit pas. Les e-mails de compte suivent la même règle ; leur version de référence est dans `supabase/emails/`. Le slogan est « L’IA dans votre travail et au cœur de vos tâches du quotidien » : il s'écrit à un seul endroit (`src/lib/marque.ts`) et se reprend tel quel. Le logo est le cube à l'étincelle (`public/brand/atelier/`). Dans un guide, un montant en euros ou en dollars porte son montant en FCFA à côté, par exemple « 5 500 € (environ 3 600 000 FCFA) » : 1 € = 655,957 FCFA, le dollar au cours du jour où le texte est écrit, arrondi à deux chiffres ; les rares exceptions sont écrites dans `guides.test.ts`. Le PDF d'un guide se fabrique avec `scripts/build-guide-download.py` : polices du site, slogan lu dans `marque.ts`. | tests `emails.test.ts`, `marque.test.ts`, `fil-contenu.test.ts`, `guides.test.ts`, revue |
+| Q8 | Sur téléphone, une barre qui doit rester à l'écran ne bouge pas. Elle n'est jamais accrochée au bas d'une page (`sticky`) : elle est posée dans un cadre à la hauteur de l'écran (le questionnaire de démarrage, `.etapes`) ou fixée à l'écran (le menu du bas). Une hauteur d'écran s'écrit en `dvh` (la hauteur vraiment visible), jamais en `vh`. Un bloc accroché en haut ne passe pas sous l'en-tête du téléphone. Tout changement de mise en page s'essaie sur un vrai téléphone, dans le navigateur et dans le navigateur intégré d'une application. | test `pages.test.ts`, revue |
 
 ## Base de données
 
@@ -65,7 +66,7 @@ Avant chaque livraison : `npm run verif` passe, puis la revue manuelle de la fin
 ## Revue manuelle avant livraison
 
 1. `npm run verif` : noter le résultat et les tests en échec.
-2. Relire le diff avec les règles « revue » ci-dessus : S7, S10, S13, C2, Q2, Q4, Q6, Q7, B1, B2, B3.
+2. Relire le diff avec les règles « revue » ci-dessus : S7, S10, S13, C2, Q2, Q4, Q6, Q7, Q8, B1, B2, B3.
 3. Compter les requêtes de chaque page ou route modifiée (règle C2).
 4. Si une table, une variable d'environnement ou un réglage externe change, mettre à jour la liste ci-dessous et `env.example`. Si une migration a été exécutée, lancer `supabase/controles/droits.sql` en base : aucune ligne attendue.
 5. Écrire le message de livraison (règle L2).

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Icon } from "@/components/icon";
 import { Chip } from "@/components/ui";
 import { api, type IA, type Metier, useResource } from "@/lib/kit-api";
@@ -58,6 +58,12 @@ export default function Bienvenue() {
   const [pays, setPays] = useState<Pays | null>(null);
   const [envoi, setEnvoi] = useState(false);
   const metiers = useResource<Metier[]>("/api/metiers");
+  const corps = useRef<HTMLElement>(null);
+
+  // Chaque question s'ouvre en haut : la zone qui défile revient à son début.
+  useEffect(() => {
+    corps.current?.scrollTo(0, 0);
+  }, [etape]);
 
   const peutContinuer = [true, !!type, !!metier, outils.length > 0, !!appareil, !!pays][etape] ?? true;
   const metierNom = metiers.data?.find((m) => m.slug === metier)?.nom;
@@ -83,18 +89,22 @@ export default function Bienvenue() {
   }
 
   return (
-    <div className="auth" style={{ minHeight: "100vh" }}>
-      <header className="wrap row" style={{ paddingTop: 20, flexWrap: "nowrap", maxWidth: 900, width: "100%" }}>
-        <button type="button" className="icon-btn is-flat" aria-label="Revenir" onClick={() => setEtape((e) => Math.max(0, e - 1))} disabled={etape === 0}>
-          <Icon name="left" size={24} />
-        </button>
-        <div className="grow"><div className="bar" role="progressbar" aria-label="Avancement" aria-valuemin={0} aria-valuemax={6} aria-valuenow={etape}><span style={{ width: `${(etape / 6) * 100}%` }} /></div></div>
-        <Link className="icon-btn is-flat" href="/" aria-label="Passer">
-          <Icon name="x" size={24} />
-        </Link>
+    // Un cadre à la hauteur de l'écran : la barre du haut et celle du bas n'en
+    // bougent pas, seules les réponses défilent entre elles (styles « .etapes »).
+    <div className="etapes">
+      <header className="etapes-haut">
+        <div className="wrap row" style={{ flexWrap: "nowrap", maxWidth: 900, width: "100%" }}>
+          <button type="button" className="icon-btn is-flat" aria-label="Revenir" onClick={() => setEtape((e) => Math.max(0, e - 1))} disabled={etape === 0}>
+            <Icon name="left" size={24} />
+          </button>
+          <div className="grow"><div className="bar" role="progressbar" aria-label="Avancement" aria-valuemin={0} aria-valuemax={6} aria-valuenow={etape}><span style={{ width: `${(etape / 6) * 100}%` }} /></div></div>
+          <Link className="icon-btn is-flat" href="/" aria-label="Passer">
+            <Icon name="x" size={24} />
+          </Link>
+        </div>
       </header>
 
-      <main id="contenu" className="wrap stack-lg" style={{ maxWidth: 760, width: "100%", paddingTop: 36, paddingBottom: 140, flexGrow: 1 }}>
+      <main id="contenu" ref={corps} className="etapes-corps stack-lg">
         {etape === 0 && (
           <div className="stack-lg" style={{ alignItems: "center", textAlign: "center", paddingTop: 30 }}>
             <Image src="/brand/atelier/symbol-primary.svg" alt="" width={112} height={112} priority />
@@ -172,7 +182,7 @@ export default function Bienvenue() {
         )}
       </main>
 
-      <footer style={{ position: "sticky", bottom: 0, background: "var(--paper)", borderTop: "2px solid var(--line)" }}>
+      <footer className="etapes-bas">
         <div className="wrap row-between" style={{ maxWidth: 900, paddingBlock: 16 }}>
           <span className="small muted">{etape === 0 ? "Personnalisation" : etape < 6 ? `Question ${etape} sur 5` : "Terminé"}</span>
           {etape < 6 ? (
