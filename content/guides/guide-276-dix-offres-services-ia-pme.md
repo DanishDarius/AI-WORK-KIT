@@ -46,7 +46,7 @@ Il est déconseillé de vendre une offre jamais livrée, même à titre gratuit 
 
 **Faut-il créer une société pour démarrer ?**
 
-Non, une micro-entreprise suffit généralement jusqu'à environ 70 000 € de chiffre d'affaires annuel. Au-delà, une structure sociétaire devient pertinente.
+Pas forcément. Dans beaucoup de pays, une activité individuelle déclarée suffit pour facturer ses premiers clients. Les règles, les plafonds de chiffre d'affaires et les impôts changent d'un pays à l'autre : vérifiez-les auprès de l'administration ou d'un comptable de votre pays avant de signer votre premier contrat. Une société devient utile quand l'activité grossit, quand un client l'exige ou quand vous vous associez.
 
 **Et sans aucune référence pour commencer ?**
 

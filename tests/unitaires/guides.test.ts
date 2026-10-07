@@ -76,8 +76,6 @@ const SANS_FCFA: Record<string, string[]> = {
   // Calculs de bourse sur une entreprise fictive : l'unité n'y joue aucun rôle.
   "guide-27": ["50 €", "2 €"],
   "guide-28": ["M€", "12,96 €"],
-  // Seuil de la micro-entreprise en France : le convertir laisserait croire qu'il vaut ailleurs.
-  "guide-276": ["70 000 €"],
   // Montant déjà donné en FCFA plus haut dans le même guide.
   "guide-07": ["100 millions de dollars", "100 M$"],
   "guide-37": ["980 €", "950 €"],
