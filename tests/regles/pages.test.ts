@@ -88,4 +88,14 @@ describe("Q8 · sur téléphone, les barres restent à l'écran", () => {
   it("sur téléphone, le bloc « Votre parcours » reste à sa place et ne glisse pas sous l'en-tête", () => {
     expect(styles).toMatch(/@media \(max-width: 860px\) \{ \.path-head \{ position: static; \} \}/);
   });
+
+  it("le rayon des guides garde de petites couvertures : deux par ligne sur téléphone, jamais une seule", () => {
+    expect(lire("src/components/guides.tsx")).toMatch(/<div className="books">/);
+    expect(styles).toMatch(/\.books \{ display: grid; grid-template-columns: repeat\(4, minmax\(0, 1fr\)\);/);
+    expect(styles).toMatch(/@media \(max-width: 720px\) \{ \.books \{ grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/);
+    expect(styles).toMatch(/@media \(max-width: 560px\) \{\s*\.books \{ grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);/);
+    // Le titre de la couverture suit la largeur de la couverture, pour tenir dans une petite.
+    expect(styles).toMatch(/\.books \.book \{ container-type: inline-size; \}/);
+    expect(styles).toMatch(/\.books \.cover strong \{ font-size: clamp\(15px, 11cqi, 20px\); \}/);
+  });
 });

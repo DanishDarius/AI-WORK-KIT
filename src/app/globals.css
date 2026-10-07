@@ -355,6 +355,18 @@ details.faq p { color: var(--muted); margin-top: 10px; font-size: 15.5px; }
 .book:hover .cover { transform: translateY(-3px); }
 .book .cover { transition: transform .15s ease; }
 .book-title { font-family: var(--font-title); font-weight: 900; font-size: 15.5px; line-height: 1.3; }
+/* Rayon des guides : de petites couvertures partout. Quatre par ligne, trois sur un petit écran couché,
+   deux sur téléphone. Le titre de la couverture suit la largeur de la couverture. */
+.books { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.books .book { container-type: inline-size; }
+.books .cover strong { font-size: clamp(15px, 11cqi, 20px); }
+@media (max-width: 720px) { .books { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 16px; } }
+@media (max-width: 560px) {
+  .books { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; }
+  .books .cover { padding: 12px; border-radius: 14px; }
+  .books .cover-lock { top: 9px; right: 9px; width: 26px; height: 26px; }
+  .books .book-title { font-size: 14.5px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+}
 
 /* --------------------------------------------------------- lecture guide */
 .reading { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; }

@@ -134,7 +134,7 @@ export function Bibliotheque({ guides, acces }: { guides: GuideSummary[]; acces?
       </div>
 
       {liste.length ? (
-        <div className="grid-4" style={{ gap: 24 }}>
+        <div className="books">
           {liste.slice(0, limite).map((g) => {
             const verrou = !g.inclus && abonne === false;
             return (
