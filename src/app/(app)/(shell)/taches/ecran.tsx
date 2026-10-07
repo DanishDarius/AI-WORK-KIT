@@ -61,9 +61,10 @@ export default function Taches() {
       </div>
 
       <div className="row">
-        <label className="field" style={{ flexDirection: "row", alignItems: "center" }}>
+        <label className="field" style={{ flexDirection: "row", alignItems: "center", minWidth: 0, maxWidth: "100%" }}>
           <span className="small muted">Métier</span>
-          <select className="select" style={{ minHeight: 44, width: "auto" }} value={metier} onChange={(e) => { setMetier(e.target.value); setLimite(PAR_PAGE); }}>
+          {/* La liste prend la largeur de son nom de métier le plus long : sur téléphone, elle se borne à l'écran. */}
+          <select className="select" style={{ minHeight: 44, width: "auto", minWidth: 0, maxWidth: "100%", flex: "0 1 auto" }} value={metier} onChange={(e) => { setMetier(e.target.value); setLimite(PAR_PAGE); }}>
             <option value="tous">Tous les métiers</option>
             {data?.metiers.map((m) => <option key={m.slug} value={m.slug}>{m.nom}</option>)}
           </select>

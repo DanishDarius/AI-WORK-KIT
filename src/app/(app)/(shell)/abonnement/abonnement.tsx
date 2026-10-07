@@ -97,13 +97,13 @@ export function AbonnementEcran() {
       <section className="stack" aria-labelledby="comparaison">
         <h2 id="comparaison" className="h2">Accès ou abonnement</h2>
         <div className="card" style={{ padding: 0, overflow: "hidden" }}>
-          <div className="row" style={{ display: "grid", gridTemplateColumns: "minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)", padding: "14px 20px", background: "var(--bg)", flexWrap: "nowrap" }}>
+          <div className="comparaison-ligne is-tete">
             <span className="strong">Ce qui est inclus</span>
             <span className="strong" style={{ textAlign: "center" }}>Accès · {fcfa(PRIX.acces)}</span>
             <span className="strong" style={{ textAlign: "center", color: "var(--orange)" }}>Abonnement</span>
           </div>
           {LIGNES.map((l) => (
-            <div key={l.label} style={{ display: "grid", gridTemplateColumns: "minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)", padding: "14px 20px", borderTop: "2px solid var(--line)", alignItems: "center", gap: 12 }}>
+            <div key={l.label} className="comparaison-ligne">
               <span>{l.label}</span>
               <span style={{ display: "flex", justifyContent: "center" }}><Cellule v={l.base} /></span>
               <span style={{ display: "flex", justifyContent: "center" }}><Cellule v={l.abo} orange /></span>

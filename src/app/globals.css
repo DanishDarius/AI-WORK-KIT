@@ -103,6 +103,8 @@ button { cursor: pointer; }
 .btn-sm { min-height: 44px; padding: 9px 16px; font-size: 13.5px; }
 .btn-lg { min-height: 56px; padding: 16px 30px; font-size: 16.5px; }
 .btn-block { display: flex; width: 100%; }
+/* Sur téléphone, un bouton au texte long passe à la ligne au lieu de dépasser de l'écran. */
+@media (max-width: 560px) { .btn { white-space: normal; text-align: center; max-width: 100%; line-height: 1.25; } }
 .btn-orange { background: var(--orange); border-color: var(--orange); box-shadow: var(--shadow-press) var(--orange-deep); }
 .btn-orange:active { box-shadow: 0 0 0 var(--orange-deep); }
 .btn-secondary { background: var(--paper); color: var(--ink); border-color: var(--line-strong); box-shadow: var(--shadow-press) var(--line-strong); }
@@ -135,6 +137,8 @@ button { cursor: pointer; }
 
 /* ------------------------------------------------------------- étiquettes */
 .chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: var(--paper); color: var(--muted); border: 1.5px solid var(--line); font-family: var(--font-title); font-weight: 800; font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; line-height: 1.2; }
+/* Sur téléphone, une étiquette au texte long passe à la ligne au lieu de dépasser de l'écran. */
+@media (max-width: 560px) { .chip { white-space: normal; max-width: 100%; } }
 .chip-green { background: var(--mint-bg); color: var(--green); border-color: #c9ebdb; }
 .chip-orange { background: var(--orange-bg); color: var(--orange); border-color: #f5d3b3; }
 .chip-blue { background: var(--blue-bg); color: var(--blue); border-color: #cfdbfa; }
@@ -171,6 +175,14 @@ button { cursor: pointer; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .divider { height: 2px; background: var(--line); border: 0; margin: 0; }
+/* Tableau « Accès ou abonnement » : sur téléphone, les deux colonnes de coches prennent la largeur
+   de leur titre, pour que « Abonnement » ne soit pas coupé. */
+.comparaison-ligne { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 12px; padding: 14px 20px; border-top: 2px solid var(--line); }
+.comparaison-ligne.is-tete { background: var(--bg); border-top: 0; }
+@media (max-width: 560px) {
+  .comparaison-ligne { grid-template-columns: minmax(0, 1fr) 58px 92px; gap: 10px; padding: 14px; font-size: 15px; }
+  .comparaison-ligne.is-tete { font-size: 13.5px; }
+}
 
 /* ---------------------------------------------------------- coquille appli */
 .app { display: grid; grid-template-columns: var(--rail-w) minmax(0, 1fr); min-height: 100dvh; background: linear-gradient(to right, var(--paper) var(--rail-w), transparent var(--rail-w)); }

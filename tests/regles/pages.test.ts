@@ -118,4 +118,20 @@ describe("Q8 · sur téléphone, les barres restent à l'écran", () => {
     expect(styles).toMatch(/\.vedette \{ flex-direction: row; align-items: center; gap: 24px; \}/);
     expect(styles).toMatch(/@media \(max-width: 560px\) \{ \.vedette \{ flex-direction: column; \}/);
   });
+
+  it("sur téléphone, rien n'est plus large que l'écran : boutons et étiquettes passent à la ligne, la liste des métiers se borne", () => {
+    expect(styles).toMatch(/@media \(max-width: 560px\) \{ \.btn \{ white-space: normal; text-align: center; max-width: 100%;/);
+    expect(styles).toMatch(/@media \(max-width: 560px\) \{ \.chip \{ white-space: normal; max-width: 100%; \} \}/);
+    // Chaque règle vient après le style de base qu'elle corrige, sinon elle ne s'applique pas.
+    expect(styles.indexOf("@media (max-width: 560px) { .btn {")).toBeGreaterThan(styles.indexOf("white-space: nowrap;\n  transition"));
+    expect(styles.indexOf("@media (max-width: 560px) { .chip {")).toBeGreaterThan(styles.indexOf(".chip { display: inline-flex;"));
+    // La liste « Métier » des tâches prend la largeur de son option la plus longue : elle ne dépasse pas son cadre.
+    expect(lire("src/app/(app)/(shell)/taches/ecran.tsx")).toMatch(/<select className="select" style=\{\{ minHeight: 44, width: "auto", minWidth: 0, maxWidth: "100%"/);
+  });
+
+  it("le tableau « Accès ou abonnement » ne coupe pas le titre de sa dernière colonne sur téléphone", () => {
+    const page = lire("src/app/(app)/(shell)/abonnement/abonnement.tsx");
+    expect(page.match(/className="comparaison-ligne/g) ?? []).toHaveLength(2);
+    expect(styles).toMatch(/\.comparaison-ligne \{ grid-template-columns: minmax\(0, 1fr\) 58px 92px;/);
+  });
 });
