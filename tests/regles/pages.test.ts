@@ -98,4 +98,24 @@ describe("Q8 · sur téléphone, les barres restent à l'écran", () => {
     expect(styles).toMatch(/\.books \.book \{ container-type: inline-size; \}/);
     expect(styles).toMatch(/\.books \.cover strong \{ font-size: clamp\(15px, 11cqi, 20px\); \}/);
   });
+
+  it("une tablette tenue debout garde des grilles à plusieurs colonnes : une seule colonne, c'est pour le téléphone", () => {
+    // Sous 860 px le menu passe en bas, mais les grilles ne tombent plus à une colonne.
+    const bloc860 = /@media \(max-width: 860px\) \{\n  \.app \{[\s\S]*?\n\}/.exec(styles);
+    expect(bloc860).not.toBeNull();
+    expect(bloc860![0]).not.toMatch(/\.grid-2/);
+    expect(bloc860![0]).toMatch(/\.grid-3\.is-large \{ grid-template-columns: repeat\(2, minmax\(0, 1fr\)\); \}/);
+    expect(styles).toMatch(/@media \(max-width: 700px\) \{ \.grid-3 \{ grid-template-columns: repeat\(2, minmax\(0, 1fr\)\); \} \}/);
+    expect(styles).toMatch(/@media \(max-width: 560px\) \{\n  \.grid-2, \.grid-3, \.grid-3\.is-large, \.grid-4 \{ grid-template-columns: minmax\(0, 1fr\); \}/);
+    // Les cartes des tâches sont larges : deux par ligne sur tablette debout, pas trois.
+    expect(lire("src/app/(app)/(shell)/taches/ecran.tsx")).toMatch(/<div className="grid-3 is-large">/);
+  });
+
+  it("le guide mis en avant montre sa couverture à gauche du texte, et au-dessus sur téléphone", () => {
+    const guides = lire("src/components/guides.tsx");
+    expect(guides).toMatch(/className="card card-link vedette"/);
+    expect(guides).toMatch(/className="stack vedette-texte"/);
+    expect(styles).toMatch(/\.vedette \{ flex-direction: row; align-items: center; gap: 24px; \}/);
+    expect(styles).toMatch(/@media \(max-width: 560px\) \{ \.vedette \{ flex-direction: column; \}/);
+  });
 });

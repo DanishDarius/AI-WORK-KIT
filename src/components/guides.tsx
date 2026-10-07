@@ -111,9 +111,9 @@ export function Bibliotheque({ guides, acces }: { guides: GuideSummary[]; acces?
       </div>
 
       {vedette && !q && outil === "tous" && filtre === "tous" && (
-        <Link href={`/guides/${vedette.slug}`} className="card card-link row" style={{ alignItems: "center", gap: 24, flexWrap: "wrap" }}>
+        <Link href={`/guides/${vedette.slug}`} className="card card-link vedette">
           <GuideCover number={vedette.number} title={vedette.title} tool={vedette.tool} variant={vedette.coverVariant} width={180} />
-          <span className="grow stack" style={{ minWidth: 240 }}>
+          <span className="stack vedette-texte">
             <span className="kicker">Commencer ici</span>
             <span className="h2">{vedette.title}</span>
             <span className="muted">{vedette.excerpt}</span>

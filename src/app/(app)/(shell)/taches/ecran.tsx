@@ -83,7 +83,7 @@ export default function Taches() {
         <ResourceState error={error} retry={retry} />
       ) : liste.length ? (
         <>
-          <div className="grid-3">
+          <div className="grid-3 is-large">
             {liste.slice(0, limite).map((t) => {
               const cat = category(t.code);
               const slug = t.metiers.find((m) => m.slug === profil?.metier)?.slug ?? t.metiers[0]?.slug ?? "";
