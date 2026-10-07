@@ -6,6 +6,7 @@ import { category } from "@/lib/catalogue";
 import { api, automatisationLabel, chemins, type IA, iaLabels, kitHref, officielLabel, tacheHref, type TacheDetail, type TypeRessource, useResource } from "@/lib/kit-api";
 import { copierTexte } from "@/lib/presse-papiers";
 import { Icon, type IconName } from "./icon";
+import { LecteurVideo } from "./lecteur-video";
 import { ModeleARemplir } from "./modele";
 import { iconeCategorie } from "./parcours";
 import { BadgesTache, Chip, IconBox, Kicker, ResourceState } from "./ui";
@@ -224,9 +225,8 @@ function Chargee({ id, metier, data }: { id: string; metier: string; data: Tache
             <div className="stack-sm">
               <Kicker>Étapes</Kicker>
               {tache.video_url && (
-                <div className="row">
-                  <a className="btn btn-secondary btn-sm btn-plain" href={tache.video_url} target="_blank" rel="noreferrer"><Icon name="video" size={16} /> Voir la vidéo</a>
-                  <span className="tiny muted">Elle s’ouvre hors de l’application. Les étapes sont aussi écrites ci-dessous.</span>
+                <div style={{ maxWidth: 640 }}>
+                  <LecteurVideo adresse={tache.video_url} titre={tache.titre} legende="Les étapes sont aussi écrites ci-dessous." />
                 </div>
               )}
               {tache.etapes?.length ? (

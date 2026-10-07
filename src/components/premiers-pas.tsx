@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import { Icon } from "./icon";
+import { VideoRepliable } from "./lecteur-video";
 import { Chip } from "./ui";
 
 export type EtapePremiersPas = {
@@ -75,9 +76,7 @@ export function EtapesPremiersPas({ etapes }: { etapes: EtapePremiersPas[] }) {
               <button type="button" className={`btn btn-sm btn-plain${faite ? "" : " btn-secondary"}`} aria-pressed={faite} onClick={() => basculer(e.cle)}>
                 <Icon name="check" size={16} /> {faite ? "C’est fait" : "Marquer comme fait"}
               </button>
-              {e.video && (
-                <a className="btn btn-secondary btn-sm btn-plain" href={e.video} target="_blank" rel="noreferrer"><Icon name="video" size={16} /> Voir la vidéo</a>
-              )}
+              {e.video && <VideoRepliable adresse={e.video} titre={e.titre} />}
             </div>
           </section>
         );

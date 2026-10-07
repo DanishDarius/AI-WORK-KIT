@@ -129,6 +129,7 @@ export default function Confidentialite() {
               <tr><td>Vercel</td><td>Hébergement et affichage de l’application</td><td>États-Unis et réseau mondial</td></tr>
               <tr><td>Resend</td><td>Envoi des emails de la plateforme (compte, e-mail de la semaine, rappels d’échéance), des demandes de contact et des demandes de tâche sur mesure</td><td>Union européenne (Irlande), société américaine</td></tr>
               <tr><td>tawk.to</td><td>Chat du support, uniquement si vous l’ouvrez</td><td>États-Unis</td></tr>
+              <tr><td>Bunny Stream</td><td>Hébergement et lecture des vidéos d’AIW, uniquement si vous lancez une vidéo</td><td>Union européenne (Allemagne) pour le stockage, réseau mondial pour la lecture</td></tr>
               <tr><td>Hostinger</td><td>Messagerie support@parlonsads.com et nom de domaine</td><td>Centres de données de Hostinger</td></tr>
               <tr><td>Prestataire de paiement</td><td>Encaissement des paiements</td><td>Indiqué sur la page de commande</td></tr>
             </tbody>
@@ -188,11 +189,19 @@ export default function Confidentialite() {
           la politique de tawk.to.
         </p>
         <p>
-          <strong>Vidéos :</strong> certaines actualités contiennent une vidéo
-          YouTube. Elle ne se charge que si vous cliquez sur le bouton lecture,
-          en mode confidentialité renforcée (youtube-nocookie.com). En lançant
-          la vidéo, vous acceptez que YouTube (Google) traite certaines données
-          selon sa propre politique de confidentialité.
+          <strong>Vidéos :</strong> les vidéos d’AIW (tâches, kits, premiers
+          pas, page d’accès) sont hébergées par Bunny Stream (BunnyWay d.o.o.,
+          Ljubljana, Slovénie). Une vidéo ne se charge que si vous cliquez sur
+          le bouton lecture. Son lecteur reçoit alors, comme tout serveur qui
+          envoie un contenu, votre adresse IP, votre pays et le type de votre
+          navigateur ; Bunny indique rendre l’adresse IP anonyme dans ses
+          journaux. Le lecteur garde vos réglages de lecture (volume, vitesse,
+          sous-titres) dans votre navigateur. Certaines actualités contiennent
+          une vidéo YouTube. Elle ne se charge, elle aussi, que si vous cliquez
+          sur le bouton lecture, en mode confidentialité renforcée
+          (youtube-nocookie.com). En lançant la vidéo, vous acceptez que
+          YouTube (Google) traite certaines données selon sa propre politique
+          de confidentialité.
         </p>
         <p>
           <strong>Images externes :</strong> certains visuels d’actualité sont

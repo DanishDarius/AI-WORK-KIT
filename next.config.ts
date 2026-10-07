@@ -33,7 +33,9 @@ const csp = [
   "media-src 'self' blob: https:",
   `font-src 'self' data: ${tawk} https://fonts.gstatic.com${vercel}`,
   `connect-src 'self' ${supabase} ${tawk} wss://*.tawk.to${enPreversion ? " https://vercel.live wss://ws-us3.pusher.com" : ""}${enDev ? " ws:" : ""}`,
-  `frame-src https://www.youtube-nocookie.com ${tawk}${vercel}`,
+  // youtube-nocookie : vidéos officielles des éditeurs dans les actualités.
+  // player.mediadelivery.net : lecteur des vidéos d'AIW (Bunny Stream, src/lib/video.ts).
+  `frame-src https://www.youtube-nocookie.com https://player.mediadelivery.net ${tawk}${vercel}`,
   "worker-src 'self' blob:",
   "object-src 'none'",
   "base-uri 'self'",

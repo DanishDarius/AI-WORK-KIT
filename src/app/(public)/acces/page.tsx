@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { ActionAcces, AvisCompteInactif, LienDejaClient } from "@/components/acces-compte";
 import { Icon } from "@/components/icon";
 import { PublicFooter, PublicTop } from "@/components/public";
-import { Media } from "@/components/media";
+import { LecteurVideo } from "@/components/lecteur-video";
 import { CheckList, Chip, IconBox, Kicker } from "@/components/ui";
 import { EXEMPLE_RESSOURCE, EXEMPLE_TACHE } from "@/lib/exemple-acces";
 import { remplirGabarit } from "@/lib/gabarit";
 import { SLOGAN, SLOGAN_PARTIES } from "@/lib/marque";
 import { fcfa, FORMULES, LIEN_ACCES, NB_METIERS, NB_TACHES, PRIX, VIDEO_DEMO_ID } from "@/lib/offre";
+import { adresseVideo } from "@/lib/video";
 
 export const metadata: Metadata = {
   title: SLOGAN,
@@ -155,7 +156,7 @@ export default function Acces() {
 
           {VIDEO_DEMO_ID && (
             <div style={{ maxWidth: 760 }}>
-              <Media media={{ type: "youtube", id: VIDEO_DEMO_ID, title: "Une tâche d’AIW, du début à la fin", credit: "Vidéo : AIW. Elle se charge seulement si vous la lancez." }} />
+              <LecteurVideo adresse={adresseVideo(VIDEO_DEMO_ID)} titre="Une tâche d’AIW, du début à la fin" legende="Vidéo : AIW. Elle se charge seulement si vous la lancez." />
             </div>
           )}
 

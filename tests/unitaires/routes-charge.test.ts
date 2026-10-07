@@ -60,7 +60,7 @@ function base(op: Operation): Reponse {
       return {
         data: [
           // T1 porte ses badges (migration 0037) ; T2 n'en a qu'un, et une valeur absente.
-          { id: T1, code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null, gratuit_ok: true, mobile_ok: true, outil_gratuit_conseille: "Gemini", video_url: "https://youtu.be/exemple" },
+          { id: T1, code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null, gratuit_ok: true, mobile_ok: true, outil_gratuit_conseille: "Gemini", video_url: "https://player.mediadelivery.net/embed/772541/11111111-aaaa-4bbb-8ccc-000000000003" },
           { id: T2, code: "F02", titre: "Planification de rendez-vous", limite_connue: true, ia_alternative_conseillee: "claude", gratuit_ok: false },
         ],
       };
@@ -88,12 +88,12 @@ function base(op: Operation): Reponse {
       return { data: [{ jour: AUJOURDHUI }] };
     case "kits":
       return kit.avecKit
-        ? { data: { titre: "Kit de test", presentation: "Présentation", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], prerequis: ["Un téléphone"], limites: [], a_savoir: { chatgpt: "À savoir" }, mots: [], revu_le: "2026-10-03", video_url: "https://youtu.be/accueil" } }
+        ? { data: { titre: "Kit de test", presentation: "Présentation", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], prerequis: ["Un téléphone"], limites: [], a_savoir: { chatgpt: "À savoir" }, mots: [], revu_le: "2026-10-03", video_url: "https://player.mediadelivery.net/embed/772541/11111111-aaaa-4bbb-8ccc-000000000002" } }
         : { data: null };
     case "kits_metier":
       return {
         data: [
-          { etape_installation: 1, ressources: { id: R1, cle: "config-test", type: "configuration", titre: "Assistant", description: null, outil: "claude", contenu: "Texte", installation: { claude: { etapes: ["Coller"], video: "https://youtu.be/geste" }, chatgpt: { etapes: ["Coller"], video: "javascript:alert(1)" } }, fichier: null, lien_copie: null, video_url: null, revu_le: null, ressources_taches: [{ tache_id: T1 }, { tache_id: "20000000-0000-4000-8000-00000000ffff" }] } },
+          { etape_installation: 1, ressources: { id: R1, cle: "config-test", type: "configuration", titre: "Assistant", description: null, outil: "claude", contenu: "Texte", installation: { claude: { etapes: ["Coller"], video: "https://player.mediadelivery.net/embed/772541/11111111-aaaa-4bbb-8ccc-000000000001" }, chatgpt: { etapes: ["Coller"], video: "javascript:alert(1)" } }, fichier: null, lien_copie: null, video_url: null, revu_le: null, ressources_taches: [{ tache_id: T1 }, { tache_id: "20000000-0000-4000-8000-00000000ffff" }] } },
           { etape_installation: null, ressources: { id: R2, cle: "doc-test", type: "document", titre: "Tableau", description: "Un tableau", outil: null, contenu: null, installation: null, fichier: "prix-et-marge.xlsx", lien_copie: "https://docs.google.com/spreadsheets/d/x/copy", video_url: null, revu_le: null, ressources_taches: null } },
         ],
       };
@@ -263,7 +263,7 @@ describe("C1 C2 C4 · GET /api/taches/[id]", () => {
     const corps = await reponse.json();
     expect(corps.tache).toEqual({
       code: "F01", titre: "Gestion et tri des e-mails", limite_connue: false, ia_alternative_conseillee: null, resultat: null, etapes: null, precisions: null,
-      gratuit_ok: true, mobile_ok: true, outil_gratuit_conseille: "Gemini", video_url: "https://youtu.be/exemple",
+      gratuit_ok: true, mobile_ok: true, outil_gratuit_conseille: "Gemini", video_url: "https://player.mediadelivery.net/embed/772541/11111111-aaaa-4bbb-8ccc-000000000003",
     });
     expect(corps).toMatchObject({ ia_par_defaut: "claude", fait: true, favori: false, metier_nom: "Comptabilité", suivante_id: T2 });
     expect(corps.exercices).toEqual([
@@ -437,7 +437,7 @@ describe("C1 C2 C4 · GET /api/kits/[slug]", () => {
     const corps = await reponse.json();
     expect(corps.metier).toEqual({ slug: "comptabilite", nom: "Comptabilité" });
     expect(corps.chemin_choisi).toBe("claude");
-    expect(corps.kit).toMatchObject({ titre: "Kit de test", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], a_savoir: { chatgpt: "À savoir" }, video_url: "https://youtu.be/accueil" });
+    expect(corps.kit).toMatchObject({ titre: "Kit de test", etapes: [{ numero: 1, titre: "Configurer", minutes: 5 }], a_savoir: { chatgpt: "À savoir" }, video_url: "https://player.mediadelivery.net/embed/772541/11111111-aaaa-4bbb-8ccc-000000000002" });
     expect(corps.kit.ressources.map((r: { cle: string; etape: number | null; installee: boolean }) => [r.cle, r.etape, r.installee])).toEqual([
       ["config-test", 1, false],
       ["doc-test", null, true],
@@ -446,7 +446,7 @@ describe("C1 C2 C4 · GET /api/kits/[slug]", () => {
     expect(corps.kit.ressources[0].taches).toEqual([{ id: T1, code: "F01", titre: "Gestion et tri des e-mails" }]);
     expect(corps.kit.ressources[1]).toMatchObject({ installation: {}, taches: [], fichier: "prix-et-marge.xlsx" });
     // La vidéo d'un geste se range par outil ; un lien qui n'est pas en https est écarté.
-    expect(corps.kit.ressources[0].installation).toEqual({ claude: { etapes: ["Coller"], video: "https://youtu.be/geste" }, chatgpt: { etapes: ["Coller"] } });
+    expect(corps.kit.ressources[0].installation).toEqual({ claude: { etapes: ["Coller"], video: "https://player.mediadelivery.net/embed/772541/11111111-aaaa-4bbb-8ccc-000000000001" }, chatgpt: { etapes: ["Coller"] } });
     expect(lectures(TABLES_COMPTE).map((op) => op.table).sort()).toEqual(["progression_kit", "utilisateurs_chemins"]);
     // Le kit et ses ressources arrivent en deux lectures, pas une par ressource.
     expect(lectures(["kits", "kits_metier", "ressources", "ressources_taches"])).toHaveLength(2);

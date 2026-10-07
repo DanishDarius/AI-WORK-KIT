@@ -1,0 +1,91 @@
+import { describe, expect, it } from "vitest";
+import { adresseLecteur, adresseVideo, BIBLIOTHEQUE_VIDEOS, idVideo, lireVideo, videoValide } from "@/lib/video";
+import { lire, lister } from "../outils/fichiers";
+
+// Les vidéos d'AIW se lisent dans la page, par le lecteur de Bunny Stream,
+// et seulement celles de la bibliothèque d'AIW (décision du 7 octobre 2026).
+
+const ID = "1a2b3c4d-5e6f-4a1b-8c2d-0123456789ab";
+const BASE = `https://player.mediadelivery.net/embed/${BIBLIOTHEQUE_VIDEOS}/${ID}`;
+
+describe("vidéos · adresse d'une vidéo d'AIW", () => {
+  it("reconnaît l'adresse du lecteur donnée par Bunny, sous ses formes connues", () => {
+    expect(lireVideo(BASE)).toBe(ID);
+    expect(lireVideo(`https://player.mediadelivery.net/play/${BIBLIOTHEQUE_VIDEOS}/${ID}`)).toBe(ID);
+    expect(lireVideo(`https://iframe.mediadelivery.net/embed/${BIBLIOTHEQUE_VIDEOS}/${ID}`)).toBe(ID);
+    expect(lireVideo(`  ${BASE.toUpperCase().replace("HTTPS://PLAYER.MEDIADELIVERY.NET/EMBED", "https://player.mediadelivery.net/embed")}/ `)).toBe(ID);
+  });
+
+  it.each([
+    ["une autre bibliothèque", `https://player.mediadelivery.net/embed/999999/${ID}`],
+    ["un autre hébergeur", "https://youtu.be/dQw4w9WgXcQ"],
+    ["un hôte qui imite le lecteur", `https://player.mediadelivery.net.exemple.com/embed/${BIBLIOTHEQUE_VIDEOS}/${ID}`],
+    ["une adresse qui n'est pas en https", `http://player.mediadelivery.net/embed/${BIBLIOTHEQUE_VIDEOS}/${ID}`],
+    ["des paramètres ajoutés", `${BASE}?autoplay=true`],
+    ["un chemin ajouté", `${BASE}/../../autre`],
+    ["un identifiant mal formé", `https://player.mediadelivery.net/embed/${BIBLIOTHEQUE_VIDEOS}/pas-un-identifiant`],
+    ["du script", "javascript:alert(1)"],
+    ["rien", ""],
+  ])("écarte %s", (_cas, adresse) => {
+    expect(lireVideo(adresse)).toBeNull();
+    expect(videoValide(adresse)).toBeNull();
+  });
+
+  it("écarte ce qui n'est pas un texte", () => {
+    for (const valeur of [null, undefined, 12, {}, []]) expect(videoValide(valeur)).toBeNull();
+  });
+
+  it("remet toute adresse reconnue sous une seule forme", () => {
+    expect(videoValide(`https://iframe.mediadelivery.net/play/${BIBLIOTHEQUE_VIDEOS}/${ID}/`)).toBe(BASE);
+    expect(adresseVideo(ID)).toBe(BASE);
+  });
+
+  it("lit un identifiant seul (réglage de la page d'accès)", () => {
+    expect(idVideo(ID)).toBe(ID);
+    expect(idVideo(` ${ID.toUpperCase()} `)).toBe(ID);
+    expect(idVideo("dQw4w9WgXcQ")).toBeNull();
+    expect(idVideo(undefined)).toBeNull();
+  });
+
+  it("le cadre du lecteur lance la lecture, en français, chez Bunny et nulle part ailleurs", () => {
+    const cadre = new URL(adresseLecteur(ID));
+    expect(cadre.origin).toBe("https://player.mediadelivery.net");
+    expect(cadre.pathname).toBe(`/embed/${BIBLIOTHEQUE_VIDEOS}/${ID}`);
+    expect(cadre.searchParams.get("autoplay")).toBe("true");
+    expect(cadre.searchParams.get("lang")).toBe("fr");
+  });
+});
+
+describe("vidéos · dans le code", () => {
+  it("le serveur ne laisse passer que des vidéos d'AIW", () => {
+    const contenu = lire("src/lib/contenu.ts");
+    // Tâche, ressource, kit, installation par outil, vidéos du fil.
+    expect(contenu.match(/videoValide\(/g) ?? []).toHaveLength(5);
+    expect(contenu).not.toMatch(/video_url: \w+\.video_url \?\? null/);
+  });
+
+  it("aucune vidéo d'AIW ne s'ouvre hors de l'application", () => {
+    for (const fichier of lister("src", (f) => /\.tsx$/.test(f))) {
+      const source = lire(fichier);
+      expect(source, fichier).not.toMatch(/href=\{[^}]*video[^}]*\}/i);
+      expect(source, fichier).not.toContain("s’ouvre hors de l’application");
+    }
+  });
+
+  it("le lecteur ne charge rien avant le clic et envoie l'origine de la page à l'hébergeur", () => {
+    const lecteur = lire("src/components/lecteur-video.tsx");
+    expect(lecteur).toMatch(/lecture \? \(\s*<iframe/);
+    expect(lecteur).toContain('referrerPolicy="strict-origin-when-cross-origin"');
+    expect(lecteur).not.toMatch(/<img|b-cdn\.net/);
+  });
+
+  it.each(["src/components/tache.tsx", "src/components/kit-metier.tsx", "src/components/premiers-pas.tsx", "src/app/(public)/acces/page.tsx"])("%s lit ses vidéos dans la page", (fichier) => {
+    expect(lire(fichier)).toMatch(/<(LecteurVideo|VideoRepliable)\b/);
+  });
+
+  it("la CSP autorise le lecteur de Bunny, et seulement lui pour les vidéos d'AIW", () => {
+    const config = lire("next.config.ts");
+    expect(config).toMatch(/frame-src https:\/\/www\.youtube-nocookie\.com https:\/\/player\.mediadelivery\.net /);
+    expect(config).not.toMatch(/iframe\.mediadelivery\.net|b-cdn\.net/);
+  });
+});

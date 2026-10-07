@@ -5,6 +5,8 @@
 // - Abonnement : mensuel, annuel ou à vie, présenté dans la PWA. Ouvre tous
 //   les guides et la « tâche sur mesure » de chaque métier.
 
+import { idVideo } from "@/lib/video";
+
 // Numéros des guides inclus dans l'accès (sans abonnement).
 const GUIDES_INCLUS: readonly number[] = [
   // Les plus recherchés
@@ -67,10 +69,10 @@ export const LIENS_ABONNEMENT: Record<Formule, string> = {
 export const NB_TACHES = 56;
 export const NB_METIERS = 14;
 
-// Vidéo de démonstration de la page d'accès : l'identifiant d'une vidéo
-// YouTube (11 caractères). Sans lui, ou s'il est mal formé, rien ne s'affiche.
-const videoDemo = process.env.NEXT_PUBLIC_VIDEO_DEMO_ID ?? "";
-export const VIDEO_DEMO_ID = /^[A-Za-z0-9_-]{11}$/.test(videoDemo) ? videoDemo : null;
+// Vidéo de démonstration de la page d'accès : l'identifiant de la vidéo dans
+// la bibliothèque d'AIW chez Bunny Stream (src/lib/video.ts). Sans lui, ou
+// s'il est mal formé, rien ne s'affiche.
+export const VIDEO_DEMO_ID = idVideo(process.env.NEXT_PUBLIC_VIDEO_DEMO_ID);
 
 // L'abonnement reste fermé aux nouveaux clients tant que son flux de
 // nouveautés (tâche de la semaine, packs, kits mis à jour) n'est pas en place.

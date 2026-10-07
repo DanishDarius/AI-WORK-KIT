@@ -2,6 +2,7 @@ import "server-only";
 
 import { unstable_cache } from "next/cache";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { videoValide } from "@/lib/video";
 
 // Le contenu commun à tous les clients : métiers, tâches, cas pratiques,
 // prompts, kits métier et modèles à remplir. Il ne change que lorsqu'une
@@ -221,7 +222,7 @@ function tachesParId(lignes: unknown): Record<string, TacheContenu> {
       gratuit_ok: typeof t.gratuit_ok === "boolean" ? t.gratuit_ok : null,
       mobile_ok: typeof t.mobile_ok === "boolean" ? t.mobile_ok : null,
       outil_gratuit_conseille: t.outil_gratuit_conseille ?? null,
-      video_url: t.video_url ?? null,
+      video_url: videoValide(t.video_url),
     };
   }
   return parId;
@@ -306,13 +307,14 @@ const tableau = <T,>(valeur: unknown): T[] => (Array.isArray(valeur) ? (valeur a
 const objet = <T,>(valeur: unknown): Record<string, T> =>
   valeur && typeof valeur === "object" && !Array.isArray(valeur) ? (valeur as Record<string, T>) : {};
 
-// L'installation par outil. Une vidéo n'est gardée que si son lien est en https.
+// L'installation par outil. Une vidéo n'est gardée que si c'est une vidéo d'AIW (src/lib/video.ts).
 function installations(valeur: unknown): Record<string, InstallationContenu> {
   const resultat: Record<string, InstallationContenu> = {};
   for (const [outil, brut] of Object.entries(objet<InstallationContenu>(valeur))) {
     if (!brut || typeof brut !== "object") continue;
     const { video, ...reste } = brut;
-    resultat[outil] = typeof video === "string" && /^https:\/\//.test(video) ? { ...reste, video } : reste;
+    const adresse = videoValide(video);
+    resultat[outil] = adresse ? { ...reste, video: adresse } : reste;
   }
   return resultat;
 }
@@ -360,7 +362,7 @@ async function chargerKit(metierId: string): Promise<KitContenu | null> {
       installation: installations(r.installation),
       fichier: r.fichier ?? null,
       lien_copie: r.lien_copie ?? null,
-      video_url: r.video_url ?? null,
+      video_url: videoValide(r.video_url),
       revu_le: r.revu_le ?? null,
       etape: ligne.etape_installation ?? null,
       taches: (r.ressources_taches ?? []).map((l) => l.tache_id),
@@ -377,7 +379,7 @@ async function chargerKit(metierId: string): Promise<KitContenu | null> {
     a_savoir: objet<string>(k.a_savoir),
     mots: tableau<KitContenu["mots"][number]>(k.mots),
     revu_le: k.revu_le ?? null,
-    video_url: k.video_url ?? null,
+    video_url: videoValide(k.video_url),
     ressources,
   };
 }
@@ -527,7 +529,7 @@ async function chargerFil(): Promise<FilContenu> {
     packs: lesPacks,
     taches: tachesFil,
     sessions: ((sessions.data ?? []) as SessionLiveContenu[]).map((x) => ({ debut_le: x.debut_le, titre: x.titre, lien: x.lien ?? null, replay_url: x.replay_url ?? null })),
-    videos: Object.fromEntries(((videos.data ?? []) as { cle: string; url: string }[]).filter((v) => HTTPS.test(v.url)).map((v) => [v.cle, v.url])),
+    videos: Object.fromEntries(((videos.data ?? []) as { cle: string; url: string }[]).flatMap((v) => { const adresse = videoValide(v.url); return adresse ? [[v.cle, adresse]] : []; })),
   };
 }
 

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { api, chemins, type IA, iaLabels, type InstallationOutil, type KitMetier, type KitReponse, type RessourceKit, tacheHref, type TypeRessource } from "@/lib/kit-api";
 import { copierTexte } from "@/lib/presse-papiers";
 import { Icon, type IconName } from "./icon";
+import { LecteurVideo, VideoRepliable } from "./lecteur-video";
 import { Bar, Chip, IconBox, Kicker, PageHead } from "./ui";
 
 // Mon kit, pour un métier qui a un kit : la configuration de l'IA, les
@@ -145,9 +146,7 @@ function Ressource({ ressource, ia, slug, explication, basculer }: { ressource: 
             {ressource.fichier && (
               <a className="btn btn-secondary btn-sm btn-plain" href={`/api/kits/fichiers/${encodeURIComponent(ressource.fichier)}`} download><Icon name="download" size={16} /> Télécharger</a>
             )}
-            {video && (
-              <a className="btn btn-secondary btn-sm btn-plain" href={video} target="_blank" rel="noreferrer"><Icon name="video" size={16} /> Voir la vidéo</a>
-            )}
+            {video && <VideoRepliable adresse={video} titre={ressource.titre} />}
           </div>
         )}
 
@@ -238,9 +237,8 @@ export function KitMetierEcran({ slug, data, setData }: { slug: string; data: Ki
       <PageHead kicker="Votre boîte à outils" title={`Mon kit : ${kit.titre}`}>{kit.presentation}</PageHead>
 
       {kit.video_url && (
-        <div className="row">
-          <a className="btn btn-secondary btn-plain" href={kit.video_url} target="_blank" rel="noreferrer"><Icon name="video" size={18} /> Voir la vidéo d’accueil du kit</a>
-          <span className="small muted">Deux minutes. Elle s’ouvre hors de l’application ; tout ce qu’elle montre est aussi écrit ci-dessous.</span>
+        <div style={{ maxWidth: 720 }}>
+          <LecteurVideo adresse={kit.video_url} titre={`Bienvenue dans votre kit ${kit.titre}`} legende="Deux minutes. Tout ce qu’elle montre est aussi écrit ci-dessous." />
         </div>
       )}
 
