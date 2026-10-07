@@ -16,7 +16,7 @@
 
 ## Introduction
 
-Quand un acteur majeur de l'IA certifie un métier et y engage 100 millions de dollars, il révèle en réalité quelle compétence il s'apprête à recruter massivement. Voici une grille en 5 questions pour décoder n'importe quelle annonce (certification, campagne de recrutement, lancement) et la transformer en un plan de montée en compétence sur 90 jours. 4 prompts inclus.
+Quand un acteur majeur de l'IA certifie un métier et y engage 100 millions de dollars (environ 58 milliards de FCFA), il révèle en réalité quelle compétence il s'apprête à recruter massivement. Voici une grille en 5 questions pour décoder n'importe quelle annonce (certification, campagne de recrutement, lancement) et la transformer en un plan de montée en compétence sur 90 jours. 4 prompts inclus.
 
 Une méthode construite après 20 ans passés à décrypter la tech chez Microsoft, Meta et TikTok.
 
@@ -28,7 +28,7 @@ En 20 minutes, vous saurez lire n'importe quelle annonce d'un géant de l'IA (ce
 
 Anthropic a lancé la certification Claude Certified Architect (Foundations) le 12 mars 2026 : la première accréditation professionnelle destinée aux architectes qui construisent des applications de production avec Claude. Elle s'adosse au « Claude Partner Network » et à un engagement initial de 100 millions de dollars pour la formation et l'activation. Dès juin 2026, plus de 10 000 consultants avaient déjà obtenu une certification Claude.
 
-**Le signal derrière le signal :** quand une plateforme certifie un métier, elle indique clairement lequel elle a l'intention de recruter. Anthropic a ouvert des postes de Solutions Architect, Applied AI, dans une fourchette d'environ 170 000 à 270 000 $, allant jusqu'à 280 000-300 000 $ côté partenaires (chiffres issus d'offres publiées et de Levels.fyi, à revérifier au moment de votre lecture).
+**Le signal derrière le signal :** quand une plateforme certifie un métier, elle indique clairement lequel elle a l'intention de recruter. Anthropic a ouvert des postes de Solutions Architect, Applied AI, dans une fourchette d'environ 170 000 à 270 000 $ (soit 99 à 157 millions de FCFA), allant jusqu'à 280 000-300 000 $ (soit 163 à 175 millions de FCFA) côté partenaires (chiffres issus d'offres publiées et de Levels.fyi, à revérifier au moment de votre lecture).
 
 *Garde-fou honnête : une certification n'est pas un chèque en blanc, et un papier ne remplace jamais une véritable compétence. Ce que ces chiffres démontrent, c'est ce que le marché est prêt à payer, pas ce que vous, précisément, vous gagnerez.*
 

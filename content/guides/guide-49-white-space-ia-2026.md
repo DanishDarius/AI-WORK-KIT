@@ -2,7 +2,7 @@
 
 *Claude · 8 min de lecture*
 
-Le basculement chiffré (fondateurs solo, une revente marquante à 80 M$), la carte des zones encore vides à construire avec l'IA, les trois mouvements pour se positionner, et le prompt qui aide à trouver son propre terrain.
+Le basculement chiffré (fondateurs solo, une revente marquante à 80 M$, environ 47 milliards de FCFA), la carte des zones encore vides à construire avec l'IA, les trois mouvements pour se positionner, et le prompt qui aide à trouver son propre terrain.
 
 ## Sommaire
 

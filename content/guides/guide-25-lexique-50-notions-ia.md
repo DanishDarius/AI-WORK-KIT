@@ -173,7 +173,7 @@ Prenez cinq minutes et travaillez d'abord sur papier. Voici un dossier fictif vo
 **Document A, Atelier Lin (cas fictif) : Initiation à la céramique**
 - Public : adultes débutants
 - Durée : 2 heures
-- Prix : 45 € par personne, matériel inclus
+- Prix : 45 € par personne (environ 30 000 FCFA), matériel inclus
 - Inscription : par formulaire, confirmation après réponse de l'équipe
 
 La fiche ne précise ni date, ni horaire, ni nombre de places.

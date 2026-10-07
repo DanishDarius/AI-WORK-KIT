@@ -23,7 +23,7 @@ Guide écrit après 18 ans passés en stratégie de croissance chez Microsoft, M
 
 ## 01. Comprendre : pourquoi ce protocole existe
 
-En août 2026, deux événements sont tombés presque en même temps. D'un côté, l'Europe a rendu obligatoire le marquage du contenu IA (jusqu'à 15 M€ d'amende, Article 50 de l'AI Act, en vigueur depuis le 2 août 2026). De l'autre, un outil permettant d'effacer le filigrane de Claude s'est répandu très vite sur GitHub.
+En août 2026, deux événements sont tombés presque en même temps. D'un côté, l'Europe a rendu obligatoire le marquage du contenu IA (jusqu'à 15 M€ d'amende, environ 9,8 milliards de FCFA, Article 50 de l'AI Act, en vigueur depuis le 2 août 2026). De l'autre, un outil permettant d'effacer le filigrane de Claude s'est répandu très vite sur GitHub.
 
 Beaucoup se sont précipités sur la même interrogation : « comment retirer la marque ? » Ce n'est pourtant pas la bonne question à se poser en stratège. Quand toute une industrie change ses règles en l'espace d'une semaine, l'enjeu n'est pas moral, il est économique : où part la valeur ? Et la réponse est claire : le contenu devient traçable, filtrable, remplaçable. La seule chose qu'aucun outil ne peut imiter ou effacer, c'est votre jugement.
 
@@ -163,4 +163,4 @@ L'IA reste votre levier, jamais votre auteur. Écrivez votre thèse à la main a
 
 ---
 
-*Sources vérifiées : Anthropic, filigrane texte de Claude · EU AI Act, Article 50 (transparence, applicable depuis le 2 août 2026, amende jusqu'à 15 M€) · Nature, étude sur l'effondrement des modèles (Shumailov et al., 2024) · C2PA (documentation officielle).*
+*Sources vérifiées : Anthropic, filigrane texte de Claude · EU AI Act, Article 50 (transparence, applicable depuis le 2 août 2026, amende jusqu'à 15 M€, environ 9,8 milliards de FCFA) · Nature, étude sur l'effondrement des modèles (Shumailov et al., 2024) · C2PA (documentation officielle).*

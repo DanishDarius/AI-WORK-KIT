@@ -15,7 +15,7 @@
 
 ## Introduction
 
-Forward Deployed Engineer : le rôle sur lequel AWS vient d'investir un milliard de dollars, et Salesforce mille recrutements. La compétence rare ici n'est pas technique : c'est la capacité à faire le pont entre l'IA et un vrai problème business. Cinq étapes et cinq prompts pour vous y positionner, avec des chiffres datés et sourcés.
+Forward Deployed Engineer : le rôle sur lequel AWS vient d'investir un milliard de dollars (environ 580 milliards de FCFA), et Salesforce mille recrutements. La compétence rare ici n'est pas technique : c'est la capacité à faire le pont entre l'IA et un vrai problème business. Cinq étapes et cinq prompts pour vous y positionner, avec des chiffres datés et sourcés.
 
 ---
 
@@ -68,7 +68,7 @@ Concrètement, le cycle se déroule ainsi :
 
 Observez bien les étapes 1, 2, 4 et 5 : ce sont des compétences de conseil, d'opérations et de conduite du changement. Une seule étape sur cinq relève réellement du code. Voilà pourquoi ce poste ne peut pas se pourvoir uniquement avec des ingénieurs.
 
-**Les salaires, en toute transparence.** Les fourchettes publiées par Paraform pour le marché américain : une base comprise entre 150 000 et 217 000 dollars, avec une médiane à 183 000 ; les postes senior ou principal montent de 190 000 à 288 000 dollars de base, et les laboratoires de pointe dépassent parfois 500 000 dollars en rémunération totale. Ce sont des données américaines, sur un marché américain, avec ses propres conditions de visa et de présence sur place. Ne les lisez surtout pas comme une promesse personnelle. Lisez-les plutôt comme un signal clair de rareté : personne ne rémunère autant une compétence abondante sur le marché.
+**Les salaires, en toute transparence.** Les fourchettes publiées par Paraform pour le marché américain : une base comprise entre 150 000 et 217 000 dollars (environ 87 à 126 millions de FCFA), avec une médiane à 183 000 ; les postes senior ou principal montent de 190 000 à 288 000 dollars de base (environ 111 à 168 millions de FCFA), et les laboratoires de pointe dépassent parfois 500 000 dollars (environ 291 millions de FCFA) en rémunération totale. Ce sont des données américaines, sur un marché américain, avec ses propres conditions de visa et de présence sur place. Ne les lisez surtout pas comme une promesse personnelle. Lisez-les plutôt comme un signal clair de rareté : personne ne rémunère autant une compétence abondante sur le marché.
 
 ### Étape 1 : Cartographier votre moitié rare
 

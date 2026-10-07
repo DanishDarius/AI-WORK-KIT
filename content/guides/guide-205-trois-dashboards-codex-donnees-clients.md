@@ -37,4 +37,4 @@ L'acquisition (de la source à la conversion, en passant par le coût d'acquisit
 
 **Facturer le résultat, pas le temps passé.**
 
-Trois tableaux de bord représentent trois livrables valorisables entre 500 et 1500 € pièce. Le client ne se soucie pas du temps de fabrication : il paie la lecture qu'il en tire, pas le processus de création.
+Trois tableaux de bord représentent trois livrables valorisables entre 500 et 1500 € pièce (environ 330 000 à 980 000 FCFA). Le client ne se soucie pas du temps de fabrication : il paie la lecture qu'il en tire, pas le processus de création.

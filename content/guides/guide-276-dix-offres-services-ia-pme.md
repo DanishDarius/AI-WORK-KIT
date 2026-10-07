@@ -6,16 +6,16 @@ Les PME et entreprises de services paient déjà des montants significatifs pour
 
 ## Les dix offres
 
-- **Audit IA en 5 jours** : environ 5 000 €. Cartographie des tâches automatisables et plan d'action.
-- **Chatbot client interne** : environ 7 000 €. Connecté à la documentation de l'entreprise (FAQ, contrats, procédures).
-- **Automatisation du reporting** : environ 6 000 €. Extraits Notion, Excel ou CRM transformés en rapports hebdomadaires.
-- **Onboarding employé assisté par IA** : environ 8 000 €. Un assistant qui répond aux questions des nouveaux arrivants pendant trente jours.
-- **Génération de propositions commerciales** : environ 5 500 €. Un système qui rédige la majorité d'une proposition en dix minutes.
-- **Veille concurrentielle** : environ 4 500 € plus 800 € par mois. Un rapport mensuel généré par IA, sous supervision humaine.
-- **Réponses aux appels d'offres** : environ 9 000 €. Bibliothèque de contenus, prompts dédiés et checklist qualité.
-- **Formation d'équipe à l'IA** : environ 6 000 € pour dix personnes. Deux jours en présentiel suivis de quatre semaines d'accompagnement.
-- **Migration de scripts internes vers Claude** : environ 7 500 €. Remplacement de processus Zapier vieillissants.
-- **Lancement d'un Skill métier** : environ 5 000 €. Brief, construction, test, documentation, formation.
+- **Audit IA en 5 jours** : environ 5 000 € (soit 3 300 000 FCFA). Cartographie des tâches automatisables et plan d'action.
+- **Chatbot client interne** : environ 7 000 € (soit 4 600 000 FCFA). Connecté à la documentation de l'entreprise (FAQ, contrats, procédures).
+- **Automatisation du reporting** : environ 6 000 € (soit 3 900 000 FCFA). Extraits Notion, Excel ou CRM transformés en rapports hebdomadaires.
+- **Onboarding employé assisté par IA** : environ 8 000 € (soit 5 200 000 FCFA). Un assistant qui répond aux questions des nouveaux arrivants pendant trente jours.
+- **Génération de propositions commerciales** : environ 5 500 € (soit 3 600 000 FCFA). Un système qui rédige la majorité d'une proposition en dix minutes.
+- **Veille concurrentielle** : environ 4 500 € (soit 3 000 000 FCFA) plus 800 € par mois (soit 520 000 FCFA). Un rapport mensuel généré par IA, sous supervision humaine.
+- **Réponses aux appels d'offres** : environ 9 000 € (soit 5 900 000 FCFA). Bibliothèque de contenus, prompts dédiés et checklist qualité.
+- **Formation d'équipe à l'IA** : environ 6 000 € (soit 3 900 000 FCFA) pour dix personnes. Deux jours en présentiel suivis de quatre semaines d'accompagnement.
+- **Migration de scripts internes vers Claude** : environ 7 500 € (soit 4 900 000 FCFA). Remplacement de processus Zapier vieillissants.
+- **Lancement d'un Skill métier** : environ 5 000 € (soit 3 300 000 FCFA). Brief, construction, test, documentation, formation.
 
 ## Le script de premier contact
 
@@ -30,13 +30,13 @@ Les PME et entreprises de services paient déjà des montants significatifs pour
 > - Livre un plan d'action chiffré.
 > - Inclut un PoC déjà fonctionnel sur le process numéro 1.
 >
-> Tarif : 5 000 €, livré sous 2 semaines, sans engagement de suite.
+> Tarif : 5 000 € (environ 3 300 000 FCFA), livré sous 2 semaines, sans engagement de suite.
 >
 > 15 minutes pour en parler la semaine prochaine ?
 
 ## Le chemin sur 30, 60 et 90 jours
 
-À trente jours : un premier client signé sur l'offre d'audit. À soixante jours : trois clients livrés et deux témoignages écrits. À quatre-vingt-dix jours : une offre récurrente vendue à un client existant, généralement entre 800 et 2 000 euros par mois.
+À trente jours : un premier client signé sur l'offre d'audit. À soixante jours : trois clients livrés et deux témoignages écrits. À quatre-vingt-dix jours : une offre récurrente vendue à un client existant, généralement entre 800 et 2 000 euros par mois (environ 520 000 à 1 300 000 FCFA).
 
 ## Le garde-fou
 

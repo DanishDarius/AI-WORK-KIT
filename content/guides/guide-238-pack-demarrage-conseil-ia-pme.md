@@ -6,7 +6,7 @@ Vendre du consulting en intelligence artificielle aux PME demande de passer d'un
 
 ## L'offre minimum viable
 
-Un audit IA sur cinq jours, avec pour livrable un rapport accompagné de trois workflows priorisés et d'une feuille de route sur 90 jours. Le prix d'entrée se situe généralement entre 3 000 et 5 000 euros, une offre qui peut être vendue dès la semaine suivante.
+Un audit IA sur cinq jours, avec pour livrable un rapport accompagné de trois workflows priorisés et d'une feuille de route sur 90 jours. Le prix d'entrée se situe généralement entre 3 000 et 5 000 euros (environ 2 000 000 à 3 300 000 FCFA), une offre qui peut être vendue dès la semaine suivante.
 
 ## Les quatre supports à préparer
 

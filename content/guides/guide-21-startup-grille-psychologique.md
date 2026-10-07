@@ -64,7 +64,7 @@ Ces six angles ne remplacent pas votre jugement. Ils cassent la vision à sens u
 > MA STARTUP :
 > - Ce qu'on vend, en une phrase : [produit/service concret]
 > - Le client que je vise aujourd'hui : [qui, précisément]
-> - Le prix et le modèle : [ex. 29€/mois, abonnement]
+> - Le prix et le modèle : [ex. 29€/mois (environ 19 000 FCFA), abonnement]
 > - Mon marché et ma langue : [ex. francophone, France + Maghreb]
 > - Mon pitch actuel (collez-le tel quel) : [votre phrase d'accroche du moment]
 > - Mes 2 concurrents les plus proches : [noms]

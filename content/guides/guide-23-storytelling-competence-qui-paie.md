@@ -16,7 +16,7 @@
 
 ## Introduction
 
-En juin 2026, Fortune a publié des grilles de salaire chez Netflix, Anthropic et OpenAI révélant des postes de communication payés jusqu'à 1,2 million de dollars, sans une seule ligne de code écrite. Ce que ces entreprises achètent en réalité, c'est une seule compétence : rendre une chose complexe claire et désirable, le storytelling. Sur LinkedIn, les offres mentionnant le mot « storyteller » ont doublé en 2025.
+En juin 2026, Fortune a publié des grilles de salaire chez Netflix, Anthropic et OpenAI révélant des postes de communication payés jusqu'à 1,2 million de dollars (environ 700 millions de FCFA), sans une seule ligne de code écrite. Ce que ces entreprises achètent en réalité, c'est une seule compétence : rendre une chose complexe claire et désirable, le storytelling. Sur LinkedIn, les offres mentionnant le mot « storyteller » ont doublé en 2025.
 
 La bonne nouvelle : c'est une compétence qui s'apprend, pas un talent inné. Elle se travaille par des règles précises et de la répétition. Voici le plan pour l'apprendre pour de vrai, avec l'IA comme partenaire d'entraînement disponible 24h/24. Prévoyez 30 jours, 20 minutes par jour.
 

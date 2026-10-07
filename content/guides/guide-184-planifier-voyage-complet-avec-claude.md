@@ -18,7 +18,7 @@ Un comparateur de vols renvoie des centaines de résultats bruts. L'objectif, lu
 > - Trajet : [Paris → Lisbonne]
 > - Dates flexibles : [13-17 mars, je peux décaler ±2 jours]
 > - Voyageurs : [2 adultes, 1 enfant 4 ans]
-> - Budget total max : [800€]
+> - Budget total max : [800€, environ 520 000 FCFA]
 > - Contraintes : pas d'escale > 2h, départ après 9h, retour avant 22h
 >
 > Trouve-moi :

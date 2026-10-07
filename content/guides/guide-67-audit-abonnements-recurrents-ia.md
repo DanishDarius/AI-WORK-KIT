@@ -6,7 +6,7 @@ Une IA capable de scanner une boîte mail, repérer chaque paiement récurrent, 
 
 ## Le constat de départ
 
-Entre 80 et 300 € par mois passent souvent dans des abonnements qui ne sont plus vraiment utilisés. Personne ne fait cet audit parce que c'est fastidieux ; une IA peut le faire en dix minutes.
+Entre 80 et 300 € par mois (environ 52 000 à 200 000 FCFA) passent souvent dans des abonnements qui ne sont plus vraiment utilisés. Personne ne fait cet audit parce que c'est fastidieux ; une IA peut le faire en dix minutes.
 
 ## Ce dont on a besoin
 
@@ -31,4 +31,4 @@ Ne pas valider la liste sans en avoir imprimé le total. C'est justement cette f
 
 ## À retenir
 
-Deux cents euros par mois engloutis dans des abonnements oubliés, ce sont des vacances entières par an. Refaire cet audit chaque 1ᵉʳ janvier, et poser un rappel dès maintenant pour ne pas l'oublier.
+Deux cents euros par mois (environ 130 000 FCFA) engloutis dans des abonnements oubliés, ce sont des vacances entières par an. Refaire cet audit chaque 1ᵉʳ janvier, et poser un rappel dès maintenant pour ne pas l'oublier.

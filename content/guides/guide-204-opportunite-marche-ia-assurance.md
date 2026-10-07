@@ -8,7 +8,7 @@ Le prochain marché à fort potentiel dans l'IA n'est pas un modèle de langage.
 
 Les agents IA commencent à exécuter de vraies actions : envoyer des e-mails, modifier des fichiers clients, déclencher des paiements, écrire dans des bases de données de production. Tant qu'il ne s'agissait que d'un chat, le risque restait théorique. Il devient désormais concret : un agent qui se trompe en facturation peut coûter des dizaines de milliers d'euros en quelques minutes.
 
-Les assureurs traditionnels peinent à tarifer ce risque, faute de données historiques suffisantes. De nouveaux acteurs (Vouch, Coalition, At-Bay du côté cyber) commencent à proposer des polices de responsabilité liées à l'IA. Le marché américain est estimé entre 2 et 5 milliards de dollars d'ici 2028, selon certaines projections.
+Les assureurs traditionnels peinent à tarifer ce risque, faute de données historiques suffisantes. De nouveaux acteurs (Vouch, Coalition, At-Bay du côté cyber) commencent à proposer des polices de responsabilité liées à l'IA. Le marché américain est estimé entre 2 et 5 milliards de dollars (environ 1 200 à 2 900 milliards de FCFA) d'ici 2028, selon certaines projections.
 
 ## Où se trouvent les opportunités
 

@@ -36,7 +36,7 @@ Choisissez une seule de ces quatre portes d'entrée. Si la barrière de la langu
 | # | Formation | Organisme | Prix | Profil | Durée indicative |
 |---|-----------|-----------|------|--------|-------------------|
 | 1 | AI Foundations | OpenAI Academy | Gratuit | Débutant | 60 à 75 minutes |
-| 2 | AI Essentials | Google | 49 $/mois | Débutant | Moins de 5h annoncées + pratique |
+| 2 | AI Essentials | Google | 49 $/mois (environ 29 000 FCFA) | Débutant | Moins de 5h annoncées + pratique |
 | 3 | AI Fluency | Anthropic · Claude Academy | Gratuit | Débutant | 4h, 14 leçons + quiz |
 | 4 | Elements of AI | Université d'Helsinki · MinnaLearn | Gratuit | Débutant, culture générale | Environ 30 à 60h |
 

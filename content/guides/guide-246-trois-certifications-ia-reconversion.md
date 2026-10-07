@@ -8,7 +8,7 @@ Une certification en intelligence artificielle ne pèse pas lourd sur un CV si e
 
 1. **Google : Generative AI for Everyone (Coursera).** Courte, accessible gratuitement en mode audit, elle pose le vocabulaire de base. Personne ne recrute sur cette seule certification, mais son absence peut disqualifier en entretien.
 2. **Anthropic : Prompting Course.** Gratuite, elle constitue une référence technique sur le prompt. Savoir en restituer la structure (rôle, contexte, exemples, contraintes) marque des points en entretien.
-3. **AWS ou Azure : AI Practitioner.** Autour de 100 euros, elle prouve une capacité à parler d'infrastructure IA à des interlocuteurs qui financent ce type de projet. Pour une reconversion vers un poste en entreprise, elle fait souvent la différence.
+3. **AWS ou Azure : AI Practitioner.** Autour de 100 euros (environ 66 000 FCFA), elle prouve une capacité à parler d'infrastructure IA à des interlocuteurs qui financent ce type de projet. Pour une reconversion vers un poste en entreprise, elle fait souvent la différence.
 
 ### Ce qui ne sert à rien
 

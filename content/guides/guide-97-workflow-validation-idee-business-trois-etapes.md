@@ -69,7 +69,7 @@ La plupart des gens s'arrêtent après « ça semble prometteur » et partent co
 >
 > 3. Liste les 3 plus grosses hypothèses implicites dans mon idée que je n'ai pas encore testées. Pour chacune, suggère une façon à 0 € de la tester dans les 7 prochains jours.
 >
-> 4. Si tu devais parier 10 000 € de ton propre argent, oui ou non, financerais-tu cette idée ? Explique ta réponse en deux phrases.
+> 4. Si tu devais parier 10 000 € (environ 6 600 000 FCFA) de ton propre argent, oui ou non, financerais-tu cette idée ? Explique ta réponse en deux phrases.
 >
 > 5. Enfin, si l'idée est structurellement faible, dis-le-moi. Si elle contient une vraie graine mais repose sur le mauvais angle, dis-moi quel est le meilleur angle. Ne nuance pas pour rien.
 

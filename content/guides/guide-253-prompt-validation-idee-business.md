@@ -20,7 +20,7 @@ Il ne s'agit pas de chercher un soutien enthousiaste, mais un rôle d'investisse
 > - L'hypothèse cachée la plus fragile
 >
 > Étape 2 : Le test à 100€
-> Décris UNE expérience que je peux faire ce week-end pour 100€ max qui prouve ou tue l'hypothèse principale.
+> Décris UNE expérience que je peux faire ce week-end pour 100€ max (environ 66 000 FCFA) qui prouve ou tue l'hypothèse principale.
 >
 > Étape 3 : Verdict
 > Sur 10 : combien tu mises ? Et qu'est-ce qui ferait passer la note à 8 ?
@@ -33,6 +33,6 @@ Il est possible de le recadrer directement : « Tu es trop gentil. Refais en mod
 
 ## À retenir
 
-**L'expérience à 100 euros vaut davantage que cent séances de brainstorming.**
+**L'expérience à 100 euros (environ 66 000 FCFA) vaut davantage que cent séances de brainstorming.**
 
 Le véritable résultat utile de cet exercice est l'expérience concrète à mener sur un week-end. Le reste ne reste qu'une conversation, sans valeur de validation réelle.

@@ -2,7 +2,7 @@
 
 *Multi-outils · 5 min de lecture*
 
-Un métier peu connu en dehors de la Silicon Valley gagne rapidement en visibilité : Forward Deployed Engineer (FDE). Des rémunérations comprises entre 180 000 et 350 000 dollars, une demande en forte croissance, et un accès possible sans doctorat ; l'essentiel consiste à savoir dialoguer avec un client tout en produisant du code fonctionnel autour de l'IA.
+Un métier peu connu en dehors de la Silicon Valley gagne rapidement en visibilité : Forward Deployed Engineer (FDE). Des rémunérations comprises entre 180 000 et 350 000 dollars (environ 105 à 204 millions de FCFA), une demande en forte croissance, et un accès possible sans doctorat ; l'essentiel consiste à savoir dialoguer avec un client tout en produisant du code fonctionnel autour de l'IA.
 
 ## Ce que fait un FDE
 

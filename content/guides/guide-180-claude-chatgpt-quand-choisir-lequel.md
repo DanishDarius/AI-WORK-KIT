@@ -25,7 +25,7 @@ Pour la grande majorité des tâches courantes, la différence reste marginale. 
 
 ## Une configuration concrète possible
 
-Claude pour le travail de fond (écriture, agents, tableaux de bord). ChatGPT pour les images et le vocal. Coût combiné estimé autour de 40 € par mois pour les deux abonnements, avec un retour largement supérieur à cet investissement.
+Claude pour le travail de fond (écriture, agents, tableaux de bord). ChatGPT pour les images et le vocal. Coût combiné estimé autour de 40 € par mois (environ 26 000 FCFA) pour les deux abonnements, avec un retour largement supérieur à cet investissement.
 
 ## Le prompt pour décider en cinq questions
 

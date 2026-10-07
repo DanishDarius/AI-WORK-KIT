@@ -146,7 +146,7 @@ Celui-ci pique un peu, et c'est le but. Il donne le total mensuel, le total annu
 > - Les étiquettes de retour et confirmations de retour (transporteurs, e-mails de retour spécifiques aux boutiques, accusés de retour de vendeurs en ligne)
 > - Les reçus de remboursement et crédits émis par ces mêmes vendeurs
 >
-> Pour chaque retour trouvé, essaie de le faire correspondre à un reçu de remboursement du même vendeur dans les 30 jours pour un montant similaire (tolérance de ±5 € ou ±10 % si le montant est flou). Marque chaque retour comme :
+> Pour chaque retour trouvé, essaie de le faire correspondre à un reçu de remboursement du même vendeur dans les 30 jours pour un montant similaire (tolérance de ±5 €, environ 3 300 FCFA, ou ±10 % si le montant est flou). Marque chaque retour comme :
 > - REMBOURSÉ (remboursement correspondant trouvé)
 > - EN ATTENTE (retour enregistré mais pas encore remboursé, moins de 14 jours)
 > - MANQUÉ (retour enregistré, pas de remboursement, plus de 14 jours, à traiter)

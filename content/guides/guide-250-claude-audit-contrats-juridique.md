@@ -31,7 +31,7 @@ Conseiller sur un point de droit local très spécifique. Sur le fiscal, le soci
 
 ## Le réflexe à garder
 
-Au-delà de 10 000 euros d'engagement, une double vérification par un professionnel du droit reste recommandée. L'IA permet de dégrossir le document ; la décision finale revient à un avocat.
+Au-delà de 10 000 euros d'engagement (environ 6 600 000 FCFA), une double vérification par un professionnel du droit reste recommandée. L'IA permet de dégrossir le document ; la décision finale revient à un avocat.
 
 ## À retenir
 

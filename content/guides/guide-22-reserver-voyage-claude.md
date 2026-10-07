@@ -31,7 +31,7 @@ Retenez cette règle avant même de lire les prompts : Claude s'occupe de la rec
 
 ## 02. Les deux méthodes qui fonctionnent réellement
 
-**Méthode 1, la plus simple : les connecteurs de voyage, directement dans l'app Claude.** Depuis le 8 mai 2026, Claude se connecte à Expedia : vous décrivez votre voyage en langage naturel (« un aller-retour Paris-Lisbonne mi-octobre, hôtel en bord de mer sous 150 € la nuit ») et Claude vous renvoie de vraies options, avec prix et disponibilités en direct, issus d'Expedia dans la conversation. Pas besoin de compte Expedia ni de carte bancaire pour simplement chercher. Une fois une option choisie, Claude vous fournit le lien pour finaliser la réservation sur le site officiel : votre carte, vous ne la donnez qu'à Expedia, jamais à Claude. Des connecteurs Booking.com et lastminute.com fonctionnent sur le même principe. Précision utile : le connecteur Expedia s'est d'abord ouvert côté États-Unis et se déploie progressivement ailleurs. S'il n'est pas encore disponible chez vous, la méthode 2 ci-dessous ne dépend d'aucune zone géographique.
+**Méthode 1, la plus simple : les connecteurs de voyage, directement dans l'app Claude.** Depuis le 8 mai 2026, Claude se connecte à Expedia : vous décrivez votre voyage en langage naturel (« un aller-retour Paris-Lisbonne mi-octobre, hôtel en bord de mer sous 150 € la nuit (environ 98 000 FCFA) ») et Claude vous renvoie de vraies options, avec prix et disponibilités en direct, issus d'Expedia dans la conversation. Pas besoin de compte Expedia ni de carte bancaire pour simplement chercher. Une fois une option choisie, Claude vous fournit le lien pour finaliser la réservation sur le site officiel : votre carte, vous ne la donnez qu'à Expedia, jamais à Claude. Des connecteurs Booking.com et lastminute.com fonctionnent sur le même principe. Précision utile : le connecteur Expedia s'est d'abord ouvert côté États-Unis et se déploie progressivement ailleurs. S'il n'est pas encore disponible chez vous, la méthode 2 ci-dessous ne dépend d'aucune zone géographique.
 
 **Méthode 2, la plus poussée : Claude for Chrome effectue le parcours à votre place.** C'est l'extension navigateur d'Anthropic (en bêta, réservée aux offres payantes Pro, Max, Team, Enterprise, sur Google Chrome). Claude agit directement dans votre navigateur connecté : il ouvre les sites, compare d'un onglet à l'autre, sélectionne selon vos critères, pré-remplit les informations passager, puis s'arrête à l'écran de paiement. Vous relisez, vous confirmez, vous payez vous-même. Le réglage « demander confirmation avant un achat » reste activé en permanence.
 
@@ -49,7 +49,7 @@ Plus vous fournissez de contexte, meilleures seront les 3 options proposées. Co
 > - Trajet : [Paris → Lisbonne], aller-retour
 > - Dates : [flexibles autour du 12-16 octobre, 3 à 4 nuits]
 > - Voyageurs : [1 adulte]
-> - Budget total cible : [500 € vols + hôtel]
+> - Budget total cible : [500 € vols + hôtel, environ 330 000 FCFA]
 >
 > Mes contraintes non négociables :
 > - Vol : [pas d'escale de plus de 2h / pas de départ avant 8h / bagage cabine inclus]
