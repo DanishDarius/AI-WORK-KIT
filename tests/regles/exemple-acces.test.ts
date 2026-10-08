@@ -10,8 +10,21 @@ import { estClient, lire, sources } from "../outils/fichiers";
 //   aucun autre contenu payant ne le rejoint par mégarde ;
 // - ses chiffres sont justes.
 
-// Le contenu du kit « Commerce et vente en ligne », tel qu'il est écrit en base.
-const MIGRATION = lire("supabase/migrations/0019_kit_commerce.sql").replaceAll("''", "'");
+// Le contenu du kit « Commerce et vente en ligne », tel qu'il est écrit en base :
+// la migration du kit, puis la migration 0047 qui réécrit les étapes ChatGPT
+// des 14 configurations pour le téléphone.
+const MIGRATION_KIT = lire("supabase/migrations/0019_kit_commerce.sql").replaceAll("''", "'");
+const MIGRATION_ETAPES = lire("supabase/migrations/0047_etapes_chatgpt_telephone.sql").replaceAll("''", "'");
+
+// 0047 compose l'étape 2 de chaque kit : début commun, nom du projet repris de
+// l'ancienne étape, fin commune.
+function etapeProjet(nom: string): string {
+  const m = MIGRATION_ETAPES.match(/to_jsonb\('(Dans ChatGPT, [^']+ « )'[\s\S]*?\|\| '( »[^']+)'::text\)/);
+  if (!m) throw new Error("étape 2 introuvable dans la migration 0047");
+  return `${m[1]}${nom}${m[2]}`;
+}
+
+const MIGRATION = MIGRATION_KIT + "\n" + MIGRATION_ETAPES;
 
 describe("Q7 · l'exemple de la page d'accès reprend le contenu du kit sans le réécrire", () => {
   const textes: [string, string][] = [
@@ -29,7 +42,8 @@ describe("Q7 · l'exemple de la page d'accès reprend le contenu du kit sans le 
     ["le texte de la ressource", EXEMPLE_RESSOURCE.contenu],
     ["la mention du compte gratuit", EXEMPLE_RESSOURCE.gratuit],
     ["la mention du téléphone", EXEMPLE_RESSOURCE.telephone],
-    ...EXEMPLE_RESSOURCE.etapes.map((etape, i): [string, string] => [`l'étape d'installation ${i + 1}`, etape]),
+    ["l'étape d'installation 1", EXEMPLE_RESSOURCE.etapes[0]],
+    ["l'étape d'installation 3", EXEMPLE_RESSOURCE.etapes[2]],
     ...EXEMPLE_TACHE.modele.champs.flatMap((c): [string, string][] => [[`le libellé du champ ${c.cle}`, c.libelle], [`l'exemple du champ ${c.cle}`, c.exemple]]),
   ];
 
@@ -37,9 +51,19 @@ describe("Q7 · l'exemple de la page d'accès reprend le contenu du kit sans le 
     expect(MIGRATION.length).toBeGreaterThan(10_000);
   });
 
-  it.each(textes)("%s est dans la migration 0019, mot pour mot", (_, texte) => {
+  it.each(textes)("%s est dans la migration 0019 ou 0047, mot pour mot", (_, texte) => {
     expect(texte.length).toBeGreaterThan(0);
     expect(MIGRATION).toContain(texte);
+  });
+
+  it("l'étape d'installation 2 est celle que compose la migration 0047 pour « Ma boutique »", () => {
+    expect(MIGRATION_KIT).toContain("Donnez-lui le nom « Ma boutique », puis");
+    expect(EXEMPLE_RESSOURCE.etapes[1]).toBe(etapeProjet("Ma boutique"));
+  });
+
+  it("les étapes et la mention du téléphone ne sont plus celles de l'ordinateur", () => {
+    expect(EXEMPLE_RESSOURCE.etapes.join(" ")).not.toMatch(/Paramètres du projet|choisissez un projet/);
+    expect(EXEMPLE_RESSOURCE.telephone).not.toContain("relevés sur ordinateur");
   });
 });
 
