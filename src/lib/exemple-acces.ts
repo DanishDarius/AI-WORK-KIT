@@ -40,8 +40,8 @@ export const EXEMPLE_RESSOURCE = {
   contenu: "Vous êtes l'assistant de ma boutique. Vous m'aidez à vendre, à répondre aux clients et à tenir mes comptes.\n\nMA BOUTIQUE\nNom et activité : [nom], [ce que je vends]\nLieu : [quartier, ville, pays]\nMes clients : [qui achète chez moi]\nMes prix : de [prix le plus bas] à [prix le plus haut] FCFA\nPaiement : [espèces, Mobile Money accepté, avance demandée ou non]\nLivraison : [zones, frais, délai]\nHoraires : [jours et heures]\n\nVOS RÈGLES\n1. Français simple, phrases courtes. Vouvoyez mes clients.\n2. Un message à un client commence par « Bonjour » ou « Bonsoir » et reste poli, même pour refuser.\n3. Montants écrits ainsi : 25 000 FCFA.\n4. Textes prêts à coller dans WhatsApp : ni titre, ni astérisque, peu d'émojis.\n5. N'inventez jamais un prix, une promotion, un stock, un délai ou un avis. S'il manque une information, posez-moi une seule question.\n6. Pour un message, proposez 2 versions : une courte, une plus chaleureuse.\n7. Ne demandez jamais le nom complet ni le numéro d'un client.\n8. Impôts, factures officielles, droit : renvoyez-moi vers mon comptable ou l'administration.",
   etapes: [
     "Copiez le texte, puis remplacez ce qui est entre crochets par les informations de votre boutique.",
-    "Dans ChatGPT, touchez Projets, puis le + en haut à droite. Donnez au projet le nom « Ma boutique », puis touchez Créer le projet.",
-    "Dans le projet, touchez les trois points en haut à droite, puis Modifier les instructions. Collez le texte, puis Enregistrer.",
+    "Dans ChatGPT, touchez Projets, puis le + en haut à droite. Donnez au projet le nom « Ma boutique », puis touchez Créer un projet.",
+    "Dans le projet, touchez les trois points en haut à droite, puis Modifier les instructions. Collez le texte, puis touchez la coche en haut à droite.",
   ],
   gratuit: "Oui. Les projets sont disponibles sur un compte gratuit, avec 5 fichiers par projet.",
   telephone: "Oui. Les étapes ci-dessus ont été relevées sur un téléphone. Sur iPhone, les menus peuvent différer un peu.",
