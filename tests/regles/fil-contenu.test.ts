@@ -108,6 +108,36 @@ describe("Le fil · une publication désigne un contenu qui existe, à une date 
   });
 });
 
+describe("Q7 · une actualité des IA ne s'appuie que sur les pages officielles de l'entreprise", () => {
+  // Les migrations 0041 et 0042 citaient encore des sites de presse ; 0048 les a retirés.
+  const PRESSE = /https:\/\/(?:www\.)?(?:9to5mac|9to5google|techcrunch|theverge|engadget|wired|zdnet|cnet|venturebeat|arstechnica)\./i;
+  const numero = (f: string) => Number(f.match(/(\d{4})_[^/]*\.sql$/)?.[1] ?? 0);
+  const ACTUALITES = MIGRATIONS.filter((f) => numero(f) >= 48 && /mises_a_jour_ia/.test(lire(f)));
+
+  it("la migration 0048 relit les actualités", () => {
+    expect(ACTUALITES.some((f) => numero(f) === 48)).toBe(true);
+  });
+
+  it.each(ACTUALITES)("%s : aucune source de presse", (fichier) => {
+    expect(lire(fichier)).not.toMatch(PRESSE);
+  });
+
+  it("0048 : chaque actualité garde au moins une source, et le fil reprend son titre et son résumé", () => {
+    const sql = lire("supabase/migrations/0048_actualites_pages_officielles.sql");
+    const majs = sql.split("update mises_a_jour_ia set").slice(1);
+    expect(majs.length).toBe(21);
+    for (const bloc of majs) {
+      const slug = bloc.match(/where slug = \$t\$([a-z0-9-]+)\$t\$/)?.[1];
+      expect(slug).toBeTruthy();
+      expect(bloc.match(/sources = \$j\$(.*?)\$j\$::jsonb/)?.[1], slug).toMatch(/"url": "https:\/\//);
+      const titre = bloc.match(/titre = (\$t\$[^$]+\$t\$)/)?.[1];
+      const resume = bloc.match(/resume = (\$t\$[^$]+\$t\$)/)?.[1];
+      expect(sql, slug).toContain(`update publications set titre = ${titre}, resume = ${resume}\nwhere type = 'mise_a_jour' and ref_id = $t$${slug}$t$;`);
+    }
+    expect(sql).not.toMatch(/[—–]/);
+  });
+});
+
 describe("Q7 · les chiffres des réponses attendues sont justes (migration 0042)", () => {
   const sql = lire("supabase/migrations/0042_fil_semaines_1_a_4.sql");
   const fcfa = (n: number) => n.toLocaleString("fr-FR").replace(/[  ]/g, " ");
