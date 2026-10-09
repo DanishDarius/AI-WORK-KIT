@@ -2,8 +2,9 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { chemin, lire, lister } from "../outils/fichiers";
 
-// La marque (décisions du 3 octobre 2026) : le logo est un cube qui porte
-// l'étincelle de l'IA, et le slogan s'écrit partout sous une seule forme.
+// La marque : le logo est une mallette qui porte l'étincelle de l'IA (piste 4,
+// décision du 9 octobre 2026, qui remplace le cube du 3 octobre), et le slogan
+// s'écrit partout sous une seule forme.
 
 const SLOGAN = "L’IA dans votre travail et au cœur de vos tâches du quotidien";
 
@@ -42,17 +43,45 @@ describe("marque · logo", () => {
   const dessins = [...lister("public/brand/atelier", (f) => f.endsWith(".svg")), "src/app/icon.svg"];
 
   it("le jeu de dessins est complet", () => {
-    expect(dessins).toHaveLength(10);
+    expect(dessins).toHaveLength(11);
   });
 
-  it.each(dessins)("%s est le cube à l'étincelle", (fichier) => {
+  it.each(dessins)("%s est la mallette à l'étincelle", (fichier) => {
     const svg = lire(fichier);
     expect(svg).toContain("<title>AI WORK KIT</title>");
-    // L'étincelle : quatre courbes qui se rejoignent au centre.
-    expect(svg).toMatch(/d="M64,35 Q[\d.]+,[\d.]+ 94,65 /);
-    // L'ancien dessin à trois branches avait des points ronds.
+    // La poignée et le corps de la mallette.
+    expect(svg).toContain('d="M45,38 V31 a9,9 0 0 1 9,-9 h20 a9,9 0 0 1 9,9 V38"');
+    expect(svg).toContain('<rect x="12" y="36" width="104" height="74" rx="18"');
+    // L'étincelle : quatre courbes qui se rejoignent au centre de la mallette.
+    expect(svg).toContain('d="M64,48 Q68.0,69.0 89,73 ');
+    // Ni l'ancien cube (ses faces étaient des polygones), ni le dessin à trois branches.
+    expect(svg).not.toContain("<polygon");
     expect(svg).not.toContain("<circle");
     expect(svg).not.toMatch(/[—–]/);
+  });
+
+  it("un logo complet porte le mot AIW et AI WORK KIT en tracés, sans police à charger", () => {
+    const mot = JSON.parse(lire("scripts/marque/mot.json"));
+    for (const nom of ["primary", "reverse", "mono"]) {
+      const svg = lire(`public/brand/atelier/logo-${nom}.svg`);
+      expect(svg).toContain(mot.aiw);
+      expect(svg).toContain(mot.sous_titre);
+      expect(svg).not.toContain("<text");
+    }
+  });
+
+  it("le logo court de l'affiche des vidéos porte AIW sans la ligne du dessous", () => {
+    const mot = JSON.parse(lire("scripts/marque/mot.json"));
+    const svg = lire("public/brand/atelier/logo-court-reverse.svg");
+    expect(svg).toContain(mot.aiw);
+    expect(svg).not.toContain(mot.sous_titre);
+    expect(lire("src/app/globals.css")).toMatch(/\.lecteur-affiche::before \{[^}]*logo-court-reverse\.svg/);
+  });
+
+  it("les fichiers du logo sortent du générateur, qui dessine la mallette", () => {
+    const generateur = lire("scripts/generate-brand.cjs");
+    expect(generateur).toContain("M45,38 V31");
+    expect(generateur).toContain("M64,48 Q68.0,69.0 89,73");
   });
 
   it.each([

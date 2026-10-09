@@ -1,56 +1,92 @@
-// Run with NODE_PATH pointing to a runtime containing sharp.
-const fs = require('node:fs');
-const path = require('node:path');
-const sharp = require('sharp');
-const root = path.resolve(__dirname, '..');
-const out = path.join(root, 'public/brand/atelier');
-fs.mkdirSync(out, { recursive: true });
-const faces = [
-  'M58.1 8.5a12 12 0 0 1 11.8 0l39.2 22.7a8 8 0 0 1 0 13.8L69.9 67.6a12 12 0 0 1-11.8 0L18.9 45a8 8 0 0 1 0-13.8L58.1 8.5Z',
-  'M12 55.1a8 8 0 0 1 12-6.9l31.8 18.4a8 8 0 0 1 4 6.9v39.1a8 8 0 0 1-12 6.9L16 101.1a8 8 0 0 1-4-6.9V55.1Z',
-  'M68.2 73.5a8 8 0 0 1 4-6.9L104 48.2a8 8 0 0 1 12 6.9v39.1a8 8 0 0 1-4 6.9l-31.8 18.4a8 8 0 0 1-12-6.9V73.5Z'
-];
-function symbol(colors, wire) {
-  return faces.map((d, i) => `<path fill="${colors[i]}" d="${d}"/>`).join('') + `<g fill="none" stroke="${wire}" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"><path d="M64 52V31M64 49 43 37M64 49l21-12"/></g><g fill="${wire}"><circle cx="64" cy="25" r="6.5"/><circle cx="37.8" cy="34" r="6.5"/><circle cx="90.2" cy="34" r="6.5"/></g>`;
+// Fabrique le logo d'AIW : la mallette à l'étincelle (piste 4, décision du 9 octobre 2026).
+// Lancer depuis la racine du dépôt : node scripts/generate-brand.cjs
+// Écrit public/brand/atelier/*, src/app/icon.svg, src/app/apple-icon.png,
+// src/app/favicon.ico et src/app/opengraph-image.png.
+// Le mot « AIW » et « AI WORK KIT » sont des tracés (scripts/marque/mot.json, Nunito) :
+// le logo s'affiche pareil partout, sans police à charger.
+const fs = require("node:fs");
+const path = require("node:path");
+const sharp = require("sharp");
+
+const racine = path.resolve(__dirname, "..");
+const sortie = path.join(racine, "public/brand/atelier");
+const mot = JSON.parse(fs.readFileSync(path.join(__dirname, "marque/mot.json"), "utf8"));
+const VERT = "#0b6b5e", ENCRE = "#17211f", MENTHE = "#b9f2d6", BLANC = "#ffffff";
+
+// La mallette : une poignée, un corps aux coins arrondis, l'étincelle de l'IA au centre.
+const POIGNEE = "M45,38 V31 a9,9 0 0 1 9,-9 h20 a9,9 0 0 1 9,9 V38";
+const ETINCELLE = "M64,48 Q68.0,69.0 89,73 Q68.0,77.0 64,98 Q60.0,77.0 39,73 Q60.0,69.0 64,48 Z";
+
+function mallette(corps, etincelle) {
+  return `<path d="${POIGNEE}" fill="none" stroke="${corps}" stroke-width="10" stroke-linecap="round"/>`
+    + `<rect x="12" y="36" width="104" height="74" rx="18" fill="${corps}"/>`
+    + `<path d="${ETINCELLE}" fill="${etincelle}" stroke="${etincelle}" stroke-width="3.5" stroke-linejoin="round"/>`;
 }
-const palettes = {
-  primary: { faces: ['#0B6B5E', '#17211F', '#24564B'], wire: '#FFFDFC', text: '#17211F', sub: '#0B6B5E' },
-  reverse: { faces: ['#FFFDFC', '#FFFDFC', '#FFFDFC'], wire: '#17211F', text: '#FFFDFC', sub: '#FFFDFC' },
-  mono: { faces: ['#17211F', '#17211F', '#17211F'], wire: '#FFFDFC', text: '#17211F', sub: '#17211F' }
-};
-function svg(body, w = 128, h = 128) { return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img"><title>AI WORK KIT — Atelier intelligent</title>${body}</svg>`; }
-async function asset(name, source, width) {
-  fs.writeFileSync(path.join(out, `${name}.svg`), source);
-  await sharp(Buffer.from(source)).resize(width).png().toFile(path.join(out, `${name}.png`));
+// Une seule couleur : l'étincelle est découpée dans le corps (transparente), pour un tampon ou une impression.
+function malletteDecoupee(couleur, id) {
+  return `<mask id="${id}"><rect width="128" height="128" fill="#fff"/><path d="${ETINCELLE}" fill="#000" stroke="#000" stroke-width="3.5" stroke-linejoin="round"/></mask>`
+    + `<g mask="url(#${id})"><path d="${POIGNEE}" fill="none" stroke="${couleur}" stroke-width="10" stroke-linecap="round"/><rect x="12" y="36" width="104" height="74" rx="18" fill="${couleur}"/></g>`;
 }
+function svg(corps, l = 128, h = 128) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${l}" height="${h}" viewBox="0 0 ${l} ${h}" role="img"><title>AI WORK KIT</title>${corps}</svg>`;
+}
+function texte(aiw, sous) { return `<path d="${mot.aiw}" fill="${aiw}"/><path d="${mot.sous_titre}" fill="${sous}"/>`; }
+function centre(dessin, echelle) { return `<g transform="translate(64 64) scale(${echelle}) translate(-64 -64)">${dessin}</g>`; }
+
+async function ecrire(nom, source, largeur) {
+  fs.writeFileSync(path.join(sortie, `${nom}.svg`), source);
+  await sharp(Buffer.from(source), { density: 600 }).resize(largeur).png().toFile(path.join(sortie, `${nom}.png`));
+}
+const png = (source, taille) => sharp(Buffer.from(source), { density: 600 }).resize(taille, taille).png();
+
 async function main() {
-  for (const [name, p] of Object.entries(palettes)) {
-    const mark = symbol(p.faces, p.wire);
-    await asset(`symbol-${name}`, svg(mark), 1024);
-    const type = `<text x="154" y="78" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="800" letter-spacing="-2" fill="${p.text}">AIW</text><text x="157" y="108" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3.6" fill="${p.sub}">AI WORK KIT</text>`;
-    await asset(`logo-${name}`, svg(mark + type, 370, 128), 1480);
+  fs.mkdirSync(sortie, { recursive: true });
+  const symboles = {
+    primary: mallette(VERT, BLANC),
+    reverse: mallette(BLANC, VERT),
+    mono: malletteDecoupee(ENCRE, "m"),
+  };
+  const mots = { primary: texte(ENCRE, VERT), reverse: texte(BLANC, MENTHE), mono: texte(ENCRE, ENCRE) };
+  for (const nom of Object.keys(symboles)) {
+    await ecrire(`symbol-${nom}`, svg(symboles[nom]), 1024);
+    await ecrire(`logo-${nom}`, svg(symboles[nom] + mots[nom], 370, 128), 1480);
   }
-  const white = symbol(palettes.reverse.faces, '#0B6B5E');
-  const app = svg(`<rect width="128" height="128" rx="28" fill="#0B6B5E"/><g transform="translate(18 18) scale(.71875)">${white}</g>`);
-  await asset('app-icon', app, 512);
-  for (const size of [16, 32, 192, 512]) {
-    await sharp(Buffer.from(app)).resize(size).png().toFile(path.join(out, `icon-${size}.png`));
-  }
-  // All essential artwork fits within the central 80% diameter safe circle.
-  const maskable = svg(`<rect width="128" height="128" fill="#0B6B5E"/><g transform="translate(28 28) scale(.5625)">${white}</g>`);
-  await asset('icon-maskable', maskable, 512);
-  const apple = svg(`<rect width="128" height="128" fill="#0B6B5E"/><g transform="translate(18 18) scale(.71875)">${white}</g>`);
-  await sharp(Buffer.from(apple)).resize(180).png().toFile(path.join(root, 'src/app/apple-icon.png'));
-  // Transparent network cut-outs make this a real single-alpha monochrome icon.
-  const monoMask = `<defs><mask id="m"><rect width="128" height="128" fill="white"/>${symbol(['white','white','white'], 'black')}</mask></defs>`;
-  await asset('icon-monochrome', svg(monoMask + `<g mask="url(#m)">${faces.map(d => `<path fill="#17211F" d="${d}"/>`).join('')}</g>`), 512);
-  fs.writeFileSync(path.join(root, 'src/app/icon.svg'), app);
-  // PNG-compressed ICO entries supported by current desktop browsers.
-  const images = await Promise.all([16, 32, 48].map(s => sharp(Buffer.from(app)).resize(s).png().toBuffer()));
-  const header = Buffer.alloc(6 + images.length * 16); header.writeUInt16LE(1, 2); header.writeUInt16LE(images.length, 4);
-  let offset = header.length;
-  images.forEach((buf, i) => { const at = 6 + i * 16; header[at] = [16,32,48][i]; header[at+1] = header[at]; header.writeUInt16LE(1,at+4); header.writeUInt16LE(32,at+6); header.writeUInt32LE(buf.length,at+8); header.writeUInt32LE(offset,at+12); offset += buf.length; });
-  fs.writeFileSync(path.join(root, 'src/app/favicon.ico'), Buffer.concat([header, ...images]));
-  console.log('Brand assets generated:', fs.readdirSync(out).length);
+  // Logo court (mallette et AIW, sans « AI WORK KIT ») pour les petites tailles, comme le coin de
+  // l'affiche des vidéos : la ligne du dessous y serait trop petite pour se lire. Le mot AIW
+  // descend de 9 pour se centrer sur la mallette.
+  fs.writeFileSync(path.join(sortie, "logo-court-reverse.svg"),
+    svg(symboles.reverse + `<path d="${mot.aiw}" fill="${BLANC}" transform="translate(0 9)"/>`, 337, 128));
+  // Icône d'application : carré vert aux coins arrondis, mallette blanche.
+  const icone = svg(`<rect width="128" height="128" rx="28" fill="${VERT}"/>` + centre(mallette(BLANC, VERT), 0.7));
+  await ecrire("app-icon", icone, 512);
+  for (const t of [16, 32, 192, 512]) await png(icone, t).toFile(path.join(sortie, `icon-${t}.png`));
+  // Icône « maskable » : tout le dessin tient dans le cercle central (80 % du diamètre).
+  const masquable = svg(`<rect width="128" height="128" fill="${VERT}"/>` + centre(mallette(BLANC, VERT), 0.58));
+  await ecrire("icon-maskable", masquable, 512);
+  await sharp(Buffer.from(masquable), { density: 600 }).resize(512).flatten({ background: VERT }).png().toFile(path.join(sortie, "icon-maskable.png"));
+  await ecrire("icon-monochrome", svg(centre(malletteDecoupee(ENCRE, "m"), 0.72)), 512);
+  // Écran d'accueil de l'iPhone : carré plein, iOS arrondit lui-même les coins.
+  await png(svg(`<rect width="128" height="128" fill="${VERT}"/>` + centre(mallette(BLANC, VERT), 0.7)), 180).toFile(path.join(racine, "src/app/apple-icon.png"));
+  fs.writeFileSync(path.join(racine, "src/app/icon.svg"), icone);
+  // favicon.ico : trois images PNG (16, 32, 48), lues par les navigateurs actuels.
+  const tailles = [16, 32, 48];
+  const images = await Promise.all(tailles.map((t) => png(icone, t).toBuffer()));
+  const entete = Buffer.alloc(6 + images.length * 16);
+  entete.writeUInt16LE(1, 2); entete.writeUInt16LE(images.length, 4);
+  let decalage = entete.length;
+  images.forEach((b, i) => {
+    const a = 6 + i * 16; entete[a] = tailles[i]; entete[a + 1] = tailles[i];
+    entete.writeUInt16LE(1, a + 4); entete.writeUInt16LE(32, a + 6); entete.writeUInt32LE(b.length, a + 8); entete.writeUInt32LE(decalage, a + 12);
+    decalage += b.length;
+  });
+  fs.writeFileSync(path.join(racine, "src/app/favicon.ico"), Buffer.concat([entete, ...images]));
+  // Image d'un lien partagé (1200 x 630) : le fond porte déjà le slogan et l'adresse
+  // (scripts/marque/og-fond.png) ; on y pose le petit logo en haut à gauche et la grande mallette à droite.
+  const petit = await sharp(Buffer.from(svg(symboles.reverse)), { density: 600 }).resize(92).png().toBuffer();
+  const grand = await sharp(Buffer.from(svg(symboles.reverse)), { density: 600 }).resize(300).png().toBuffer();
+  await sharp(path.join(__dirname, "marque/og-fond.png"))
+    .composite([{ input: petit, left: 82, top: 70 }, { input: grand, left: 814, top: 167 }])
+    .png().toFile(path.join(racine, "src/app/opengraph-image.png"));
+  console.log("Logo fabriqué :", fs.readdirSync(sortie).length, "fichiers dans public/brand/atelier");
 }
-main().catch(err => { console.error(err); process.exitCode = 1; });
+main().catch((e) => { console.error(e); process.exitCode = 1; });
