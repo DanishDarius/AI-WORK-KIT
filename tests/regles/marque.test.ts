@@ -64,6 +64,25 @@ describe("marque · éditeur", () => {
   });
 });
 
+describe("marque · pied des pages publiques", () => {
+  // Décision du 9 octobre 2026 : les trois pages légales, séparées par un trait droit sur
+  // téléphone, puis « Fait avec ❤️ © <année> AIW » au centre ; l'année suit le calendrier.
+  it("porte les pages légales et la ligne « Fait avec ❤️ © année AIW »", () => {
+    const pied = lire("src/components/public.tsx");
+    expect(pied).toContain('<span className="footer-sep" aria-hidden="true">|</span>');
+    expect(pied).toMatch(/Fait avec <span role="img" aria-label="amour">❤️<\/span> © <AnneeCourante initiale=\{new Date\(\)\.getFullYear\(\)\} \/> \{SIGLE\}/);
+    const styles = lire("src/app/globals.css");
+    expect(styles).toMatch(/\.footer-credit \{[^}]*text-align: center;/);
+    expect(styles).toMatch(/@media \(max-width: 560px\) \{\n(  [^\n]*\n)*?  \.footer-liens \{[^}]*justify-content: center;/);
+  });
+
+  it("l'année se lit dans le navigateur, la page reste statique", () => {
+    const annee = lire("src/components/annee.tsx");
+    expect(annee).toMatch(/^"use client";/);
+    expect(annee).toContain("useSyncExternalStore");
+  });
+});
+
 describe("marque · logo", () => {
   const dessins = [...lister("public/brand/atelier", (f) => f.endsWith(".svg")), "src/app/icon.svg"];
 

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
+import { SIGLE } from "@/lib/marque";
+import { AnneeCourante } from "./annee";
 
 export const legalPages = [
   { href: "/conditions", label: "Conditions" },
@@ -34,11 +36,18 @@ export function PublicFooter() {
   return (
     <footer className="footer">
       <div className="wrap">
-        <Image src="/brand/atelier/logo-reverse.svg" alt="AIW" width={116} height={40} />
-        <span className="grow" />
-        {legalPages.map((page) => (
-          <Link key={page.href} href={page.href}>{page.label}</Link>
-        ))}
+        <div className="footer-haut">
+          <Image src="/brand/atelier/logo-reverse.svg" alt="AIW" width={116} height={40} />
+          <nav className="footer-liens" aria-label="Pages légales">
+            {legalPages.map((page, i) => (
+              <Fragment key={page.href}>
+                {i > 0 && <span className="footer-sep" aria-hidden="true">|</span>}
+                <Link href={page.href}>{page.label}</Link>
+              </Fragment>
+            ))}
+          </nav>
+        </div>
+        <p className="footer-credit">Fait avec <span role="img" aria-label="amour">❤️</span> © <AnneeCourante initiale={new Date().getFullYear()} /> {SIGLE}</p>
       </div>
     </footer>
   );
