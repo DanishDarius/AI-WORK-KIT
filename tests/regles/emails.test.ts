@@ -67,7 +67,8 @@ describe.each(MODELES)("e-mail de compte · %s", (nom, duree) => {
     expect(html).toMatch(/<html lang="fr">/);
     expect(texte).not.toMatch(/[—–]/);
     expect(texte).not.toMatch(/\b(tu|ton|ta|tes|toi)\b/i);
-    expect(texte).toMatch(/AI WORK KIT, un produit de Parlons ADS/);
+    // Le nom de l'éditeur ne s'écrit que sur les pages légales (décision du 9 octobre 2026).
+    expect(texte).not.toMatch(/Parlons ADS/i);
   });
 
   it(`annonce la durée réelle du lien : ${duree}`, () => {

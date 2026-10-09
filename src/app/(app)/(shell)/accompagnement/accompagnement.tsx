@@ -62,7 +62,7 @@ export function Accompagnement() {
   return (
     <Page width="single">
       <PageHead kicker="Accompagnement" title="Quand un prompt ne suffit plus.">
-        Parlons ADS construit avec vous la suite : un système dans vos outils, ou une démarche pour toute l’équipe. Chaque projet fait l’objet d’un devis.
+        Nous construisons avec vous la suite : un système dans vos outils, ou une démarche pour toute l’équipe. Chaque projet fait l’objet d’un devis.
       </PageHead>
       <div className="seg" role="tablist" aria-label="Type d’accompagnement">
         {(Object.keys(OFFRES) as Formulaire[]).map((k) => (

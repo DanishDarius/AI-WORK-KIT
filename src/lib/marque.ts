@@ -8,3 +8,7 @@ export const SIGLE = "AIW";
 export const SLOGAN_PARTIES = ["L’IA dans votre travail", "et au cœur de vos tâches du quotidien"] as const;
 export const SLOGAN = SLOGAN_PARTIES.join(" ");
 export const SITE = "https://ai-work-kit.parlonsads.com";
+// L'éditeur d'AIW. Son nom ne s'écrit que sur les pages légales (mentions légales,
+// conditions, confidentialité), qui le lisent ici : en changer ne touche qu'à cette ligne
+// (décision du 9 octobre 2026).
+export const EDITEUR = "Parlons ADS";

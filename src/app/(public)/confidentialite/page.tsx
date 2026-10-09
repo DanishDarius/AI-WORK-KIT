@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, LegalSection } from "@/components/legal-page";
+import { EDITEUR } from "@/lib/marque";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité et cookies | AI WORK KIT",
@@ -43,7 +44,7 @@ export default function Confidentialite() {
     >
       <LegalSection id="responsable" title="Responsable du traitement">
         <p>
-          Le responsable du traitement est Parlons ADS, éditeur d’AIW, établi en
+          Le responsable du traitement est {EDITEUR}, éditeur d’AIW, établi en
           République du Bénin (voir les{" "}
           <Link href="/mentions-legales">mentions légales</Link>). Pour toute
           question sur vos données : {mail}.
@@ -115,7 +116,7 @@ export default function Confidentialite() {
 
       <LegalSection id="destinataires" title="Qui y a accès">
         <p>
-          Vos données sont accessibles uniquement à Parlons ADS et aux
+          Vos données sont accessibles uniquement à {EDITEUR} et aux
           prestataires techniques nécessaires au service, qui agissent sur nos
           instructions :
         </p>

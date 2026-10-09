@@ -39,6 +39,31 @@ describe("marque · slogan", () => {
   });
 });
 
+describe("marque · éditeur", () => {
+  // Décision du 9 octobre 2026 : le nom de l'éditeur ne paraît que sur les pages légales,
+  // qui le lisent dans src/lib/marque.ts. En changer ne touche qu'à cette ligne.
+  const LEGALES = ["src/app/(public)/mentions-legales/page.tsx", "src/app/(public)/conditions/page.tsx", "src/app/(public)/confidentialite/page.tsx"];
+
+  it("s'écrit à un seul endroit du code", () => {
+    const fichiers = lister("src", (f) => /\.(ts|tsx|css)$/.test(f)).filter((f) => /parlons\s+ads/i.test(lire(f)));
+    expect(fichiers).toEqual(["src/lib/marque.ts"]);
+  });
+
+  it.each(LEGALES)("%s lit le nom de l'éditeur dans marque.ts", (fichier) => {
+    expect(lire(fichier)).toMatch(/import \{ EDITEUR \} from "@\/lib\/marque"/);
+    expect(lire(fichier)).toContain("{EDITEUR}");
+  });
+
+  it("aucune autre page ne l'affiche", () => {
+    const pages = lister("src", (f) => /\.tsx$/.test(f)).filter((f) => !LEGALES.includes(f));
+    for (const f of pages) expect(lire(f), f).not.toMatch(/\bEDITEUR\b/);
+  });
+
+  it.each(["supabase/emails/invitation.html", "supabase/emails/mot-de-passe.html"])("%s ne le nomme pas", (fichier) => {
+    expect(lire(fichier)).not.toMatch(/parlons\s+ads/i);
+  });
+});
+
 describe("marque · logo", () => {
   const dessins = [...lister("public/brand/atelier", (f) => f.endsWith(".svg")), "src/app/icon.svg"];
 

@@ -35,7 +35,6 @@ export function PublicFooter() {
     <footer className="footer">
       <div className="wrap">
         <Image src="/brand/atelier/logo-reverse.svg" alt="AIW" width={116} height={40} />
-        <span className="small">AIW, un produit de Parlons ADS</span>
         <span className="grow" />
         {legalPages.map((page) => (
           <Link key={page.href} href={page.href}>{page.label}</Link>

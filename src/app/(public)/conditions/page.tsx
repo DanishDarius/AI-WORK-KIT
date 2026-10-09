@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, LegalSection } from "@/components/legal-page";
+import { EDITEUR } from "@/lib/marque";
 
 export const metadata: Metadata = {
   title: "Conditions générales d’utilisation et de vente | AI WORK KIT",
@@ -49,7 +50,7 @@ export default function Conditions() {
         <p>
           Les présentes conditions générales d’utilisation et de vente (les
           « Conditions ») s’appliquent à la plateforme AI WORK KIT, accessible
-          à l’adresse ai-work-kit.parlonsads.com et éditée par Parlons ADS
+          à l’adresse ai-work-kit.parlonsads.com et éditée par {EDITEUR}
           (voir les <Link href="/mentions-legales">mentions légales</Link>).
         </p>
         <p>
@@ -153,7 +154,7 @@ export default function Conditions() {
         </p>
         <p>
           Le paiement est traité par un prestataire de paiement sécurisé,
-          indiqué sur la page de commande. Parlons ADS ne reçoit ni ne conserve
+          indiqué sur la page de commande. {EDITEUR} ne reçoit ni ne conserve
           vos données de carte bancaire ou de compte de paiement mobile. Un
           reçu vous est adressé par email.
         </p>
@@ -197,7 +198,7 @@ export default function Conditions() {
 
       <LegalSection id="usage" title="Ce que vous pouvez faire avec les contenus">
         <p>
-          Parlons ADS vous accorde un droit d’utilisation personnel, non
+          {EDITEUR} vous accorde un droit d’utilisation personnel, non
           exclusif et non transférable des Contenus, pour la durée de votre
           accès.
         </p>
@@ -226,7 +227,7 @@ export default function Conditions() {
         <p>Une seule règle, selon que vous modifiez le guide ou non :</p>
         <ul>
           <li><strong>Vous le laissez tel quel :</strong> vous pouvez mentionner AI WORK KIT, ou ne pas le mentionner.</li>
-          <li><strong>Vous le modifiez :</strong> vous retirez toute mention d’AI WORK KIT et de Parlons ADS. Le guide modifié est votre œuvre, sous votre seule responsabilité.</li>
+          <li><strong>Vous le modifiez :</strong> vous retirez toute mention d’AI WORK KIT et de {EDITEUR}. Le guide modifié est votre œuvre, sous votre seule responsabilité.</li>
         </ul>
         <p>
           Cette licence concerne uniquement les guides téléchargés. Les tâches, cas pratiques, prompts et kits
@@ -238,7 +239,7 @@ export default function Conditions() {
         <p>
           AI WORK KIT vous apprend à utiliser des outils édités par d’autres
           entreprises, comme ChatGPT (OpenAI), Claude (Anthropic) ou Gemini
-          (Google). Ces outils ne sont pas fournis par Parlons ADS :
+          (Google). Ces outils ne sont pas fournis par {EDITEUR} :
         </p>
         <ul>
           <li>vous créez vos propres comptes chez ces éditeurs et acceptez leurs conditions ;</li>
@@ -282,17 +283,17 @@ export default function Conditions() {
 
       <LegalSection id="responsabilite" title="Responsabilité">
         <p>
-          Parlons ADS est tenu d’une obligation de moyens : nous fournissons des
+          {EDITEUR} est tenu d’une obligation de moyens : nous fournissons des
           Contenus préparés avec soin et une Plateforme entretenue, sans
           garantir un résultat précis, un gain de temps chiffré ou un résultat
           commercial.
         </p>
         <p>
-          Parlons ADS n’est pas responsable des dommages indirects, des
+          {EDITEUR} n’est pas responsable des dommages indirects, des
           décisions prises sur la base des réponses d’un outil d’IA, ni des
           conséquences d’un changement effectué par un éditeur d’IA tiers.
           Dans tous les cas, et dans la limite permise par la loi, la
-          responsabilité de Parlons ADS est limitée au montant que vous avez
+          responsabilité de {EDITEUR} est limitée au montant que vous avez
           payé au cours des 12 derniers mois.
         </p>
         <p>
@@ -306,7 +307,7 @@ export default function Conditions() {
         <p>
           En cas de manquement grave aux Conditions (partage d’identifiants,
           revente ou diffusion des Contenus, extraction automatisée, fraude au
-          paiement), Parlons ADS peut suspendre votre compte après vous avoir
+          paiement), {EDITEUR} peut suspendre votre compte après vous avoir
           informé par email, puis le fermer si le manquement continue. Une
           fermeture pour ces motifs ne donne pas lieu à remboursement.
         </p>

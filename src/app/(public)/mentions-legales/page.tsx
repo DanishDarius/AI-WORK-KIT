@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, LegalSection } from "@/components/legal-page";
+import { EDITEUR } from "@/lib/marque";
 
 export const metadata: Metadata = {
   title: "Mentions légales | AI WORK KIT",
@@ -38,7 +39,7 @@ export default function MentionsLegales() {
       <LegalSection id="editeur" title="Éditeur de la plateforme">
         <dl className="legal-facts">
           <div><dt>Service édité</dt><dd>AIW (AI WORK KIT), application web (PWA) d’apprentissage et d’usage de l’intelligence artificielle au travail</dd></div>
-          <div><dt>Éditeur</dt><dd>AIW est un produit de Parlons ADS</dd></div>
+          <div><dt>Éditeur</dt><dd>AIW est un produit de {EDITEUR}</dd></div>
           <div><dt>Pays d’établissement</dt><dd>République du Bénin</dd></div>
           <div><dt>Adresse postale</dt><dd>Communiquée sur simple demande écrite à support@parlonsads.com</dd></div>
           <div><dt>Email</dt><dd><a href="mailto:support@parlonsads.com">support@parlonsads.com</a></dd></div>
@@ -47,7 +48,7 @@ export default function MentionsLegales() {
 
       <LegalSection id="publication" title="Responsable de la publication">
         <p>
-          La publication est assurée par l’équipe Parlons ADS, joignable à
+          La publication est assurée par l’équipe {EDITEUR}, joignable à
           l’adresse <a href="mailto:support@parlonsads.com">support@parlonsads.com</a>.
         </p>
       </LegalSection>
@@ -65,7 +66,7 @@ export default function MentionsLegales() {
       <LegalSection id="propriete" title="Propriété intellectuelle">
         <p>
           L’ensemble des contenus de la plateforme est la propriété exclusive
-          de Parlons ADS, sauf mention contraire : textes, cas pratiques,
+          de {EDITEUR}, sauf mention contraire : textes, cas pratiques,
           prompts, guides, parcours par métier, plans de mise en place, fiches
           d’actualité, illustrations, logos, marque AI WORK KIT,
           charte graphique, organisation des contenus et code de l’application.
@@ -77,7 +78,7 @@ export default function MentionsLegales() {
           celui de votre entreprise. En revanche, toute reproduction,
           revente, diffusion publique, mise à disposition gratuite ou payante,
           extraction massive ou adaptation des contenus en dehors de ce cadre
-          est interdite sans accord écrit de Parlons ADS.
+          est interdite sans accord écrit de {EDITEUR}.
         </p>
         <p>
           Les visuels et vidéos d’actualité provenant d’un éditeur tiers
@@ -96,7 +97,7 @@ export default function MentionsLegales() {
         </p>
         <p>
           AI WORK KIT est un service indépendant. Il n’est ni affilié, ni
-          sponsorisé, ni validé par ces entreprises. Parlons ADS n’est pas non
+          sponsorisé, ni validé par ces entreprises. {EDITEUR} n’est pas non
           plus affilié à Meta ou Facebook.
         </p>
       </LegalSection>
@@ -118,10 +119,10 @@ export default function MentionsLegales() {
 
       <LegalSection id="responsabilite" title="Responsabilité">
         <p>
-          Parlons ADS met tout en œuvre pour proposer des contenus exacts et
+          {EDITEUR} met tout en œuvre pour proposer des contenus exacts et
           une plateforme disponible. Les réponses produites par ChatGPT,
           Claude, Gemini ou tout autre outil d’IA à partir de nos prompts sont
-          générées par ces outils, et non par Parlons ADS : elles peuvent
+          générées par ces outils, et non par {EDITEUR} : elles peuvent
           contenir des erreurs. Vous restez responsable de leur vérification et
           de l’usage que vous en faites.
         </p>
@@ -135,7 +136,7 @@ export default function MentionsLegales() {
         <p>
           La plateforme contient des liens vers des sites tiers (outils d’IA,
           documentation officielle, sources des actualités) et peut afficher
-          des vidéos YouTube. Parlons ADS ne contrôle pas ces sites et n’est
+          des vidéos YouTube. {EDITEUR} ne contrôle pas ces sites et n’est
           pas responsable de leur contenu ni de leurs pratiques en matière de
           données personnelles.
         </p>
