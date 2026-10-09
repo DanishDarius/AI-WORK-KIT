@@ -30,6 +30,8 @@ describe("C1 · le contenu commun passe par le cache", () => {
     "packs_taches",
     "sessions_live",
     "videos",
+    // Les exercices finaux d'attestation (migration 0052).
+    "exercices_finaux",
   ];
   const motif = new RegExp(`\\.from\\(\\s*["'](${TABLES.join("|")})["']`);
 
@@ -43,8 +45,9 @@ describe("C1 · le contenu commun passe par le cache", () => {
   it("src/lib/contenu.ts met ses lectures en cache et reste côté serveur", () => {
     const contenu = lire("src/lib/contenu.ts");
     expect(contenu).toMatch(/^import "server-only";/);
-    // Catalogue, cas pratiques, kit d'un métier, modèle d'une tâche, fil Nouveau.
-    expect(contenu.match(/unstable_cache\(/g)?.length).toBe(5);
+    // Catalogue, cas pratiques, kit d'un métier, modèle d'une tâche, fil Nouveau,
+    // exercices finaux d'attestation.
+    expect(contenu.match(/unstable_cache\(/g)?.length).toBe(6);
     expect(contenu).toMatch(/revalidate:\s*DUREE_SECONDES/);
   });
 });

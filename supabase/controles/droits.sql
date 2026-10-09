@@ -34,13 +34,13 @@ union all
 select 'table interne ouverte à un compte connecté', nom, droit
 from droits
 where role = 'authenticated'
-  and nom in ('acces_clients', 'abonnements', 'demandes_plans', 'demandes_contact', 'preferences_notifications', 'envois_notifications')
+  and nom in ('acces_clients', 'abonnements', 'demandes_plans', 'demandes_contact', 'preferences_notifications', 'envois_notifications', 'rendus_attestation')
 
 union all
 select 'contenu d''un kit ouvert à un compte connecté', nom, droit
 from droits
 where role = 'authenticated'
-  and nom in ('kits', 'ressources', 'kits_metier', 'ressources_taches', 'modeles_prompts', 'champs_modele', 'conseils_ia')
+  and nom in ('kits', 'ressources', 'kits_metier', 'ressources_taches', 'modeles_prompts', 'champs_modele', 'conseils_ia', 'exercices_finaux')
 
 union all
 select 'contenu du fil ouvert à un compte connecté', nom, droit

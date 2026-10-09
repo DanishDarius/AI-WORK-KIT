@@ -3,7 +3,7 @@
 
 export type Operation = {
   table: string;
-  action: "select" | "insert" | "update" | "delete" | "upsert";
+  action: "select" | "insert" | "update" | "delete" | "upsert" | "rpc";
   valeurs?: unknown;
   filtres: [methode: string, colonne: string, valeur: unknown][];
 };
@@ -59,6 +59,13 @@ export function creerSupabaseFactice(repondre: (op: Operation) => Reponse = () =
 
   const client = {
     from: (table: string) => requete(table),
+    // Fonction de la base (« rpc ») : enregistrée comme une écriture, sous son nom.
+    rpc: (nom: string, args?: unknown) => {
+      const op: Operation = { table: nom, action: "rpc", valeurs: args, filtres: [] };
+      operations.push(op);
+      const reponse = repondre(op);
+      return Promise.resolve({ data: reponse.data ?? null, error: reponse.error ?? null });
+    },
     auth: {
       // La session se lit dans le jeton (getClaims), sans appel réseau. Le faux
       // client n'a volontairement PAS de getUser : un code serveur qui

@@ -70,6 +70,7 @@ export default function Confidentialite() {
               <tr><td>Profil</td><td>Vos réponses au questionnaire de bienvenue : votre situation (salarié, indépendant, commerçant), votre métier, les IA que vous utilisez, votre appareil principal et votre pays</td><td>Vous, à la première ouverture ou depuis « Modifier mon profil »</td></tr>
               <tr><td>Progression</td><td>Tâches marquées comme faites, favoris, IA choisie pour chaque métier, dernière tâche consultée, jours d’activité (pour la série)</td><td>Votre utilisation</td></tr>
               <tr><td>Notifications</td><td>Vos choix de notification (e-mail de la semaine, rappels d’échéance), la date de votre dernière visite du fil Nouveau, et le journal des e-mails qui vous ont été envoyés (type, date)</td><td>Vous, depuis votre profil, et votre utilisation</td></tr>
+              <tr><td>Attestation</td><td>Le rendu de l’exercice final de votre métier (images ou PDF), le nom à écrire sur l’attestation, ce que vous indiquez avoir vérifié, l’état et la date du rendu, la note et le commentaire du correcteur (abonnés uniquement)</td><td>Vous et le correcteur</td></tr>
               <tr><td>Tâche sur mesure</td><td>Le métier concerné, la description de la tâche que vous soumettez, les IA choisies, le plan qui vous est remis et son statut (abonnés uniquement)</td><td>Vous</td></tr>
               <tr><td>Demandes de contact</td><td>Nom, email, entreprise, fonction, secteur, taille d’entreprise, description du besoin, budget envisagé, compte à l’origine de la demande</td><td>Formulaires Systèmes IA et Transformation IA</td></tr>
               <tr><td>Support</td><td>Vos échanges avec le support, par email ou par le chat (messages, adresse email du compte, page depuis laquelle vous écrivez, navigateur et pays approximatif détectés par l’outil de chat)</td><td>Vous et l’outil de chat</td></tr>
@@ -91,6 +92,7 @@ export default function Confidentialite() {
           <li><strong>Afficher votre progression, vos favoris et votre série, reprendre là où vous en étiez :</strong> exécution du contrat.</li>
           <li><strong>Adapter l’affichage à votre profil</strong> (métiers et tâches montrés en premier, étapes pensées pour votre appareil) et le retrouver sur un autre appareil : exécution du contrat.</li>
           <li><strong>Préparer le plan de votre tâche sur mesure et vous le remettre dans votre espace :</strong> exécution du contrat d’abonnement.</li>
+          <li><strong>Corriger votre exercice final et vous délivrer l’attestation de votre métier :</strong> exécution du contrat d’abonnement.</li>
           <li><strong>Répondre au support et aux demandes de contact, préparer un devis :</strong> exécution de mesures précontractuelles ou du contrat.</li>
           <li><strong>Vous envoyer les emails de service</strong> (activation, mot de passe, reçu) : exécution du contrat.</li>
           <li><strong>Conserver les justificatifs de vente :</strong> obligation légale comptable.</li>
@@ -110,6 +112,7 @@ export default function Confidentialite() {
           <li><strong>Demandes de contact :</strong> 3 ans après le dernier échange, sauf si elles aboutissent à un contrat.</li>
           <li><strong>Échanges avec le support :</strong> 3 ans après le dernier échange.</li>
           <li><strong>Demandes de tâche sur mesure et plans remis :</strong> tant que votre compte est actif, pour que vous puissiez retrouver vos plans.</li>
+          <li><strong>Rendus de l’exercice final et correction :</strong> tant que votre compte est actif, pour que vous puissiez retrouver votre rendu et votre attestation.</li>
           <li><strong>Journaux techniques :</strong> selon la durée fixée par nos hébergeurs, en général quelques jours à 30 jours.</li>
         </ul>
       </LegalSection>
@@ -131,6 +134,7 @@ export default function Confidentialite() {
               <tr><td>Resend</td><td>Envoi des emails de la plateforme (compte, e-mail de la semaine, rappels d’échéance), des demandes de contact et des demandes de tâche sur mesure</td><td>Union européenne (Irlande), société américaine</td></tr>
               <tr><td>tawk.to</td><td>Chat du support, uniquement si vous l’ouvrez</td><td>États-Unis</td></tr>
               <tr><td>Bunny Stream</td><td>Hébergement et lecture des vidéos d’AIW, uniquement si vous lancez une vidéo</td><td>Union européenne (Allemagne) pour le stockage, réseau mondial pour la lecture</td></tr>
+              <tr><td>Cloudflare (R2)</td><td>Stockage privé des fichiers que vous rendez pour l’attestation, ouverts seulement par le correcteur</td><td>Union européenne</td></tr>
               <tr><td>Hostinger</td><td>Messagerie support@parlonsads.com et nom de domaine</td><td>Centres de données de Hostinger</td></tr>
               <tr><td>Prestataire de paiement</td><td>Encaissement des paiements</td><td>Indiqué sur la page de commande</td></tr>
             </tbody>

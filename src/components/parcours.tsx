@@ -102,6 +102,7 @@ export function Parcours({ slug }: { slug: string }) {
           <h1 className="h2">{courante ? "Votre parcours" : "Parcours terminé"}</h1>
         </div>
         <Link className="pill" href={kitHref(metier.slug)}><Icon name="kit" size={18} /> Mon kit</Link>
+        <Link className="pill" href={`/metiers/${encodeURIComponent(metier.slug)}/attestation`}><Icon name="award" size={18} /> Attestation</Link>
         <Link className="pill" href="/metiers">Changer de métier</Link>
         <Link className="pill" href="/premiers-pas">Premiers pas</Link>
       </div>

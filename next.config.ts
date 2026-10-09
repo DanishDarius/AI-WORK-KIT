@@ -8,7 +8,8 @@ import type { NextConfig } from "next";
 //   « 'unsafe-inline' » reste nécessaire aux scripts que Next insère dans la
 //   page ; une CSP à jeton (nonce) rendrait toutes les pages dynamiques.
 // - Images et vidéos : tout site en https (visuels officiels des actualités).
-// - Connexions : le site et Supabase (session), plus tawk.to.
+// - Connexions : le site et Supabase (session), plus tawk.to et l'espace
+//   Cloudflare R2 des rendus d'attestation.
 // - Cadres : YouTube sans cookie et tawk.to. Le site lui-même ne s'affiche
 //   dans aucun cadre (frame-ancestors 'none').
 const enDev = process.env.NODE_ENV === "development";
@@ -24,6 +25,11 @@ const supabase = (() => {
 // Barre d'outils de Vercel, injectée seulement sur les préversions.
 const vercel = enPreversion ? " https://vercel.live" : "";
 const tawk = "https://*.tawk.to";
+// Envoi des rendus d'attestation chez Cloudflare R2 (src/lib/r2.ts) : le
+// navigateur y envoie les fichiers directement, par un lien signé. L'espace
+// est dans la juridiction « Union européenne » (adresse en .eu.).
+const compteR2 = process.env.R2_ACCOUNT_ID?.trim() ?? "";
+const r2 = /^[0-9a-f]{32}$/.test(compteR2) ? ` https://${compteR2}.eu.r2.cloudflarestorage.com` : "";
 
 const csp = [
   "default-src 'self'",
@@ -32,7 +38,7 @@ const csp = [
   "img-src 'self' data: blob: https:",
   "media-src 'self' blob: https:",
   `font-src 'self' data: ${tawk} https://fonts.gstatic.com${vercel}`,
-  `connect-src 'self' ${supabase} ${tawk} wss://*.tawk.to${enPreversion ? " https://vercel.live wss://ws-us3.pusher.com" : ""}${enDev ? " ws:" : ""}`,
+  `connect-src 'self' ${supabase} ${tawk} wss://*.tawk.to${r2}${enPreversion ? " https://vercel.live wss://ws-us3.pusher.com" : ""}${enDev ? " ws:" : ""}`,
   // youtube-nocookie : vidéos officielles des éditeurs dans les actualités.
   // player.mediadelivery.net : lecteur des vidéos d'AIW (Bunny Stream, src/lib/video.ts).
   `frame-src https://www.youtube-nocookie.com https://player.mediadelivery.net ${tawk}${vercel}`,

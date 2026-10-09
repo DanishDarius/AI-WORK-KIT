@@ -37,6 +37,9 @@ const TABLES_INTERNES = new Set([
   // ou sur présentation du jeton d'un e-mail (migration 0040).
   "preferences_notifications",
   "envois_notifications",
+  // Rendus des exercices finaux d'attestation (migration 0052) : le serveur
+  // vérifie l'abonnement et les conditions, et garde les clés des fichiers.
+  "rendus_attestation",
 ]);
 
 // Contenu des kits : lu par le serveur seulement (clé service, puis cache).
@@ -57,6 +60,9 @@ const TABLES_CONTENU_SERVEUR = new Set([
   "packs_taches",
   "sessions_live",
   "videos",
+  // Exercices finaux d'attestation (migration 0052) : la réponse type du
+  // correcteur ne doit jamais être lisible par un abonné.
+  "exercices_finaux",
 ]);
 
 type Etat = {

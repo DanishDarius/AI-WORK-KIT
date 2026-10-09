@@ -5,7 +5,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { videoValide } from "@/lib/video";
 
 // Le contenu commun à tous les clients : métiers, tâches, cas pratiques,
-// prompts, kits métier et modèles à remplir. Il ne change que lorsqu'une
+// prompts, kits métier, modèles à remplir et exercices finaux. Il ne change que lorsqu'une
 // migration de contenu est exécutée.
 //
 // Règle C1 : il est lu en base une fois, puis gardé en cache côté serveur
@@ -533,6 +533,43 @@ async function chargerFil(): Promise<FilContenu> {
   };
 }
 
+/** L'exercice final d'un métier, pour l'attestation (migrations 0052 et 0053). */
+export type ExerciceFinalContenu = {
+  numero: number;
+  cas: string;
+  titre_donnees: string;
+  donnees: string[];
+  travail: string[];
+  a_rendre: string;
+  /** Réponse type : réservée au correcteur, jamais envoyée à l'abonné. */
+  pour_le_correcteur: string;
+  revu_le: string | null;
+};
+
+const textes = (valeur: unknown) => tableau<unknown>(valeur).filter((v): v is string => typeof v === "string");
+
+async function chargerExercicesFinaux(): Promise<Record<string, ExerciceFinalContenu>> {
+  const { data, error } = await createAdminClient()
+    .from("exercices_finaux")
+    .select("metier_id, numero, cas, titre_donnees, donnees, travail, a_rendre, pour_le_correcteur, revu_le")
+    .limit(200);
+  if (error) throw new Error(`Lecture des exercices finaux : ${error.message}`);
+  const parMetier: Record<string, ExerciceFinalContenu> = {};
+  for (const l of (data ?? []) as (Omit<ExerciceFinalContenu, "donnees" | "travail"> & { metier_id: string; donnees: unknown; travail: unknown })[]) {
+    parMetier[l.metier_id] = {
+      numero: l.numero,
+      cas: l.cas,
+      titre_donnees: l.titre_donnees,
+      donnees: textes(l.donnees),
+      travail: textes(l.travail),
+      a_rendre: l.a_rendre,
+      pour_le_correcteur: l.pour_le_correcteur,
+      revu_le: l.revu_le,
+    };
+  }
+  return parMetier;
+}
+
 /**
  * Le fil Nouveau : publications, mises à jour des IA, packs, tâches du fil,
  * sessions en direct et vidéos hors kit. Une lecture en base toutes les
@@ -541,6 +578,12 @@ async function chargerFil(): Promise<FilContenu> {
  * qui est réservé aux abonnés : src/lib/fil.ts décide de ce qui est montré.
  */
 export const lireFil = unstable_cache(chargerFil, ["contenu-fil"], {
+  revalidate: DUREE_SECONDES,
+  tags: [ETIQUETTE],
+});
+
+/** Les exercices finaux des 14 métiers, par identifiant de métier. */
+export const lireExercicesFinaux = unstable_cache(chargerExercicesFinaux, ["contenu-exercices-finaux"], {
   revalidate: DUREE_SECONDES,
   tags: [ETIQUETTE],
 });
