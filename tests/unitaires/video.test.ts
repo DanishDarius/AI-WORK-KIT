@@ -117,3 +117,24 @@ describe("vidéos · dans le code", () => {
     expect(config).not.toMatch(/iframe\.mediadelivery\.net|b-cdn\.net/);
   });
 });
+
+describe("vidéos · branchées par les migrations", () => {
+  const migrations = lister("supabase/migrations", (f) => f.endsWith(".sql"));
+
+  it("chaque adresse de lecteur posée en base est une vidéo de la bibliothèque d'AIW, sous sa forme rangée", () => {
+    for (const fichier of migrations) {
+      for (const [adresse] of lire(fichier).matchAll(/https:\/\/(?:player|iframe)\.mediadelivery\.net\/[^'\s]*/g)) {
+        const id = lireVideo(adresse);
+        expect(id, `${fichier} : ${adresse}`).not.toBeNull();
+        expect(adresse, fichier).toBe(adresseVideo(id!));
+      }
+    }
+  });
+
+  it("G1 se branche sur les 14 configurations ChatGPT, et sur rien d'autre (0050)", () => {
+    const sql = lire("supabase/migrations/0050_video_g1_configuration_chatgpt.sql");
+    expect(sql).toMatch(/update ressources\s+set video_url = '[^']+'\s+where type = 'configuration'\s+and outil = 'chatgpt'/);
+    expect(sql).toMatch(/n <> 14/);
+    expect(sql).not.toMatch(/\b(delete|drop|alter|grant|truncate)\b/i);
+  });
+});
