@@ -131,6 +131,13 @@ describe("vidéos · branchées par les migrations", () => {
     }
   });
 
+  it("G1 refaite remplace la première version sur les 14 configurations (0051)", () => {
+    const sql = lire("supabase/migrations/0051_video_g1_voix_jerome.sql");
+    expect(sql).toMatch(/update ressources\s+set video_url = '[^']+'\s+where type = 'configuration'\s+and outil = 'chatgpt'/);
+    expect(sql).toMatch(/n <> 14/);
+    expect(sql).not.toMatch(/\b(delete|drop|alter|grant|truncate)\b/i);
+  });
+
   it("G1 se branche sur les 14 configurations ChatGPT, et sur rien d'autre (0050)", () => {
     const sql = lire("supabase/migrations/0050_video_g1_configuration_chatgpt.sql");
     expect(sql).toMatch(/update ressources\s+set video_url = '[^']+'\s+where type = 'configuration'\s+and outil = 'chatgpt'/);
