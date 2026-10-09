@@ -73,6 +73,7 @@ describe("marque · pied des pages publiques", () => {
     expect(pied).toMatch(/Fait avec <span role="img" aria-label="amour">❤️<\/span> © <AnneeCourante initiale=\{new Date\(\)\.getFullYear\(\)\} \/> \{SIGLE\}/);
     const styles = lire("src/app/globals.css");
     expect(styles).toMatch(/\.footer-credit \{[^}]*text-align: center;/);
+    expect(styles).toMatch(/@media \(max-width: 359px\) \{\n  \.footer-liens a, \.footer-sep \{ font-size: [\d.]+px; \}/);
     expect(styles).toMatch(/@media \(max-width: 560px\) \{\n(  [^\n]*\n)*?  \.footer-liens \{[^}]*justify-content: center;/);
   });
 

@@ -472,6 +472,11 @@ dialog.dialog::backdrop { background: rgba(16, 42, 38, .45); }
   .footer-liens a { white-space: nowrap; }
   .footer-sep { display: inline; font-size: 14px; }
 }
+/* Très petits téléphones (moins de 360 px) : le texte des liens un peu plus petit, pour rester sur une ligne. */
+@media (max-width: 359px) {
+  .footer-liens a, .footer-sep { font-size: 12.5px; }
+  .footer-liens { gap: 5px; }
+}
 .price { flex: 1; min-width: 130px; background: var(--paper); border: 2px solid var(--orange-line); border-radius: 16px; padding: 12px 14px; }
 .price b { display: block; font-family: var(--font-title); font-weight: 900; font-size: 24px; }
 .price small { color: var(--muted); font-size: 13px; }
