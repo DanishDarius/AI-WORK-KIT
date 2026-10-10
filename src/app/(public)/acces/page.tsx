@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ActionAcces, AvisCompteInactif, LienDejaClient } from "@/components/acces-compte";
+import { AttestationVitrine } from "@/components/attestation-vitrine";
+import { KitDansIA } from "@/components/kit-dans-ia";
 import { Icon } from "@/components/icon";
 import { PublicFooter, PublicTop } from "@/components/public";
 import { LecteurVideo } from "@/components/lecteur-video";
@@ -144,6 +146,19 @@ export default function Acces() {
           </div>
         </section>
 
+        <section id="dans-votre-ia" className="wrap section stack-lg" style={{ paddingTop: 0 }}>
+          <div className="page-head" style={{ textAlign: "center", marginInline: "auto", maxWidth: 760 }}>
+            <Kicker>Dans votre IA</Kicker>
+            <h2 className="h1">Votre kit s’installe dans votre IA.</h2>
+            <p className="lead">
+              Une configuration à coller une fois : ensuite, votre IA connaît votre boutique à chaque conversation.
+              Voici « {EXEMPLE_RESSOURCE.titre} », du kit « Commerce et vente en ligne », installé dans
+              ChatGPT, Claude et Gemini.
+            </p>
+          </div>
+          <KitDansIA />
+        </section>
+
         <section id="exemple" className="wrap section stack-lg" style={{ paddingTop: 0 }}>
           <div className="page-head">
             <Kicker>Exemple</Kicker>
@@ -232,6 +247,31 @@ export default function Acces() {
 
           <div className="row">
             <BoutonPaiement className="btn btn-lg" prix={PRIX.acces} />
+          </div>
+        </section>
+
+        <section id="attestation" className="wrap section">
+          <div className="hero-grid" style={{ paddingBlock: 0 }}>
+            <div className="stack-lg">
+              <div className="page-head">
+                <Kicker>Attestation</Kicker>
+                <h2 className="h1">Montrez ce que vous savez faire.</h2>
+                <p className="lead">
+                  Avec l’abonnement, réussissez l’exercice final de votre métier : vous recevez une attestation
+                  de compétences IA à votre nom, avec un numéro que tout employeur peut vérifier en ligne.
+                  Ajoutez-la à votre profil LinkedIn et à votre CV.
+                </p>
+              </div>
+              <CheckList
+                items={[
+                  { label: "Un exercice final sur un cas concret de votre métier, traité avec votre kit" },
+                  { label: "Corrigé sous 72 heures, avec une grille de 5 critères" },
+                  { label: "Une attestation en PDF et une page de vérification en ligne" },
+                ]}
+              />
+              <p className="small muted">Ce n’est ni un diplôme ni une certification officielle.</p>
+            </div>
+            <AttestationVitrine />
           </div>
         </section>
 

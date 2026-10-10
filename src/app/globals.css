@@ -545,3 +545,96 @@ dialog.dialog::backdrop { background: rgba(16, 42, 38, .45); }
   .rail, .tabbar, .support-bubble, .mobile-top { display: none !important; }
   .app { display: block; }
 }
+
+/* Page d'accès : l'attestation en vitrine (src/components/attestation-vitrine.tsx).
+   Trois cartes empilées, quatre coins, un sceau. Les animations ne jouent que
+   lorsque le composant pose « est-jouee » ; sans lui, tout est affiché. */
+.vitrine-att { display: flex; justify-content: center; padding: 24px 12px 32px; }
+.vitrine-att-pile { position: relative; width: min(340px, 82vw); }
+.vitrine-att-fond, .vitrine-att-milieu { position: absolute; inset: 0; border-radius: 22px; border: 2px solid var(--mint-deep); }
+.vitrine-att-fond { background: var(--mint); transform: rotate(6deg) translateY(10px); }
+.vitrine-att-milieu { background: var(--mint-bg); transform: rotate(3deg) translateY(5px); }
+.vitrine-att-carte { position: relative; display: flex; flex-direction: column; gap: 18px; padding: 30px 26px 24px; background: var(--paper); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 22px; box-shadow: 0 18px 40px rgba(16, 42, 38, .12); }
+.vitrine-att-coin { position: absolute; width: 30px; height: 30px; border: 0 solid var(--green); }
+.vitrine-att-coin.is-hg { top: 12px; left: 12px; border-top-width: 3px; border-left-width: 3px; border-top-left-radius: 8px; }
+.vitrine-att-coin.is-hd { top: 12px; right: 12px; border-top-width: 3px; border-right-width: 3px; border-top-right-radius: 8px; }
+.vitrine-att-coin.is-bg { bottom: 12px; left: 12px; border-bottom-width: 3px; border-left-width: 3px; border-bottom-left-radius: 8px; }
+.vitrine-att-coin.is-bd { bottom: 12px; right: 12px; border-bottom-width: 3px; border-right-width: 3px; border-bottom-right-radius: 8px; }
+.vitrine-att-exemple { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); padding: 3px 12px; border-radius: 999px; background: var(--orange-bg); color: var(--orange-deep); border: 1.5px solid var(--orange-line); font-family: var(--font-title); font-weight: 800; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.vitrine-att-tete { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.vitrine-att-titre { margin: 0; font-family: var(--font-title); font-weight: 800; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--green); }
+.vitrine-att-corps { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+.vitrine-att-petit { margin: 0; font-size: 13px; color: var(--muted); }
+.vitrine-att-nom { margin: 2px 0 6px; padding: 0 12px 8px; font-family: var(--font-title); font-weight: 900; font-size: 27px; color: var(--ink); border-bottom: 3px solid var(--green); }
+.vitrine-att-metier { display: flex; align-items: center; gap: 10px; margin-top: 6px; padding: 10px 44px 10px 14px; border-radius: 14px; background: var(--mint-bg); font-family: var(--font-title); font-weight: 800; font-size: 15px; color: var(--ink); text-align: left; }
+.vitrine-att-metier-icone { display: inline-flex; width: 34px; height: 34px; flex: none; align-items: center; justify-content: center; border-radius: 10px; background: var(--green); color: #fff; }
+.vitrine-att-sceau { position: absolute; right: -20px; bottom: 76px; width: 58px; height: 58px; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #149a87, var(--green) 55%, var(--green-deep)); color: #fff; border: 4px solid var(--mint); box-shadow: 0 6px 16px rgba(6, 74, 65, .3); }
+.vitrine-att-sceau::after { content: ""; position: absolute; inset: -40%; background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, .55) 50%, transparent 60%); transform: translateX(-80%); }
+.vitrine-att-pied { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 0 6px; }
+.vitrine-att-etiquette { margin: 0; font-family: var(--font-title); font-weight: 800; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.vitrine-att-valeur { margin: 2px 0 0; font-family: var(--font-title); font-weight: 800; font-size: 15px; color: var(--ink); }
+.vitrine-att-linkedin { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 10px; background: #0a66c2; color: #fff; font-family: var(--font-title); font-weight: 800; font-size: 13px; }
+
+.vitrine-att.est-en-attente .vitrine-att-fond, .vitrine-att.est-en-attente .vitrine-att-milieu, .vitrine-att.est-en-attente .vitrine-att-carte,
+.vitrine-att.est-en-attente .vitrine-att-coin, .vitrine-att.est-en-attente .vitrine-att-sceau { opacity: 0; }
+.vitrine-att.est-jouee .vitrine-att-fond { animation: vitrine-fond .7s ease-out both; }
+.vitrine-att.est-jouee .vitrine-att-milieu { animation: vitrine-milieu .7s ease-out .1s both; }
+.vitrine-att.est-jouee .vitrine-att-carte { animation: vitrine-carte .7s ease-out .2s both; }
+.vitrine-att.est-jouee .vitrine-att-coin { animation: vitrine-coin .5s ease-out both; }
+.vitrine-att.est-jouee .vitrine-att-coin.is-hg { animation-delay: .55s; }
+.vitrine-att.est-jouee .vitrine-att-coin.is-hd { animation-delay: .65s; }
+.vitrine-att.est-jouee .vitrine-att-coin.is-bd { animation-delay: .75s; }
+.vitrine-att.est-jouee .vitrine-att-coin.is-bg { animation-delay: .85s; }
+.vitrine-att.est-jouee .vitrine-att-sceau { animation: vitrine-sceau .6s cubic-bezier(.34, 1.56, .64, 1) .95s both; }
+.vitrine-att.est-jouee .vitrine-att-sceau::after { animation: vitrine-reflet 4s ease-in-out 1.8s infinite; }
+@keyframes vitrine-fond { from { opacity: 0; transform: rotate(0) translateY(40px); } to { opacity: 1; transform: rotate(6deg) translateY(10px); } }
+@keyframes vitrine-milieu { from { opacity: 0; transform: rotate(0) translateY(40px); } to { opacity: 1; transform: rotate(3deg) translateY(5px); } }
+@keyframes vitrine-carte { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+@keyframes vitrine-coin { from { opacity: 0; width: 0; height: 0; } to { opacity: 1; width: 30px; height: 30px; } }
+@keyframes vitrine-sceau { from { opacity: 0; transform: scale(.3) rotate(-30deg); } to { opacity: 1; transform: none; } }
+@keyframes vitrine-reflet { 0%, 70% { transform: translateX(-80%); } 100% { transform: translateX(80%); } }
+@media (prefers-reduced-motion: reduce) { .vitrine-att * { animation: none !important; } }
+@media (max-width: 560px) { .vitrine-att-nom { font-size: 24px; } .vitrine-att-carte { padding: 28px 20px 22px; } }
+
+/* Page d'accès : le kit installé dans les trois IA (src/components/kit-dans-ia.tsx).
+   De vraies captures d'écran, dans un cadre de fenêtre ; un onglet par IA, avec sa
+   barre de progression ; un point (le doigt) va toucher le bouton de chaque étape. */
+.kit-ia { display: flex; flex-direction: column; align-items: center; gap: 18px; width: 100%; }
+.kit-ia-onglets { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.kit-ia-onglet { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 18px; border-radius: 14px; border: 2px solid var(--line); background: var(--paper); color: var(--ink); font-family: var(--font-title); font-weight: 800; font-size: 15px; cursor: pointer; transition: background .2s, border-color .2s; }
+.kit-ia-onglet:hover { border-color: var(--line-strong); }
+.kit-ia-onglet.is-actif { border-color: var(--ia); background: color-mix(in srgb, var(--ia) 9%, #fff); }
+.kit-ia-pastille { width: 10px; height: 10px; border-radius: 50%; background: var(--ia); }
+.kit-ia-progression { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--ia); transform-origin: left; transition: transform .1s linear; }
+.kit-ia-fenetre { position: relative; width: min(100%, 720px); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 18px; background: var(--paper); overflow: hidden; box-shadow: 0 18px 40px rgba(16, 42, 38, .1); }
+.kit-ia-fenetre::before { content: ""; position: absolute; inset: -30% -10% auto; height: 60%; background: radial-gradient(closest-side, rgba(185, 242, 214, .55), transparent); pointer-events: none; animation: kit-ia-lueur 6s ease-in-out infinite; }
+.kit-ia-barre { position: relative; display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 2px solid var(--line); background: var(--bg); }
+.kit-ia-points { display: inline-flex; gap: 6px; }
+.kit-ia-points i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
+.kit-ia-adresse { flex: 1; min-width: 0; padding: 4px 12px; border-radius: 999px; background: var(--paper); border: 1.5px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kit-ia-scene { position: relative; aspect-ratio: 16 / 10; container-type: size; display: grid; place-items: center; padding: 14px; background: #f3f4f3; }
+.kit-ia-image { position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 6px 18px rgba(0, 0, 0, .12); width: min(100cqw - 28px, (100cqh - 28px) * var(--ratio)); }
+.kit-ia-zoom { transition: transform .9s cubic-bezier(.4, 0, .2, 1); }
+.kit-ia-capture { display: block; width: 100%; height: auto; animation: kit-ia-entree .35s ease-out both; }
+.kit-ia-doigt { position: absolute; width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 50%; background: rgba(11, 107, 94, .14); border: 3px solid var(--green); box-shadow: 0 0 0 4px rgba(255, 255, 255, .8); transition: left .9s cubic-bezier(.4, 0, .2, 1), top .9s cubic-bezier(.4, 0, .2, 1), opacity .25s; pointer-events: none; }
+.kit-ia-doigt.is-touche { animation: kit-ia-touche .7s ease-out 1; }
+.kit-ia-pied { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-top: 2px solid var(--line); }
+.kit-ia-etapes { display: inline-flex; gap: 6px; flex: none; }
+.kit-ia-etape { width: 28px; height: 28px; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+.kit-ia-etape::after { content: ""; position: absolute; inset: 10px; border-radius: 50%; background: var(--line-strong); transition: background .2s, inset .2s; }
+.kit-ia-etape.is-actif::after { inset: 8px; background: var(--green); }
+.kit-ia-legende { flex: 1; min-width: 0; margin: 0; font-size: 14.5px; color: var(--ink); }
+.kit-ia-pause { flex: none; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; border: 2px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+.kit-ia-barres { width: 12px; height: 14px; border-left: 4px solid currentColor; border-right: 4px solid currentColor; }
+@keyframes kit-ia-entree { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes kit-ia-touche { 0% { box-shadow: 0 0 0 4px rgba(255, 255, 255, .8), 0 0 0 0 rgba(11, 107, 94, .5); } 100% { box-shadow: 0 0 0 4px rgba(255, 255, 255, .8), 0 0 0 22px rgba(11, 107, 94, 0); } }
+@keyframes kit-ia-lueur { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .kit-ia *, .kit-ia *::before, .kit-ia::before, .kit-ia-fenetre::before { animation: none !important; transition: none !important; } }
+@media (max-width: 560px) {
+  .kit-ia-onglets { gap: 6px; flex-wrap: nowrap; }
+  .kit-ia-onglet { padding: 8px 12px; font-size: 14px; gap: 6px; }
+  .kit-ia-scene { aspect-ratio: 4 / 3; padding: 10px; }
+  .kit-ia-image { width: min(100cqw - 20px, (100cqh - 20px) * var(--ratio)); }
+  .kit-ia-pied { flex-wrap: wrap; }
+  .kit-ia-legende { flex-basis: 100%; order: 3; }
+}
