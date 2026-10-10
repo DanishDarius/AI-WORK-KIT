@@ -115,7 +115,7 @@ describe("hors ligne · ce que le service worker fait d'une requête", () => {
     ["une écriture du profil", requete("/api/profil", { method: "PUT" })],
     ["un fichier de kit à télécharger", requete("/api/kits/fichiers/cahier-de-caisse.xlsx")],
     ["le PDF d'un guide", requete("/api/guides/mon-guide/pdf")],
-    ["le webhook de paiement", requete("/api/webhooks/chariow")],
+    ["un webhook", requete("/api/webhooks/paiement", { method: "POST" })],
     ["une page légale", requete("/conditions", { mode: "navigate" })],
     ["l'activation du compte", requete("/activation", { mode: "navigate" })],
     ["le retour d'un lien reçu par e-mail", requete("/auth/confirm?token_hash=x", { mode: "navigate" })],

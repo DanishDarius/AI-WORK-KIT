@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { BoutonPaiement } from "@/components/bouton-paiement";
 import { Icon } from "@/components/icon";
 import { Page } from "@/components/shell";
 import { CheckList, Chip, IconBox, PageHead } from "@/components/ui";
 import { useMoi } from "@/lib/moi";
-import { ABONNEMENT_OUVERT, dateLongue, fcfa, type Formule, FORMULES, LIEN_ETRE_PREVENU, LIENS_ABONNEMENT, PRIX } from "@/lib/offre";
+import { ABONNEMENT_OUVERT, dateLongue, fcfa, type Formule, FORMULES, LIEN_ETRE_PREVENU, PRIX } from "@/lib/offre";
 
 const LIGNES: { label: string; base: boolean | string; abo: boolean | string }[] = [
   { label: "Le kit de votre métier et ses mises à jour", base: true, abo: true },
@@ -30,8 +31,6 @@ export function AbonnementEcran() {
   const [formule, setFormule] = useState<Formule>("annuel");
   const choisie = FORMULES.find((f) => f.id === formule)!;
   const a = moi?.abonnement;
-  const lien = LIENS_ABONNEMENT[formule];
-  const externe = lien.startsWith("http");
 
   return (
     <Page
@@ -87,10 +86,8 @@ export function AbonnementEcran() {
         </div>
       ) : (
       <div className="row">
-        <a className="btn btn-orange btn-lg" href={lien} target={externe ? "_blank" : undefined} rel={externe ? "noopener noreferrer" : undefined}>
-          <Icon name="lock" size={18} /> {externe ? `Payer ${fcfa(choisie.prix)}` : `Demander la formule ${choisie.label.toLowerCase()}`}
-        </a>
-        <span className="small muted">{externe ? <>Paiement sécurisé Chariow. Utilisez l’adresse e-mail de votre compte{moi?.email ? <> (<strong>{moi.email}</strong>)</> : null} : l’abonnement s’active tout seul.</> : "Le paiement en ligne arrive : nous vous répondons par e-mail avec le lien."}</span>
+        <BoutonPaiement className="btn btn-orange btn-lg" prix={choisie.prix} />
+        <span className="small muted">Le paiement par Mobile Money arrive directement dans AIW.</span>
       </div>
       )}
 

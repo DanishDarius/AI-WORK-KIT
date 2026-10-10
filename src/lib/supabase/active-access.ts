@@ -6,7 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { lireSession } from "@/lib/supabase/session";
 
 // Authentification + autorisation commerciale des routes API. Une session
-// valide ne suffit pas : l'adresse doit posséder un accès Chariow actif.
+// valide ne suffit pas : l'adresse doit posséder un accès actif (table acces_clients).
 //
 // Coût (règle C2) : aucun appel au serveur d'authentification, et au plus
 // une requête base par minute et par compte pour l'accès.

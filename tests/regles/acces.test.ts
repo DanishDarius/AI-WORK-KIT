@@ -8,7 +8,6 @@ const PAGES_RESERVEES = lister("src/app/(app)", (f) => f.endsWith("/page.tsx"));
 
 // Routes API qui ne passent pas par l'accès payé, avec la raison.
 const ROUTES_HORS_ACCES: Record<string, string> = {
-  "src/app/api/webhooks/chariow/route.ts": "appelée par Chariow, protégée par signature (règle S5)",
   "src/app/api/activation/renvoi/route.ts":
     "publique par nature : l'acheteur n'a pas encore de compte. Réponse identique pour toute adresse, un envoi par 5 minutes (règles S13 et C6)",
   "src/app/api/planifie/quotidien/route.ts":

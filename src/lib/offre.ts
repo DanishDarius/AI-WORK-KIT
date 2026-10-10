@@ -1,7 +1,7 @@
 // Offre commerciale AIW, partagée entre le serveur et le navigateur.
 //
-// - Accès AIW : paiement unique (vendu sur la page de vente). Donne la
-//   plateforme, les Tâches, les Métiers et les 10 guides listés ci-dessous.
+// - Accès AIW : paiement unique. Donne la plateforme, les Tâches, les Métiers
+//   et les 10 guides listés ci-dessous.
 // - Abonnement : mensuel, annuel ou à vie, présenté dans la PWA. Ouvre tous
 //   les guides et la « tâche sur mesure » de chaque métier.
 
@@ -51,18 +51,6 @@ export function fcfa(montant: number) {
 
 export const SUPPORT_EMAIL = "support@parlonsads.com";
 
-// Liens de paiement Chariow, une page produit par formule (variables Vercel).
-// Tant qu'une formule n'a pas son lien, la demande part par email au support.
-function mailAbonnement(formule: string) {
-  return `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(`Abonnement AIW ${formule}`)}&body=${encodeURIComponent(`Bonjour, je souhaite prendre l’abonnement AIW, formule ${formule}.`)}`;
-}
-
-export const LIENS_ABONNEMENT: Record<Formule, string> = {
-  mensuel: process.env.NEXT_PUBLIC_SUBSCRIBE_URL_MENSUEL || process.env.NEXT_PUBLIC_SUBSCRIBE_URL || mailAbonnement("mensuelle"),
-  annuel: process.env.NEXT_PUBLIC_SUBSCRIBE_URL_ANNUEL || process.env.NEXT_PUBLIC_SUBSCRIBE_URL || mailAbonnement("annuelle"),
-  a_vie: process.env.NEXT_PUBLIC_SUBSCRIBE_URL_A_VIE || mailAbonnement("à vie"),
-};
-
 // Ce que contient l'accès, en chiffres. Ils se comptent en base (tables taches
 // et metiers) et se mettent à jour ici quand le contenu change : la page
 // d'accès et l'écran d'activation les reprennent.
@@ -79,11 +67,6 @@ export const VIDEO_DEMO_ID = idVideo(process.env.NEXT_PUBLIC_VIDEO_DEMO_ID);
 // Pour l'ouvrir : variable Vercel NEXT_PUBLIC_ABONNEMENT_OUVERT=1.
 export const ABONNEMENT_OUVERT = process.env.NEXT_PUBLIC_ABONNEMENT_OUVERT === "1";
 export const LIEN_ETRE_PREVENU = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Ouverture de l’abonnement AIW")}&body=${encodeURIComponent("Bonjour, prévenez-moi dès l’ouverture de l’abonnement AIW.")}`;
-
-// Page de paiement de l'accès (produit Chariow « Accès AIW »).
-export const LIEN_ACCES =
-  process.env.NEXT_PUBLIC_ACCESS_URL ||
-  `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Accès AIW")}&body=${encodeURIComponent("Bonjour, je souhaite obtenir l’accès AIW (5 000 FCFA).")}`;
 
 export type Abonnement = {
   actif: boolean;

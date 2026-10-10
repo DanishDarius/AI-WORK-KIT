@@ -10,7 +10,7 @@ import { lireSession } from "@/lib/supabase/session";
 export type EtatAcces = "deconnecte" | "inactif" | "actif" | "indisponible";
 
 // État d'accès de la personne qui consulte la page (pages serveur).
-// « actif » : session valide ET accès Chariow actif (table acces_clients).
+// « actif » : session valide ET accès actif (table acces_clients).
 // Mis en cache pour la durée d'une requête : layout et page partagent la
 // même réponse.
 export const getEtatAcces = cache(async (): Promise<{ etat: EtatAcces; email: string | null }> => {

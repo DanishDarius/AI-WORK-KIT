@@ -115,7 +115,6 @@ export function ProfilEcran({ guides }: { guides: Pick<GuideSummary, "slug" | "t
       <section id="offre" className="card stack" aria-labelledby="mon-offre">
         <div className="row-between">
           <h2 id="mon-offre" className="h2">Mon offre</h2>
-          <Chip>Paiement via Chariow</Chip>
         </div>
         <div className="grid-2">
           <div className="card pad-md stack-sm" style={{ borderBottomWidth: 2 }}>

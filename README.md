@@ -11,13 +11,13 @@ AIW est une application web installable (PWA) de formation à l'IA au travail, u
 | --- | --- |
 | Next.js sur Vercel | L'application : pages, routes API, proxy de session. Fonctions à Dublin (`vercel.json`), dans la région de la base. |
 | Supabase | Base de données (Postgres, Irlande) et comptes (e-mail et mot de passe). |
-| Chariow | Paiement. Un Pulse « vente réussie » appelle `/api/webhooks/chariow`. |
+| Paiement | Chariow est débranché depuis le 10 octobre 2026. Le paiement par Mobile Money, dans AIW, se fera avec Moneaa (à venir). |
 | Resend | Envoi de tous les e-mails : activation et mot de passe (par le SMTP de Supabase), demandes de contact et sur mesure (par l'application). Domaine d'envoi : `parlonsads.com`. |
 | tawk.to | Chat du support, réservé aux abonnés. |
 
 ## Parcours d'un acheteur
 
-1. Il paie sur Chariow. Le Pulse arrive sur `/api/webhooks/chariow`, qui vérifie la signature et crée une ligne dans `acces_clients`.
+1. Il paie (le paiement par Moneaa est à venir). Le paiement confirmé crée une ligne dans `acces_clients`.
 2. Supabase lui envoie un e-mail d'activation. Le lien l'amène sur `/activation`, où il choisit son mot de passe. Le modèle de cet e-mail et celui du nouveau mot de passe sont dans `supabase/emails/` ; ils se collent dans Supabase (Authentication, Emails, Templates).
 3. Si l'e-mail n'arrive pas, il redemande son lien sur `/activation/renvoi`. L'accès payé n'est jamais retiré pour un e-mail en échec.
 4. Chaque page réservée et chaque route API vérifie la session et l'accès actif.

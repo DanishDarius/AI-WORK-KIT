@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { LIEN_ACCES } from "@/lib/offre";
 import { estCookieDeSession } from "@/lib/supabase/cookie-session";
 import { Icon } from "./icon";
 
@@ -50,14 +49,15 @@ function useEtatCompte() {
   return etat;
 }
 
-// Boutons de l'en-tête : « Mon parcours » pour un client, sinon l'achat.
+// Boutons de l’en-tête de la page d’accès : « Mon parcours » pour un client,
+// sinon les offres, plus bas sur la même page (le paiement ouvre bientôt).
 export function ActionAcces() {
   const etat = useEtatCompte();
   if (etat === "actif") return <Link className="btn btn-sm" href="/">Mon parcours</Link>;
   return (
     <>
       {etat !== "inactif" && <Link className="link hide-sm" href="/connexion">Se connecter</Link>}
-      <a className="btn btn-sm" href={LIEN_ACCES}>Obtenir l’accès</a>
+      <a className="btn btn-sm" href="#offres">Voir les offres</a>
     </>
   );
 }
