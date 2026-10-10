@@ -80,6 +80,7 @@ const nextConfig: NextConfig = {
     ];
   },
   outputFileTracingIncludes: {
+    "/api/attestations/[slug]/pdf": ["./private/attestation/*.ttf", "./public/brand/atelier/logo-primary.png"],
     "/api/guides/[slug]/pdf": ["./private/guides/pdf/**/*.pdf"],
     "/api/kits/fichiers/[nom]": ["./private/kits/**/*"],
     "/guides/*": ["./content/guides/**/*"],

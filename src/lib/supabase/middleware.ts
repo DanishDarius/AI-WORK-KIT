@@ -37,6 +37,9 @@ const PUBLIC_PATHS = [
   "/mentions-legales",
   "/conditions",
   "/confidentialite",
+  // Vérification d'une attestation (/attestation/<numéro>) : ouverte par un
+  // employeur ou un recruteur, sans compte.
+  "/attestation",
 ];
 
 const AUTH_ONLY_PATHS = ["/connexion", "/mot-de-passe-oublie"];

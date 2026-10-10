@@ -37,7 +37,7 @@ const CONSIGNE_EXEMPLE = remplirGabarit(
 const FAQ = [
   { q: "Faut-il payer ChatGPT, Claude ou Gemini ?", r: "Non. Les tâches fonctionnent avec les versions gratuites. Quand une version payante apporte un vrai plus, c’est indiqué." },
   { q: "Est-ce que ça marche sur mon téléphone ?", r: "Oui. AIW s’ouvre dans le navigateur et s’installe comme une application sur Android et sur iPhone." },
-  { q: "Comment je paie ?", r: "Par Mobile Money, directement dans AIW : le paiement ouvre bientôt. Votre compte est créé dès que le paiement est confirmé : vous recevez un e-mail pour choisir votre mot de passe." },
+  { q: "Comment je paie ?", r: "Par Mobile Money, carte ou portefeuille électronique, directement dans AIW : le paiement ouvre bientôt. Votre compte est créé dès que le paiement est confirmé : vous recevez un e-mail pour choisir votre mot de passe." },
   { q: "Puis-je être remboursé ?", r: "Non, l’accès n’est pas remboursable. C’est pourquoi tout ce qu’il contient est détaillé sur cette page avant l’achat." },
   { q: "Qu’est-ce qu’un kit ?", r: "Ce que vous installez une fois dans votre IA pour qu’elle connaisse votre travail : une configuration, des skills (des méthodes de travail que l’IA garde en mémoire), des documents prêts à remplir et des routines. Un exemple est affiché en entier sur cette page." },
   { q: "Et l’abonnement ?", r: "Il se prend depuis la plateforme, une fois l’accès obtenu. Il ouvre tous les guides, à télécharger et à revendre, le sur-mesure et le chat du support. Formules au mois, à l’année ou à vie, payées une seule fois, sans prélèvement automatique." },
@@ -111,7 +111,7 @@ export default function Acces() {
                 <a className="btn btn-secondary btn-lg btn-plain" href="#exemple">Voir un exemple</a>
               </div>
               <div className="row small muted">
-                <span className="row" style={{ gap: 6 }}><Icon name="phone" size={16} /> Paiement Mobile Money</span>
+                <span className="row" style={{ gap: 6 }}><Icon name="phone" size={16} /> Mobile Money, carte ou portefeuille électronique</span>
                 <span className="row" style={{ gap: 6 }}><Icon name="bolt" size={16} /> Accès immédiat</span>
                 <span className="row" style={{ gap: 6 }}><Icon name="check" size={16} /> Versions gratuites des IA suffisantes</span>
               </div>
@@ -277,7 +277,7 @@ export default function Acces() {
                 <p className="small muted">L’abonnement se prend depuis la plateforme, une fois l’accès obtenu.</p>
               </article>
             </div>
-            <p className="small muted">Paiement par Mobile Money, directement dans AIW, bientôt disponible. Aucun remboursement : prenez le temps de lire ce que contient chaque offre.</p>
+            <p className="small muted">Paiement par Mobile Money, carte ou portefeuille électronique, directement dans AIW, bientôt disponible. Aucun remboursement : prenez le temps de lire ce que contient chaque offre.</p>
           </div>
         </section>
 

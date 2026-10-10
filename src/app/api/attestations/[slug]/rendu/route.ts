@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { MESSAGE_NOM, NOM_ECRIVABLE } from "@/lib/attestation-publique";
 import { contexteAttestation, echeanceCorrection, type FichierRendu, TYPES_FICHIERS } from "@/lib/attestations";
 import { echapperHtml, envoyerEmailEquipe } from "@/lib/email";
 import { SITE } from "@/lib/marque";
@@ -33,10 +34,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ slu
 
   const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   const renduId = body?.rendu_id;
-  const nom = texteBorne(body?.nom, 120).replace(/\s+/g, " ");
+  const nom = texteBorne(body?.nom, 120).normalize("NFC").replace(/\s+/g, " ");
   const verification = texteBorne(body?.verification, 1500);
   if (!estUuid(renduId)) return NextResponse.json({ error: "Rendu introuvable." }, { status: 404 });
   if (nom.length < 2) return NextResponse.json({ error: "Écrivez le nom à porter sur l’attestation." }, { status: 400 });
+  // Le nom s'écrit sur le PDF : seulement les signes que ses polices savent écrire.
+  if (!NOM_ECRIVABLE.test(nom)) return NextResponse.json({ error: MESSAGE_NOM }, { status: 400 });
   if (verification.length < 20) {
     return NextResponse.json({ error: "Dites en quelques lignes ce que vous avez vérifié et corrigé vous-même." }, { status: 400 });
   }

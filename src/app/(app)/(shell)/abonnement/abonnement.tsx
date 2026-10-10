@@ -87,7 +87,7 @@ export function AbonnementEcran() {
       ) : (
       <div className="row">
         <BoutonPaiement className="btn btn-orange btn-lg" prix={choisie.prix} />
-        <span className="small muted">Le paiement par Mobile Money arrive directement dans AIW.</span>
+        <span className="small muted">Le paiement par Mobile Money, carte ou portefeuille électronique arrive directement dans AIW.</span>
       </div>
       )}
 

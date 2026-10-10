@@ -68,6 +68,8 @@ function base(op: Operation): Reponse {
       return { data: etat.installees.map((ressource_id) => ({ ressource_id })) };
     case "rendus_attestation":
       if (op.action === "update") return { data: [{ id: RENDU }] };
+      // L'attestation obtenue, lue par la route du PDF (une ligne, maybeSingle).
+      if (op.filtres.some(([m, c, v]) => m === "eq" && c === "statut" && v === "valide")) return { data: etat.brouillon };
       return op.filtres.some(([m]) => m === "maybeSingle") ? { data: etat.brouillon } : op.filtres.some(([, c]) => c === "id") ? { data: etat.brouillon } : { data: etat.dernier ? [etat.dernier] : [] };
     case "preparer_rendu_attestation":
       return { data: [etat.rpc] };
@@ -310,5 +312,78 @@ describe("S7 S13 C2 · POST /api/attestations/[slug]/rendu", () => {
     installer();
     ({ POST } = await import("@/app/api/attestations/[slug]/rendu/route"));
     expect((sur(await POST(requete({ ...corps, nom: " " }), params))).status).toBe(400);
+  });
+});
+
+describe("S7 · le nom écrit sur l'attestation (étape D)", () => {
+  it("refuse un nom que les polices du PDF ne savent pas écrire, sans rien demander à R2 ni écrire", async () => {
+    const appels: string[] = [];
+    vi.stubGlobal("fetch", vi.fn(async (url: string) => {
+      appels.push(url);
+      return new Response(null, { status: 500 });
+    }));
+    const factice = installer();
+    const { POST } = await import("@/app/api/attestations/[slug]/rendu/route");
+    const reponse = sur(await POST(requete({ rendu_id: RENDU, nom: "Mariam <b>Koné</b>", verification: "J'ai recalculé le solde et corrigé l'écart." }), params));
+    expect(reponse.status).toBe(400);
+    expect((await reponse.json()).error).toMatch(/lettres/);
+    expect(appels).toEqual([]);
+    expect(factice.ecritures("rendus_attestation")).toEqual([]);
+  });
+});
+
+describe("étape D · l'attestation obtenue, dans le compte", () => {
+  const OBTENUE = {
+    statut: "valide", fichiers: [], commentaire: "Très bon travail.", nom_attestation: "Mariam Koné", numero: "AIW-7F3A-91C2-0B4E",
+    cree_le: "2026-10-09T08:00:00.000Z", rendu_le: "2026-10-09T09:00:00.000Z", corrige_le: "2026-10-10T09:30:00.000Z",
+  };
+
+  it("GET donne le numéro, le nom, la date et le lien LinkedIn, sans le commentaire", async () => {
+    etat.dernier = OBTENUE;
+    installer();
+    const { GET } = await import("@/app/api/attestations/[slug]/route");
+    const corps = await sur(await GET(new Request("https://aiw.test"), params)).json();
+    expect(corps.attestation).toMatchObject({ numero: "AIW-7F3A-91C2-0B4E", nom: "Mariam Koné", delivree_le: "2026-10-10T09:30:00.000Z" });
+    const lien = new URL(corps.attestation.linkedin_url);
+    expect(lien.searchParams.get("certId")).toBe("AIW-7F3A-91C2-0B4E");
+    expect(lien.searchParams.get("name")).toBe("Attestation de compétences IA, métier Comptabilité");
+    expect(corps.rendu.commentaire).toBeNull();
+  });
+
+  it("GET ne donne pas d'attestation tant que le rendu n'est pas validé", async () => {
+    etat.dernier = { ...OBTENUE, statut: "a_refaire", numero: null };
+    installer();
+    const { GET } = await import("@/app/api/attestations/[slug]/route");
+    expect((await sur(await GET(new Request("https://aiw.test"), params)).json()).attestation).toBeNull();
+  });
+
+  it("le PDF se télécharge, même sans abonnement, en 1 requête propre au compte et sans rien écrire", async () => {
+    etat.abonne = false;
+    etat.brouillon = { numero: OBTENUE.numero, nom_attestation: OBTENUE.nom_attestation, corrige_le: OBTENUE.corrige_le };
+    const factice = installer();
+    const { GET } = await import("@/app/api/attestations/[slug]/pdf/route");
+    const reponse = sur(await GET(new Request("https://aiw.test"), params));
+    expect(reponse.status).toBe(200);
+    expect(reponse.headers.get("content-type")).toBe("application/pdf");
+    expect(reponse.headers.get("content-disposition")).toBe('attachment; filename="AIW-attestation-comptabilite-AIW-7F3A-91C2-0B4E.pdf"');
+    expect(reponse.headers.get("cache-control")).toContain("no-store");
+    expect(Buffer.from(await reponse.arrayBuffer()).subarray(0, 5).toString()).toBe("%PDF-");
+    const lecture = factice.operations.find((op) => op.table === "rendus_attestation");
+    expect(lecture?.filtres).toContainEqual(["eq", "statut", "valide"]);
+    expect(lecture?.filtres).toContainEqual(["eq", "user_id", CLIENT.id]);
+    expect(propres()).toHaveLength(1);
+    expect(factice.ecritures()).toEqual([]);
+  });
+
+  it("le PDF répond 404 sans attestation obtenue, et 401 sans session", async () => {
+    etat.brouillon = null;
+    installer();
+    let { GET } = await import("@/app/api/attestations/[slug]/pdf/route");
+    expect(sur(await GET(new Request("https://aiw.test"), params)).status).toBe(404);
+
+    vi.resetModules();
+    installer().etat.utilisateur = null;
+    ({ GET } = await import("@/app/api/attestations/[slug]/pdf/route"));
+    expect(sur(await GET(new Request("https://aiw.test"), params)).status).toBe(401);
   });
 });

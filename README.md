@@ -11,7 +11,7 @@ AIW est une application web installable (PWA) de formation à l'IA au travail, u
 | --- | --- |
 | Next.js sur Vercel | L'application : pages, routes API, proxy de session. Fonctions à Dublin (`vercel.json`), dans la région de la base. |
 | Supabase | Base de données (Postgres, Irlande) et comptes (e-mail et mot de passe). |
-| Paiement | Chariow est débranché depuis le 10 octobre 2026. Le paiement par Mobile Money, dans AIW, se fera avec Moneaa (à venir). |
+| Paiement | Chariow est débranché depuis le 10 octobre 2026. Le paiement par Mobile Money, carte ou portefeuille électronique, dans AIW, se fera avec Moneaa (à venir). |
 | Resend | Envoi de tous les e-mails : activation et mot de passe (par le SMTP de Supabase), demandes de contact et sur mesure (par l'application). Domaine d'envoi : `parlonsads.com`. |
 | tawk.to | Chat du support, réservé aux abonnés. |
 

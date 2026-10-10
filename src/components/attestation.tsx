@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { dateAttestation, MESSAGE_NOM, NOM_ECRIVABLE, texteAttestation } from "@/lib/attestation-publique";
 import { api, kitHref, useResource } from "@/lib/kit-api";
 import { Icon } from "./icon";
 import { Page } from "./shell";
@@ -19,6 +20,7 @@ type Etat = {
   conditions: { abonne: boolean; kit_installe: boolean; taches_faites: number; taches_requises: number };
   exercice: { numero: number; cas: string; titre_donnees: string; donnees: string[]; travail: string[]; a_rendre: string } | null;
   rendu: { statut: "en_attente" | "a_refaire" | "valide"; rendu_le: string | null; echeance: string | null; commentaire: string | null; nb_fichiers: number } | null;
+  attestation: { numero: string; nom: string | null; delivree_le: string; linkedin_url: string } | null;
   envoi_ouvert: boolean;
   max_fichiers: number;
 };
@@ -163,7 +165,9 @@ function Formulaire({ slug, max, apres }: { slug: string; max: number; apres: ()
     if (occupe) return;
     setErreur("");
     if (!pieces.length) return setErreur("Ajoutez au moins un fichier : votre résultat et la capture de votre conversation.");
-    if (nom.trim().length < 2) return setErreur("Écrivez le nom à porter sur l’attestation.");
+    const nomPropre = nom.trim().normalize("NFC").replace(/\s+/g, " ");
+    if (nomPropre.length < 2) return setErreur("Écrivez le nom à porter sur l’attestation.");
+    if (!NOM_ECRIVABLE.test(nomPropre)) return setErreur(MESSAGE_NOM);
     if (verification.trim().length < 20) return setErreur("Dites en quelques lignes ce que vous avez vérifié et corrigé vous-même.");
     setOccupe(true);
     try {
@@ -180,7 +184,7 @@ function Formulaire({ slug, max, apres }: { slug: string; max: number; apres: ()
         if (!reponse?.ok) throw new Error("Un fichier n’a pas pu être envoyé. Vérifiez votre connexion et réessayez.");
       }
       setEtape("Envoi du rendu…");
-      await api(`${base}/rendu`, { method: "POST", body: JSON.stringify({ rendu_id, nom: nom.trim(), verification: verification.trim() }) });
+      await api(`${base}/rendu`, { method: "POST", body: JSON.stringify({ rendu_id, nom: nomPropre, verification: verification.trim() }) });
       apres();
     } catch (e) {
       setErreur(e instanceof Error ? e.message : "L’envoi a échoué. Réessayez.");
@@ -233,6 +237,38 @@ function Formulaire({ slug, max, apres }: { slug: string; max: number; apres: ()
   );
 }
 
+function Obtenue({ a, metier }: { a: Etat["attestation"]; metier: Etat["metier"] }) {
+  if (!a) {
+    return (
+      <section className="card stack-sm" role="status" style={{ background: "var(--mint-bg)" }}>
+        <Chip tone="green" icon="award">Validé</Chip>
+        <p>Votre exercice final est validé.</p>
+      </section>
+    );
+  }
+  return (
+    <section className="card stack" aria-labelledby="obtenue-titre" style={{ background: "var(--mint-bg)" }}>
+      <Chip tone="green" icon="award">Attestation obtenue</Chip>
+      <div className="stack-sm">
+        <h2 id="obtenue-titre" className="h2">{a.nom}</h2>
+        <p>{texteAttestation(metier.nom)}, le {dateAttestation(a.delivree_le)}.</p>
+        <p className="small">Numéro <b>{a.numero}</b>. Toute personne qui a ce numéro peut vérifier votre attestation en ligne, sur sa page publique : elle y voit votre nom, le métier et la date.</p>
+      </div>
+      <div className="row">
+        <a className="btn" href={`/api/attestations/${encodeURIComponent(metier.slug)}/pdf`} download>
+          <Icon name="download" size={18} /> Télécharger le PDF
+        </a>
+        <a className="btn btn-secondary" href={a.linkedin_url} target="_blank" rel="noreferrer">
+          <Icon name="external" size={18} /> Ajouter à LinkedIn
+        </a>
+        <Link className="btn btn-secondary btn-plain" href={`/attestation/${a.numero}`}>
+          <Icon name="eye" size={18} /> Voir la page de vérification
+        </Link>
+      </div>
+    </section>
+  );
+}
+
 export function Attestation({ slug }: { slug: string }) {
   const { data, error, retry } = useResource<Etat>(`/api/attestations/${encodeURIComponent(slug)}`);
   const [envoye, setEnvoye] = useState(false);
@@ -249,12 +285,7 @@ export function Attestation({ slug }: { slug: string }) {
 
       <p className="small"><Link className="strong" href={`/metiers/${encodeURIComponent(metier.slug)}`}>← Retour au parcours {metier.nom}</Link></p>
 
-      {rendu?.statut === "valide" && (
-        <section className="card stack-sm" role="status" style={{ background: "var(--mint-bg)" }}>
-          <Chip tone="green" icon="award">Validé</Chip>
-          <p>Votre exercice final est validé. Votre attestation sera bientôt disponible ici.</p>
-        </section>
-      )}
+      {rendu?.statut === "valide" && <Obtenue a={data.attestation} metier={metier} />}
 
       {enAttente && (
         <section className="card stack-sm" role="status">

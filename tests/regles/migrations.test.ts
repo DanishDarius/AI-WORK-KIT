@@ -240,3 +240,25 @@ describe("S4 · droits et protections des tables", () => {
     }
   });
 });
+
+describe("0055 · le numéro d'une attestation", () => {
+  const sql = lire("supabase/migrations/0055_numero_attestation.sql");
+
+  it("est unique, donné par la base à la validation, et seul un rendu validé en porte un", () => {
+    expect(sql).toMatch(/create unique index if not exists idx_rendus_attestation_numero\s+on rendus_attestation \(numero\) where numero is not null/i);
+    expect(sql).toMatch(/check \(\(statut = 'valide'\) = \(numero is not null\)\)/i);
+    expect(sql).toMatch(/before insert or update on rendus_attestation\s+for each row execute function public\.numeroter_attestation\(\)/i);
+    // Un numéro donné ne change plus.
+    expect(sql).toMatch(/if tg_op = 'UPDATE' and old\.numero is not null then\s+new\.numero := old\.numero;/i);
+  });
+
+  it("ses fonctions ne sont exécutables que par le serveur, et rien n'est supprimé", () => {
+    for (const fonction of ["nouveau_numero_attestation", "numeroter_attestation"]) {
+      for (const role of ["public", "anon", "authenticated"]) {
+        expect(sql).toMatch(new RegExp(`revoke all on function public\\.${fonction}\\(\\) from ${role};`, "i"));
+      }
+      expect(sql).toMatch(new RegExp(`create or replace function public\\.${fonction}\\(\\)[\\s\\S]{0,120}security invoker\\s+set search_path = ''`, "i"));
+    }
+    expect(sql).not.toMatch(/\bdelete from\b|\bdrop table\b|\btruncate\b/i);
+  });
+});

@@ -16,13 +16,16 @@ import { requireActiveUser } from "@/lib/supabase/active-access";
 // GET : le rendu, ses fichiers (un lien de lecture chez Cloudflare R2 par
 // fichier, valable 10 minutes), l'exercice du métier avec sa réponse type
 // (pour_le_correcteur : seul écran où elle sort, règle S2), et le nombre
-// d'essais déjà « à refaire ». Règle C2 : 2 requêtes, lancées ensemble ; le
-// contenu vient du cache. Règle C4 : rien n'est écrit.
+// d'essais « à refaire » faits avant celui-ci (le rendu ouvert ne se compte
+// pas lui-même). Règle C2 : 2 requêtes, lancées ensemble ; le contenu vient
+// du cache. Règle C4 : rien n'est écrit.
 //
 // POST : la décision. Body : { "decision": "valide" | "a_refaire",
 // "notes": [0-2 × 5], "commentaire": "…" }. Seul un rendu « en_attente »
 // change d'état, une fois (règle S13 : une décision par rendu). L'abonné
-// reçoit un e-mail ; un e-mail qui échoue n'annule pas la décision.
+// reçoit un e-mail ; un e-mail qui échoue n'annule pas la décision. À la
+// validation, la base donne le numéro de l'attestation (migration 0055), que
+// l'e-mail reprend.
 
 type Ligne = {
   id: string;
@@ -34,6 +37,7 @@ type Ligne = {
   verification: string | null;
   notes: unknown;
   commentaire: string | null;
+  cree_le: string;
   rendu_le: string | null;
   corrige_le: string | null;
   purge_le: string | null;
@@ -50,7 +54,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   const admin = createAdminClient();
   const { data, error } = await admin
     .from("rendus_attestation")
-    .select("id, user_id, metier_id, statut, fichiers, nom_attestation, verification, notes, commentaire, rendu_le, corrige_le, purge_le")
+    .select("id, user_id, metier_id, statut, fichiers, nom_attestation, verification, notes, commentaire, cree_le, rendu_le, corrige_le, purge_le")
     .eq("id", id)
     .maybeSingle();
   if (error) return erreurServeur("correction", error);
@@ -67,7 +71,8 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
         .select("id", { count: "exact", head: true })
         .eq("user_id", rendu.user_id)
         .eq("metier_id", rendu.metier_id)
-        .eq("statut", "a_refaire"),
+        .eq("statut", "a_refaire")
+        .lt("cree_le", rendu.cree_le),
     ]);
   } catch (erreur) {
     return erreurServeur("correction", erreur);
@@ -140,13 +145,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     .update({ statut: decision, notes, commentaire: commentaire || null, corrige_le: new Date().toISOString() })
     .eq("id", id)
     .eq("statut", "en_attente")
-    .select("user_id, metier_id");
+    .select("user_id, metier_id, numero");
   if (error) {
     // Index unique : ce compte a déjà une attestation validée pour ce métier.
     if (error.code === "23505") return NextResponse.json({ error: "Ce compte a déjà son attestation pour ce métier." }, { status: 409 });
     return erreurServeur("correction-decision", error);
   }
-  const ligne = (data?.[0] ?? null) as { user_id: string; metier_id: string } | null;
+  const ligne = (data?.[0] ?? null) as { user_id: string; metier_id: string; numero: string | null } | null;
   if (!ligne) return NextResponse.json({ error: "Ce rendu n’attend plus de correction." }, { status: 409 });
 
   // L'e-mail à l'abonné. Un échec n'annule pas la décision : il est signalé.
@@ -162,6 +167,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         slug: metier.slug,
         points: total(notes),
         commentaire,
+        numero: ligne.numero,
       });
       [emailEnvoye] = await envoyerEmailsClients([{ to: email, ...message }], "attestation-decision");
     }

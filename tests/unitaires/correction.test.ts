@@ -94,7 +94,7 @@ beforeEach(() => {
       id: RENDU, user_id: ABONNE.id, metier_id: M1, statut: "en_attente",
       fichiers: [{ cle: CLE, type: "image/jpeg", taille: 30000 }],
       nom_attestation: "Awa K.", verification: "J'ai vérifié le total du devis.", notes: null, commentaire: null,
-      rendu_le: "2026-10-10T01:00:00.000Z", corrige_le: null, purge_le: null,
+      cree_le: "2026-10-10T00:50:00.000Z", rendu_le: "2026-10-10T01:00:00.000Z", corrige_le: null, purge_le: null,
     },
     maj: [{ user_id: ABONNE.id, metier_id: M1 }],
     erreurMaj: null,
@@ -180,6 +180,9 @@ describe("S1 S10 · l'écran de correction n'existe que pour le correcteur", () 
     expect(corps.fichiers[0].url).toMatch(/^https:\/\/0123456789abcdef0123456789abcdef\.eu\.r2\.cloudflarestorage\.com\/aiw-rendus\/rendus\/.*X-Amz-Expires=600/);
     expect(corps.grille).toHaveLength(5);
     expect(corps.essais_a_refaire).toBe(2);
+    // Seuls les essais faits avant ce rendu se comptent : un rendu déjà « à refaire » ne se compte pas lui-même.
+    const compte = partage.factice!.operations.find((op) => op.filtres.some(([m, c, v]) => m === "eq" && c === "statut" && v === "a_refaire"));
+    expect(compte?.filtres).toContainEqual(["lt", "cree_le", "2026-10-10T00:50:00.000Z"]);
     expect(partage.factice!.ecritures()).toEqual([]);
     expect(reponse.headers.get("cache-control")).toContain("no-store");
   });
@@ -194,8 +197,9 @@ describe("S1 S10 · l'écran de correction n'existe que pour le correcteur", () 
 });
 
 describe("S13 · la décision", () => {
-  it("valide un rendu en attente, une fois, et prévient l'abonné par e-mail", async () => {
+  it("valide un rendu en attente, une fois, et prévient l'abonné par e-mail, avec le numéro donné par la base", async () => {
     installer();
+    etat.maj = [{ user_id: ABONNE.id, metier_id: M1, numero: "AIW-7F3A-91C2-0B4E" }];
     const { POST } = await import("@/app/api/correction/[id]/route");
     const reponse = sur(await POST(decider({ decision: "valide", notes: [2, 2, 1, 2, 1], commentaire: "" }), params));
     expect(reponse.status).toBe(200);
@@ -206,6 +210,8 @@ describe("S13 · la décision", () => {
     const email = appels.find((a) => a.url.includes("api.resend.com"));
     expect(email?.corps).toContain(ABONNE.email);
     expect(email?.corps).toContain("8 points sur 10");
+    expect(email?.corps).toContain("numéro AIW-7F3A-91C2-0B4E");
+    expect(email?.corps).toContain("LinkedIn");
   });
 
   it("refuse de valider une grille qui n'atteint pas 7 points, sans rien écrire", async () => {

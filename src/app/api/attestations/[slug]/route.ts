@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { lienLinkedIn } from "@/lib/attestation-publique";
 import { conditionsRemplies, contexteAttestation, echeanceCorrection, lireConditions, MAX_FICHIERS, type StatutRendu } from "@/lib/attestations";
 import { configR2 } from "@/lib/r2";
 import { createAdminClient } from "@/lib/supabase/admin";
@@ -10,6 +11,8 @@ import { requireActiveUser } from "@/lib/supabase/active-access";
 //
 // Règle S2 : l'exercice est un contenu payant, réservé aux abonnés qui
 // remplissent les conditions ; la réponse type du correcteur ne sort jamais.
+// Une attestation obtenue : son numéro, son nom, sa date et le lien
+// « Ajouter à LinkedIn » (étape D).
 // Règle C2 : 3 requêtes propres au compte (tâches faites, ressources
 // installées, dernier rendu), lancées ensemble. Le contenu vient du cache.
 // Règle C4 : rien n'est écrit.
@@ -25,7 +28,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
     lireConditions(supabase, user.id, abonne, kit, taches),
     createAdminClient()
       .from("rendus_attestation")
-      .select("statut, fichiers, commentaire, cree_le, rendu_le, corrige_le")
+      .select("statut, fichiers, commentaire, nom_attestation, numero, cree_le, rendu_le, corrige_le")
       .eq("user_id", user.id)
       .eq("metier_id", metier.id)
       .order("cree_le", { ascending: false })
@@ -34,7 +37,15 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
   if (dernier.error) return NextResponse.json({ error: "Chargement impossible." }, { status: 500 });
 
   const ligne = (dernier.data?.[0] ?? null) as
-    | { statut: StatutRendu; fichiers: unknown; commentaire: string | null; rendu_le: string | null; corrige_le: string | null }
+    | {
+        statut: StatutRendu;
+        fichiers: unknown;
+        commentaire: string | null;
+        nom_attestation: string | null;
+        numero: string | null;
+        rendu_le: string | null;
+        corrige_le: string | null;
+      }
     | null;
   const ouvert = conditionsRemplies(conditions);
   // Un brouillon (fichiers en cours d'envoi) ne compte pas encore comme un rendu.
@@ -46,6 +57,14 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
         corrige_le: ligne.corrige_le,
         commentaire: ligne.statut === "a_refaire" ? ligne.commentaire : null,
         nb_fichiers: Array.isArray(ligne.fichiers) ? ligne.fichiers.length : 0,
+      }
+    : null;
+  const attestation = ligne?.statut === "valide" && ligne.numero && ligne.corrige_le
+    ? {
+        numero: ligne.numero,
+        nom: ligne.nom_attestation,
+        delivree_le: ligne.corrige_le,
+        linkedin_url: lienLinkedIn({ metier: metier.nom, numero: ligne.numero, delivreeLe: ligne.corrige_le }),
       }
     : null;
 
@@ -64,6 +83,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
           }
         : null,
       rendu,
+      attestation,
       envoi_ouvert: configR2() !== null,
       max_fichiers: MAX_FICHIERS,
     },

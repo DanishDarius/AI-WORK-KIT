@@ -82,12 +82,15 @@ export function emailDecisionAttestation({
   slug,
   points,
   commentaire,
+  numero,
 }: {
   decision: "valide" | "a_refaire";
   metier: string;
   slug: string;
   points: number;
   commentaire: string;
+  /** Le numéro de l'attestation, donné par la base à la validation. */
+  numero?: string | null;
 }) {
   const lien = `${SITE}/metiers/${encodeURIComponent(slug)}/attestation`;
   const titre = decision === "valide" ? "Votre exercice final est validé" : "Votre exercice final est à refaire";
@@ -95,7 +98,7 @@ export function emailDecisionAttestation({
     decision === "valide"
       ? [
           `Votre rendu de l’exercice final, métier ${metier}, est validé : ${points} points sur 10.`,
-          "Votre attestation à votre nom vous attend dans votre compte, sur la page Attestation du métier.",
+          `Votre attestation à votre nom${numero ? `, numéro ${numero},` : ""} vous attend dans votre compte, sur la page Attestation du métier : téléchargez-la en PDF et ajoutez-la à votre profil LinkedIn.`,
         ]
       : [
           `Votre rendu de l’exercice final, métier ${metier}, n’est pas encore validé : ${points} points sur 10. Il en faut 7, sans 0 au critère des faits et des chiffres.`,

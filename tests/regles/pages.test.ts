@@ -22,6 +22,28 @@ describe("C3 · pages publiques statiques", () => {
   });
 });
 
+describe("C3 · la page de vérification d'une attestation (étape D)", () => {
+  const page = lire("src/app/(public)/attestation/[numero]/page.tsx");
+  const proxy = lire("proxy.ts");
+
+  it("se fabrique à la première visite d'un numéro, puis reste en cache 10 minutes", () => {
+    expect(page).toMatch(/^export const revalidate = 600;$/m);
+    expect(page).toMatch(/export function generateStaticParams\(\) \{\s*return \[\];\s*\}/);
+  });
+
+  it("le proxy ne s'exécute pas sur elle, et elle s'ouvre sans compte", () => {
+    expect(proxy).toContain("attestation/[^/]+$|");
+    expect(lire("src/lib/supabase/middleware.ts")).toMatch(/^\s*"\/attestation",$/m);
+  });
+
+  it("n'est pas indexée, dit ce que l'attestation n'est pas et renvoie aux mentions légales", () => {
+    expect(page).toMatch(/robots: \{ index: false, follow: false \}/);
+    expect(page).toContain("Ce n’est ni un diplôme ni une certification officielle.");
+    expect(page).toContain('href="/mentions-legales"');
+    expect(lire("src/app/(public)/attestation/[numero]/not-found.tsx")).toContain('href="/mentions-legales"');
+  });
+});
+
 describe("Q5 · pages d'erreur et états de chargement", () => {
   it.each([
     "src/app/error.tsx",
