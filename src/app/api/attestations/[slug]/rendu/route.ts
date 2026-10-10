@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { contexteAttestation, echeanceCorrection, type FichierRendu, TYPES_FICHIERS } from "@/lib/attestations";
 import { echapperHtml, envoyerEmailEquipe } from "@/lib/email";
+import { SITE } from "@/lib/marque";
 import { estUuid, texteBorne } from "@/lib/normaliser";
 import { configR2, infosFichier, supprimerFichier } from "@/lib/r2";
 import { erreurServeur } from "@/lib/reponses-api";
@@ -89,7 +90,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ slu
 
   // L'e-mail à l'équipe ne bloque jamais le rendu : il est enregistré.
   const echeance = echeanceCorrection(renduLe).toLocaleString("fr-FR", { timeZone: "Europe/Paris", dateStyle: "full", timeStyle: "short" });
-  const texte = `Un rendu de l'exercice final attend sa correction.\n\nMétier : ${metier.nom}\nNom sur l'attestation : ${nom}\nCompte : ${user.email}\nFichiers : ${prevus.length}\nÀ corriger avant le ${echeance} (heure de Paris).`;
+  const texte = `Un rendu de l'exercice final attend sa correction.\n\nMétier : ${metier.nom}\nNom sur l'attestation : ${nom}\nCompte : ${user.email}\nFichiers : ${prevus.length}\nÀ corriger avant le ${echeance} (heure de Paris).\n\nCorriger : ${SITE}/correction/${renduId}`;
   await envoyerEmailEquipe({
     subject: `Attestation à corriger : ${metier.nom}`,
     text: texte,

@@ -241,6 +241,15 @@ describe("S7 S13 C2 · POST /api/attestations/[slug]/fichiers", () => {
     ({ POST } = await import("@/app/api/attestations/[slug]/fichiers/route"));
     expect((sur(await POST(requete({ fichiers: [{ type: "image/jpeg", taille: 10 }] }), params))).status).toBe(429);
   });
+
+  it("répond 409 sans lien d'envoi quand l'attestation du métier est déjà obtenue (migration 0054)", async () => {
+    etat.rpc = { rendu_id: null, etat: "valide", fichiers: null };
+    installer();
+    const { POST } = await import("@/app/api/attestations/[slug]/fichiers/route");
+    const reponse = sur(await POST(requete({ fichiers: [{ type: "image/jpeg", taille: 10 }] }), params));
+    expect(reponse.status).toBe(409);
+    expect(JSON.stringify(await reponse.json())).not.toContain("url");
+  });
 });
 
 describe("S7 S13 C2 · POST /api/attestations/[slug]/rendu", () => {

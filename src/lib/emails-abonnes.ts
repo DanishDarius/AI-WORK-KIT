@@ -74,3 +74,44 @@ export function emailRappelEcheance({ jours, finLe, formule }: { jours: 5 | 0; f
   const pied = `Ce message concerne votre compte ${SIGLE}. Vous pouvez couper ces rappels dans Profil, Notifications.`;
   return { subject: `${SIGLE} : ${titre.charAt(0).toLowerCase()}${titre.slice(1)}`, text, html: habiller(titre, corps, pied) };
 }
+
+/** La décision du correcteur sur l'exercice final d'une attestation (étape C). */
+export function emailDecisionAttestation({
+  decision,
+  metier,
+  slug,
+  points,
+  commentaire,
+}: {
+  decision: "valide" | "a_refaire";
+  metier: string;
+  slug: string;
+  points: number;
+  commentaire: string;
+}) {
+  const lien = `${SITE}/metiers/${encodeURIComponent(slug)}/attestation`;
+  const titre = decision === "valide" ? "Votre exercice final est validé" : "Votre exercice final est à refaire";
+  const phrases =
+    decision === "valide"
+      ? [
+          `Votre rendu de l’exercice final, métier ${metier}, est validé : ${points} points sur 10.`,
+          "Votre attestation à votre nom vous attend dans votre compte, sur la page Attestation du métier.",
+        ]
+      : [
+          `Votre rendu de l’exercice final, métier ${metier}, n’est pas encore validé : ${points} points sur 10. Il en faut 7, sans 0 au critère des faits et des chiffres.`,
+          "Corrigez ce qui est signalé, puis rendez à nouveau votre travail depuis la page Attestation du métier.",
+        ];
+  const mot = commentaire ? `Le mot du correcteur : ${commentaire}` : "";
+  const bouton1 = decision === "valide" ? "Voir mon attestation" : "Reprendre l’exercice";
+  const text = ["Bonjour,", "", phrases[0], "", ...(mot ? [mot, ""] : []), phrases[1], "", `${bouton1} : ${lien}`, "", `Ce message concerne votre compte ${SIGLE}.`].join("\n");
+  const corps = `<p style="margin:0 0 14px">Bonjour,</p><p style="margin:0 0 14px">${echapperHtml(phrases[0])}</p>${
+    mot
+      ? `<p style="margin:0 0 14px;padding:12px 14px;border:2px solid #e2e8e5;border-radius:14px"><b>Le mot du correcteur.</b> ${echapperHtml(commentaire).replace(/\n/g, "<br>")}</p>`
+      : ""
+  }<p style="margin:0 0 14px">${echapperHtml(phrases[1])}</p>${bouton(lien, bouton1)}`;
+  return {
+    subject: `${SIGLE} : ${titre.charAt(0).toLowerCase()}${titre.slice(1)}`,
+    text,
+    html: habiller(titre, corps, `Ce message concerne votre compte ${SIGLE}.`),
+  };
+}

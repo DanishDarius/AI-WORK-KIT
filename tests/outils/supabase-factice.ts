@@ -17,9 +17,15 @@ const estEcriture = (v: string): v is Ecriture => (ECRITURES as readonly string[
 export function creerSupabaseFactice(repondre: (op: Operation) => Reponse = () => ({})) {
   const operations: Operation[] = [];
   const invitations: string[] = [];
-  const etat: { erreurInvitation: { message: string } | null; utilisateur: { id: string; email: string } | null } = {
+  const etat: {
+    erreurInvitation: { message: string } | null;
+    utilisateur: { id: string; email: string } | null;
+    /** Comptes lus par auth.admin.getUserById : identifiant → adresse. */
+    comptes: Record<string, string>;
+  } = {
     erreurInvitation: null,
     utilisateur: null,
+    comptes: {},
   };
 
   function requete(table: string) {
@@ -82,6 +88,10 @@ export function creerSupabaseFactice(repondre: (op: Operation) => Reponse = () =
           invitations.push(email);
           return { data: {}, error: etat.erreurInvitation };
         },
+        getUserById: async (id: string) => ({
+          data: { user: etat.comptes[id] ? { id, email: etat.comptes[id] } : null },
+          error: etat.comptes[id] ? null : { message: "introuvable" },
+        }),
         generateLink: async (params: { email: string }) => {
           invitations.push(params.email);
           return {

@@ -112,7 +112,7 @@ export default function Confidentialite() {
           <li><strong>Demandes de contact :</strong> 3 ans après le dernier échange, sauf si elles aboutissent à un contrat.</li>
           <li><strong>Échanges avec le support :</strong> 3 ans après le dernier échange.</li>
           <li><strong>Demandes de tâche sur mesure et plans remis :</strong> tant que votre compte est actif, pour que vous puissiez retrouver vos plans.</li>
-          <li><strong>Rendus de l’exercice final et correction :</strong> tant que votre compte est actif, pour que vous puissiez retrouver votre rendu et votre attestation.</li>
+          <li><strong>Rendus de l’exercice final et correction :</strong> les fichiers et ce que vous indiquez avoir vérifié sont effacés 2 mois après l’obtention de votre attestation. Le nom écrit sur l’attestation, le métier, les dates, la note et le commentaire du correcteur sont gardés tant que votre compte est actif : ils fondent votre attestation. Tant que l’attestation n’est pas obtenue, le rendu est gardé tant que votre compte est actif.</li>
           <li><strong>Journaux techniques :</strong> selon la durée fixée par nos hébergeurs, en général quelques jours à 30 jours.</li>
         </ul>
       </LegalSection>

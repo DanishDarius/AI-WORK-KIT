@@ -59,6 +59,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ slu
   if (resultat?.etat === "en_attente") {
     return NextResponse.json({ error: "Votre rendu attend sa correction. Vous pourrez en envoyer un autre après." }, { status: 409 });
   }
+  if (resultat?.etat === "valide") {
+    return NextResponse.json({ error: "Vous avez déjà votre attestation pour ce métier." }, { status: 409 });
+  }
   if (resultat?.etat === "limite") {
     return NextResponse.json({ error: "Trop d’envois aujourd’hui. Réessayez demain." }, { status: 429 });
   }

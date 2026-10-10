@@ -1,17 +1,22 @@
 import "server-only";
 
+import type { FichierRendu } from "@/lib/attestations";
 import { lireFil } from "@/lib/contenu";
+import { limitePurge, PURGES_MAX } from "@/lib/correction";
 import { emailsClientsConfigures, envoyerEmailsClients, type EmailClient } from "@/lib/email";
 import { emailDeLaSemaine, emailRappelEcheance, type LigneEmail } from "@/lib/emails-abonnes";
 import { LIBELLE_TYPE, publicationsParues } from "@/lib/fil";
 import { SITE } from "@/lib/marque";
+import { configR2, supprimerFichier } from "@/lib/r2";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 // Le travail de chaque matin (plan produit, chantier 5), lancé par la route
 // /api/planifie/quotidien :
 // 1. l'e-mail de la semaine, aux abonnés qui ne l'ont pas encore reçu ;
 // 2. les rappels d'échéance : 5 jours avant la fin d'un abonnement au mois ou
-//    à l'année, puis le jour même.
+//    à l'année, puis le jour même ;
+// 3. la purge des rendus d'attestation, 2 mois après l'attestation
+//    (purgerRendus, plus bas).
 //
 // Un même e-mail ne part jamais deux fois : chaque envoi est d'abord inscrit
 // au journal (table envois_notifications, une ligne par type, période et
@@ -173,4 +178,75 @@ export async function travailQuotidien(maintenant = new Date()) {
   }
 
   return { etat: "fait" as const, semaine: semaineIso(maintenant), publications: lignesEmail.length, email_semaine: bilanSemaine, rappels: bilanRappels };
+}
+
+// ---------------------------------------------------------------------------
+// 3. La purge des rendus d'attestation (décision du 10 octobre 2026 : le rendu
+// est gardé jusqu'à 2 mois après l'obtention de l'attestation).
+//
+// Pour chaque attestation obtenue il y a plus de 2 mois : les fichiers du
+// rendu validé et des essais « à refaire » du même métier sont effacés chez
+// Cloudflare R2, puis leur liste de fichiers et leur texte de vérification
+// sont vidés en base. Restent le nom, le métier, les dates, la note et le
+// commentaire, qui servent à l'attestation.
+//
+// Idempotente : un rendu purgé porte sa date de purge et n'est plus relu. Un
+// fichier qui n'a pas pu être effacé garde son rendu tel quel : il est repris
+// au passage suivant. Bornée : PURGES_MAX attestations par passage (règle S13).
+
+type RenduAPurger = { id: string; user_id: string; metier_id: string; fichiers: unknown };
+
+const clesDe = (r: RenduAPurger) =>
+  (Array.isArray(r.fichiers) ? (r.fichiers as FichierRendu[]) : []).map((f) => f?.cle).filter((c): c is string => typeof c === "string");
+
+export async function purgerRendus(maintenant = new Date()) {
+  const config = configR2();
+  if (!config) return { etat: "non-configure" as const };
+  const admin = createAdminClient();
+
+  const { data: valides, error } = await admin
+    .from("rendus_attestation")
+    .select("id, user_id, metier_id, fichiers")
+    .eq("statut", "valide")
+    .is("purge_le", null)
+    .lt("corrige_le", limitePurge(maintenant).toISOString())
+    .order("corrige_le", { ascending: true })
+    .limit(PURGES_MAX);
+  if (error) throw new Error(`Lecture des rendus à purger impossible : ${error.message}`);
+  const attestations = (valides ?? []) as RenduAPurger[];
+  if (!attestations.length) return { etat: "fait" as const, purges: 0, reportes: 0 };
+
+  // Les essais « à refaire » des mêmes comptes, pour les mêmes métiers.
+  const { data: essais, error: erreurEssais } = await admin
+    .from("rendus_attestation")
+    .select("id, user_id, metier_id, fichiers")
+    .in("user_id", [...new Set(attestations.map((a) => a.user_id))])
+    .eq("statut", "a_refaire")
+    .is("purge_le", null)
+    .limit(PURGES_MAX * 20);
+  if (erreurEssais) throw new Error(`Lecture des essais à purger impossible : ${erreurEssais.message}`);
+  const paires = new Set(attestations.map((a) => `${a.user_id}/${a.metier_id}`));
+  const lignes = [...attestations, ...((essais ?? []) as RenduAPurger[]).filter((e) => paires.has(`${e.user_id}/${e.metier_id}`))];
+
+  // Effacement chez R2, par paquets de 10 fichiers à la fois.
+  const echecs = new Set<string>();
+  const taches = lignes.flatMap((l) => clesDe(l).map((cle) => ({ id: l.id, cle })));
+  for (let i = 0; i < taches.length; i += 10) {
+    const paquet = taches.slice(i, i + 10);
+    const resultats = await Promise.allSettled(paquet.map((t) => supprimerFichier(config, t.cle)));
+    resultats.forEach((r, j) => {
+      if (r.status === "rejected") echecs.add(paquet[j].id);
+    });
+  }
+  const purgeables = lignes.filter((l) => !echecs.has(l.id)).map((l) => l.id);
+  if (purgeables.length) {
+    const { error: erreurMaj } = await admin
+      .from("rendus_attestation")
+      .update({ fichiers: [], verification: null, purge_le: maintenant.toISOString() })
+      .in("id", purgeables)
+      .is("purge_le", null);
+    if (erreurMaj) throw new Error(`Purge des rendus impossible : ${erreurMaj.message}`);
+  }
+  if (echecs.size) console.error("[planifie] fichiers de rendu non effacés, repris demain", echecs.size);
+  return { etat: "fait" as const, purges: purgeables.length, reportes: echecs.size };
 }
